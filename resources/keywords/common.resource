@@ -6,7 +6,7 @@ Library            Browser    auto_closing_level=SUITE
 
 
 Open Browser to Landing Page 
-    New Browser    ${browser}    False
+    New Browser    ${browser}    ${headless}
     New Context 
     New Page       ${url}
     Get Title      contains     Cheap hotels in Helsinki
