@@ -68,5 +68,3 @@ When starting a new test case:
 - Keep main clean!
 
 Branch will be named after the Jira issue.
-
-
