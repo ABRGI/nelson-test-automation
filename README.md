@@ -4,7 +4,7 @@
 
 Before running or developing test cases, it is recommended to use a virtual environment.
 
-```
+``` bash
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt

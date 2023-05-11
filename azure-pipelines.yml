@@ -1,0 +1,37 @@
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    pip install -r requirements.txt
+    rfbrowser init
+  displayName: 'Install Dependencies'
+
+- script: |
+    robot --outputdir results/ --variable headless:true --exclude skip testsuites/
+  displayName: 'Run Tests and Report'
+  continueOnError: true
+
+- task: AzureCLI@2
+  continueOnError: true
+  inputs:
+    azureSubscription: 'Softico Azure Sandbox (2.0)(e456018e-adaa-4c86-9be1-7564805d2c98)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az upgrade azure-cli 
+      az config set extension.use_dynamic_install=yes_without_prompt
+      az storage azcopy blob upload -c nelson --account-name softicosqa -s "results" --recursive
+      azcopy copy "reports/*" "https://softicosqa.blob.core.windows.net/$web?sp=racwdlmeop&st=2023-05-05T09:14:02Z&se=2023-07-28T17:14:02Z&spr=https&sv=2022-11-02&sr=c&sig=bAeGdoTeXEDa1cq82Me898sqm8vmqmpvW1oYUGoKJ8U%3D"
+    addSpnToEnvironment: true
+
+      # az storage azcopy blob upload -c nelson --account-name softicosqa -s "results" --recursive
+      # az storage blob copy start-batch --account-name softicosqa --destination-container $web --source-account-name sqastorage --source-container nelson
