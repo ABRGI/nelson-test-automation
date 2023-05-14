@@ -11,3 +11,6 @@ examples
 scripts
 *.pyc
 .pytest_cache
+.robotcode_cache
+.vscode
+browser

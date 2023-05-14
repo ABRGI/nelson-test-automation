@@ -35,6 +35,8 @@ Fill in missing environment variables to file or export them manually. And run s
 ./setenv.sh
 ```
 
+Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable).
+
 ## Python Versions
 
 Let's use Python 3.10 for this project. You can check your version using the following cmd.
@@ -62,6 +64,13 @@ Before running tests, you will need to set some environment variables. That can 
 ``` bash
 robot --variable headless:<bool> testsuites/
 ```
+
+## Debugging
+
+I suggest using [RoboCode VS Code Extension](https://github.com/d-biehl/robotcode) for debugging. Set up variables in extension settings.
+
+- headless - true, false
+- browser - chromium, firefox
 
 ## Version Control
 
