@@ -31,7 +31,7 @@ jobs:
     - name: Set Environment
       run: ./setenv.sh
     - name: Check XServer
-      run: xvfb-run npx playwright test
+      run: npm install -D @playwright/test;xvfb-run npx playwright test
     - name: Test with RobotFramework
       run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ --variable MUI-Link:https://admin.nelson.management/#/login testsuites/
 
