@@ -59,10 +59,10 @@ python --version
 
 ## Running Tests
 
-Before running tests, you will need to set some environment variables. That can be done by 
+Before running tests, you will need to set some environment variables. That can be done by running tests with.
 
 ``` bash
-robot --variable headless:<bool> testsuites/
+robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ testsuites/
 ```
 
 ## Debugging
