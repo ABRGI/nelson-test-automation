@@ -31,4 +31,4 @@ jobs:
     - name: Set Environment
       run: ./setenv.sh
     - name: Test with RobotFramework
-      run: robot --variable headless:True testsuites/
+      run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ testsuites/
