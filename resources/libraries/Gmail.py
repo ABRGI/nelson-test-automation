@@ -7,13 +7,21 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-import pickle
 import base64
-import email
 from bs4 import BeautifulSoup
+
+'''
+A simple script to get the link from booking confirmation from Gmail account
+nelsontestar@gmail.com which is the test account to be used for test cases. Can 
+obviously be changed.
+
+This will currently work locally, but not in CI/CD pipeline. This is because 
+Gmail API needs further verifications that need to be done manually until figured
+out how to do it in CI.
+
+NOTE! credentials.json is not included in the repo. 
+'''
 # If modifying these scopes, delete the file token.json.
-
-
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 def connect():

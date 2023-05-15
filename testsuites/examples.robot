@@ -13,6 +13,6 @@ Documentation      A test suite for easy development and testing
 
 Get Latest Confirmation Email    
     [Documentation]      Example on how to use the Gmail library  
-    ${link}=             Get Link      MANAGE          Booking confirmation
+    ${link}=             Gmail.Get Link      MANAGE          Booking confirmation
     Log To Console       ${link}
 
