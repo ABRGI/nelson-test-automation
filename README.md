@@ -76,10 +76,14 @@ I suggest using [RoboCode VS Code Extension](https://github.com/d-biehl/robotcod
 
 When starting a new test case:
 
-- Create a new branch from main from the Jira issue so we will have a seamless link to the code
+- Create a new branch from develop using naming convention feature/<Jira ticket id> <Description>
 - Do changes, commit often
 - Push the branch to origin
 - Create a merge request when ready
-- Keep main clean!
+- Keep master clean!
 
 Branch will be named after the Jira issue.
+
+## CI
+
+Initial CI has been done in python-app.yaml, which will run the tests.
