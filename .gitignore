@@ -14,3 +14,5 @@ scripts
 .robotcode_cache
 .vscode
 browser
+credentials.json
+token.json
