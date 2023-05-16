@@ -16,6 +16,8 @@ Open Browser to Landing Page
     Set Browser Timeout    ${timeout}
     New Context 
     New Page       ${url}
+    Set Viewport Size    1920    1080
+
     Wait Until Network Is Idle
     Get Title      contains     Cheap hotels in Helsinki
     Allow Cookies 

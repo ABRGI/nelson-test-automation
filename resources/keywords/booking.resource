@@ -85,8 +85,9 @@ Marks the "Someone else will be the main guest" checkbox as <value>
 Select Guests
     [Documentation]    Selects the number of guests for the booking, current implementation will only check the dropdown    
     [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
-    Click    //div[contains(@class,"booking-form-guests dropdown")]
-    Click    //div[contains(@class,"booking-form-guests dropdown")]
+    Wait Until Visible    //div[contains(@data-nelson-btn, 'guests')]
+    Click    //div[contains(@data-nelson-btn, 'guests')]
+    #Click    //div[contains(@data-nelson-btn, 'guests')]
     # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
 
 Choose Dates and Guests
