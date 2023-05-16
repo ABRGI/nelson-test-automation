@@ -14,7 +14,6 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +30,7 @@ jobs:
     - name: Set Environment
       run: ./setenv.sh
     - name: Test with RobotFramework
-      run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
+      run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
   copy-files:
     runs-on: ubuntu-latest
     steps:
