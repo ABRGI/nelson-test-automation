@@ -13,4 +13,4 @@ ${btnExtras}     (//div[contains(@view,"booking")]//button[contains(text(), "Con
 ${ssn}           170479-371J
 ${url}           http://test4.omenahotels.com/en/
 ${testerEmail}   nelsontestar@gmail.com
-${password}      hello@123
+${password}      Hello@123
