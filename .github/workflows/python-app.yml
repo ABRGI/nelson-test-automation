@@ -42,12 +42,12 @@ jobs:
           key: develop
           branches: gh_pages
           files: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
-    - name: Create and upload artifact
-      uses: actions/upload-pages-artifact@v1.0.8
+    - name: Copy Files
+      uses: actions/upload-artifact@v2
       with:
-        name: reports
-        path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
-        retention-days: 10
+          name: reports
+          path: ./home/runner/work/nelson-test-automation/nelson-test-automation/reports
+      continue-on-error: True
     - name: Report to Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
