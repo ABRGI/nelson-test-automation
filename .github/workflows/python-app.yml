@@ -47,5 +47,5 @@ jobs:
     - name: Report to Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
