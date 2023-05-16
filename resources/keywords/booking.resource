@@ -7,8 +7,8 @@ Resource            ${EXECDIR}/resources/keywords/common.resource
 Resource            ${EXECDIR}/resources/variables/locators.resource
 Library             Browser
 
-*** Keywords ***
 
+*** Keywords ***
 A new booker makes a reservation
     [Documentation]    A new booker makes a reservation
     Select Hotel
@@ -23,15 +23,15 @@ Successfully completes a payment
 Booker clicks on booker information
     [Documentation]    Booker clicks on booker information
     Click    (//p[contains(text(), "Details needed for receiving")])[1]
-    #Wait Until Visible
+    # Wait Until Visible
 
 Booker clicks on main guest name
     [Documentation]    Booker clicks on main guest name
     Click    (//p[contains(text(), "Details needed for receiving")])[2]
-    #Wait Until Visible
+    # Wait Until Visible
 
 Edit guest page is opened
-    [Documentation]       Verifeies guest page is opened
+    [Documentation]    Verifeies guest page is opened
     Wait Until Visible    id=chakra-modal-114
 
 Save and Sign button is visible
@@ -51,13 +51,18 @@ Signature modal is visible
     Wait Until Visible    id=chakra-modal--body-115
 
 Fill in Other Guest Details
-    [Documentation]    Fills in other guest details
-    #TBD: Should use test data instead of hard coded values
+    [Documentation]    Fills in other guest details, which can be given as arguments or uses default values
+    [Arguments]
+    ...    ${firstName}=Snoop
+    ...    ${lastName}=Dogg
+    ...    ${email}=nelsontestar@gmail.com
+    ...    ${phone}=040123942
+    ...    ${ssn}=170479-371J
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email    ${email}
     Click and Fill    id=phone    ${phone}
-    #${ssn}=    Generate SSN
+    # ${ssn}=    Generate SSN
     Click and Fill    id=ssn    ${ssn}
 
 Click Save and Sign
@@ -65,16 +70,16 @@ Click Save and Sign
     Click    //button[@data-ga4-event="add_guest_information"]
 
 Text on the save button is displayed as "${expected_text}"
-    [Documentation]        Verifies the text on the save button is displayed as expected
+    [Documentation]    Verifies the text on the save button is displayed as expected
     ${save_button_text}=    Get Text    xpath=//button[contains(text(),'Save and Sign')]
     Should Be Equal As Strings    ${save_button_text}    ${expected_text}
 
 Booker navigates to edit guest page
-    [Documentation]   TBD: Should be implemented
+    [Documentation]    TBD: Should be implemented
     Pass Execution    Implementation code to complete a payment
 
 Marks the "Someone else will be the main guest" checkbox as <value>
-    [Documentation]   TBD: Should be impemented
+    [Documentation]    TBD: Should be impemented
     Pass Execution    Implementation code to complete a payment
 
 Choose Dates and Guests
@@ -108,13 +113,13 @@ Select Dates
             ${selected}=    Set Variable    ${selected} + 1
         END
         ${both}=    Evaluate    ${selected} > 2
-        Exit For Loop If    ${both}
+        IF    ${both}    BREAK
     END
 
 Select Guests
     [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
     Click    //div[contains(@class, 'booking-form-guests')]/button
-    #Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
+    # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
 
 Select Room and Extras
     Click    ${btnExtras}
@@ -123,12 +128,17 @@ Select Room and Extras
 
 Fill in Payment Details
     [Documentation]    TBD: Use test data instead of hardcoded values
+    [Arguments]
+    ...    ${firstName}=Mos
+    ...    ${lastName}=Def
+    ...    ${phone}=040123942
+    ...    ${ssn}=170479-371J
     ${rand}=    Helpers.Get Random Name
     Click and Fill    id=firstName    ${firstName}
-    Click and Fill    id=lastName    ${lastName}
-    Click and Fill    id=email    saragee+nelson-${rand}@gmail.com
-    Click and Fill    id=phoneNumber    ${phone}
-    Click and Fill    id=password    ${password}
+    Click and Fill    id=lastName     ${lastName}
+    Click and Fill    id=email        ${emailUsername}-${rand}@${emailDomain}
+    Click and Fill    id=phoneNumber  ${phone}
+    Click and Fill    id=password     ${password}
     Click    xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]
     Click    //div[contains(text(), "Web bank payment")]
     Click    //p[contains(text(), 'Nordea')]
