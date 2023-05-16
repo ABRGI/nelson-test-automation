@@ -82,6 +82,13 @@ Marks the "Someone else will be the main guest" checkbox as <value>
     [Documentation]    TBD: Should be impemented
     Pass Execution    Implementation code to complete a payment
 
+Select Guests
+    [Documentation]    Selects the number of guests for the booking, current implementation will only check the dropdown    
+    [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
+    Click    //div[contains(@class,"booking-form-guests dropdown")]
+    Click    //div[contains(@class,"booking-form-guests dropdown")]
+    # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
+
 Choose Dates and Guests
     Select Guests
     Click    //button[@class="booking-form-button btn btn-primary"]
@@ -116,10 +123,7 @@ Select Dates
         IF    ${both}    BREAK
     END
 
-Select Guests
-    [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
-    Click    //div[contains(@class, 'booking-form-guests')]/button
-    # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
+
 
 Select Room and Extras
     Click    ${btnExtras}
