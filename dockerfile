@@ -19,7 +19,9 @@ COPY requirements.txt /opt/sqa/requirements.txt
 COPY resources/     /opt/sqa/resources
 COPY scripts/       /opt/sqa/scripts
 COPY testsuites/       /opt/sqa/testsuites
-
+COPY ./setenv.sh       /opt/sqa/setenv.sh
+COPY ./credentials.json     /opt/sqa/credentials.json
+RUN  chmod +x   /opt/sqa/setenv.sh
 # Install dependencies
 RUN apt update
 RUN apt-get install -y python3-pip && ln -sf python3 /usr/bin/python
@@ -28,7 +30,7 @@ RUN apt install -y bash curl sudo
 RUN pip install -r /opt/sqa/requirements.txt
 RUN rfbrowser init
 RUN yes | npx -y playwright install-deps     
-
+RUN /opt/sqa/setenv.sh
 
 RUN chmod -R +x    /opt/sqa/
 
