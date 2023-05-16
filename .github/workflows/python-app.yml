@@ -32,13 +32,18 @@ jobs:
       run: ./setenv.sh
     - name: Test with RobotFramework
       run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
-  copy-files:
-    runs-on: ubuntu-latest
-    steps:
-          - uses: actions/checkout@v2
-          - run: echo "Copying files to repository..."
-          - uses: actions/upload-artifact@v2
-            with:
-              name: reports
-              path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+    - name: Copy Files
+      uses: actions/upload-artifact@v2
+      with:
+          name: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+          path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+    
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v1.0.8
+      with:
+        # Artifact name
+        name: github-pages
+        path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+        retention-days: 10
+
   
