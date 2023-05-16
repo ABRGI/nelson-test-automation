@@ -12,11 +12,12 @@ Get Link from Email
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
-    New Browser    ${browser}    ${headless}
+    New Browser    ${browser}    ${headless}    timeout=${timeout}
+    Set Browser Timeout    ${timeout}
     New Context 
     New Page       ${url}
+    Wait Until Network Is Idle
     Get Title      contains     Cheap hotels in Helsinki
-    Set Browser Timeout     ${timeout}
     Allow Cookies 
 
 Open Browser Directly to Extras

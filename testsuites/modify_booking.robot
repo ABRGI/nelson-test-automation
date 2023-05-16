@@ -11,6 +11,7 @@ Force Tags         skip
 *** Test Cases ***
 
 A new booker opens the edit guest page and changes the main guest to someone else
+    Pass Execution     TBD
     A new booker makes a reservation
     Successfully completes a payment
     Booker clicks on main guest name
