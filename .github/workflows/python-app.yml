@@ -43,15 +43,15 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh_pages
+        branch: gh-pages
       continue-on-error: True
     - name: Display structure of downloaded files
       run: ls -R
-    - name: Copy files to gh_pages branch
+    - name: Copy files to gh-pages branch
       uses: planetoftheweb/copy-to-branches@v1.2
       env:
           key: develop
-          branches: gh_pages
+          branches: gh-pages
           files: reports
       continue-on-error: True
 
