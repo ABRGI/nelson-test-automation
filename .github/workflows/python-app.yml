@@ -5,9 +5,9 @@ name: Python application
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "develop" ]
 
 permissions:
   contents: read
@@ -31,5 +31,14 @@ jobs:
     - name: Set Environment
       run: ./setenv.sh
     - name: Test with RobotFramework
-      run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ testsuites/
-
+      run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
+  copy-files:
+    runs-on: ubuntu-latest
+    steps:
+          - uses: actions/checkout@v2
+          - run: echo "Copying files to repository..."
+          - uses: actions/upload-artifact@v2
+            with:
+              name: reports
+              path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+  
