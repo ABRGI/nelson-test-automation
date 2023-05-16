@@ -31,7 +31,7 @@ jobs:
     - name: Set Environment
       run: ./setenv.sh
     - name: Test with RobotFramework
-      run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
+      run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
     - name: Copy Files
       uses: actions/upload-artifact@v2
       with:
