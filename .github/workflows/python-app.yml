@@ -32,19 +32,15 @@ jobs:
     - name: Test with RobotFramework
       run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
       continue-on-error: True
-    - name: Copy HTML files
-      run: |
-        cp /home/runner/work/nelson-test-automation/nelson-test-automation/reports/*.html reports
-      shell: bash
     - uses: actions/checkout@v3
     - name: Download Artifacts
       uses: actions/download-artifact@v3
       with:
         name: reports
         path: reports
+      continue-on-error: True
     - name: Display structure of downloaded files
       run: ls -R
-      working-directory: path/to/artifact
     - name: Copy files to gh_pages branch
       uses: planetoftheweb/copy-to-branches@v1.2
       env:
