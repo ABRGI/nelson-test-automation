@@ -34,7 +34,7 @@ jobs:
       continue-on-error: True
     - name: Copy HTML files
       run: |
-        cp /home/runner/work/nelson-test-automation/nelson-test-automation/reports/*.html /reports
+        cp /home/runner/work/nelson-test-automation/nelson-test-automation/reports/*.html reports
       shell: bash
     - uses: actions/checkout@v3
     - name: Download Artifacts
