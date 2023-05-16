@@ -30,5 +30,14 @@ jobs:
         rfbrowser init
     - name: Set Environment
       run: ./setenv.sh
-    - name: Test with Robot Framework
-      run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ testsuites/
+    - name: Test with RobotFramework
+      run: robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
+  copy-files:
+    runs-on: ubuntu-latest
+    steps:
+          - uses: actions/checkout@v2
+          - run: echo "Copying files to repository..."
+          - uses: actions/upload-artifact@v2
+            with:
+              name: reports
+              path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
