@@ -5,8 +5,8 @@ Library           String
 
 *** Keywords ***
 Log in MUI
-    Type Text    //*[@id='email']    tdlong@tma.com.vn
-    Type Text    //*[@id='password']    PtFx5P#M67UV
+    Type Text    //*[@id='email']    toupdate
+    Type Text    //*[@id='password']    toupdate
 	Click    //button[contains(text(),'Sign in')]
 
 Open Nelson Portal
