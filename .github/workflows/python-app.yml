@@ -35,12 +35,12 @@ jobs:
     - name: Copy Files
       uses: actions/upload-artifact@v2
       with:
-          name: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+          name: reports
           path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
       continue-on-error: True
-    - name: Upload GitHub Pages artifact
+    - name: Create and upload artifact
       uses: actions/upload-pages-artifact@v1.0.8
       with:
-        name: github-pages
+        name: reports
         path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
         retention-days: 10
