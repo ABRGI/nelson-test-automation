@@ -65,6 +65,10 @@ Before running tests, you will need to set some environment variables. That can 
 robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ testsuites/
 ```
 
+### Branches and environments
+
+We are using develop branch for running against staging environment(s) and master for running against production environment.
+
 ## Debugging
 
 I suggest using [RoboCode VS Code Extension](https://github.com/d-biehl/robotcode) for debugging. Set up variables in extension settings.
