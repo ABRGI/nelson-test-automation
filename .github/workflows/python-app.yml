@@ -44,3 +44,8 @@ jobs:
         name: reports
         path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
         retention-days: 10
+    - name: Report to Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: /home/runner/work/nelson-test-automation/nelson-test-automation/reports

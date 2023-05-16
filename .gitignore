@@ -1,10 +1,6 @@
-results
 playwright-log.txt
 Email.py
 venv
-log.html
-output.xml
-report.html
 .env
 test.robot
 examples
