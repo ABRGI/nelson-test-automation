@@ -127,6 +127,9 @@ Select Dates
 
 
 Select Room and Extras
+    Get Element States     ${btnExtras}    validate    visible 
+
+    IF 
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
     Click    ${btnPayment}
