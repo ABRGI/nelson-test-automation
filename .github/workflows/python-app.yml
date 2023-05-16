@@ -32,12 +32,18 @@ jobs:
     - name: Test with RobotFramework
       run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
       continue-on-error: True
-    - uses: actions/checkout@v3
-    - name: Download Artifacts
-      uses: actions/download-artifact@v3
+    - name: Commit files
+      run: |
+        echo ${PWD}
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+        git commit -a -m "Add changes"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        name: reports
-        path: reports
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh_pages
       continue-on-error: True
     - name: Display structure of downloaded files
       run: ls -R
