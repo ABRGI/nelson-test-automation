@@ -115,6 +115,7 @@ Select Guests
     #Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
 
 Select Room and Extras
+    Wait Until Network Is Idle    timeout=33s
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
     Click    ${btnPayment}
@@ -146,9 +147,11 @@ Close Dialog
     Click    //footer/button[contains(text(), "Ok")]
 
 Pay Using Visa
-    Click and Fill    //label[@for='cardNumber']    4153013999700321
-    Click and Fill    id=expiry    11/23
-    Click and Fill    id=cvv    321
+    Wait Until Network Is Idle    timeout=33s
+    Type Text    //label[@for='cardNumber']    4153013999700321
+    Type Text    id=expiry    11/23
+    Type Text    id=cvv    321
+    Wait Until Network Is Idle    timeout=33s
     Click    //button[@type='submit']
 
 Verify Booking is Successful
@@ -159,3 +162,17 @@ Verify Booking is Successful
     ${result}    Get Text    //p[contains(text(),'Booking code')]
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
+
+Click Booker or Guest Name
+    [Arguments]    ${name}
+    Click    //p[contains(text(),'Mos Def')]
+
+Verify Save and Sign State
+    [Arguments]    ${turnOn}
+    Run Keyword If    '${turnOn}'=='True'    Get Element Count    ${btnSaveAndSign}    ==    1
+    Run Keyword If    '${turnOn}'=='True'    Get Element Count    ${btnSave}    <    1
+    Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSaveAndSign}    <    1
+    Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSave}    ==    1
+
+Close Edit Booker or Guest
+    Click    //button[@aria-label='Close']
