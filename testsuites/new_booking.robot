@@ -9,7 +9,7 @@ Documentation      A test suite for verifying modify booking functionality
 Create A New Booking
     [Documentation]    A new booker opens the page and does a successful booking
     Open Browser to Landing Page 
-    A new booker makes a reservation
+    Select Hotel
     Choose Dates and Guests 
     Select Room and Extras
     Fill in Payment Details 

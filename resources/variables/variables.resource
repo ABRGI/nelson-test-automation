@@ -4,7 +4,7 @@ ${timeout}        90s
 ${firstName}      Mos 
 ${lastName}       Def 
 
-${emailUsername}  nelsontestar@gmail.com 
+${emailUsername}  nelsontestar
 ${emailDomain}    gmail.com
 ${email}          ${emailUsername}@${emailDomain}
 ${phone}          0401234567
