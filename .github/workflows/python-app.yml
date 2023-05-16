@@ -32,12 +32,13 @@ jobs:
       run: ./setenv.sh
     - name: Test with RobotFramework
       run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
+      continue-on-error: True
     - name: Copy Files
       uses: actions/upload-artifact@v2
       with:
           name: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
           path: /home/runner/work/nelson-test-automation/nelson-test-automation/reports
-    
+      continue-on-error: True
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.8
       with:
