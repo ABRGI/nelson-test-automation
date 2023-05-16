@@ -127,12 +127,13 @@ Select Dates
 
 
 Select Room and Extras
-    Get Element States     ${btnExtras}    validate    visible 
-
-    IF 
-    Click    ${btnExtras}
-    Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
-    Click    ${btnPayment}
+    ${rooms}=      Get Text   No rooms
+    Run Keyword If     ${rooms}
+    IF     
+        Click    ${btnExtras}
+        Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
+        Click    ${btnPayment}
+    END
 
 Fill in Payment Details
     [Documentation]    TBD: Use test data instead of hardcoded values

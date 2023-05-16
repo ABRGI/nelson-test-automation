@@ -32,12 +32,12 @@ jobs:
     - name: Test with RobotFramework
       run: robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --outputdir reports/ testsuites/
       continue-on-error: True
+    - uses: actions/checkout@v3
     - name: Download Artifacts
       uses: actions/download-artifact@v3
       with:
         name: reports
-        path:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports
-        
+        path: reports
     - name: Display structure of downloaded files
       run: ls -R
       working-directory: path/to/artifact
