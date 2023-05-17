@@ -6,6 +6,7 @@ Resource            ${EXECDIR}/resources/variables/variables.resource
 Resource            ${EXECDIR}/resources/keywords/common.resource
 Resource            ${EXECDIR}/resources/variables/locators.resource
 Library             Browser
+Library             String
 
 
 *** Keywords ***
@@ -133,13 +134,13 @@ Select Room and Extras
     Click    ${btnPayment}
 
 Fill in Payment Details
-    [Arguments]    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
     [Arguments]
     ...    ${firstName}=Mos
     ...    ${lastName}=Def
     ...    ${phone}=040123942
     ...    ${ssn}=170479-371J
+    ...    ${env}=bui
     ${rand}=    Helpers.Get Random Name
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName     ${lastName}
