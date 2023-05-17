@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.11 on linux)" generated="20230517 01:11:10.718" rpa="false" schemaversion="3">
+<suite id="s1" name="Testsuites" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites">
+<suite id="s1-s1" name="Admin Booking" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/Admin_Booking.robot">
+<test id="s1-s1-t1" name="Admin Create A Booking" line="11">
+<kw name="Open Nelson Portal" library="mui">
+<arg>${MUI-Link}</arg>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230517 01:11:11.675" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/browser/traces/2d392b2c-b4bc-4ec9-8d3d-4e0bf2221aa3"}</msg>
+<msg timestamp="20230517 01:11:11.922" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/browser/traces/2d392b2c-b4bc-4ec9-8d3d-4e0bf2221aa3"}</msg>
+<status status="PASS" starttime="20230517 01:11:11.674" endtime="20230517 01:11:11.923"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230517 01:11:11.923" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230517 01:11:11.946" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230517 01:11:11.946" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230517 01:11:11.923" endtime="20230517 01:11:11.946"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230517 01:11:13.661" level="INFO">Successfully initialized new page object and opened url: https://admin.nelson.management/#/login</msg>
+<status status="PASS" starttime="20230517 01:11:11.946" endtime="20230517 01:11:13.661"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:11.674" endtime="20230517 01:11:13.662"/>
+</kw>
+<kw name="Log in MUI" library="mui">
+<kw name="Type Secret" library="Browser">
+<arg>//*[@id='email']</arg>
+<arg>$muiname</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:13.663" endtime="20230517 01:11:14.583"/>
+</kw>
+<kw name="Type Secret" library="Browser">
+<arg>//*[@id='password']</arg>
+<arg>$muipass</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:14.584" endtime="20230517 01:11:14.683"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//button[contains(text(),'Sign in')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:14.683" endtime="20230517 01:11:14.751"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:13.662" endtime="20230517 01:11:14.752"/>
+</kw>
+<kw name="Open A MUI Client" library="mui">
+<arg>Test (2) Omena</arg>
+<kw name="Click" library="Browser">
+<arg>//b[normalize-space()='${client}']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:24.857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230517 01:11:24.857" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230517 01:11:24.857" level="FAIL">TimeoutError: locator.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//b[normalize-space()=\'Test (2) Omena\']')
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<status status="FAIL" starttime="20230517 01:11:14.752" endtime="20230517 01:11:24.860"/>
+</kw>
+<status status="FAIL" starttime="20230517 01:11:14.752" endtime="20230517 01:11:24.860"/>
+</kw>
+<kw name="New Reservation MUI" library="mui">
+<status status="NOT RUN" starttime="20230517 01:11:24.860" endtime="20230517 01:11:24.860"/>
+</kw>
+<kw name="Create New Reservation MUI" library="mui">
+<status status="NOT RUN" starttime="20230517 01:11:24.861" endtime="20230517 01:11:24.861"/>
+</kw>
+<kw name="Switch Page" library="Browser">
+<arg>NEW</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Switches the active browser page to another open page by ``id`` or ``NEW``.</doc>
+<status status="NOT RUN" starttime="20230517 01:11:24.861" endtime="20230517 01:11:24.861"/>
+</kw>
+<kw name="Select Hotel" library="mui">
+<arg>Turku, Humalistonkatu</arg>
+<status status="NOT RUN" starttime="20230517 01:11:24.861" endtime="20230517 01:11:24.861"/>
+</kw>
+<kw name="Find Room" library="mui">
+<status status="NOT RUN" starttime="20230517 01:11:24.861" endtime="20230517 01:11:24.861"/>
+</kw>
+<kw name="Select Room and Extras" library="booking">
+<status status="NOT RUN" starttime="20230517 01:11:24.862" endtime="20230517 01:11:24.862"/>
+</kw>
+<kw name="Fill in Payment Details" library="booking">
+<arg>mui</arg>
+<doc>TBD: Use test data instead of hardcoded values</doc>
+<status status="NOT RUN" starttime="20230517 01:11:24.862" endtime="20230517 01:11:24.862"/>
+</kw>
+<kw name="Verify Booking is Successful" library="booking">
+<status status="NOT RUN" starttime="20230517 01:11:24.862" endtime="20230517 01:11:24.862"/>
+</kw>
+<kw name="Click Booker or Guest Name" library="booking">
+<arg>'${firstName}' '${lastName}'</arg>
+<status status="NOT RUN" starttime="20230517 01:11:24.862" endtime="20230517 01:11:24.862"/>
+</kw>
+<kw name="Verify Save and Sign State" library="booking">
+<arg>${False}</arg>
+<status status="NOT RUN" starttime="20230517 01:11:24.862" endtime="20230517 01:11:24.863"/>
+</kw>
+<kw name="Close Edit Booker or Guest" library="booking">
+<status status="NOT RUN" starttime="20230517 01:11:24.863" endtime="20230517 01:11:24.863"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn" type="TEARDOWN">
+<arg>Log out of Nelson In BUI Confirmation Page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Log out of Nelson In BUI Confirmation Page" library="mui">
+<kw name="Click" library="Browser">
+<arg>//p[normalize-space()='Sign out']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:34.969" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230517 01:11:34.969" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230517 01:11:34.969" level="FAIL">TimeoutError: locator.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//p[normalize-space()=\'Sign out\']')
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<status status="FAIL" starttime="20230517 01:11:24.864" endtime="20230517 01:11:34.970"/>
+</kw>
+<status status="FAIL" starttime="20230517 01:11:24.863" endtime="20230517 01:11:34.970"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:24.863" endtime="20230517 01:11:34.970"/>
+</kw>
+<status status="FAIL" starttime="20230517 01:11:11.671" endtime="20230517 01:11:34.970">TimeoutError: locator.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//b[normalize-space()=\'Test (2) Omena\']')
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</test>
+<status status="FAIL" starttime="20230517 01:11:10.737" endtime="20230517 01:11:35.017"/>
+</suite>
+<suite id="s1-s2" name="Debug" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/debug.robot">
+<test id="s1-s2-t1" name="Search on Google" line="6">
+<kw name="Open Browser" library="Browser">
+<arg>https://www.google.com</arg>
+<arg>chromium</arg>
+<arg>headless=${headless}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<msg timestamp="20230517 01:11:35.029" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20230517 01:11:35.030" level="INFO">Switching browser to browser=7e1254f7-d3a7-4ae9-a38e-74d7e10789ef</msg>
+<msg timestamp="20230517 01:11:35.031" level="INFO">Successfully changed active browser</msg>
+<msg timestamp="20230517 01:11:35.031" level="INFO">Reusing existing browser with id: browser=7e1254f7-d3a7-4ae9-a38e-74d7e10789ef</msg>
+<msg timestamp="20230517 01:11:35.031" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230517 01:11:35.036" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230517 01:11:35.036" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<msg timestamp="20230517 01:11:35.688" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
+<status status="PASS" starttime="20230517 01:11:35.029" endtime="20230517 01:11:35.689"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//textarea[@name="q"]</arg>
+<arg>Robot Framework</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:35.689" level="INFO">Fills the text 'Robot Framework' in the given field.</msg>
+<status status="PASS" starttime="20230517 01:11:35.689" endtime="20230517 01:11:35.735"/>
+</kw>
+<kw name="Press Keys" library="Browser">
+<arg>ENTER</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:35.736" endtime="20230517 01:11:35.741"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230517 01:11:35.781" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230517 01:11:35.742" endtime="20230517 01:11:35.781"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:35.027" endtime="20230517 01:11:35.781"/>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230517 01:11:35.788" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230517 01:11:35.786" endtime="20230517 01:11:35.788"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:35.021" endtime="20230517 01:11:35.788"/>
+</suite>
+<suite id="s1-s3" name="Modify Booking" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/modify_booking.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230517 01:11:35.803" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/browser/traces/1b98843a-d2d1-47e9-9f8d-dc73a5febe91"}</msg>
+<msg timestamp="20230517 01:11:35.945" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/browser/traces/1b98843a-d2d1-47e9-9f8d-dc73a5febe91"}</msg>
+<status status="PASS" starttime="20230517 01:11:35.803" endtime="20230517 01:11:35.945"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230517 01:11:35.947" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230517 01:11:35.945" endtime="20230517 01:11:35.947"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230517 01:11:35.948" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230517 01:11:35.954" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230517 01:11:35.954" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230517 01:11:35.948" endtime="20230517 01:11:35.954"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230517 01:11:37.556" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/</msg>
+<status status="PASS" starttime="20230517 01:11:35.955" endtime="20230517 01:11:37.556"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1920</arg>
+<arg>1080</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20230517 01:11:37.582" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20230517 01:11:37.557" endtime="20230517 01:11:37.582"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230517 01:11:37.582" endtime="20230517 01:11:38.439"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230517 01:11:38.446" level="INFO">Title: 'Cheap hotels in Helsinki and Finland | Omena Hotels - Budget hotels in Finland'</msg>
+<status status="PASS" starttime="20230517 01:11:38.440" endtime="20230517 01:11:38.446"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<kw name="Click" library="Browser">
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:38.446" endtime="20230517 01:11:38.532"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:38.446" endtime="20230517 01:11:38.532"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:35.802" endtime="20230517 01:11:38.532"/>
+</kw>
+<test id="s1-s3-t1" name="A new booker opens the edit guest page and changes the main guest to someone else" line="13">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230517 01:11:38.537" level="INFO">Execution passed with message:
+TBD</msg>
+<status status="PASS" starttime="20230517 01:11:38.536" endtime="20230517 01:11:38.537"/>
+</kw>
+<kw name="A new booker makes a reservation" library="booking">
+<doc>A new booker makes a reservation</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.537" endtime="20230517 01:11:38.537"/>
+</kw>
+<kw name="Successfully completes a payment" library="booking">
+<doc>The payment is successfully completed</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.537" endtime="20230517 01:11:38.537"/>
+</kw>
+<kw name="Booker clicks on main guest name" library="booking">
+<doc>Booker clicks on main guest name</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.537" endtime="20230517 01:11:38.537"/>
+</kw>
+<kw name="Edit guest page is opened" library="booking">
+<doc>Verifeies guest page is opened</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.538" endtime="20230517 01:11:38.538"/>
+</kw>
+<kw name="Save and Sign button is visible" library="booking">
+<doc>Verifies the save and sign button is visible</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.538" endtime="20230517 01:11:38.538"/>
+</kw>
+<kw name="Toggle Someone Else Checkbox" library="booking">
+<doc>Toggles the "Someone else will be the main guest" checkbox</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.538" endtime="20230517 01:11:38.538"/>
+</kw>
+<kw name="Save and Sign button is visible" library="booking">
+<doc>Verifies the save and sign button is visible</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.538" endtime="20230517 01:11:38.538"/>
+</kw>
+<kw name="Fill in Other Guest Details" library="booking">
+<doc>Fills in other guest details, which can be given as arguments or uses default values</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.538" endtime="20230517 01:11:38.538"/>
+</kw>
+<kw name="Click Save and Sign" library="booking">
+<doc>Clicks the save and sign button</doc>
+<status status="NOT RUN" starttime="20230517 01:11:38.539" endtime="20230517 01:11:38.539"/>
+</kw>
+<tag>skip</tag>
+<status status="PASS" starttime="20230517 01:11:38.532" endtime="20230517 01:11:38.539">TBD</status>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="PASS" starttime="20230517 01:11:35.793" endtime="20230517 01:11:38.552"/>
+</suite>
+<suite id="s1-s4" name="New Booking" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/new_booking.robot">
+<test id="s1-s4-t1" name="Create A New Booking" line="9">
+<kw name="Open Browser to Landing Page" library="common">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230517 01:11:38.624" level="INFO">Switching browser to browser=b2e1181f-0eb0-47e6-bf73-59557d37c551</msg>
+<msg timestamp="20230517 01:11:38.626" level="INFO">Successfully changed active browser</msg>
+<msg timestamp="20230517 01:11:38.626" level="INFO">Reusing existing browser with id: browser=b2e1181f-0eb0-47e6-bf73-59557d37c551</msg>
+<status status="PASS" starttime="20230517 01:11:38.624" endtime="20230517 01:11:38.626"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230517 01:11:38.628" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230517 01:11:38.626" endtime="20230517 01:11:38.628"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230517 01:11:38.629" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230517 01:11:38.634" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230517 01:11:38.634" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230517 01:11:38.628" endtime="20230517 01:11:38.634"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230517 01:11:40.135" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/</msg>
+<status status="PASS" starttime="20230517 01:11:38.634" endtime="20230517 01:11:40.136"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1920</arg>
+<arg>1080</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20230517 01:11:40.159" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20230517 01:11:40.136" endtime="20230517 01:11:40.159"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230517 01:11:40.160" endtime="20230517 01:11:41.034"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230517 01:11:41.040" level="INFO">Title: 'Cheap hotels in Helsinki and Finland | Omena Hotels - Budget hotels in Finland'</msg>
+<status status="PASS" starttime="20230517 01:11:41.035" endtime="20230517 01:11:41.040"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<kw name="Click" library="Browser">
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:41.041" endtime="20230517 01:11:41.135"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:41.041" endtime="20230517 01:11:41.135"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:38.623" endtime="20230517 01:11:41.135"/>
+</kw>
+<kw name="Select Hotel" library="booking">
+<doc>Select Hotel by using a number as an argument, default Lönnrotinkatu</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Selecting Hotel: ${hotel}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230517 01:11:41.136" level="INFO">Selecting Hotel: Lönnrotin</msg>
+<status status="PASS" starttime="20230517 01:11:41.136" endtime="20230517 01:11:41.136"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//div[contains(@data-nelson-btn, "hotels")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:41.136" endtime="20230517 01:11:41.228"/>
+</kw>
+<kw name="Wait Until Visible" library="common">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230517 01:11:41.299" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] at state visible</msg>
+<status status="PASS" starttime="20230517 01:11:41.228" endtime="20230517 01:11:41.299"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:41.228" endtime="20230517 01:11:41.299"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:41.299" endtime="20230517 01:11:41.448"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230517 01:11:41.449" endtime="20230517 01:11:41.452"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:41.135" endtime="20230517 01:11:41.452"/>
+</kw>
+<kw name="Choose Dates and Guests" library="booking">
+<kw name="Select Guests" library="booking">
+<doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
+<kw name="Wait Until Visible" library="common">
+<arg>//div[contains(@data-nelson-btn, 'guests')]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230517 01:11:41.478" level="INFO">Waited for Element with selector //div[contains(@data-nelson-btn, 'guests')] at state visible</msg>
+<status status="PASS" starttime="20230517 01:11:41.454" endtime="20230517 01:11:41.478"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:41.453" endtime="20230517 01:11:41.479"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//div[contains(@data-nelson-btn, 'guests')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:41.479" endtime="20230517 01:11:41.598"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:41.453" endtime="20230517 01:11:41.598"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//button[@class="booking-form-button btn btn-primary"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:41.598" endtime="20230517 01:11:42.034"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${btnExtras}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230517 01:11:44.389" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
+<status status="PASS" starttime="20230517 01:11:42.034" endtime="20230517 01:11:44.389"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:41.453" endtime="20230517 01:11:44.389"/>
+</kw>
+<kw name="Select Room and Extras" library="booking">
+<kw name="Wait Until Network Is Idle" library="Browser">
+<arg>timeout=33s</arg>
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230517 01:11:44.390" endtime="20230517 01:11:48.573"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${btnExtras}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:48.574" endtime="20230517 01:11:48.715"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${btnPayment}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230517 01:11:49.364" level="INFO">Waited for Element with selector (//div[contains(@view,"extras")]//button[contains(text(), "Continue to payment")])[1] at state visible</msg>
+<status status="PASS" starttime="20230517 01:11:48.716" endtime="20230517 01:11:49.364"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${btnPayment}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:49.364" endtime="20230517 01:11:49.452"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:44.390" endtime="20230517 01:11:49.452"/>
+</kw>
+<kw name="Fill in Payment Details" library="booking">
+<doc>TBD: Use test data instead of hardcoded values</doc>
+<kw name="Get Random Name" library="Helpers">
+<var>${rand}</var>
+<msg timestamp="20230517 01:11:49.453" level="INFO">${rand} = jfba</msg>
+<status status="PASS" starttime="20230517 01:11:49.453" endtime="20230517 01:11:49.453"/>
+</kw>
+<kw name="Click and Fill" library="common">
+<arg>id=firstName</arg>
+<arg>${firstName}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:49.454" endtime="20230517 01:11:51.724"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:51.725" level="INFO">Fills the text 'Mos' in the given field.</msg>
+<status status="PASS" starttime="20230517 01:11:51.724" endtime="20230517 01:11:51.857"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:49.453" endtime="20230517 01:11:51.857"/>
+</kw>
+<kw name="Click and Fill" library="common">
+<arg>id=lastName</arg>
+<arg>${lastName}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:51.858" endtime="20230517 01:11:51.980"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:51.981" level="INFO">Fills the text 'Def' in the given field.</msg>
+<status status="PASS" starttime="20230517 01:11:51.981" endtime="20230517 01:11:52.073"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:51.858" endtime="20230517 01:11:52.074"/>
+</kw>
+<kw name="Click and Fill" library="common">
+<arg>id=email</arg>
+<arg>${emailUsername}-${rand}@${emailDomain}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:52.075" endtime="20230517 01:11:52.186"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:52.187" level="INFO">Fills the text 'nelsontestar-jfba@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230517 01:11:52.187" endtime="20230517 01:11:52.283"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:52.074" endtime="20230517 01:11:52.283"/>
+</kw>
+<kw name="Click and Fill" library="common">
+<arg>id=phoneNumber</arg>
+<arg>${phone}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:52.284" endtime="20230517 01:11:52.430"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:52.431" level="INFO">Fills the text '040123942' in the given field.</msg>
+<status status="PASS" starttime="20230517 01:11:52.430" endtime="20230517 01:11:52.526"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:52.283" endtime="20230517 01:11:52.526"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='bui'</arg>
+<arg>Click and Fill</arg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click and Fill" library="common">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:52.527" endtime="20230517 01:11:52.664"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230517 01:11:52.664" level="INFO">Fills the text 'Hello@123' in the given field.</msg>
+<status status="PASS" starttime="20230517 01:11:52.664" endtime="20230517 01:11:52.714"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:52.527" endtime="20230517 01:11:52.714"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:52.526" endtime="20230517 01:11:52.714"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='bui'</arg>
+<arg>Click</arg>
+<arg>xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click" library="Browser">
+<arg>xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:52.715" endtime="20230517 01:11:52.882"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:52.715" endtime="20230517 01:11:52.883"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='bui'</arg>
+<arg>Click</arg>
+<arg>//div[contains(text(), "Web bank payment")]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click" library="Browser">
+<arg>//div[contains(text(), "Web bank payment")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:52.884" endtime="20230517 01:11:53.001"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:52.883" endtime="20230517 01:11:53.001"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='bui'</arg>
+<arg>Click</arg>
+<arg>//p[contains(text(), 'Nordea')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click" library="Browser">
+<arg>//p[contains(text(), 'Nordea')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:53.002" endtime="20230517 01:11:53.156"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:53.002" endtime="20230517 01:11:53.156"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='bui'</arg>
+<arg>Click</arg>
+<arg>(//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click" library="Browser">
+<arg>(//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230517 01:11:53.157" endtime="20230517 01:11:53.314"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:53.156" endtime="20230517 01:11:53.314"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='mui'</arg>
+<arg>Click</arg>
+<arg>//p[normalize-space()='Visa']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230517 01:11:53.314" endtime="20230517 01:11:53.315"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='mui'</arg>
+<arg>Click</arg>
+<arg>(//button[normalize-space()='Pay'])[1]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230517 01:11:53.315" endtime="20230517 01:11:53.315"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${env}'=='mui'</arg>
+<arg>Pay Using Visa</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230517 01:11:53.315" endtime="20230517 01:11:53.316"/>
+</kw>
+<status status="PASS" starttime="20230517 01:11:49.452" endtime="20230517 01:11:53.316"/>
+</kw>
+<kw name="Close Dialog" library="booking">
+<kw name="Wait For Elements State" library="Browser">
+<arg>id=chakra-modal-4</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230517 01:13:23.502" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230517 01:13:23.502" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230517 01:13:23.502" level="FAIL">TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('id=chakra-modal-4') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<status status="FAIL" starttime="20230517 01:11:53.316" endtime="20230517 01:13:23.503"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//footer/button[contains(text(), "Ok")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230517 01:13:23.503" endtime="20230517 01:13:23.503"/>
+</kw>
+<status status="FAIL" starttime="20230517 01:11:53.316" endtime="20230517 01:13:23.503"/>
+</kw>
+<doc>A new booker opens the page and does a successful booking</doc>
+<status status="FAIL" starttime="20230517 01:11:38.621" endtime="20230517 01:13:23.504">TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('id=chakra-modal-4') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</test>
+<test id="s1-s4-t2" name="Confirm Email" line="18">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD in: BUI2-562</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230517 01:13:23.551" level="INFO">Execution passed with message:
+TBD in: BUI2-562</msg>
+<status status="PASS" starttime="20230517 01:13:23.551" endtime="20230517 01:13:23.551"/>
+</kw>
+<kw name="Get Link from Email" library="common">
+<status status="NOT RUN" starttime="20230517 01:13:23.551" endtime="20230517 01:13:23.552"/>
+</kw>
+<doc>A new booker receives an email with a link to modify the booking</doc>
+<status status="PASS" starttime="20230517 01:13:23.546" endtime="20230517 01:13:23.552">TBD in: BUI2-562</status>
+</test>
+<test id="s1-s4-t3" name="Open Link" line="23">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230517 01:13:23.558" level="INFO">Execution passed with message:
+TBD</msg>
+<status status="PASS" starttime="20230517 01:13:23.558" endtime="20230517 01:13:23.558"/>
+</kw>
+<status status="PASS" starttime="20230517 01:13:23.556" endtime="20230517 01:13:23.558">TBD</status>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230517 01:11:38.603" endtime="20230517 01:13:23.562"/>
+</suite>
+<status status="FAIL" starttime="20230517 01:11:10.719" endtime="20230517 01:13:23.572"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">skip</stat>
+</tag>
+<suite>
+<stat pass="4" fail="2" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Admin Booking">Testsuites.Admin Booking</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Debug">Testsuites.Debug</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Modify Booking">Testsuites.Modify Booking</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s4" name="New Booking">Testsuites.New Booking</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230517 01:11:35.029" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
