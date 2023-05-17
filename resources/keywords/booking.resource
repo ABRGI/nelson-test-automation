@@ -96,8 +96,8 @@ Choose Dates and Guests
     Wait For Elements State    ${btnExtras}    visible    timeout=${timeout}
 
 Select Hotel
-    [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
     [Arguments]    ${hotel}=Lönnrotin
+    [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
     Log    Selecting Hotel: ${hotel}
     Click    //div[contains(@data-nelson-btn, "hotels")]
     Wait Until Visible    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
@@ -117,25 +117,23 @@ Select Dates
     FOR    ${e}    IN    @{elements}
         ${visibility}=    Get Element States    ${e}    then    value & (visible | hidden)
         IF    ${visibility} == 'visible'
-            Click    ${e}
-            ${selected}=    Set Variable    ${selected} + 1
-        END
-        ${both}=    Evaluate    ${selected} > 2
-        IF    ${both}    BREAK
+        Click    ${e}
+        ${selected}=    Set Variable    ${selected} + 1
+    END
+    ${both}=    Evaluate    ${selected} > 2
+    Exit For Loop If    ${both}
     END
 
 
 
 Select Room and Extras
-    ${rooms}=      Get Text   No rooms
-    Run Keyword If     ${rooms}
-    IF     
-        Click    ${btnExtras}
-        Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
-        Click    ${btnPayment}
-    END
+    Wait Until Network Is Idle    timeout=33s
+    Click    ${btnExtras}
+    Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
+    Click    ${btnPayment}
 
 Fill in Payment Details
+    [Arguments]    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
     [Arguments]
     ...    ${firstName}=Mos
@@ -147,11 +145,14 @@ Fill in Payment Details
     Click and Fill    id=lastName     ${lastName}
     Click and Fill    id=email        ${emailUsername}-${rand}@${emailDomain}
     Click and Fill    id=phoneNumber  ${phone}
-    Click and Fill    id=password     ${password}
-    Click    xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]
-    Click    //div[contains(text(), "Web bank payment")]
-    Click    //p[contains(text(), 'Nordea')]
-    Click    (//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]
+    Run Keyword If    '${env}'=='bui'    Click and Fill    id=password     ${password}
+    Run Keyword If    '${env}'=='bui'    Click    xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]
+    Run Keyword If    '${env}'=='bui'    Click    //div[contains(text(), "Web bank payment")]
+    Run Keyword If    '${env}'=='bui'    Click    //p[contains(text(), 'Nordea')]
+    Run Keyword If    '${env}'=='bui'    Click    (//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]
+    Run Keyword If    '${env}'=='mui'    Click    //p[normalize-space()='Visa']
+    Run Keyword If    '${env}'=='mui'    Click    (//button[normalize-space()='Pay'])[1]
+    Run Keyword If    '${env}'=='mui'    Pay Using Visa
 
 Simulate Success or Failure
     [Arguments]    ${which}
@@ -161,3 +162,34 @@ Simulate Success or Failure
 Close Dialog
     Wait For Elements State    id=chakra-modal-4    visible    timeout=${timeout}
     Click    //footer/button[contains(text(), "Ok")]
+
+Pay Using Visa
+    Wait Until Network Is Idle    timeout=33s
+    Type Text    //label[@for='cardNumber']    4153013999700321
+    Type Text    id=expiry    11/23
+    Type Text    id=cvv    321
+    Wait Until Network Is Idle    timeout=33s
+    Click    //button[@type='submit']
+
+Verify Booking is Successful
+    Wait For Elements State    //div//h4    visible
+    ${result}    Get Text    //div//h4
+    Should Be Equal As Strings    ${result}    Payment was successful
+    Click    //button[normalize-space()='Ok']
+    ${result}    Get Text    //p[contains(text(),'Booking code')]
+    ${result}    Remove String    ${result}    Booking code${SPACE}
+    ${result}    Strip String    ${result}
+
+Click Booker or Guest Name
+    [Arguments]    ${name}
+    Click    //p[contains(text(),'Mos Def')]
+
+Verify Save and Sign State
+    [Arguments]    ${turnOn}
+    Run Keyword If    '${turnOn}'=='True'    Get Element Count    ${btnSaveAndSign}    ==    1
+    Run Keyword If    '${turnOn}'=='True'    Get Element Count    ${btnSave}    <    1
+    Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSaveAndSign}    <    1
+    Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSave}    ==    1
+
+Close Edit Booker or Guest
+    Click    //button[@aria-label='Close']

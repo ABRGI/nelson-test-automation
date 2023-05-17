@@ -10,7 +10,7 @@ scripts
 .robotcode_cache
 .vscode
 browser
-credentials.json
-token.json
-package*
 node_modules
+credentials.json
+package*
+token.json
