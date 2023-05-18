@@ -37,6 +37,7 @@ Fill in missing environment variables to file or export them manually. And run s
 
 Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable).
 
+
 ## Python Versions
 
 Let's use Python 3.10 for this project. You can check your version using the following cmd.
