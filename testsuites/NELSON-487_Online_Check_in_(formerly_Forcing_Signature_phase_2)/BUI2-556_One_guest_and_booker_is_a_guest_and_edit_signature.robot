@@ -16,7 +16,7 @@ Make a booking
     Select Room and Extras
     Continue to Payment
     Check Regular Rate
-    Check Join as Menber
+    Check Join as Member
     Check Regular Rate
     Fill Contact Info
     Accept Term and Proceed to Payment

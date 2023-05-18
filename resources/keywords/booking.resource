@@ -209,10 +209,18 @@ Quick Pay
     BuiltIn.Sleep    8
 
 Verify Successful Booking
-    Wait For Elements State    //div//h4    visible
+    Wait Until Keyword Succeeds    15s    3s    Wait For Elements State    //div//h4    visible
     ${result}    Get Text    //div//h4
     Should Be Equal As Strings    ${result}    Payment was successful
     Click    //button[normalize-space()='Ok']
     ${result}    Get Text    //p[contains(text(),'Booking code')]
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
+
+Check Join as Member
+    Click    //p[contains(text(),'Join for free and')]
+
+Quickly Pay
+    Click    //div[normalize-space()='Web bank payment']
+    Click    //p[normalize-space()='OP']
+    Click    (//button[normalize-space()='Pay'])[1]
