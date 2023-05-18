@@ -88,6 +88,19 @@ When starting a new test case:
 
 Branch will be named after the Jira issue.
 
-## CI
+## CI and reporting
 
-Initial CI has been done in python-app.yaml, which will run the tests.
+Initial CI has been done in python-app.yaml, which will run the tests on push to develop and upload results to GitHub pages with the default RobotFramework report.
+
+Run command is currently as follows but also sbuject to change:
+
+```bash
+robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --variable MUI-Link:https://admin.nelson.management/#/login --outputdir reports/ testsuites/
+```
+
+GitHub pages are deployed from [gh-pages branch](https://github.com/ABRGI/nelson-test-automation/tree/gh-pages) and are visible at: 
+[https://abrgi.github.io/nelson-test-automation/report.html](https://abrgi.github.io/nelson-test-automation).
+
+## API Tests
+
+API Tests will be integrated into this repository after we have established the authentication required.
