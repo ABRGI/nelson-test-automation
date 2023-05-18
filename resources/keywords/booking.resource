@@ -1,13 +1,11 @@
 *** Settings ***
-Documentation       This file contains keywords that are related to the booking process.
-
-Library             ${EXECDIR}/resources/libraries/Helpers.py
-Resource            ${EXECDIR}/resources/variables/variables.resource
-Resource            ${EXECDIR}/resources/keywords/common.resource
-Resource            ${EXECDIR}/resources/variables/locators.resource
-Library             Browser
-Library             String
-
+Documentation     This file contains keywords that are related to the booking process.
+Library           ${EXECDIR}/resources/libraries/Helpers.py
+Resource          ${EXECDIR}/resources/variables/variables.resource
+Resource          ${EXECDIR}/resources/keywords/common.resource
+Resource          ${EXECDIR}/resources/variables/locators.resource
+Library           Browser
+Library           String
 
 *** Keywords ***
 A new booker makes a reservation
@@ -52,13 +50,8 @@ Signature modal is visible
     Wait Until Visible    id=chakra-modal--body-115
 
 Fill in Other Guest Details
+    [Arguments]    ${firstName}=Snoop    ${lastName}=Dogg    ${email}=nelsontestar@gmail.com    ${phone}=040123942    ${ssn}=170479-371J
     [Documentation]    Fills in other guest details, which can be given as arguments or uses default values
-    [Arguments]
-    ...    ${firstName}=Snoop
-    ...    ${lastName}=Dogg
-    ...    ${email}=nelsontestar@gmail.com
-    ...    ${phone}=040123942
-    ...    ${ssn}=170479-371J
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email    ${email}
@@ -84,8 +77,8 @@ Marks the "Someone else will be the main guest" checkbox as <value>
     Pass Execution    Implementation code to complete a payment
 
 Select Guests
-    [Documentation]    Selects the number of guests for the booking, current implementation will only check the dropdown    
     [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
+    [Documentation]    Selects the number of guests for the booking, current implementation will only check the dropdown
     Wait Until Visible    //div[contains(@data-nelson-btn, 'guests')]
     Click    //div[contains(@data-nelson-btn, 'guests')]
     #Click    //div[contains(@data-nelson-btn, 'guests')]
@@ -125,8 +118,6 @@ Select Dates
     Exit For Loop If    ${both}
     END
 
-
-
 Select Room and Extras
     Wait Until Network Is Idle    timeout=33s
     Click    ${btnExtras}
@@ -134,19 +125,14 @@ Select Room and Extras
     Click    ${btnPayment}
 
 Fill in Payment Details
+    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
-    [Arguments]
-    ...    ${firstName}=Mos
-    ...    ${lastName}=Def
-    ...    ${phone}=040123942
-    ...    ${ssn}=170479-371J
-    ...    ${env}=bui
     ${rand}=    Helpers.Get Random Name
     Click and Fill    id=firstName    ${firstName}
-    Click and Fill    id=lastName     ${lastName}
-    Click and Fill    id=email        ${emailUsername}-${rand}@${emailDomain}
-    Click and Fill    id=phoneNumber  ${phone}
-    Run Keyword If    '${env}'=='bui'    Click and Fill    id=password     ${password}
+    Click and Fill    id=lastName    ${lastName}
+    Click and Fill    id=email    ${emailUsername}-${rand}@${emailDomain}
+    Click and Fill    id=phoneNumber    ${phone}
+    Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
     Run Keyword If    '${env}'=='bui'    Click    xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]
     Run Keyword If    '${env}'=='bui'    Click    //div[contains(text(), "Web bank payment")]
     Run Keyword If    '${env}'=='bui'    Click    //p[contains(text(), 'Nordea')]
@@ -194,3 +180,39 @@ Verify Save and Sign State
 
 Close Edit Booker or Guest
     Click    //button[@aria-label='Close']
+
+Continue to Payment
+    Click    (//button[normalize-space()='Continue to payment'])[1]
+
+Check Regular Rate
+    Click    //p[contains(text(),'Continue with regular rate')]
+    Sleep    3
+
+Fill Contact Info
+    Click    //input[@id='firstName']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Long
+    Click    //input[@id='lastName']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    Tran
+    Click    //input[@id='email']
+    Type Text    //input[@id='email']    tdlong@tma.com.vn
+    Click    //input[@id='phoneNumber']
+    Type Text    //input[@id='phoneNumber']    324332333
+
+Accept Term and Proceed to Payment
+    Click    (//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]
+
+Quick Pay
+    Click    //div[normalize-space()='Web bank payment']
+    Click    //p[normalize-space()='OP']
+    BuiltIn.Sleep    6
+    Click    (//button[normalize-space()='Pay'])[1]
+    BuiltIn.Sleep    8
+
+Verify Successful Booking
+    Wait For Elements State    //div//h4    visible
+    ${result}    Get Text    //div//h4
+    Should Be Equal As Strings    ${result}    Payment was successful
+    Click    //button[normalize-space()='Ok']
+    ${result}    Get Text    //p[contains(text(),'Booking code')]
+    ${result}    Remove String    ${result}    Booking code${SPACE}
+    ${result}    Strip String    ${result}
