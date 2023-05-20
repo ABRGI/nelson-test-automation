@@ -1,11 +1,15 @@
 *** Settings ***
 Documentation     A test suite for verifying modify booking functionality
 Library           String
+Resource          common.resource
+Library           OperatingSystem
 
 *** Keywords ***
 Log in MUI
-    Type Secret    //*[@id='email']    $muiname
-    Type Secret    //*[@id='password']    $muipass
+    ${name}    Get Environment Variable    ADMIN
+    ${pass}    Get Environment Variable    ADPASS
+    Type Secret    //*[@id='email']    $name
+    Type Secret    //*[@id='password']    $pass
     Click    //button[contains(text(),'Sign in')]
 
 Open Nelson Portal
@@ -27,9 +31,11 @@ Create New Reservation MUI
     Wait Until Keyword Succeeds    10s    2s    Click    //button[normalize-space()='Create']
 
 Select Hotel
-    [Arguments]    ${hotel}
-    Click    //button[normalize-space()='Choose your hotel']
-    Wait Until Keyword Succeeds    10s    2s    Click    //div[contains(text(),'${hotel}')]
+    [Arguments]    ${hotel}    ${MUI}=${False}
+    Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
+    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
+    Run Keyword If    '${MUI}'=='True'    Click    //button[normalize-space()='Choose your hotel']
+    Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
 
 Log out of Nelson Portal
     Click    //div[contains(@class,'mobile-hide')]//button[contains(text(),'Sign out')]/img
@@ -37,7 +43,7 @@ Log out of Nelson Portal
     Click    //div[contains(@class,'mobile-hide')]//button[contains(text(),'Sign out')]/img
 
 Find Room
-    Click    //button[normalize-space()='Find rooms']
+    Click    //button[normalize-space()='Book now'][@data-nelson-btn='bookMobile']
 
 Log out of Nelson In BUI Confirmation Page
     Click    //p[normalize-space()='Sign out']

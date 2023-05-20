@@ -9,6 +9,7 @@ Resource          ../resources/keywords/mui.resource
 
 *** Test Cases ***
 Admin Create A Booking
+    [Tags]    MUI-424
     Open Nelson Portal    ${MUI-Link}
     Log in MUI
     Open A MUI Client    Test (2) Omena

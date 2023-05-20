@@ -10,11 +10,11 @@ Resource          ../../resources/keywords/mui.resource
 
 *** Test Cases ***
 Make a booking
-    Select Hotel    Turku, Humalistonkatu
-    Find Room
+    mui.Select Hotel    Turku, Humalistonkatu
+    Comment    Find Room
     Choose Dates and Guests
     Select Room and Extras
-    Continue to Payment
+    Comment    Continue to Payment
     Check Regular Rate
     Check Join as Member
     Check Regular Rate
