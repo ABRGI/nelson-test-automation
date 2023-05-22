@@ -12,8 +12,8 @@ Create A New Booking
     Select Hotel
     Choose Dates and Guests 
     Select Room and Extras
-    Fill in Payment Details 
-    Close Dialog
+    Fill in Payment Details     
+    Simulate Success or Failure    success
 
 Confirm Email
     [Documentation]     A new booker receives an email with a link to modify the booking 

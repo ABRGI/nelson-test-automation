@@ -4,7 +4,7 @@ Library           ${EXECDIR}/resources/libraries/Helpers.py
 Resource          ${EXECDIR}/resources/variables/variables.resource
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
-Library           Browser
+Library           Browser    auto_closing_level=SUITE
 Library           String
 
 *** Keywords ***
@@ -119,7 +119,7 @@ Select Dates
     END
 
 Select Room and Extras
-    Wait Until Network Is Idle    timeout=33s
+    Wait Until Network Is Idle    #timeout=33s
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
     Click    ${btnPayment}

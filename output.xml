@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.0 on darwin)" generated="20230522 19:44:19.265" rpa="false" schemaversion="3">
+<suite id="s1" name="Debug" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/debug.robot">
+<test id="s1-t1" name="Access Secrets" line="8">
+<kw name="Get Secret" library="common">
+<var>${secret}</var>
+<arg>PYTHONPATH</arg>
+<doc>Get secret from environment variable</doc>
+<kw name="Get Environment Variable" library="EnvHandler">
+<var>${secret_value}</var>
+<arg>${secret_name}</arg>
+<doc>Returns the value of the specified environment variable.</doc>
+<msg timestamp="20230522 19:44:20.892" level="INFO">${secret_value} = None</msg>
+<status status="PASS" starttime="20230522 19:44:20.891" endtime="20230522 19:44:20.892"/>
+</kw>
+<msg timestamp="20230522 19:44:20.892" level="INFO">${secret} = None</msg>
+<status status="PASS" starttime="20230522 19:44:20.890" endtime="20230522 19:44:20.892"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${secret}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230522 19:44:20.893" endtime="20230522 19:44:20.893"/>
+</kw>
+<status status="PASS" starttime="20230522 19:44:20.885" endtime="20230522 19:44:20.893"/>
+</test>
+<test id="s1-t2" name="Search on Google" line="12">
+<kw name="Open Browser" library="Browser">
+<arg>https://www.google.com</arg>
+<arg>chromium</arg>
+<arg>headless=${headless}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<msg timestamp="20230522 19:44:20.909" level="FAIL">Variable '${headless}' not found.</msg>
+<status status="FAIL" starttime="20230522 19:44:20.908" endtime="20230522 19:44:20.910"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//textarea[@name="q"]</arg>
+<arg>Robot Framework</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230522 19:44:20.910" endtime="20230522 19:44:20.910"/>
+</kw>
+<kw name="Press Keys" library="Browser">
+<arg>ENTER</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230522 19:44:20.910" endtime="20230522 19:44:20.911"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230522 19:44:20.911" endtime="20230522 19:44:20.911"/>
+</kw>
+<status status="FAIL" starttime="20230522 19:44:20.905" endtime="20230522 19:44:20.911">Variable '${headless}' not found.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230522 19:44:20.920" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230522 19:44:20.917" endtime="20230522 19:44:20.920"/>
+</kw>
+<status status="FAIL" starttime="20230522 19:44:19.266" endtime="20230522 19:44:20.920"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Debug">Debug</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

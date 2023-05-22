@@ -35,9 +35,14 @@ Fill in missing environment variables to file or export them manually. And run s
 ./setenv.sh
 ```
 
-Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable).
+Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable). Or with the from [EnvHandler.py](resources/libraries/EnvHandler.py) with keyword EnvHandler.Get Environment Variable.
 
+``` robot
+    ${username}=    EnvHandler.Get Environment Variable    MY_USERNAME
+    Type Secret     id=loginUsername    ${username}
+```
 
+See [example.robot](/testsuites/example.robot)
 ## Python Versions
 
 Let's use Python 3.10 for this project. You can check your version using the following cmd.
@@ -69,6 +74,10 @@ robot --variable browser:chromium --variable headless:False --variable url:https
 ### Branches and environments
 
 We are using develop branch for running against staging environment(s) and master for running against production environment.
+
+### Tags
+
+Currently we exclude tests that are tagged with skip.
 
 ## Debugging
 
