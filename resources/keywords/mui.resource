@@ -15,8 +15,10 @@ Log in MUI
 Open Nelson Portal
     [Arguments]    ${url}
     New Browser    ${browser}    ${headless}
+    Set Browser Timeout    ${timeout}
     New Context
     New Page    ${url}
+    Set Viewport Size    1920    1080
 
 Open A MUI Client
     [Arguments]    ${client}
@@ -33,9 +35,11 @@ Create New Reservation MUI
 Select Hotel
     [Arguments]    ${hotel}    ${MUI}=${False}
     Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
     Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
     Run Keyword If    '${MUI}'=='True'    Click    //button[normalize-space()='Choose your hotel']
-    Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
+    Sleep    2s
+    Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']
 
 Log out of Nelson Portal
     Click    //div[contains(@class,'mobile-hide')]//button[contains(text(),'Sign out')]/img
@@ -43,7 +47,12 @@ Log out of Nelson Portal
     Click    //div[contains(@class,'mobile-hide')]//button[contains(text(),'Sign out')]/img
 
 Find Room
-    Click    //button[normalize-space()='Book now'][@data-nelson-btn='bookMobile']
+    Click    //button[normalize-space()='Find rooms']
 
 Log out of Nelson In BUI Confirmation Page
     Click    //p[normalize-space()='Sign out']
+
+Go to New Tab
+    Switch Page    NEW
+    Set Viewport Size    1920    1080
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s

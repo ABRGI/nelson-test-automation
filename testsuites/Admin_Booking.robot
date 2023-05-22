@@ -15,11 +15,11 @@ Admin Create A Booking
     Open A MUI Client    Test (2) Omena
     New Reservation MUI
     Create New Reservation MUI
-    Switch Page    NEW
-    mui.Select Hotel    Turku, Humalistonkatu
+    Go to New Tab
+    mui.Select Hotel    Turku, Humalistonkatu    ${True}
     Find Room
     Select Room and Extras
-    Fill in Payment Details    mui
+    Fill in Payment Details    env=mui
     Verify Booking is Successful
     Click Booker or Guest Name    '${firstName}' '${lastName}'
     Verify Save and Sign State    ${False}

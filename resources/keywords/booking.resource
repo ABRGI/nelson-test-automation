@@ -119,7 +119,11 @@ Select Dates
     END
 
 Select Room and Extras
-    Wait Until Network Is Idle    timeout=33s
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+    ${check}    Run Keyword And Return Status    Get Element    ${btnExtras}
+    Run Keyword If    ${check}==${False}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    Run Keyword If    ${check}==${False}    Click    //button[normalize-space()='Find rooms']
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
     Click    ${btnPayment}
