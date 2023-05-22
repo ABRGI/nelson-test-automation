@@ -2,7 +2,10 @@
 Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/Gmail.py
 Library            ${EXECDIR}/resources/libraries/Helpers.py
+Library            ${EXECDIR}/resources/libraries/EnvHandler.py
 Library            Browser   
+Library            OperatingSystem
+
 
 *** Keywords ***
 
