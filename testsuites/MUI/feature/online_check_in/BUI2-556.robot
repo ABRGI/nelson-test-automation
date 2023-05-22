@@ -7,6 +7,7 @@ Resource          ${EXECDIR}/resources/keywords/mui.resource
 Resource          ../../resources/keywords/booking.resource
 Resource          ../../resources/keywords/common.resource
 Resource          ../../resources/keywords/mui.resource
+Force Tags        skip
 
 *** Test Cases ***
 Make a booking
