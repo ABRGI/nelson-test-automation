@@ -4,7 +4,8 @@ Library           ${EXECDIR}/resources/libraries/Helpers.py
 Resource          ${EXECDIR}/resources/variables/variables.resource
 Resource          ${EXECDIR}/Resources/Keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
-Library           Browser
+Resource          ${EXECDIR}/resources/variables/mui.resource
+Library           Browser    auto_closing_level=SUITE
 Library           String
 
 *** Keywords ***
@@ -124,6 +125,7 @@ Select Room and Extras
     Run Keyword If    ${check}==${False}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Run Keyword If    ${check}==${False}    Click    //button[normalize-space()='Find rooms']
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+    Wait Until Network Is Idle    #timeout=33s
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
     Click    ${btnPayment}

@@ -23,7 +23,7 @@ If VS Code is used, it will also prompt to use the venv automatically so this st
 
 Environment variables, mostly secrets at this point, will be saved in .env file that must not be pushed to git at any time! To set your environment up, do following:
 
-Rename .envREMOVE to .env
+Rename .env_remove_this to .env
 
 ``` bash
 mv .envREMOVE .env
@@ -35,8 +35,14 @@ Fill in missing environment variables to file or export them manually. And run s
 ./setenv.sh
 ```
 
-Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable).
+Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable). Or with the from [EnvHandler.py](resources/libraries/EnvHandler.py) with keyword EnvHandler.Get Environment Variable.
 
+``` robot
+    ${username}=    EnvHandler.Get Environment Variable    MY_USERNAME
+    Type Secret     id=loginUsername    ${username}
+```
+
+See [example.robot](/testsuites/example.robot)
 
 ## Python Versions
 
@@ -58,6 +64,26 @@ Check the version again with:
 python --version
 ```
 
+## Folder Structure
+
+[testsuites](/testsuites/) is the main folder for all test suite files ie. anything ending .robot.
+
+[resources](/resources/) is the main folder for libraries, variables, python files, other files, anything that is used in the test cases. For now, resources are divided into [keywords](/resources/keywords/), [libraries](/resources/libraries/) and [variables](/resources/variables/).
+
+Test Suites are divided into [MUI](/testsuites/MUI/), [BUI](/testsuites/BUI/) and [API](/testsuites/API/) and new test cases should be added accordingly.
+
+All of the above are divided into features and regression tests. Feature tests can be named for example with the Jira Ticket number and ordered to subfolders like [OnlineCheckIn](/testsuites/MUI/feature/OnlineCheckIn/). This will be up to you in later phases to see what works best.
+
+## Test Suite and Test Case Naming
+
+Test suites should be named in a brief, yet explanatory manner and they should be consistent within the naming and casing. In Robot Framework, generally snake_case is used for everything, but I would keepi Jira tickets as they are (BUI-556.robot instead of snake case like bui_556.robot).
+
+## Variables
+
+It is generally desirable to use variables instead of strings in Test Cases which should be kept clear from any "code like" syntax. This can be prevented by using keywords and variables.
+
+Regarding casing, I have now started to use camelCase for general variables and UPPERCASE for environment variables and secrets. There is no right or wrong here, just what is preferred. However, I suggest it is kept consistent as well.
+
 ## Running Tests
 
 Before running tests, you will need to set some environment variables. That can be done by running tests with.
@@ -69,6 +95,10 @@ robot --variable browser:chromium --variable headless:False --variable url:https
 ### Branches and environments
 
 We are using develop branch for running against staging environment(s) and master for running against production environment.
+
+### Tags
+
+Currently we exclude tests that are tagged with skip.
 
 ## Debugging
 

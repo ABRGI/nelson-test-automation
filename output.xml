@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.3 on win32)" generated="20230524 11:03:31.189" rpa="false" schemaversion="3">
+<suite id="s1" name="New Booking" source="D:\AUTOMATION_TEST\nelson-test-automation\testsuites\BUI\regression\new_booking.robot">
+<test id="s1-t1" name="Create A New Booking" line="10">
+<kw name="Open Browser to Landing Page" library="common">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230524 11:03:32.253" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "D:\\AUTOMATION_TEST\\nelson-test-automation\\browser\\traces\\5089bdad-93da-4e87-af05-4eac4ed7421b"}</msg>
+<msg timestamp="20230524 11:03:33.252" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"D:\\AUTOMATION_TEST\\nelson-test-automation\\browser\\traces\\5089bdad-93da-4e87-af05-4eac4ed7421b"}</msg>
+<status status="PASS" starttime="20230524 11:03:32.252" endtime="20230524 11:03:33.252"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230524 11:03:33.255" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230524 11:03:33.252" endtime="20230524 11:03:33.255"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230524 11:03:33.255" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230524 11:03:33.266" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230524 11:03:33.266" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230524 11:03:33.255" endtime="20230524 11:03:33.266"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230524 11:03:46.170" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/</msg>
+<status status="PASS" starttime="20230524 11:03:33.266" endtime="20230524 11:03:46.170"/>
+</kw>
+<kw name="Set Viewport Size" library="Browser">
+<arg>1920</arg>
+<arg>1080</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<msg timestamp="20230524 11:03:46.193" level="INFO">Set viewport size to: [object Object]</msg>
+<status status="PASS" starttime="20230524 11:03:46.170" endtime="20230524 11:03:46.194"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230524 11:03:46.195" endtime="20230524 11:03:47.763"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230524 11:03:47.768" level="INFO">Title: 'Cheap hotels in Helsinki and Finland | Omena Hotels - Budget hotels in Finland'</msg>
+<status status="PASS" starttime="20230524 11:03:47.763" endtime="20230524 11:03:47.768"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<kw name="Click" library="Browser">
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230524 11:03:47.768" endtime="20230524 11:03:47.830"/>
+</kw>
+<status status="PASS" starttime="20230524 11:03:47.768" endtime="20230524 11:03:47.831"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Click</arg>
+<arg>//ul[contains(@class, 'collapse')]//a[normalize-space()='Book now']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click" library="Browser">
+<arg>//ul[contains(@class, 'collapse')]//a[normalize-space()='Book now']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230524 11:03:47.831" endtime="20230524 11:03:49.478"/>
+</kw>
+<status status="PASS" starttime="20230524 11:03:47.831" endtime="20230524 11:03:49.478"/>
+</kw>
+<status status="PASS" starttime="20230524 11:03:32.251" endtime="20230524 11:03:49.478"/>
+</kw>
+<kw name="Select Hotel" library="common">
+<arg>Vaasa</arg>
+<kw name="Click" library="Browser">
+<arg>//button[normalize-space()='Choose your hotel']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230524 11:03:49.482" endtime="20230524 11:03:58.575"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Click</arg>
+<arg>//div[contains(text(),'${hotel}')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click" library="Browser">
+<arg>//div[contains(text(),'${hotel}')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230524 11:03:58.576" endtime="20230524 11:03:58.685"/>
+</kw>
+<status status="PASS" starttime="20230524 11:03:58.575" endtime="20230524 11:03:58.685"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//button[normalize-space()='Find rooms']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230524 11:03:58.686" endtime="20230524 11:03:58.925"/>
+</kw>
+<status status="PASS" starttime="20230524 11:03:49.480" endtime="20230524 11:03:58.925"/>
+</kw>
+<kw name="Choose Dates and Guests" library="booking">
+<kw name="Select Guests" library="booking">
+<doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
+<kw name="Wait Until Visible" library="common">
+<arg>//div[contains(@data-nelson-btn, 'guests')]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230524 11:05:29.299" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230524 11:05:29.299" level="INFO">See also file:///D:/AUTOMATION_TEST/nelson-test-automation/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230524 11:05:29.300" level="FAIL">TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//div[contains(@data-nelson-btn, \'guests\')]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<status status="FAIL" starttime="20230524 11:03:58.927" endtime="20230524 11:05:29.305"/>
+</kw>
+<status status="FAIL" starttime="20230524 11:03:58.927" endtime="20230524 11:05:29.305"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//div[contains(@data-nelson-btn, 'guests')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230524 11:05:29.305" endtime="20230524 11:05:29.306"/>
+</kw>
+<status status="FAIL" starttime="20230524 11:03:58.926" endtime="20230524 11:05:29.306"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//button[@class="booking-form-button btn btn-primary"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230524 11:05:29.306" endtime="20230524 11:05:29.306"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${btnExtras}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20230524 11:05:29.306" endtime="20230524 11:05:29.306"/>
+</kw>
+<status status="FAIL" starttime="20230524 11:03:58.926" endtime="20230524 11:05:29.306"/>
+</kw>
+<kw name="Select Room and Extras" library="booking">
+<status status="NOT RUN" starttime="20230524 11:05:29.307" endtime="20230524 11:05:29.307"/>
+</kw>
+<kw name="Fill in Payment Details" library="booking">
+<doc>TBD: Use test data instead of hardcoded values</doc>
+<status status="NOT RUN" starttime="20230524 11:05:29.308" endtime="20230524 11:05:29.308"/>
+</kw>
+<kw name="Simulate Success or Failure" library="booking">
+<arg>success</arg>
+<status status="NOT RUN" starttime="20230524 11:05:29.308" endtime="20230524 11:05:29.308"/>
+</kw>
+<doc>A new booker opens the page and does a successful booking</doc>
+<tag>MUI-424</tag>
+<status status="FAIL" starttime="20230524 11:03:32.249" endtime="20230524 11:05:29.309">TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//div[contains(@data-nelson-btn, \'guests\')]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</test>
+<test id="s1-t2" name="Confirm Email" line="19">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD in: BUI2-562</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230524 11:05:29.415" level="INFO">Execution passed with message:
+TBD in: BUI2-562</msg>
+<status status="PASS" starttime="20230524 11:05:29.415" endtime="20230524 11:05:29.416"/>
+</kw>
+<kw name="Get Link from Email" library="common">
+<status status="NOT RUN" starttime="20230524 11:05:29.416" endtime="20230524 11:05:29.416"/>
+</kw>
+<doc>A new booker receives an email with a link to modify the booking</doc>
+<tag>MUI-424</tag>
+<status status="PASS" starttime="20230524 11:05:29.407" endtime="20230524 11:05:29.418">TBD in: BUI2-562</status>
+</test>
+<test id="s1-t3" name="Open Link" line="24">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230524 11:05:29.441" level="INFO">Execution passed with message:
+TBD</msg>
+<status status="PASS" starttime="20230524 11:05:29.441" endtime="20230524 11:05:29.441"/>
+</kw>
+<tag>MUI-424</tag>
+<status status="PASS" starttime="20230524 11:05:29.438" endtime="20230524 11:05:29.442">TBD</status>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230524 11:03:31.191" endtime="20230524 11:05:29.454"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="1" skip="0">MUI-424</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="New Booking">New Booking</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230524 11:03:31.234" level="ERROR">Error in file 'D:\AUTOMATION_TEST\nelson-test-automation\resources\keywords\common.resource' on line 3: Importing library 'D:\AUTOMATION_TEST\nelson-test-automation\resources\libraries\Gmail.py' failed: ImportError: The requests library is not installed, please install the requests package to use the requests transport.
+Traceback (most recent call last):
+  File "D:\AUTOMATION_TEST\nelson-test-automation\resources\libraries\Gmail.py", line 5, in &lt;module&gt;
+    from google.auth.transport.requests import Request
+  File "d:\python38\lib\site-packages\google\auth\transport\requests.py", line 30, in &lt;module&gt;
+    six.raise_from(
+  File "&lt;string&gt;", line 3, in raise_from
+PYTHONPATH:
+  D:\AUTOMATION_TEST\nelson-test-automation\resources\libraries
+  D:\Python38\Scripts\robot.exe
+  d:\python38\python38.zip
+  d:\python38\DLLs
+  d:\python38\lib
+  d:\python38
+  d:\python38\lib\site-packages
+  d:\python38\lib\site-packages\win32
+  d:\python38\lib\site-packages\win32\lib
+  d:\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230524 11:03:31.527" level="ERROR">Error in file 'D:\AUTOMATION_TEST\nelson-test-automation\resources\variables\variables.resource' on line 10: Setting variable '$${password}' failed: Invalid variable name '$${password}'.</msg>
+<msg timestamp="20230524 11:03:31.530" level="ERROR">Error in file 'D:\AUTOMATION_TEST\nelson-test-automation\resources\keywords\booking.resource' on line 7: Resource file 'D:\AUTOMATION_TEST\nelson-test-automation\resources\variables\mui.resource' does not exist.</msg>
+</errors>
+</robot>

@@ -3,6 +3,7 @@ Documentation     A test suite for verifying modify booking functionality
 Library           String
 Resource          common.resource
 Library           OperatingSystem
+Library    Browser
 
 *** Keywords ***
 Log in MUI
@@ -10,10 +11,25 @@ Log in MUI
     ${pass}    Get Environment Variable    ADPASS
     Type Secret    //*[@id='email']    $name
     Type Secret    //*[@id='password']    $pass
-    Click    //button[contains(text(),'Sign in')]
 
-Open Nelson Portal
-    [Arguments]    ${url}
+Log in MUI Fail
+    Type Text    //*[@id='email']    hacker@gmail.com
+    Type Text    //*[@id='password']    thispassissoinvalid
+    Click    //button[contains(text(),'Sign in')]
+    Verify Element Presence    //div[@aria-label='Error!']    ${True}
+	
+    Click    //button[@aria-label='Close']
+Log in MUI Successful
+    Clear Text     //*[@id='email']
+    Clear Text     //*[@id='password'] 
+    Sleep    5s
+    Type Text    //*[@id='email']    tdlong@tma.com.vn
+    Type Text    //*[@id='password']    PtFx5P#M67UV
+    Click    //button[contains(text(),'Sign in')]
+    Verify Element Presence    //div[@aria-label='Error!']    ${False}
+	
+Go to MUI
+    [Arguments]    ${url}    
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context

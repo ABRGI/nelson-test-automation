@@ -3,8 +3,13 @@ Documentation     A test suite for verifying modify booking functionality
 Library           ${EXECDIR}/resources/libraries/Gmail.py
 Library           ${EXECDIR}/resources/libraries/Helpers.py
 Library           Browser
+Library           ${EXECDIR}/resources/libraries/EnvHandler.py
+Library           Browser
+Library           OperatingSystem
 
 *** Keywords ***
+
+
 Get Link from Email
     ${link}=    Gmail.Get Link
     [Return]    ${link}
@@ -19,6 +24,13 @@ Open Browser to Landing Page
     Wait Until Network Is Idle
     Get Title    contains    Cheap hotels in Helsinki
     Allow Cookies
+    Wait Until Keyword Succeeds    10s    2s    Click    //ul[contains(@class, 'collapse')]//a[normalize-space()='Book now']
+
+Select Hotel
+    [Arguments]    ${hotel}
+    Click    //button[normalize-space()='Choose your hotel']
+    Wait Until Keyword Succeeds    10s    2s    Click    //div[contains(text(),'${hotel}')]
+    Click    //button[normalize-space()='Find rooms']
 
 Open Browser Directly to Extras
     [Documentation]    This keyword is used only for debugging purposes if you want to use a quicker
@@ -43,6 +55,12 @@ Wait Until Visible
     [Arguments]    ${element}
     [Documentation]    An easier keyword for waiting until an element is visible
     Wait For Elements State    ${element}    visible    timeout=${timeout}
+
+Verify Element Presence
+    [Arguments]    ${path}    ${shown}
+    ${check}    Run Keyword And Return Status    Get Element    ${path}
+    Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
+    Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
 
 Check Element Presence
     [Arguments]    ${path}
