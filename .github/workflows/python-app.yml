@@ -11,20 +11,18 @@ permissions:
   write-all
 
 jobs:
-  set-environment-variables: 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set Environment Variables
-        env:
-          MUI_PASSWORD: ${{ secrets.MUI_PASSWORD }}
-          MUI_URL: ${{ secrets.MUI_URL }}
-          MUI_USERNAME: ${{ secrets.MUI_USERNAME }}
-          TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
-          TEST_EMAIL_PASSWORD: ${{ secrets.TEST_EMAIL_PASSWORD }}
-        run: echo "Environment variables set"
   build:
     runs-on: ubuntu-latest
+
     steps:
+    - name: Set Environment Variables
+      env:
+        MUI_PASSWORD: ${{ secrets.MUI_PASSWORD }}
+        MUI_URL: ${{ secrets.MUI_URL }}
+        MUI_USERNAME: ${{ secrets.MUI_USERNAME }}
+        TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+        TEST_EMAIL_PASSWORD: ${{ secrets.TEST_EMAIL_PASSWORD }}
+      run: echo "Environment variables set"
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
