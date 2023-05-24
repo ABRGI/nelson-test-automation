@@ -163,11 +163,13 @@ Pay Using Visa
     Click    //button[@type='submit']
 
 Verify Booking is Successful
-    Wait For Elements State    //div//h4    visible
-    ${result}    Get Text    //div//h4
-    Should Be Equal As Strings    ${result}    Payment was successful
-    Click    //button[normalize-space()='Ok']
-    ${result}    Get Text    //p[contains(text(),'Booking code')]
+    [Arguments]    ${bui}=${true}
+    ${code}    Set Variable If    ${bui} == ${True}    //div//h4
+    ${code}    Set Variable If    ${bui} == ${False}    //p[contains(text(),'Booking number')]
+    ${check}    Run Keyword And Return Status    Get Element    //button[normalize-space()='Ok']
+    Run Keyword If    ${check} == ${True}    Click    //button[normalize-space()='Ok']
+    Wait For Elements State    ${code}    visible
+    ${result}    Get Text    ${code}
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
 
@@ -213,6 +215,7 @@ Quick Pay
     BuiltIn.Sleep    8
 
 Verify Successful Booking
+    [Arguments]    ${bui}=${True}
     Wait Until Keyword Succeeds    15s    3s    Wait For Elements State    //div//h4    visible
     ${result}    Get Text    //div//h4
     Should Be Equal As Strings    ${result}    Payment was successful
@@ -228,3 +231,40 @@ Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
     Click    //p[normalize-space()='OP']
     Click    (//button[normalize-space()='Pay'])[1]
+
+Verify Element Presence
+    [Arguments]    ${path}    ${shown}
+    ${check}    Run Keyword And Return Status    Get Element    ${path}
+    Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
+    Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
+
+Given Booker just completed payment for a reservation
+    Choose Dates and Guests
+    Choose A Hotel    Turku, Humalistonkatu
+    Select Room and Extras
+    Check Regular Rate
+    Check Join as Member
+    Check Regular Rate
+    Fill Contact Info
+    Accept Term and Proceed to Payment
+    Quickly Pay
+    ${code}    Verify Successful Booking
+
+Choose A Hotel
+    [Arguments]    ${hotel}
+    Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
+    Run Keyword If    '${MUI}'=='True'    Click    //button[normalize-space()='Choose your hotel']
+    Sleep    2s
+    Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']
+
+And Booker is at page 3
+
+And Booker doesn’t check the “Someone else will be the main guest” checkbox
+
+When Signing is not done
+
+Then Follows are visible: Configurable primary banner, Guest list, Booking summary, My bookings link, configurable secondary banner, sticky CTA
+
+And Notification of the room number and door code is NOT shown

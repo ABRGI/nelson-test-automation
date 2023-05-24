@@ -32,7 +32,7 @@ Create New Reservation MUI
     Wait Until Visible    //button[normalize-space()='Create']
     Wait Until Keyword Succeeds    10s    2s    Click    //button[normalize-space()='Create']
 
-Select Hotel
+Select A Hotel
     [Arguments]    ${hotel}    ${MUI}=${False}
     Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s

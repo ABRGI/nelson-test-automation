@@ -9,19 +9,13 @@ Resource          ../../resources/keywords/common.resource
 Resource          ../../resources/keywords/mui.resource
 
 *** Test Cases ***
-Make a booking
-    mui.Select Hotel    Turku, Humalistonkatu
-    Comment    Find Room
-    Choose Dates and Guests
-    Select Room and Extras
-    Comment    Continue to Payment
-    Check Regular Rate
-    Check Join as Member
-    Check Regular Rate
-    Fill Contact Info
-    Accept Term and Proceed to Payment
-    Quickly Pay
-    ${code}    Verify Successful Booking
+Scenario: UI appearance when signing is not done
+    Given Booker just completed payment for a reservation
+    And Booker is at page 3
+    And Booker doesn’t check the “Someone else will be the main guest” checkbox
+    When Signing is not done
+    Then Follows are visible: Configurable primary banner, Guest list, Booking summary, My bookings link, configurable secondary banner, sticky CTA
+    And Notification of the room number and door code is NOT shown
 
 Verify UI when users have not signed
     Configurable primary banner
