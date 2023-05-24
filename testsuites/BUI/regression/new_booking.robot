@@ -14,14 +14,13 @@ Create A New Booking
     Select Room and Extras
     Fill in Payment Details     
     Simulate Success or Failure    success
+    Close Dialog
 
 Confirm Email
     [Documentation]     A new booker receives an email with a link to modify the booking 
-    Pass Execution      TBD in: BUI2-562   
-    Get Link from Email
-
-Open Link
-    Pass Execution    TBD 
+    ${modify_link}=     Get Link from Email
+    Open New Browser To URL    ${modify_link}
+    Sleep      10s
 
 
 

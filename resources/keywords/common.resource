@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation      A test suite for verifying modify booking functionality
-Library            ${EXECDIR}/resources/libraries/Gmail.py
+Library            ${EXECDIR}/resources/libraries/GmailHandler.py
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/EnvHandler.py
 Library            Browser   
@@ -10,8 +10,15 @@ Library            OperatingSystem
 *** Keywords ***
 
 Get Link from Email 
-    ${link}=     Gmail.Get Link
+    ${link}=     GmailHandler.Get Link
     [Return]    ${link}
+
+Open New Browser To URL
+    [Arguments]    ${url}
+    New Browser    ${browser}    ${headless}    timeout=${timeout}
+    Set Browser Timeout    ${timeout}
+    New Context 
+    New Page       ${url}
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
@@ -19,8 +26,7 @@ Open Browser to Landing Page
     Set Browser Timeout    ${timeout}
     New Context 
     New Page       ${url}
-    Set Viewport Size    1920    1080
-
+    #Set Viewport Size    1920    1080
     Wait Until Network Is Idle
     Get Title      contains     Cheap hotels in Helsinki
     Allow Cookies 
