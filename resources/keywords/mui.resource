@@ -1,18 +1,30 @@
 *** Settings ***
 Documentation     A test suite for verifying modify booking functionality
 Library           String
+Library    Browser
+Resource    common.resource
 
 *** Keywords ***
-Log in MUI
-    Type Secret    //*[@id='email']    $muiname
-    Type Secret    //*[@id='password']    $muipass
+Log in MUI Fail
+    Type Text    //*[@id='email']    hacker@gmail.com
+    Type Text    //*[@id='password']    iamsohandsome
     Click    //button[contains(text(),'Sign in')]
-
-Open Nelson Portal
-    [Arguments]    ${url}
+    Verify Element Presence    //div[@aria-label='Error!']    ${True}
+    Click    //button[@aria-label='Close']
+Log in MUI Successful
+    Clear Text     //*[@id='email']
+    Clear Text     //*[@id='password'] 
+    Sleep    5s
+    Type Text    //*[@id='email']    tdlong@tma.com.vn
+    Type Text    //*[@id='password']    PtFx5P#M67UV
+    Click    //button[contains(text(),'Sign in')]
+    Verify Element Presence    //div[@aria-label='Error!']    ${False}
+Go to MUI
+    [Arguments]    ${url}    
     New Browser    ${browser}    ${headless}
     New Context
     New Page    ${url}
+    Set Viewport Size    1920    1080
 
 Open A MUI Client
     [Arguments]    ${client}
@@ -41,3 +53,6 @@ Find Room
 
 Log out of Nelson In BUI Confirmation Page
     Click    //p[normalize-space()='Sign out']
+
+Go to New tab
+    Switch Page    NEW
