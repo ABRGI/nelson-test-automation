@@ -128,9 +128,11 @@ Fill in Payment Details
     [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
     ${rand}=    Helpers.Get Random Name
+    ${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
-    Click and Fill    id=email    ${emailUsername}-${rand}@${emailDomain}
+    Click and Fill    id=email       ${email}
     Click and Fill    id=phoneNumber    ${phone}
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
     Run Keyword If    '${env}'=='bui'    Click    xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]
@@ -145,9 +147,10 @@ Simulate Success or Failure
     [Arguments]    ${which}
     Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
     Click    //a[contains(text(), 'Simulate ${which} to merchant')]
+    Wait Until Network Is Idle
 
 Close Dialog
-    Wait For Elements State    id=chakra-modal-4    visible    timeout=${timeout}
+    Wait Until Visible   id=chakra-modal-149
     Click    //footer/button[contains(text(), "Ok")]
 
 Pay Using Visa
