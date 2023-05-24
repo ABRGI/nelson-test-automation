@@ -2,7 +2,7 @@
 Documentation     This file contains keywords that are related to the booking process.
 Library           ${EXECDIR}/resources/libraries/Helpers.py
 Resource          ${EXECDIR}/resources/variables/variables.resource
-Resource          ${EXECDIR}/resources/keywords/common.resource
+Resource          ${EXECDIR}/Resources/Keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
 Library           Browser
 Library           String
@@ -185,7 +185,9 @@ Verify Save and Sign State
     Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSave}    ==    1
 
 Close Edit Booker or Guest
-    Click    //button[@aria-label='Close']
+    ${check}    Run Keyword And Return Status    Get Element    //button[@aria-label='Close']
+    Run Keyword If    ${check} == ${True}    Click    //button[@aria-label='Close']
+    Run Keyword If    ${check} == ${False}    Click    //button/*[@data-icon='xmark']
 
 Continue to Payment
     Click    (//button[normalize-space()='Continue to payment'])[1]

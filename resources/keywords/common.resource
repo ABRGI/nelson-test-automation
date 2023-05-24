@@ -43,3 +43,8 @@ Wait Until Visible
     [Arguments]    ${element}
     [Documentation]    An easier keyword for waiting until an element is visible
     Wait For Elements State    ${element}    visible    timeout=${timeout}
+
+Check Element Presence
+    [Arguments]    ${path}
+    ${check}    Run Keyword And Return Status    Get Element    ${path}
+    [Return]    ${check}

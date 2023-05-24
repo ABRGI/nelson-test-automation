@@ -18,7 +18,7 @@ Open Nelson Portal
     Set Browser Timeout    ${timeout}
     New Context
     New Page    ${url}
-    Set Viewport Size    1920    1080
+    Set Viewport Size    1600    900
 
 Open A MUI Client
     [Arguments]    ${client}
@@ -54,5 +54,5 @@ Log out of Nelson In BUI Confirmation Page
 
 Go to New Tab
     Switch Page    NEW
-    Set Viewport Size    1920    1080
+    Set Viewport Size    1600    900
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
