@@ -3,6 +3,7 @@ Documentation     A test suite for verifying modify booking functionality
 Library           String
 Resource          common.resource
 Library           Browser
+Resource          booking.resource
 
 *** Keywords ***
 Log in MUI
@@ -14,6 +15,7 @@ Log in MUI
 Log in MUI with Invalid Credentials
     Type Text    //*[@id='email']    hacker@gmail.com
     Type Text    //*[@id='password']    thispassissoinvalid
+    Sleep    3s
     Click    //button[contains(text(),'Sign in')]
     Verify Element Presence    //div[@aria-label='Error!']    ${True}
     Click    //button[@aria-label='Close']
@@ -34,6 +36,7 @@ Go to MUI
     New Context
     New Page    ${url}
     Set Viewport Size    1600    900
+    Wait Until Network Is Idle    timeout=5s
 
 Open A MUI Client
     [Arguments]    ${client}
@@ -69,7 +72,7 @@ Log out of Nelson In BUI Confirmation Page
 
 Go to New Tab
     Switch Page    NEW
-    Set Viewport Size    1600    900
+    Set Viewport Size    1400    800
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
 
 Given Admin creates a booking and completes payment
@@ -93,4 +96,16 @@ When Admin click on booker or guest name
 
 Then button Save and Sign is shown
     Verify Save and Sign State    ${True}
+    Close Edit Booker or Guest
+
+And Admin Can Provides Info And Sign
+    Sleep    3s
+    Click    //button[normalize-space()='Check in']
+    ${check}    Run Keyword And Return Status    Wait For Elements State    //input[@id='ssn']    visible    timeout=4
+    Run Keyword If    ${check} == ${True}    Type Text    //input[@id='ssn']    ${ssn}
+    Fill Default Guest Info
+    Click Save and Sign
+    User Draws Signature
+    Close Signing Pad
+    Wait Until Network Is Idle    timeout=8s
     Close Edit Booker or Guest

@@ -55,7 +55,7 @@ Wait Until Visible
 
 Verify Element Presence
     [Arguments]    ${path}    ${shown}
-    ${check}    Run Keyword And Return Status    Wait For Elements State    ${path}    visible    timeout=4
+    ${check}    Run Keyword And Return Status    Wait For Elements State    ${path}    visible    timeout=6
     Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
     Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
 

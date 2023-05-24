@@ -29,3 +29,4 @@ Admin creates booking
     And Admin goes to page 3
     When Admin click on booker or guest name
     Then button Save and Sign is shown
+    And Admin Can Provides Info And Sign

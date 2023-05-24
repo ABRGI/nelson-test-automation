@@ -62,7 +62,7 @@ Fill in Other Guest Details
 
 Click Save and Sign
     [Documentation]    Clicks the save and sign button
-    Click    //button[@data-ga4-event="add_guest_information"]
+    Click    //button[normalize-space()='Save and Sign']
 
 Text on the save button is displayed as "${expected_text}"
     [Documentation]    Verifies the text on the save button is displayed as expected
@@ -187,7 +187,7 @@ Verify Save and Sign State
     Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSave}    ==    1
 
 Close Edit Booker or Guest
-    ${check}    Run Keyword And Return Status    Wait For Elements State    //button[@aria-label='Close']    visible    timeout=4
+    ${check}    Run Keyword And Return Status    Wait For Elements State    //button[@aria-label='Close']    visible    timeout=7
     Run Keyword If    ${check} == ${True}    Click    //button[@aria-label='Close']
     Run Keyword If    ${check} == ${False}    Click    //button/*[@data-icon='xmark']
 
@@ -266,3 +266,18 @@ When Signing is not done
 Then Follows are visible: Configurable primary banner, Guest list, Booking summary, My bookings link, configurable secondary banner, sticky CTA
 
 And Notification of the room number and door code is NOT shown
+
+Fill Default Guest Info
+    Click and Fill    //input[@id='city']    Afganistan
+    Click and Fill    //input[@id='address']    113 Red Sand St
+    Click and Fill    //input[@id='postalCode']    114
+
+User Draws Signature
+    Click    (//button[@aria-label='Close']/following-sibling::div/div)[1]
+    Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    -10    -10
+    Mouse Button    down
+    Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    0    0
+    Mouse Button    up
+
+Close Signing Pad
+    click    //button[normalize-space()='Close']
