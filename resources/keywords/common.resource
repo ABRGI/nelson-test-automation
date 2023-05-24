@@ -2,6 +2,7 @@
 Documentation     A test suite for verifying modify booking functionality
 Library           ${EXECDIR}/resources/libraries/Gmail.py
 Library           ${EXECDIR}/resources/libraries/Helpers.py
+Library           Browser
 Library           ${EXECDIR}/resources/libraries/EnvHandler.py
 Library           Browser
 Library           OperatingSystem
@@ -41,7 +42,8 @@ Open Browser Directly to Extras
 Allow Cookies
     [Documentation]    Allow Cookies/Toggle Cookie allowance
     #TBD: This should be conditional so it won't fail if not shown
-    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    ${check}    Run Keyword And Return Status    Get Element    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    Run Keyword If    ${check}==${True}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 
 Click and Fill
     [Arguments]    ${selector}    ${text}
@@ -60,3 +62,7 @@ Verify Element Presence
     Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
     Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
 
+Check Element Presence
+    [Arguments]    ${path}
+    ${check}    Run Keyword And Return Status    Get Element    ${path}
+    [Return]    ${check}
