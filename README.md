@@ -35,6 +35,12 @@ Fill in missing environment variables to file or export them manually. And run s
 ./setenv.sh
 ```
 
+Verify environment variables are set correctly. You should only need to do this once, when your .env file is set in your local repository and it is ignored in .gitignore, you can work from that one locally with no security issues. If the script does not work, use regular bash export.
+
+``` bash
+export VARIABLE=value
+```
+
 Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable). Or with the from [EnvHandler.py](resources/libraries/EnvHandler.py) with keyword EnvHandler.Get Environment Variable.
 
 ``` robot
