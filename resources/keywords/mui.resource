@@ -2,8 +2,7 @@
 Documentation     A test suite for verifying modify booking functionality
 Library           String
 Resource          common.resource
-Library           OperatingSystem
-Library    Browser
+Library           Browser
 
 *** Keywords ***
 Log in MUI
@@ -12,24 +11,24 @@ Log in MUI
     Type Secret    //*[@id='email']    $name
     Type Secret    //*[@id='password']    $pass
 
-Log in MUI Fail
+Log in MUI with Invalid Credentials
     Type Text    //*[@id='email']    hacker@gmail.com
     Type Text    //*[@id='password']    thispassissoinvalid
     Click    //button[contains(text(),'Sign in')]
     Verify Element Presence    //div[@aria-label='Error!']    ${True}
-	
     Click    //button[@aria-label='Close']
-Log in MUI Successful
-    Clear Text     //*[@id='email']
-    Clear Text     //*[@id='password'] 
-    Sleep    5s
-    Type Text    //*[@id='email']    tdlong@tma.com.vn
-    Type Text    //*[@id='password']    PtFx5P#M67UV
+    Sleep    2s
+
+Log in MUI Successfully
+    ${name}    Get Environment Variable    ADMIN
+    ${pass}    Get Environment Variable    ADPASS
+    Type Secret    //*[@id='email']    $name
+    Type Secret    //*[@id='password']    $pass
     Click    //button[contains(text(),'Sign in')]
     Verify Element Presence    //div[@aria-label='Error!']    ${False}
-	
+
 Go to MUI
-    [Arguments]    ${url}    
+    [Arguments]    ${url}
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context
@@ -72,3 +71,26 @@ Go to New Tab
     Switch Page    NEW
     Set Viewport Size    1600    900
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+
+Given Admin creates a booking and completes payment
+    Go to MUI    ${MUI-Link}
+    Log in MUI with Invalid Credentials
+    Log in MUI Successfully
+    Open A MUI Client    Test (2) Omena
+    New Reservation MUI
+    Create New Reservation MUI
+    Go to New Tab
+    Select A Hotel    Turku, Humalistonkatu    ${True}
+    Find Room
+    Select Room and Extras
+    Fill in Payment Details    env=mui
+
+And Admin goes to page 3
+    Verify Booking is Successful    ${False}
+
+When Admin click on booker or guest name
+    Click Booker or Guest Name    '${firstName}' '${lastName}'
+
+Then button Save and Sign is shown
+    Verify Save and Sign State    ${True}
+    Close Edit Booker or Guest

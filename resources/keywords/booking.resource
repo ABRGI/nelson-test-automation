@@ -4,9 +4,9 @@ Library           ${EXECDIR}/resources/libraries/Helpers.py
 Resource          ${EXECDIR}/resources/variables/variables.resource
 Resource          ${EXECDIR}/Resources/Keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
-Resource          ${EXECDIR}/resources/variables/mui.resource
 Library           Browser    auto_closing_level=SUITE
 Library           String
+Resource          ${EXECDIR}/resources/Keywords/mui.resource
 
 *** Keywords ***
 A new booker makes a reservation
@@ -187,7 +187,7 @@ Verify Save and Sign State
     Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSave}    ==    1
 
 Close Edit Booker or Guest
-    ${check}    Run Keyword And Return Status    Get Element    //button[@aria-label='Close']
+    ${check}    Run Keyword And Return Status    Wait For Elements State    //button[@aria-label='Close']    visible    timeout=4
     Run Keyword If    ${check} == ${True}    Click    //button[@aria-label='Close']
     Run Keyword If    ${check} == ${False}    Click    //button/*[@data-icon='xmark']
 
@@ -235,12 +235,6 @@ Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
     Click    //p[normalize-space()='OP']
     Click    (//button[normalize-space()='Pay'])[1]
-
-Verify Element Presence
-    [Arguments]    ${path}    ${shown}
-    ${check}    Run Keyword And Return Status    Get Element    ${path}
-    Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
-    Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
 
 Given Booker just completed payment for a reservation
     Choose Dates and Guests

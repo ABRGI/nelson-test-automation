@@ -5,11 +5,8 @@ Library           ${EXECDIR}/resources/libraries/Helpers.py
 Library           Browser
 Library           ${EXECDIR}/resources/libraries/EnvHandler.py
 Library           Browser
-Library           OperatingSystem
 
 *** Keywords ***
-
-
 Get Link from Email
     ${link}=    Gmail.Get Link
     [Return]    ${link}
@@ -58,7 +55,7 @@ Wait Until Visible
 
 Verify Element Presence
     [Arguments]    ${path}    ${shown}
-    ${check}    Run Keyword And Return Status    Get Element    ${path}
+    ${check}    Run Keyword And Return Status    Wait For Elements State    ${path}    visible    timeout=4
     Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
     Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
 
