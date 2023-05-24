@@ -3,7 +3,6 @@ Documentation     A test suite for verifying modify booking functionality
 Library           String
 Resource          common.resource
 Library           Browser
-Resource          booking.resource
 
 *** Keywords ***
 Log in MUI

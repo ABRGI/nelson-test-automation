@@ -1,7 +1,5 @@
 *** Settings ***
 Documentation     A test suite for verifying modify booking functionality
-Force Tags        test
-Default Tags      test2
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Library           Browser    auto_closing_level=SUITE

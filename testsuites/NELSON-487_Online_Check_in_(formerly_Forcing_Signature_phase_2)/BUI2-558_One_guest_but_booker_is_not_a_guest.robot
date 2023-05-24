@@ -4,10 +4,6 @@ Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/mui.resource
-Resource          ../../resources/keywords/booking.resource
-Resource          ../../resources/keywords/common.resource
-Resource          ../../resources/keywords/mui.resource
-Resource          ../../resources/variables/variables.resource
 
 *** Test Cases ***
 Make a booking
@@ -27,4 +23,3 @@ Make a booking
 Verify UI when users have not signed
 
 Verify UI when users have signed
-    

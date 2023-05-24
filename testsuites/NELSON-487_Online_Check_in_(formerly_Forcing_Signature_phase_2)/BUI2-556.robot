@@ -1,13 +1,10 @@
 *** Settings ***
 Suite Setup       Open Browser to Landing Page
+Force Tags        skip
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/mui.resource
-Resource          ../../resources/keywords/booking.resource
-Resource          ../../resources/keywords/common.resource
-Resource          ../../resources/keywords/mui.resource
-Force Tags        skip
 
 *** Test Cases ***
 Scenario: UI appearance when signing is not done

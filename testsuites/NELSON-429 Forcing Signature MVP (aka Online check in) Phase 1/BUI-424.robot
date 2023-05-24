@@ -4,9 +4,6 @@ Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/mui.resource
-Resource          ../../resources/keywords/booking.resource
-Resource          ../../resources/keywords/common.resource
-Resource          ../../resources/keywords/mui.resource
 
 *** Test Cases ***
 Admin creates booking
