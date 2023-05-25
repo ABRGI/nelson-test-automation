@@ -6,19 +6,13 @@ Library           OperatingSystem
 Library    Browser
 
 *** Keywords ***
-Log in MUI
-    ${name}    Get Environment Variable    ADMIN
-    ${pass}    Get Environment Variable    ADPASS
-    Type Secret    //*[@id='email']    $name
-    Type Secret    //*[@id='password']    $pass
-
 Log in MUI Fail
     Type Text    //*[@id='email']    hacker@gmail.com
     Type Text    //*[@id='password']    thispassissoinvalid
     Click    //button[contains(text(),'Sign in')]
     Verify Element Presence    //div[@aria-label='Error!']    ${True}
-	
     Click    //button[@aria-label='Close']
+
 Log in MUI Successful
     Clear Text     //*[@id='email']
     Clear Text     //*[@id='password'] 
@@ -31,7 +25,7 @@ Log in MUI Successful
 Go to MUI
     [Arguments]    ${url}    
     New Browser    ${browser}    ${headless}
-    Set Browser Timeout    ${timeout}
+    #Set Browser Timeout    ${timeout}
     New Context
     New Page    ${url}
     Set Viewport Size    1600    900
@@ -50,9 +44,9 @@ Create New Reservation MUI
 
 Select A Hotel
     [Arguments]    ${hotel}    ${MUI}=${False}
-    Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
+    Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose your hotel']
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
-    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
+    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']
     Run Keyword If    '${MUI}'=='True'    Click    //button[normalize-space()='Choose your hotel']
     Sleep    2s
     Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']

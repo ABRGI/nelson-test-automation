@@ -31,7 +31,7 @@ Admin Create A Booking
     New Reservation MUI
     Create New Reservation MUI
     Go to New tab
-    Select Hotel    
+    Select A Hotel    Vaasa
     Find Room
     Select Room and Extras
     Fill in Payment Details    mui

@@ -2,7 +2,7 @@
 Documentation     This file contains keywords that are related to the booking process.
 Library           ${EXECDIR}/resources/libraries/Helpers.py
 Resource          ${EXECDIR}/resources/variables/variables.resource
-Resource          ${EXECDIR}/Resources/Keywords/common.resource
+Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
 Resource          ${EXECDIR}/resources/variables/mui.resource
 Library           Browser    auto_closing_level=SUITE
@@ -120,18 +120,14 @@ Select Dates
     END
 
 Select Room and Extras
-    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
-    ${check}    Run Keyword And Return Status    Get Element    ${btnExtras}
-    Run Keyword If    ${check}==${False}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    Run Keyword If    ${check}==${False}    Click    //button[normalize-space()='Find rooms']
-    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
-    Wait Until Network Is Idle    #timeout=33s
+    # Wait Until Network Is Idle    #timeout=33s
+    Wait For Elements State    ${btnExtras}    enabled
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
     Click    ${btnPayment}
 
 Fill in Payment Details
-    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
+    [Arguments]    ${env}=bui    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J
     [Documentation]    TBD: Use test data instead of hardcoded values
     ${rand}=    Helpers.Get Random Name
     Click and Fill    id=firstName    ${firstName}
@@ -165,14 +161,15 @@ Pay Using Visa
     Click    //button[@type='submit']
 
 Verify Booking is Successful
-    [Arguments]    ${bui}=${true}
-    ${code}    Set Variable If    ${bui} == ${True}    //div//h4
-    ${code}    Set Variable If    ${bui} == ${False}    //p[contains(text(),'Booking number')]
-    ${check}    Run Keyword And Return Status    Get Element    //button[normalize-space()='Ok']
-    Run Keyword If    ${check} == ${True}    Click    //button[normalize-space()='Ok']
-    Wait For Elements State    ${code}    visible
-    ${result}    Get Text    ${code}
-    ${result}    Remove String    ${result}    Booking code${SPACE}
+    # Wait For Elements State   //div[@class='chakra-modal__body css-1rimutx']    visible
+    # ${result}    Get Text    //div[@class='chakra-modal__body css-1rimutx']
+    # Should Be Equal As Strings    ${result}    Payment was successful
+    Wait For Elements State    //div[@class='chakra-modal__body css-1rimutx']    visible
+    ${text}    Get Text    //div[@class='chakra-modal__body css-1rimutx']    contains    Payment was successful
+    ${text}    Get Text    //div[@class='chakra-modal__body css-1rimutx']    contains    Your payment was successful and a confirmation email has been sent to
+    Click    //button[normalize-space()='Ok']
+    ${result}    Get Text    //p[contains(text(),'Booking number')]
+    ${result}    Remove String    ${result}    Booking number${SPACE}
     ${result}    Strip String    ${result}
 
 Click Booker or Guest Name
@@ -187,9 +184,7 @@ Verify Save and Sign State
     Run Keyword If    '${turnOn}'=='False'    Get Element Count    ${btnSave}    ==    1
 
 Close Edit Booker or Guest
-    ${check}    Run Keyword And Return Status    Get Element    //button[@aria-label='Close']
-    Run Keyword If    ${check} == ${True}    Click    //button[@aria-label='Close']
-    Run Keyword If    ${check} == ${False}    Click    //button/*[@data-icon='xmark']
+    Click    //button[@aria-label='Close']
 
 Continue to Payment
     Click    (//button[normalize-space()='Continue to payment'])[1]
@@ -219,7 +214,6 @@ Quick Pay
     BuiltIn.Sleep    8
 
 Verify Successful Booking
-    [Arguments]    ${bui}=${True}
     Wait Until Keyword Succeeds    15s    3s    Wait For Elements State    //div//h4    visible
     ${result}    Get Text    //div//h4
     Should Be Equal As Strings    ${result}    Payment was successful
@@ -235,40 +229,3 @@ Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
     Click    //p[normalize-space()='OP']
     Click    (//button[normalize-space()='Pay'])[1]
-
-Verify Element Presence
-    [Arguments]    ${path}    ${shown}
-    ${check}    Run Keyword And Return Status    Get Element    ${path}
-    Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
-    Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
-
-Given Booker just completed payment for a reservation
-    Choose Dates and Guests
-    Choose A Hotel    Turku, Humalistonkatu
-    Select Room and Extras
-    Check Regular Rate
-    Check Join as Member
-    Check Regular Rate
-    Fill Contact Info
-    Accept Term and Proceed to Payment
-    Quickly Pay
-    ${code}    Verify Successful Booking
-
-Choose A Hotel
-    [Arguments]    ${hotel}
-    Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
-    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
-    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
-    Run Keyword If    '${MUI}'=='True'    Click    //button[normalize-space()='Choose your hotel']
-    Sleep    2s
-    Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']
-
-And Booker is at page 3
-
-And Booker doesn’t check the “Someone else will be the main guest” checkbox
-
-When Signing is not done
-
-Then Follows are visible: Configurable primary banner, Guest list, Booking summary, My bookings link, configurable secondary banner, sticky CTA
-
-And Notification of the room number and door code is NOT shown

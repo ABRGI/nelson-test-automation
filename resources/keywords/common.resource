@@ -26,12 +26,6 @@ Open Browser to Landing Page
     Allow Cookies
     Wait Until Keyword Succeeds    10s    2s    Click    //ul[contains(@class, 'collapse')]//a[normalize-space()='Book now']
 
-Select Hotel
-    [Arguments]    ${hotel}
-    Click    //button[normalize-space()='Choose your hotel']
-    Wait Until Keyword Succeeds    10s    2s    Click    //div[contains(text(),'${hotel}')]
-    Click    //button[normalize-space()='Find rooms']
-
 Open Browser Directly to Extras
     [Documentation]    This keyword is used only for debugging purposes if you want to use a quicker
     ...    way to open the browser directly to the extras page.
