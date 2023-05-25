@@ -106,5 +106,5 @@ And Admin Can Provides Info And Sign
     Click Save and Sign
     User Draws Signature
     Close Signing Pad
-    Wait Until Network Is Idle    timeout=8s
+    Sleep    2s
     Close Edit Booker or Guest

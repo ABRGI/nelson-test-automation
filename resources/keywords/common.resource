@@ -38,9 +38,8 @@ Open Browser Directly to Extras
 
 Allow Cookies
     [Documentation]    Allow Cookies/Toggle Cookie allowance
-    #TBD: This should be conditional so it won't fail if not shown
-    ${check}    Run Keyword And Return Status    Get Element    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    Run Keyword If    ${check}==${True}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    ${check}    Run Keyword And Return Status    Wait For Elements State    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll    visible    timeout=6
+    Run Keyword If    ${check} == ${True}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 
 Click and Fill
     [Arguments]    ${selector}    ${text}

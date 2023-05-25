@@ -200,9 +200,9 @@ Check Regular Rate
 
 Fill Contact Info
     Click    //input[@id='firstName']
-    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Long
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    ${firstName}
     Click    //input[@id='lastName']
-    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    Tran
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    ${lastName}
     Click    //input[@id='email']
     Type Text    //input[@id='email']    tdlong@tma.com.vn
     Click    //input[@id='phoneNumber']
@@ -220,13 +220,14 @@ Quick Pay
 
 Verify Successful Booking
     [Arguments]    ${bui}=${True}
-    Wait Until Keyword Succeeds    15s    3s    Wait For Elements State    //div//h4    visible
-    ${result}    Get Text    //div//h4
-    Should Be Equal As Strings    ${result}    Payment was successful
-    Click    //button[normalize-space()='Ok']
-    ${result}    Get Text    //p[contains(text(),'Booking code')]
-    ${result}    Remove String    ${result}    Booking code${SPACE}
+    ${code}    Set Variable If    ${bui} == ${False}    //p[contains(text(),'Booking number')]
+    ${check}    Run Keyword And Return Status    Get Element    //button[normalize-space()='Ok']
+    Run Keyword If    ${check} == ${True}    Click    //button[normalize-space()='Ok']
+    Wait For Elements State    ${code}    visible
+    ${result}    Get Text    ${code}
+    ${result}    Remove String    ${result}    Booking number${SPACE}
     ${result}    Strip String    ${result}
+    [Return]    ${result}
 
 Check Join as Member
     Click    //p[contains(text(),'Join for free and')]
@@ -237,8 +238,8 @@ Quickly Pay
     Click    (//button[normalize-space()='Pay'])[1]
 
 Given Booker just completed payment for a reservation
-    Choose Dates and Guests
     Choose A Hotel    Turku, Humalistonkatu
+    Find Room
     Select Room and Extras
     Check Regular Rate
     Check Join as Member
@@ -246,26 +247,42 @@ Given Booker just completed payment for a reservation
     Fill Contact Info
     Accept Term and Proceed to Payment
     Quickly Pay
-    ${code}    Verify Successful Booking
 
 Choose A Hotel
-    [Arguments]    ${hotel}
-    Run Keyword If    '${MUI}'=='False'    Click    //button[normalize-space()='Choose hotel']
+    [Arguments]    ${hotel}    ${MUI}=${False}
+    Click    //button[normalize-space()='Choose your hotel']
     Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
-    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //a[@class='dropdown-item'][normalize-space()='${hotel}']
-    Run Keyword If    '${MUI}'=='True'    Click    //button[normalize-space()='Choose your hotel']
     Sleep    2s
+    Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::div/div[normalize-space()='${hotel}']
     Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']
 
-And Booker is at page 3
+And Booker Clicks On Name At Page 3
+    Click Booker or Guest Name    '${firstName}' '${lastName}'
 
-And Booker doesn’t check the “Someone else will be the main guest” checkbox
+And Booker does not check the Someone else will be the main guest checkbox
+    #probably check the box status and untick it if it's was. By default it's alwasy unticked
 
 When Signing is not done
+    #no signing is done
+    Close Edit Booker or Guest
 
 Then Follows are visible: Configurable primary banner, Guest list, Booking summary, My bookings link, configurable secondary banner, sticky CTA
+    #Configurable primary banner
+    Verify Element Presence    (//div[@class='chakra-portal'])[1]    ${True}
+    #Guest list
+    Verify Element Presence    //div/p[contains(text(),'${firstName'')]    ${True}
+    #Booking summary
+    Verify Element Presence    //div//*[contains(text(),'Booking number')]    ${True}
+    #My booking link
+    Verify Element Presence    //div/p[contains(text(),'${firstName'')]    ${True}
+    #Configurable secondary banner
+    Verify Element Presence    //div/p[contains(text(),'This app makes booking and your stay at Omena Hotels more convenient.')]    ${True}
+    #sticky CTA
+    ${code}    Verify Successful Booking
 
 And Notification of the room number and door code is NOT shown
+    Verify Element Presence    //p[normalize-space()='Room no.']/following-sibling::p    ${False}
+    Verify Element Presence    //p[normalize-space()='Door code']/following-sibling::p    ${False}
 
 Fill Default Guest Info
     Click and Fill    //input[@id='city']    Afganistan
@@ -281,3 +298,17 @@ User Draws Signature
 
 Close Signing Pad
     click    //button[normalize-space()='Close']
+
+When Signing is done for whole reservation
+    ${check}    Run Keyword And Return Status    Wait For Elements State    //input[@id='ssn']    visible    timeout=4
+    Run Keyword If    ${check} == ${True}    Type Text    //input[@id='ssn']    ${ssn}
+    Fill Default Guest Info
+    Click Save and Sign
+    User Draws Signature
+    Close Signing Pad
+    Sleep    2s
+    Close Edit Booker or Guest
+
+And Notification of the room number and door code is shown
+    Verify Element Presence    //p[normalize-space()='Room no.']/following-sibling::p    ${True}
+    Verify Element Presence    //p[normalize-space()='Door code']/following-sibling::p    ${True}
