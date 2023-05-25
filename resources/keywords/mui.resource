@@ -16,6 +16,8 @@ Log in MUI with Invalid Credentials
     Type Text    //*[@id='password']    thispassissoinvalid
     Sleep    3s
     Click    //button[contains(text(),'Sign in')]
+    ${shown}    Run Keyword And Return Status    Wait For Elements State    //div[@aria-label='Error!']    visible    timeout=3
+    Run Keyword If    ${shown} == ${False}    Click    //button[contains(text(),'Sign in')]
     Verify Element Presence    //div[@aria-label='Error!']    ${True}
     Click    //button[@aria-label='Close']
     Sleep    2s

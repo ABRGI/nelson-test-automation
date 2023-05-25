@@ -120,11 +120,11 @@ Select Dates
     END
 
 Select Room and Extras
-    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=12s
     ${check}    Run Keyword And Return Status    Get Element    ${btnExtras}
     Run Keyword If    ${check}==${False}    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Run Keyword If    ${check}==${False}    Click    //button[normalize-space()='Find rooms']
-    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=12s
     Wait Until Network Is Idle    #timeout=33s
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
@@ -165,12 +165,10 @@ Pay Using Visa
     Click    //button[@type='submit']
 
 Verify Booking is Successful
-    [Arguments]    ${bui}=${true}
-    ${code}    Set Variable If    ${bui} == ${True}    //div//h4
-    ${code}    Set Variable If    ${bui} == ${False}    //p[contains(text(),'Booking number')]
+    [Arguments]    ${bui}=${True}
+    ${code}    Set Variable    //p[contains(text(),'Booking number')]
     ${check}    Run Keyword And Return Status    Get Element    //button[normalize-space()='Ok']
     Run Keyword If    ${check} == ${True}    Click    //button[normalize-space()='Ok']
-    Wait For Elements State    ${code}    visible
     ${result}    Get Text    ${code}
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
@@ -247,11 +245,12 @@ Given Booker just completed payment for a reservation
     Fill Contact Info
     Accept Term and Proceed to Payment
     Quickly Pay
+    Verify Booking is Successful
 
 Choose A Hotel
     [Arguments]    ${hotel}    ${MUI}=${False}
     Click    //button[normalize-space()='Choose your hotel']
-    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=22s
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=8s
     Sleep    2s
     Run Keyword If    '${MUI}'=='False'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::div/div[normalize-space()='${hotel}']
     Run Keyword If    '${MUI}'=='True'    Wait Until Keyword Succeeds    10s    2s    Click    //button/following-sibling::*//div[normalize-space()='${hotel}']
@@ -261,6 +260,7 @@ And Booker Clicks On Name At Page 3
 
 And Booker does not check the Someone else will be the main guest checkbox
     #probably check the box status and untick it if it's was. By default it's alwasy unticked
+    Log    probably check the box status and untick it if it's was. By default it's alwasy unticked
 
 When Signing is not done
     #no signing is done
@@ -268,17 +268,17 @@ When Signing is not done
 
 Then Follows are visible: Configurable primary banner, Guest list, Booking summary, My bookings link, configurable secondary banner, sticky CTA
     #Configurable primary banner
-    Verify Element Presence    (//div[@class='chakra-portal'])[1]    ${True}
+    Verify Element Presence    //p[normalize-space()='Your door code is your key in Omena']/ancestor::ul    ${True}
     #Guest list
-    Verify Element Presence    //div/p[contains(text(),'${firstName'')]    ${True}
+    Verify Element Presence    //div/p[contains(text(),'${firstName}')]    ${True}
     #Booking summary
     Verify Element Presence    //div//*[contains(text(),'Booking number')]    ${True}
     #My booking link
-    Verify Element Presence    //div/p[contains(text(),'${firstName'')]    ${True}
+    Verify Element Presence    //div/p[contains(text(),'${firstName}')]    ${True}
     #Configurable secondary banner
     Verify Element Presence    //div/p[contains(text(),'This app makes booking and your stay at Omena Hotels more convenient.')]    ${True}
     #sticky CTA
-    ${code}    Verify Successful Booking
+    Verify Element Presence    //button[normalize-space()='Check in']    ${True}
 
 And Notification of the room number and door code is NOT shown
     Verify Element Presence    //p[normalize-space()='Room no.']/following-sibling::p    ${False}
@@ -291,10 +291,13 @@ Fill Default Guest Info
 
 User Draws Signature
     Click    (//button[@aria-label='Close']/following-sibling::div/div)[1]
-    Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    -10    -10
-    Mouse Button    down
-    Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    0    0
-    Mouse Button    up
+    ${j}    Set Variable    1
+    FOR    ${i}    IN RANGE    120
+        Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    -10    ${j}
+        Mouse Button    down
+        Mouse Button    up
+        ${j}    Evaluate    ${j} + 1
+    END
 
 Close Signing Pad
     click    //button[normalize-space()='Close']
@@ -305,10 +308,15 @@ When Signing is done for whole reservation
     Fill Default Guest Info
     Click Save and Sign
     User Draws Signature
-    Close Signing Pad
+    Click    //button[normalize-space()='Save']
+    Run Keyword And Ignore Error    Wait Until Network Is Idle    timeout=8s
     Sleep    2s
-    Close Edit Booker or Guest
+    Comment    Close Edit Booker or Guest
 
 And Notification of the room number and door code is shown
     Verify Element Presence    //p[normalize-space()='Room no.']/following-sibling::p    ${True}
     Verify Element Presence    //p[normalize-space()='Door code']/following-sibling::p    ${True}
+
+Click OK After Payment
+    ${check}    Run Keyword And Return Status    Get Element    //button[normalize-space()='Ok']
+    Run Keyword If    ${check} == ${True}    Click    //button[normalize-space()='Ok']
