@@ -19,15 +19,23 @@ Verify Check in Button is Visible and Click
 Verify Check in Slide is Visible and Fill
     Wait Until Visible    (//div[contains(@class, "chakra-offset-slide")])[2]
     Fill Text             id=firstName     ${firstName}
-    # Fill everything else 
+    Fill Text             id=lastName     ${lastName}
+    Fill Text             id=ssn         ${ssn}
+    # TBD: Should be dynamic test data not hardcoded
+    Fill Text             id=address         Susitie 5
+    Fill Text                id=city         Paimio  
+    Fill Text                id=postalCode     21530
+    Click             //span[contains(text(), "Travelling for work")]
 
 Click Save and Sign Button
     Click                 //button[contains(text(), "Save and Sign")]
 
+
+
 Verify Canvas is Visible and Sign
     Wait Until Visible    //canvas
-    Click                 //canvas
-    Click                //button[text()="Save"]
+    ${canvas}=        Get Element    xpath=//canvas
+    Click Element    ${canvas}     position_x=900    position_y=900
 
 Verify Check in is Completed 
     Wait Until Visible    //div[contains(text(), "Check in completed")]
@@ -50,19 +58,13 @@ Create a new booking as a non-member
     Complete Payment
     Verify Payment was successful
 
-Check-in as a new member
+Complete Check in Process
     [Tags]    smoke, booking, BUI-556, skip, online-checkin
     Verify Check in Button is Visible and Click
-    Pass Execution     TBD
-
-''''
-    Given the primary banner is configurable
-    And the notification of the room number and door code is not active
-    And the guest list is visible
-    And the booking summary is displayed
-    And the "My bookings" link is visible
-    And the secondary banner is configurable
-    Then the sticky Call To Action (CTA) should be visible
+    Verify Check in Slide is Visible and Fill
+    Click Save and Sign Button
+    Verify Canvas is Visible and Sign
+    Verify Check in is Completed
 
 Verify UI when users have signed
     [Tags]    smoke, booking, BUI-556, skip, online-checkin
