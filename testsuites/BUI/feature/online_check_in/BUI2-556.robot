@@ -54,3 +54,42 @@ Check-in as a new member
     [Tags]    smoke, booking, BUI-556, skip, online-checkin
     Verify Check in Button is Visible and Click
     Pass Execution     TBD
+
+''''
+    Given the primary banner is configurable
+    And the notification of the room number and door code is not active
+    And the guest list is visible
+    And the booking summary is displayed
+    And the "My bookings" link is visible
+    And the secondary banner is configurable
+    Then the sticky Call To Action (CTA) should be visible
+
+Verify UI when users have signed
+    [Tags]    smoke, booking, BUI-556, skip, online-checkin
+    Given the primary banner is configurable
+    And the notification of the room number and door code is active
+    And the guest list is visible
+    And the booking summary is displayed
+    And the "My bookings" link is visible
+    And the secondary banner is configurable
+    Then the sticky Call To Action (CTA) should be visible
+
+Verify UI when users have not signed
+    Configurable primary banner
+    Check Notification of the room number and door code    ${False}
+    Guest list
+    Booking summary
+    My bookings link
+    Configurable secondary banner
+    Check the sticky CTA
+
+Verify UI when users have signed
+    Configurable primary banner
+    Check Notification of the room number and door code    ${True}
+    Guest list
+    Booking summary
+    My bookings link
+    Configurable secondary banner
+    Check the sticky CTA
+
+
