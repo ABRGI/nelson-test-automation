@@ -8,6 +8,13 @@ Library           Browser    auto_closing_level=SUITE
 Library           String
 
 *** Keywords ***
+
+Click First Element Found
+    [Arguments]    ${xpath}
+    ${elements}    Get Elements          ${xpath}
+    ${first_element}=    Set Variable    ${elements}[0]
+    Click    ${first_element}
+
 A new booker makes a reservation
     [Documentation]    A new booker makes a reservation
     Select Hotel
@@ -41,9 +48,28 @@ Toggle Someone Else Checkbox
     [Documentation]    Toggles the "Someone else will be the main guest" checkbox
     Click    //span[contains(text(),"Someone else")]
 
+Click Book Button 
+    Click            //div[@data-nelson-btn='book']
+    
 Click Cancel
     [Documentation]    Clicks the cancel button
     Click    //footer/button[text()="Cancel"]
+
+Verify Email 
+    ${modify_link}=     Get Link from Email
+
+Open Link from Email 
+    [Arguments]         ${link}
+    Open New Browser To URL    ${link}
+
+Verify edit booking page
+    [Documentation]    Verifies the edit booking page is opened with correct values 
+    Pass Execution     TBD: Should be implemented
+
+Verify Email and Open Link
+    ${link}=        Verify Email 
+    Open Link from Email    ${link}
+    Verify edit booking page
 
 Signature modal is visible
     [Documentation]    Verifies the signature modal is visible
@@ -85,9 +111,9 @@ Select Guests
     # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
 
 Choose Dates and Guests
+    # TODO: Add date selection when kw ready
     Select Guests
-    Click    //button[@class="booking-form-button btn btn-primary"]
-    Wait For Elements State    ${btnExtras}    visible    timeout=${timeout}
+    
 
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
@@ -118,23 +144,45 @@ Select Dates
     Exit For Loop If    ${both}
     END
 
-Select Room and Extras
-    Wait Until Network Is Idle    #timeout=33s
+Click Continue to Payment 
+    Click First Element Found    //div[contains(@class, 'chakra-stack')]//button[contains(text(), 'Continue')))]
+    Wait Until Visible   ${btnPayment}
+
+Click Continue to Extras Button and Continue to Payment
+    [Documentation]    Clicks the continue to extras button and continues directly to Payment
     Click    ${btnExtras}
     Wait For Elements State    ${btnPayment}    visible    timeout=${timeout}
-    Click    ${btnPayment}
+    Click Continue to Payment
 
-Fill in Payment Details
+Click Continue to Extras Button 
+    [Documentation]    Clicks the continue to extras button
+    Click    ${btnExtras}
+    Wait Until Visible   ${btnPayment}
+    
+Select Room and Extras
+    Wait Until Network Is Idle    #timeout=33s
+
+Fill in Contact Information 
     [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
     ${rand}=    Helpers.Get Random Name
     ${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
-
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email       ${email}
     Click and Fill    id=phoneNumber    ${phone}
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
+
+Select Web Bank, Nordea as Payment Method 
+    Click    //div[contains(text(), "Web bank payment")]
+    Click    //p[contains(text(), 'Nordea')]
+    Click    (//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]
+
+Fill in Payment Details
+    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
+    [Documentation]    TBD: Use test data instead of hardcoded values
+    Fill in Contact Information    ${firstName}    ${lastName}    ${phone}    ${ssn}    ${env}
+
     Run Keyword If    '${env}'=='bui'    Click    xpath=(//span[@class="chakra-checkbox__control css-6whjvh"])[2]
     Run Keyword If    '${env}'=='bui'    Click    //div[contains(text(), "Web bank payment")]
     Run Keyword If    '${env}'=='bui'    Click    //p[contains(text(), 'Nordea')]
@@ -143,6 +191,10 @@ Fill in Payment Details
     Run Keyword If    '${env}'=='mui'    Click    (//button[normalize-space()='Pay'])[1]
     Run Keyword If    '${env}'=='mui'    Pay Using Visa
 
+Complete Payment
+    Simulate Success or Failure    success
+
+
 Simulate Success or Failure
     [Arguments]    ${which}
     Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
@@ -150,8 +202,8 @@ Simulate Success or Failure
     Wait Until Network Is Idle
 
 Close Dialog
-    Wait Until Visible   id=chakra-modal-149
-    Click    //footer/button[contains(text(), "Ok")]
+    Wait Until Visible     //button[contains(text(), "Ok")]
+    Click                  //button[contains(text(), "Ok")]
 
 Pay Using Visa
     Wait Until Network Is Idle    timeout=33s
@@ -161,6 +213,17 @@ Pay Using Visa
     Wait Until Network Is Idle    timeout=33s
     Click    //button[@type='submit']
 
+Save Booking Number 
+    ${str}=       Get Text    //p[contains(text(),'Booking number')]   
+    ${no}=        Helpers.Strip Booking Number    ${str}
+    Set Suite Variable     ${bookingNumber}    ${no}
+    Log to Console         ${bookingNumber}
+
+Verify Payment was successful
+    Wait Until Visible     //p[contains(text(), 'Payment was successful')]
+    Close Dialog
+    Save Booking Number
+    
 Verify Booking is Successful
     Wait For Elements State    //div//h4    visible
     ${result}    Get Text    //div//h4
@@ -227,3 +290,30 @@ Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
     Click    //p[normalize-space()='OP']
     Click    (//button[normalize-space()='Pay'])[1]
+
+Select Hotel Turku, Humalistonkatu 
+    Select Hotel    Turku, Humalistonkatu
+    # Verify that the hotel is selected and not something else
+
+Select Dates and Guests
+    Choose Dates and Guests
+    Click Book Button
+
+Select Standard and Remove Other Room Selection 
+    Click     //div[contains(text(), 'Select room')]
+    Click     (//button[contains(text(), '1')])[1] 
+    Click     //div[contains(text(), '1 room selected')]")[1]
+    Click     //button[contains(text(), 'Remove')]")[1]
+
+Select a Standard Room
+    Wait Until Visible     ${btnExtras}   
+    ${visible}=            Get Element States     //div[contains(text(), 'Select room')]    then    bool(value & visible) 
+    Run Keyword If    ${visible}    Select Standard and Remove Other Room Selection
+
+Verify Join for free is selected 
+    Wait Until Visible  //input[@value='memberRate' and @checked='']  
+
+Accept offers and Terms 
+    Click   (//div[contains(text(), 'like to receive')])[1]
+    #Click     (//div[contains(@class, 'chakra-stack')]//div[contains(text(), 'Accept')])[1]
+    Click    (//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]

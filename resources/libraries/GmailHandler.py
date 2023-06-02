@@ -8,6 +8,7 @@ from robot.api.deco import keyword
 class GmailHandler():
     
     def __init__(self):
+
         self.access_token = os.environ["ACCESS_TOKEN"]
         self.client_id = os.environ["CLIENT_ID"]
         self.client_secret = os.environ["CLIENT_SECRET"]
@@ -42,7 +43,7 @@ class GmailHandler():
                 "client_id": self.client_id,
                 "client_secret": self.client_secret,
                 "refresh_token": self.refresh_token,
-                "token_expiry": "2023-05-24T13:30:06Z",
+                "token_expiry": "2026-05-24T13:30:06Z",
                 "token_uri": "https://oauth2.googleapis.com/token",
                 "user_agent": None,
                 "revoke_uri": "https://oauth2.googleapis.com/revoke",
