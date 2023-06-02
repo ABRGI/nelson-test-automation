@@ -30,11 +30,17 @@ class Helpers(object):
             print(i)
         
         return elements[1]
+    
+    def strip_booking_number(self, text):
+        booking_no = text.split(': ')[-1]
+        return booking_no
         
     
 if __name__ == '__main__':
     h = Helpers()
     email = h.generate_random_emails(10)
     print(email)
+    s = h.strip_booking_number("Booking number: 123456")
+    print(s)
     
     

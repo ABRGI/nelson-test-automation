@@ -26,11 +26,6 @@ Create New Reservation MUI
     Wait Until Visible    //button[normalize-space()='Create']
     Wait Until Keyword Succeeds    10s    2s    Click    //button[normalize-space()='Create']
 
-Select Hotel
-    [Arguments]    ${hotel}
-    Click    //button[normalize-space()='Choose your hotel']
-    Wait Until Keyword Succeeds    10s    2s    Click    //div[contains(text(),'${hotel}')]
-
 Log out of Nelson Portal
     Click    //div[contains(@class,'mobile-hide')]//button[contains(text(),'Sign out')]/img
     Wait For Elements State    //div[contains(@class,'mobile-hide')]//button[contains(text(),'Sign out')]/img
