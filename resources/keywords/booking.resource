@@ -173,10 +173,37 @@ Fill in Contact Information
     Click and Fill    id=phoneNumber    ${phone}
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
 
-Select Web Bank, Nordea as Payment Method 
+Select Web Bank and Nordea as Payment Method 
     Click    //div[contains(text(), "Web bank payment")]
     Click    //p[contains(text(), 'Nordea')]
     Click    (//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]
+
+Click Check In Button
+    Wait Until Visible    (//button[text()="Check in"])[1]
+    Click                 (//button[text()="Check in"])[1]
+
+Sign 
+    Wait Until Visible    //canvas
+    ${canvas}=        Get Element    xpath=//canvas
+    Click      ${canvas} position_x=800    position_y=800
+
+Click Save and Sign Button
+    Click                 //button[contains(text(), "Save and Sign")]
+
+Complete Check in    
+    Wait Until Visible    //div[contains(text(), "Check in completed")]
+
+Fill Check in Slide 
+    Wait Until Visible    (//div[contains(@class, "chakra-offset-slide")])[2]
+    Fill Text             id=firstName     ${firstName}
+    Fill Text             id=lastName     ${lastName}
+    Fill Text             id=ssn         ${ssn}
+    # TBD: Should be dynamic test data not hardcoded
+    Fill Text             id=address         Susitie 5
+    Fill Text                id=city         Paimio  
+    Fill Text                id=postalCode     21530
+    Click             //span[contains(text(), "Travelling for work")]
+
 
 Fill in Payment Details
     [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
@@ -191,9 +218,9 @@ Fill in Payment Details
     Run Keyword If    '${env}'=='mui'    Click    (//button[normalize-space()='Pay'])[1]
     Run Keyword If    '${env}'=='mui'    Pay Using Visa
 
-Complete Payment
+Complete Payment Successfully
     Simulate Success or Failure    success
-
+    Verify Payment was successful
 
 Simulate Success or Failure
     [Arguments]    ${which}
@@ -310,7 +337,7 @@ Select a Standard Room
     ${visible}=            Get Element States     //div[contains(text(), 'Select room')]    then    bool(value & visible) 
     Run Keyword If    ${visible}    Select Standard and Remove Other Room Selection
 
-Verify Join for free is selected 
+Select Join for Free
     Wait Until Visible  //input[@value='memberRate' and @checked='']  
 
 Accept offers and Terms 
