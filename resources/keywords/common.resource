@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation      A test suite for verifying modify booking functionality
-Library            ${EXECDIR}/resources/libraries/GmailHandler.py
+Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/EnvHandler.py
 Library            Browser   
@@ -9,9 +9,21 @@ Library            OperatingSystem
 
 *** Keywords ***
 
-Get Link from Email 
-    ${link}=     GmailHandler.Get Link
+Create Email Address 
+    ${inbox}    Create New Inbox        
+    [Return]    ${inbox}
+
+Wait For Confirmation Link
+    [Arguments]     ${inbox_id}
+    ${email}    Wait For Latest Email   ${inbox_id}
+    ${link}     Extract Link            ${email.body}
     [Return]    ${link}
+
+Read Email and Return Link
+    ${inbox}=   Create Email Address 
+    ${code}=    Wait For Confirmation Link      ${inbox.id}
+    [Return]    ${link}
+
 
 Open New Browser To URL
     [Arguments]    ${url}

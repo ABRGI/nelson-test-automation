@@ -1,6 +1,7 @@
 
 import random
 import string
+import mailslurp_client
 
 __version__ = '1.0.0'
 
@@ -34,8 +35,8 @@ class Helpers(object):
     def strip_booking_number(self, text):
         booking_no = text.split(': ')[-1]
         return booking_no
-        
     
+
 if __name__ == '__main__':
     h = Helpers()
     email = h.generate_random_emails(10)
