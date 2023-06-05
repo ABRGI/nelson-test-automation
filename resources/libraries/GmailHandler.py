@@ -9,10 +9,10 @@ class GmailHandler():
     
     def __init__(self):
 
-        self.access_token = os.environ["ACCESS_TOKEN"]
-        self.client_id = os.environ["CLIENT_ID"]
-        self.client_secret = os.environ["CLIENT_SECRET"]
-        self.refresh_token = os.environ["REFRESH_TOKEN"]
+        self.access_token = os.environ.get("ACCESS_TOKEN")
+        self.client_id = os.environ.get("CLIENT_ID")
+        self.client_secret = os.environ.get("CLIENT_SECRET")
+        self.refresh_token = os.environ.get("REFRESH_TOKEN")
         self.client_secrets = self.set_client_secret()
         self.client_tokens = self.set_client_token()
         self.gmail = Gmail()
