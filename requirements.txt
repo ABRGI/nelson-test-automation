@@ -9,3 +9,4 @@ google-auth-httplib2
 google-auth-oauthlib
 rpaframework
 simplegmail
+mailslurp_client

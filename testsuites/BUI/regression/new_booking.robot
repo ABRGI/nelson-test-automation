@@ -18,18 +18,16 @@ Create A New Booking
     Select a Standard Room
     Click Continue to Extras Button
     Continue to Payment
-    Verify Join for free is selected 
+    Select Join for Free
     Fill in Contact Information 
     Accept offers and Terms
-    Select Web Bank, Nordea as Payment Method
-    Complete Payment
-    Verify Payment was successful
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
 
 Confirm Email and Open Link
     [Documentation]     A new booker receives an email with a link to modify the booking 
-    ${modify_link}=     Get Link from Email
+    ${modify_link}=     Read Email and Return Link
     Open New Browser To URL    ${modify_link}
-    Sleep      10s
 
 
 
