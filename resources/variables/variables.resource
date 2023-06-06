@@ -1,9 +1,10 @@
-*** Variables ***
+** Variables **
 ${browser}        chromium
 ${timeout}        90s
 ${firstName}      Mos
 ${lastName}       Def
-
+${headless}       False
+${url}            https://test4.omenahotels.com/
 ${emailUsername}  nelsontestar
 ${emailDomain}    gmail.com
 ${fullEmail}          ${emailUsername}@${emailDomain}
@@ -15,3 +16,4 @@ ${btnSaveAndSign}    //button[normalize-space()='Save and Sign']
 ${btnSave}        //button[normalize-space()='Save']
 ${password}      NotARealPass123!
 ${bookingNumber}
+${element_text}   'This field is required!'

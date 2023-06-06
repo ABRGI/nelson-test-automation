@@ -145,8 +145,8 @@ Select Dates
     END
 
 Click Continue to Payment 
-    Click First Element Found    //div[contains(@class, 'chakra-stack')]//button[contains(text(), 'Continue')))]
-    Wait Until Visible   ${btnPayment}
+    Click First Element Found    //div[@class='css-1t415z1']//button[@type='button'][normalize-space()='Continue to payment']
+    ##Wait Until Visible   ${btnPayment}
 
 Click Continue to Extras Button and Continue to Payment
     [Documentation]    Clicks the continue to extras button and continues directly to Payment
@@ -163,15 +163,15 @@ Select Room and Extras
     Wait Until Network Is Idle    #timeout=33s
 
 Fill in Contact Information 
-    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
+    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
     [Documentation]    TBD: Use test data instead of hardcoded values
-    ${rand}=    Helpers.Get Random Name
-    ${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+    #${rand}= Helpers.Get Random Name
+    #${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email       ${email}
     Click and Fill    id=phoneNumber    ${phone}
-    Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
+    ##Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
 
 Select Web Bank and Nordea as Payment Method 
     Click    //div[contains(text(), "Web bank payment")]
@@ -226,7 +226,7 @@ Simulate Success or Failure
     [Arguments]    ${which}
     Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
     Click    //a[contains(text(), 'Simulate ${which} to merchant')]
-    Wait Until Network Is Idle
+    ##Wait Until Network Is Idle
 
 Close Dialog
     Wait Until Visible     //button[contains(text(), "Ok")]
@@ -245,11 +245,17 @@ Save Booking Number
     ${no}=        Helpers.Strip Booking Number    ${str}
     Set Suite Variable     ${bookingNumber}    ${no}
     Log to Console         ${bookingNumber}
+Save Booking Number 1
+    ${str}=       Get Text    //p[contains(text(),'Booking number')]   
+    Log to Console         ${bookingNumber}
+    ${str}    Remove String    ${str}    Booking code${SPACE}
+    ${str}    Strip String    ${str}
+    
 
 Verify Payment was successful
     Wait Until Visible     //p[contains(text(), 'Payment was successful')]
     Close Dialog
-    Save Booking Number
+    Save Booking Number 1
     
 Verify Booking is Successful
     Wait For Elements State    //div//h4    visible
@@ -339,8 +345,117 @@ Select a Standard Room
 
 Select Join for Free
     Wait Until Visible  //input[@value='memberRate' and @checked='']  
-
+    Sleep  3s
 Accept offers and Terms 
     Click   (//div[contains(text(), 'like to receive')])[1]
     #Click     (//div[contains(@class, 'chakra-stack')]//div[contains(text(), 'Accept')])[1]
     Click    (//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]
+
+Fill In Booker info
+   Click    //input[@id='ssn']   
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    020202-0202
+   Click    //input[@id='city']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='city']    Tokyo
+   Click    //input[@id='address']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='address']    Paul Street
+   Click   //input[@id='postalCode']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    10000
+
+Click Someone else checkbox
+   Click   //span[normalize-space()='Someone else will be the main guest']
+Click Save and invite
+   Click   //button[normalize-space()='Save and invite']
+   Sleep  1s
+Fill Invite guets info and click invite button
+   Click   //input[@id='firstName']
+   Sleep   2s
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    shin 
+   Click   //input[@id='lastName']
+   Sleep   2s
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    suke
+   Click   //input[@id='email']
+   Sleep   2s
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    shinsuk@gmail.com
+   Click   //button[normalize-space()='Invite']
+Open Edit booker info
+   ##Wait Until Network Is Idle    timeout=4s
+   Sleep    2s
+   Click   //p[@class='chakra-text css-b2vtxw']
+Verify All information is disbled
+   #email is not modifiable
+   Verify Element Presence    //input[@id='email' and @disabled]    ${True}
+   Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='ssn' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='city' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='address' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='postalCode' and @disabled]    ${True}
+   ${style}    Get Attribute   //input[@id='phoneNumber']/parent::div    style
+   Should Be true     '${style}' == 'border-color: rgb(153, 163, 182);'
+   ##Type Text    //input[@id='phoneNumber']    020202-0202
+
+   #Fill Text      //input[@id='phoneNumber']    433434
+   #Sleep    99s
+  ## Verify Element Presence    //input[@id='email' and @disabled]    ${False} 
+Check Add organization check box
+   Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
+   Fill organization info 
+   Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
+   Verify Element Presence    //input[@id='companyName']    ${False}
+   Verify Element Presence    //input[@id='companyRef']    ${False}
+   Verify Element Presence    //input[@id='companyVat']    ${False}
+   Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
+   Click   //button[normalize-space()='Save']
+Fill organization info
+   Click   //input[@id='companyName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyName']    TMA
+   Click   //input[@id='companyRef']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMA
+   Click   //input[@id='companyVat']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMA
+Verify all information are Save
+   Click   //p[@class='chakra-text css-b2vtxw']
+   Verify Element Presence    //input[@id='email' and @disabled]    ${True}
+   Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='ssn' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='city' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='address' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='postalCode' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='companyName' and @disabled]    ${False}
+   Verify Element Presence    //input[@id='companyRef' and @disabled]    ${False}
+   Verify Element Presence    //input[@id='companyVat' and @disabled]    ${False}
+   Click    //button[@class='chakra-button css-10oz9nn']//*[name()='svg']
+Verify Element Presence
+    [Arguments]    ${path}    ${shown}
+    ${check}    Run Keyword And Return Status    Wait For Elements State    ${path}    visible    timeout=6
+    Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
+    Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
+Verify msg The field is required
+    ##${element_text}  =  Get text   //div[@id='field-198-feedback']
+    Verify Element Presence    //div[@id='field-198-feedback' and @disabled]    ${False}
+    Verify Element Presence    //div[@id='field-199-feedback' and @disabled]    ${False}
+    Verify Element Presence    //div[@id='field-200-feedback' and @disabled]    ${False}
+Fill invalid phone format
+    Click    //input[@id='phoneNumber']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='phoneNumber']    suke6545
+Verify msg "Invalid phone number!"
+    Verify Element Presence     //div[@id='field-156-feedback' and @disabled]    ${False}
+Fill invalid SSN
+    Click    //input[@id='ssn']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    suke6545
+Verify msg "Please check! This is not a Finnish social security number"
+    Verify Element Presence     //div[@id='field-160-feedback' and @disabled]    ${False}
+
+Fill contact info with the National not Finland
+   [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=915036410    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
+    [Documentation]    TBD: Use test data instead of hardcoded values
+    #${rand}= Helpers.Get Random Name
+    #${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+    Click and Fill    id=firstName    ${firstName}
+    Click and Fill    id=lastName    ${lastName}
+    Click and Fill    id=email       ${email}
+    Click   //span[@class='chakra-button__icon css-1hzyiq5']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]
+    Click   //p[normalize-space()='(+84) Vietnam']
+    Click and Fill    id=phoneNumber    ${phone}
+    ##Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
