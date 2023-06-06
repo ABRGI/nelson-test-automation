@@ -2,7 +2,6 @@
 Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            ${EXECDIR}/resources/libraries/Helpers.py
-Library            ${EXECDIR}/resources/libraries/EnvHandler.py
 Library            Browser   
 Library            OperatingSystem
 
@@ -28,7 +27,7 @@ Wait For Confirmation Link
 
 Read Email and Return Link
     ${inbox}=   Create Email Address 
-    ${code}=    Wait For Confirmation Link      ${inbox.id}
+    ${link}=    Wait For Confirmation Link      ${inbox.id}
     [Return]    ${link}
 
 
@@ -39,8 +38,16 @@ Open New Browser To URL
     New Context 
     New Page       ${url}
 
+Set Environment Variables 
+    [Documentation]    Set environment variables for the test run
+    ${MUI_URL}=     Get Environment Variable    MUI_URL
+    ${URL}=     Get Environment Variable    URL
+    ${MUI_USERNAME}=     Get Environment Variable    MUI_USERNAME
+    ${MUI_PASSWORD}=     Get Environment Variable    MUI_PASSWORD
+
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
+    Set Environment Variables
     New Browser    ${browser}    ${headless}    timeout=${timeout}
     Set Browser Timeout    ${timeout}
     New Context 

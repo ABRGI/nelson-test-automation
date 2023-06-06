@@ -1,86 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.0 on darwin)" generated="20230522 19:54:14.608" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230606 17:28:25.809" rpa="false" schemaversion="3">
 <suite id="s1" name="Nelson-Ta" source="/Users/saragilbert/Code/SQA/nelson-ta">
 <suite id="s1-s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
-<suite id="s1-s1-s1" name="Debug" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/debug.robot">
-<test id="s1-s1-s1-t1" name="Open Nelson Portal" line="8">
+<suite id="s1-s1-s1" name="MUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI">
+<suite id="s1-s1-s1-s1" name="Feature" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/feature">
+<suite id="s1-s1-s1-s1-s1" name="MUI-430" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/feature/MUI-430.robot">
+<kw name="Open Browser to Nelson Portal and Login" library="mui" type="SETUP">
+<kw name="Open Browser to Nelson Portal" library="mui">
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
-<arg>false</arg>
+<arg>${headless}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230522 19:54:16.233" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/531e7a92-ef04-42c5-8cde-bb2de5888041"}</msg>
-<msg timestamp="20230522 19:54:17.485" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/531e7a92-ef04-42c5-8cde-bb2de5888041"}</msg>
-<status status="PASS" starttime="20230522 19:54:16.232" endtime="20230522 19:54:17.486"/>
+<msg timestamp="20230606 17:28:38.243" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/938b2ebf-faf3-4b90-9e76-2580167d7bc1"}</msg>
+<msg timestamp="20230606 17:28:38.916" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/938b2ebf-faf3-4b90-9e76-2580167d7bc1"}</msg>
+<status status="PASS" starttime="20230606 17:28:38.238" endtime="20230606 17:28:38.917"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230606 17:28:38.928" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230606 17:28:38.919" endtime="20230606 17:28:38.928"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230522 19:54:17.489" level="INFO">{"acceptDownloads": true, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false, "reducedMotion": "no-preference", "forcedColors": "none"}</msg>
-<msg timestamp="20230522 19:54:17.532" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230522 19:54:17.533" level="INFO">{'acceptDownloads': True, 'ignoreHTTPSErrors': False, 'bypassCSP': False, 'deviceScaleFactor': 1, 'isMobile': False, 'hasTouch': False, 'javaScriptEnabled': True, 'offline': False, 'hideRfBrowser': False, 'reducedMotion': 'no-preference', 'forcedColors': 'none'}</msg>
-<status status="PASS" starttime="20230522 19:54:17.487" endtime="20230522 19:54:17.533"/>
-</kw>
-<kw name="Get Environment Variable" library="EnvHandler">
-<var>${url}</var>
-<arg>MUI_LINK</arg>
-<doc>Returns the value of the specified environment variable.</doc>
-<msg timestamp="20230522 19:54:17.536" level="INFO">${url} = https://admin.nelson.management/</msg>
-<status status="PASS" starttime="20230522 19:54:17.534" endtime="20230522 19:54:17.536"/>
+<msg timestamp="20230606 17:28:38.932" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230606 17:28:38.947" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230606 17:28:38.948" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230606 17:28:38.930" endtime="20230606 17:28:38.948"/>
 </kw>
 <kw name="New Page" library="Browser">
-<arg>${url}</arg>
+<arg>${MUI_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230522 19:54:22.232" level="INFO">Successfully initialized new page object and opened url: https://admin.nelson.management/</msg>
-<status status="PASS" starttime="20230522 19:54:17.537" endtime="20230522 19:54:22.233"/>
+<msg timestamp="20230606 17:28:44.121" level="INFO">Successfully initialized new page object and opened url: https://admin.nelson.management/#/login</msg>
+<status status="PASS" starttime="20230606 17:28:38.950" endtime="20230606 17:28:44.122"/>
 </kw>
-<kw name="Get Environment Variable" library="EnvHandler">
-<var>${pass}</var>
-<arg>${secret_name}</arg>
-<doc>Returns the value of the specified environment variable.</doc>
-<msg timestamp="20230522 19:54:22.236" level="FAIL">Variable '${secret_name}' not found.</msg>
-<status status="FAIL" starttime="20230522 19:54:22.233" endtime="20230522 19:54:22.237"/>
+<status status="PASS" starttime="20230606 17:28:38.236" endtime="20230606 17:28:44.124"/>
 </kw>
-<kw name="Fill Secret" library="Browser">
-<arg>//input[@name="password"]</arg>
-<arg>${pass}</arg>
+<kw name="Log in to Nelson Portal" library="mui">
+<kw name="Type Secret" library="Browser">
+<arg>//*[@id='email']</arg>
+<arg>$MUI_USERNAME</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Fills the given secret from ``variable_name`` into the
-text field found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230522 19:54:22.237" endtime="20230522 19:54:22.238"/>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:28:44.127" endtime="20230606 17:28:44.513"/>
 </kw>
-<status status="FAIL" starttime="20230522 19:54:16.227" endtime="20230522 19:54:22.239">Variable '${secret_name}' not found.</status>
-</test>
-<kw name="Close Browser" library="Browser" type="TEARDOWN">
-<tag>BrowserControl</tag>
+<kw name="Type Secret" library="Browser">
+<arg>//*[@id='password']</arg>
+<arg>$MUI_PASSWORD</arg>
+<tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<msg timestamp="20230522 19:54:22.562" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230522 19:54:22.359" endtime="20230522 19:54:22.562"/>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:28:44.514" endtime="20230606 17:28:44.551"/>
 </kw>
-<status status="FAIL" starttime="20230522 19:54:14.868" endtime="20230522 19:54:22.563"/>
-</suite>
-<status status="FAIL" starttime="20230522 19:54:14.863" endtime="20230522 19:54:22.568"/>
-</suite>
-<status status="FAIL" starttime="20230522 19:54:14.795" endtime="20230522 19:54:22.571"/>
-</suite>
-<statistics>
-<total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Nelson-Ta">Nelson-Ta</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testsuites">Nelson-Ta.Testsuites</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Debug">Nelson-Ta.Testsuites.Debug</stat>
-</suite>
-</statistics>
-<errors>
-</errors>
-</robot>
+<kw name="Click" library="Browser">
+<arg>//button[contains(text(),'Sign in')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:28:44.552" endtime="20230606 17:28:44.610"/>
+</kw>
+<status status="PASS" starttime="20230606 17:28:44.125" endtime="20230606 17:28:44.611"/>
+</kw>
+<kw name="Select Environment" library="mui">
+<arg>${ENVIRONMENT}</arg>
+<kw name="Click" library="Browser">
+<arg>//b[contains(@class, "client-name-color") and contains(text(), "${environment}")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:28:44.614" endtime="20230606 17:28:48.210"/>
+</kw>
+<status status="PASS" starttime="20230606 17:28:44.612" endtime="20230606 17:28:48.212"/>
+</kw>
+<status status="PASS" starttime="20230606 17:28:38.231" endtime="20230606 17:28:48.214"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Filter Check in incomplete and open reservation" line="13">
+<kw name="Set Browser Timeout" library="Browser">
+<arg>15s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230606 17:28:48.240" level="INFO">Set timeout to: 15000</msg>
+<status status="PASS" starttime="20230606 17:28:48.233" endtime="20230606 17:28:48.241"/>
+</kw>
+<kw name="Toggle Check in incomplete filter button" library="mui">
+<kw name="Toggle Filter" library="mui">
+<arg>incomplete</arg>
+<doc>This keyword toggles the filter on or off and verifies the icon is showing or not showing
+By giving the filter an argument, it can be used to all filters on the page.</doc>
+<kw name="Get Icon Visibility" library="mui">
+<var>${visibility}</var>
+<arg>${filter}</arg>
+<kw name="Get Element" library="Browser">
+<arg>//div[contains(text(), '${filter}')]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<msg timestamp="20230606 17:28:52.362" level="INFO">Locator found successfully.</msg>
+<status status="PASS" starttime="20230606 17:28:48.251" endtime="20230606 17:28:52.363"/>
+</kw>
+<kw name="Get Element States" library="Browser">
+<var>${result}</var>
+<arg>//div[contains(text(), '${filter}')]</arg>
+<arg>then</arg>
+<arg>value &amp; (visible | hidden)</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20230606 17:28:52.386" level="INFO">States are: ['visible']</msg>
+<msg timestamp="20230606 17:28:52.387" level="INFO">${result} = ['visible']</msg>
+<status status="PASS" starttime="20230606 17:28:52.364" endtime="20230606 17:28:52.388"/>
+</kw>
+<msg timestamp="20230606 17:28:52.389" level="INFO">${visibility} = ['visible']</msg>
+<status status="PASS" starttime="20230606 17:28:48.249" endtime="20230606 17:28:52.389"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${filter}&quot; == 'incomplete'">
+<kw name="Click" library="Browser">
+<arg>(//div[@class="filter-radio"])[5]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:28:52.396" endtime="20230606 17:28:52.428"/>
+</kw>
+<kw name="Check button design" library="mui">
+<arg>${filter}</arg>
+<arg>${visibility}</arg>
+<if>
+<branch type="IF" condition="&quot;${visibility}&quot; == 'visible'">
+<kw name="Get Icon Visibility" library="mui">
+<var>${visibility}</var>
+<arg>${filter}</arg>
+<status status="NOT RUN" starttime="20230606 17:28:58.169" endtime="20230606 17:28:58.170"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">

@@ -6,13 +6,35 @@ Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 
-Library           String 
-
 *** Variables ***
 
 ${muiResultTable}     //table[contains(@class, 'custom-table')]
-
+${MUI_URL}            https://admin.nelson.management/#/login
+${MUI_USERNAME}       sara.gilbert@softico.fi
+${MUI_PASSWORD}       Web2012!
+${ENVIRONMENT}        Test (2) Omena
 *** Keywords ***
+
+Select Environment   
+    [Arguments]    ${environment}
+    Click     //b[contains(@class, "client-name-color") and contains(text(), "${environment}")]
+    # Verify env
+
+Open Browser to Nelson Portal and Login
+    Open Browser to Nelson Portal
+    Log in to Nelson Portal
+    Select Environment    ${ENVIRONMENT}
+
+Open Browser to Nelson Portal
+    New Browser    ${browser}    ${headless}
+    Set Browser Timeout    ${timeout}
+    New Context
+    New Page       ${MUI_URL}
+
+Log in to Nelson Portal
+    Type Secret    //*[@id='email']        $MUI_USERNAME
+    Type Secret    //*[@id='password']     $MUI_PASSWORD
+    Click    //button[contains(text(),'Sign in')]
 
 Assert Reservationd View is Open 
     [Arguments]    ${filter}
@@ -45,40 +67,49 @@ Open reservations page
 
 Click Search Button  
     Click      //button[contains(text(), 'Search')]
+    Wait Until Network Is Idle
 
 Toggle Check in incomplete filter button
     Toggle Filter   incomplete
 
+Select First Guest Info Table
+    ${table}=   Get Element     (//table[contains(@class, 'custom-table')])[3]
+    [Return]    ${table}
+
+Is Visible
+    [Arguments]    ${element}
+    ${visible}=     Get Element States    ${element}    validate    value
+    [Return]    ${visible}
+
 Select Reservation with Check in Incomplete
-    Wait Until Network Is Idle
+    [Documentation]    This keyword selects the first reservation with check in incomplete
+    ...                and verifies the green icon and checkmark are shown
+    ...                NOTE! Needs more verifications as the mouseover is a bit hard to verify
     ${col0cell1}=    Get Table Cell Element    ${muiResultTable}    0    1      
     Click        ${col0cell1}
-    # Create a way to select first/last/some of the reservations
-    Verify correct reservation is shown
-    Verify Check in status is not shown when hovering on Guest name
+    #Verify correct reservation is shown
+    ${isVisible}=    Is Visible     (//div[contains(@class, 'checkin-status')])[0]
+    IF     ${isVisible}      
+        #Click   ${isVisible}
+        Wait Until Visible    (//div[contains(@class, 'checkin-item-check')][0]
+    ELSE
+        #Verify Check in status is not shown when hovering on Guest name
+        
+        ${col0cell1}=    Get Table Cell Element    ${table}    0    1    
+        #Add a check
+    END
 
 Select Reservation with Check in Complete
-    
+    Pass Execution     TBD
     # Create a way to select first/last/some of the reservations
     Verify correct reservation is shown
     Verify Check in status is shown when hovering on Guest name
 
 Go back to reservations
-  Click ${reservations_menu_button}
-  Verify button is shown with the highlight color
-  Verify button has a checkmark # This seems to be the expected behaviour to keep the filter
-
-
-
-Open Browser to Nelson Portal
-    New Browser    ${browser}    ${headless}
-    New Context
-    New Page       ${MUI_URL}
-
-Log in to Nelson Portal
-    Type Secret    //*[@id='email']    $muiname
-    Type Secret    //*[@id='password']    $muipass
-    Click    //button[contains(text(),'Sign in')]
+    Pass Execution    TBD
+    Click ${reservations_menu_button}
+    Verify button is shown with the highlight color
+    Verify button has a checkmark # This seems to be the expected behaviour to keep the filter
 
 Get Icon Visibility
     [Arguments]    ${filter}
@@ -91,13 +122,20 @@ Toggle Filter
     [Documentation]    This keyword toggles the filter on or off and verifies the icon is showing or not showing
     ...                By giving the filter an argument, it can be used to all filters on the page.
     ${visibility}=   Get Icon Visibility    ${filter}
-    IF     ${visibility} == 'visible'     # --> Toggle OFF
-        Click    //div[contains(text(), '${filter}')]
+    IF     "${filter}" == 'incomplete'
+        Click    (//div[@class="filter-radio"])[5]
+        Check button design    ${filter}    ${visibility}
+    ELSE     
+        Pass Execution     TBD
+    END 
+
+Check button design
+    [Arguments]        ${filter}    ${visibility}
+    IF     "${visibility}" == 'visible'     # --> Toggle OFF
         ${visibility}=   Get Icon Visibility    ${filter}
         Should Be Equal As Strings    ${visibility}    hidden
-        
-    ELSE IF     ${visibility} == 'hidden'     # --> Toggle ON
-        Click    //div[contains(text(), '${filter}')]
+
+    ELSE IF     "${visibility}" == 'hidden'     # --> Toggle ON
         ${visibility}=   Get Icon Visibility    ${filter}
         Should Be Equal As Strings    ${visibility}    hidden
     END
