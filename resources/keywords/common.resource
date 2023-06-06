@@ -9,6 +9,13 @@ Library            OperatingSystem
 
 *** Keywords ***
 
+Click First Element Found
+    [Arguments]    ${xpath}
+    ${elements}    Get Elements          ${xpath}
+    ${first_element}=    Set Variable    ${elements}[0]
+    Click    ${first_element}
+
+
 Create Email Address 
     ${inbox}    Create New Inbox        
     [Return]    ${inbox}

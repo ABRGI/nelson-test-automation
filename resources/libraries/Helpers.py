@@ -2,6 +2,7 @@
 import random
 import string
 import mailslurp_client
+import re
 
 __version__ = '1.0.0'
 
@@ -35,10 +36,24 @@ class Helpers(object):
     def strip_booking_number(self, text):
         booking_no = text.split(': ')[-1]
         return booking_no
-    
+
+    def extract_guid_from_url(self, url):
+        pattern = r"[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}"
+
+        # Use regular expressions to find the GUID in the URL
+        match = re.search(pattern, url)
+
+        if match:
+            guid = match.group(0)
+            print(guid)
+            return guid
+        else:
+            return None
 
 if __name__ == '__main__':
     h = Helpers()
+    stripped = h.extract_guid_from_url("https://test4.omenahotels.com/en/booking/#/confirmation/1d594962-60d6-4d73-964b-806f4de38442?result=success&email=saragee@gmail.com")
+    print('Stripped guid', stripped)
     email = h.generate_random_emails(10)
     print(email)
     s = h.strip_booking_number("Booking number: 123456")
