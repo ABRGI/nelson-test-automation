@@ -160,3 +160,129 @@ By giving the filter an argument, it can be used to all filters on the page.</do
 <status status="NOT RUN" starttime="20230606 17:28:58.169" endtime="20230606 17:28:58.170"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${visibility}</arg>
+<arg>hidden</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20230606 17:28:58.171" endtime="20230606 17:28:58.173"/>
+</kw>
+<status status="NOT RUN" starttime="20230606 17:28:52.432" endtime="20230606 17:28:58.174"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${visibility}&quot; == 'hidden'">
+<kw name="Get Icon Visibility" library="mui">
+<var>${visibility}</var>
+<arg>${filter}</arg>
+<status status="NOT RUN" starttime="20230606 17:28:58.176" endtime="20230606 17:28:58.178"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${visibility}</arg>
+<arg>hidden</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20230606 17:28:58.179" endtime="20230606 17:28:58.180"/>
+</kw>
+<status status="NOT RUN" starttime="20230606 17:28:58.175" endtime="20230606 17:28:58.181"/>
+</branch>
+<status status="PASS" starttime="20230606 17:28:52.432" endtime="20230606 17:28:58.182"/>
+</if>
+<status status="PASS" starttime="20230606 17:28:52.429" endtime="20230606 17:28:58.183"/>
+</kw>
+<status status="PASS" starttime="20230606 17:28:52.395" endtime="20230606 17:28:58.184"/>
+</branch>
+<branch type="ELSE">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" starttime="20230606 17:28:58.185" endtime="20230606 17:28:58.186"/>
+</kw>
+<status status="NOT RUN" starttime="20230606 17:28:58.184" endtime="20230606 17:28:58.187"/>
+</branch>
+<status status="PASS" starttime="20230606 17:28:52.390" endtime="20230606 17:28:58.188"/>
+</if>
+<status status="PASS" starttime="20230606 17:28:48.246" endtime="20230606 17:28:58.189"/>
+</kw>
+<status status="PASS" starttime="20230606 17:28:48.243" endtime="20230606 17:28:58.190"/>
+</kw>
+<kw name="Click Search Button" library="mui">
+<kw name="Click" library="Browser">
+<arg>//button[contains(text(), 'Search')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:28:58.194" endtime="20230606 17:28:58.220"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230606 17:28:58.221" endtime="20230606 17:28:58.230"/>
+</kw>
+<status status="PASS" starttime="20230606 17:28:58.191" endtime="20230606 17:28:58.231"/>
+</kw>
+<kw name="Select Reservation with Check in Incomplete" library="mui">
+<doc>This keyword selects the first reservation with check in incomplete
+and verifies the green icon and checkmark are shown
+NOTE! Needs more verifications</doc>
+<kw name="Get Table Cell Element" library="Browser">
+<var>${col0cell1}</var>
+<arg>${muiResultTable}</arg>
+<arg>0</arg>
+<arg>1</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the Web Element that has the same column index and same row index as the selected elements.</doc>
+<msg timestamp="20230606 17:29:06.370" level="INFO">Locator found successfully.</msg>
+<msg timestamp="20230606 17:29:06.371" level="INFO">${col0cell1} = element=e7a7df65-d4ed-4c71-bca8-1c85137b635d</msg>
+<status status="PASS" starttime="20230606 17:29:06.339" endtime="20230606 17:29:06.372"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${col0cell1}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230606 17:29:06.373" endtime="20230606 17:29:08.690"/>
+</kw>
+<kw name="Is Visible" library="mui">
+<var>${isVisible}</var>
+<arg>(//div[contains(@class, 'checkin-status')])[0]</arg>
+<kw name="Get Element States" library="Browser">
+<var>${visible}</var>
+<arg>${element}</arg>
+<arg>validate</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20230606 17:29:08.953" level="INFO">States are: ['detached']</msg>
+<msg timestamp="20230606 17:29:08.954" level="INFO">${visible} = ['detached']</msg>
+<status status="PASS" starttime="20230606 17:29:08.694" endtime="20230606 17:29:08.954"/>
+</kw>
+<msg timestamp="20230606 17:29:08.956" level="INFO">${isVisible} = ['detached']</msg>
+<status status="PASS" starttime="20230606 17:29:08.691" endtime="20230606 17:29:08.956"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible}">
+<kw name="Click" library="Browser">
+<arg>${isVisible}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20230606 17:29:09.087" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230606 17:29:09.087" level="INFO">See also file:///Users/saragilbert/Code/SQA/nelson-ta/results/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230606 17:29:09.093" level="FAIL">Error: locator.click: DOMException: Failed to execute 'querySelectorAll' on 'Document': '["detached"]' is not a valid selector.
+    at query (&lt;anonymous&gt;:3170:41)
+    at &lt;anonymous&gt;:3180:7
+    at SelectorEvaluatorImpl._cached (&lt;anonymous&gt;:2968:20)
+    at SelectorEvaluatorImpl._queryCSS (&lt;anonymous&gt;:3167:17)
+    at SelectorEvaluatorImpl._querySimple (&lt;anonymous&gt;:3044:19)
+    at &lt;anonymous&gt;:3002:29
+    at SelectorEvaluatorImpl._cached (&lt;anonymous&gt;:2968:20)
+    at SelectorEvaluatorImpl.query (&lt;anonymous&gt;:2997:19)
+    at Object.query (&lt;anonymous&gt;:3202:44)
+    at &lt;anonymous&gt;:3160:21
+=========================== logs ===========================
+waiting for locator('[\'detached\']')
+============================================================</msg>
+<errors>
+<msg timestamp="20230606 17:58:58.718" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>

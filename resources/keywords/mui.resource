@@ -9,10 +9,7 @@ Resource          ${EXECDIR}/resources/keywords/booking.resource
 *** Variables ***
 
 ${muiResultTable}     //table[contains(@class, 'custom-table')]
-${MUI_URL}            https://admin.nelson.management/#/login
-${MUI_USERNAME}       sara.gilbert@softico.fi
-${MUI_PASSWORD}       Web2012!
-${ENVIRONMENT}        Test (2) Omena
+
 *** Keywords ***
 
 Select Environment   
@@ -23,17 +20,17 @@ Select Environment
 Open Browser to Nelson Portal and Login
     Open Browser to Nelson Portal
     Log in to Nelson Portal
-    Select Environment    ${ENVIRONMENT}
+    Select Environment    %{TEST_ENV}
 
 Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context
-    New Page       ${MUI_URL}
+    New Page        %{TEST_ENV}
 
 Log in to Nelson Portal
-    Type Secret    //*[@id='email']        $MUI_USERNAME
-    Type Secret    //*[@id='password']     $MUI_PASSWORD
+    Type Secret    //*[@id='email']         %{MUI_USERNAME}
+    Type Secret    //*[@id='password']      %{MUI_PASSWORD}
     Click    //button[contains(text(),'Sign in')]
 
 Assert Reservationd View is Open 
