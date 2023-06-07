@@ -411,13 +411,13 @@ Verify All information is disbled
 
    ## Verify Element Presence    //input[@id='email' and @disabled]    ${False} 
 Check Add organization check box
-   Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
+   Click   //span[text()="Add organization information for receipt"]
    Fill organization info 
-   Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
+   Click   //span[text()="Add organization information for receipt"]
    Verify Element Presence    //input[@id='companyName']    ${False}
    Verify Element Presence    //input[@id='companyRef']    ${False}
    Verify Element Presence    //input[@id='companyVat']    ${False}
-   Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
+   Click   //span[text()="Add organization information for receipt"]
    Click   //button[normalize-space()='Save']
 Fill organization info
    Click   //input[@id='companyName']
@@ -428,7 +428,7 @@ Fill organization info
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
    Click   //button[normalize-space()='Save']
 Verify all information are save
-   Click   //div[@class='chakra-stack css-njz3tb']//div[@class='css-1rr4qq7']
+   Click   //p[text()='Booked by']
    Verify Element Presence    //input[@id='email' and @disabled]    ${True}
    Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
    Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
@@ -439,7 +439,7 @@ Verify all information are save
    Verify Element Presence    //input[@id='companyName' and @disabled]    ${False}
    Verify Element Presence    //input[@id='companyRef' and @disabled]    ${False}
    Verify Element Presence    //input[@id='companyVat' and @disabled]    ${False}
-   Click    //button[@class='chakra-button css-10oz9nn']//*[name()='svg']
+   Click    //button//*[name()='svg' and @data-icon="xmark"]
 Verify Element Presence
     [Arguments]    ${path}    ${shown}
     ${check}    Run Keyword And Return Status    Wait For Elements State    ${path}    visible    timeout=6
@@ -455,12 +455,12 @@ Fill invalid phone format
     Click    //input[@id='phoneNumber']
     Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='phoneNumber']    suke6545
 Verify msg "Invalid phone number!"
-    Verify Element Presence     //div[@id='field-156-feedback' and @disabled]    ${False}
+    Verify Element Presence     //div[text()='Invalid phone number!' and @disabled]    ${False}
 Fill invalid SSN
     Click    //input[@id='ssn']
     Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    suke6545
 Verify msg "Please check! This is not a Finnish social security number"
-    Verify Element Presence     //div[@id='field-160-feedback' and @disabled]    ${False}
+    Verify Element Presence     //div[text()='Please check! This is not a Finnish social security number' and @disabled]    ${False}
 
 Fill contact info with the National not Finland
    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=915036410    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
@@ -468,7 +468,7 @@ Fill contact info with the National not Finland
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email       ${email}
-    Click   //span[@class='chakra-button__icon css-1hzyiq5']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]
+    Click   //p[text()="Enter your info"]/ancestor::form//*[name()='svg']
     Click   //p[normalize-space()='(+84) Vietnam']
     Click and Fill    id=phoneNumber    ${phone}
 Fill Booker Info with the national is not Finland
@@ -519,4 +519,4 @@ Booker just completed payment for a reservation
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
 Edit guest popup is open
-    Verify Element Presence  //div[contains(@class,'chakra-offset-slide')]//form  ${True}
+    Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]  ${True}
