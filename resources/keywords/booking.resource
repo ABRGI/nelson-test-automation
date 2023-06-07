@@ -163,15 +163,22 @@ Select Room and Extras
     Wait Until Network Is Idle    #timeout=33s
 
 Fill in Contact Information 
-    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
+    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
-    #${rand}= Helpers.Get Random Name
-    #${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+    ${rand}=    Helpers.Get Random Name
+    ${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email       ${email}
     Click and Fill    id=phoneNumber    ${phone}
-    ##Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
+    Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
+
+Fill in Contact Information 1
+    [Arguments]    ${firstName}=Bich    ${lastName}=Ngoc    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
+    Click and Fill    id=firstName    ${firstName}
+    Click and Fill    id=lastName    ${lastName}
+    Click and Fill    id=email       ${email}
+    Click and Fill    id=phoneNumber    ${phone}
 
 Select Web Bank and Nordea as Payment Method 
     Click    //div[contains(text(), "Web bank payment")]
@@ -285,7 +292,7 @@ Continue to Payment
 
 Check Regular Rate
     Click    //p[contains(text(),'Continue with regular rate')]
-    Sleep    3
+    Wait Until Visible   //div//*[normalize-space()='Continue with regular rate']/following-sibling::div[@data-checked]
 
 Fill Contact Info
     Click    //input[@id='firstName']
@@ -303,9 +310,8 @@ Accept Term and Proceed to Payment
 Quick Pay
     Click    //div[normalize-space()='Web bank payment']
     Click    //p[normalize-space()='OP']
-    BuiltIn.Sleep    6
     Click    (//button[normalize-space()='Pay'])[1]
-    BuiltIn.Sleep    8
+    Wait For Elements State    //p[normalize-space()='Payment was successful']    visible    timeout=12s
 
 Verify Successful Booking
     Wait Until Keyword Succeeds    15s    3s    Wait For Elements State    //div//h4    visible
@@ -318,6 +324,7 @@ Verify Successful Booking
 
 Check Join as Member
     Click    //p[contains(text(),'Join for free and')]
+    Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
 
 Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
@@ -345,41 +352,47 @@ Select a Standard Room
 
 Select Join for Free
     Wait Until Visible  //input[@value='memberRate' and @checked='']  
-    Sleep  3s
+    Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
+
 Accept offers and Terms 
     Click   (//div[contains(text(), 'like to receive')])[1]
     #Click     (//div[contains(@class, 'chakra-stack')]//div[contains(text(), 'Accept')])[1]
     Click    (//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]
 
 Fill In Booker info
-   Click    //input[@id='ssn']   
+   Click    //input[@id='ssn'] 
+   Wait Until Visible   //input[@id='ssn']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    020202-0202
    Click    //input[@id='city']
+   Wait Until Visible  //input[@id='city']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='city']    Tokyo
    Click    //input[@id='address']
+   Wait Until Visible   //input[@id='address']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='address']    Paul Street
    Click   //input[@id='postalCode']
+   Wait Until Visible   //input[@id='postalCode']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    10000
-
+   Wait Until Visible   //button[normalize-space()='Save and invite']
 Click Someone else checkbox
    Click   //span[normalize-space()='Someone else will be the main guest']
 Click Save and invite
    Click   //button[normalize-space()='Save and invite']
-   Sleep  1s
+   Wait Until Visible   //button[normalize-space()='Save and invite']
 Fill Invite guets info and click invite button
+   Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
    Click   //input[@id='firstName']
-   Sleep   2s
+   Wait Until Visible   //input[@id='firstName']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    shin 
    Click   //input[@id='lastName']
-   Sleep   2s
+   Wait Until Visible   //input[@id='lastName']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    suke
    Click   //input[@id='email']
-   Sleep   2s
+   Wait Until Visible   //input[@id='email']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    shinsuk@gmail.com
    Click   //button[normalize-space()='Invite']
 Open Edit booker info
    ##Wait Until Network Is Idle    timeout=4s
-   Sleep    2s
+   Wait Until Visible   //input[@id='email']
    Click   //p[@class='chakra-text css-b2vtxw']
 Verify All information is disbled
    #email is not modifiable
@@ -395,8 +408,8 @@ Verify All information is disbled
    ##Type Text    //input[@id='phoneNumber']    020202-0202
 
    #Fill Text      //input[@id='phoneNumber']    433434
-   #Sleep    99s
-  ## Verify Element Presence    //input[@id='email' and @disabled]    ${False} 
+
+   ## Verify Element Presence    //input[@id='email' and @disabled]    ${False} 
 Check Add organization check box
    Click   //span[@class='chakra-checkbox__label css-1sgc0qu']
    Fill organization info 
@@ -410,11 +423,12 @@ Fill organization info
    Click   //input[@id='companyName']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyName']    TMA
    Click   //input[@id='companyRef']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMA
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
    Click   //input[@id='companyVat']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMA
-Verify all information are Save
-   Click   //p[@class='chakra-text css-b2vtxw']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
+   Click   //button[normalize-space()='Save']
+Verify all information are save
+   Click   //div[@class='chakra-stack css-njz3tb']//div[@class='css-1rr4qq7']
    Verify Element Presence    //input[@id='email' and @disabled]    ${True}
    Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
    Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
@@ -432,10 +446,11 @@ Verify Element Presence
     Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
     Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
 Verify msg The field is required
-    ##${element_text}  =  Get text   //div[@id='field-198-feedback']
-    Verify Element Presence    //div[@id='field-198-feedback' and @disabled]    ${False}
-    Verify Element Presence    //div[@id='field-199-feedback' and @disabled]    ${False}
-    Verify Element Presence    //div[@id='field-200-feedback' and @disabled]    ${False}
+    Verify Element Presence    //input[(@id='ssn')]/parent::div//div[normalize-space()='This field is required!' and @disabled]    ${False}
+    Verify Element Presence    //input[(@id='city')]/parent::div//div[normalize-space()='This field is required!' and @disabled]     ${False}
+    Verify Element Presence    //input[(@id='address')]/parent::div//div[normalize-space()='This field is required!' and @disabled]     ${False}
+    Verify Element Presence    //input[(@id='postalCode')]/parent::div//div[normalize-space()='This field is required!' and @disabled]     ${False}
+
 Fill invalid phone format
     Click    //input[@id='phoneNumber']
     Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='phoneNumber']    suke6545
@@ -449,13 +464,59 @@ Verify msg "Please check! This is not a Finnish social security number"
 
 Fill contact info with the National not Finland
    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=915036410    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
-    [Documentation]    TBD: Use test data instead of hardcoded values
-    #${rand}= Helpers.Get Random Name
-    #${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+   [Documentation]    TBD: Use test data instead of hardcoded values
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email       ${email}
     Click   //span[@class='chakra-button__icon css-1hzyiq5']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]
     Click   //p[normalize-space()='(+84) Vietnam']
     Click and Fill    id=phoneNumber    ${phone}
-    ##Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
+Fill Booker Info with the national is not Finland
+   Click    //input[@id='passportNumber']   
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='passportNumber']    A42354623546235
+   Click    //input[@id='city']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='city']    HCM
+   Click    //input[@id='address']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='address']    To Ky
+   Click   //input[@id='postalCode']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    70000
+   Click   //button[normalize-space()='Save and Sign']
+
+Verify booker information with national
+   Verify Element Presence  //input[@id='passportNumber']  ${True}
+   Verify Element Presence  //input[@id='city']  ${True}
+   Verify Element Presence  //input[@id='address']  ${True}
+   Verify Element Presence  //input[@id='postalCode']  ${True}
+Click save button in Signature
+   Click   //button[normalize-space()='Save']
+Click Save and Sign Button 2
+   Wait Until Visible   //button[normalize-space()='Save and Sign']
+   Click   //button[normalize-space()='Save and Sign']
+
+Edit guest popup change to "Booker information"
+   Verify Element Presence  //div[normalize-space()='Booker information' and @disabled]   ${False}
+Verify notification "Before iniviting someone else to be the main guest in this room, you must fill in your own information"
+   Verify Element Presence   //div[normalize-space()='Before inviting someone else to be the main guest in this room, you must fill in your own information.' and @disabled]  ${False} 
+Room name is remove
+   Verify Element Presence    //div[contains(@class,'guest-modal')]//p[normalize-space()='Standard room' ]    ${False}
+The "Purpose of the trip" checkbox is removed
+   Verify Element Presence     //span[text()='Travelling for work']   ${False}
+The "Save and sign" button changes to " Save and invite" button
+   Verify Element Presence  //button[normalize-space()='Save and Sign']    ${False}
+   Verify Element Presence  //button[normalize-space()='Save and invite']   ${True}
+Booker just completed payment for a reservation
+    Select Hotel     Helsinki, Lönnrotinkatu
+    Select Dates 
+    Select Guests
+    Click Book Button
+    Select a Standard Room
+    Click Continue to Extras Button 
+    Click Continue to Payment
+    Check Join as Member
+    Check Regular Rate
+    Fill in Contact Information 1
+    Accept offers and Terms
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
+Edit guest popup is open
+    Verify Element Presence  //div[contains(@class,'chakra-offset-slide')]//form  ${True}

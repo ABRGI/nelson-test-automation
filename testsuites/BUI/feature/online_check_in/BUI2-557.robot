@@ -16,10 +16,9 @@ Verify UI When in booker view
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
+    Check Join as Member
     Check Regular Rate
-    Select Join for Free
-    Check Regular Rate
-    Fill in Contact Information 
+    Fill in Contact Information 1  
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
@@ -27,14 +26,15 @@ Verify UI When in booker view
     Click Someone else checkbox
     Fill In Booker info
     Click Save and invite
+    Edit guest popup is open
     Fill Invite guets info and click invite button
     Open Edit booker info
     Verify All information is disbled
     Check Add organization check box
     Fill organization info
-    Verify all information are Save
+    Verify all information are save
 
-Validation shows msg for fields marked with "*"
+Validation shows msg for fields marked
     Select Hotel     Helsinki, Lönnrotinkatu
     Select Dates 
     Select Guests
@@ -42,10 +42,9 @@ Validation shows msg for fields marked with "*"
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
+    Check Join as Member
     Check Regular Rate
-    Select Join for Free
-    Check Regular Rate
-    Fill in Contact Information 
+    Fill in Contact Information 1
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
@@ -66,15 +65,20 @@ Showing imported passport when the National is not Finland
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
-    Check Regular Rate
-    Select Join for Free
+    Check Join as Member
     Check Regular Rate
     Fill contact info with the National not Finland
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
     Click Check In Button
-    Click Someone else checkbox
+    Fill Booker Info with the national is not Finland
+    Click Save and Sign Button 2
+    Verify booker information with national
+
+
+
+
 
 
 
