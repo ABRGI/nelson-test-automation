@@ -16,6 +16,7 @@ Verify UI When in booker view
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
+    Check Regular Rate
     Check Join as Member
     Check Regular Rate
     Fill in Contact Information 1  
@@ -26,8 +27,9 @@ Verify UI When in booker view
     Click Someone else checkbox
     Fill In Booker info
     Click Save and invite
-    Edit guest popup is open
+    Wait for invite guest page    ${True}
     Fill Invite guets info and click invite button
+    Wait for invite guest page    ${False}
     Open Edit booker info
     Verify All information is disbled
     Check Add organization check box
@@ -42,6 +44,7 @@ Validation shows msg for fields marked
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
+    Check Regular Rate
     Check Join as Member
     Check Regular Rate
     Fill in Contact Information 1
@@ -65,6 +68,7 @@ Showing imported passport when the National is not Finland
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
+    Check Regular Rate
     Check Join as Member
     Check Regular Rate
     Fill contact info with the National not Finland
