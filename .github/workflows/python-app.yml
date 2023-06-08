@@ -17,6 +17,7 @@ jobs:
     steps:
     - name: Set Environment Variables
       env:
+        TEST_ENV: "staging"
         MUI_PASSWORD: ${{ secrets.MUI_PASSWORD }}
         MUI_URL: ${{ secrets.MUI_URL }}
         MUI_USERNAME: ${{ secrets.MUI_USERNAME }}
@@ -26,7 +27,7 @@ jobs:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-        MAILSLURP_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+        MAILSLURP_API_KEY: ${{ secrets.MAILSLURP_API_KEY }}
       run: echo "Environment variables set"
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
