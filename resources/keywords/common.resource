@@ -8,12 +8,55 @@ Library            OperatingSystem
 
 *** Keywords ***
 
+Is Element Visible
+    [Arguments]  ${selector}
+    ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
+    [Return]    ${isVisible}
+
+Is Element Found
+    [Arguments]  ${selector}
+    [Documentation]    A keyword that has a very complex way of figuring out whether an
+    ...                element is found or not because I had trouble with the built-in keywords
+    ...                Can be solved differently if you have a better idea
+    Set Browser Timeout     10s
+    TRY
+        ${els}=     Get Elements     ${selector}    
+        ${count}=  Get Length  ${els}
+        IF     ${count} > 0
+            ${visible}  Set Variable    True
+        ELSE 
+            ${visible}  Set Variable    False
+        END
+        
+    EXCEPT 
+        ${visible}  Set Variable    False
+    END
+    Set Browser Timeout     ${timeout}
+    [Return]  ${visible}
+
 Click First Element Found
     [Arguments]    ${xpath}
     ${elements}    Get Elements          ${xpath}
     ${first_element}=    Set Variable    ${elements}[0]
     Click    ${first_element}
 
+Should Be Visible
+    [Arguments]  ${selector}
+    ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
+    [Return]    ${isVisible}
+
+Verify Texts
+    [Arguments]  @{listOfStrings}
+    [Documentation]    Verifies that the given texts are visible on the page, Browser Timeout
+    ...                is set to 8 seconds to speed up the test
+    ...                Takes a list of strings as an argument
+    Set Browser Timeout     8s
+    FOR  ${text}  IN  @{listOfStrings}
+        ${elements}=  Get Elements  text=${text}
+        ${element_visible}=  Run Keyword And Return Status  Should Be Visible  ${elements}[0]
+        Should Be True  ${element_visible}  The element containing text '${text}' should be visible but it is not.
+    END
+    Set Browser Timeout     ${timeout}
 
 Create Email Address 
     ${inbox}    Create New Inbox        
@@ -41,7 +84,6 @@ Open New Browser To URL
 Set Environment Variables 
     [Documentation]    Set environment variables for the test run
     ${MUI_URL}=     Get Environment Variable    MUI_URL
-    ${URL}=     Get Environment Variable    URL
     ${MUI_USERNAME}=     Get Environment Variable    MUI_USERNAME
     ${MUI_PASSWORD}=     Get Environment Variable    MUI_PASSWORD
 

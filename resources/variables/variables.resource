@@ -16,3 +16,4 @@ ${btnSave}        //button[normalize-space()='Save']
 ${password}      NotARealPass123!
 ${bookingNumber}
 ${bookingUUID}
+${doorcodeRegex}    ^\d{5}$

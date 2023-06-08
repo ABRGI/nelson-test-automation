@@ -1,35 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230606 17:28:25.809" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230608 14:08:41.818" rpa="false" schemaversion="3">
 <suite id="s1" name="Nelson-Ta" source="/Users/saragilbert/Code/SQA/nelson-ta">
 <suite id="s1-s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
-<suite id="s1-s1-s1" name="MUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI">
-<suite id="s1-s1-s1-s1" name="Feature" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/feature">
-<suite id="s1-s1-s1-s1-s1" name="MUI-430" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/feature/MUI-430.robot">
-<kw name="Open Browser to Nelson Portal and Login" library="mui" type="SETUP">
-<kw name="Open Browser to Nelson Portal" library="mui">
+<suite id="s1-s1-s1" name="Test" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/test.robot">
+<test id="s1-s1-s1-t1" name="Verify List of Texts" line="17">
+<kw name="Open Browser to Landing Page" library="common">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Set Environment Variables" library="common">
+<doc>Set environment variables for the test run</doc>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_URL}</var>
+<arg>MUI_URL</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20230608 14:08:54.911" level="INFO">${MUI_URL} = https://admin.nelson.management/#/login</msg>
+<status status="PASS" starttime="20230608 14:08:54.908" endtime="20230608 14:08:54.912"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_USERNAME}</var>
+<arg>MUI_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20230608 14:08:54.915" level="INFO">${MUI_USERNAME} = sara.gilbert@softico.fi</msg>
+<status status="PASS" starttime="20230608 14:08:54.914" endtime="20230608 14:08:54.916"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_PASSWORD}</var>
+<arg>MUI_PASSWORD</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20230608 14:08:54.918" level="INFO">${MUI_PASSWORD} = Mangomeloni2020!</msg>
+<status status="PASS" starttime="20230608 14:08:54.917" endtime="20230608 14:08:54.919"/>
+</kw>
+<status status="PASS" starttime="20230608 14:08:54.906" endtime="20230608 14:08:54.920"/>
+</kw>
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
 <arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230606 17:28:38.243" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/938b2ebf-faf3-4b90-9e76-2580167d7bc1"}</msg>
-<msg timestamp="20230606 17:28:38.916" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/938b2ebf-faf3-4b90-9e76-2580167d7bc1"}</msg>
-<status status="PASS" starttime="20230606 17:28:38.238" endtime="20230606 17:28:38.917"/>
+<msg timestamp="20230608 14:08:54.930" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/121a33b4-9aa8-44e1-bc83-b106287dfd9c"}</msg>
+<msg timestamp="20230608 14:08:55.526" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/121a33b4-9aa8-44e1-bc83-b106287dfd9c"}</msg>
+<status status="PASS" starttime="20230608 14:08:54.921" endtime="20230608 14:08:55.526"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230606 17:28:38.928" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230606 17:28:38.919" endtime="20230606 17:28:38.928"/>
+<msg timestamp="20230608 14:08:55.536" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230608 14:08:55.528" endtime="20230608 14:08:55.537"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230606 17:28:38.932" level="INFO">{
+<msg timestamp="20230608 14:08:55.540" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -39,250 +64,240 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230606 17:28:38.947" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230606 17:28:38.948" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230606 17:28:38.930" endtime="20230606 17:28:38.948"/>
+<msg timestamp="20230608 14:08:55.555" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230608 14:08:55.556" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230608 14:08:55.538" endtime="20230608 14:08:55.556"/>
 </kw>
 <kw name="New Page" library="Browser">
-<arg>${MUI_URL}</arg>
+<arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230606 17:28:44.121" level="INFO">Successfully initialized new page object and opened url: https://admin.nelson.management/#/login</msg>
-<status status="PASS" starttime="20230606 17:28:38.950" endtime="20230606 17:28:44.122"/>
-</kw>
-<status status="PASS" starttime="20230606 17:28:38.236" endtime="20230606 17:28:44.124"/>
-</kw>
-<kw name="Log in to Nelson Portal" library="mui">
-<kw name="Type Secret" library="Browser">
-<arg>//*[@id='email']</arg>
-<arg>$MUI_USERNAME</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given secret from ``variable_name`` into the text field
-found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:28:44.127" endtime="20230606 17:28:44.513"/>
-</kw>
-<kw name="Type Secret" library="Browser">
-<arg>//*[@id='password']</arg>
-<arg>$MUI_PASSWORD</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given secret from ``variable_name`` into the text field
-found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:28:44.514" endtime="20230606 17:28:44.551"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//button[contains(text(),'Sign in')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:28:44.552" endtime="20230606 17:28:44.610"/>
-</kw>
-<status status="PASS" starttime="20230606 17:28:44.125" endtime="20230606 17:28:44.611"/>
-</kw>
-<kw name="Select Environment" library="mui">
-<arg>${ENVIRONMENT}</arg>
-<kw name="Click" library="Browser">
-<arg>//b[contains(@class, "client-name-color") and contains(text(), "${environment}")]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:28:44.614" endtime="20230606 17:28:48.210"/>
-</kw>
-<status status="PASS" starttime="20230606 17:28:44.612" endtime="20230606 17:28:48.212"/>
-</kw>
-<status status="PASS" starttime="20230606 17:28:38.231" endtime="20230606 17:28:48.214"/>
-</kw>
-<test id="s1-s1-s1-s1-s1-t1" name="Filter Check in incomplete and open reservation" line="13">
-<kw name="Set Browser Timeout" library="Browser">
-<arg>15s</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230606 17:28:48.240" level="INFO">Set timeout to: 15000</msg>
-<status status="PASS" starttime="20230606 17:28:48.233" endtime="20230606 17:28:48.241"/>
-</kw>
-<kw name="Toggle Check in incomplete filter button" library="mui">
-<kw name="Toggle Filter" library="mui">
-<arg>incomplete</arg>
-<doc>This keyword toggles the filter on or off and verifies the icon is showing or not showing
-By giving the filter an argument, it can be used to all filters on the page.</doc>
-<kw name="Get Icon Visibility" library="mui">
-<var>${visibility}</var>
-<arg>${filter}</arg>
-<kw name="Get Element" library="Browser">
-<arg>//div[contains(text(), '${filter}')]</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230606 17:28:52.362" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230606 17:28:48.251" endtime="20230606 17:28:52.363"/>
-</kw>
-<kw name="Get Element States" library="Browser">
-<var>${result}</var>
-<arg>//div[contains(text(), '${filter}')]</arg>
-<arg>then</arg>
-<arg>value &amp; (visible | hidden)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230606 17:28:52.386" level="INFO">States are: ['visible']</msg>
-<msg timestamp="20230606 17:28:52.387" level="INFO">${result} = ['visible']</msg>
-<status status="PASS" starttime="20230606 17:28:52.364" endtime="20230606 17:28:52.388"/>
-</kw>
-<msg timestamp="20230606 17:28:52.389" level="INFO">${visibility} = ['visible']</msg>
-<status status="PASS" starttime="20230606 17:28:48.249" endtime="20230606 17:28:52.389"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${filter}&quot; == 'incomplete'">
-<kw name="Click" library="Browser">
-<arg>(//div[@class="filter-radio"])[5]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:28:52.396" endtime="20230606 17:28:52.428"/>
-</kw>
-<kw name="Check button design" library="mui">
-<arg>${filter}</arg>
-<arg>${visibility}</arg>
-<if>
-<branch type="IF" condition="&quot;${visibility}&quot; == 'visible'">
-<kw name="Get Icon Visibility" library="mui">
-<var>${visibility}</var>
-<arg>${filter}</arg>
-<status status="NOT RUN" starttime="20230606 17:28:58.169" endtime="20230606 17:28:58.170"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${visibility}</arg>
-<arg>hidden</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" starttime="20230606 17:28:58.171" endtime="20230606 17:28:58.173"/>
-</kw>
-<status status="NOT RUN" starttime="20230606 17:28:52.432" endtime="20230606 17:28:58.174"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${visibility}&quot; == 'hidden'">
-<kw name="Get Icon Visibility" library="mui">
-<var>${visibility}</var>
-<arg>${filter}</arg>
-<status status="NOT RUN" starttime="20230606 17:28:58.176" endtime="20230606 17:28:58.178"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${visibility}</arg>
-<arg>hidden</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" starttime="20230606 17:28:58.179" endtime="20230606 17:28:58.180"/>
-</kw>
-<status status="NOT RUN" starttime="20230606 17:28:58.175" endtime="20230606 17:28:58.181"/>
-</branch>
-<status status="PASS" starttime="20230606 17:28:52.432" endtime="20230606 17:28:58.182"/>
-</if>
-<status status="PASS" starttime="20230606 17:28:52.429" endtime="20230606 17:28:58.183"/>
-</kw>
-<status status="PASS" starttime="20230606 17:28:52.395" endtime="20230606 17:28:58.184"/>
-</branch>
-<branch type="ELSE">
-<kw name="Pass Execution" library="BuiltIn">
-<arg>TBD</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20230606 17:28:58.185" endtime="20230606 17:28:58.186"/>
-</kw>
-<status status="NOT RUN" starttime="20230606 17:28:58.184" endtime="20230606 17:28:58.187"/>
-</branch>
-<status status="PASS" starttime="20230606 17:28:52.390" endtime="20230606 17:28:58.188"/>
-</if>
-<status status="PASS" starttime="20230606 17:28:48.246" endtime="20230606 17:28:58.189"/>
-</kw>
-<status status="PASS" starttime="20230606 17:28:48.243" endtime="20230606 17:28:58.190"/>
-</kw>
-<kw name="Click Search Button" library="mui">
-<kw name="Click" library="Browser">
-<arg>//button[contains(text(), 'Search')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:28:58.194" endtime="20230606 17:28:58.220"/>
+<msg timestamp="20230608 14:09:02.297" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
+<status status="PASS" starttime="20230608 14:08:55.558" endtime="20230608 14:09:02.298"/>
 </kw>
 <kw name="Wait Until Network Is Idle" library="Browser">
 <tag>HTTP</tag>
 <tag>Wait</tag>
 <doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230606 17:28:58.221" endtime="20230606 17:28:58.230"/>
+<status status="PASS" starttime="20230608 14:09:02.300" endtime="20230608 14:09:04.387"/>
 </kw>
-<status status="PASS" starttime="20230606 17:28:58.191" endtime="20230606 17:28:58.231"/>
-</kw>
-<kw name="Select Reservation with Check in Incomplete" library="mui">
-<doc>This keyword selects the first reservation with check in incomplete
-and verifies the green icon and checkmark are shown
-NOTE! Needs more verifications</doc>
-<kw name="Get Table Cell Element" library="Browser">
-<var>${col0cell1}</var>
-<arg>${muiResultTable}</arg>
-<arg>0</arg>
-<arg>1</arg>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns the Web Element that has the same column index and same row index as the selected elements.</doc>
-<msg timestamp="20230606 17:29:06.370" level="INFO">Locator found successfully.</msg>
-<msg timestamp="20230606 17:29:06.371" level="INFO">${col0cell1} = element=e7a7df65-d4ed-4c71-bca8-1c85137b635d</msg>
-<status status="PASS" starttime="20230606 17:29:06.339" endtime="20230606 17:29:06.372"/>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230608 14:09:04.397" level="INFO">Title: 'Cheap hotels in Helsinki and Finland | Omena Hotels - Budget hotels in Finland'</msg>
+<status status="PASS" starttime="20230608 14:09:04.388" endtime="20230608 14:09:04.398"/>
 </kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
 <kw name="Click" library="Browser">
-<arg>${col0cell1}</arg>
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230606 17:29:06.373" endtime="20230606 17:29:08.690"/>
+<status status="PASS" starttime="20230608 14:09:04.401" endtime="20230608 14:09:04.547"/>
 </kw>
-<kw name="Is Visible" library="mui">
-<var>${isVisible}</var>
-<arg>(//div[contains(@class, 'checkin-status')])[0]</arg>
+<status status="PASS" starttime="20230608 14:09:04.399" endtime="20230608 14:09:04.548"/>
+</kw>
+<status status="PASS" starttime="20230608 14:08:54.902" endtime="20230608 14:09:04.549"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230608 14:09:04.551" endtime="20230608 14:09:04.558"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>8s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230608 14:09:04.568" level="INFO">Set timeout to: 8000</msg>
+<status status="PASS" starttime="20230608 14:09:04.560" endtime="20230608 14:09:04.569"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{listOfStrings}</var>
+<arg>Central</arg>
+<arg>Quality</arg>
+<arg>Eco</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230608 14:09:04.573" level="INFO">@{listOfStrings} = [ Central | Quality | Eco ]</msg>
+<status status="PASS" starttime="20230608 14:09:04.571" endtime="20230608 14:09:04.574"/>
+</kw>
+<kw name="Verify Texts" library="booking">
+<arg>@{listOfStrings}</arg>
+<for flavor="IN">
+<var>${text}</var>
+<value>@{listOfStrings}</value>
+<iter>
+<var name="${text}">Central</var>
+<kw name="Get Elements" library="Browser">
+<var>${elements}</var>
+<arg>text=${text}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20230608 14:09:04.638" level="INFO">Found 2 Locators successfully.</msg>
+<msg timestamp="20230608 14:09:04.639" level="INFO">${elements} = ['element=b66c31f5-bb8f-4567-879f-f76a2b30cf14', 'element=f74d9776-6829-411f-9344-8ba55d5da659']</msg>
+<status status="PASS" starttime="20230608 14:09:04.587" endtime="20230608 14:09:04.640"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${element_visible}</var>
+<arg>Should Be Visible</arg>
+<arg>${elements}[0]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Be Visible" library="booking">
+<arg>${elements}[0]</arg>
 <kw name="Get Element States" library="Browser">
-<var>${visible}</var>
-<arg>${element}</arg>
-<arg>validate</arg>
-<arg>value</arg>
+<var>${isVisible}</var>
+<arg>${selector}</arg>
+<arg>then</arg>
+<arg>bool(value &amp; visible)</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230606 17:29:08.953" level="INFO">States are: ['detached']</msg>
-<msg timestamp="20230606 17:29:08.954" level="INFO">${visible} = ['detached']</msg>
-<status status="PASS" starttime="20230606 17:29:08.694" endtime="20230606 17:29:08.954"/>
+<msg timestamp="20230608 14:09:32.127" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20230608 14:09:27.708" endtime="20230608 14:09:32.128"/>
 </kw>
-<msg timestamp="20230606 17:29:08.956" level="INFO">${isVisible} = ['detached']</msg>
-<status status="PASS" starttime="20230606 17:29:08.691" endtime="20230606 17:29:08.956"/>
+<status status="PASS" starttime="20230608 14:09:27.705" endtime="20230608 14:09:32.130"/>
 </kw>
-<if>
-<branch type="IF" condition="${isVisible}">
-<kw name="Click" library="Browser">
-<arg>${isVisible}</arg>
+<msg timestamp="20230608 14:09:32.131" level="INFO">${element_visible} = True</msg>
+<status status="PASS" starttime="20230608 14:09:04.641" endtime="20230608 14:09:32.131"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${element_visible}</arg>
+<arg>The element containing text '${text}' should be visible but it is not.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230608 14:09:32.133" endtime="20230608 14:09:40.256"/>
+</kw>
+<status status="PASS" starttime="20230608 14:09:04.585" endtime="20230608 14:09:40.257"/>
+</iter>
+<iter>
+<var name="${text}">Quality</var>
+<kw name="Get Elements" library="Browser">
+<var>${elements}</var>
+<arg>text=${text}</arg>
+<tag>Getter</tag>
 <tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20230606 17:29:09.087" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230606 17:29:09.087" level="INFO">See also file:///Users/saragilbert/Code/SQA/nelson-ta/results/playwright-log.txt for additional details.</msg>
-<msg timestamp="20230606 17:29:09.093" level="FAIL">Error: locator.click: DOMException: Failed to execute 'querySelectorAll' on 'Document': '["detached"]' is not a valid selector.
-    at query (&lt;anonymous&gt;:3170:41)
-    at &lt;anonymous&gt;:3180:7
-    at SelectorEvaluatorImpl._cached (&lt;anonymous&gt;:2968:20)
-    at SelectorEvaluatorImpl._queryCSS (&lt;anonymous&gt;:3167:17)
-    at SelectorEvaluatorImpl._querySimple (&lt;anonymous&gt;:3044:19)
-    at &lt;anonymous&gt;:3002:29
-    at SelectorEvaluatorImpl._cached (&lt;anonymous&gt;:2968:20)
-    at SelectorEvaluatorImpl.query (&lt;anonymous&gt;:2997:19)
-    at Object.query (&lt;anonymous&gt;:3202:44)
-    at &lt;anonymous&gt;:3160:21
-=========================== logs ===========================
-waiting for locator('[\'detached\']')
-============================================================</msg>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20230608 14:09:43.121" level="INFO">Found 4 Locators successfully.</msg>
+<msg timestamp="20230608 14:09:43.122" level="INFO">${elements} = ['element=6aab1dbc-3a60-4cc0-937f-facf780cd4d2', 'element=b3426ddd-a69e-44c6-971e-83fcdd049532', 'element=f6aa7a62-914b-4aae-844a-8d46f6c59d9f', 'element=b0dcd4d9-c475-4331-ad5a-91051e57c4ea']</msg>
+<status status="PASS" starttime="20230608 14:09:42.355" endtime="20230608 14:09:43.123"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${element_visible}</var>
+<arg>Should Be Visible</arg>
+<arg>${elements}[0]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Be Visible" library="booking">
+<arg>${elements}[0]</arg>
+<kw name="Get Element States" library="Browser">
+<var>${isVisible}</var>
+<arg>${selector}</arg>
+<arg>then</arg>
+<arg>bool(value &amp; visible)</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20230608 14:09:44.585" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20230608 14:09:43.744" endtime="20230608 14:09:44.585"/>
+</kw>
+<status status="PASS" starttime="20230608 14:09:43.741" endtime="20230608 14:09:44.587"/>
+</kw>
+<msg timestamp="20230608 14:09:44.588" level="INFO">${element_visible} = True</msg>
+<status status="PASS" starttime="20230608 14:09:43.124" endtime="20230608 14:09:44.589"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${element_visible}</arg>
+<arg>The element containing text '${text}' should be visible but it is not.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230608 14:09:44.590" endtime="20230608 14:09:45.290"/>
+</kw>
+<status status="PASS" starttime="20230608 14:09:40.258" endtime="20230608 14:09:45.291"/>
+</iter>
+<iter>
+<var name="${text}">Eco</var>
+<kw name="Get Elements" library="Browser">
+<var>${elements}</var>
+<arg>text=${text}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20230608 14:09:46.613" level="INFO">Found 7 Locators successfully.</msg>
+<msg timestamp="20230608 14:09:46.614" level="INFO">${elements} = ['element=33cb257d-691d-4a1e-8496-ae29abdd40c4', 'element=7c60451a-0522-4676-8a36-c2cae06a0cc5', 'element=24a39b1f-153e-4947-806a-645c482f70da', 'element=6c3fcf8f-32e2-49ef-b3a6-fab4bcc98eca', 'elemen...</msg>
+<status status="PASS" starttime="20230608 14:09:45.972" endtime="20230608 14:09:46.615"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${element_visible}</var>
+<arg>Should Be Visible</arg>
+<arg>${elements}[0]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Be Visible" library="booking">
+<arg>${elements}[0]</arg>
+<kw name="Get Element States" library="Browser">
+<var>${isVisible}</var>
+<arg>${selector}</arg>
+<arg>then</arg>
+<arg>bool(value &amp; visible)</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20230608 14:09:48.307" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20230608 14:09:47.359" endtime="20230608 14:09:48.308"/>
+</kw>
+<status status="PASS" starttime="20230608 14:09:47.356" endtime="20230608 14:09:48.310"/>
+</kw>
+<msg timestamp="20230608 14:09:48.311" level="INFO">${element_visible} = True</msg>
+<status status="PASS" starttime="20230608 14:09:46.617" endtime="20230608 14:09:48.312"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${element_visible}</arg>
+<arg>The element containing text '${text}' should be visible but it is not.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230608 14:09:48.313" endtime="20230608 14:09:48.867"/>
+</kw>
+<status status="PASS" starttime="20230608 14:09:45.292" endtime="20230608 14:09:48.868"/>
+</iter>
+<status status="PASS" starttime="20230608 14:09:04.581" endtime="20230608 14:09:48.869"/>
+</for>
+<status status="PASS" starttime="20230608 14:09:04.576" endtime="20230608 14:09:48.870"/>
+</kw>
+<status status="PASS" starttime="20230608 14:08:54.890" endtime="20230608 14:09:48.872"/>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="PASS" starttime="20230608 14:08:51.217" endtime="20230608 14:09:49.104"/>
+</suite>
+<status status="PASS" starttime="20230608 14:08:51.178" endtime="20230608 14:09:49.141"/>
+</suite>
+<status status="PASS" starttime="20230608 14:08:50.445" endtime="20230608 14:09:49.152"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Nelson-Ta">Nelson-Ta</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testsuites">Nelson-Ta.Testsuites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test">Nelson-Ta.Testsuites.Test</stat>
+</suite>
+</statistics>
 <errors>
-<msg timestamp="20230606 17:58:58.718" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>

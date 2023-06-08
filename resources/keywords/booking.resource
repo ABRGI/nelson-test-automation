@@ -192,24 +192,20 @@ Select Web Bank and Nordea as Payment Method
 Click Check In Button
     Wait Until Visible    (//button[text()="Check in"])[1]
     Click                 (//button[text()="Check in"])[1]
-
-Sign on Canvas
-# THIS IS NOT YET WORKING
-    Set Browser Timeout        10s
-    Run Keyword And Ignore Error      Click          //canvas     position_x=610    position_y=410
-    Set Viewport Size   1800    1200
-    Run Keyword And Ignore Error      Click          //canvas    position_x=600    position_y=420
-
-    Set Browser Timeout    ${timeout}
+    
 Sign 
+    Click    (//button[@aria-label='Close']/following-sibling::div/div)[1]
+    ${j}    Set Variable    1
+    FOR    ${i}    IN RANGE    42
+        Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    -10    ${j}
+        Mouse Button    down
+        Mouse Button    up
+        ${j}    Evaluate    ${j} + 1
+    END
     Wait Until Visible    //canvas
     Click             //div[contains(@class, 'chakra-modal__body')]
-    # This is a temp solution for working around the issue of overlapping elements on page
-    Sign on Canvas        
-    Click     //canvas
-    Wait Until Visible    //button[text()='Save']
-    
-    Click     //button[text()='Save']
+    Click         //button[text()='Save']
+    Wait For Elements State     //div[contains(@class, 'chakra-modal__body')]       hidden    timeout=${timeout}
 
 Click Save and Sign Button
     Click                 //button[contains(text(), "Save and Sign")]
@@ -250,7 +246,6 @@ Simulate Success or Failure
     [Arguments]    ${which}
     Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
     Click    //a[contains(text(), 'Simulate ${which} to merchant')]
-    Wait Until Network Is Idle
 
 Close Dialog
     Wait Until Visible     //button[contains(text(), "Ok")]
