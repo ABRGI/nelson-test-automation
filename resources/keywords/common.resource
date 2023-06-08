@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation      A test suite for verifying modify booking functionality
-Library            ${EXECDIR}/resources/libraries/MailSlurp.py
+Library            ${EXECDIR}/resources/libraries/MailSlurp.py      key=%{MAILSLURP_API_KEY}
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            Browser   
 Library            OperatingSystem
