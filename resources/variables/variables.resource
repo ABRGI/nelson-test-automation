@@ -16,4 +16,6 @@ ${btnSaveAndSign}    //button[normalize-space()='Save and Sign']
 ${btnSave}        //button[normalize-space()='Save']
 ${password}      NotARealPass123!
 ${bookingNumber}
+${bookingUUID}
+${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
