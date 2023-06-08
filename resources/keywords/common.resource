@@ -58,34 +58,12 @@ Verify Texts
     END
     Set Browser Timeout     ${timeout}
 
-Create Email Address 
-    ${inbox}    Create New Inbox        
-    [Return]    ${inbox}
-
-Wait For Confirmation Link
-    [Arguments]     ${inbox_id}
-    ${email}    Wait For Latest Email   ${inbox_id}
-    ${link}     Extract Link            ${email.body}
-    [Return]    ${link}
-
-Read Email and Return Link
-    ${inbox}=   Create Email Address 
-    ${link}=    Wait For Confirmation Link      ${inbox.id}
-    [Return]    ${link}
-
-
 Open New Browser To URL
     [Arguments]    ${url}
     New Browser    ${browser}    ${headless}    timeout=${timeout}
     Set Browser Timeout    ${timeout}
     New Context 
     New Page       ${url}
-
-Set Environment Variables 
-    [Documentation]    Set environment variables for the test run
-    ${MUI_URL}=     Get Environment Variable    MUI_URL
-    ${MUI_USERNAME}=     Get Environment Variable    MUI_USERNAME
-    ${MUI_PASSWORD}=     Get Environment Variable    MUI_PASSWORD
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
