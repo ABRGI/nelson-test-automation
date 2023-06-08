@@ -10,17 +10,9 @@ class MailSlurp(object):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
     # configure the mailslurp client using your API KEY
-    def __init__(self):
-        self.ms_api_key = self.set_api_key()
+    def __init__(self, key):
         self.configuration = mailslurp_client.Configuration()
-        self.configuration.api_key['x-api-key'] = self.ms_api_key
-
-
-    def set_api_key(self):
-        ms_api_key = os.environ.get('MAILSLURP_API_KEY')
-        if ms_api_key == None:
-            raise Exception("MAILSLURP_API_KEY environment variable is not set")
-        return ms_api_key
+        self.configuration.api_key['x-api-key'] = key
     
     # function for creating an email address returns an inbox with an id and email_address
     def create_new_inbox(self):
@@ -48,7 +40,8 @@ class MailSlurp(object):
         
 
 if __name__ == '__main__':
-    m = MailSlurp()
+    key = os.environ.get('MAILSLURP_API_KEY')
+    m = MailSlurp(key=key)
     email=m.create_new_inbox()
     html = '''
     <html>
