@@ -1,290 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230608 14:08:41.818" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230608 15:11:32.714" rpa="false" schemaversion="3">
 <suite id="s1" name="Nelson-Ta" source="/Users/saragilbert/Code/SQA/nelson-ta">
 <suite id="s1-s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
 <suite id="s1-s1-s1" name="Test" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/test.robot">
-<test id="s1-s1-s1-t1" name="Verify List of Texts" line="17">
-<kw name="Open Browser to Landing Page" library="common">
-<doc>A general startup keyword for opening a browser to the landing page.</doc>
-<kw name="Set Environment Variables" library="common">
-<doc>Set environment variables for the test run</doc>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<var>${MUI_URL}</var>
-<arg>MUI_URL</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<msg timestamp="20230608 14:08:54.911" level="INFO">${MUI_URL} = https://admin.nelson.management/#/login</msg>
-<status status="PASS" starttime="20230608 14:08:54.908" endtime="20230608 14:08:54.912"/>
+<test id="s1-s1-s1-t1" name="Email tests" line="27">
+<kw name="Create Email Address">
+<var>${i}</var>
+<kw name="Create New Inbox" library="MailSlurp">
+<var>${inbox}</var>
+<msg timestamp="20230608 15:11:37.444" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 6, 8, 8, 11, 37, 393000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': '4f576d9d-2f58-4953-b23c-eb8d32658fa9@mailslurp.com',
+ 'exp...</msg>
+<status status="PASS" starttime="20230608 15:11:36.470" endtime="20230608 15:11:37.444"/>
 </kw>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<var>${MUI_USERNAME}</var>
-<arg>MUI_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<msg timestamp="20230608 14:08:54.915" level="INFO">${MUI_USERNAME} = sara.gilbert@softico.fi</msg>
-<status status="PASS" starttime="20230608 14:08:54.914" endtime="20230608 14:08:54.916"/>
+<msg timestamp="20230608 15:11:37.444" level="INFO">${i} = {'created_at': datetime.datetime(2023, 6, 8, 8, 11, 37, 393000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': '4f576d9d-2f58-4953-b23c-eb8d32658fa9@mailslurp.com',
+ 'exp...</msg>
+<status status="PASS" starttime="20230608 15:11:36.469" endtime="20230608 15:11:37.445"/>
 </kw>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<var>${MUI_PASSWORD}</var>
-<arg>MUI_PASSWORD</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<msg timestamp="20230608 14:08:54.918" level="INFO">${MUI_PASSWORD} = Mangomeloni2020!</msg>
-<status status="PASS" starttime="20230608 14:08:54.917" endtime="20230608 14:08:54.919"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i.id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230608 15:11:37.445" endtime="20230608 15:11:37.446"/>
 </kw>
-<status status="PASS" starttime="20230608 14:08:54.906" endtime="20230608 14:08:54.920"/>
-</kw>
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>${headless}</arg>
-<arg>timeout=${timeout}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230608 14:08:54.930" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/121a33b4-9aa8-44e1-bc83-b106287dfd9c"}</msg>
-<msg timestamp="20230608 14:08:55.526" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/121a33b4-9aa8-44e1-bc83-b106287dfd9c"}</msg>
-<status status="PASS" starttime="20230608 14:08:54.921" endtime="20230608 14:08:55.526"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230608 14:08:55.536" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230608 14:08:55.528" endtime="20230608 14:08:55.537"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230608 14:08:55.540" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230608 14:08:55.555" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230608 14:08:55.556" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230608 14:08:55.538" endtime="20230608 14:08:55.556"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>${url}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230608 14:09:02.297" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
-<status status="PASS" starttime="20230608 14:08:55.558" endtime="20230608 14:09:02.298"/>
-</kw>
-<kw name="Wait Until Network Is Idle" library="Browser">
-<tag>HTTP</tag>
-<tag>Wait</tag>
-<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230608 14:09:02.300" endtime="20230608 14:09:04.387"/>
-</kw>
-<kw name="Get Title" library="Browser">
-<arg>contains</arg>
-<arg>Cheap hotels in Helsinki</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20230608 14:09:04.397" level="INFO">Title: 'Cheap hotels in Helsinki and Finland | Omena Hotels - Budget hotels in Finland'</msg>
-<status status="PASS" starttime="20230608 14:09:04.388" endtime="20230608 14:09:04.398"/>
-</kw>
-<kw name="Allow Cookies" library="common">
-<doc>Allow Cookies/Toggle Cookie allowance</doc>
-<kw name="Click" library="Browser">
-<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230608 14:09:04.401" endtime="20230608 14:09:04.547"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:04.399" endtime="20230608 14:09:04.548"/>
-</kw>
-<status status="PASS" starttime="20230608 14:08:54.902" endtime="20230608 14:09:04.549"/>
-</kw>
-<kw name="Wait Until Network Is Idle" library="Browser">
-<tag>HTTP</tag>
-<tag>Wait</tag>
-<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230608 14:09:04.551" endtime="20230608 14:09:04.558"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>8s</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230608 14:09:04.568" level="INFO">Set timeout to: 8000</msg>
-<status status="PASS" starttime="20230608 14:09:04.560" endtime="20230608 14:09:04.569"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{listOfStrings}</var>
-<arg>Central</arg>
-<arg>Quality</arg>
-<arg>Eco</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20230608 14:09:04.573" level="INFO">@{listOfStrings} = [ Central | Quality | Eco ]</msg>
-<status status="PASS" starttime="20230608 14:09:04.571" endtime="20230608 14:09:04.574"/>
-</kw>
-<kw name="Verify Texts" library="booking">
-<arg>@{listOfStrings}</arg>
-<for flavor="IN">
-<var>${text}</var>
-<value>@{listOfStrings}</value>
-<iter>
-<var name="${text}">Central</var>
-<kw name="Get Elements" library="Browser">
-<var>${elements}</var>
-<arg>text=${text}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230608 14:09:04.638" level="INFO">Found 2 Locators successfully.</msg>
-<msg timestamp="20230608 14:09:04.639" level="INFO">${elements} = ['element=b66c31f5-bb8f-4567-879f-f76a2b30cf14', 'element=f74d9776-6829-411f-9344-8ba55d5da659']</msg>
-<status status="PASS" starttime="20230608 14:09:04.587" endtime="20230608 14:09:04.640"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${element_visible}</var>
-<arg>Should Be Visible</arg>
-<arg>${elements}[0]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Should Be Visible" library="booking">
-<arg>${elements}[0]</arg>
-<kw name="Get Element States" library="Browser">
-<var>${isVisible}</var>
-<arg>${selector}</arg>
-<arg>then</arg>
-<arg>bool(value &amp; visible)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230608 14:09:32.127" level="INFO">${isVisible} = False</msg>
-<status status="PASS" starttime="20230608 14:09:27.708" endtime="20230608 14:09:32.128"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:27.705" endtime="20230608 14:09:32.130"/>
-</kw>
-<msg timestamp="20230608 14:09:32.131" level="INFO">${element_visible} = True</msg>
-<status status="PASS" starttime="20230608 14:09:04.641" endtime="20230608 14:09:32.131"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${element_visible}</arg>
-<arg>The element containing text '${text}' should be visible but it is not.</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230608 14:09:32.133" endtime="20230608 14:09:40.256"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:04.585" endtime="20230608 14:09:40.257"/>
-</iter>
-<iter>
-<var name="${text}">Quality</var>
-<kw name="Get Elements" library="Browser">
-<var>${elements}</var>
-<arg>text=${text}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230608 14:09:43.121" level="INFO">Found 4 Locators successfully.</msg>
-<msg timestamp="20230608 14:09:43.122" level="INFO">${elements} = ['element=6aab1dbc-3a60-4cc0-937f-facf780cd4d2', 'element=b3426ddd-a69e-44c6-971e-83fcdd049532', 'element=f6aa7a62-914b-4aae-844a-8d46f6c59d9f', 'element=b0dcd4d9-c475-4331-ad5a-91051e57c4ea']</msg>
-<status status="PASS" starttime="20230608 14:09:42.355" endtime="20230608 14:09:43.123"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${element_visible}</var>
-<arg>Should Be Visible</arg>
-<arg>${elements}[0]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Should Be Visible" library="booking">
-<arg>${elements}[0]</arg>
-<kw name="Get Element States" library="Browser">
-<var>${isVisible}</var>
-<arg>${selector}</arg>
-<arg>then</arg>
-<arg>bool(value &amp; visible)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230608 14:09:44.585" level="INFO">${isVisible} = False</msg>
-<status status="PASS" starttime="20230608 14:09:43.744" endtime="20230608 14:09:44.585"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:43.741" endtime="20230608 14:09:44.587"/>
-</kw>
-<msg timestamp="20230608 14:09:44.588" level="INFO">${element_visible} = True</msg>
-<status status="PASS" starttime="20230608 14:09:43.124" endtime="20230608 14:09:44.589"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${element_visible}</arg>
-<arg>The element containing text '${text}' should be visible but it is not.</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230608 14:09:44.590" endtime="20230608 14:09:45.290"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:40.258" endtime="20230608 14:09:45.291"/>
-</iter>
-<iter>
-<var name="${text}">Eco</var>
-<kw name="Get Elements" library="Browser">
-<var>${elements}</var>
-<arg>text=${text}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230608 14:09:46.613" level="INFO">Found 7 Locators successfully.</msg>
-<msg timestamp="20230608 14:09:46.614" level="INFO">${elements} = ['element=33cb257d-691d-4a1e-8496-ae29abdd40c4', 'element=7c60451a-0522-4676-8a36-c2cae06a0cc5', 'element=24a39b1f-153e-4947-806a-645c482f70da', 'element=6c3fcf8f-32e2-49ef-b3a6-fab4bcc98eca', 'elemen...</msg>
-<status status="PASS" starttime="20230608 14:09:45.972" endtime="20230608 14:09:46.615"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${element_visible}</var>
-<arg>Should Be Visible</arg>
-<arg>${elements}[0]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Should Be Visible" library="booking">
-<arg>${elements}[0]</arg>
-<kw name="Get Element States" library="Browser">
-<var>${isVisible}</var>
-<arg>${selector}</arg>
-<arg>then</arg>
-<arg>bool(value &amp; visible)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230608 14:09:48.307" level="INFO">${isVisible} = False</msg>
-<status status="PASS" starttime="20230608 14:09:47.359" endtime="20230608 14:09:48.308"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:47.356" endtime="20230608 14:09:48.310"/>
-</kw>
-<msg timestamp="20230608 14:09:48.311" level="INFO">${element_visible} = True</msg>
-<status status="PASS" starttime="20230608 14:09:46.617" endtime="20230608 14:09:48.312"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${element_visible}</arg>
-<arg>The element containing text '${text}' should be visible but it is not.</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230608 14:09:48.313" endtime="20230608 14:09:48.867"/>
-</kw>
-<status status="PASS" starttime="20230608 14:09:45.292" endtime="20230608 14:09:48.868"/>
-</iter>
-<status status="PASS" starttime="20230608 14:09:04.581" endtime="20230608 14:09:48.869"/>
-</for>
-<status status="PASS" starttime="20230608 14:09:04.576" endtime="20230608 14:09:48.870"/>
-</kw>
-<status status="PASS" starttime="20230608 14:08:54.890" endtime="20230608 14:09:48.872"/>
+<status status="PASS" starttime="20230608 15:11:36.464" endtime="20230608 15:11:37.447"/>
 </test>
 <doc>A test suite for verifying modify booking functionality</doc>
-<status status="PASS" starttime="20230608 14:08:51.217" endtime="20230608 14:09:49.104"/>
+<status status="PASS" starttime="20230608 15:11:35.341" endtime="20230608 15:11:37.455"/>
 </suite>
-<status status="PASS" starttime="20230608 14:08:51.178" endtime="20230608 14:09:49.141"/>
+<status status="PASS" starttime="20230608 15:11:35.337" endtime="20230608 15:11:37.460"/>
 </suite>
-<status status="PASS" starttime="20230608 14:08:50.445" endtime="20230608 14:09:49.152"/>
+<status status="PASS" starttime="20230608 15:11:35.288" endtime="20230608 15:11:37.462"/>
 </suite>
 <statistics>
 <total>
