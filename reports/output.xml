@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.11 on linux)" generated="20230608 08:01:53.707" rpa="false" schemaversion="3">
+<suite id="s1" name="Testsuites" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites">
+<suite id="s1-s1" name="BUI" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI">
+<suite id="s1-s1-s1" name="Feature" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature">
+<suite id="s1-s1-s1-s1" name="Online Check In" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in">
+<suite id="s1-s1-s1-s1-s1" name="BUI2-556" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-556.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Set Environment Variables" library="common">
+<doc>Set environment variables for the test run</doc>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_URL}</var>
+<arg>MUI_URL</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20230608 08:01:55.074" level="FAIL">Environment variable 'MUI_URL' does not exist.</msg>
+<status status="FAIL" starttime="20230608 08:01:55.073" endtime="20230608 08:01:55.074"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_USERNAME}</var>
+<arg>MUI_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.074" endtime="20230608 08:01:55.075"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_PASSWORD}</var>
+<arg>MUI_PASSWORD</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.075" endtime="20230608 08:01:55.075"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.072" endtime="20230608 08:01:55.076"/>
+</kw>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.076" endtime="20230608 08:01:55.076"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.076" endtime="20230608 08:01:55.077"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.077" endtime="20230608 08:01:55.077"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.077" endtime="20230608 08:01:55.077"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.077" endtime="20230608 08:01:55.078"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.078" endtime="20230608 08:01:55.078"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.078" endtime="20230608 08:01:55.078"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.071" endtime="20230608 08:01:55.079"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Create a new booking, check-in and verify door code is displayed" line="13">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230608 08:01:55.079" endtime="20230608 08:01:55.080">Parent suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230608 08:01:55.094" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230608 08:01:55.090" endtime="20230608 08:01:55.094"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:53.744" endtime="20230608 08:01:55.094">Suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</suite>
+<suite id="s1-s1-s1-s1-s2" name="BUI2-557" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-557.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Set Environment Variables" library="common">
+<doc>Set environment variables for the test run</doc>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_URL}</var>
+<arg>MUI_URL</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20230608 08:01:55.125" level="FAIL">Environment variable 'MUI_URL' does not exist.</msg>
+<status status="FAIL" starttime="20230608 08:01:55.124" endtime="20230608 08:01:55.125"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_USERNAME}</var>
+<arg>MUI_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.126" endtime="20230608 08:01:55.126"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_PASSWORD}</var>
+<arg>MUI_PASSWORD</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.126" endtime="20230608 08:01:55.126"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.124" endtime="20230608 08:01:55.127"/>
+</kw>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.127" endtime="20230608 08:01:55.127"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.128" endtime="20230608 08:01:55.128"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.128" endtime="20230608 08:01:55.128"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.128" endtime="20230608 08:01:55.128"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.129" endtime="20230608 08:01:55.129"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.129" endtime="20230608 08:01:55.129"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.129" endtime="20230608 08:01:55.130"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.124" endtime="20230608 08:01:55.130"/>
+</kw>
+<test id="s1-s1-s1-s1-s2-t1" name="Verify UI When in booker view" line="11">
+<status status="FAIL" starttime="20230608 08:01:55.130" endtime="20230608 08:01:55.131">Parent suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t2" name="Validation shows msg for fields marked" line="37">
+<status status="FAIL" starttime="20230608 08:01:55.135" endtime="20230608 08:01:55.136">Parent suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t3" name="Showing imported passport when the National is not Finland" line="60">
+<status status="FAIL" starttime="20230608 08:01:55.140" endtime="20230608 08:01:55.141">Parent suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230608 08:01:55.148" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230608 08:01:55.145" endtime="20230608 08:01:55.148"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.103" endtime="20230608 08:01:55.149">Suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:53.741" endtime="20230608 08:01:55.157"/>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:53.739" endtime="20230608 08:01:55.159"/>
+</suite>
+<suite id="s1-s1-s2" name="Regression" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression">
+<suite id="s1-s1-s2-s1" name="New Booking" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/new_booking.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Set Environment Variables" library="common">
+<doc>Set environment variables for the test run</doc>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_URL}</var>
+<arg>MUI_URL</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20230608 08:01:55.725" level="FAIL">Environment variable 'MUI_URL' does not exist.</msg>
+<status status="FAIL" starttime="20230608 08:01:55.724" endtime="20230608 08:01:55.725"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_USERNAME}</var>
+<arg>MUI_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.725" endtime="20230608 08:01:55.725"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${MUI_PASSWORD}</var>
+<arg>MUI_PASSWORD</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.726" endtime="20230608 08:01:55.726"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.724" endtime="20230608 08:01:55.726"/>
+</kw>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.727" endtime="20230608 08:01:55.727"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.727" endtime="20230608 08:01:55.727"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.727" endtime="20230608 08:01:55.728"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.728" endtime="20230608 08:01:55.728"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.728" endtime="20230608 08:01:55.728"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>contains</arg>
+<arg>Cheap hotels in Helsinki</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.728" endtime="20230608 08:01:55.729"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<status status="NOT RUN" starttime="20230608 08:01:55.729" endtime="20230608 08:01:55.729"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.723" endtime="20230608 08:01:55.729"/>
+</kw>
+<test id="s1-s1-s2-s1-t1" name="Create A New Booking" line="12">
+<doc>A new booker opens the page and does a successful booking</doc>
+<status status="FAIL" starttime="20230608 08:01:55.730" endtime="20230608 08:01:55.735">Parent suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230608 08:01:55.754" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230608 08:01:55.748" endtime="20230608 08:01:55.754"/>
+</kw>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230608 08:01:55.162" endtime="20230608 08:01:55.754">Suite setup failed:
+Environment variable 'MUI_URL' does not exist.</status>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:55.160" endtime="20230608 08:01:55.765"/>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:53.737" endtime="20230608 08:01:55.767"/>
+</suite>
+<suite id="s1-s2" name="MUI" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI">
+<suite id="s1-s2-s1" name="Feature" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/feature">
+<suite id="s1-s2-s1-s1" name="MUI-430" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/feature/MUI-430.robot">
+<kw name="Open Browser to Nelson Portal and Login" library="mui" type="SETUP">
+<kw name="Open Browser to Nelson Portal" library="mui">
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230608 08:01:55.801" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/browser/traces/8b75bc1a-c4f6-4e3b-919f-e437b802142e"}</msg>
+<msg timestamp="20230608 08:01:56.690" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/browser/traces/8b75bc1a-c4f6-4e3b-919f-e437b802142e"}</msg>
+<status status="PASS" starttime="20230608 08:01:55.800" endtime="20230608 08:01:56.691"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230608 08:01:56.695" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230608 08:01:56.691" endtime="20230608 08:01:56.695"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230608 08:01:56.696" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230608 08:01:56.714" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230608 08:01:56.714" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230608 08:01:56.696" endtime="20230608 08:01:56.715"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>%{TEST_ENV}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230608 08:01:56.717" level="FAIL">Environment variable '%{TEST_ENV}' not found.</msg>
+<status status="FAIL" starttime="20230608 08:01:56.715" endtime="20230608 08:01:56.717"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.800" endtime="20230608 08:01:56.718"/>
+</kw>
+<kw name="Log in to Nelson Portal" library="mui">
+<status status="NOT RUN" starttime="20230608 08:01:56.718" endtime="20230608 08:01:56.718"/>
+</kw>
+<kw name="Select Environment" library="mui">
+<arg>%{TEST_ENV}</arg>
+<status status="NOT RUN" starttime="20230608 08:01:56.718" endtime="20230608 08:01:56.719"/>
+</kw>
+<status status="FAIL" starttime="20230608 08:01:55.800" endtime="20230608 08:01:56.719"/>
+</kw>
+<test id="s1-s2-s1-s1-t1" name="Filter Check in incomplete and open reservation" line="13">
+<doc>Test case verifying the functionality of the Check in incomplete filter
+when it's toggled on</doc>
+<status status="FAIL" starttime="20230608 08:01:56.719" endtime="20230608 08:01:56.726">Parent suite setup failed:
+Environment variable '%{TEST_ENV}' not found.</status>
+</test>
+<test id="s1-s2-s1-s1-t2" name="Remove filter and open a reservation" line="23">
+<doc>Test case verifying the functionality of the Check in incomplete filter
+when it's toggled off</doc>
+<status status="FAIL" starttime="20230608 08:01:56.738" endtime="20230608 08:01:56.743">Parent suite setup failed:
+Environment variable '%{TEST_ENV}' not found.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230608 08:01:56.796" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230608 08:01:56.752" endtime="20230608 08:01:56.796"/>
+</kw>
+<doc>This file contains test cases for testing MUI-430.robot</doc>
+<status status="FAIL" starttime="20230608 08:01:55.777" endtime="20230608 08:01:56.796">Suite setup failed:
+Environment variable '%{TEST_ENV}' not found.</status>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:55.774" endtime="20230608 08:01:56.807"/>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:55.771" endtime="20230608 08:01:56.808"/>
+</suite>
+<status status="FAIL" starttime="20230608 08:01:53.709" endtime="20230608 08:01:56.810"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">smoke, booking, BUI2-556, online-checkin</stat>
+</tag>
+<suite>
+<stat pass="0" fail="7" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="0" fail="5" skip="0" id="s1-s1" name="BUI">Testsuites.BUI</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1-s1" name="Feature">Testsuites.BUI.Feature</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1-s1-s1" name="Online Check In">Testsuites.BUI.Feature.Online Check In</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="BUI2-556">Testsuites.BUI.Feature.Online Check In.BUI2-556</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s1-s1-s1-s2" name="BUI2-557">Testsuites.BUI.Feature.Online Check In.BUI2-557</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s2" name="Regression">Testsuites.BUI.Regression</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s2-s1" name="New Booking">Testsuites.BUI.Regression.New Booking</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2" name="MUI">Testsuites.MUI</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2-s1" name="Feature">Testsuites.MUI.Feature</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2-s1-s1" name="MUI-430">Testsuites.MUI.Feature.MUI-430</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230608 08:01:54.321" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Library 'MailSlurp' expected 1 argument, got 0.</msg>
+<msg timestamp="20230608 08:01:55.107" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Library 'MailSlurp' expected 1 argument, got 0.</msg>
+<msg timestamp="20230608 08:01:55.165" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Library 'MailSlurp' expected 1 argument, got 0.</msg>
+<msg timestamp="20230608 08:01:55.788" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Library 'MailSlurp' expected 1 argument, got 0.</msg>
+</errors>
+</robot>
