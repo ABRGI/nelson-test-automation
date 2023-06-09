@@ -16,9 +16,7 @@ Verify UI When in booker view
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
-    Check Regular Rate
-    Check Join as Member
-    Check Regular Rate
+    Check Regular Rate 2
     Fill in Contact Information 1  
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
@@ -28,12 +26,11 @@ Verify UI When in booker view
     Fill In Booker info
     Click Save and invite
     Wait for invite guest page    ${True}
-    Fill Invite guets info and click invite button
+    Fill Invite guest info and click invite button
     Wait for invite guest page    ${False}
     Open Edit booker info
     Verify All information is disbled
     Check Add organization check box
-    Fill organization info
     Verify all information are save
 
 Validation shows msg for fields marked
@@ -44,9 +41,7 @@ Validation shows msg for fields marked
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
-    Check Regular Rate
-    Check Join as Member
-    Check Regular Rate
+    Check Regular Rate 2
     Fill in Contact Information 1
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
@@ -68,9 +63,7 @@ Showing imported passport when the National is not Finland
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
-    Check Regular Rate
-    Check Join as Member
-    Check Regular Rate
+    Check Regular Rate 2
     Fill contact info with the National not Finland
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
