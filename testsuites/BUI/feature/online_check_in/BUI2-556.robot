@@ -24,7 +24,7 @@ Create a new booking, check-in and verify door code is displayed
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-    Verify Page Elements before check-in
+    #Verify Page Elements before check-in
     Click Check In Button
     Fill Check in Slide
     Click Save and Sign Button
