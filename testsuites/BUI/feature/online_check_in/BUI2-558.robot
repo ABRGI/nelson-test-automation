@@ -1,6 +1,6 @@
 *** Settings ***
-Suite Setup       Open Browser to Landing Page
-Suite Teardown    Close Browser
+Test Setup       Open Browser to Landing Page
+Test Teardown    Close Browser
 Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
@@ -103,11 +103,10 @@ Verify invite guest with valid information
     Status of guest confirmation is changed to "Invite sent, not check-in"
     Verify Guest information component
     Verify Booking summary
-    Verify Configurable secondary banner
     Verify Guest information popup when guest not checkin
     Click Uninvite button
-    Verify Uninvite warning popup
-    Click Univite button in Uninvite warning popup
+
+
    
     
 

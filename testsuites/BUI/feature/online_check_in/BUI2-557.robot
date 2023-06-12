@@ -1,6 +1,6 @@
 *** Settings ***
-Suite Setup       Open Browser to Landing Page
-Suite Teardown    Close Browser
+Test Setup       Open Browser to Landing Page
+Test Teardown    Close Browser
 Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
