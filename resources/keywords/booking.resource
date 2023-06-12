@@ -322,7 +322,13 @@ Continue to Payment
 Check Regular Rate
     Click    //p[contains(text(),'Continue with regular rate')]
     Wait Until Visible   //div//*[normalize-space()='Continue with regular rate']/following-sibling::div[@data-checked]
-
+    #Wait For Elements State    //input[@type='password']    hidden
+Check Regular Rate 2
+    Check Regular Rate
+    Check Join as Member
+    Check Regular Rate
+    Check Join as Member
+    Check Regular Rate
 Fill Contact Info
     Click    //input[@id='firstName']
     Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Long
@@ -354,6 +360,7 @@ Verify Successful Booking
 Check Join as Member
     Click    //p[contains(text(),'Join for free and')]
     Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
+    #Wait For Elements State    //input[@type='password']    visible
 
 Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
@@ -407,26 +414,31 @@ Click Someone else checkbox
 Click Save and invite
    Click   //button[normalize-space()='Save and invite']
    Wait Until Visible   //button[normalize-space()='Save and invite']
-Fill Invite guets info and click invite button
+Wait for invite guest page
+   [Arguments]    ${shown}
+   run keyword If    ${shown == ${True}}    Wait For Elements State    //button//*[@data-icon='xmark']    visible
+   run keyword If    ${shown == ${True}}    Wait For Elements State    //button[normalize-space()='Cancel']    visible
+   run keyword If    ${shown == ${False}}    Wait For Elements State    //button//*[@data-icon='xmark']    hidden
+   run keyword If    ${shown == ${False}}    Wait For Elements State    //button[normalize-space()='Cancel']    hidden
+Fill Invite guest info and click invite button
    Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
    Click   //input[@id='firstName']
    Wait Until Visible   //input[@id='firstName']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    shin 
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Shin 
    Click   //input[@id='lastName']
    Wait Until Visible   //input[@id='lastName']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    suke
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    Suke
    Click   //input[@id='email']
    Wait Until Visible   //input[@id='email']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    shinsuk@gmail.com
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    shinsuke@gmail.com
    Click   //button[normalize-space()='Invite']
 Open Edit booker info
    ##Wait Until Network Is Idle    timeout=4s
-   Wait Until Visible   //input[@id='email']
-   Click   //p[@class='chakra-text css-b2vtxw']
+   Click   //p[text()='Booked by']
 Verify All information is disbled
    #email is not modifiable
    Verify Element Presence    //input[@id='email' and @disabled]    ${True}
-   Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
+   Wait Until Keyword Succeeds    20s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
    Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
    Verify Element Presence    //input[@id='ssn' and @disabled]    ${True}
    Verify Element Presence    //input[@id='city' and @disabled]    ${True}
@@ -441,30 +453,40 @@ Verify All information is disbled
    ## Verify Element Presence    //input[@id='email' and @disabled]    ${False} 
 Check Add organization check box
    Click   //span[text()="Add organization information for receipt"]
-   Fill organization info 
-   Click   //span[text()="Add organization information for receipt"]
-   Verify Element Presence    //input[@id='companyName']    ${False}
-   Verify Element Presence    //input[@id='companyRef']    ${False}
-   Verify Element Presence    //input[@id='companyVat']    ${False}
-   Click   //span[text()="Add organization information for receipt"]
-   Click   //button[normalize-space()='Save']
-Fill organization info
    Click   //input[@id='companyName']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyName']    TMA
    Click   //input[@id='companyRef']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
    Click   //input[@id='companyVat']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
+   Fill organization info 
+   Click   //span[text()="Add organization information for receipt"]
+   Verify Element Presence    //input[@id='companyName']    ${False}
+   Verify Element Presence    //input[@id='companyRef']    ${False}
+   Verify Element Presence    //input[@id='companyVat']    ${False}
+   Wait For Elements State   //span[text()="Add organization information for receipt"]   visible
+   Click   //span[text()="Add organization information for receipt"]
+   Click   //button[normalize-space()='Save']
+Fill organization info
+   Click   //input[@id='companyName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyName']    TMA
+   Wait For Elements State   //input[@id='companyRef']   visible
+   Click   //input[@id='companyRef']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
+   Click   //input[@id='companyVat']
+   Wait For Elements State   //input[@id='companyVat']   visible
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
    Click   //button[normalize-space()='Save']
 Verify all information are save
    Click   //p[text()='Booked by']
+   Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
+   Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
    Verify Element Presence    //input[@id='email' and @disabled]    ${True}
-   Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
-   Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
    Verify Element Presence    //input[@id='ssn' and @disabled]    ${True}
    Verify Element Presence    //input[@id='city' and @disabled]    ${True}
    Verify Element Presence    //input[@id='address' and @disabled]    ${True}
    Verify Element Presence    //input[@id='postalCode' and @disabled]    ${True}
+   Click   //span[text()="Add organization information for receipt"]
    Verify Element Presence    //input[@id='companyName' and @disabled]    ${False}
    Verify Element Presence    //input[@id='companyRef' and @disabled]    ${False}
    Verify Element Presence    //input[@id='companyVat' and @disabled]    ${False}
@@ -533,7 +555,7 @@ The "Purpose of the trip" checkbox is removed
 The "Save and sign" button changes to " Save and invite" button
    Verify Element Presence  //button[normalize-space()='Save and Sign']    ${False}
    Verify Element Presence  //button[normalize-space()='Save and invite']   ${True}
-Booker just completed payment for a reservation
+Booker just completed payment for a reservation   
     Select Hotel     Helsinki, Lönnrotinkatu
     Select Dates 
     Select Guests
@@ -541,11 +563,109 @@ Booker just completed payment for a reservation
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
-    Check Join as Member
-    Check Regular Rate
+    Check Regular Rate 2
     Fill in Contact Information 1
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
+
+Invite guest popup is open
+    Verify Element Presence  //p[text()='Invite guest']/ancestor::div[@class="chakra-offset-slide"]  ${True}
+Verify the Invite Guest UI
+    Verify Element Presence  //p[text()='Invite guest']/ancestor::div[@class="chakra-offset-slide"]  ${True}
+    Verify Element Presence  //form/div/p   ${True}
+    Verify Element Presence  //input[@id='firstName']  ${True}
+    Verify Element Presence  //input[@id='lastName']  ${True}
+    Verify Element Presence  //input[@id='email']  ${True}
+    Verify Element Presence  //button[normalize-space()='Cancel']  ${True}
+    Verify Element Presence  //button[normalize-space()='Invite']  ${True}
+    Verify Element Presence  //div//button//*[name()='svg' and @data-icon='xmark']  ${True}
+Verify email with valid email
+    Click      //input[@id='email']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    example@example.com
+    ##Verify Element Presence    //input[(@id='email')]/parent::div//div[normalize-space()='This field is required!' and @disabled]    ${True}
+Verify email with invalid email
+    Click      //input[@id='email']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    example21423example.com
+    Verify Element Presence    //input[(@id='email')]/parent::div//div[normalize-space()='This field is required!' and @disabled]    ${False}
+Fill invite guest info with block guest email
+    Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
+    Click   //input[@id='firstName']
+    Wait Until Visible   //input[@id='firstName']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    User
+    Click   //input[@id='lastName']
+    Wait Until Visible   //input[@id='lastName']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    blocktest
+    Click   //input[@id='email']
+    Wait Until Visible   //input[@id='email']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    blockuserfortest@gmail.com
+    Click   //button[normalize-space()='Invite']
+Verify Warning Popup is displayed with blocker email
+    Verify Element Presence    //button[normalize-space()='Close']  ${True}
+    Verify Element Presence   //p[contains(text(),'This email address has been blocked, please change')]  ${True}
+    Verify Element Presence  //p[contains(text(),'Cannot invite')]  ${True}
+    Verify Element Presence  //img[contains(@src,'/en/booking/resources/images/uninvite-bell.png')]    ${True}
+Verify Warning Popup is displayed with booker email
+    Verify Element Presence    //button[normalize-space()='Close']  ${True}
+    Verify Element Presence   //p[contains(text(),'Other guests or booker already used this email address, please change it')]  ${True}
+    Verify Element Presence  //p[contains(text(),'Cannot invite')]  ${True}
+    Verify Element Presence  //img[contains(@src,'/en/booking/resources/images/uninvite-bell.png')]    ${True}
+Fill invite guest infor with booker email
+   Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
+   Click   //input[@id='firstName']
+   Wait Until Visible   //input[@id='firstName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    user01 
+   Click   //input[@id='lastName']
+   Wait Until Visible   //input[@id='lastName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    invited
+   Click   //input[@id='email']
+   Wait Until Visible   //input[@id='email']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    bichngoc9995@gmail.com
+   Click   //button[normalize-space()='Invite']
+Close Warning popup
+   Click   //button[normalize-space()='Close']
+Click Cancel button
+   Click   //button[normalize-space()='Cancel']
+Booker is brought back to Comfirmation Landing page
+   Wait For Elements State    //button[normalize-space()='Cancel']    hidden
+Notice "Invite sent" displays
+   Wait For Elements State    //p[normalize-space()='Invite sent']    visible
+Status of guest confirmation is changed to "Invite sent, not check-in"
+   Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
+Verify Guest information component
+   Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
+Verify Booking summary  
+   Wait For Elements State   //p[text()='room']   visible
+   Wait For Elements State   //p[text()='Booked by']   visible
+   Wait For Elements State   //button[normalize-space()='Download full receipt']   visible
+   Wait For Elements State   //p[text()='Booking number']   visible
+   Wait For Elements State   //a[@rel='noopener noreferrer']   visible
+   Wait For Elements State   //button[normalize-space()='My bookings'] visible
+Verify Configurable secondary banner
+   Verify Element Presence  //p[text()='Download our new app!']  ${True}
+   Verify Element Presence  //p[text()='This app makes booking and your stay at Omena Hotels more convenient.']  ${True}
+   Verify Element Presence  (//img[@alt='app store'])[1]  ${True}
+   Verify Element Presence  (//img[@alt='google store'])[1]  ${True}
+Verify Guest information popup when guest not checkin
+   Click   (//*[name()='svg'][@role='img'])[4]
+   Verify Element Presence    //p[text()='Guest information']    ${True}
+   Verify Element Presence  //input[@id='firstName'] ${True}
+   Verify Element Presence  //input[@value="Shin" and @disabled]  ${True}
+   Verify Element Presence  //input[@id='lastNameName'] ${True}
+   Verify Element Presence  //input[@value="Suke" and @disabled]  ${True}
+   Verify Element Presence  //input[@id='email'] ${True}
+   Verify Element Presence  //input[@value="shinsuke@gmail.com" and @disabled]  ${True}
+   Verify Element Presence  //button[normalize-space()='Cancel'] ${True}
+   Verify Element Presence  //button[normalize-space()='Uninvite']  ${True}
+Click Uninvite button
+   Click   //button[normalize-space()='Uninvite']
+Verify Uninvite warning popup
+   Verify Element Presence  //p[text()='Uninvite']  ${True}
+   Verify Element Presence  //p[text()='Are you sure you want to uninvite shinsuke@gmail.com ']   ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]  ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]  ${True}
+Click Univite button in Uninvite warning popup
+   Click   (//button[@type='button'][normalize-space()='Uninvite'])[2]
 Edit guest popup is open
     Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]  ${True}
+
