@@ -459,13 +459,12 @@ Check Add organization check box
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
    Click   //input[@id='companyVat']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
-   Fill organization info 
    Click   //span[text()="Add organization information for receipt"]
    Verify Element Presence    //input[@id='companyName']    ${False}
    Verify Element Presence    //input[@id='companyRef']    ${False}
    Verify Element Presence    //input[@id='companyVat']    ${False}
-   Wait For Elements State   //span[text()="Add organization information for receipt"]   visible
-   Click   //span[text()="Add organization information for receipt"]
+   ##Wait For Elements State   //span[text()="Add organization information for receipt"]   visible
+   #Click   //span[text()="Add organization information for receipt"]
    Click   //button[normalize-space()='Save']
 Fill organization info
    Click   //input[@id='companyName']
@@ -548,7 +547,7 @@ Edit guest popup change to "Booker information"
    Verify Element Presence  //div[normalize-space()='Booker information' and @disabled]   ${False}
 Verify notification "Before iniviting someone else to be the main guest in this room, you must fill in your own information"
    Verify Element Presence   //div[normalize-space()='Before inviting someone else to be the main guest in this room, you must fill in your own information.' and @disabled]  ${False} 
-Room name is remove
+Room name is removed
    Verify Element Presence    //div[contains(@class,'guest-modal')]//p[normalize-space()='Standard room' ]    ${False}
 The "Purpose of the trip" checkbox is removed
    Verify Element Presence     //span[text()='Travelling for work']   ${False}
@@ -640,7 +639,7 @@ Verify Booking summary
    Wait For Elements State   //button[normalize-space()='Download full receipt']   visible
    Wait For Elements State   //p[text()='Booking number']   visible
    Wait For Elements State   //a[@rel='noopener noreferrer']   visible
-   Wait For Elements State   //button[normalize-space()='My bookings'] visible
+   Wait For Elements State   //button[normalize-space()='My bookings']   visible
 Verify Configurable secondary banner
    Verify Element Presence  //p[text()='Download our new app!']  ${True}
    Verify Element Presence  //p[text()='This app makes booking and your stay at Omena Hotels more convenient.']  ${True}
@@ -649,23 +648,23 @@ Verify Configurable secondary banner
 Verify Guest information popup when guest not checkin
    Click   (//*[name()='svg'][@role='img'])[4]
    Verify Element Presence    //p[text()='Guest information']    ${True}
-   Verify Element Presence  //input[@id='firstName'] ${True}
-   Verify Element Presence  //input[@value="Shin" and @disabled]  ${True}
-   Verify Element Presence  //input[@id='lastNameName'] ${True}
-   Verify Element Presence  //input[@value="Suke" and @disabled]  ${True}
-   Verify Element Presence  //input[@id='email'] ${True}
-   Verify Element Presence  //input[@value="shinsuke@gmail.com" and @disabled]  ${True}
-   Verify Element Presence  //button[normalize-space()='Cancel'] ${True}
-   Verify Element Presence  //button[normalize-space()='Uninvite']  ${True}
+   Verify Element Presence  //input[@id='firstName']   ${True}
+   Verify Element Presence  //input[@value="Shin" and @disabled]   ${True}
+   Verify Element Presence  //input[@id='lastName']   ${True}
+   Verify Element Presence  //input[@value="Suke" and @disabled]   ${True}
+   Verify Element Presence  //input[@id='email']   ${True}
+   Verify Element Presence  //input[@value="shinsuke@gmail.com" and @disabled]   ${True}
+   Verify Element Presence  //button[normalize-space()='Cancel']    ${True}
+   Verify Element Presence  //button[normalize-space()='Uninvite']   ${True}
 Click Uninvite button
    Click   //button[normalize-space()='Uninvite']
 Verify Uninvite warning popup
    Verify Element Presence  //p[text()='Uninvite']  ${True}
    Verify Element Presence  //p[text()='Are you sure you want to uninvite shinsuke@gmail.com ']   ${True}
-   Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]  ${True}
-   Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]  ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]    ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]    ${True}
 Click Univite button in Uninvite warning popup
    Click   (//button[@type='button'][normalize-space()='Uninvite'])[2]
 Edit guest popup is open
-    Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]  ${True}
+    Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]   ${True}
 
