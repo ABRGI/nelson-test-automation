@@ -8,31 +8,31 @@ Resource          ${EXECDIR}/resources/keywords/mui.resource
 
 *** Test Cases ***
 
-Verify Page title when marks someone else as a guest
+Verify Page title when marking someone else as a guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
     Edit guest popup change to "Booker information"
 
-Verify notification when marks someone else as a guest
+Verify notification when marking someone else as a guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
     Verify notification "Before iniviting someone else to be the main guest in this room, you must fill in your own information"
 
-Verify room name in Edit guest popup when marks someone else as a guest
+Verify room name in Edit guest popup when marking someone else as a guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
-    Room name is remove
+    Room name is removed
 
-Verify Purpose of trip checkbox in Edit guest popup when marks someone else as a guest
+Verify Purpose of trip checkbox in Edit guest popup when marking someone else as a guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
     The "Purpose of the trip" checkbox is removed
 
-Verify Save and invite button when marks someone else as a guest
+Verify Save and invite button when marking someone else as a guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
@@ -48,7 +48,7 @@ Verify Invite guest popup UI
     Invite guest popup is open
     Verify the Invite Guest UI
 
-Verify email field validation when invite guest
+Verify email field validation when inviting guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
@@ -57,7 +57,7 @@ Verify email field validation when invite guest
     Invite guest popup is open
     Verify email with valid email
 
-Verify invalid email field validation when invite guest
+Verify invalid email field validation when inviting guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
@@ -66,7 +66,7 @@ Verify invalid email field validation when invite guest
     Invite guest popup is open
     Verify email with invalid email
 
-Verify Warning popup when invite block guest
+Verify Warning popup when inviting blocked guest
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
