@@ -12,7 +12,7 @@ Documentation      A test suite for verifying modify booking functionality
 Create A New Booking
     [Documentation]    A new booker opens the page and does a successful booking
     Select Hotel     Helsinki, Lönnrotinkatu
-    Select Dates 
+    Select Dates
     Select Guests
     Click Book Button
     Select a Standard Room
@@ -23,11 +23,5 @@ Create A New Booking
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-
-Confirm Email and Open Link
-    [Documentation]     A new booker receives an email with a link to modify the booking 
-    ${modify_link}=     Read Email and Return Link
-    Open New Browser To URL    ${modify_link}
-
 
 

@@ -1,29 +1,62 @@
 *** Settings ***
 Documentation      A test suite for verifying modify booking functionality
-Library            ${EXECDIR}/resources/libraries/MailSlurp.py
+Library            ${EXECDIR}/resources/libraries/MailSlurp.py      key=%{MAILSLURP_API_KEY}
 Library            ${EXECDIR}/resources/libraries/Helpers.py
-Library            ${EXECDIR}/resources/libraries/EnvHandler.py
 Library            Browser   
 Library            OperatingSystem
 
 
 *** Keywords ***
 
-Create Email Address 
-    ${inbox}    Create New Inbox        
-    [Return]    ${inbox}
+Is Element Visible
+    [Arguments]  ${selector}
+    ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
+    [Return]    ${isVisible}
 
-Wait For Confirmation Link
-    [Arguments]     ${inbox_id}
-    ${email}    Wait For Latest Email   ${inbox_id}
-    ${link}     Extract Link            ${email.body}
-    [Return]    ${link}
+Is Element Found
+    [Arguments]  ${selector}
+    [Documentation]    A keyword that has a very complex way of figuring out whether an
+    ...                element is found or not because I had trouble with the built-in keywords
+    ...                Can be solved differently if you have a better idea
+    Set Browser Timeout     10s
+    TRY
+        ${els}=     Get Elements     ${selector}    
+        ${count}=  Get Length  ${els}
+        IF     ${count} > 0
+            ${visible}  Set Variable    True
+        ELSE 
+            ${visible}  Set Variable    False
+        END
+        
+    EXCEPT 
+        ${visible}  Set Variable    False
+    END
+    Set Browser Timeout     ${timeout}
+    [Return]  ${visible}
 
-Read Email and Return Link
-    ${inbox}=   Create Email Address 
-    ${code}=    Wait For Confirmation Link      ${inbox.id}
-    [Return]    ${link}
+Click First Element Found
+    [Arguments]    ${xpath}
+    ${elements}    Get Elements          ${xpath}
+    ${first_element}=    Set Variable    ${elements}[0]
+    Click    ${first_element}
 
+Should Be Visible
+    [Arguments]  ${selector}
+    ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
+    [Return]    ${isVisible}
+
+Verify Texts
+    [Arguments]  @{listOfStrings}
+    [Documentation]    Verifies that the given texts are visible on the page, Browser Timeout
+    ...                is set to 8 seconds to speed up the test
+    ...                Takes a list of strings as an argument
+    Set Browser Timeout     8s
+    FOR  ${text}  IN  @{listOfStrings}
+        ${elements}=  Get Elements  text=${text}
+        ${element_visible}=  Run Keyword And Return Status  Should Be Visible  ${elements}[0]
+        Should Be True  ${element_visible}  The element containing text '${text}' should be visible but it is not.
+    END
+    Set Browser Timeout     ${timeout}
 
 Open New Browser To URL
     [Arguments]    ${url}

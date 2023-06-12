@@ -6,13 +6,14 @@ Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Resource          ${EXECDIR}/resources/keywords/mui.resource
+Resource          ${EXECDIR}/resources/keywords/checkin.resource
 
 *** Test Cases ***
 
-Create a new booking as a non-member
+Create a new booking, check-in and verify door code is displayed
     [Tags]    smoke, booking, BUI2-556, online-checkin
     Select Hotel     Helsinki, Lönnrotinkatu
-    Select Dates     # In this case dates must be today for being able to check-in?
+    Select Dates
     Select Guests
     Click Book Button
     Select a Standard Room
@@ -23,41 +24,12 @@ Create a new booking as a non-member
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-
-Complete Check in Process
-    [Tags]    smoke, booking, BUI-556, online-checkin
+    Verify Page Elements before check-in
     Click Check In Button
     Fill Check in Slide
     Click Save and Sign Button
     Sign
     Complete Check in
-
-Verify UI when users have signed
-    [Tags]    smoke, booking, BUI-556, skip, online-checkin
-    Given the primary banner is configurable
-    And the notification of the room number and door code is active
-    And the guest list is visible
-    And the booking summary is displayed
-    And the "My bookings" link is visible
-    And the secondary banner is configurable
-    Then the sticky Call To Action (CTA) should be visible
-
-Verify UI when users have not signed
-    Configurable primary banner
-    Check Notification of the room number and door code    ${False}
-    Guest list
-    Booking summary
-    My bookings link
-    Configurable secondary banner
-    Check the sticky CTA
-
-Verify UI when users have signed
-    Configurable primary banner
-    Check Notification of the room number and door code    ${True}
-    Guest list
-    Booking summary
-    My bookings link
-    Configurable secondary banner
-    Check the sticky CTA
-
-
+    Wait Until Door Code is Available
+    Check Door Code and verify it is not empty
+    Verify page elements after Check-in

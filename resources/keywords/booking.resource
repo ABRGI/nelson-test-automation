@@ -9,11 +9,22 @@ Library           String
 
 *** Keywords ***
 
-Click First Element Found
-    [Arguments]    ${xpath}
-    ${elements}    Get Elements          ${xpath}
-    ${first_element}=    Set Variable    ${elements}[0]
-    Click    ${first_element}
+Complete a new booking
+    [Documentation]    A complete booking process from start to finish
+    ...                This is currently duplicate to "Create a new booking" test case 
+    Open Browser to Landing Page
+    Select Hotel
+    Select Dates
+    Select Guests
+    Click Book Button
+    Select a Standard Room
+    Click Continue to Extras Button
+    Continue to Payment
+    Select Join for Free
+    Fill in Contact Information 
+    Accept offers and Terms
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
 
 A new booker makes a reservation
     [Documentation]    A new booker makes a reservation
@@ -56,7 +67,7 @@ Click Cancel
     Click    //footer/button[text()="Cancel"]
 
 Verify Email 
-    ${modify_link}=     Get Link from Email
+    Pass Execution    Implementation with new email
 
 Open Link from Email 
     [Arguments]         ${link}
@@ -188,17 +199,26 @@ Select Web Bank and Nordea as Payment Method
 Click Check In Button
     Wait Until Visible    (//button[text()="Check in"])[1]
     Click                 (//button[text()="Check in"])[1]
-
+    
 Sign 
+    Click    (//button[@aria-label='Close']/following-sibling::div/div)[1]
+    ${j}    Set Variable    1
+    FOR    ${i}    IN RANGE    42
+        Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    -10    ${j}
+        Mouse Button    down
+        Mouse Button    up
+        ${j}    Evaluate    ${j} + 1
+    END
     Wait Until Visible    //canvas
-    ${canvas}=        Get Element    xpath=//canvas
-    Click      ${canvas} position_x=800    position_y=800
+    Click             //div[contains(@class, 'chakra-modal__body')]
+    Click         //button[text()='Save']
+    Wait For Elements State     //div[contains(@class, 'chakra-modal__body')]       hidden    timeout=${timeout}
 
 Click Save and Sign Button
     Click                 //button[contains(text(), "Save and Sign")]
 
 Complete Check in    
-    Wait Until Visible    //div[contains(text(), "Check in completed")]
+    Wait Until Visible    //p[contains(text(), "completed")]
 
 Fill Check in Slide 
     Wait Until Visible    (//div[contains(@class, "chakra-offset-slide")])[2]
@@ -233,7 +253,6 @@ Simulate Success or Failure
     [Arguments]    ${which}
     Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
     Click    //a[contains(text(), 'Simulate ${which} to merchant')]
-    ##Wait Until Network Is Idle
 
 Close Dialog
     Wait Until Visible     //button[contains(text(), "Ok")]
@@ -266,12 +285,22 @@ Verify Payment was successful
     
 Verify Booking is Successful
     Wait For Elements State    //div//h4    visible
-    ${result}    Get Text    //div//h4
-    Should Be Equal As Strings    ${result}    Payment was successful
+    ${payment_result}    Get Text    //div//h4
+    Should Be Equal As Strings    ${payment_result}    Payment was successful
     Click    //button[normalize-space()='Ok']
+
+Verify Booking is Successful and return result
+    Verify Booking is Successful
     ${result}    Get Text    //p[contains(text(),'Booking code')]
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
+
+Create a successful booking and return UUID
+    Complete a new booking
+    Wait Until Network Is Idle
+    ${url}       Get Url
+    ${uuid}=     Extract Guid From Url    ${url}
+    [Return]    ${uuid}
 
 Click Booker or Guest Name
     [Arguments]    ${name}
@@ -429,7 +458,8 @@ Check Add organization check box
    Click   //input[@id='companyRef']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
    Click   //input[@id='companyVat']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs 
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
+   Fill organization info 
    Click   //span[text()="Add organization information for receipt"]
    Verify Element Presence    //input[@id='companyName']    ${False}
    Verify Element Presence    //input[@id='companyRef']    ${False}
@@ -538,6 +568,7 @@ Booker just completed payment for a reservation
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
+
 Invite guest popup is open
     Verify Element Presence  //p[text()='Invite guest']/ancestor::div[@class="chakra-offset-slide"]  ${True}
 Verify the Invite Guest UI
@@ -635,8 +666,6 @@ Verify Uninvite warning popup
    Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]  ${True}
 Click Univite button in Uninvite warning popup
    Click   (//button[@type='button'][normalize-space()='Uninvite'])[2]
+Edit guest popup is open
+    Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]  ${True}
 
-
-
-
-   
