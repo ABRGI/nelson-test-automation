@@ -15,15 +15,14 @@ Create Email Address
 
 Wait For Confirmation Link
     [Arguments]     ${inbox_id}
-    ${email}    Wait For Latest Email   ${inbox_id}
+    ${email}    Wait For Latest Booking Confirmation   ${inbox_id}
     ${link}     Extract Link            ${email.body}
     [Return]    ${link}
 
 Read Email and Return Link
-    ${inbox}=   Create Email Address 
-    ${code}=    Wait For Confirmation Link      ${inbox.id}
+    [Arguments]     ${inbox}
+    ${link}=    Wait For Confirmation Link      ${inbox.id}
     [Return]    ${link}
-
 
 Open New Browser To URL
     [Arguments]    ${url}
@@ -36,10 +35,9 @@ Open Browser to Landing Page
     [Documentation]     A general startup keyword for opening a browser to the landing page.
     New Browser    ${browser}    ${headless}    timeout=${timeout}
     Set Browser Timeout    ${timeout}
-    New Context 
-    New Page       ${url}
+    New Context    New Page       ${url}
+    Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
-        Wait Until Network Is Idle
     Get Title      contains     Cheap hotels in Helsinki
     Allow Cookies 
 

@@ -1,86 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.0 on darwin)" generated="20230522 19:54:14.608" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230613 13:58:44.270" rpa="false" schemaversion="3">
 <suite id="s1" name="Nelson-Ta" source="/Users/saragilbert/Code/SQA/nelson-ta">
 <suite id="s1-s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
-<suite id="s1-s1-s1" name="Debug" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/debug.robot">
-<test id="s1-s1-s1-t1" name="Open Nelson Portal" line="8">
+<suite id="s1-s1-s1" name="BUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI">
+<suite id="s1-s1-s1-s1" name="Regression" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression">
+<suite id="s1-s1-s1-s1-s1" name="New Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/new_booking.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
-<arg>false</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230522 19:54:16.233" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/531e7a92-ef04-42c5-8cde-bb2de5888041"}</msg>
-<msg timestamp="20230522 19:54:17.485" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/531e7a92-ef04-42c5-8cde-bb2de5888041"}</msg>
-<status status="PASS" starttime="20230522 19:54:16.232" endtime="20230522 19:54:17.486"/>
+<msg timestamp="20230613 13:58:56.737" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/7aa429de-eacd-4b74-9054-3ca67c73c7c3"}</msg>
+<msg timestamp="20230613 13:58:57.328" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/7aa429de-eacd-4b74-9054-3ca67c73c7c3"}</msg>
+<status status="PASS" starttime="20230613 13:58:56.732" endtime="20230613 13:58:57.328"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230613 13:58:57.338" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230613 13:58:57.330" endtime="20230613 13:58:57.339"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230522 19:54:17.489" level="INFO">{"acceptDownloads": true, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false, "reducedMotion": "no-preference", "forcedColors": "none"}</msg>
-<msg timestamp="20230522 19:54:17.532" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230522 19:54:17.533" level="INFO">{'acceptDownloads': True, 'ignoreHTTPSErrors': False, 'bypassCSP': False, 'deviceScaleFactor': 1, 'isMobile': False, 'hasTouch': False, 'javaScriptEnabled': True, 'offline': False, 'hideRfBrowser': False, 'reducedMotion': 'no-preference', 'forcedColors': 'none'}</msg>
-<status status="PASS" starttime="20230522 19:54:17.487" endtime="20230522 19:54:17.533"/>
-</kw>
-<kw name="Get Environment Variable" library="EnvHandler">
-<var>${url}</var>
-<arg>MUI_LINK</arg>
-<doc>Returns the value of the specified environment variable.</doc>
-<msg timestamp="20230522 19:54:17.536" level="INFO">${url} = https://admin.nelson.management/</msg>
-<status status="PASS" starttime="20230522 19:54:17.534" endtime="20230522 19:54:17.536"/>
+<msg timestamp="20230613 13:58:57.342" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230613 13:58:57.357" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230613 13:58:57.357" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230613 13:58:57.340" endtime="20230613 13:58:57.358"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230522 19:54:22.232" level="INFO">Successfully initialized new page object and opened url: https://admin.nelson.management/</msg>
-<status status="PASS" starttime="20230522 19:54:17.537" endtime="20230522 19:54:22.233"/>
-</kw>
-<kw name="Get Environment Variable" library="EnvHandler">
-<var>${pass}</var>
-<arg>${secret_name}</arg>
-<doc>Returns the value of the specified environment variable.</doc>
-<msg timestamp="20230522 19:54:22.236" level="FAIL">Variable '${secret_name}' not found.</msg>
-<status status="FAIL" starttime="20230522 19:54:22.233" endtime="20230522 19:54:22.237"/>
-</kw>
-<kw name="Fill Secret" library="Browser">
-<arg>//input[@name="password"]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Fills the given secret from ``variable_name`` into the
-text field found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230522 19:54:22.237" endtime="20230522 19:54:22.238"/>
-</kw>
-<status status="FAIL" starttime="20230522 19:54:16.227" endtime="20230522 19:54:22.239">Variable '${secret_name}' not found.</status>
-</test>
-<kw name="Close Browser" library="Browser" type="TEARDOWN">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<msg timestamp="20230522 19:54:22.562" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230522 19:54:22.359" endtime="20230522 19:54:22.562"/>
-</kw>
-<status status="FAIL" starttime="20230522 19:54:14.868" endtime="20230522 19:54:22.563"/>
-</suite>
-<status status="FAIL" starttime="20230522 19:54:14.863" endtime="20230522 19:54:22.568"/>
-</suite>
-<status status="FAIL" starttime="20230522 19:54:14.795" endtime="20230522 19:54:22.571"/>
-</suite>
-<statistics>
-<total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Nelson-Ta">Nelson-Ta</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testsuites">Nelson-Ta.Testsuites</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Debug">Nelson-Ta.Testsuites.Debug</stat>
-</suite>
-</statistics>
+<msg timestamp="20230613 14:00:28.139" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230613 14:00:28.147" level="INFO">See also file:///Users/saragilbert/Code/SQA/nelson-ta/results/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230613 14:00:28.153" level="FAIL">TimeoutError: page.goto: Timeout 90000ms exceeded.
+=========================== logs ===========================
+navigating to "https://test4.omenahotels.com/en", waiting until "load"
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
 <errors>
+<msg timestamp="20230613 14:00:28.139" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230613 14:00:54.437" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>

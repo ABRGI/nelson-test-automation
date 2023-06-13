@@ -55,22 +55,6 @@ Click Cancel
     [Documentation]    Clicks the cancel button
     Click    //footer/button[text()="Cancel"]
 
-Verify Email 
-    ${modify_link}=     Get Link from Email
-
-Open Link from Email 
-    [Arguments]         ${link}
-    Open New Browser To URL    ${link}
-
-Verify edit booking page
-    [Documentation]    Verifies the edit booking page is opened with correct values 
-    Pass Execution     TBD: Should be implemented
-
-Verify Email and Open Link
-    ${link}=        Verify Email 
-    Open Link from Email    ${link}
-    Verify edit booking page
-
 Signature modal is visible
     [Documentation]    Verifies the signature modal is visible
     Wait Until Visible    id=chakra-modal--body-115
@@ -78,9 +62,10 @@ Signature modal is visible
 Fill in Other Guest Details
     [Arguments]    ${firstName}=Snoop    ${lastName}=Dogg    ${email}=nelsontestar@gmail.com    ${phone}=040123942    ${ssn}=170479-371J
     [Documentation]    Fills in other guest details, which can be given as arguments or uses default values
+    ${inbox}=         Create Email Address
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
-    Click and Fill    id=email    ${email}
+    Click and Fill    id=email    ${inbox.email_address}
     Click and Fill    id=phone    ${phone}
     # ${ssn}=    Generate SSN
     Click and Fill    id=ssn    ${ssn}
@@ -165,12 +150,14 @@ Select Room and Extras
 Fill in Contact Information 
     [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
-    ${rand}=    Helpers.Get Random Name
-    ${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+    ${inbox}=         Create Email Address
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
-    Click and Fill    id=email       ${email}
+    Click and Fill    id=email    ${inbox.email_address}
     Click and Fill    id=phoneNumber    ${phone}
+    Log To Console    ${inbox.id}
+    Set Suite Variable      $ID     ${inbox.id}
+    # We need to save the email id in order to be able to use it in the next step of verifying the email
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
 
 Select Web Bank and Nordea as Payment Method 
@@ -259,6 +246,14 @@ Verify Booking is Successful
     ${result}    Get Text    //p[contains(text(),'Booking code')]
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
+
+Verify Confirmation Email is Received
+    [Arguments]    ${inbox}
+    [Documentation]    Verifies that the confirmation email is received, requires a Mailslurp inbox as an argument
+    ${link}=     Read Email and Return Link    ${inbox}
+    Log to Console    ${link}
+    # TODO: Verify content of the email
+    Open New Browser To URL    ${link}
 
 Click Booker or Guest Name
     [Arguments]    ${name}
