@@ -13,6 +13,17 @@ Is Element Visible
     ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
     [Return]    ${isVisible}
 
+Wait For Confirmation Link
+    [Arguments]     ${inbox_id}
+    ${email}    Wait For Latest Booking Confirmation   ${inbox_id}
+    ${link}     Extract Link            ${email.body}
+    [Return]    ${link}
+
+Read Email and Return Link
+    [Arguments]     ${inbox}
+    ${link}=    Wait For Confirmation Link      ${inbox.id}
+    [Return]    ${link}
+
 Is Element Found
     [Arguments]  ${selector}
     [Documentation]    A keyword that has a very complex way of figuring out whether an
@@ -69,10 +80,9 @@ Open Browser to Landing Page
     [Documentation]     A general startup keyword for opening a browser to the landing page.
     New Browser    ${browser}    ${headless}    timeout=${timeout}
     Set Browser Timeout    ${timeout}
-    New Context 
-    New Page       ${url}
+    New Context    New Page       ${url}
+    Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
-        Wait Until Network Is Idle
     Get Title      contains     Cheap hotels in Helsinki
     Allow Cookies 
 

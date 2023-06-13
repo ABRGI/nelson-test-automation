@@ -24,4 +24,9 @@ Create A New Booking
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
 
+Confirm Email and Open Link
+    [Documentation]     A new booker receives an email with a link to modify the booking 
+    ${id} =    Get Variable Value    $ID
+    ${modify_link}=     Wait For Latest Booking Confirmation    ${id}
+    Open New Browser To URL    ${modify_link}
 
