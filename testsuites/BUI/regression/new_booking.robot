@@ -12,7 +12,7 @@ Documentation      A test suite for verifying modify booking functionality
 Create A New Booking
     [Documentation]    A new booker opens the page and does a successful booking
     Select Hotel     Helsinki, Lönnrotinkatu
-    Select Dates 
+    Select Dates
     Select Guests
     Click Book Button
     Select a Standard Room
@@ -29,6 +29,4 @@ Confirm Email and Open Link
     ${id} =    Get Variable Value    $ID
     ${modify_link}=     Wait For Latest Booking Confirmation    ${id}
     Open New Browser To URL    ${modify_link}
-
-
 

@@ -9,11 +9,22 @@ Library           String
 
 *** Keywords ***
 
-Click First Element Found
-    [Arguments]    ${xpath}
-    ${elements}    Get Elements          ${xpath}
-    ${first_element}=    Set Variable    ${elements}[0]
-    Click    ${first_element}
+Complete a new booking
+    [Documentation]    A complete booking process from start to finish
+    ...                This is currently duplicate to "Create a new booking" test case 
+    Open Browser to Landing Page
+    Select Hotel
+    Select Dates
+    Select Guests
+    Click Book Button
+    Select a Standard Room
+    Click Continue to Extras Button
+    Continue to Payment
+    Select Join for Free
+    Fill in Contact Information 
+    Accept offers and Terms
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
 
 A new booker makes a reservation
     [Documentation]    A new booker makes a reservation
@@ -54,6 +65,19 @@ Click Book Button
 Click Cancel
     [Documentation]    Clicks the cancel button
     Click    //footer/button[text()="Cancel"]
+
+Open Link from Email 
+    [Arguments]         ${link}
+    Open New Browser To URL    ${link}
+
+Verify edit booking page
+    [Documentation]    Verifies the edit booking page is opened with correct values 
+    Pass Execution     TBD: Should be implemented
+
+Verify Email and Open Link
+    ${link}=        Verify Email 
+    Open Link from Email    ${link}
+    Verify edit booking page
 
 Signature modal is visible
     [Documentation]    Verifies the signature modal is visible
@@ -130,8 +154,8 @@ Select Dates
     END
 
 Click Continue to Payment 
-    Click First Element Found    //div[contains(@class, 'chakra-stack')]//button[contains(text(), 'Continue')))]
-    Wait Until Visible   ${btnPayment}
+    Click First Element Found    //div[@class='css-1t415z1']//button[@type='button'][normalize-space()='Continue to payment']
+    ##Wait Until Visible   ${btnPayment}
 
 Click Continue to Extras Button and Continue to Payment
     [Documentation]    Clicks the continue to extras button and continues directly to Payment
@@ -160,6 +184,13 @@ Fill in Contact Information
     # We need to save the email id in order to be able to use it in the next step of verifying the email
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
 
+Fill in Contact Information 1
+    [Arguments]    ${firstName}=Bich    ${lastName}=Ngoc    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
+    Click and Fill    id=firstName    ${firstName}
+    Click and Fill    id=lastName    ${lastName}
+    Click and Fill    id=email       ${email}
+    Click and Fill    id=phoneNumber    ${phone}
+
 Select Web Bank and Nordea as Payment Method 
     Click    //div[contains(text(), "Web bank payment")]
     Click    //p[contains(text(), 'Nordea')]
@@ -168,17 +199,26 @@ Select Web Bank and Nordea as Payment Method
 Click Check In Button
     Wait Until Visible    (//button[text()="Check in"])[1]
     Click                 (//button[text()="Check in"])[1]
-
+    
 Sign 
+    Click    (//button[@aria-label='Close']/following-sibling::div/div)[1]
+    ${j}    Set Variable    1
+    FOR    ${i}    IN RANGE    42
+        Mouse Move Relative To    (//button[@aria-label='Close']/following-sibling::div/div)[1]    -10    ${j}
+        Mouse Button    down
+        Mouse Button    up
+        ${j}    Evaluate    ${j} + 1
+    END
     Wait Until Visible    //canvas
-    ${canvas}=        Get Element    xpath=//canvas
-    Click      ${canvas} position_x=800    position_y=800
+    Click             //div[contains(@class, 'chakra-modal__body')]
+    Click         //button[text()='Save']
+    Wait For Elements State     //div[contains(@class, 'chakra-modal__body')]       hidden    timeout=${timeout}
 
 Click Save and Sign Button
     Click                 //button[contains(text(), "Save and Sign")]
 
 Complete Check in    
-    Wait Until Visible    //div[contains(text(), "Check in completed")]
+    Wait Until Visible    //p[contains(text(), "completed")]
 
 Fill Check in Slide 
     Wait Until Visible    (//div[contains(@class, "chakra-offset-slide")])[2]
@@ -213,7 +253,6 @@ Simulate Success or Failure
     [Arguments]    ${which}
     Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
     Click    //a[contains(text(), 'Simulate ${which} to merchant')]
-    Wait Until Network Is Idle
 
 Close Dialog
     Wait Until Visible     //button[contains(text(), "Ok")]
@@ -232,17 +271,26 @@ Save Booking Number
     ${no}=        Helpers.Strip Booking Number    ${str}
     Set Suite Variable     ${bookingNumber}    ${no}
     Log to Console         ${bookingNumber}
+Save Booking Number 1
+    ${str}=       Get Text    //p[contains(text(),'Booking number')]   
+    Log to Console         ${bookingNumber}
+    ${str}    Remove String    ${str}    Booking code${SPACE}
+    ${str}    Strip String    ${str}
+    
 
 Verify Payment was successful
     Wait Until Visible     //p[contains(text(), 'Payment was successful')]
     Close Dialog
-    Save Booking Number
+    Save Booking Number 1
     
 Verify Booking is Successful
     Wait For Elements State    //div//h4    visible
-    ${result}    Get Text    //div//h4
-    Should Be Equal As Strings    ${result}    Payment was successful
+    ${payment_result}    Get Text    //div//h4
+    Should Be Equal As Strings    ${payment_result}    Payment was successful
     Click    //button[normalize-space()='Ok']
+
+Verify Booking is Successful and return result
+    Verify Booking is Successful
     ${result}    Get Text    //p[contains(text(),'Booking code')]
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
@@ -254,6 +302,13 @@ Verify Confirmation Email is Received
     Log to Console    ${link}
     # TODO: Verify content of the email
     Open New Browser To URL    ${link}
+
+Create a successful booking and return UUID
+    Complete a new booking
+    Wait Until Network Is Idle
+    ${url}       Get Url
+    ${uuid}=     Extract Guid From Url    ${url}
+    [Return]    ${uuid}
 
 Click Booker or Guest Name
     [Arguments]    ${name}
@@ -274,8 +329,14 @@ Continue to Payment
 
 Check Regular Rate
     Click    //p[contains(text(),'Continue with regular rate')]
-    Sleep    3
-
+    Wait Until Visible   //div//*[normalize-space()='Continue with regular rate']/following-sibling::div[@data-checked]
+    #Wait For Elements State    //input[@type='password']    hidden
+Check Regular Rate 2
+    Check Regular Rate
+    Check Join as Member
+    Check Regular Rate
+    Check Join as Member
+    Check Regular Rate
 Fill Contact Info
     Click    //input[@id='firstName']
     Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Long
@@ -292,9 +353,8 @@ Accept Term and Proceed to Payment
 Quick Pay
     Click    //div[normalize-space()='Web bank payment']
     Click    //p[normalize-space()='OP']
-    BuiltIn.Sleep    6
     Click    (//button[normalize-space()='Pay'])[1]
-    BuiltIn.Sleep    8
+    Wait For Elements State    //p[normalize-space()='Payment was successful']    visible    timeout=12s
 
 Verify Successful Booking
     Wait Until Keyword Succeeds    15s    3s    Wait For Elements State    //div//h4    visible
@@ -307,6 +367,8 @@ Verify Successful Booking
 
 Check Join as Member
     Click    //p[contains(text(),'Join for free and')]
+    Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
+    #Wait For Elements State    //input[@type='password']    visible
 
 Quickly Pay
     Click    //div[normalize-space()='Web bank payment']
@@ -334,8 +396,283 @@ Select a Standard Room
 
 Select Join for Free
     Wait Until Visible  //input[@value='memberRate' and @checked='']  
+    Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
 
 Accept offers and Terms 
     Click   (//div[contains(text(), 'like to receive')])[1]
     #Click     (//div[contains(@class, 'chakra-stack')]//div[contains(text(), 'Accept')])[1]
     Click    (//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]
+
+Fill In Booker info
+   Click    //input[@id='ssn'] 
+   Wait Until Visible   //input[@id='ssn']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    020202-0202
+   Click    //input[@id='city']
+   Wait Until Visible  //input[@id='city']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='city']    Tokyo
+   Click    //input[@id='address']
+   Wait Until Visible   //input[@id='address']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='address']    Paul Street
+   Click   //input[@id='postalCode']
+   Wait Until Visible   //input[@id='postalCode']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    10000
+   Wait Until Visible   //button[normalize-space()='Save and invite']
+Click Someone else checkbox
+   Click   //span[normalize-space()='Someone else will be the main guest']
+Click Save and invite
+   Click   //button[normalize-space()='Save and invite']
+   Wait Until Visible   //button[normalize-space()='Save and invite']
+Wait for invite guest page
+   [Arguments]    ${shown}
+   run keyword If    ${shown == ${True}}    Wait For Elements State    //button//*[@data-icon='xmark']    visible
+   run keyword If    ${shown == ${True}}    Wait For Elements State    //button[normalize-space()='Cancel']    visible
+   run keyword If    ${shown == ${False}}    Wait For Elements State    //button//*[@data-icon='xmark']    hidden
+   run keyword If    ${shown == ${False}}    Wait For Elements State    //button[normalize-space()='Cancel']    hidden
+Fill Invite guest info and click invite button
+   Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
+   Click   //input[@id='firstName']
+   Wait Until Visible   //input[@id='firstName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Shin 
+   Click   //input[@id='lastName']
+   Wait Until Visible   //input[@id='lastName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    Suke
+   Click   //input[@id='email']
+   Wait Until Visible   //input[@id='email']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    shinsuke@gmail.com
+   Click   //button[normalize-space()='Invite']
+Open Edit booker info
+   ##Wait Until Network Is Idle    timeout=4s
+   Click   //p[text()='Booked by']
+Verify All information is disbled
+   #email is not modifiable
+   Verify Element Presence    //input[@id='email' and @disabled]    ${True}
+   Wait Until Keyword Succeeds    20s    2s    Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='ssn' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='city' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='address' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='postalCode' and @disabled]    ${True}
+   ${style}    Get Attribute   //input[@id='phoneNumber']/parent::div    style
+   Should Be true     '${style}' == 'border-color: rgb(153, 163, 182);'
+   ##Type Text    //input[@id='phoneNumber']    020202-0202
+
+   #Fill Text      //input[@id='phoneNumber']    433434
+
+   ## Verify Element Presence    //input[@id='email' and @disabled]    ${False} 
+Check Add organization check box
+   Click   //span[text()="Add organization information for receipt"]
+   Click   //input[@id='companyName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyName']    TMA
+   Click   //input[@id='companyRef']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
+   Click   //input[@id='companyVat']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
+   Click   //span[text()="Add organization information for receipt"]
+   Verify Element Presence    //input[@id='companyName']    ${False}
+   Verify Element Presence    //input[@id='companyRef']    ${False}
+   Verify Element Presence    //input[@id='companyVat']    ${False}
+   ##Wait For Elements State   //span[text()="Add organization information for receipt"]   visible
+   #Click   //span[text()="Add organization information for receipt"]
+   Click   //button[normalize-space()='Save']
+Fill organization info
+   Click   //input[@id='companyName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyName']    TMA
+   Wait For Elements State   //input[@id='companyRef']   visible
+   Click   //input[@id='companyRef']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyRef']    TMAa
+   Click   //input[@id='companyVat']
+   Wait For Elements State   //input[@id='companyVat']   visible
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='companyVat']    TMAs
+   Click   //button[normalize-space()='Save']
+Verify all information are save
+   Click   //p[text()='Booked by']
+   Verify Element Presence    //input[@id='firstName' and @disabled]    ${True}
+   Wait Until Keyword Succeeds    10s    2s    Verify Element Presence    //input[@id='lastName' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='email' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='ssn' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='city' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='address' and @disabled]    ${True}
+   Verify Element Presence    //input[@id='postalCode' and @disabled]    ${True}
+   Click   //span[text()="Add organization information for receipt"]
+   Verify Element Presence    //input[@id='companyName' and @disabled]    ${False}
+   Verify Element Presence    //input[@id='companyRef' and @disabled]    ${False}
+   Verify Element Presence    //input[@id='companyVat' and @disabled]    ${False}
+   Click    //button//*[name()='svg' and @data-icon="xmark"]
+Verify Element Presence
+    [Arguments]    ${path}    ${shown}
+    ${check}    Run Keyword And Return Status    Wait For Elements State    ${path}    visible    timeout=6
+    Run Keyword If    ${shown} == ${true}    Should Be True    ${check}==${True}
+    Run Keyword If    ${shown} == ${false}    Should Be True    ${check}==${False}
+Verify msg The field is required
+    Verify Element Presence    //input[(@id='ssn')]/parent::div//div[normalize-space()='This field is required!' and @disabled]    ${False}
+    Verify Element Presence    //input[(@id='city')]/parent::div//div[normalize-space()='This field is required!' and @disabled]     ${False}
+    Verify Element Presence    //input[(@id='address')]/parent::div//div[normalize-space()='This field is required!' and @disabled]     ${False}
+    Verify Element Presence    //input[(@id='postalCode')]/parent::div//div[normalize-space()='This field is required!' and @disabled]     ${False}
+
+Fill invalid phone format
+    Click    //input[@id='phoneNumber']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='phoneNumber']    suke6545
+Verify msg "Invalid phone number!"
+    Verify Element Presence     //div[text()='Invalid phone number!' and @disabled]    ${False}
+Fill invalid SSN
+    Click    //input[@id='ssn']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    suke6545
+Verify msg "Please check! This is not a Finnish social security number"
+    Verify Element Presence     //div[text()='Please check! This is not a Finnish social security number' and @disabled]    ${False}
+
+Fill contact info with the National not Finland
+   [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=915036410    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
+   [Documentation]    TBD: Use test data instead of hardcoded values
+    Click and Fill    id=firstName    ${firstName}
+    Click and Fill    id=lastName    ${lastName}
+    Click and Fill    id=email       ${email}
+    Click   //p[text()="Enter your info"]/ancestor::form//*[name()='svg']
+    Click   //p[normalize-space()='(+84) Vietnam']
+    Click and Fill    id=phoneNumber    ${phone}
+Fill Booker Info with the national is not Finland
+   Click    //input[@id='passportNumber']   
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='passportNumber']    A42354623546235
+   Click    //input[@id='city']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='city']    HCM
+   Click    //input[@id='address']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='address']    To Ky
+   Click   //input[@id='postalCode']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    70000
+   Click   //button[normalize-space()='Save and Sign']
+
+Verify booker information with national
+   Verify Element Presence  //input[@id='passportNumber']  ${True}
+   Verify Element Presence  //input[@id='city']  ${True}
+   Verify Element Presence  //input[@id='address']  ${True}
+   Verify Element Presence  //input[@id='postalCode']  ${True}
+Click save button in Signature
+   Click   //button[normalize-space()='Save']
+Click Save and Sign Button 2
+   Wait Until Visible   //button[normalize-space()='Save and Sign']
+   Click   //button[normalize-space()='Save and Sign']
+
+Edit guest popup change to "Booker information"
+   Verify Element Presence  //div[normalize-space()='Booker information' and @disabled]   ${False}
+Verify notification "Before iniviting someone else to be the main guest in this room, you must fill in your own information"
+   Verify Element Presence   //div[normalize-space()='Before inviting someone else to be the main guest in this room, you must fill in your own information.' and @disabled]  ${False} 
+Room name is removed
+   Verify Element Presence    //div[contains(@class,'guest-modal')]//p[normalize-space()='Standard room' ]    ${False}
+The "Purpose of the trip" checkbox is removed
+   Verify Element Presence     //span[text()='Travelling for work']   ${False}
+The "Save and sign" button changes to " Save and invite" button
+   Verify Element Presence  //button[normalize-space()='Save and Sign']    ${False}
+   Verify Element Presence  //button[normalize-space()='Save and invite']   ${True}
+Booker just completed payment for a reservation   
+    Select Hotel     Helsinki, Lönnrotinkatu
+    Select Dates 
+    Select Guests
+    Click Book Button
+    Select a Standard Room
+    Click Continue to Extras Button 
+    Click Continue to Payment
+    Check Regular Rate 2
+    Fill in Contact Information 1
+    Accept offers and Terms
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
+
+Invite guest popup is open
+    Verify Element Presence  //p[text()='Invite guest']/ancestor::div[@class="chakra-offset-slide"]  ${True}
+Verify the Invite Guest UI
+    Verify Element Presence  //p[text()='Invite guest']/ancestor::div[@class="chakra-offset-slide"]  ${True}
+    Verify Element Presence  //form/div/p   ${True}
+    Verify Element Presence  //input[@id='firstName']  ${True}
+    Verify Element Presence  //input[@id='lastName']  ${True}
+    Verify Element Presence  //input[@id='email']  ${True}
+    Verify Element Presence  //button[normalize-space()='Cancel']  ${True}
+    Verify Element Presence  //button[normalize-space()='Invite']  ${True}
+    Verify Element Presence  //div//button//*[name()='svg' and @data-icon='xmark']  ${True}
+Verify email with valid email
+    Click      //input[@id='email']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    example@example.com
+    ##Verify Element Presence    //input[(@id='email')]/parent::div//div[normalize-space()='This field is required!' and @disabled]    ${True}
+Verify email with invalid email
+    Click      //input[@id='email']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    example21423example.com
+    Verify Element Presence    //input[(@id='email')]/parent::div//div[normalize-space()='This field is required!' and @disabled]    ${False}
+Fill invite guest info with block guest email
+    Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
+    Click   //input[@id='firstName']
+    Wait Until Visible   //input[@id='firstName']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    User
+    Click   //input[@id='lastName']
+    Wait Until Visible   //input[@id='lastName']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    blocktest
+    Click   //input[@id='email']
+    Wait Until Visible   //input[@id='email']
+    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    blockuserfortest@gmail.com
+    Click   //button[normalize-space()='Invite']
+Verify Warning Popup is displayed with blocker email
+    Verify Element Presence    //button[normalize-space()='Close']  ${True}
+    Verify Element Presence   //p[contains(text(),'This email address has been blocked, please change')]  ${True}
+    Verify Element Presence  //p[contains(text(),'Cannot invite')]  ${True}
+    Verify Element Presence  //img[contains(@src,'/en/booking/resources/images/uninvite-bell.png')]    ${True}
+Verify Warning Popup is displayed with booker email
+    Verify Element Presence    //button[normalize-space()='Close']  ${True}
+    Verify Element Presence   //p[contains(text(),'Other guests or booker already used this email address, please change it')]  ${True}
+    Verify Element Presence  //p[contains(text(),'Cannot invite')]  ${True}
+    Verify Element Presence  //img[contains(@src,'/en/booking/resources/images/uninvite-bell.png')]    ${True}
+Fill invite guest infor with booker email
+   Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
+   Click   //input[@id='firstName']
+   Wait Until Visible   //input[@id='firstName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    user01 
+   Click   //input[@id='lastName']
+   Wait Until Visible   //input[@id='lastName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    invited
+   Click   //input[@id='email']
+   Wait Until Visible   //input[@id='email']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    bichngoc9995@gmail.com
+   Click   //button[normalize-space()='Invite']
+Close Warning popup
+   Click   //button[normalize-space()='Close']
+Click Cancel button
+   Click   //button[normalize-space()='Cancel']
+Booker is brought back to Comfirmation Landing page
+   Wait For Elements State    //button[normalize-space()='Cancel']    hidden
+Notice "Invite sent" displays
+   Wait For Elements State    //p[normalize-space()='Invite sent']    visible
+Status of guest confirmation is changed to "Invite sent, not check-in"
+   Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
+Verify Guest information component
+   Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
+Verify Booking summary  
+   Wait For Elements State   //p[text()='room']   visible
+   Wait For Elements State   //p[text()='Booked by']   visible
+   Wait For Elements State   //button[normalize-space()='Download full receipt']   visible
+   Wait For Elements State   //p[text()='Booking number']   visible
+   Wait For Elements State   //a[@rel='noopener noreferrer']   visible
+   Wait For Elements State   //button[normalize-space()='My bookings']   visible
+Verify Configurable secondary banner
+   Verify Element Presence  //p[text()='Download our new app!']  ${True}
+   Verify Element Presence  //p[text()='This app makes booking and your stay at Omena Hotels more convenient.']  ${True}
+   Verify Element Presence  (//img[@alt='app store'])[1]  ${True}
+   Verify Element Presence  (//img[@alt='google store'])[1]  ${True}
+Verify Guest information popup when guest not checkin
+   Click   (//*[name()='svg'][@role='img'])[4]
+   Verify Element Presence    //p[text()='Guest information']    ${True}
+   Verify Element Presence  //input[@id='firstName']   ${True}
+   Verify Element Presence  //input[@value="Shin" and @disabled]   ${True}
+   Verify Element Presence  //input[@id='lastName']   ${True}
+   Verify Element Presence  //input[@value="Suke" and @disabled]   ${True}
+   Verify Element Presence  //input[@id='email']   ${True}
+   Verify Element Presence  //input[@value="shinsuke@gmail.com" and @disabled]   ${True}
+   Verify Element Presence  //button[normalize-space()='Cancel']    ${True}
+   Verify Element Presence  //button[normalize-space()='Uninvite']   ${True}
+Click Uninvite button
+   Click   //button[normalize-space()='Uninvite']
+Verify Uninvite warning popup
+   Verify Element Presence  //p[text()='Uninvite']  ${True}
+   Verify Element Presence  //p[text()='Are you sure you want to uninvite shinsuke@gmail.com ']   ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]    ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]    ${True}
+Click Univite button in Uninvite warning popup
+   Click   (//button[@type='button'][normalize-space()='Uninvite'])[2]
+Edit guest popup is open
+    Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]   ${True}
+
