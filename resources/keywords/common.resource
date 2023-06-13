@@ -85,7 +85,8 @@ Open Browser to Landing Page
     [Documentation]     A general startup keyword for opening a browser to the landing page.
     New Browser    ${browser}    ${headless}    timeout=${timeout}
     Set Browser Timeout    ${timeout}
-    New Context    New Page       ${url}
+    New Context    
+    New Page       ${url}
     Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
     Get Title      contains     Cheap hotels in Helsinki
