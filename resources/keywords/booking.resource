@@ -74,11 +74,6 @@ Verify edit booking page
     [Documentation]    Verifies the edit booking page is opened with correct values 
     Pass Execution     TBD: Should be implemented
 
-Verify Email and Open Link
-    ${link}=        Verify Email 
-    Open Link from Email    ${link}
-    Verify edit booking page
-
 Signature modal is visible
     [Documentation]    Verifies the signature modal is visible
     Wait Until Visible    id=chakra-modal--body-115
@@ -86,7 +81,7 @@ Signature modal is visible
 Fill in Other Guest Details
     [Arguments]    ${firstName}=Snoop    ${lastName}=Dogg    ${email}=nelsontestar@gmail.com    ${phone}=040123942    ${ssn}=170479-371J
     [Documentation]    Fills in other guest details, which can be given as arguments or uses default values
-    ${inbox}=         Create Email Address
+    ${inbox}=         Create Email and Return Inbox
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email    ${inbox.email_address}

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation      A test suite for verifying modify booking functionality
-Library            ${EXECDIR}/resources/libraries/MailSlurp.py      key=%{MAILSLURP_API_KEY}
 Library            ${EXECDIR}/resources/libraries/Helpers.py
+Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            Browser   
 Library            OperatingSystem
 
@@ -12,6 +12,11 @@ Is Element Visible
     [Arguments]  ${selector}
     ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
     [Return]    ${isVisible}
+
+Create Email and Return Inbox
+    [Documentation]    Creates a new email address and returns the inbox object
+    ${inbox}=   Create new Inbox
+    [Return]    ${inbox}
 
 Wait For Confirmation Link
     [Arguments]     ${inbox_id}
