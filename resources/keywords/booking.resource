@@ -98,7 +98,7 @@ Fill in Other Guest Details
 
 Click Save and Sign
     [Documentation]    Clicks the save and sign button
-    Click    //button[@data-ga4-event="add_guest_information"]
+    Click    //button[normalize-space()='Save and Sign']
 
 Text on the save button is displayed as "${expected_text}"
     [Documentation]    Verifies the text on the save button is displayed as expected
@@ -121,6 +121,14 @@ Select Guests
     #Click    //div[contains(@data-nelson-btn, 'guests')]
     # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
 
+Select 1 Room 2 Adult and 1 Children
+    Wait Until Visible    //div[contains(@data-nelson-btn, 'guests')]
+    Click    //div[contains(@data-nelson-btn, 'guests')]
+    Wait Until Visible   //div[@class='dropdown-menu show']
+    Wait Until Visible   (//label[contains(text(),'Adults')])[1]
+    Click    (//button[contains(@data-nelson-guests-add, 'adults')])[1]
+    Wait Until Visible   (//span[contains(text(),'Under 18')])[1]
+    Click    (//button[contains(@data-nelson-guests-add, 'children')])[1]   
 Choose Dates and Guests
     # TODO: Add date selection when kw ready
     Select Guests
@@ -409,6 +417,21 @@ Fill In Booker info
    Wait Until Visible   //input[@id='postalCode']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    10000
    Wait Until Visible   //button[normalize-space()='Save and invite']
+
+Fill In Guest info
+   Click    //input[@id='ssn'] 
+   Wait Until Visible   //input[@id='ssn']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='ssn']    020202-0202
+   Click    //input[@id='city']
+   Wait Until Visible  //input[@id='city']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='city']    Tokyo
+   Click    //input[@id='address']
+   Wait Until Visible   //input[@id='address']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='address']    Paul Street
+   Click   //input[@id='postalCode']
+   Wait Until Visible   //input[@id='postalCode']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='postalCode']    10000
+   Wait Until Visible   //button[normalize-space()='Save and Sign']   
 Click Someone else checkbox
    Click   //span[normalize-space()='Someone else will be the main guest']
 Click Save and invite
@@ -424,13 +447,13 @@ Fill Invite guest info and click invite button
    Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
    Click   //input[@id='firstName']
    Wait Until Visible   //input[@id='firstName']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    Shin 
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    ${guestFirstname} 
    Click   //input[@id='lastName']
    Wait Until Visible   //input[@id='lastName']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    Suke
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    ${guestLastname}
    Click   //input[@id='email']
    Wait Until Visible   //input[@id='email']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    shinsuke@gmail.com
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    ${guestEmail}
    Click   //button[normalize-space()='Invite']
 Open Edit booker info
    ##Wait Until Network Is Idle    timeout=4s
@@ -631,6 +654,9 @@ Notice "Invite sent" displays
    Wait For Elements State    //p[normalize-space()='Invite sent']    visible
 Status of guest confirmation is changed to "Invite sent, not check-in"
    Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
+Status of guest confirmation is changed to "Guest info needed"
+   Wait For Element State    (//p[text()='Guest info needed'])[1]    visible
+
 Verify Guest information component
    Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
 Verify Booking summary  
@@ -649,22 +675,104 @@ Verify Guest information popup when guest not checkin
    Click   (//*[name()='svg'][@role='img'])[4]
    Verify Element Presence    //p[text()='Guest information']    ${True}
    Verify Element Presence  //input[@id='firstName']   ${True}
-   Verify Element Presence  //input[@value="Shin" and @disabled]   ${True}
-   Verify Element Presence  //input[@id='lastName']   ${True}
-   Verify Element Presence  //input[@value="Suke" and @disabled]   ${True}
+   Verify Element Presence  //input[@value="Shin" and @disabled]  ${True}
+   Verify Element Presence  //input[@id='lastNameName']   ${True}
+   Verify Element Presence  //input[@value="Suke" and @disabled]  ${True}
    Verify Element Presence  //input[@id='email']   ${True}
    Verify Element Presence  //input[@value="shinsuke@gmail.com" and @disabled]   ${True}
-   Verify Element Presence  //button[normalize-space()='Cancel']    ${True}
+   Verify Element Presence  //button[normalize-space()='Cancel']   ${True}
    Verify Element Presence  //button[normalize-space()='Uninvite']   ${True}
 Click Uninvite button
    Click   //button[normalize-space()='Uninvite']
+Click Remove button
+   Click   //button[normalize-space()='Remove']
 Verify Uninvite warning popup
    Verify Element Presence  //p[text()='Uninvite']  ${True}
-   Verify Element Presence  //p[text()='Are you sure you want to uninvite shinsuke@gmail.com ']   ${True}
+   Verify Element Presence  //p[text()='Are you sure you want to uninvite'][text()='shinsuke@gmail.com']   ${True}
    Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]    ${True}
    Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]    ${True}
+Verify Remove guest warning popup
+   Verify Element Presence  //p[text()='Remove']  ${True}
+   Verify Element Presence  //p[text()='Are you sure you want to uninvite ${childFirstname}?']  ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]    ${True}
+   Verify Element Presence  (//button[@type='button'][normalize-space()='Remove'])[2]    ${True}
 Click Univite button in Uninvite warning popup
    Click   (//button[@type='button'][normalize-space()='Uninvite'])[2]
 Edit guest popup is open
     Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]   ${True}
-
+Booker is main guest and complete check-in process
+    Click Check In Button
+    Fill In Guest info
+    Click Save and Sign
+    Sign 
+Invite adult guest
+    Click the first guest invite
+    Fill Invite guest info and click invite button
+Click the first guest invite
+    Click   (//p[normalize-space()='New Guest'])[1]
+Click the secondary guest invite
+   Click    (//*[name()='svg'][@role='img'])[10]
+Verify Invite guest popup UI when guest is adult
+    Verify Element Presence   //p[text()='Invite guest']     ${True}
+    Verify Element Presence   //span[text()='Underage']    ${True}
+    Verify Element Presence   //span[text()="Underage"]/ancestor::label//span[contains(@class,"chakra-checkbox__control") and not(@data-checked)]  ${True}
+    Verify Element Presence   //p[text()='Standard room 1']   ${True}
+    Verify Element Presence   //input[@id='firstName']  ${True}
+    Verify Element Presence   //input[@id='lastName']  ${True}
+    Verify Element Presence   //input[@id='email']  ${True}
+    Verify Element Presence   //button[normalize-space()='Cancel']  ${True}
+    Verify Element Presence   //button[normalize-space()='Invite']  ${True}
+Verify Add guest popup UI when guest is children
+    Verify Element Presence   //p[text()='Add guest']     ${True}
+    Verify Element Presence   //span[text()='Underage']    ${True}
+    Verify Element Presence   //span[text()="Underage"]/ancestor::label//span[contains(@class,"chakra-checkbox__control") and @data-checked]  ${True}
+    Verify Element Presence   //p[text()='Standard room 1']   ${True}
+    Verify Element Presence   //input[@id='firstName']  ${True}
+    Verify Element Presence   //input[@id='lastName']  ${True}
+    Verify Element Presence   //input[@id='dateOfBirth']  ${True}
+    Verify Element Presence   //button[normalize-space()='Cancel']  ${True}
+    Verify Element Presence   //button[normalize-space()='Save']  ${True}
+Fill in guest information when guest is adult 
+    Fill Invite guest info and click invite button
+Uninvite guest 
+   Click     //p[text()='${guestFirstname} ${guestLastname}']
+   Click Uninvite button
+Remove guest
+   Click    //p[text()='${childFirstname} ${childLastname}']
+   Click Remove button
+Fill in guest information when guest is children
+   Click   //input[@id='firstName']
+   Wait Until Visible   //input[@id='firstName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    ${childFirstname} 
+   Click   //input[@id='lastName']
+   Wait Until Visible   //input[@id='lastName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    ${childLastname}
+   Click   //input[@id='dateOfBirth']
+   Wait Until Visible   //input[@id='dateOfBirth']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='dateOfBirth']    ${chilDateofbirth}
+   Click   //button[normalize-space()='Save']
+Verify Invite guest UI after invite
+    Click     //p[text()='${guestFirstname} ${guestLastname}']
+    Verify Element Presence   //p[text()='Guest information']    ${True}
+    Verify Element Presence   //span[text()='Underage']    ${True}
+    Verify Element Presence   //span[text()="Underage"]/ancestor::label//span[contains(@class,"chakra-checkbox__control") and not(@data-checked)]  ${True}
+    ##Verify Element Presence   //p[text()='Standard room 1' and @disabled]   ${True}
+    Verify Element Presence   //input[@id='firstName' and @disabled]   ${True}
+    Verify Element Presence   //input[@id='lastName' and @disabled]   ${True}
+    Verify Element Presence   //input[@id='email' and @disabled]    ${True}
+    Verify Element Presence   //button[normalize-space()='Cancel']   ${True}
+    Verify Element Presence   //button[normalize-space()='Uninvite']   ${True}  
+Verify Add guest UI after save children information
+    Click   ////p[text()='${childFirstname} ${childLastname}']
+    Verify Element Presence   //p[text()='Add guest']     ${True}
+    Verify Element Presence   //span[text()='Underage']    ${True}
+    Verify Element Presence   //span[text()="Underage"]/ancestor::label//span[contains(@class,"chakra-checkbox__control") and @data-checked]  ${True}
+    Verify Element Presence   //p[text()='Standard room 1']   ${True}
+    Verify Element Presence   //input[@id='firstName' and @disabled]  ${True}
+    Verify Element Presence   //input[@id='lastName' and @disabled]  ${True}
+    Verify Element Presence   //input[@id='dateOfBirth' and @disabled]  ${True}
+    Verify Element Presence   //button[normalize-space()='Cancel']  ${True}
+    Verify Element Presence   //button[normalize-space()='Remove']  ${True}
+The user is uninvited from the reservation
+    Booker is brought back to Comfirmation Landing page
+    Status of guest confirmation is changed to "Guest info needed"
