@@ -169,7 +169,7 @@ Select Room and Extras
 Fill in Contact Information 
     [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
-    ${inbox}=         Create Email Address
+    ${inbox}=         Create Email and Return Inbox
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email    ${inbox.email_address}
