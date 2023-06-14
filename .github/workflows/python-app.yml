@@ -49,6 +49,10 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add /home/runner/work/nelson-test-automation/nelson-test-automation/reports
         git commit -a -m "Add changes"
+    - name: Test
+      run:  |
+        git pull
+        git status
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
