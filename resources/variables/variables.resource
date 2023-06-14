@@ -20,3 +20,10 @@ ${inbox_id}
 ${bookingUUID}
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
+${guestFirstname}  Shin
+${guestLastname}  Suke
+${guestEmail}     shinsuke@gmail.com
+${childFirstname}   Dong
+${childLastname}    Dong
+${chilDateofbirth}  05/06/2022
+ 
