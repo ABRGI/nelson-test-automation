@@ -21,7 +21,7 @@ UI authentication Formerly guest info when invited adult
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-    Booker is main guest and complete check-in process
+    Booker is main guest and completes check-in process
     Click the first guest invite
     Verify Invite guest popup UI when guest is adult
     Fill in guest information when guest is adult 
@@ -40,7 +40,7 @@ Univite pop-up UI validation
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-    Booker is main guest and complete check-in process
+    Booker is main guest and completes check-in process
     Click the first guest invite
     Verify Invite guest popup UI when guest is adult
     Fill in guest information when guest is adult
@@ -60,7 +60,7 @@ UI authentication Formerly guest info when invited child
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-    Booker is main guest and complete check-in process
+    Booker is main guest and completes check-in process
     Click the secondary guest invite
     Verify Add guest popup UI when guest is children 
     Fill in guest information when guest is children
@@ -79,9 +79,8 @@ UI validation when remove guest
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-    Booker is main guest and complete check-in process
-    Click the first guest invite
-    after
+    Booker is main guest and completes check-in process
+    Click the secondary guest invite
     Fill in guest information when guest is children
     Remove guest
     Verify Remove guest warning popup
@@ -99,7 +98,7 @@ UI validation when uninvite guest
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
-    Booker is main guest and complete check-in process
+    Booker is main guest and completes check-in process
     Click the first guest invite
     Verify Invite guest popup UI when guest is adult
     Fill in guest information when guest is adult
