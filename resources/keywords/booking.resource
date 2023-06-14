@@ -127,8 +127,18 @@ Select 1 Room 2 Adult and 1 Children
     Wait Until Visible   //div[@class='dropdown-menu show']
     Wait Until Visible   (//label[contains(text(),'Adults')])[1]
     Click    (//button[contains(@data-nelson-guests-add, 'adults')])[1]
-    Wait Until Visible   (//span[contains(text(),'Under 18')])[1]
+    Wait Until Visible   //div[@class='dropdown-menu show']//label[contains(text(),'Children')]
     Click    (//button[contains(@data-nelson-guests-add, 'children')])[1]   
+Select 2 Rooms 5 Adults
+    Wait Until Visible    //div[contains(@data-nelson-btn, 'guests')]
+    Click    //div[contains(@data-nelson-btn, 'guests')]
+    Wait Until Visible   //div[@class='dropdown-menu show']
+    Wait Until Visible   //div[@class='dropdown-menu show']//label[contains(text(),'Rooms')]
+    Click   (//button[contains(@data-nelson-guests-add, 'room')])[1]
+    Wait Until Visible   //div[@class='dropdown-menu show']//label[contains(text(),'Adults')]
+    Click    (//button[contains(@data-nelson-guests-add, 'adults')])[1]
+    Click    (//button[contains(@data-nelson-guests-add, 'adults')])[1]
+    Click    (//button[contains(@data-nelson-guests-add, 'adults')])[1]  
 Choose Dates and Guests
     # TODO: Add date selection when kw ready
     Select Guests
@@ -655,7 +665,7 @@ Notice "Invite sent" displays
 Status of guest confirmation is changed to "Invite sent, not check-in"
    Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
 Status of guest confirmation is changed to "Guest info needed"
-   Wait For Element State    (//p[text()='Guest info needed'])[1]    visible
+   Wait For Elements State    (//p[normalize-space()='Guest info needed'])[1]
 
 Verify Guest information component
    Wait For Elements State   //p[text()='Invite sent, checked-in not complete!']   visible
@@ -693,14 +703,14 @@ Verify Uninvite warning popup
    Verify Element Presence  (//button[@type='button'][normalize-space()='Uninvite'])[2]    ${True}
 Verify Remove guest warning popup
    Verify Element Presence  //p[text()='Remove']  ${True}
-   Verify Element Presence  //p[text()='Are you sure you want to uninvite ${childFirstname}?']  ${True}
+   Verify Element Presence  //p[text()='Are you sure you want to remove'][text()='Dong']  ${True}
    Verify Element Presence  (//button[@type='button'][normalize-space()='Cancel'])[2]    ${True}
    Verify Element Presence  (//button[@type='button'][normalize-space()='Remove'])[2]    ${True}
 Click Univite button in Uninvite warning popup
    Click   (//button[@type='button'][normalize-space()='Uninvite'])[2]
 Edit guest popup is open
     Verify Element Presence  //p[text()="Invite guest"]/ancestor::div[@class="chakra-offset-slide"]   ${True}
-Booker is main guest and complete check-in process
+Booker is main guest and completes check-in process
     Click Check In Button
     Fill In Guest info
     Click Save and Sign
@@ -763,7 +773,7 @@ Verify Invite guest UI after invite
     Verify Element Presence   //button[normalize-space()='Cancel']   ${True}
     Verify Element Presence   //button[normalize-space()='Uninvite']   ${True}  
 Verify Add guest UI after save children information
-    Click   ////p[text()='${childFirstname} ${childLastname}']
+    Click   //p[text()='${childFirstname} ${childLastname}']
     Verify Element Presence   //p[text()='Add guest']     ${True}
     Verify Element Presence   //span[text()='Underage']    ${True}
     Verify Element Presence   //span[text()="Underage"]/ancestor::label//span[contains(@class,"chakra-checkbox__control") and @data-checked]  ${True}
@@ -776,3 +786,14 @@ Verify Add guest UI after save children information
 The user is uninvited from the reservation
     Booker is brought back to Comfirmation Landing page
     Status of guest confirmation is changed to "Guest info needed"
+Verify Comfirmation Landing page when Booker has not updated information
+    Verify Element Presence    (//p[text()="Standard room 1"]/ancestor::div[contains(@class, "chakra-accordion__item")]//div[contains(@class,"chakra-stack")])[2]  ${True}
+    Verify Element Presence    (//p[text()="Standard room 1"]/ancestor::div[contains(@class, "chakra-accordion__item")]//div[contains(@class,"chakra-stack")])[3]  ${True}
+    Verify Element Presence    //p[normalize-space()='3 guests']   ${True}
+    Verify Element Presence  //p[normalize-space()='Standard room 1']  ${True}
+    Verify Element Presence    (//p[text()="Standard room 2"]/ancestor::div[contains(@class, "chakra-accordion__item")]//div[contains(@class,"chakra-stack")])[1]  ${True}
+    Verify Element Presence    (//p[text()="Standard room 2"]/ancestor::div[contains(@class, "chakra-accordion__item")]//div[contains(@class,"chakra-stack")])[2]  ${True}
+    Verify Element Presence    (//p[text()="Standard room 2"]/ancestor::div[contains(@class, "chakra-accordion__item")]//div[contains(@class,"chakra-stack")])[2]  ${True}
+    Verify Element Presence  //p[normalize-space()='Standard room 2']  ${True}
+    Verify Element Presence    //p[normalize-space()='2 guests']   ${True}
+    Verify Element Presence  //p[normalize-space()='Check in or invite a guest'][1]  ${True}
