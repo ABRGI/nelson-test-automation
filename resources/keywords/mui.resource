@@ -29,6 +29,9 @@ Open Browser to Nelson Portal
     New Page        %{TEST_ENV}
 
 Log in to Nelson Portal
+    ${check}    Get Environment Variable    MUI_USERNAME
+    Log    ${check}
+    Log to console    ${check}
     Type Secret    //*[@id='email']         %{MUI_USERNAME}
     Type Secret    //*[@id='password']      %{MUI_PASSWORD}
     Click    //button[contains(text(),'Sign in')]
