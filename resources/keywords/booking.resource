@@ -66,9 +66,6 @@ Click Cancel
     [Documentation]    Clicks the cancel button
     Click    //footer/button[text()="Cancel"]
 
-Verify Email 
-    Pass Execution    Implementation with new email
-
 Open Link from Email 
     [Arguments]         ${link}
     Open New Browser To URL    ${link}
@@ -77,11 +74,6 @@ Verify edit booking page
     [Documentation]    Verifies the edit booking page is opened with correct values 
     Pass Execution     TBD: Should be implemented
 
-Verify Email and Open Link
-    ${link}=        Verify Email 
-    Open Link from Email    ${link}
-    Verify edit booking page
-
 Signature modal is visible
     [Documentation]    Verifies the signature modal is visible
     Wait Until Visible    id=chakra-modal--body-115
@@ -89,9 +81,10 @@ Signature modal is visible
 Fill in Other Guest Details
     [Arguments]    ${firstName}=Snoop    ${lastName}=Dogg    ${email}=nelsontestar@gmail.com    ${phone}=040123942    ${ssn}=170479-371J
     [Documentation]    Fills in other guest details, which can be given as arguments or uses default values
+    ${inbox}=         Create Email and Return Inbox
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
-    Click and Fill    id=email    ${email}
+    Click and Fill    id=email    ${inbox.email_address}
     Click and Fill    id=phone    ${phone}
     # ${ssn}=    Generate SSN
     Click and Fill    id=ssn    ${ssn}
@@ -151,7 +144,7 @@ Select Hotel
     Click    //div[contains(@data-nelson-btn, "hotels")]
     Wait Until Visible    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
     Click    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
-    Wait Until Network Is Idle
+    Wait For Elements State    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]    hidden    timeout=3s
 
 Select Dates
     [Documentation]    A keyword for selecting dates for booking
@@ -194,12 +187,14 @@ Select Room and Extras
 Fill in Contact Information 
     [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    TBD: Use test data instead of hardcoded values
-    ${rand}=    Helpers.Get Random Name
-    ${email}=   Set Variable      ${emailUsername}-${rand}@${emailDomain} 
+    ${inbox}=         Create Email and Return Inbox
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
-    Click and Fill    id=email       ${email}
+    Click and Fill    id=email    ${inbox.email_address}
     Click and Fill    id=phoneNumber    ${phone}
+    Log To Console    ${inbox.id}
+    Set Suite Variable      $ID     ${inbox.id}
+    # We need to save the email id in order to be able to use it in the next step of verifying the email
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
 
 Fill in Contact Information 1
@@ -232,8 +227,15 @@ Sign
     Click         //button[text()='Save']
     Wait For Elements State     //div[contains(@class, 'chakra-modal__body')]       hidden    timeout=${timeout}
 
-Click Save and Sign Button
-    Click                 //button[contains(text(), "Save and Sign")]
+Click Save and Sign Button and Sign if Required
+    ${forceSignature}=    common.Is Force Signature Enabled
+    IF   '${forceSignature}' == 'true'
+        Click                 //button[contains(text(), "Save and Sign")] 
+        Sign
+    ELSE
+        Click                 //button[contains(text(), "Save")]    
+    END
+    
 
 Complete Check in    
     Wait Until Visible    //p[contains(text(), "completed")]
@@ -312,6 +314,14 @@ Verify Booking is Successful and return result
     ${result}    Get Text    //p[contains(text(),'Booking code')]
     ${result}    Remove String    ${result}    Booking code${SPACE}
     ${result}    Strip String    ${result}
+
+Verify Confirmation Email is Received
+    [Arguments]    ${inbox}
+    [Documentation]    Verifies that the confirmation email is received, requires a Mailslurp inbox as an argument
+    ${link}=     Read Email and Return Link    ${inbox}
+    Log to Console    ${link}
+    # TODO: Verify content of the email
+    Open New Browser To URL    ${link}
 
 Create a successful booking and return UUID
     Complete a new booking

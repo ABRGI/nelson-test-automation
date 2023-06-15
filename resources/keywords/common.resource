@@ -1,10 +1,11 @@
 *** Settings ***
 Documentation      A test suite for verifying modify booking functionality
-Library            ${EXECDIR}/resources/libraries/MailSlurp.py      key=%{MAILSLURP_API_KEY}
 Library            ${EXECDIR}/resources/libraries/Helpers.py
+Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            Browser   
 Library            OperatingSystem
-
+Library            String
+Library            Process
 
 *** Keywords ***
 
@@ -12,6 +13,22 @@ Is Element Visible
     [Arguments]  ${selector}
     ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
     [Return]    ${isVisible}
+
+Create Email and Return Inbox
+    [Documentation]    Creates a new email address and returns the inbox object
+    ${inbox}=   Create new Inbox
+    [Return]    ${inbox}
+
+Wait For Confirmation Link
+    [Arguments]     ${inbox_id}
+    ${email}    Wait For Latest Booking Confirmation   ${inbox_id}
+    ${link}     Extract Link            ${email.body}
+    [Return]    ${link}
+
+Read Email and Return Link
+    [Arguments]     ${inbox}
+    ${link}=    Wait For Confirmation Link      ${inbox.id}
+    [Return]    ${link}
 
 Is Element Found
     [Arguments]  ${selector}
@@ -69,10 +86,10 @@ Open Browser to Landing Page
     [Documentation]     A general startup keyword for opening a browser to the landing page.
     New Browser    ${browser}    ${headless}    timeout=${timeout}
     Set Browser Timeout    ${timeout}
-    New Context 
+    New Context    
     New Page       ${url}
+    Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
-        Wait Until Network Is Idle
     Get Title      contains     Cheap hotels in Helsinki
     Allow Cookies 
 
@@ -98,4 +115,19 @@ Wait Until Visible
     [Documentation]     An easier keyword for waiting until an element is visible
     [Arguments]    ${element}
     Wait For Elements State     ${element}        visible     timeout=${timeout}
+
+Is Force Signature Enabled
+    [Documentation]    Checks if the force signature is on or off
+    # TODO: Modify this to be a common method to check _any_ value of the config
+    # TODO: Modify feature-config url to depend on environment
+    ${output}    Run Process    curl    https://test4.omenahotels.com/feature-config.json
+    ${forceSSN}    Get Line    ${output.stdout}    8
+    ${forceSignature}    Get Line    ${output.stdout}    9
+    ${guestSignature}    Get Line    ${output.stdout}    10
+    ${forceSSN}    Remove String    ${forceSSN}    "forceSSN":    ,    ${SPACE}
+    ${forceSignature}    Remove String    ${forceSignature}    "forceSignature":    ,    ${SPACE}
+    ${guestSignature}    Remove String    ${guestSignature}    "guestSignature":    ,    ${SPACE}
+    Run Keyword If    '${forceSignature}' == 'true'    Log    Forcing signature on => call Click Save and Sign
+    Run Keyword If    '${forceSignature}' == 'false'    Log    Forcing signature off => call Click Save
+    [Return]    ${forceSignature}
 
