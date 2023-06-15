@@ -9,7 +9,9 @@ Resource          ${EXECDIR}/resources/keywords/booking.resource
 *** Variables ***
 
 ${muiResultTable}     //table[contains(@class, 'custom-table')]
-
+${environment}        Test (2) Omena
+${MUI_USERNAME}        %{MUI_USERNAME}
+${MUI_PASSWORD}        %{MUI_PASSWORD}
 *** Keywords ***
 
 Select Environment   
@@ -20,17 +22,18 @@ Select Environment
 Open Browser to Nelson Portal and Login
     Open Browser to Nelson Portal
     Log in to Nelson Portal
-    Select Environment    %{TEST_ENV}
+    Select Environment    ${environment}
 
 Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context
-    New Page        %{TEST_ENV}
+    New Page        %{MUI_URL}
 
 Log in to Nelson Portal
-    Type Secret    //*[@id='email']         %{MUI_USERNAME}
-    Type Secret    //*[@id='password']      %{MUI_PASSWORD}
+
+    Type Secret    //*[@id='email']         $MUI_USERNAME
+    Type Secret  //*[@id='password']      $MUI_PASSWORD
     Click    //button[contains(text(),'Sign in')]
 
 Assert Reservationd View is Open 
@@ -54,8 +57,7 @@ Create Booking, Check in and get UUID
     Set suite variable    ${bookingUUID}    ${uuid}
     Click Check In Button
     Fill Check in Slide
-    Click Save and Sign Button
-    Sign
+    Click Save and Sign Button and Sign if Required
     Complete Check in
     Close Browser
 
