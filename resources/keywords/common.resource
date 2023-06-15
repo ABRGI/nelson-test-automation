@@ -4,7 +4,8 @@ Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            Browser   
 Library            OperatingSystem
-
+Library            String
+Library            Process
 
 *** Keywords ***
 
@@ -114,4 +115,19 @@ Wait Until Visible
     [Documentation]     An easier keyword for waiting until an element is visible
     [Arguments]    ${element}
     Wait For Elements State     ${element}        visible     timeout=${timeout}
+
+Is Force Signature Enabled
+    [Documentation]    Checks if the force signature is on or off
+    # TODO: Modify this to be a common method to check _any_ value of the config
+    # TODO: Modify feature-config url to depend on environment
+    ${output}    Run Process    curl    https://test4.omenahotels.com/feature-config.json
+    ${forceSSN}    Get Line    ${output.stdout}    8
+    ${forceSignature}    Get Line    ${output.stdout}    9
+    ${guestSignature}    Get Line    ${output.stdout}    10
+    ${forceSSN}    Remove String    ${forceSSN}    "forceSSN":    ,    ${SPACE}
+    ${forceSignature}    Remove String    ${forceSignature}    "forceSignature":    ,    ${SPACE}
+    ${guestSignature}    Remove String    ${guestSignature}    "guestSignature":    ,    ${SPACE}
+    Run Keyword If    '${forceSignature}' == 'true'    Log    Forcing signature on => call Click Save and Sign
+    Run Keyword If    '${forceSignature}' == 'false'    Log    Forcing signature off => call Click Save
+    [Return]    ${forceSignature}
 

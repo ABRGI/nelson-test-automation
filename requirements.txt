@@ -10,3 +10,4 @@ google-auth-oauthlib
 rpaframework
 simplegmail
 mailslurp_client
+robotframework-pabot

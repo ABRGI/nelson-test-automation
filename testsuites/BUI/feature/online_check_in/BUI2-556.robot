@@ -27,8 +27,7 @@ Create a new booking, check-in and verify door code is displayed
     #Verify Page Elements before check-in
     Click Check In Button
     Fill Check in Slide
-    Click Save and Sign Button
-    Sign
+    Click Save and Sign Button and Sign if Required
     Complete Check in
     Wait Until Door Code is Available
     Check Door Code and verify it is not empty
