@@ -126,7 +126,7 @@ Select Hotel
     Click    //div[contains(@data-nelson-btn, "hotels")]
     Wait Until Visible    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
     Click    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
-    Wait Until Network Is Idle
+    Wait For Elements State    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]    hidden    timeout=3s
 
 Select Dates
     [Documentation]    A keyword for selecting dates for booking
@@ -209,8 +209,15 @@ Sign
     Click         //button[text()='Save']
     Wait For Elements State     //div[contains(@class, 'chakra-modal__body')]       hidden    timeout=${timeout}
 
-Click Save and Sign Button
-    Click                 //button[contains(text(), "Save and Sign")]
+Click Save and Sign Button and Sign if Required
+    ${forceSignature}=    common.Is Force Signature Enabled
+    IF   '${forceSignature}' == 'true'
+        Click                 //button[contains(text(), "Save and Sign")] 
+        Sign
+    ELSE
+        Click                 //button[contains(text(), "Save")]    
+    END
+    
 
 Complete Check in    
     Wait Until Visible    //p[contains(text(), "completed")]

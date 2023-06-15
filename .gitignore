@@ -18,3 +18,8 @@ secrets.json
 debug.robot
 client_secret.json
 gmail_token.json 
+./log.html
+./output.xml
+./report.html
+dockerfile
+tmp/
