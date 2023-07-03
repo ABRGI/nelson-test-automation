@@ -9,12 +9,6 @@ Library           RequestsLibrary
 
 *** Keywords ***
 
-Get Environment
-    ${currentUrl}=     Get Url
-    ${env}=        Get Environment From Url    ${currentUrl}
-    Log To Console        ${env}
-    [Return]    ${env}
-
 Complete a new booking
     [Documentation]    A complete booking process from start to finish
     ...                This is currently duplicate to "Create a new booking" test case 
@@ -149,8 +143,7 @@ Choose Dates and Guests
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
-    ${env} =    Get Environment
-    IF         "${env}" == "test-exhibition"
+    IF         "${environment}" == "test-exhibition"
         Log   No hotel to be selected    
     ELSE
         Log    Selecting Hotel: ${hotel}
@@ -160,7 +153,10 @@ Select Hotel
         Wait For Elements State    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]    hidden    timeout=3s
     END
 
-Select Dates
+Select Dates 
+    Log     Skipping date selection for now
+
+Select Dates With Options
     [Documentation]    A keyword for selecting dates for booking
     # TODO: Currently this selects the first available date, should be changed to select a date in the future
     # Could be improved

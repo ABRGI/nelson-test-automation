@@ -72,8 +72,9 @@ class Helpers(object):
 
 if __name__ == '__main__':
     h = Helpers()
-    h = h.get_selectors_for_tomorrow()
-
+    he = h.get_selectors_for_tomorrow()
+    
+    env = h.get_environment_from_url('https://test4.omenahotels.com/en/')
     env = h.get_environment_from_url('https://test-exhibition.nelson.management/management/#/reservations')
     stripped = h.extract_guid_from_url("https://test4.omenahotels.com/en/booking/#/confirmation/1d594962-60d6-4d73-964b-806f4de38442?result=success&email=saragee@gmail.com")
     print('Stripped guid', stripped)
