@@ -9,6 +9,12 @@ Library            Process
 
 *** Keywords ***
 
+
+Set Environment
+    ${currentUrl}=     Get Url
+    ${env}=        Get Environment From Url    ${currentUrl}
+    Set Variable   ${environment}    ${env}    
+
 Check URL Contains
     [Arguments]    ${expected_string}
     ${current_url}=    Get URL
@@ -107,6 +113,7 @@ Open Browser to Landing Page
     Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
     Allow Cookies 
+    Set Environment 
 
 Open Browser Directly to Extras
     [Documentation]    This keyword is used only for debugging purposes if you want to use a quicker 

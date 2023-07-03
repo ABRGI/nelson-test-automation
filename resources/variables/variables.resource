@@ -27,3 +27,5 @@ ${childLastname}    Dong
 ${chilDateofbirth}  05/06/2022
 ${hotelName}      Helsinki, Lönnrotinkatu
 ${longer}         90s
+${url}          https://test4.omenahotels.com/en
+${environment}

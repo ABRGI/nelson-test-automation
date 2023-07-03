@@ -1,14 +1,13 @@
-datasources:f183cb6260ddba5452acfdff34da22c5b796fe03
-commandlineoptions:f9cbe618bc6bdbbaf0345918aff1588ff9226446
+datasources:42c0ff1dc1febca4a8f807acd2bc352979fc7a9c
+commandlineoptions:2ec4fa294e581fc9f601ff410f195b034afa0760
 suitesfrom:no-suites-from-option
-file:4ec613f542ce78aad8d5a6696e5848af45a63779
+file:d636c501c535d955449a52ec9373f3a212bfe98a
 --suite Testsuites.BUI.Feature.Online Check In.BUI2-556
 --suite Testsuites.BUI.Feature.Online Check In.BUI2-557
 --suite Testsuites.BUI.Feature.Online Check In.BUI2-558
 --suite Testsuites.BUI.Feature.Online Check In.BUI2-559
 --suite Testsuites.BUI.Regression.Modify Booking
 --suite Testsuites.BUI.Regression.New Booking
---suite Testsuites.Examples.AccessEmail
 --suite Testsuites.MUI.EC.New Booking
 --suite Testsuites.MUI.Feature.MUI-430
 --suite Testsuites.Others.Example
