@@ -1,0 +1,163 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.BUI                                                                
+==============================================================================
+Testsuites.BUI.Feature                                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In.BUI2-559                               
+==============================================================================
+UI authentication Formerly guest info when invited adult                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:11
+    T:  UI authentication Formerly guest info when invited adult    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:17
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Univite pop-up UI validation                                            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:30
+    T:  Univite pop-up UI validation    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:36
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+UI authentication Formerly guest info when invited child                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:50
+    T:  UI authentication Formerly guest info when invited child    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:56
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+UI validation when remove guest                                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:69
+    T:  UI validation when remove guest    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:75
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+UI validation when uninvite guest                                       
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:88
+    T:  UI validation when uninvite guest    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-559.robot:94
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Testsuites.BUI.Feature.Online Check In.BUI2-559                       | FAIL |
+5 tests, 0 passed, 5 failed
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                | FAIL |
+5 tests, 0 passed, 5 failed
+==============================================================================
+Testsuites.BUI.Feature                                                | FAIL |
+5 tests, 0 passed, 5 failed
+==============================================================================
+Testsuites.BUI                                                        | FAIL |
+5 tests, 0 passed, 5 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+5 tests, 0 passed, 5 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/3/output.xml

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.12 on linux)" generated="20230703 18:15:16.674" rpa="false" schemaversion="3">
+<suite id="s1" name="Testsuites" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites">
+<suite id="s1-s1" name="MUI" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI">
+<suite id="s1-s1-s1" name="Feature" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/feature">
+<suite id="s1-s1-s1-s1" name="MUI-430" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/feature/MUI-430.robot">
+<kw name="Open Browser to Nelson Portal and Login" library="mui" type="SETUP">
+<kw name="Open Browser to Nelson Portal" library="mui">
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230703 18:15:17.711" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/7/browser/traces/a749ba54-ff47-4b52-aab5-964942682ed5"}</msg>
+<msg timestamp="20230703 18:15:18.281" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/7/browser/traces/a749ba54-ff47-4b52-aab5-964942682ed5"}</msg>
+<status status="PASS" starttime="20230703 18:15:17.710" endtime="20230703 18:15:18.281"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230703 18:15:18.286" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230703 18:15:18.282" endtime="20230703 18:15:18.286"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230703 18:15:18.287" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230703 18:15:18.352" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230703 18:15:18.352" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230703 18:15:18.287" endtime="20230703 18:15:18.353"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>%{MUI_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230703 18:15:18.355" level="FAIL">Environment variable '%{MUI_URL}' not found.</msg>
+<status status="FAIL" starttime="20230703 18:15:18.353" endtime="20230703 18:15:18.355"/>
+</kw>
+<status status="FAIL" starttime="20230703 18:15:17.709" endtime="20230703 18:15:18.358"/>
+</kw>
+<kw name="Log in to Nelson Portal" library="mui">
+<status status="NOT RUN" starttime="20230703 18:15:18.358" endtime="20230703 18:15:18.359"/>
+</kw>
+<kw name="Select Environment" library="mui">
+<arg>${environment}</arg>
+<status status="NOT RUN" starttime="20230703 18:15:18.359" endtime="20230703 18:15:18.359"/>
+</kw>
+<status status="FAIL" starttime="20230703 18:15:17.708" endtime="20230703 18:15:18.359"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Filter Check in incomplete and open reservation" line="12">
+<doc>Test case verifying the functionality of the Check in incomplete filter
+when it's toggled on</doc>
+<status status="FAIL" starttime="20230703 18:15:18.360" endtime="20230703 18:15:18.364">Parent suite setup failed:
+Environment variable '%{MUI_URL}' not found.</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Remove filter and open a reservation" line="23">
+<doc>Test case verifying the functionality of the Check in incomplete filter
+when it's toggled off</doc>
+<status status="FAIL" starttime="20230703 18:15:18.369" endtime="20230703 18:15:18.372">Parent suite setup failed:
+Environment variable '%{MUI_URL}' not found.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230703 18:15:21.216" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230703 18:15:18.378" endtime="20230703 18:15:21.217"/>
+</kw>
+<doc>This file contains test cases for testing MUI-430.robot</doc>
+<status status="FAIL" starttime="20230703 18:15:16.699" endtime="20230703 18:15:21.217">Suite setup failed:
+Environment variable '%{MUI_URL}' not found.</status>
+</suite>
+<status status="FAIL" starttime="20230703 18:15:16.698" endtime="20230703 18:15:21.226"/>
+</suite>
+<status status="FAIL" starttime="20230703 18:15:16.696" endtime="20230703 18:15:21.227"/>
+</suite>
+<doc>Argument file for running tests on Omena test environmen (test4)</doc>
+<status status="FAIL" starttime="20230703 18:15:16.679" endtime="20230703 18:15:21.228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="MUI">Testsuites.MUI</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="Feature">Testsuites.MUI.Feature</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s1" name="MUI-430">Testsuites.MUI.Feature.MUI-430</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230703 18:15:17.270" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource' on line 14: Setting variable '${MUI_PASSWORD}' failed: Environment variable '%{MUI_PASSWORD}' not found.</msg>
+<msg timestamp="20230703 18:15:17.272" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource' on line 13: Setting variable '${MUI_USERNAME}' failed: Environment variable '%{MUI_USERNAME}' not found.</msg>
+</errors>
+</robot>

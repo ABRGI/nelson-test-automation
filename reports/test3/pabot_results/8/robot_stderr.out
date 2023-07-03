@@ -1,0 +1,2 @@
+[ WARN ] Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.12 on linux)" generated="20230703 17:59:07.608" rpa="false" schemaversion="3">
+<suite id="s1" name="Testsuites" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites">
+<suite id="s1-s1" name="BUI" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI">
+<suite id="s1-s1-s1" name="Feature" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature">
+<suite id="s1-s1-s1-s1" name="Online Check In" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in">
+<suite id="s1-s1-s1-s1-s1" name="BUI2-556" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-556.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230703 17:59:08.832" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/0/browser/traces/b663821b-502a-4c20-9fda-77dc14bb6a3a"}</msg>
+<msg timestamp="20230703 17:59:09.617" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/0/browser/traces/b663821b-502a-4c20-9fda-77dc14bb6a3a"}</msg>
+<status status="PASS" starttime="20230703 17:59:08.831" endtime="20230703 17:59:09.618"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230703 17:59:09.623" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230703 17:59:09.618" endtime="20230703 17:59:09.623"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230703 17:59:09.623" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230703 17:59:09.730" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230703 17:59:09.730" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230703 17:59:09.623" endtime="20230703 17:59:09.730"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230703 17:59:16.951" level="INFO">Successfully initialized new page object and opened url: https://test3.omenahotels.com/</msg>
+<status status="PASS" starttime="20230703 17:59:09.730" endtime="20230703 17:59:16.951"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230703 17:59:16.951" endtime="20230703 17:59:18.081"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<kw name="Is Element Found" library="common">
+<var>${cookieModalVisible}</var>
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<doc>A keyword that has a very complex way of figuring out whether an
+element is found or not because I had trouble with the built-in keywords
+Can be solved differently if you have a better idea</doc>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230703 17:59:18.086" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" starttime="20230703 17:59:18.083" endtime="20230703 17:59:18.086"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Get Elements" library="Browser">
+<var>${els}</var>
+<arg>${selector}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20230703 17:59:18.163" level="INFO">Found 1 Locators successfully.</msg>
+<msg timestamp="20230703 17:59:18.164" level="INFO">${els} = ['element=38087ec2-762c-4d7d-8b5b-8aca6b9aa283']</msg>
+<status status="PASS" starttime="20230703 17:59:18.087" endtime="20230703 17:59:18.164"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${count}</var>
+<arg>${els}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20230703 17:59:18.165" level="INFO">Length is 1</msg>
+<msg timestamp="20230703 17:59:18.165" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20230703 17:59:18.164" endtime="20230703 17:59:18.165"/>
+</kw>
+<if>
+<branch type="IF" condition="${count} &gt; 0">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230703 17:59:18.166" level="INFO">${visible} = True</msg>
+<status status="PASS" starttime="20230703 17:59:18.165" endtime="20230703 17:59:18.166"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:18.165" endtime="20230703 17:59:18.166"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230703 17:59:18.166" endtime="20230703 17:59:18.166"/>
+</kw>
+<status status="NOT RUN" starttime="20230703 17:59:18.166" endtime="20230703 17:59:18.167"/>
+</branch>
+<status status="PASS" starttime="20230703 17:59:18.165" endtime="20230703 17:59:18.167"/>
+</if>
+<status status="PASS" starttime="20230703 17:59:18.086" endtime="20230703 17:59:18.167"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230703 17:59:18.167" endtime="20230703 17:59:18.167"/>
+</kw>
+<status status="NOT RUN" starttime="20230703 17:59:18.167" endtime="20230703 17:59:18.168"/>
+</branch>
+<status status="PASS" starttime="20230703 17:59:18.086" endtime="20230703 17:59:18.168"/>
+</try>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230703 17:59:18.179" level="INFO">Set timeout to: 90000</msg>
+<status status="PASS" starttime="20230703 17:59:18.168" endtime="20230703 17:59:18.180"/>
+</kw>
+<msg timestamp="20230703 17:59:18.180" level="INFO">${cookieModalVisible} = True</msg>
+<status status="PASS" starttime="20230703 17:59:18.082" endtime="20230703 17:59:18.180"/>
+</kw>
+<if>
+<branch type="IF" condition="${cookieModalVisible}">
+<kw name="Click" library="Browser">
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230703 17:59:18.181" endtime="20230703 17:59:18.332"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:18.180" endtime="20230703 17:59:18.332"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>No Cookie Modal Visible</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230703 17:59:18.333" endtime="20230703 17:59:18.333"/>
+</kw>
+<status status="NOT RUN" starttime="20230703 17:59:18.332" endtime="20230703 17:59:18.333"/>
+</branch>
+<status status="PASS" starttime="20230703 17:59:18.180" endtime="20230703 17:59:18.333"/>
+</if>
+<status status="PASS" starttime="20230703 17:59:18.082" endtime="20230703 17:59:18.333"/>
+</kw>
+<kw name="Set Environment" library="common">
+<kw name="Get Url" library="Browser">
+<var>${currentUrl}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<msg timestamp="20230703 17:59:18.344" level="INFO">${currentUrl} = https://test3.omenahotels.com/en/</msg>
+<status status="PASS" starttime="20230703 17:59:18.334" endtime="20230703 17:59:18.344"/>
+</kw>
+<kw name="Get Environment From Url" library="Helpers">
+<var>${env}</var>
+<arg>${currentUrl}</arg>
+<msg timestamp="20230703 17:59:18.345" level="INFO">${env} = test-omena</msg>
+<status status="PASS" starttime="20230703 17:59:18.345" endtime="20230703 17:59:18.345"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${environment}</arg>
+<arg>${env}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20230703 17:59:18.345" endtime="20230703 17:59:18.347"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:18.334" endtime="20230703 17:59:18.350"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:08.830" endtime="20230703 17:59:18.351"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Create a new booking, check-in and verify door code is displayed" line="13">
+<kw name="Select Hotel" library="booking">
+<arg>Helsinki, Lönnrotinkatu</arg>
+<doc>Select Hotel by using a number as an argument, default Lönnrotinkatu</doc>
+<if>
+<branch type="IF" condition="&quot;${environment}&quot; == &quot;test-exhibition&quot;">
+<kw name="Log" library="BuiltIn">
+<arg>No hotel to be selected</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230703 17:59:18.362" endtime="20230703 17:59:18.365"/>
+</kw>
+<status status="NOT RUN" starttime="20230703 17:59:18.362" endtime="20230703 17:59:18.365"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Selecting Hotel: ${hotel}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230703 17:59:18.366" level="INFO">Selecting Hotel: Helsinki, Lönnrotinkatu</msg>
+<status status="PASS" starttime="20230703 17:59:18.366" endtime="20230703 17:59:18.366"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//div[contains(@data-nelson-btn, "hotels")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230703 17:59:18.366" endtime="20230703 17:59:18.565"/>
+</kw>
+<kw name="Wait Until Visible" library="common">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230703 17:59:18.599" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state visible</msg>
+<status status="PASS" starttime="20230703 17:59:18.566" endtime="20230703 17:59:18.599"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:18.565" endtime="20230703 17:59:18.599"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230703 17:59:18.600" endtime="20230703 17:59:18.834"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<arg>hidden</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230703 17:59:20.011" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state hidden</msg>
+<status status="PASS" starttime="20230703 17:59:18.834" endtime="20230703 17:59:20.011"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:18.365" endtime="20230703 17:59:20.011"/>
+</branch>
+<status status="PASS" starttime="20230703 17:59:18.362" endtime="20230703 17:59:20.012"/>
+</if>
+<status status="PASS" starttime="20230703 17:59:18.361" endtime="20230703 17:59:20.012"/>
+</kw>
+<kw name="Select Dates" library="booking">
+<kw name="Log" library="BuiltIn">
+<arg>Skipping date selection for now</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230703 17:59:20.013" level="INFO">Skipping date selection for now</msg>
+<status status="PASS" starttime="20230703 17:59:20.013" endtime="20230703 17:59:20.013"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:20.012" endtime="20230703 17:59:20.013"/>
+</kw>
+<kw name="Select Guests" library="booking">
+<doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Not yet implemented</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230703 17:59:20.014" endtime="20230703 17:59:20.027"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:20.014" endtime="20230703 17:59:20.027"/>
+</kw>
+<kw name="Click Book Button" library="booking">
+<kw name="Click" library="Browser">
+<arg>//div[@data-nelson-btn='book']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230703 17:59:20.028" endtime="20230703 17:59:20.893"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:20.028" endtime="20230703 17:59:20.893"/>
+</kw>
+<kw name="Select a Standard Room" library="booking">
+<kw name="Wait Until Visible" library="common">
+<arg>${btnExtras}</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230703 17:59:24.471" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
+<status status="PASS" starttime="20230703 17:59:20.894" endtime="20230703 17:59:24.471"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:20.894" endtime="20230703 17:59:24.472"/>
+</kw>
+<kw name="Get Element States" library="Browser">
+<var>${visible}</var>
+<arg>//div[contains(text(), 'Select room')]</arg>
+<arg>then</arg>
+<arg>bool(value &amp; visible)</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20230703 17:59:24.731" level="INFO">${visible} = False</msg>
+<status status="PASS" starttime="20230703 17:59:24.472" endtime="20230703 17:59:24.731"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${visible}</arg>
+<arg>Select Standard and Remove Other Room Selection</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230703 17:59:24.731" endtime="20230703 17:59:24.732"/>
+</kw>
+<status status="PASS" starttime="20230703 17:59:20.893" endtime="20230703 17:59:24.732"/>
+</kw>
+<kw name="Click Continue to Extras Button" library="booking">
+<doc>Clicks the continue to extras button</doc>
+<kw name="Click" library="Browser">
+<arg>${btnExtras}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20230703 18:00:54.896" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230703 18:00:54.896" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/0/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230703 18:00:54.897" level="FAIL">TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<status status="FAIL" starttime="20230703 17:59:24.733" endtime="20230703 18:00:54.898"/>
+</kw>
+<kw name="Wait Until Visible" library="common">
+<arg>${btnPayment}</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<status status="NOT RUN" starttime="20230703 18:00:54.899" endtime="20230703 18:00:54.899"/>
+</kw>
+<status status="FAIL" starttime="20230703 17:59:24.732" endtime="20230703 18:00:54.900"/>
+</kw>
+<kw name="Continue to Payment" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.900" endtime="20230703 18:00:54.900"/>
+</kw>
+<kw name="Select Join for Free" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.900" endtime="20230703 18:00:54.901"/>
+</kw>
+<kw name="Fill in Contact Information" library="booking">
+<doc>TBD: Use test data instead of hardcoded values</doc>
+<status status="NOT RUN" starttime="20230703 18:00:54.901" endtime="20230703 18:00:54.901"/>
+</kw>
+<kw name="Accept offers and Terms" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.901" endtime="20230703 18:00:54.901"/>
+</kw>
+<kw name="Select Web Bank and Nordea as Payment Method" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.901" endtime="20230703 18:00:54.902"/>
+</kw>
+<kw name="Complete Payment Successfully" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.902" endtime="20230703 18:00:54.902"/>
+</kw>
+<kw name="Click Check In Button" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.902" endtime="20230703 18:00:54.902"/>
+</kw>
+<kw name="Fill Check in Slide" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.902" endtime="20230703 18:00:54.902"/>
+</kw>
+<kw name="Click Save and Sign Button and Sign if Required" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.903" endtime="20230703 18:00:54.903"/>
+</kw>
+<kw name="Complete Check in" library="booking">
+<status status="NOT RUN" starttime="20230703 18:00:54.903" endtime="20230703 18:00:54.903"/>
+</kw>
+<kw name="Wait Until Door Code is Available" library="checkin">
+<status status="NOT RUN" starttime="20230703 18:00:54.903" endtime="20230703 18:00:54.903"/>
+</kw>
+<kw name="Check Door Code and verify it is not empty" library="checkin">
+<status status="NOT RUN" starttime="20230703 18:00:54.904" endtime="20230703 18:00:54.904"/>
+</kw>
+<kw name="Verify Page Elements after Check-in" library="checkin">
+<status status="NOT RUN" starttime="20230703 18:00:54.904" endtime="20230703 18:00:54.904"/>
+</kw>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230703 17:59:18.351" endtime="20230703 18:00:54.905">TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230703 18:00:55.462" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230703 18:00:54.909" endtime="20230703 18:00:55.463"/>
+</kw>
+<status status="FAIL" starttime="20230703 17:59:07.637" endtime="20230703 18:00:55.463"/>
+</suite>
+<status status="FAIL" starttime="20230703 17:59:07.635" endtime="20230703 18:00:55.469"/>
+</suite>
+<status status="FAIL" starttime="20230703 17:59:07.634" endtime="20230703 18:00:55.470"/>
+</suite>
+<status status="FAIL" starttime="20230703 17:59:07.632" endtime="20230703 18:00:55.471"/>
+</suite>
+<doc>Argument file for running tests on Omena test environmen (test4)</doc>
+<status status="FAIL" starttime="20230703 17:59:07.613" endtime="20230703 18:00:55.472"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">smoke, booking, BUI2-556, online-checkin</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="BUI">Testsuites.BUI</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Feature">Testsuites.BUI.Feature</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Online Check In">Testsuites.BUI.Feature.Online Check In</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="BUI2-556">Testsuites.BUI.Feature.Online Check In.BUI2-556</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230703 17:59:08.284" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource' on line 14: Setting variable '${MUI_PASSWORD}' failed: Environment variable '%{MUI_PASSWORD}' not found.</msg>
+<msg timestamp="20230703 17:59:08.285" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource' on line 13: Setting variable '${MUI_USERNAME}' failed: Environment variable '%{MUI_USERNAME}' not found.</msg>
+</errors>
+</robot>

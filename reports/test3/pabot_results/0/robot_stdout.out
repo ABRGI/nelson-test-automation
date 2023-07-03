@@ -1,0 +1,61 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.BUI                                                                
+==============================================================================
+Testsuites.BUI.Feature                                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In.BUI2-556                               
+==============================================================================
+Create a new booking, check-in and verify door code is displayed      Not yet implemented
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-556.robot:13
+    T:  Create a new booking, check-in and verify door code is displayed    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-556.robot:20
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Testsuites.BUI.Feature.Online Check In.BUI2-556                       | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Testsuites.BUI.Feature                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Testsuites.BUI                                                        | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/0/output.xml

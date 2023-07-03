@@ -1,0 +1,25 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.BUI                                                                
+==============================================================================
+Testsuites.BUI.Regression                                                     
+==============================================================================
+Testsuites.BUI.Regression.Modify Booking :: A test suite for verifying modi...
+==============================================================================
+A new booker opens the edit guest page and changes the main guest ... | PASS |
+TBD
+------------------------------------------------------------------------------
+Testsuites.BUI.Regression.Modify Booking :: A test suite for verif... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Testsuites.BUI.Regression                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Testsuites.BUI                                                        | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/4/output.xml

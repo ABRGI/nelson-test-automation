@@ -1,0 +1,65 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.BUI                                                                
+==============================================================================
+Testsuites.BUI.Regression                                                     
+==============================================================================
+Testsuites.BUI.Regression.New Booking :: A test suite for verifying modify ...
+==============================================================================
+Create A New Booking :: A new booker opens the page and does a suc... Not yet implemented
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/new_booking.robot:12
+    T:  Create A New Booking    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/new_booking.robot:19
+      Click Continue to Extras Button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:196
+      Click    ${btnExtras}
+      |  ${btnExtras} = (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Confirm Email and Open Link :: A new booker receives an email with...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/new_booking.robot:27
+    T:  Confirm Email and Open Link    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/new_booking.robot:30
+      Wait for Latest Booking Confirmation    ${id}
+      |  ${id} = None (NoneType)
+______________________________________________________________________________
+| FAIL |
+ApiValueError: Missing the required parameter `inbox_id` when calling `wait_for_matching_emails`
+------------------------------------------------------------------------------
+Testsuites.BUI.Regression.New Booking :: A test suite for verifyin... | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Testsuites.BUI.Regression                                             | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Testsuites.BUI                                                        | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/5/output.xml
