@@ -9,10 +9,26 @@ Library            Process
 
 *** Keywords ***
 
+Check URL Contains
+    [Arguments]    ${expected_string}
+    ${current_url}=    Get URL
+    IF    '${expected_string}' in '${current_url}'    
+        Log    URL contains the expected string: ${expected_string}
+        ${urlContains}      Set Variable    True
+    ELSE    
+        Log    URL does not contain the expected string: ${expected_string}
+        ${urlContains}      Set Variable    False
+    END
+    [Return]    ${urlContains}
+
 Is Element Visible
     [Arguments]  ${selector}
     ${isVisible}=     Get Element States    ${selector}    then    bool(value & visible) 
     [Return]    ${isVisible}
+
+Get Inbox ID
+    Log To Console      Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8
+    [Return]    492aa3bb-9e4b-410a-a02c-84f13ace89e8
 
 Create Email and Return Inbox
     [Documentation]    Creates a new email address and returns the inbox object
@@ -90,7 +106,6 @@ Open Browser to Landing Page
     New Page       ${url}
     Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
-    Get Title      contains     Cheap hotels in Helsinki
     Allow Cookies 
 
 Open Browser Directly to Extras
@@ -102,8 +117,12 @@ Open Browser Directly to Extras
 
 Allow Cookies 
     [Documentation]    Allow Cookies/Toggle Cookie allowance
-    #TBD: This should be conditional so it won't fail if not shown
-    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    ${cookieModalVisible} =     Is Element Found        id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    IF     ${cookieModalVisible}
+        Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    ELSE
+        Log     No Cookie Modal Visible
+    END
 
 Click and Fill
     [Documentation]     A keyword combination of Click and Fill Text since most of the form fields need a click

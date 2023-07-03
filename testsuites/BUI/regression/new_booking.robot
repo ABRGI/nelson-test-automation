@@ -11,7 +11,7 @@ Documentation      A test suite for verifying modify booking functionality
 
 Create A New Booking
     [Documentation]    A new booker opens the page and does a successful booking
-    Select Hotel     Helsinki, Lönnrotinkatu
+    Select Hotel     
     Select Dates
     Select Guests
     Click Book Button

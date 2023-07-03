@@ -5,17 +5,25 @@ Resource          ${EXECDIR}/resources/variables/variables.resource
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
 Library           Browser    auto_closing_level=SUITE
-Library           String
+Library           RequestsLibrary
 
 *** Keywords ***
+
+Get Environment
+    ${currentUrl}=     Get Url
+    ${env}=        Get Environment From Url    ${currentUrl}
+    Log To Console        ${env}
+    [Return]    ${env}
 
 Complete a new booking
     [Documentation]    A complete booking process from start to finish
     ...                This is currently duplicate to "Create a new booking" test case 
-    Open Browser to Landing Page
+    [Arguments]        ${isBrowserOpen}=False
+    Run Keyword If    '${isBrowserOpen}'=='False'        Open Browser to Landing Page
     Select Hotel
     Select Dates
     Select Guests
+    Click Find Rooms Button
     Click Book Button
     Select a Standard Room
     Click Continue to Extras Button
@@ -61,7 +69,10 @@ Toggle Someone Else Checkbox
 
 Click Book Button 
     Click            //div[@data-nelson-btn='book']
-    
+
+Click Find Rooms Button 
+    Click             //button[contains(text(), 'Find rooms')]
+
 Click Cancel
     [Documentation]    Clicks the cancel button
     Click    //footer/button[text()="Cancel"]
@@ -109,10 +120,8 @@ Marks the "Someone else will be the main guest" checkbox as <value>
 Select Guests
     [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
     [Documentation]    Selects the number of guests for the booking, current implementation will only check the dropdown
-    Wait Until Visible    //div[contains(@data-nelson-btn, 'guests')]
-    Click    //div[contains(@data-nelson-btn, 'guests')]
-    #Click    //div[contains(@data-nelson-btn, 'guests')]
-    # Click    (//button[contains(@data-nelson-guests-add, 'rooms')])[1]
+    #Wait Until Visible    //*[local-name() = 'svg' and contains(@data-icon, 'user-group')]
+    Log to Console        Not yet implemented
 
 Select 1 Room 2 Adult and 1 Children
     Wait Until Visible    //div[contains(@data-nelson-btn, 'guests')]
@@ -140,30 +149,40 @@ Choose Dates and Guests
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
-    Log    Selecting Hotel: ${hotel}
-    Click    //div[contains(@data-nelson-btn, "hotels")]
-    Wait Until Visible    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
-    Click    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
-    Wait For Elements State    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]    hidden    timeout=3s
+    ${env} =    Get Environment
+    IF         "${env}" == "test-exhibition"
+        Log   No hotel to be selected    
+    ELSE
+        Log    Selecting Hotel: ${hotel}
+        Click    //div[contains(@data-nelson-btn, "hotels")]
+        Wait Until Visible    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
+        Click    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]
+        Wait For Elements State    //a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]    hidden    timeout=3s
+    END
 
 Select Dates
     [Documentation]    A keyword for selecting dates for booking
     # TODO: Currently this selects the first available date, should be changed to select a date in the future
     # Could be improved
-    Click    //div[contains(@class, 'booking-form-dates')]
-    ${container}=    Get Element    //div[@class="container__months"]
-    ${html}=    Get Property    ${container}    innerHTML
-    Log    ${html}
-    @{elements}=    Get Elements    //div[@class="day-item"]
-    ${selected}=    Set Variable    1
-    FOR    ${e}    IN    @{elements}
-        ${visibility}=    Get Element States    ${e}    then    value & (visible | hidden)
-        IF    ${visibility} == 'visible'
-        Click    ${e}
-        ${selected}=    Set Variable    ${selected} + 1
-    END
-    ${both}=    Evaluate    ${selected} > 2
-    Exit For Loop If    ${both}
+    IF    '${url}' == 'https://test-exhibition.bookn.io/en/booking/'
+        Log     Skipping date selection for now
+    ELSE
+        Click First Element Found     //*[local-name() = 'svg' and contains(@data-icon, 'calendar-days')]
+        #Click    //div[contains(@class, 'booking-form-dates')]
+        ${container}=    Get Element    //div[@class="container__months"]
+        ${html}=    Get Property    ${container}    innerHTML
+        Log    ${html}
+        @{elements}=    Get Elements    //div[@class="day-item"]
+        ${selected}=    Set Variable    1
+        FOR    ${e}    IN    @{elements}
+            ${visibility}=    Get Element States    ${e}    then    value & (visible | hidden)
+            IF    ${visibility} == 'visible'
+            Click    ${e}
+            ${selected}=    Set Variable    ${selected} + 1
+        END
+        ${both}=    Evaluate    ${selected} > 2
+        Exit For Loop If    ${both}
+        END
     END
 
 Click Continue to Payment 
@@ -324,7 +343,8 @@ Verify Confirmation Email is Received
     Open New Browser To URL    ${link}
 
 Create a successful booking and return UUID
-    Complete a new booking
+    [Arguments]    ${isBrowserOpen}=False  
+    Complete a new booking    ${isBrowserOpen}
     Wait Until Network Is Idle
     ${url}       Get Url
     ${uuid}=     Extract Guid From Url    ${url}

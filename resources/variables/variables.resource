@@ -4,7 +4,7 @@ ${timeout}        90s
 ${firstName}      Mos
 ${lastName}       Def
 ${headless}       False
-${url}            https://test4.omenahotels.com/
+${url}            https://test-exhibition.bookn.io/en/booking/
 ${emailUsername}  nelsontestar
 ${emailDomain}    gmail.com
 ${fullEmail}          ${emailUsername}@${emailDomain}
@@ -26,4 +26,5 @@ ${guestEmail}     shinsuke@gmail.com
 ${childFirstname}   Dong
 ${childLastname}    Dong
 ${chilDateofbirth}  05/06/2022
- 
+${hotelName}      Helsinki, Lönnrotinkatu
+${longer}         90s

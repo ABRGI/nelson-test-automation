@@ -1,8 +1,7 @@
 *** Settings ***
-Library            ../resources/libraries/Helpers.py
-Resource           ../resources/variables/variables.resource
-Resource           ../resources/keywords/booking.resource
-Library            Browser
+Library            ${EXECDIR}/resources/libraries/Helpers.py
+Resource           ${EXECDIR}/resources/variables/variables.resource
+Resource           ${EXECDIR}/resources/keywords/booking.resource
 Documentation      A test suite for verifying modify booking functionality
 Suite Setup        Open Browser to Landing Page 
 Test Setup

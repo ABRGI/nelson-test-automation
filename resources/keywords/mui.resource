@@ -9,7 +9,9 @@ Resource          ${EXECDIR}/resources/keywords/booking.resource
 *** Variables ***
 
 ${muiResultTable}     //table[contains(@class, 'custom-table')]
-
+${environment}        Test (2) Omena
+${MUI_USERNAME}        %{MUI_USERNAME}
+${MUI_PASSWORD}        %{MUI_PASSWORD}
 *** Keywords ***
 
 Select Environment   
@@ -20,18 +22,26 @@ Select Environment
 Open Browser to Nelson Portal and Login
     Open Browser to Nelson Portal
     Log in to Nelson Portal
-    Select Environment    %{TEST_ENV}
+    Select Environment    ${environment}
+
+Open Browser to Nelson Portal and Navigate to Test Exhibition
+    Open Browser to Nelson Portal
+    Log in to Nelson Portal
+    Select Environment    Test Exhibition
 
 Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context
-    New Page        %{TEST_ENV}
+    New Page        %{MUI_URL}
 
 Log in to Nelson Portal
-    Type Secret    //*[@id='email']         %{MUI_USERNAME}
-    Type Secret    //*[@id='password']      %{MUI_PASSWORD}
+    Type Secret    //*[@id='email']         $MUI_USERNAME
+    Type Secret  //*[@id='password']      $MUI_PASSWORD
     Click    //button[contains(text(),'Sign in')]
+
+Click First Search Result Row 
+    Click     (//tr)[1]
 
 Assert Reservationd View is Open 
     [Arguments]    ${filter}
@@ -54,17 +64,35 @@ Create Booking, Check in and get UUID
     Set suite variable    ${bookingUUID}    ${uuid}
     Click Check In Button
     Fill Check in Slide
-    Click Save and Sign Button
-    Sign
+    Click Save and Sign Button and Sign if Required
     Complete Check in
     Close Browser
 
-Open reservations page
-    Pass Execution    Add code
+Open Reservations Page
+    Click     //ul[@class='nav']/li/a[@href='#/reservations']
+
+Click New Reservation Button 
+    Click     //button[contains(text(), 'New Reservation')]
+
+Select Normal Reservation 
+    Click       (//input[@name='type-selection'])[1]
+    Click       //button[contains(text(),'Create')]
+
+Select Group Reservation
+    Click       (//input[@name='type-selection'])[2]
+    Click       //button[contains(text(),'Create')]
+
+Search with String
+    [Arguments]    ${searchText}
+    Click         //input[contains(@class, "searchQuery")]
+    Sleep     2s
+    Fill Text    //input[contains(@class, "searchQuery")]     ${searchText}
+    Sleep     2s
+    Click Search Button
 
 Click Search Button  
     Click      //button[contains(text(), 'Search')]
-    Wait Until Network Is Idle
+    Wait Until Visible    //th[contains(@class, 'sortActive')]
 
 Toggle Check in incomplete filter button
     Toggle Filter   incomplete
@@ -159,3 +187,7 @@ Find Room
 
 Log out of Nelson In BUI Confirmation Page
     Click    //p[normalize-space()='Sign out']
+
+# Reservation page - should be moved to a separate resource file 
+Click View Guests Button
+    Click         //button[contains(text(), " View guests")]
