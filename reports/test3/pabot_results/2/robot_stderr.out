@@ -1,2 +1,0 @@
-[ ERROR ] Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource' on line 14: Setting variable '${MUI_PASSWORD}' failed: Environment variable '%{MUI_PASSWORD}' not found.
-[ ERROR ] Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource' on line 13: Setting variable '${MUI_USERNAME}' failed: Environment variable '%{MUI_USERNAME}' not found.
