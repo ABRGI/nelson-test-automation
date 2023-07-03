@@ -4,7 +4,7 @@ ${timeout}        90s
 ${firstName}      Mos
 ${lastName}       Def
 ${headless}       False
-${url}            https://test4.omenahotels.com/
+${url}            https://test-exhibition.bookn.io/en/booking/
 ${emailUsername}  nelsontestar
 ${emailDomain}    gmail.com
 ${fullEmail}          ${emailUsername}@${emailDomain}
@@ -20,3 +20,5 @@ ${inbox_id}
 ${bookingUUID}
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
+${hotelName}      Helsinki, Lönnrotinkatu
+${longer}         90s

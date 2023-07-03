@@ -35,17 +35,14 @@ class MailSlurp(object):
             return email
 
     @keyword("Wait for Latest Booking Confirmation")
-    def wait_for_latest_booking_confirmation(self, inbox_id):
-        search_text="confirmation"
+    def wait_for_latest_booking_confirmation(self, inbox_id, search_text="confirmation"):
         with mailslurp_client.ApiClient(self.configuration) as api_client:
             api_instance = mailslurp_client.WaitForControllerApi(api_client)
             match_options = {'matches': [{'field': 'SUBJECT','should':'CONTAIN','value':f'{search_text}'}]}
-            emails = api_instance.wait_for_matching_emails(inbox_id=inbox_id, match_options=match_options, timeout=60000, unread_only=False, count=2)
+            emails = api_instance.wait_for_matching_emails(inbox_id=inbox_id, match_options=match_options, timeout=60000, unread_only=False, count=1)
             for e in emails:
-                # TODO: currently only checks for the sender, needs to be changed when environments are set up
-                if 'noreply-test4' in e._from:
-                    email = self.email_client.get_email_html(email_id=e.id)
-                    return email
+                email = self.email_client.get_email_html(email_id=e.id)
+                return email
         
     @keyword("Extract Link")
     def extract_link(self, email_body, action='MANAGE'):
@@ -56,4 +53,17 @@ class MailSlurp(object):
                 if(action in l.text):
                     return l.attrs['href']
         
+    @keyword("Get Confirmation Number from Email")
+    def get_confirmation_number_from_email(self, email):
+        soup = BeautifulSoup(email , "html.parser")
+        td = soup.find_all('td')[5]
+        bno = td.string
+        bno = bno.strip()
+        return bno
+        
+if __name__ == '__main__':
+    m = MailSlurp()
+    e = m.wait_for_latest_booking_confirmation('492aa3bb-9e4b-410a-a02c-84f13ace89e8', 'Welcome to Exhibition')
+    bn = m.get_confirmation_number_from_email(e)
+    
 
