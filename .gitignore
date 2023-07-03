@@ -23,3 +23,5 @@ gmail_token.json
 ./report.html
 dockerfile
 tmp/
+*.out
+pabot_results/
