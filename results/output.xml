@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230703 16:20:14.240" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230703 20:53:01.110" rpa="false" schemaversion="3">
 <suite id="s1" name="Nelson-Ta" source="/Users/saragilbert/Code/SQA/nelson-ta">
 <suite id="s1-s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
 <suite id="s1-s1-s1" name="BUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI">
@@ -15,23 +15,23 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 16:20:29.618" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/2145ae9e-fa6a-461d-b44c-1a896bb2957b"}</msg>
-<msg timestamp="20230703 16:20:30.848" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/2145ae9e-fa6a-461d-b44c-1a896bb2957b"}</msg>
-<status status="PASS" starttime="20230703 16:20:29.610" endtime="20230703 16:20:30.849"/>
+<msg timestamp="20230703 20:53:06.718" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/854d3800-52bc-4fe1-9275-7b96f3a030f2"}</msg>
+<msg timestamp="20230703 20:53:08.403" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/854d3800-52bc-4fe1-9275-7b96f3a030f2"}</msg>
+<status status="PASS" starttime="20230703 20:53:06.716" endtime="20230703 20:53:08.404"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:20:30.915" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230703 16:20:30.853" endtime="20230703 16:20:30.916"/>
+<msg timestamp="20230703 20:53:08.411" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230703 20:53:08.404" endtime="20230703 20:53:08.412"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 16:20:30.920" level="INFO">{
+<msg timestamp="20230703 20:53:08.414" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -41,28 +41,28 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230703 16:20:31.152" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 16:20:31.152" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 16:20:30.918" endtime="20230703 16:20:31.153"/>
+<msg timestamp="20230703 20:53:08.474" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230703 20:53:08.475" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230703 20:53:08.413" endtime="20230703 20:53:08.475"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230703 16:20:35.443" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
-<status status="PASS" starttime="20230703 16:20:31.154" endtime="20230703 16:20:35.444"/>
+<msg timestamp="20230703 20:53:18.308" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
+<status status="PASS" starttime="20230703 20:53:08.477" endtime="20230703 20:53:18.308"/>
 </kw>
 <kw name="Wait Until Network Is Idle" library="Browser">
 <tag>HTTP</tag>
 <tag>Wait</tag>
 <doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230703 16:20:35.447" endtime="20230703 16:20:36.687"/>
+<status status="PASS" starttime="20230703 20:53:18.309" endtime="20230703 20:53:18.985"/>
 </kw>
 <kw name="Allow Cookies" library="common">
 <doc>Allow Cookies/Toggle Cookie allowance</doc>
@@ -77,8 +77,8 @@ Can be solved differently if you have a better idea</doc>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:20:36.700" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" starttime="20230703 16:20:36.693" endtime="20230703 16:20:36.701"/>
+<msg timestamp="20230703 20:53:18.989" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" starttime="20230703 20:53:18.987" endtime="20230703 20:53:18.990"/>
 </kw>
 <try>
 <branch type="TRY">
@@ -89,17 +89,17 @@ Can be solved differently if you have a better idea</doc>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<msg timestamp="20230703 16:20:36.765" level="INFO">Found 1 Locators successfully.</msg>
-<msg timestamp="20230703 16:20:36.766" level="INFO">${els} = ['element=89661a49-f61a-4055-a2ce-07b8a5f27770']</msg>
-<status status="PASS" starttime="20230703 16:20:36.706" endtime="20230703 16:20:36.767"/>
+<msg timestamp="20230703 20:53:19.031" level="INFO">Found 1 Locators successfully.</msg>
+<msg timestamp="20230703 20:53:19.032" level="INFO">${els} = ['element=ef8097c5-0a2f-4efd-b183-a6c317d6499d']</msg>
+<status status="PASS" starttime="20230703 20:53:18.991" endtime="20230703 20:53:19.032"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${count}</var>
 <arg>${els}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230703 16:20:36.771" level="INFO">Length is 1</msg>
-<msg timestamp="20230703 16:20:36.772" level="INFO">${count} = 1</msg>
-<status status="PASS" starttime="20230703 16:20:36.769" endtime="20230703 16:20:36.772"/>
+<msg timestamp="20230703 20:53:19.033" level="INFO">Length is 1</msg>
+<msg timestamp="20230703 20:53:19.033" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20230703 20:53:19.032" endtime="20230703 20:53:19.034"/>
 </kw>
 <if>
 <branch type="IF" condition="${count} &gt; 0">
@@ -107,45 +107,45 @@ for all matched elements by ``selector``.</doc>
 <var>${visible}</var>
 <arg>True</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 16:20:36.783" level="INFO">${visible} = True</msg>
-<status status="PASS" starttime="20230703 16:20:36.781" endtime="20230703 16:20:36.783"/>
+<msg timestamp="20230703 20:53:19.035" level="INFO">${visible} = True</msg>
+<status status="PASS" starttime="20230703 20:53:19.034" endtime="20230703 20:53:19.035"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:36.779" endtime="20230703 16:20:36.784"/>
+<status status="PASS" starttime="20230703 20:53:19.034" endtime="20230703 20:53:19.035"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Variable" library="BuiltIn">
 <var>${visible}</var>
 <arg>False</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 16:20:36.786" endtime="20230703 16:20:36.787"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.036" endtime="20230703 20:53:19.036"/>
 </kw>
-<status status="NOT RUN" starttime="20230703 16:20:36.785" endtime="20230703 16:20:36.788"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.035" endtime="20230703 20:53:19.036"/>
 </branch>
-<status status="PASS" starttime="20230703 16:20:36.773" endtime="20230703 16:20:36.789"/>
+<status status="PASS" starttime="20230703 20:53:19.034" endtime="20230703 20:53:19.036"/>
 </if>
-<status status="PASS" starttime="20230703 16:20:36.705" endtime="20230703 16:20:36.789"/>
+<status status="PASS" starttime="20230703 20:53:18.990" endtime="20230703 20:53:19.036"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" library="BuiltIn">
 <var>${visible}</var>
 <arg>False</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 16:20:36.791" endtime="20230703 16:20:36.794"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.037" endtime="20230703 20:53:19.037"/>
 </kw>
-<status status="NOT RUN" starttime="20230703 16:20:36.790" endtime="20230703 16:20:36.794"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.036" endtime="20230703 20:53:19.037"/>
 </branch>
-<status status="PASS" starttime="20230703 16:20:36.702" endtime="20230703 16:20:36.795"/>
+<status status="PASS" starttime="20230703 20:53:18.990" endtime="20230703 20:53:19.037"/>
 </try>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:20:36.803" level="INFO">Set timeout to: 30000</msg>
-<status status="PASS" starttime="20230703 16:20:36.796" endtime="20230703 16:20:36.804"/>
+<msg timestamp="20230703 20:53:19.040" level="INFO">Set timeout to: 30000</msg>
+<status status="PASS" starttime="20230703 20:53:19.037" endtime="20230703 20:53:19.041"/>
 </kw>
-<msg timestamp="20230703 16:20:36.806" level="INFO">${cookieModalVisible} = True</msg>
-<status status="PASS" starttime="20230703 16:20:36.691" endtime="20230703 16:20:36.806"/>
+<msg timestamp="20230703 20:53:19.041" level="INFO">${cookieModalVisible} = True</msg>
+<status status="PASS" starttime="20230703 20:53:18.986" endtime="20230703 20:53:19.041"/>
 </kw>
 <if>
 <branch type="IF" condition="${cookieModalVisible}">
@@ -154,21 +154,21 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:36.809" endtime="20230703 16:20:36.899"/>
+<status status="PASS" starttime="20230703 20:53:19.042" endtime="20230703 20:53:19.128"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:36.808" endtime="20230703 16:20:36.899"/>
+<status status="PASS" starttime="20230703 20:53:19.042" endtime="20230703 20:53:19.128"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" library="BuiltIn">
 <arg>No Cookie Modal Visible</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 16:20:36.901" endtime="20230703 16:20:36.902"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.129" endtime="20230703 20:53:19.129"/>
 </kw>
-<status status="NOT RUN" starttime="20230703 16:20:36.900" endtime="20230703 16:20:36.903"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.129" endtime="20230703 20:53:19.130"/>
 </branch>
-<status status="PASS" starttime="20230703 16:20:36.807" endtime="20230703 16:20:36.903"/>
+<status status="PASS" starttime="20230703 20:53:19.042" endtime="20230703 20:53:19.130"/>
 </if>
-<status status="PASS" starttime="20230703 16:20:36.689" endtime="20230703 16:20:36.904"/>
+<status status="PASS" starttime="20230703 20:53:18.986" endtime="20230703 20:53:19.130"/>
 </kw>
 <kw name="Set Environment" library="common">
 <kw name="Get Url" library="Browser">
@@ -177,24 +177,24 @@ for all matched elements by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<msg timestamp="20230703 16:20:36.913" level="INFO">${currentUrl} = https://test4.omenahotels.com/en/</msg>
-<status status="PASS" starttime="20230703 16:20:36.907" endtime="20230703 16:20:36.913"/>
+<msg timestamp="20230703 20:53:19.133" level="INFO">${currentUrl} = https://test4.omenahotels.com/en/</msg>
+<status status="PASS" starttime="20230703 20:53:19.131" endtime="20230703 20:53:19.133"/>
 </kw>
 <kw name="Get Environment From Url" library="Helpers">
 <var>${env}</var>
 <arg>${currentUrl}</arg>
-<msg timestamp="20230703 16:20:36.917" level="INFO">${env} = test-omena</msg>
-<status status="PASS" starttime="20230703 16:20:36.915" endtime="20230703 16:20:36.918"/>
+<msg timestamp="20230703 20:53:19.134" level="INFO">${env} = test-omena</msg>
+<status status="PASS" starttime="20230703 20:53:19.133" endtime="20230703 20:53:19.134"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <arg>${environment}</arg>
 <arg>${env}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" starttime="20230703 16:20:36.919" endtime="20230703 16:20:36.921"/>
+<status status="PASS" starttime="20230703 20:53:19.135" endtime="20230703 20:53:19.135"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:36.905" endtime="20230703 16:20:36.922"/>
+<status status="PASS" starttime="20230703 20:53:19.130" endtime="20230703 20:53:19.136"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:29.602" endtime="20230703 16:20:36.924"/>
+<status status="PASS" starttime="20230703 20:53:06.714" endtime="20230703 20:53:19.136"/>
 </kw>
 <test id="s1-s1-s1-s1-s1-s1-t1" name="Create a new booking, check-in and verify door code is displayed" line="13">
 <kw name="Select Hotel" library="booking">
@@ -205,23 +205,23 @@ for all matched elements by ``selector``.</doc>
 <kw name="Log" library="BuiltIn">
 <arg>No hotel to be selected</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 16:20:36.937" endtime="20230703 16:20:36.938"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.140" endtime="20230703 20:53:19.140"/>
 </kw>
-<status status="NOT RUN" starttime="20230703 16:20:36.936" endtime="20230703 16:20:36.939"/>
+<status status="NOT RUN" starttime="20230703 20:53:19.140" endtime="20230703 20:53:19.141"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" library="BuiltIn">
 <arg>Selecting Hotel: ${hotel}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230703 16:20:36.942" level="INFO">Selecting Hotel: Helsinki, Lönnrotinkatu</msg>
-<status status="PASS" starttime="20230703 16:20:36.940" endtime="20230703 16:20:36.942"/>
+<msg timestamp="20230703 20:53:19.142" level="INFO">Selecting Hotel: Helsinki, Lönnrotinkatu</msg>
+<status status="PASS" starttime="20230703 20:53:19.141" endtime="20230703 20:53:19.142"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//div[contains(@data-nelson-btn, "hotels")]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:36.943" endtime="20230703 16:20:37.111"/>
+<status status="PASS" starttime="20230703 20:53:19.142" endtime="20230703 20:53:19.233"/>
 </kw>
 <kw name="Wait Until Visible" library="common">
 <arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
@@ -233,17 +233,17 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:37.132" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:37.116" endtime="20230703 16:20:37.132"/>
+<msg timestamp="20230703 20:53:19.242" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:19.234" endtime="20230703 20:53:19.242"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:37.113" endtime="20230703 16:20:37.134"/>
+<status status="PASS" starttime="20230703 20:53:19.233" endtime="20230703 20:53:19.242"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:37.136" endtime="20230703 16:20:37.252"/>
+<status status="PASS" starttime="20230703 20:53:19.243" endtime="20230703 20:53:19.479"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
@@ -252,32 +252,32 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:37.267" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state hidden</msg>
-<status status="PASS" starttime="20230703 16:20:37.254" endtime="20230703 16:20:37.268"/>
+<msg timestamp="20230703 20:53:19.494" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state hidden</msg>
+<status status="PASS" starttime="20230703 20:53:19.480" endtime="20230703 20:53:19.494"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:36.939" endtime="20230703 16:20:37.269"/>
+<status status="PASS" starttime="20230703 20:53:19.141" endtime="20230703 20:53:19.495"/>
 </branch>
-<status status="PASS" starttime="20230703 16:20:36.935" endtime="20230703 16:20:37.269"/>
+<status status="PASS" starttime="20230703 20:53:19.139" endtime="20230703 20:53:19.495"/>
 </if>
-<status status="PASS" starttime="20230703 16:20:36.933" endtime="20230703 16:20:37.270"/>
+<status status="PASS" starttime="20230703 20:53:19.138" endtime="20230703 20:53:19.495"/>
 </kw>
 <kw name="Select Dates" library="booking">
 <kw name="Log" library="BuiltIn">
 <arg>Skipping date selection for now</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230703 16:20:37.276" level="INFO">Skipping date selection for now</msg>
-<status status="PASS" starttime="20230703 16:20:37.275" endtime="20230703 16:20:37.277"/>
+<msg timestamp="20230703 20:53:19.497" level="INFO">Skipping date selection for now</msg>
+<status status="PASS" starttime="20230703 20:53:19.497" endtime="20230703 20:53:19.498"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:37.273" endtime="20230703 16:20:37.278"/>
+<status status="PASS" starttime="20230703 20:53:19.496" endtime="20230703 20:53:19.498"/>
 </kw>
 <kw name="Select Guests" library="booking">
 <doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Not yet implemented</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230703 16:20:37.288" endtime="20230703 16:20:37.291"/>
+<status status="PASS" starttime="20230703 20:53:19.500" endtime="20230703 20:53:19.502"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:37.282" endtime="20230703 16:20:37.293"/>
+<status status="PASS" starttime="20230703 20:53:19.499" endtime="20230703 20:53:19.503"/>
 </kw>
 <kw name="Click Book Button" library="booking">
 <kw name="Click" library="Browser">
@@ -285,9 +285,9 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:37.299" endtime="20230703 16:20:37.702"/>
+<status status="PASS" starttime="20230703 20:53:19.504" endtime="20230703 20:53:19.742"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:37.295" endtime="20230703 16:20:37.704"/>
+<status status="PASS" starttime="20230703 20:53:19.503" endtime="20230703 20:53:19.743"/>
 </kw>
 <kw name="Select a Standard Room" library="booking">
 <kw name="Wait Until Visible" library="common">
@@ -300,10 +300,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:40.255" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:37.711" endtime="20230703 16:20:40.256"/>
+<msg timestamp="20230703 20:53:22.340" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:19.745" endtime="20230703 20:53:22.341"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:37.708" endtime="20230703 16:20:40.258"/>
+<status status="PASS" starttime="20230703 20:53:19.744" endtime="20230703 20:53:22.341"/>
 </kw>
 <kw name="Get Element States" library="Browser">
 <var>${visible}</var>
@@ -314,16 +314,16 @@ for all matched elements by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230703 16:20:40.520" level="INFO">${visible} = False</msg>
-<status status="PASS" starttime="20230703 16:20:40.259" endtime="20230703 16:20:40.521"/>
+<msg timestamp="20230703 20:53:22.596" level="INFO">${visible} = False</msg>
+<status status="PASS" starttime="20230703 20:53:22.342" endtime="20230703 20:53:22.596"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${visible}</arg>
 <arg>Select Standard and Remove Other Room Selection</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20230703 16:20:40.523" endtime="20230703 16:20:40.526"/>
+<status status="PASS" starttime="20230703 20:53:22.597" endtime="20230703 20:53:22.597"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:37.705" endtime="20230703 16:20:40.528"/>
+<status status="PASS" starttime="20230703 20:53:19.743" endtime="20230703 20:53:22.598"/>
 </kw>
 <kw name="Click Continue to Extras Button" library="booking">
 <doc>Clicks the continue to extras button</doc>
@@ -332,7 +332,7 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:40.534" endtime="20230703 16:20:45.954"/>
+<status status="PASS" starttime="20230703 20:53:22.599" endtime="20230703 20:53:27.081"/>
 </kw>
 <kw name="Wait Until Visible" library="common">
 <arg>${btnPayment}</arg>
@@ -344,12 +344,12 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:46.906" level="INFO">Waited for Element with selector (//div[contains(@view,"extras")]//button[contains(text(), "Continue to payment")])[1] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:45.957" endtime="20230703 16:20:46.907"/>
+<msg timestamp="20230703 20:53:27.955" level="INFO">Waited for Element with selector (//div[contains(@view,"extras")]//button[contains(text(), "Continue to payment")])[1] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:27.082" endtime="20230703 20:53:27.955"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:45.955" endtime="20230703 16:20:46.908"/>
+<status status="PASS" starttime="20230703 20:53:27.081" endtime="20230703 20:53:27.956"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:40.530" endtime="20230703 16:20:46.910"/>
+<status status="PASS" starttime="20230703 20:53:22.598" endtime="20230703 20:53:27.956"/>
 </kw>
 <kw name="Continue to Payment" library="booking">
 <kw name="Click" library="Browser">
@@ -357,9 +357,9 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:46.914" endtime="20230703 16:20:47.123"/>
+<status status="PASS" starttime="20230703 20:53:27.959" endtime="20230703 20:53:28.072"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:46.912" endtime="20230703 16:20:47.125"/>
+<status status="PASS" starttime="20230703 20:53:27.957" endtime="20230703 20:53:28.072"/>
 </kw>
 <kw name="Select Join for Free" library="booking">
 <kw name="Wait Until Visible" library="common">
@@ -372,10 +372,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:48.385" level="INFO">Waited for Element with selector //input[@value='memberRate' and @checked=''] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:47.132" endtime="20230703 16:20:48.386"/>
+<msg timestamp="20230703 20:53:29.387" level="INFO">Waited for Element with selector //input[@value='memberRate' and @checked=''] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:28.076" endtime="20230703 20:53:29.387"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:47.129" endtime="20230703 16:20:48.388"/>
+<status status="PASS" starttime="20230703 20:53:28.075" endtime="20230703 20:53:29.388"/>
 </kw>
 <kw name="Wait Until Visible" library="common">
 <arg>//div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]</arg>
@@ -387,12 +387,12 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:48.507" level="INFO">Waited for Element with selector //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:48.392" endtime="20230703 16:20:48.507"/>
+<msg timestamp="20230703 20:53:29.542" level="INFO">Waited for Element with selector //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:29.389" endtime="20230703 20:53:29.542"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:48.389" endtime="20230703 16:20:48.509"/>
+<status status="PASS" starttime="20230703 20:53:29.388" endtime="20230703 20:53:29.543"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:47.126" endtime="20230703 16:20:48.510"/>
+<status status="PASS" starttime="20230703 20:53:28.073" endtime="20230703 20:53:29.543"/>
 </kw>
 <kw name="Fill in Contact Information" library="booking">
 <doc>TBD: Use test data instead of hardcoded values</doc>
@@ -401,19 +401,19 @@ for all matched elements by ``selector``.</doc>
 <doc>Creates a new email address and returns the inbox object</doc>
 <kw name="Create new Inbox" library="MailSlurp">
 <var>${inbox}</var>
-<msg timestamp="20230703 16:20:49.760" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 3, 13, 20, 49, 474000, tzinfo=tzutc()),
+<msg timestamp="20230703 20:53:30.904" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 3, 17, 53, 31, 141000, tzinfo=tzutc()),
  'description': None,
  'domain_id': None,
- 'email_address': 'e51aec5b-603e-4731-8f49-fd5cca312731@mailslurp.com',
+ 'email_address': '2f2de86f-80ee-407f-b572-d5afea679538@mailslurp.com',
  'ex...</msg>
-<status status="PASS" starttime="20230703 16:20:48.518" endtime="20230703 16:20:49.760"/>
+<status status="PASS" starttime="20230703 20:53:29.546" endtime="20230703 20:53:30.904"/>
 </kw>
-<msg timestamp="20230703 16:20:49.763" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 3, 13, 20, 49, 474000, tzinfo=tzutc()),
+<msg timestamp="20230703 20:53:30.905" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 3, 17, 53, 31, 141000, tzinfo=tzutc()),
  'description': None,
  'domain_id': None,
- 'email_address': 'e51aec5b-603e-4731-8f49-fd5cca312731@mailslurp.com',
+ 'email_address': '2f2de86f-80ee-407f-b572-d5afea679538@mailslurp.com',
  'ex...</msg>
-<status status="PASS" starttime="20230703 16:20:48.516" endtime="20230703 16:20:49.763"/>
+<status status="PASS" starttime="20230703 20:53:29.546" endtime="20230703 20:53:30.905"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=firstName</arg>
@@ -424,7 +424,7 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:49.767" endtime="20230703 16:20:49.844"/>
+<status status="PASS" starttime="20230703 20:53:30.907" endtime="20230703 20:53:30.983"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${selector}</arg>
@@ -432,10 +432,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:20:49.848" level="INFO">Fills the text 'Mos' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:20:49.846" endtime="20230703 16:20:49.947"/>
+<msg timestamp="20230703 20:53:30.984" level="INFO">Fills the text 'Mos' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:30.983" endtime="20230703 20:53:31.052"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:49.764" endtime="20230703 16:20:49.949"/>
+<status status="PASS" starttime="20230703 20:53:30.906" endtime="20230703 20:53:31.053"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=lastName</arg>
@@ -446,7 +446,7 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:49.952" endtime="20230703 16:20:50.085"/>
+<status status="PASS" starttime="20230703 20:53:31.054" endtime="20230703 20:53:31.201"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${selector}</arg>
@@ -454,10 +454,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:20:50.089" level="INFO">Fills the text 'Def' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:20:50.087" endtime="20230703 16:20:50.161"/>
+<msg timestamp="20230703 20:53:31.202" level="INFO">Fills the text 'Def' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:31.201" endtime="20230703 20:53:31.261"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:49.950" endtime="20230703 16:20:50.162"/>
+<status status="PASS" starttime="20230703 20:53:31.053" endtime="20230703 20:53:31.262"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=email</arg>
@@ -468,7 +468,7 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:50.170" endtime="20230703 16:20:50.373"/>
+<status status="PASS" starttime="20230703 20:53:31.264" endtime="20230703 20:53:31.393"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${selector}</arg>
@@ -476,10 +476,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:20:50.376" level="INFO">Fills the text 'e51aec5b-603e-4731-8f49-fd5cca312731@mailslurp.com' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:20:50.374" endtime="20230703 16:20:50.448"/>
+<msg timestamp="20230703 20:53:31.394" level="INFO">Fills the text '2f2de86f-80ee-407f-b572-d5afea679538@mailslurp.com' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:31.394" endtime="20230703 20:53:31.453"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:50.163" endtime="20230703 16:20:50.449"/>
+<status status="PASS" starttime="20230703 20:53:31.262" endtime="20230703 20:53:31.453"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=phoneNumber</arg>
@@ -490,7 +490,7 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:50.453" endtime="20230703 16:20:50.632"/>
+<status status="PASS" starttime="20230703 20:53:31.454" endtime="20230703 20:53:31.583"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${selector}</arg>
@@ -498,22 +498,22 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:20:50.636" level="INFO">Fills the text '040123942' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:20:50.634" endtime="20230703 16:20:50.701"/>
+<msg timestamp="20230703 20:53:31.585" level="INFO">Fills the text '040123942' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:31.584" endtime="20230703 20:53:31.646"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:50.450" endtime="20230703 16:20:50.702"/>
+<status status="PASS" starttime="20230703 20:53:31.453" endtime="20230703 20:53:31.646"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${inbox.id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230703 16:20:50.704" endtime="20230703 16:20:50.708"/>
+<status status="PASS" starttime="20230703 20:53:31.646" endtime="20230703 20:53:31.648"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>$ID</arg>
 <arg>${inbox.id}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20230703 16:20:50.715" level="INFO">${ID} = e51aec5b-603e-4731-8f49-fd5cca312731</msg>
-<status status="PASS" starttime="20230703 16:20:50.710" endtime="20230703 16:20:50.715"/>
+<msg timestamp="20230703 20:53:31.650" level="INFO">${ID} = 2f2de86f-80ee-407f-b572-d5afea679538</msg>
+<status status="PASS" starttime="20230703 20:53:31.648" endtime="20230703 20:53:31.650"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${env}'=='bui'</arg>
@@ -530,7 +530,7 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:50.723" endtime="20230703 16:20:50.849"/>
+<status status="PASS" starttime="20230703 20:53:31.652" endtime="20230703 20:53:31.783"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${selector}</arg>
@@ -538,14 +538,14 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:20:50.853" level="INFO">Fills the text 'NotARealPass123!' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:20:50.850" endtime="20230703 16:20:50.879"/>
+<msg timestamp="20230703 20:53:31.784" level="INFO">Fills the text 'NotARealPass123!' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:31.783" endtime="20230703 20:53:31.809"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:50.719" endtime="20230703 16:20:50.881"/>
+<status status="PASS" starttime="20230703 20:53:31.651" endtime="20230703 20:53:31.809"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:50.717" endtime="20230703 16:20:50.882"/>
+<status status="PASS" starttime="20230703 20:53:31.650" endtime="20230703 20:53:31.809"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:48.512" endtime="20230703 16:20:50.883"/>
+<status status="PASS" starttime="20230703 20:53:29.545" endtime="20230703 20:53:31.810"/>
 </kw>
 <kw name="Accept offers and Terms" library="booking">
 <kw name="Click" library="Browser">
@@ -553,16 +553,16 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:50.887" endtime="20230703 16:20:51.025"/>
+<status status="PASS" starttime="20230703 20:53:31.811" endtime="20230703 20:53:31.968"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>(//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:51.027" endtime="20230703 16:20:51.130"/>
+<status status="PASS" starttime="20230703 20:53:31.969" endtime="20230703 20:53:32.083"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:50.885" endtime="20230703 16:20:51.131"/>
+<status status="PASS" starttime="20230703 20:53:31.810" endtime="20230703 20:53:32.084"/>
 </kw>
 <kw name="Select Web Bank and Nordea as Payment Method" library="booking">
 <kw name="Click" library="Browser">
@@ -570,23 +570,23 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:51.135" endtime="20230703 16:20:51.226"/>
+<status status="PASS" starttime="20230703 20:53:32.085" endtime="20230703 20:53:32.171"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//p[contains(text(), 'Nordea')]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:51.228" endtime="20230703 16:20:51.356"/>
+<status status="PASS" starttime="20230703 20:53:32.172" endtime="20230703 20:53:32.320"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>(//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:51.357" endtime="20230703 16:20:53.484"/>
+<status status="PASS" starttime="20230703 20:53:32.320" endtime="20230703 20:53:34.456"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:51.133" endtime="20230703 16:20:53.486"/>
+<status status="PASS" starttime="20230703 20:53:32.084" endtime="20230703 20:53:34.456"/>
 </kw>
 <kw name="Complete Payment Successfully" library="booking">
 <kw name="Simulate Success or Failure" library="booking">
@@ -598,17 +598,17 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:20:57.490" level="INFO">Waited for Element with selector //a[contains(text(), 'Simulate success to merchant')] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:53.491" endtime="20230703 16:20:57.491"/>
+<msg timestamp="20230703 20:53:38.227" level="INFO">Waited for Element with selector //a[contains(text(), 'Simulate success to merchant')] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:34.458" endtime="20230703 20:53:38.227"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//a[contains(text(), 'Simulate ${which} to merchant')]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:20:57.492" endtime="20230703 16:20:59.127"/>
+<status status="PASS" starttime="20230703 20:53:38.228" endtime="20230703 20:53:39.700"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:53.489" endtime="20230703 16:20:59.128"/>
+<status status="PASS" starttime="20230703 20:53:34.458" endtime="20230703 20:53:39.701"/>
 </kw>
 <kw name="Verify Payment was successful" library="booking">
 <kw name="Wait Until Visible" library="common">
@@ -621,10 +621,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:00.838" level="INFO">Waited for Element with selector //p[contains(text(), 'Payment was successful')] at state visible</msg>
-<status status="PASS" starttime="20230703 16:20:59.135" endtime="20230703 16:21:00.839"/>
+<msg timestamp="20230703 20:53:41.376" level="INFO">Waited for Element with selector //p[contains(text(), 'Payment was successful')] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:39.703" endtime="20230703 20:53:41.376"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:59.133" endtime="20230703 16:21:00.841"/>
+<status status="PASS" starttime="20230703 20:53:39.702" endtime="20230703 20:53:41.377"/>
 </kw>
 <kw name="Close Dialog" library="booking">
 <kw name="Wait Until Visible" library="common">
@@ -637,19 +637,19 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:00.868" level="INFO">Waited for Element with selector //button[contains(text(), "Ok")] at state visible</msg>
-<status status="PASS" starttime="20230703 16:21:00.848" endtime="20230703 16:21:00.869"/>
+<msg timestamp="20230703 20:53:41.386" level="INFO">Waited for Element with selector //button[contains(text(), "Ok")] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:41.379" endtime="20230703 20:53:41.387"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:00.845" endtime="20230703 16:21:00.871"/>
+<status status="PASS" starttime="20230703 20:53:41.378" endtime="20230703 20:53:41.387"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//button[contains(text(), "Ok")]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:00.872" endtime="20230703 16:21:01.075"/>
+<status status="PASS" starttime="20230703 20:53:41.387" endtime="20230703 20:53:41.477"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:00.842" endtime="20230703 16:21:01.076"/>
+<status status="PASS" starttime="20230703 20:53:41.377" endtime="20230703 20:53:41.477"/>
 </kw>
 <kw name="Save Booking Number 1" library="booking">
 <kw name="Get Text" library="Browser">
@@ -659,35 +659,35 @@ for all matched elements by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:01.146" level="INFO">Text: 'Booking number: 761825541'</msg>
-<msg timestamp="20230703 16:21:01.147" level="INFO">${str} = Booking number: 761825541</msg>
-<status status="PASS" starttime="20230703 16:21:01.081" endtime="20230703 16:21:01.147"/>
+<msg timestamp="20230703 20:53:41.516" level="INFO">Text: 'Booking number: 857049978'</msg>
+<msg timestamp="20230703 20:53:41.516" level="INFO">${str} = Booking number: 857049978</msg>
+<status status="PASS" starttime="20230703 20:53:41.478" endtime="20230703 20:53:41.516"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${bookingNumber}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230703 16:21:01.149" endtime="20230703 16:21:01.151"/>
+<status status="PASS" starttime="20230703 20:53:41.517" endtime="20230703 20:53:41.518"/>
 </kw>
 <kw name="Remove String" library="String">
 <var>${str}</var>
 <arg>${str}</arg>
 <arg>Booking code${SPACE}</arg>
 <doc>Removes all ``removables`` from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:01.159" level="INFO">${str} = Booking number: 761825541</msg>
-<status status="PASS" starttime="20230703 16:21:01.154" endtime="20230703 16:21:01.160"/>
+<msg timestamp="20230703 20:53:41.520" level="INFO">${str} = Booking number: 857049978</msg>
+<status status="PASS" starttime="20230703 20:53:41.519" endtime="20230703 20:53:41.520"/>
 </kw>
 <kw name="Strip String" library="String">
 <var>${str}</var>
 <arg>${str}</arg>
 <doc>Remove leading and/or trailing whitespaces from the given string.</doc>
-<msg timestamp="20230703 16:21:01.165" level="INFO">${str} = Booking number: 761825541</msg>
-<status status="PASS" starttime="20230703 16:21:01.162" endtime="20230703 16:21:01.165"/>
+<msg timestamp="20230703 20:53:41.521" level="INFO">${str} = Booking number: 857049978</msg>
+<status status="PASS" starttime="20230703 20:53:41.521" endtime="20230703 20:53:41.522"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:01.078" endtime="20230703 16:21:01.167"/>
+<status status="PASS" starttime="20230703 20:53:41.477" endtime="20230703 20:53:41.522"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:59.130" endtime="20230703 16:21:01.168"/>
+<status status="PASS" starttime="20230703 20:53:39.701" endtime="20230703 20:53:41.523"/>
 </kw>
-<status status="PASS" starttime="20230703 16:20:53.487" endtime="20230703 16:21:01.170"/>
+<status status="PASS" starttime="20230703 20:53:34.457" endtime="20230703 20:53:41.524"/>
 </kw>
 <kw name="Click Check In Button" library="booking">
 <kw name="Wait Until Visible" library="common">
@@ -700,19 +700,19 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:01.206" level="INFO">Waited for Element with selector (//button[text()="Check in"])[1] at state visible</msg>
-<status status="PASS" starttime="20230703 16:21:01.182" endtime="20230703 16:21:01.207"/>
+<msg timestamp="20230703 20:53:41.535" level="INFO">Waited for Element with selector (//button[text()="Check in"])[1] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:41.527" endtime="20230703 20:53:41.535"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:01.178" endtime="20230703 16:21:01.208"/>
+<status status="PASS" starttime="20230703 20:53:41.526" endtime="20230703 20:53:41.535"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>(//button[text()="Check in"])[1]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:01.209" endtime="20230703 16:21:01.291"/>
+<status status="PASS" starttime="20230703 20:53:41.536" endtime="20230703 20:53:41.682"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:01.174" endtime="20230703 16:21:01.292"/>
+<status status="PASS" starttime="20230703 20:53:41.525" endtime="20230703 20:53:41.683"/>
 </kw>
 <kw name="Fill Check in Slide" library="booking">
 <kw name="Wait Until Visible" library="common">
@@ -725,10 +725,10 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:01.313" level="INFO">Waited for Element with selector (//div[contains(@class, "chakra-offset-slide")])[2] at state visible</msg>
-<status status="PASS" starttime="20230703 16:21:01.299" endtime="20230703 16:21:01.314"/>
+<msg timestamp="20230703 20:53:41.692" level="INFO">Waited for Element with selector (//div[contains(@class, "chakra-offset-slide")])[2] at state visible</msg>
+<status status="PASS" starttime="20230703 20:53:41.684" endtime="20230703 20:53:41.692"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:01.296" endtime="20230703 16:21:01.316"/>
+<status status="PASS" starttime="20230703 20:53:41.684" endtime="20230703 20:53:41.693"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>id=firstName</arg>
@@ -736,8 +736,8 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:01.320" level="INFO">Fills the text 'Mos' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:21:01.318" endtime="20230703 16:21:02.160"/>
+<msg timestamp="20230703 20:53:41.694" level="INFO">Fills the text 'Mos' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:41.693" endtime="20230703 20:53:42.528"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>id=lastName</arg>
@@ -745,8 +745,8 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:02.164" level="INFO">Fills the text 'Def' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:21:02.162" endtime="20230703 16:21:02.234"/>
+<msg timestamp="20230703 20:53:42.529" level="INFO">Fills the text 'Def' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:42.528" endtime="20230703 20:53:42.588"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>id=ssn</arg>
@@ -754,8 +754,8 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:02.237" level="INFO">Fills the text '170479-371J' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:21:02.235" endtime="20230703 16:21:02.305"/>
+<msg timestamp="20230703 20:53:42.589" level="INFO">Fills the text '170479-371J' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:42.588" endtime="20230703 20:53:42.661"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>id=address</arg>
@@ -763,8 +763,8 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:02.308" level="INFO">Fills the text 'Susitie 5' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:21:02.307" endtime="20230703 16:21:02.402"/>
+<msg timestamp="20230703 20:53:42.662" level="INFO">Fills the text 'Susitie 5' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:42.661" endtime="20230703 20:53:42.776"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>id=city</arg>
@@ -772,8 +772,8 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:02.406" level="INFO">Fills the text 'Paimio' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:21:02.404" endtime="20230703 16:21:02.495"/>
+<msg timestamp="20230703 20:53:42.777" level="INFO">Fills the text 'Paimio' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:42.776" endtime="20230703 20:53:42.890"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>id=postalCode</arg>
@@ -781,17 +781,17 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:02.499" level="INFO">Fills the text '21530' in the given field.</msg>
-<status status="PASS" starttime="20230703 16:21:02.497" endtime="20230703 16:21:02.580"/>
+<msg timestamp="20230703 20:53:42.891" level="INFO">Fills the text '21530' in the given field.</msg>
+<status status="PASS" starttime="20230703 20:53:42.891" endtime="20230703 20:53:42.974"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//span[contains(text(), "Travelling for work")]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:02.581" endtime="20230703 16:21:02.732"/>
+<status status="PASS" starttime="20230703 20:53:42.974" endtime="20230703 20:53:43.121"/>
 </kw>
-<status status="PASS" starttime="20230703 16:21:01.293" endtime="20230703 16:21:02.733"/>
+<status status="PASS" starttime="20230703 20:53:41.683" endtime="20230703 20:53:43.122"/>
 </kw>
 <kw name="Click Save and Sign Button and Sign if Required" library="booking">
 <kw name="Is Force Signature Enabled" library="common">
@@ -802,36 +802,36 @@ for all matched elements by ``selector``.</doc>
 <arg>curl</arg>
 <arg>https://test4.omenahotels.com/feature-config.json</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<msg timestamp="20230703 16:21:02.741" level="INFO">Starting process:
+<msg timestamp="20230703 20:53:43.125" level="INFO">Starting process:
 curl https://test4.omenahotels.com/feature-config.json</msg>
-<msg timestamp="20230703 16:21:02.762" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20230703 16:21:03.039" level="INFO">Process completed.</msg>
-<msg timestamp="20230703 16:21:03.041" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20230703 16:21:02.739" endtime="20230703 16:21:03.041"/>
+<msg timestamp="20230703 20:53:43.133" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20230703 20:53:43.230" level="INFO">Process completed.</msg>
+<msg timestamp="20230703 20:53:43.231" level="INFO">${output} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20230703 20:53:43.124" endtime="20230703 20:53:43.231"/>
 </kw>
 <kw name="Get Line" library="String">
 <var>${forceSSN}</var>
 <arg>${output.stdout}</arg>
 <arg>8</arg>
 <doc>Returns the specified line from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:03.049" level="INFO">${forceSSN} =   "forceSSN": true,</msg>
-<status status="PASS" starttime="20230703 16:21:03.043" endtime="20230703 16:21:03.049"/>
+<msg timestamp="20230703 20:53:43.234" level="INFO">${forceSSN} =   "forceSSN": true,</msg>
+<status status="PASS" starttime="20230703 20:53:43.232" endtime="20230703 20:53:43.234"/>
 </kw>
 <kw name="Get Line" library="String">
 <var>${forceSignature}</var>
 <arg>${output.stdout}</arg>
 <arg>9</arg>
 <doc>Returns the specified line from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:03.055" level="INFO">${forceSignature} =   "forceSignature": true,</msg>
-<status status="PASS" starttime="20230703 16:21:03.051" endtime="20230703 16:21:03.055"/>
+<msg timestamp="20230703 20:53:43.236" level="INFO">${forceSignature} =   "forceSignature": true,</msg>
+<status status="PASS" starttime="20230703 20:53:43.234" endtime="20230703 20:53:43.236"/>
 </kw>
 <kw name="Get Line" library="String">
 <var>${guestSignature}</var>
 <arg>${output.stdout}</arg>
 <arg>10</arg>
 <doc>Returns the specified line from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:03.061" level="INFO">${guestSignature} =   "guestSignature": true,</msg>
-<status status="PASS" starttime="20230703 16:21:03.057" endtime="20230703 16:21:03.061"/>
+<msg timestamp="20230703 20:53:43.239" level="INFO">${guestSignature} =   "guestSignature": true,</msg>
+<status status="PASS" starttime="20230703 20:53:43.237" endtime="20230703 20:53:43.240"/>
 </kw>
 <kw name="Remove String" library="String">
 <var>${forceSSN}</var>
@@ -840,1983 +840,3 @@ curl https://test4.omenahotels.com/feature-config.json</msg>
 <arg>,</arg>
 <arg>${SPACE}</arg>
 <doc>Removes all ``removables`` from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:03.064" level="INFO">${forceSSN} = true</msg>
-<status status="PASS" starttime="20230703 16:21:03.062" endtime="20230703 16:21:03.065"/>
-</kw>
-<kw name="Remove String" library="String">
-<var>${forceSignature}</var>
-<arg>${forceSignature}</arg>
-<arg>"forceSignature":</arg>
-<arg>,</arg>
-<arg>${SPACE}</arg>
-<doc>Removes all ``removables`` from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:03.068" level="INFO">${forceSignature} = true</msg>
-<status status="PASS" starttime="20230703 16:21:03.066" endtime="20230703 16:21:03.069"/>
-</kw>
-<kw name="Remove String" library="String">
-<var>${guestSignature}</var>
-<arg>${guestSignature}</arg>
-<arg>"guestSignature":</arg>
-<arg>,</arg>
-<arg>${SPACE}</arg>
-<doc>Removes all ``removables`` from the given ``string``.</doc>
-<msg timestamp="20230703 16:21:03.072" level="INFO">${guestSignature} = true</msg>
-<status status="PASS" starttime="20230703 16:21:03.070" endtime="20230703 16:21:03.073"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${forceSignature}' == 'true'</arg>
-<arg>Log</arg>
-<arg>Forcing signature on =&gt; call Click Save and Sign</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Log" library="BuiltIn">
-<arg>Forcing signature on =&gt; call Click Save and Sign</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230703 16:21:03.077" level="INFO">Forcing signature on =&gt; call Click Save and Sign</msg>
-<status status="PASS" starttime="20230703 16:21:03.076" endtime="20230703 16:21:03.078"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:03.074" endtime="20230703 16:21:03.078"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${forceSignature}' == 'false'</arg>
-<arg>Log</arg>
-<arg>Forcing signature off =&gt; call Click Save</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20230703 16:21:03.080" endtime="20230703 16:21:03.082"/>
-</kw>
-<msg timestamp="20230703 16:21:03.084" level="INFO">${forceSignature} = true</msg>
-<status status="PASS" starttime="20230703 16:21:02.737" endtime="20230703 16:21:03.085"/>
-</kw>
-<if>
-<branch type="IF" condition="'${forceSignature}' == 'true'">
-<kw name="Click" library="Browser">
-<arg>//button[contains(text(), "Save and Sign")]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:03.090" endtime="20230703 16:21:03.243"/>
-</kw>
-<kw name="Sign" library="booking">
-<kw name="Click" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:03.246" endtime="20230703 16:21:04.579"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${j}</var>
-<arg>1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 16:21:04.582" level="INFO">${j} = 1</msg>
-<status status="PASS" starttime="20230703 16:21:04.580" endtime="20230703 16:21:04.583"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>42</value>
-<iter>
-<var name="${i}">0</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.609" level="INFO">Moving mouse relative to element center by x: -10.0, y: 1.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.589" endtime="20230703 16:21:04.614"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.619" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.615" endtime="20230703 16:21:04.624"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.630" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.625" endtime="20230703 16:21:04.669"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:04.674" level="INFO">${j} = 2</msg>
-<status status="PASS" starttime="20230703 16:21:04.671" endtime="20230703 16:21:04.674"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.587" endtime="20230703 16:21:04.675"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.707" level="INFO">Moving mouse relative to element center by x: -10.0, y: 2.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.678" endtime="20230703 16:21:04.712"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.718" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.714" endtime="20230703 16:21:04.723"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.729" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.725" endtime="20230703 16:21:04.736"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:04.740" level="INFO">${j} = 3</msg>
-<status status="PASS" starttime="20230703 16:21:04.738" endtime="20230703 16:21:04.740"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.676" endtime="20230703 16:21:04.741"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.764" level="INFO">Moving mouse relative to element center by x: -10.0, y: 3.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.743" endtime="20230703 16:21:04.778"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.783" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.779" endtime="20230703 16:21:04.789"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.794" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.790" endtime="20230703 16:21:04.800"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:04.804" level="INFO">${j} = 4</msg>
-<status status="PASS" starttime="20230703 16:21:04.802" endtime="20230703 16:21:04.804"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.742" endtime="20230703 16:21:04.805"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.824" level="INFO">Moving mouse relative to element center by x: -10.0, y: 4.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.808" endtime="20230703 16:21:04.829"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.835" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.830" endtime="20230703 16:21:04.840"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.846" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.841" endtime="20230703 16:21:04.852"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:04.859" level="INFO">${j} = 5</msg>
-<status status="PASS" starttime="20230703 16:21:04.854" endtime="20230703 16:21:04.859"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.806" endtime="20230703 16:21:04.860"/>
-</iter>
-<iter>
-<var name="${i}">4</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.883" level="INFO">Moving mouse relative to element center by x: -10.0, y: 5.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.862" endtime="20230703 16:21:04.895"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.901" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.896" endtime="20230703 16:21:04.906"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.911" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.907" endtime="20230703 16:21:04.917"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:04.921" level="INFO">${j} = 6</msg>
-<status status="PASS" starttime="20230703 16:21:04.919" endtime="20230703 16:21:04.921"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.861" endtime="20230703 16:21:04.922"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.945" level="INFO">Moving mouse relative to element center by x: -10.0, y: 6.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.928" endtime="20230703 16:21:04.949"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.955" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.951" endtime="20230703 16:21:04.960"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:04.965" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:04.961" endtime="20230703 16:21:04.972"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:04.975" level="INFO">${j} = 7</msg>
-<status status="PASS" starttime="20230703 16:21:04.973" endtime="20230703 16:21:04.976"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.923" endtime="20230703 16:21:04.976"/>
-</iter>
-<iter>
-<var name="${i}">6</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:04.995" level="INFO">Moving mouse relative to element center by x: -10.0, y: 7.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:04.978" endtime="20230703 16:21:04.999"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.005" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.001" endtime="20230703 16:21:05.010"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.015" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.011" endtime="20230703 16:21:05.021"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.025" level="INFO">${j} = 8</msg>
-<status status="PASS" starttime="20230703 16:21:05.023" endtime="20230703 16:21:05.025"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:04.977" endtime="20230703 16:21:05.026"/>
-</iter>
-<iter>
-<var name="${i}">7</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.044" level="INFO">Moving mouse relative to element center by x: -10.0, y: 8.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.028" endtime="20230703 16:21:05.049"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.054" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.050" endtime="20230703 16:21:05.059"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.065" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.060" endtime="20230703 16:21:05.071"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.075" level="INFO">${j} = 9</msg>
-<status status="PASS" starttime="20230703 16:21:05.072" endtime="20230703 16:21:05.075"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.027" endtime="20230703 16:21:05.076"/>
-</iter>
-<iter>
-<var name="${i}">8</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.094" level="INFO">Moving mouse relative to element center by x: -10.0, y: 9.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.078" endtime="20230703 16:21:05.099"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.105" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.100" endtime="20230703 16:21:05.109"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.115" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.111" endtime="20230703 16:21:05.122"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.125" level="INFO">${j} = 10</msg>
-<status status="PASS" starttime="20230703 16:21:05.123" endtime="20230703 16:21:05.125"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.077" endtime="20230703 16:21:05.126"/>
-</iter>
-<iter>
-<var name="${i}">9</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.144" level="INFO">Moving mouse relative to element center by x: -10.0, y: 10.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.128" endtime="20230703 16:21:05.149"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.155" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.150" endtime="20230703 16:21:05.160"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.166" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.161" endtime="20230703 16:21:05.172"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.175" level="INFO">${j} = 11</msg>
-<status status="PASS" starttime="20230703 16:21:05.173" endtime="20230703 16:21:05.176"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.127" endtime="20230703 16:21:05.177"/>
-</iter>
-<iter>
-<var name="${i}">10</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.195" level="INFO">Moving mouse relative to element center by x: -10.0, y: 11.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.179" endtime="20230703 16:21:05.200"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.206" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.201" endtime="20230703 16:21:05.210"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.216" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.211" endtime="20230703 16:21:05.222"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.225" level="INFO">${j} = 12</msg>
-<status status="PASS" starttime="20230703 16:21:05.223" endtime="20230703 16:21:05.225"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.178" endtime="20230703 16:21:05.226"/>
-</iter>
-<iter>
-<var name="${i}">11</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.244" level="INFO">Moving mouse relative to element center by x: -10.0, y: 12.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.228" endtime="20230703 16:21:05.248"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.254" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.250" endtime="20230703 16:21:05.259"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.264" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.260" endtime="20230703 16:21:05.270"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.273" level="INFO">${j} = 13</msg>
-<status status="PASS" starttime="20230703 16:21:05.271" endtime="20230703 16:21:05.274"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.227" endtime="20230703 16:21:05.274"/>
-</iter>
-<iter>
-<var name="${i}">12</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.293" level="INFO">Moving mouse relative to element center by x: -10.0, y: 13.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.277" endtime="20230703 16:21:05.297"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.304" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.299" endtime="20230703 16:21:05.309"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.314" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.310" endtime="20230703 16:21:05.320"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.324" level="INFO">${j} = 14</msg>
-<status status="PASS" starttime="20230703 16:21:05.322" endtime="20230703 16:21:05.324"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.275" endtime="20230703 16:21:05.325"/>
-</iter>
-<iter>
-<var name="${i}">13</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.343" level="INFO">Moving mouse relative to element center by x: -10.0, y: 14.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.327" endtime="20230703 16:21:05.347"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.353" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.349" endtime="20230703 16:21:05.358"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.363" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.359" endtime="20230703 16:21:05.369"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.372" level="INFO">${j} = 15</msg>
-<status status="PASS" starttime="20230703 16:21:05.370" endtime="20230703 16:21:05.373"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.326" endtime="20230703 16:21:05.373"/>
-</iter>
-<iter>
-<var name="${i}">14</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.392" level="INFO">Moving mouse relative to element center by x: -10.0, y: 15.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.376" endtime="20230703 16:21:05.395"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.401" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.397" endtime="20230703 16:21:05.406"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.412" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.407" endtime="20230703 16:21:05.417"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.420" level="INFO">${j} = 16</msg>
-<status status="PASS" starttime="20230703 16:21:05.418" endtime="20230703 16:21:05.421"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.374" endtime="20230703 16:21:05.422"/>
-</iter>
-<iter>
-<var name="${i}">15</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.440" level="INFO">Moving mouse relative to element center by x: -10.0, y: 16.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.424" endtime="20230703 16:21:05.445"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.451" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.447" endtime="20230703 16:21:05.456"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.462" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.457" endtime="20230703 16:21:05.468"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.471" level="INFO">${j} = 17</msg>
-<status status="PASS" starttime="20230703 16:21:05.469" endtime="20230703 16:21:05.472"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.423" endtime="20230703 16:21:05.473"/>
-</iter>
-<iter>
-<var name="${i}">16</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.491" level="INFO">Moving mouse relative to element center by x: -10.0, y: 17.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.475" endtime="20230703 16:21:05.495"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.501" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.496" endtime="20230703 16:21:05.506"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.511" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.507" endtime="20230703 16:21:05.517"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.520" level="INFO">${j} = 18</msg>
-<status status="PASS" starttime="20230703 16:21:05.518" endtime="20230703 16:21:05.521"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.474" endtime="20230703 16:21:05.522"/>
-</iter>
-<iter>
-<var name="${i}">17</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.542" level="INFO">Moving mouse relative to element center by x: -10.0, y: 18.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.524" endtime="20230703 16:21:05.546"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.551" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.547" endtime="20230703 16:21:05.556"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.562" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.558" endtime="20230703 16:21:05.568"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.571" level="INFO">${j} = 19</msg>
-<status status="PASS" starttime="20230703 16:21:05.569" endtime="20230703 16:21:05.572"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.522" endtime="20230703 16:21:05.573"/>
-</iter>
-<iter>
-<var name="${i}">18</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.591" level="INFO">Moving mouse relative to element center by x: -10.0, y: 19.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.575" endtime="20230703 16:21:05.595"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.601" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.596" endtime="20230703 16:21:05.606"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.611" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.607" endtime="20230703 16:21:05.617"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.621" level="INFO">${j} = 20</msg>
-<status status="PASS" starttime="20230703 16:21:05.618" endtime="20230703 16:21:05.621"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.573" endtime="20230703 16:21:05.622"/>
-</iter>
-<iter>
-<var name="${i}">19</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.640" level="INFO">Moving mouse relative to element center by x: -10.0, y: 20.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.624" endtime="20230703 16:21:05.645"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.651" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.646" endtime="20230703 16:21:05.656"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.661" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.657" endtime="20230703 16:21:05.667"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.670" level="INFO">${j} = 21</msg>
-<status status="PASS" starttime="20230703 16:21:05.668" endtime="20230703 16:21:05.671"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.623" endtime="20230703 16:21:05.672"/>
-</iter>
-<iter>
-<var name="${i}">20</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.690" level="INFO">Moving mouse relative to element center by x: -10.0, y: 21.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.674" endtime="20230703 16:21:05.695"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.701" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.697" endtime="20230703 16:21:05.706"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.712" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.707" endtime="20230703 16:21:05.717"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.721" level="INFO">${j} = 22</msg>
-<status status="PASS" starttime="20230703 16:21:05.719" endtime="20230703 16:21:05.721"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.673" endtime="20230703 16:21:05.722"/>
-</iter>
-<iter>
-<var name="${i}">21</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.740" level="INFO">Moving mouse relative to element center by x: -10.0, y: 22.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.724" endtime="20230703 16:21:05.744"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.750" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.746" endtime="20230703 16:21:05.755"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.761" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.756" endtime="20230703 16:21:05.766"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.770" level="INFO">${j} = 23</msg>
-<status status="PASS" starttime="20230703 16:21:05.768" endtime="20230703 16:21:05.770"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.723" endtime="20230703 16:21:05.771"/>
-</iter>
-<iter>
-<var name="${i}">22</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.793" level="INFO">Moving mouse relative to element center by x: -10.0, y: 23.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.773" endtime="20230703 16:21:05.797"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.803" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.799" endtime="20230703 16:21:05.808"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.813" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.809" endtime="20230703 16:21:05.819"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.822" level="INFO">${j} = 24</msg>
-<status status="PASS" starttime="20230703 16:21:05.820" endtime="20230703 16:21:05.823"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.772" endtime="20230703 16:21:05.824"/>
-</iter>
-<iter>
-<var name="${i}">23</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.841" level="INFO">Moving mouse relative to element center by x: -10.0, y: 24.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.826" endtime="20230703 16:21:05.845"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.851" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.847" endtime="20230703 16:21:05.856"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.866" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.859" endtime="20230703 16:21:05.871"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.875" level="INFO">${j} = 25</msg>
-<status status="PASS" starttime="20230703 16:21:05.873" endtime="20230703 16:21:05.875"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.824" endtime="20230703 16:21:05.876"/>
-</iter>
-<iter>
-<var name="${i}">24</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.894" level="INFO">Moving mouse relative to element center by x: -10.0, y: 25.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.878" endtime="20230703 16:21:05.898"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.904" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.900" endtime="20230703 16:21:05.909"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.914" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.910" endtime="20230703 16:21:05.920"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.923" level="INFO">${j} = 26</msg>
-<status status="PASS" starttime="20230703 16:21:05.921" endtime="20230703 16:21:05.924"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.877" endtime="20230703 16:21:05.925"/>
-</iter>
-<iter>
-<var name="${i}">25</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.943" level="INFO">Moving mouse relative to element center by x: -10.0, y: 26.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.927" endtime="20230703 16:21:05.947"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.952" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.948" endtime="20230703 16:21:05.957"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:05.963" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.959" endtime="20230703 16:21:05.969"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:05.973" level="INFO">${j} = 27</msg>
-<status status="PASS" starttime="20230703 16:21:05.971" endtime="20230703 16:21:05.973"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.925" endtime="20230703 16:21:05.974"/>
-</iter>
-<iter>
-<var name="${i}">26</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:05.992" level="INFO">Moving mouse relative to element center by x: -10.0, y: 27.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:05.976" endtime="20230703 16:21:05.996"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.002" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:05.997" endtime="20230703 16:21:06.006"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.012" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.008" endtime="20230703 16:21:06.017"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.021" level="INFO">${j} = 28</msg>
-<status status="PASS" starttime="20230703 16:21:06.019" endtime="20230703 16:21:06.021"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:05.975" endtime="20230703 16:21:06.022"/>
-</iter>
-<iter>
-<var name="${i}">27</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.040" level="INFO">Moving mouse relative to element center by x: -10.0, y: 28.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.024" endtime="20230703 16:21:06.045"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.051" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.047" endtime="20230703 16:21:06.056"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.062" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.057" endtime="20230703 16:21:06.067"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.070" level="INFO">${j} = 29</msg>
-<status status="PASS" starttime="20230703 16:21:06.068" endtime="20230703 16:21:06.071"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.023" endtime="20230703 16:21:06.072"/>
-</iter>
-<iter>
-<var name="${i}">28</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.090" level="INFO">Moving mouse relative to element center by x: -10.0, y: 29.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.074" endtime="20230703 16:21:06.095"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.101" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.097" endtime="20230703 16:21:06.106"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.112" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.107" endtime="20230703 16:21:06.117"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.121" level="INFO">${j} = 30</msg>
-<status status="PASS" starttime="20230703 16:21:06.119" endtime="20230703 16:21:06.121"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.073" endtime="20230703 16:21:06.122"/>
-</iter>
-<iter>
-<var name="${i}">29</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.140" level="INFO">Moving mouse relative to element center by x: -10.0, y: 30.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.124" endtime="20230703 16:21:06.145"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.151" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.147" endtime="20230703 16:21:06.156"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.162" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.157" endtime="20230703 16:21:06.167"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.171" level="INFO">${j} = 31</msg>
-<status status="PASS" starttime="20230703 16:21:06.169" endtime="20230703 16:21:06.171"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.123" endtime="20230703 16:21:06.172"/>
-</iter>
-<iter>
-<var name="${i}">30</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.190" level="INFO">Moving mouse relative to element center by x: -10.0, y: 31.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.174" endtime="20230703 16:21:06.195"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.201" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.196" endtime="20230703 16:21:06.205"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.211" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.207" endtime="20230703 16:21:06.217"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.220" level="INFO">${j} = 32</msg>
-<status status="PASS" starttime="20230703 16:21:06.218" endtime="20230703 16:21:06.220"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.173" endtime="20230703 16:21:06.221"/>
-</iter>
-<iter>
-<var name="${i}">31</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.239" level="INFO">Moving mouse relative to element center by x: -10.0, y: 32.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.223" endtime="20230703 16:21:06.244"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.250" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.246" endtime="20230703 16:21:06.255"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.261" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.256" endtime="20230703 16:21:06.266"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.270" level="INFO">${j} = 33</msg>
-<status status="PASS" starttime="20230703 16:21:06.268" endtime="20230703 16:21:06.270"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.222" endtime="20230703 16:21:06.271"/>
-</iter>
-<iter>
-<var name="${i}">32</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.289" level="INFO">Moving mouse relative to element center by x: -10.0, y: 33.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.273" endtime="20230703 16:21:06.295"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.301" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.296" endtime="20230703 16:21:06.306"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.311" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.307" endtime="20230703 16:21:06.317"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.320" level="INFO">${j} = 34</msg>
-<status status="PASS" starttime="20230703 16:21:06.318" endtime="20230703 16:21:06.321"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.272" endtime="20230703 16:21:06.322"/>
-</iter>
-<iter>
-<var name="${i}">33</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.341" level="INFO">Moving mouse relative to element center by x: -10.0, y: 34.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.324" endtime="20230703 16:21:06.345"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.351" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.347" endtime="20230703 16:21:06.357"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.362" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.358" endtime="20230703 16:21:06.368"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.371" level="INFO">${j} = 35</msg>
-<status status="PASS" starttime="20230703 16:21:06.369" endtime="20230703 16:21:06.372"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.323" endtime="20230703 16:21:06.372"/>
-</iter>
-<iter>
-<var name="${i}">34</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.391" level="INFO">Moving mouse relative to element center by x: -10.0, y: 35.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.374" endtime="20230703 16:21:06.394"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.400" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.396" endtime="20230703 16:21:06.405"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.410" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.406" endtime="20230703 16:21:06.416"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.419" level="INFO">${j} = 36</msg>
-<status status="PASS" starttime="20230703 16:21:06.417" endtime="20230703 16:21:06.420"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.373" endtime="20230703 16:21:06.421"/>
-</iter>
-<iter>
-<var name="${i}">35</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.439" level="INFO">Moving mouse relative to element center by x: -10.0, y: 36.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.423" endtime="20230703 16:21:06.444"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.450" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.446" endtime="20230703 16:21:06.455"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.460" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.456" endtime="20230703 16:21:06.466"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.470" level="INFO">${j} = 37</msg>
-<status status="PASS" starttime="20230703 16:21:06.467" endtime="20230703 16:21:06.470"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.422" endtime="20230703 16:21:06.471"/>
-</iter>
-<iter>
-<var name="${i}">36</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.490" level="INFO">Moving mouse relative to element center by x: -10.0, y: 37.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.473" endtime="20230703 16:21:06.495"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.501" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.497" endtime="20230703 16:21:06.506"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.512" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.507" endtime="20230703 16:21:06.517"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.520" level="INFO">${j} = 38</msg>
-<status status="PASS" starttime="20230703 16:21:06.518" endtime="20230703 16:21:06.521"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.472" endtime="20230703 16:21:06.522"/>
-</iter>
-<iter>
-<var name="${i}">37</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.539" level="INFO">Moving mouse relative to element center by x: -10.0, y: 38.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.524" endtime="20230703 16:21:06.545"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.550" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.546" endtime="20230703 16:21:06.555"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.561" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.557" endtime="20230703 16:21:06.566"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.570" level="INFO">${j} = 39</msg>
-<status status="PASS" starttime="20230703 16:21:06.568" endtime="20230703 16:21:06.570"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.523" endtime="20230703 16:21:06.571"/>
-</iter>
-<iter>
-<var name="${i}">38</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.589" level="INFO">Moving mouse relative to element center by x: -10.0, y: 39.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.573" endtime="20230703 16:21:06.595"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.601" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.596" endtime="20230703 16:21:06.606"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.611" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.607" endtime="20230703 16:21:06.617"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.620" level="INFO">${j} = 40</msg>
-<status status="PASS" starttime="20230703 16:21:06.618" endtime="20230703 16:21:06.621"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.572" endtime="20230703 16:21:06.622"/>
-</iter>
-<iter>
-<var name="${i}">39</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.639" level="INFO">Moving mouse relative to element center by x: -10.0, y: 40.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.624" endtime="20230703 16:21:06.644"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.650" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.646" endtime="20230703 16:21:06.655"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.661" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.656" endtime="20230703 16:21:06.666"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.669" level="INFO">${j} = 41</msg>
-<status status="PASS" starttime="20230703 16:21:06.667" endtime="20230703 16:21:06.670"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.623" endtime="20230703 16:21:06.670"/>
-</iter>
-<iter>
-<var name="${i}">40</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.688" level="INFO">Moving mouse relative to element center by x: -10.0, y: 41.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.673" endtime="20230703 16:21:06.695"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.701" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.697" endtime="20230703 16:21:06.706"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.712" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.707" endtime="20230703 16:21:06.717"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.720" level="INFO">${j} = 42</msg>
-<status status="PASS" starttime="20230703 16:21:06.718" endtime="20230703 16:21:06.721"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.671" endtime="20230703 16:21:06.722"/>
-</iter>
-<iter>
-<var name="${i}">41</var>
-<kw name="Mouse Move Relative To" library="Browser">
-<arg>(//button[@aria-label='Close']/following-sibling::div/div)[1]</arg>
-<arg>-10</arg>
-<arg>${j}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the mouse cursor relative to the selected element.</doc>
-<msg timestamp="20230703 16:21:06.741" level="INFO">Moving mouse relative to element center by x: -10.0, y: 42.0 coordinates.</msg>
-<status status="PASS" starttime="20230703 16:21:06.724" endtime="20230703 16:21:06.745"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>down</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.751" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.747" endtime="20230703 16:21:06.756"/>
-</kw>
-<kw name="Mouse Button" library="Browser">
-<arg>up</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clicks, presses or releases a mouse button.</doc>
-<msg timestamp="20230703 16:21:06.763" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<status status="PASS" starttime="20230703 16:21:06.758" endtime="20230703 16:21:06.769"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${j}</var>
-<arg>${j} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230703 16:21:06.772" level="INFO">${j} = 43</msg>
-<status status="PASS" starttime="20230703 16:21:06.770" endtime="20230703 16:21:06.773"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.723" endtime="20230703 16:21:06.774"/>
-</iter>
-<status status="PASS" starttime="20230703 16:21:04.584" endtime="20230703 16:21:06.774"/>
-</for>
-<kw name="Wait Until Visible" library="common">
-<arg>//canvas</arg>
-<doc>An easier keyword for waiting until an element is visible</doc>
-<kw name="Wait For Elements State" library="Browser">
-<arg>${element}</arg>
-<arg>visible</arg>
-<arg>timeout=${timeout}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:06.791" level="INFO">Waited for Element with selector //canvas at state visible</msg>
-<status status="PASS" starttime="20230703 16:21:06.778" endtime="20230703 16:21:06.791"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:06.776" endtime="20230703 16:21:06.793"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//div[contains(@class, 'chakra-modal__body')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:06.794" endtime="20230703 16:21:06.838"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//button[text()='Save']</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:06.839" endtime="20230703 16:21:06.927"/>
-</kw>
-<kw name="Wait For Elements State" library="Browser">
-<arg>//div[contains(@class, 'chakra-modal__body')]</arg>
-<arg>hidden</arg>
-<arg>timeout=${timeout}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:28.413" level="INFO">Waited for Element with selector //div[contains(@class, 'chakra-modal__body')] at state hidden</msg>
-<status status="PASS" starttime="20230703 16:21:06.928" endtime="20230703 16:21:28.414"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:03.244" endtime="20230703 16:21:28.415"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:03.086" endtime="20230703 16:21:28.416"/>
-</branch>
-<branch type="ELSE">
-<kw name="Click" library="Browser">
-<arg>//button[contains(text(), "Save")]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:28.418" endtime="20230703 16:21:28.419"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 16:21:28.417" endtime="20230703 16:21:28.420"/>
-</branch>
-<status status="PASS" starttime="20230703 16:21:03.086" endtime="20230703 16:21:28.421"/>
-</if>
-<status status="PASS" starttime="20230703 16:21:02.735" endtime="20230703 16:21:28.422"/>
-</kw>
-<kw name="Complete Check in" library="booking">
-<kw name="Wait Until Visible" library="common">
-<arg>//p[contains(text(), "completed")]</arg>
-<doc>An easier keyword for waiting until an element is visible</doc>
-<kw name="Wait For Elements State" library="Browser">
-<arg>${element}</arg>
-<arg>visible</arg>
-<arg>timeout=${timeout}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230703 16:21:28.441" level="INFO">Waited for Element with selector //p[contains(text(), "completed")] at state visible</msg>
-<status status="PASS" starttime="20230703 16:21:28.429" endtime="20230703 16:21:28.441"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:28.427" endtime="20230703 16:21:28.443"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:28.425" endtime="20230703 16:21:28.444"/>
-</kw>
-<kw name="Wait Until Door Code is Available" library="checkin">
-<kw name="Set Browser Timeout" library="Browser">
-<arg>5 minutes</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:21:28.456" level="INFO">Set timeout to: 300000</msg>
-<status status="PASS" starttime="20230703 16:21:28.448" endtime="20230703 16:21:28.456"/>
-</kw>
-<kw name="Is Element Found" library="common">
-<var>${availableInFound}</var>
-<arg>//p[contains(text(), "Available in")]</arg>
-<doc>A keyword that has a very complex way of figuring out whether an
-element is found or not because I had trouble with the built-in keywords
-Can be solved differently if you have a better idea</doc>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>10s</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:21:28.468" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" starttime="20230703 16:21:28.461" endtime="20230703 16:21:28.469"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Get Elements" library="Browser">
-<var>${els}</var>
-<arg>${selector}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230703 16:21:29.362" level="INFO">Found 1 Locators successfully.</msg>
-<msg timestamp="20230703 16:21:29.363" level="INFO">${els} = ['element=b8ff3da9-867c-41b0-97f9-45b04e2b9676']</msg>
-<status status="PASS" starttime="20230703 16:21:28.472" endtime="20230703 16:21:29.363"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${count}</var>
-<arg>${els}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230703 16:21:29.368" level="INFO">Length is 1</msg>
-<msg timestamp="20230703 16:21:29.369" level="INFO">${count} = 1</msg>
-<status status="PASS" starttime="20230703 16:21:29.365" endtime="20230703 16:21:29.369"/>
-</kw>
-<if>
-<branch type="IF" condition="${count} &gt; 0">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>True</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 16:21:29.377" level="INFO">${visible} = True</msg>
-<status status="PASS" starttime="20230703 16:21:29.375" endtime="20230703 16:21:29.377"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:29.371" endtime="20230703 16:21:29.378"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:29.380" endtime="20230703 16:21:29.381"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 16:21:29.379" endtime="20230703 16:21:29.382"/>
-</branch>
-<status status="PASS" starttime="20230703 16:21:29.371" endtime="20230703 16:21:29.383"/>
-</if>
-<status status="PASS" starttime="20230703 16:21:28.471" endtime="20230703 16:21:29.383"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:29.386" endtime="20230703 16:21:29.387"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 16:21:29.384" endtime="20230703 16:21:29.388"/>
-</branch>
-<status status="PASS" starttime="20230703 16:21:28.470" endtime="20230703 16:21:29.389"/>
-</try>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:21:29.396" level="INFO">Set timeout to: 30000</msg>
-<status status="PASS" starttime="20230703 16:21:29.390" endtime="20230703 16:21:29.397"/>
-</kw>
-<msg timestamp="20230703 16:21:29.398" level="INFO">${availableInFound} = True</msg>
-<status status="PASS" starttime="20230703 16:21:28.458" endtime="20230703 16:21:29.399"/>
-</kw>
-<while condition="${availableInFound}">
-<iter>
-<kw name="Sleep" library="BuiltIn">
-<arg>15s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230703 16:21:44.408" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20230703 16:21:29.404" endtime="20230703 16:21:44.409"/>
-</kw>
-<kw name="Reload" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Reloads current active page.</doc>
-<msg timestamp="20230703 16:21:45.690" level="INFO">Reloaded page</msg>
-<status status="PASS" starttime="20230703 16:21:44.411" endtime="20230703 16:21:45.690"/>
-</kw>
-<kw name="Is Element Found" library="common">
-<var>${availableInFound}</var>
-<arg>//p[contains(text(), "Available in")]</arg>
-<doc>A keyword that has a very complex way of figuring out whether an
-element is found or not because I had trouble with the built-in keywords
-Can be solved differently if you have a better idea</doc>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>10s</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:21:45.703" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" starttime="20230703 16:21:45.694" endtime="20230703 16:21:45.703"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Get Elements" library="Browser">
-<var>${els}</var>
-<arg>${selector}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230703 16:21:55.721" level="INFO">Found 0 Locators successfully.</msg>
-<msg timestamp="20230703 16:21:55.722" level="INFO">${els} = []</msg>
-<status status="PASS" starttime="20230703 16:21:45.707" endtime="20230703 16:21:55.722"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${count}</var>
-<arg>${els}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230703 16:21:55.726" level="INFO">Length is 0</msg>
-<msg timestamp="20230703 16:21:55.726" level="INFO">${count} = 0</msg>
-<status status="PASS" starttime="20230703 16:21:55.724" endtime="20230703 16:21:55.726"/>
-</kw>
-<if>
-<branch type="IF" condition="${count} &gt; 0">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>True</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:55.729" endtime="20230703 16:21:55.730"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 16:21:55.728" endtime="20230703 16:21:55.731"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 16:21:55.735" level="INFO">${visible} = False</msg>
-<status status="PASS" starttime="20230703 16:21:55.733" endtime="20230703 16:21:55.735"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:55.732" endtime="20230703 16:21:55.736"/>
-</branch>
-<status status="PASS" starttime="20230703 16:21:55.727" endtime="20230703 16:21:55.737"/>
-</if>
-<status status="PASS" starttime="20230703 16:21:45.706" endtime="20230703 16:21:55.737"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:55.739" endtime="20230703 16:21:55.740"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 16:21:55.738" endtime="20230703 16:21:55.741"/>
-</branch>
-<status status="PASS" starttime="20230703 16:21:45.705" endtime="20230703 16:21:55.742"/>
-</try>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 16:21:55.753" level="INFO">Set timeout to: 30000</msg>
-<status status="PASS" starttime="20230703 16:21:55.743" endtime="20230703 16:21:55.753"/>
-</kw>
-<msg timestamp="20230703 16:21:55.755" level="INFO">${availableInFound} = False</msg>
-<status status="PASS" starttime="20230703 16:21:45.692" endtime="20230703 16:21:55.756"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:29.401" endtime="20230703 16:21:55.757"/>
-</iter>
-<status status="PASS" starttime="20230703 16:21:29.400" endtime="20230703 16:21:55.758"/>
-</while>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" starttime="20230703 16:21:55.759" endtime="20230703 16:21:55.761"/>
-</kw>
-<kw name="Check for Payment Ok Modal" library="checkin">
-<doc>Workaround to closing modal until it is fixed</doc>
-<kw name="Is Element Visible" library="common">
-<var>${modalIsVisible}</var>
-<arg>//section[contains(@class, 'chakra')]</arg>
-<kw name="Get Element States" library="Browser">
-<var>${isVisible}</var>
-<arg>${selector}</arg>
-<arg>then</arg>
-<arg>bool(value &amp; visible)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:55.817" level="INFO">${isVisible} = True</msg>
-<status status="PASS" starttime="20230703 16:21:55.766" endtime="20230703 16:21:55.817"/>
-</kw>
-<msg timestamp="20230703 16:21:55.819" level="INFO">${modalIsVisible} = True</msg>
-<status status="PASS" starttime="20230703 16:21:55.764" endtime="20230703 16:21:55.819"/>
-</kw>
-<if>
-<branch type="IF" condition="${modalIsVisible}">
-<kw name="Click" library="Browser">
-<arg>//button[contains(text(),'Ok')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 16:21:55.822" endtime="20230703 16:21:55.931"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:55.821" endtime="20230703 16:21:55.932"/>
-</branch>
-<status status="PASS" starttime="20230703 16:21:55.820" endtime="20230703 16:21:55.932"/>
-</if>
-<status status="PASS" starttime="20230703 16:21:55.762" endtime="20230703 16:21:55.933"/>
-</kw>
-<status status="PASS" starttime="20230703 16:21:28.446" endtime="20230703 16:21:55.934"/>
-</kw>
-<kw name="Check Door Code and verify it is not empty" library="checkin">
-<kw name="Get Text" library="Browser">
-<var>${doorCode}</var>
-<arg>//*[contains(text(), "Door code")]/following-sibling::*</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230703 16:21:55.959" level="INFO">Text: '39629'</msg>
-<msg timestamp="20230703 16:21:55.959" level="INFO">${doorCode} = 39629</msg>
-<status status="PASS" starttime="20230703 16:21:55.938" endtime="20230703 16:21:55.960"/>
-</kw>
-<if>
-<branch type="IF" condition="${availableInFound} != 'True'">
-<kw name="Should Be String" library="String">
-<arg>${doorCode}</arg>
-<doc>Fails if the given ``item`` is not a string.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:55.971" endtime="20230703 16:21:55.972"/>
-</kw>
-<kw name="Should Match Regexp" library="BuiltIn">
-<arg>${doorCode}</arg>
-<arg>${doorCodeRegex}</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:55.974" endtime="20230703 16:21:55.975"/>
-</kw>
-<msg timestamp="20230703 16:21:55.976" level="FAIL">Evaluating IF condition failed: Variable '${availableInFound}' not found.</msg>
-<status status="FAIL" starttime="20230703 16:21:55.969" endtime="20230703 16:21:55.977"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Door code is not visible</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20230703 16:21:55.980" endtime="20230703 16:21:55.981"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 16:21:55.978" endtime="20230703 16:21:55.982"/>
-</branch>
-<status status="FAIL" starttime="20230703 16:21:55.961" endtime="20230703 16:21:55.983"/>
-</if>
-<errors>
-<msg timestamp="20230703 17:00:56.540" level="ERROR">Execution stopped by user.</msg>
-</errors>
-</robot>
