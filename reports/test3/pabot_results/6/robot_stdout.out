@@ -1,0 +1,98 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.MUI                                                                
+==============================================================================
+Testsuites.MUI.EC                                                             
+==============================================================================
+Testsuites.MUI.EC.New Booking :: A test suite for verifying modify booking ...
+==============================================================================
+Create A New Booking on Booking.com for today and verify Emails       Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:17
+    T:  Create A New Booking on Booking.com for today and verify Emails    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:24
+      Wait Until Network Is Idle    
+______________________________________________________________________________
+| FAIL |
+TimeoutError: page.waitForLoadState: Timeout 90000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Verify Emails and Get Booking No                                      Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:49
+    T:  Verify Emails and Get Booking No    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:51
+      Wait for Latest Booking Confirmation    ${id}    is confirmed
+      |  ${id} = 492aa3bb-9e4b-410a-a02c-84f13ace89e8 (str)
+______________________________________________________________________________
+| FAIL |
+TypeError: expected string or bytes-like object
+------------------------------------------------------------------------------
+Create A New Booking on Booking.com for a later date and verify Em... | PASS |
+TBD
+------------------------------------------------------------------------------
+Cancel Booking via BDC                                                | PASS |
+Can't cancel if done upon the next 24 hours
+------------------------------------------------------------------------------
+Open Booking in MUI                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:62
+    T:  Open Booking in MUI    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:63
+      Open Browser to Nelson Portal and Navigate to Test Exhibition    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource:28
+      Open Browser to Nelson Portal    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource:36
+      New Page    %{MUI_URL}
+      |  %{MUI_URL} = <Unable to define variable value>
+______________________________________________________________________________
+| FAIL |
+Environment variable '%{MUI_URL}' not found.
+------------------------------------------------------------------------------
+Start Creating a new Booking in MUI                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:70
+    T:  Start Creating a new Booking in MUI    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/EC/new_booking.robot:71
+      Open Browser to Nelson Portal and Navigate to Test Exhibition    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource:28
+      Open Browser to Nelson Portal    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource:36
+      New Page    %{MUI_URL}
+      |  %{MUI_URL} = <Unable to define variable value>
+______________________________________________________________________________
+| FAIL |
+Environment variable '%{MUI_URL}' not found.
+------------------------------------------------------------------------------
+Testsuites.MUI.EC.New Booking :: A test suite for verifying modify... | FAIL |
+6 tests, 2 passed, 4 failed
+==============================================================================
+Testsuites.MUI.EC                                                     | FAIL |
+6 tests, 2 passed, 4 failed
+==============================================================================
+Testsuites.MUI                                                        | FAIL |
+6 tests, 2 passed, 4 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+6 tests, 2 passed, 4 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/6/output.xml

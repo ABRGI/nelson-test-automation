@@ -1,0 +1,56 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.BUI                                                                
+==============================================================================
+Testsuites.BUI.Feature                                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In.BUI2-557                               
+==============================================================================
+Verify UI When in booker view                                         Not yet implemented
+
+| FAIL |
+Keyword 'Verify Element Presence' failed after retrying for 20 seconds. The last error was: 'False==True' should be true.
+------------------------------------------------------------------------------
+Validation shows msg for fields marked                                Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Showing imported passport when the National is not Finland            Not yet implemented
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-557.robot:58
+    T:  Showing imported passport when the National is not Finland    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-557.robot:67
+      Fill contact info with the National not Finland    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:581
+      Click    //p[normalize-space()='(+84) Vietnam']
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//p[normalize-space()=\'(+84) Vietnam\']')
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Testsuites.BUI.Feature.Online Check In.BUI2-557                       | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Testsuites.BUI.Feature                                                | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Testsuites.BUI                                                        | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/1/output.xml
