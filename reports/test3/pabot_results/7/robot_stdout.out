@@ -1,0 +1,46 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.MUI                                                                
+==============================================================================
+Testsuites.MUI.Feature                                                        
+==============================================================================
+Testsuites.MUI.Feature.MUI-430 :: This file contains test cases for testing...
+==============================================================================
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/MUI/feature/MUI-430.robot:7
+      Open Browser to Nelson Portal and Login    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource:24
+      Open Browser to Nelson Portal    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.resource:37
+      New Page    ${MUI_URL}
+      |  ${MUI_URL} = <Unable to define variable value>
+______________________________________________________________________________
+Filter Check in incomplete and open reservation :: Test case verif... | FAIL |
+Parent suite setup failed:
+Variable '${MUI_URL}' not found.
+------------------------------------------------------------------------------
+Remove filter and open a reservation :: Test case verifying the fu... | FAIL |
+Parent suite setup failed:
+Variable '${MUI_URL}' not found.
+------------------------------------------------------------------------------
+Testsuites.MUI.Feature.MUI-430 :: This file contains test cases fo... | FAIL |
+Suite setup failed:
+Variable '${MUI_URL}' not found.
+
+2 tests, 0 passed, 2 failed
+==============================================================================
+Testsuites.MUI.Feature                                                | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Testsuites.MUI                                                        | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/7/output.xml

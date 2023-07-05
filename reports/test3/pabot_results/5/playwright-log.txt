@@ -1,0 +1,89 @@
+{"level":30,"time":"2023-07-05T06:39:39.247Z","pid":13161,"hostname":"fv-az552-826","msg":"Listening on 55421"}
+{"level":30,"time":"2023-07-05T06:39:39.321Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:39:39.321Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:39:39.328Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-07-05T06:39:40.025Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-07-05T06:39:40.033Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-07-05T06:39:40.033Z","pid":13161,"hostname":"fv-az552-826","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-07-05T06:39:40.034Z","pid":13161,"hostname":"fv-az552-826","msg":"Trace file: "}
+{"level":30,"time":"2023-07-05T06:39:40.098Z","pid":13161,"hostname":"fv-az552-826","msg":"Changed active context"}
+{"level":30,"time":"2023-07-05T06:39:40.098Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method newContext"}
+{"level":30,"time":"2023-07-05T06:39:40.102Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-07-05T06:39:40.102Z","pid":13161,"hostname":"fv-az552-826","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-07-05T06:39:40.773Z","pid":13161,"hostname":"fv-az552-826","msg":"Video path: undefined"}
+{"level":30,"time":"2023-07-05T06:39:40.773Z","pid":13161,"hostname":"fv-az552-826","msg":"Changed active page"}
+{"level":30,"time":"2023-07-05T06:39:46.414Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method newPage"}
+{"level":30,"time":"2023-07-05T06:39:46.419Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitUntilNetworkIsIdle"}
+{"level":30,"time":"2023-07-05T06:39:48.060Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitUntilNetworkIsIdle"}
+{"level":30,"time":"2023-07-05T06:39:48.068Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-07-05T06:39:48.069Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is disabled, return Locator: id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-07-05T06:39:48.069Z","pid":13161,"hostname":"fv-az552-826","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-07-05T06:39:48.114Z","pid":13161,"hostname":"fv-az552-826","msg":"Found 1 elements."}
+{"level":30,"time":"2023-07-05T06:39:48.114Z","pid":13161,"hostname":"fv-az552-826","msg":"Find 0 Locator in page."}
+{"level":30,"time":"2023-07-05T06:39:48.115Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getElements"}
+{"level":30,"time":"2023-07-05T06:39:48.126Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.126Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-07-05T06:39:48.203Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.212Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:39:48.221Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:39:48.227Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.227Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //div[contains(@data-nelson-btn, \"hotels\")] in page."}
+{"level":30,"time":"2023-07-05T06:39:48.322Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.326Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:48.326Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] in page."}
+{"level":30,"time":"2023-07-05T06:39:48.333Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:48.338Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.338Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] in page."}
+{"level":30,"time":"2023-07-05T06:39:48.600Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.604Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:48.604Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] in page."}
+{"level":30,"time":"2023-07-05T06:39:48.677Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:48.685Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-05T06:39:48.685Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //div[@data-nelson-btn='book'] in page."}
+{"level":30,"time":"2023-07-05T06:39:49.774Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method click"}
+{"level":30,"time":"2023-07-05T06:39:49.779Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:49.779Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-07-05T06:39:55.109Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:55.113Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-07-05T06:39:55.113Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //div[contains(text(), 'Select room')] in page."}
+{"level":30,"time":"2023-07-05T06:39:55.362Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-07-05T06:39:55.367Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-05T06:39:55.367Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-07-05T06:39:58.575Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method click"}
+{"level":30,"time":"2023-07-05T06:39:58.579Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:58.579Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"extras\")]//button[contains(text(), \"Continue to payment\")])[1] in page."}
+{"level":30,"time":"2023-07-05T06:39:59.950Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:39:59.954Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-05T06:39:59.954Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with (//button[normalize-space()='Continue to payment'])[1] in page."}
+{"level":30,"time":"2023-07-05T06:40:00.092Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method click"}
+{"level":30,"time":"2023-07-05T06:40:00.097Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:40:00.097Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //input[@value='memberRate' and @checked=''] in page."}
+{"level":30,"time":"2023-07-05T06:40:01.589Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:40:01.596Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:40:01.596Z","pid":13161,"hostname":"fv-az552-826","msg":"Strict mode is enabled, find Locator with //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked] in page."}
+{"level":30,"time":"2023-07-05T06:40:01.612Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-07-05T06:40:01.945Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:01.947Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:01.950Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:01.952Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:01.961Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:01.962Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:01.966Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-07-05T06:40:01.977Z","pid":13161,"hostname":"fv-az552-826","msg":"Removed page=a94d87b3-466a-4337-88c5-894e183e7b34 from context=15d23140-f10d-4d7d-91cf-5122831d440e page stack"}
+{"level":30,"time":"2023-07-05T06:40:02.535Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/Browser/wrapper/index.js:9436:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/Browser/wrapper/index.js:9969:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/Browser/wrapper/index.js:10214:57)
+    at /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-05T06:40:02.543Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:02.543Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-05T06:40:02.550Z","pid":13161,"hostname":"fv-az552-826","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-07-05T06:40:02.550Z","pid":13161,"hostname":"fv-az552-826","msg":"End of node method closeAllBrowsers"}

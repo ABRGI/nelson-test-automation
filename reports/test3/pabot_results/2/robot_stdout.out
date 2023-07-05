@@ -1,0 +1,168 @@
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test environmen (test4)
+==============================================================================
+Testsuites.BUI                                                                
+==============================================================================
+Testsuites.BUI.Feature                                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                        
+==============================================================================
+Testsuites.BUI.Feature.Online Check In.BUI2-558                               
+==============================================================================
+Verify Page title when marking someone else as a guest                Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify notification when marking someone else as a guest              Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify room name in Edit guest popup when marking someone else as ... Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify Purpose of trip checkbox in Edit guest popup when marking s... Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify Save and invite button when marking someone else as a guest    Not yet implemented
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-558.robot:35
+    T:  Verify Save and invite button when marking someone else as a guest    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-558.robot:36
+      Booker just completed payment for a reservation    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:624
+      Check Regular Rate 2    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:371
+      Check Regular Rate    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:367
+      Click    //p[contains(text(),'Continue with regular rate')]
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//p[contains(text(),\'Continue with regular rate\')]')
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Verify Invite guest popup UI                                          Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify email field validation when inviting guest                     Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify invalid email field validation when inviting guest             Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify Warning popup when inviting blocked guest                      Not yet implemented
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-558.robot:69
+    T:  Verify Warning popup when inviting blocked guest    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-558.robot:70
+      Booker just completed payment for a reservation    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:623
+      Click Continue to Payment    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:185
+      Click First Element Found    //div[@class='css-1t415z1']//button[@type='button'][normalize-space()='Continue to payment']
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource:83
+      Click    ${first_element}
+      |  ${first_element} = element=700fe87c-7d81-4706-b5fb-4e8b39e15481 (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.click: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//div[@class=\'css-1t415z1\']//button[@type=\'button\'][normalize-space()=\'Continue to payment\']').first()
+  locator resolved to <button type="button" class="chakra-button css-f0w8tx">Continue to payment</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  <div id="CybotCookiebotDialogFooter">…</div> from <div dir="ltr" lang="en" role="dialog" tabindex="-1" …>…</div> subtree intercepts pointer events
+retrying click action, attempt #1
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+    [ Message content over the limit has been removed. ]
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  <div lang="en" id="CybotCookiebotDialogBodyContentTex…>We use cookies to personalise content and ads, to…</div> from <div dir="ltr" lang="en" role="dialog" tabindex="-1" …>…</div> subtree intercepts pointer events
+retrying click action, attempt #7
+  waiting 500ms
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  <div lang="en" id="CybotCookiebotDialogBodyContentTex…>We use cookies to personalise content and ads, to…</div> from <div dir="ltr" lang="en" role="dialog" tabindex="-1" …>…</div> subtree intercepts pointer events
+retrying click action, attempt #8
+  waiting 500ms
+  waiting for
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Verify invite guest with guest email same as booker email             Not yet implemented
+
+| PASS |
+------------------------------------------------------------------------------
+Verify invite guest with valid information                            Not yet implemented
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-558.robot:93
+    T:  Verify invite guest with valid information    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-558.robot:94
+      Booker just completed payment for a reservation    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:628
+      Complete Payment Successfully    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:284
+      Simulate Success or Failure    success
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource:289
+      Wait For Elements State    //a[contains(text(), 'Simulate ${which} to merchant')]    visible    timeout=${timeout}
+      |  //a[contains(text(), 'Simulate ${which} to merchant')] = //a[contains(text(), 'Simulate success to merchant')] (str)
+      |  timeout=${timeout} = timeout=90s (str)
+______________________________________________________________________________
+| FAIL |
+TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//a[contains(text(), \'Simulate success to merchant\')]') to be visible
+============================================================
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.
+------------------------------------------------------------------------------
+Testsuites.BUI.Feature.Online Check In.BUI2-558                       | FAIL |
+11 tests, 8 passed, 3 failed
+==============================================================================
+Testsuites.BUI.Feature.Online Check In                                | FAIL |
+11 tests, 8 passed, 3 failed
+==============================================================================
+Testsuites.BUI.Feature                                                | FAIL |
+11 tests, 8 passed, 3 failed
+==============================================================================
+Testsuites.BUI                                                        | FAIL |
+11 tests, 8 passed, 3 failed
+==============================================================================
+Testsuites :: Argument file for running tests on Omena test enviro... | FAIL |
+11 tests, 8 passed, 3 failed
+==============================================================================
+Output:  /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test3/pabot_results/2/output.xml
