@@ -9,9 +9,10 @@ Resource          ${EXECDIR}/resources/keywords/booking.resource
 *** Variables ***
 
 ${muiResultTable}     //table[contains(@class, 'custom-table')]
-${environment}        Test (2) Omena
-${MUI_USERNAME}        %{MUI_USERNAME}
-${MUI_PASSWORD}        %{MUI_PASSWORD}
+#${environment}        Test (2) Omena
+#${MUI_USERNAME}        %{MUI_USERNAME}
+#${MUI_PASSWORD}        %{MUI_PASSWORD}
+
 *** Keywords ***
 
 Select Environment   
@@ -33,7 +34,7 @@ Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context
-    New Page        %{MUI_URL}
+    New Page        ${MUI_URL}
 
 Log in to Nelson Portal
     Type Secret    //*[@id='email']         $MUI_USERNAME

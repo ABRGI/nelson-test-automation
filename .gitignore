@@ -25,3 +25,4 @@ dockerfile
 tmp/
 *.out
 pabot_results/
+resources/reporting

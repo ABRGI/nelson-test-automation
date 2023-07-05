@@ -2,6 +2,7 @@
 Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
+Resource           ${EXECDIR}/resources/keywords/common.resource
 Library            Browser   
 Library            OperatingSystem
 Library            String
@@ -17,7 +18,8 @@ Set Environment
 
 Check URL Contains
     [Arguments]    ${expected_string}
-    ${current_url}=    Get URL
+    Set Browser Timeout     3s
+    ${current_url}=    Get URL      
     IF    '${expected_string}' in '${current_url}'    
         Log    URL contains the expected string: ${expected_string}
         ${urlContains}      Set Variable    True
@@ -25,6 +27,7 @@ Check URL Contains
         Log    URL does not contain the expected string: ${expected_string}
         ${urlContains}      Set Variable    False
     END
+    Set Browser Timeout     ${timeout}
     [Return]    ${urlContains}
 
 Is Element Visible

@@ -34,6 +34,13 @@ class Helpers(object):
         day_number = next_day.day
         month_number = next_day.month
         return str(day_number), str(month_number)
+    
+    def get_selectors_for_far_date(self):
+        today = datetime.now().date()
+        next_day = today + timedelta(days=60)
+        day_number = next_day.day
+        month_number = next_day.month
+        return str(day_number), str(month_number)
         
     def find_visible_element(self, elements):
         for i in elements:

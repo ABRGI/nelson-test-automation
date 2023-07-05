@@ -8,6 +8,7 @@ ${emailUsername}  nelsontestar
 ${emailDomain}    gmail.com
 ${fullEmail}          ${emailUsername}@${emailDomain}
 ${phone}          0401234567
+
 ${btnPayment}    (//div[contains(@view,"extras")]//button[contains(text(), "Continue to payment")])[1]
 ${btnExtras}     (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]
 ${ssn}           170479-371J
@@ -29,3 +30,5 @@ ${hotelName}      Helsinki, Lönnrotinkatu
 ${longer}         90s
 ${url}          https://test4.omenahotels.com/en
 ${environment}
+${BDCUrl}       https://secure.booking.com/book.html?hotel_id=
+${noZeroPhone}  401705972
