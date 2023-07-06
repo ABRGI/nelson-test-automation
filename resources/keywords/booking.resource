@@ -167,8 +167,8 @@ Select Dates
     IF    '${url}' == 'https://test-exhibition.bookn.io/en/booking/'
         Log     Skipping date selection for now
     ELSE
-        Click First Element Found     //*[local-name() = 'svg' and contains(@data-icon, 'calendar-days')]
-        #Click    //div[contains(@class, 'booking-form-dates')]
+        #Click First Element Found     //*[local-name() = 'svg' and contains(@data-icon, 'calendar-days')]
+        Click    //div[contains(@class, 'booking-form-dates')]
         ${container}=    Get Element    //div[@class="container__months"]
         ${html}=    Get Property    ${container}    innerHTML
         Log    ${html}
@@ -217,7 +217,7 @@ Fill in Contact Information
     Run Keyword If    '${env}'=='bui'    Click and Fill    id=password    ${password}
 
 Fill in Contact Information 1
-    [Arguments]    ${firstName}=Bich    ${lastName}=Ngoc    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui  ${email}=bichngoc9995@gmail.com
+    [Arguments]    ${firstName}=User    ${lastName}=Test    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui  ${email}=finlong1111@gmail.com
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email       ${email}
@@ -630,6 +630,19 @@ Booker just completed payment for a reservation
     Accept offers and Terms
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
+Booker just completed payment for a reservation with 1 room 3 guest
+    Select Hotel     Helsinki, Lönnrotinkatu
+    Select Dates 
+    Select 1 Room 2 Adult and 1 Children
+    Click Book Button
+    Select a Standard Room
+    Click Continue to Extras Button 
+    Click Continue to Payment
+    Check Regular Rate 2
+    Fill in Contact Information 1
+    Accept offers and Terms
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
 
 Invite guest popup is open
     Verify Element Presence  //p[text()='Invite guest']/ancestor::div[@class="chakra-offset-slide"]  ${True}
@@ -827,3 +840,16 @@ Verify Comfirmation Landing page when Booker has not updated information
     Verify Element Presence  //p[normalize-space()='Standard room 2']  ${True}
     Verify Element Presence    //p[normalize-space()='2 guests']   ${True}
     Verify Element Presence  //p[normalize-space()='Check in or invite a guest'][1]  ${True}
+Booker does not update information
+    Wait For Elements State   (//button[text()='Check in'])[1]    visible 
+    Verify Element Presence  //p[text()='Booked by']  ${False}
+Verify UI confirmation landing page when Booker does not update information 
+    Wait For Elements State    (//p[text()='New Guest'])[1]    visible
+    Verify Element Presence      (//p[text()='New Guest'])[1]/ancestor::div[contains(@class,"disabled")]   ${True}
+    Wait For Elements State    (//p[text()='New Guest'])[2]    visible
+    Verify Element Presence    (//p[text()='New Guest'])[2]/ancestor::div[contains(@class,"disabled")]   ${True}
+    Wait For Elements State   //p[text()='room']   visible
+    Wait For Elements State   //button[normalize-space()='Download full receipt']   visible
+    Wait For Elements State   //p[text()='Booking number']   visible
+    Wait For Elements State   //a[@rel='noopener noreferrer']   visible
+    Wait For Elements State   //button[normalize-space()='My bookings']   visible  
