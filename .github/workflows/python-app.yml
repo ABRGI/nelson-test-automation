@@ -40,7 +40,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         rfbrowser init
     - name: Test with RobotFramework
-      run: pabot -A environments/test4.txt -A environments/test3.txt testsuites/ 
+      run: robot -A environments/test4.txt --outputdir reports/test4 testsuites/ 
       continue-on-error: True
     - name: Commit files
       run: |
