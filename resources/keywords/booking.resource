@@ -852,4 +852,12 @@ Verify UI confirmation landing page when Booker does not update information
     Wait For Elements State   //button[normalize-space()='Download full receipt']   visible
     Wait For Elements State   //p[text()='Booking number']   visible
     Wait For Elements State   //a[@rel='noopener noreferrer']   visible
-    Wait For Elements State   //button[normalize-space()='My bookings']   visible  
+    Wait For Elements State   //button[normalize-space()='My bookings']   visible
+Search & select nationality
+   [Arguments]   ${nationality}
+   #Open nationality Dropdown-list
+   Click   //button[@aria-haspopup="dialog"]//*[name()='svg' and @data-icon="caret-down"]
+   #Enter nationality into Search box
+   Type Text   //input[@placeholder="Search country"]   ${nationality}
+   #Select desired nationality by clicking on it
+   Click   //div[text()='${nationality}']
