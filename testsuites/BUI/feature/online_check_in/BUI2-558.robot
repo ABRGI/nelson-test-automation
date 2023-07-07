@@ -90,14 +90,14 @@ Verify invite guest with guest email same as booker email
     Click Cancel button
     Booker is brought back to Comfirmation Landing page
 
-Verify invite guest with valid information 
+Verify invite guest with valid information
     Booker just completed payment for a reservation
     Click Check In Button
     Click Someone else checkbox
     Fill In Booker info
     Click Save and invite
     Invite guest popup is open
-    Fill Invite guest info and click invite button
+    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${guestEmail}
     Booker is brought back to Comfirmation Landing page
     Notice "Invite sent" displays
     Status of guest confirmation is changed to "Invite sent, not check-in"
@@ -105,8 +105,5 @@ Verify invite guest with valid information
     Verify Booking summary
     Verify Guest information popup when guest not checkin
     Click Uninvite button
-
-
-   
     
 

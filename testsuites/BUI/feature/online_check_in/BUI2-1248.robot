@@ -19,16 +19,16 @@ Verify User changes to another nationality than Finland and vice versa
    Booker is brought back to Comfirmation Landing page
    Click Check In Button
    #Verify SSN field with Placeholder is displayed by default
-   Verify Element Presence    //div[normalize-space()='Social security number*']//input[@id='ssn' and @required]    ${True}
-   Verify Element Presence   //div[normalize-space()='Passport number*']//input[@id="passportNumber" and @required]   ${False}
+   Verify required field presence   Social security number   ${True}
+   Verify required field presence   Passport number   ${False}  
    #Verify when changing to other nationalities
    Search & select nationality   Vietnam
-   Verify Element Presence    //div[normalize-space()='Social security number*']//input[@id='ssn' and @required]    ${False}
-   Verify Element Presence   //div[normalize-space()='Passport number*']//input[@id="passportNumber" and @required]   ${True}
+   Verify required field presence   Social security number   ${False}
+   Verify required field presence   Passport number   ${True} 
    #Verify when changing nationality back to Finland
    Search & select nationality   Finland
-   Verify Element Presence    //div[normalize-space()='Social security number*']//input[@id='ssn' and @required]    ${True}
-   Verify Element Presence   //div[normalize-space()='Passport number*']//input[@id="passportNumber" and @required]   ${False}
+   Verify required field presence   Social security number   ${True}
+   Verify required field presence   Passport number   ${False} 
 
 Verify booker invites guest with already used email address
    Booker just completed payment for a reservation with 1 room 3 guest

@@ -862,3 +862,6 @@ Search & select nationality
    Type Text   //input[@placeholder="Search country"]   ${nationality}
    #Select desired nationality by clicking on it
    Click   //div[text()='${nationality}']
+Verify required field presence
+   [Arguments]   ${fieldLabel}   ${shown}
+   Verify Element Presence    //div[normalize-space()='${fieldLabel}*']//input[@required]   ${shown}
