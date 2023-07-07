@@ -484,16 +484,17 @@ Wait for invite guest page
    run keyword If    ${shown == ${False}}    Wait For Elements State    //button//*[@data-icon='xmark']    hidden
    run keyword If    ${shown == ${False}}    Wait For Elements State    //button[normalize-space()='Cancel']    hidden
 Fill Invite guest info and click invite button
+   [Arguments]   ${firstName}   ${lastName}   ${email}
    Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
    Click   //input[@id='firstName']
    Wait Until Visible   //input[@id='firstName']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    ${guestFirstname} 
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    ${firstName} 
    Click   //input[@id='lastName']
    Wait Until Visible   //input[@id='lastName']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    ${guestLastname}
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    ${lastName}
    Click   //input[@id='email']
    Wait Until Visible   //input[@id='email']
-   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    ${guestEmail}
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    ${email}
    Click   //button[normalize-space()='Invite']
 Open Edit booker info
    ##Wait Until Network Is Idle    timeout=4s
@@ -760,7 +761,7 @@ Booker is main guest and completes check-in process
     Sign 
 Invite adult guest
     Click the first guest invite
-    Fill Invite guest info and click invite button
+    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${guestEmail}
 Click the first guest invite
     Click   (//p[normalize-space()='New Guest'])[1]
 Click the secondary guest invite
@@ -786,7 +787,7 @@ Verify Add guest popup UI when guest is children
     Verify Element Presence   //button[normalize-space()='Cancel']  ${True}
     Verify Element Presence   //button[normalize-space()='Save']  ${True}
 Fill in guest information when guest is adult 
-    Fill Invite guest info and click invite button
+    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${guestEmail}
 Uninvite guest 
    Click     //p[text()='${guestFirstname} ${guestLastname}']
    Click Uninvite button

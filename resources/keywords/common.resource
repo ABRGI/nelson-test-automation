@@ -100,10 +100,11 @@ Open New Browser To URL
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
-    New Browser    ${browser}    ${headless}    timeout=${timeout}
+    New Browser    ${browser}    ${headless}    timeout=${timeout}   
     Set Browser Timeout    ${timeout}
     New Context    
     New Page       ${url}
+    Set Viewport Size   ${viewportWidth}   ${viewportHeight}
     Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
     Allow Cookies 

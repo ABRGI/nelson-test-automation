@@ -28,3 +28,5 @@ ${childLastname}    Dong
 ${chilDateofbirth}  05/06/2022
 ${hotelName}      Helsinki, Lönnrotinkatu
 ${longer}         90s
+${viewportWidth}   1920
+${viewportHeight}   1080

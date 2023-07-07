@@ -29,3 +29,12 @@ Verify User changes to another nationality than Finland and vice versa
    Search & select nationality   Finland
    Verify Element Presence    //div[normalize-space()='Social security number*']//input[@id='ssn' and @required]    ${True}
    Verify Element Presence   //div[normalize-space()='Passport number*']//input[@id="passportNumber" and @required]   ${False}
+
+Verify booker invites guest with already used email address
+   Booker just completed payment for a reservation with 1 room 3 guest
+   Booker is brought back to Comfirmation Landing page
+   Booker is main guest and completes check-in process
+   Click the first guest invite
+   Verify Invite guest popup UI when guest is adult
+   Fill Invite guest info and click invite button   Auto   Test   finlong1111@gmail.com
+   Verify Warning Popup is displayed with booker email
