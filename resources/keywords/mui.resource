@@ -133,7 +133,7 @@ Select Reservation with Check in Complete
 
 Go back to reservations
     Pass Execution    TBD
-    Click ${reservations_menu_button}
+    Click  ${reservations_menu_button}
     Verify button is shown with the highlight color
     Verify button has a checkmark # This seems to be the expected behaviour to keep the filter
 
