@@ -20,15 +20,23 @@ ${inbox_id}
 ${bookingUUID}
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
-${guestFirstname}  Shin
-${guestLastname}  Suke
-${guestEmail}     shinsuke@gmail.com
-${childFirstname}   Dong
-${childLastname}    Dong
+
 ${chilDateofbirth}  05/06/2022
 ${hotelName}      Helsinki, Lönnrotinkatu
 ${longer}         90s
 ${url}          https://test4.omenahotels.com/en
 ${environment}
 ${BDCUrl}       https://secure.booking.com/book.html?hotel_id=
+
+
+${city}         Ho Chi Minh City 
+${address}      Address 123
+${postalCode}   00700
 ${noZeroPhone}  401705972
+${companyName}  Company Co
+${companyRef}   ReferenceNo
+${companyVat}   ABC123
+${guestFirstname}  Shin
+${guestLastname}  Suke
+${childFirstname}   Dong
+${childLastname}    Dong
