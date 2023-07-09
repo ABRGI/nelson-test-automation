@@ -1,0 +1,116 @@
+name: Robot Framework Tests on Nelson
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+  workflow_dispatch:
+
+permissions:
+  write-all
+
+jobs:
+  set_environment_variables:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Environment Variables
+        env:
+          TEST_ENV: "staging"
+          MUI_PASSWORD: ${{ secrets.MUI_PASSWORD }}
+          MUI_URL: ${{ secrets.MUI_URL }}
+          MUI_USERNAME: ${{ secrets.MUI_USERNAME }}
+          TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+          TEST_EMAIL_PASSWORD: ${{ secrets.TEST_EMAIL_PASSWORD }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          MAILSLURP_API_KEY: ${{ secrets.MAILSLURP_API_KEY }}
+        run: echo "Environment variables set"
+
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          rfbrowser init
+
+  pre_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Pre-Tests
+        run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
+
+  test4:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Omena Testing Environment test4
+        run: robot -A environments/test4.txt --outputdir reports/test4 testsuites/
+        continue-on-error: False
+
+  exhibition_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test EC Testing Environment exhibition-test
+        run: robot -A environments/ectest.txt --outputdir reports/ectest testsuites/
+        continue-on-error: False
+
+  commit_files:
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Commit files
+        run: |
+          echo "Commit reporting files"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add /home/runner/work/nelson-test-automation/nelson-test-automation/reports
+          git commit -a -m "Add changes"
+
+  push_changes:
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+
+  copy_to_gh_pages_branch:
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Copy files to gh-pages branch
+        uses: planetoftheweb/copy-to-branches@v1.2
+        env:
+          key: develop
+          branches: gh-pages
+          files: reports
+
+  publish_reports:
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Publish Reports to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: reports
