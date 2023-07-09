@@ -10,14 +10,22 @@ from mailslurp_client.api.inbox_controller_api import InboxControllerApi
 class MailSlurp(object):
     ROBOT_LIBRARY_VERSION = '1.0.0'
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-
+    # 76f2cba58fc827f5252020446f37f7f1fe736b20de1b03df48e5d77c5231ef91
     # configure the mailslurp client using your API KEY
     def __init__(self):
         self.configuration = mailslurp_client.Configuration()
-        self.configuration.api_key['x-api-key'] = os.environ.get('MAILSLURP_API_KEY')
+        self.configuration.api_key['x-api-key'] = "76f2cba58fc827f5252020446f37f7f1fe736b20de1b03df48e5d77c5231ef91" #os.environ.get('MAILSLURP_API_KEY')
         self.api_client = mailslurp_client.ApiClient(self.configuration)
         self.email_client = mailslurp_client.EmailControllerApi(self.api_client)
-    
+              
+    @keyword("Get All Inboxes")
+    def get_all_inboxes(self):
+        with mailslurp_client.ApiClient(self.configuration) as api_client:
+            # create an inbox using the inbox controller
+            api_instance = mailslurp_client.InboxControllerApi(api_client)
+            inbox = api_instance.get_all_inboxes()
+            return inbox
+            
     # function for creating an email address returns an inbox with an id and email_address
     @keyword("Create new Inbox")
     def create_new_inbox(self):
@@ -25,6 +33,14 @@ class MailSlurp(object):
             # create an inbox using the inbox controller
             api_instance = mailslurp_client.InboxControllerApi(api_client)
             inbox = api_instance.create_inbox()
+            return inbox
+    
+    @keyword("Get Inbox")
+    def get_inbox(self, inbox_id):
+        with mailslurp_client.ApiClient(self.configuration) as api_client:
+            api_instance = mailslurp_client.InboxControllerApi(api_client)
+            inbox = api_instance.get_inbox(inbox_id)
+            print(inbox.name)
             return inbox
         
     @keyword("Wait for Latest Email")
@@ -35,7 +51,7 @@ class MailSlurp(object):
             return email
 
     @keyword("Wait for Latest Booking Confirmation")
-    def wait_for_latest_booking_confirmation(self, inbox_id, search_text="confirmation"):
+    def wait_for_latest_booking_confirmation(self, inbox_id="ec6787c2-caab-47c0-8dd0-a741e0d955e7", search_text="Booking confirmation"):
         with mailslurp_client.ApiClient(self.configuration) as api_client:
             api_instance = mailslurp_client.WaitForControllerApi(api_client)
             match_options = {'matches': [{'field': 'SUBJECT','should':'CONTAIN','value':f'{search_text}'}]}
@@ -45,12 +61,12 @@ class MailSlurp(object):
                 return email
         
     @keyword("Extract Link")
-    def extract_link(self, email_body, action='MANAGE'):
+    def extract_link(self, email_body, action='manage-booking'):
         soup = BeautifulSoup(email_body , "html.parser")
         links = soup.find_all('a', href=True)
         if len(links) > 0:
             for l in links:
-                if(action in l.text):
+                if(action in l.attrs['href']):
                     return l.attrs['href']
         
     @keyword("Get Confirmation Number from Email")
@@ -60,10 +76,22 @@ class MailSlurp(object):
         bno = td.string
         bno = bno.strip()
         return bno
-        
+    
+    @keyword("Wait for Latest Booking Confirmation and Extract Link")
+    def wait_for_latest_booking_confirmation_and_extract_link(self, inbox_id="ec6787c2-caab-47c0-8dd0-a741e0d955e7"):
+        body = self.wait_for_latest_booking_confirmation(inbox_id)
+        link = self.extract_link(body)
+        return link
+
 if __name__ == '__main__':
     m = MailSlurp()
-    e = m.wait_for_latest_booking_confirmation('492aa3bb-9e4b-410a-a02c-84f13ace89e8', 'Welcome to Exhibition')
-    bn = m.get_confirmation_number_from_email(e)
+    
+    #inbox_id = "efc7c87b-8bcf-4ad9-bb4e-c5c459b2d526"
+
+
+    link = m.wait_for_latest_booking_confirmation_and_extract_link()
+    print(link)
+    #e = m.wait_for_latest_booking_confirmation('492aa3bb-9e4b-410a-a02c-84f13ace89e8', 'Welcome to Exhibition')
+    #bn = m.get_confirmation_number_from_email(e)
     
 

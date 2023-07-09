@@ -6,13 +6,6 @@ Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 
-*** Variables ***
-
-${muiResultTable}     //table[contains(@class, 'custom-table')]
-#${environment}        Test (2) Omena
-#${MUI_USERNAME}        %{MUI_USERNAME}
-#${MUI_PASSWORD}        %{MUI_PASSWORD}
-
 *** Keywords ***
 
 Select Environment   
@@ -128,14 +121,9 @@ Select Reservation with Check in Incomplete
 Select Reservation with Check in Complete
     Pass Execution     TBD
     # Create a way to select first/last/some of the reservations
-    Verify correct reservation is shown
-    Verify Check in status is shown when hovering on Guest name
 
 Go back to reservations
     Pass Execution    TBD
-    Click  ${reservations_menu_button}
-    Verify button is shown with the highlight color
-    Verify button has a checkmark # This seems to be the expected behaviour to keep the filter
 
 Get Icon Visibility
     [Arguments]    ${filter}

@@ -39,10 +39,16 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         rfbrowser init
-    - name: Test with RobotFramework
+    - name: Run Pre-Tests
+      run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
+    - name: Test Omena Testing Environment test4 
       run: robot -A environments/test4.txt --outputdir reports/test4 testsuites/ 
-      continue-on-error: True
+      continue-on-error: False
+    - name: Test EC Testing Environment exhibition-test
+      run: robot -A environments/ectest.txt --outputdir reports/ectest testsuites/ 
+      continue-on-error: False
     - name: Commit files
+      if: always()
       run: |
         echo "Commit reporting files"
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -50,19 +56,20 @@ jobs:
         git add /home/runner/work/nelson-test-automation/nelson-test-automation/reports
         git commit -a -m "Add changes"
     - name: Push changes
+      if: always()
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
-      continue-on-error: True
     - name: Copy files to gh-pages branch
+      if: always()
       uses: planetoftheweb/copy-to-branches@v1.2
       env:
           key: develop
           branches: gh-pages
           files: reports
-      continue-on-error: True
     - name: Publish Reports to Pages
+      if: always()
       uses: peaceiris/actions-gh-pages@v3
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

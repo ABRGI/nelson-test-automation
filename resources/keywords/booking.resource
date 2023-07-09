@@ -334,9 +334,15 @@ Create a successful booking and return UUID
     [Arguments]    ${isBrowserOpen}=False  
     Complete a new booking    ${isBrowserOpen}
     Wait Until Network Is Idle
+    ${uuid}=     Get UUID from URL
+    [Return]    ${uuid}
+
+Get UUID from URL
     ${url}       Get Url
     ${uuid}=     Extract Guid From Url    ${url}
+    Log to Console     Booking UUID:${uuid}
     [Return]    ${uuid}
+
 
 Click Booker or Guest Name
     [Arguments]    ${name}

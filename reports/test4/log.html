@@ -772,3 +772,1425 @@ function LogLevelController(minLevel, defaultLevel) {
 (function(a){var r=a.fn.domManip,d="_tmplitem",q=/^[^<]*(<[\w\W]+>)[^>]*$|\{\{\! /,b={},f={},e,p={key:0,data:{}},i=0,c=0,l=[];function g(g,d,h,e){var c={data:e||(e===0||e===false)?e:d?d.data:{},_wrap:d?d._wrap:null,tmpl:null,parent:d||null,nodes:[],calls:u,nest:w,wrap:x,html:v,update:t};g&&a.extend(c,g,{nodes:[],parent:d});if(h){c.tmpl=h;c._ctnt=c._ctnt||c.tmpl(a,c);c.key=++i;(l.length?f:b)[i]=c}return c}a.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(f,d){a.fn[f]=function(n){var g=[],i=a(n),k,h,m,l,j=this.length===1&&this[0].parentNode;e=b||{};if(j&&j.nodeType===11&&j.childNodes.length===1&&i.length===1){i[d](this[0]);g=this}else{for(h=0,m=i.length;h<m;h++){c=h;k=(h>0?this.clone(true):this).get();a(i[h])[d](k);g=g.concat(k)}c=0;g=this.pushStack(g,f,i.selector)}l=e;e=null;a.tmpl.complete(l);return g}});a.fn.extend({tmpl:function(d,c,b){return a.tmpl(this[0],d,c,b)},tmplItem:function(){return a.tmplItem(this[0])},template:function(b){return a.template(b,this[0])},domManip:function(d,m,k){if(d[0]&&a.isArray(d[0])){var g=a.makeArray(arguments),h=d[0],j=h.length,i=0,f;while(i<j&&!(f=a.data(h[i++],"tmplItem")));if(f&&c)g[2]=function(b){a.tmpl.afterManip(this,b,k)};r.apply(this,g)}else r.apply(this,arguments);c=0;!e&&a.tmpl.complete(b);return this}});a.extend({tmpl:function(d,h,e,c){var i,k=!c;if(k){c=p;d=a.template[d]||a.template(null,d);f={}}else if(!d){d=c.tmpl;b[c.key]=c;c.nodes=[];c.wrapped&&n(c,c.wrapped);return a(j(c,null,c.tmpl(a,c)))}if(!d)return[];if(typeof h==="function")h=h.call(c||{});e&&e.wrapped&&n(e,e.wrapped);i=a.isArray(h)?a.map(h,function(a){return a?g(e,c,d,a):null}):[g(e,c,d,h)];return k?a(j(c,null,i)):i},tmplItem:function(b){var c;if(b instanceof a)b=b[0];while(b&&b.nodeType===1&&!(c=a.data(b,"tmplItem"))&&(b=b.parentNode));return c||p},template:function(c,b){if(b){if(typeof b==="string")b=o(b);else if(b instanceof a)b=b[0]||{};if(b.nodeType)b=a.data(b,"tmpl")||a.data(b,"tmpl",o(b.innerHTML));return typeof c==="string"?(a.template[c]=b):b}return c?typeof c!=="string"?a.template(null,c):a.template[c]||a.template(null,q.test(c)?c:a(c)):null},encode:function(a){return(""+a).split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;").split('"').join("&#34;").split("'").join("&#39;")}});a.extend(a.tmpl,{tag:{tmpl:{_default:{$2:"null"},open:"if($notnull_1){__=__.concat($item.nest($1,$2));}"},wrap:{_default:{$2:"null"},open:"$item.calls(__,$1,$2);__=[];",close:"call=$item.calls();__=call._.concat($item.wrap(call,__));"},each:{_default:{$2:"$index, $value"},open:"if($notnull_1){$.each($1a,function($2){with(this){",close:"}});}"},"if":{open:"if(($notnull_1) && $1a){",close:"}"},"else":{_default:{$1:"true"},open:"}else if(($notnull_1) && $1a){"},html:{open:"if($notnull_1){__.push($1a);}"},"=":{_default:{$1:"$data"},open:"if($notnull_1){__.push($.encode($1a));}"},"!":{open:""}},complete:function(){b={}},afterManip:function(f,b,d){var e=b.nodeType===11?a.makeArray(b.childNodes):b.nodeType===1?[b]:[];d.call(f,b);m(e);c++}});function j(e,g,f){var b,c=f?a.map(f,function(a){return typeof a==="string"?e.key?a.replace(/(<\w+)(?=[\s>])(?![^>]*_tmplitem)([^>]*)/g,"$1 "+d+'="'+e.key+'" $2'):a:j(a,e,a._ctnt)}):e;if(g)return c;c=c.join("");c.replace(/^\s*([^<\s][^<]*)?(<[\w\W]+>)([^>]*[^>\s])?\s*$/,function(f,c,e,d){b=a(e).get();m(b);if(c)b=k(c).concat(b);if(d)b=b.concat(k(d))});return b?b:k(c)}function k(c){var b=document.createElement("div");b.innerHTML=c;return a.makeArray(b.childNodes)}function o(b){return new Function("jQuery","$item","var $=jQuery,call,__=[],$data=$item.data;with($data){__.push('"+a.trim(b).replace(/([\\'])/g,"\\$1").replace(/[\r\t\n]/g," ").replace(/\$\{([^\}]*)\}/g,"{{= $1}}").replace(/\{\{(\/?)(\w+|.)(?:\(((?:[^\}]|\}(?!\}))*?)?\))?(?:\s+(.*?)?)?(\(((?:[^\}]|\}(?!\}))*?)\))?\s*\}\}/g,function(m,l,k,g,b,c,d){var j=a.tmpl.tag[k],i,e,f;if(!j)throw"Unknown template tag: "+k;i=j._default||[];if(c&&!/\w$/.test(b)){b+=c;c=""}if(b){b=h(b);d=d?","+h(d)+")":c?")":"";e=c?b.indexOf(".")>-1?b+h(c):"("+b+").call($item"+d:b;f=c?e:"(typeof("+b+")==='function'?("+b+").call($item):("+b+"))"}else f=e=i.$1||"null";g=h(g);return"');"+j[l?"close":"open"].split("$notnull_1").join(b?"typeof("+b+")!=='undefined' && ("+b+")!=null":"true").split("$1a").join(f).split("$1").join(e).split("$2").join(g||i.$2||"")+"__.push('"})+"');}return __;")}function n(c,b){c._wrap=j(c,true,a.isArray(b)?b:[q.test(b)?b:a(b).html()]).join("")}function h(a){return a?a.replace(/\\'/g,"'").replace(/\\\\/g,"\\"):null}function s(b){var a=document.createElement("div");a.appendChild(b.cloneNode(true));return a.innerHTML}function m(o){var n="_"+c,k,j,l={},e,p,h;for(e=0,p=o.length;e<p;e++){if((k=o[e]).nodeType!==1)continue;j=k.getElementsByTagName("*");for(h=j.length-1;h>=0;h--)m(j[h]);m(k)}function m(j){var p,h=j,k,e,m;if(m=j.getAttribute(d)){while(h.parentNode&&(h=h.parentNode).nodeType===1&&!(p=h.getAttribute(d)));if(p!==m){h=h.parentNode?h.nodeType===11?0:h.getAttribute(d)||0:0;if(!(e=b[m])){e=f[m];e=g(e,b[h]||f[h]);e.key=++i;b[i]=e}c&&o(m)}j.removeAttribute(d)}else if(c&&(e=a.data(j,"tmplItem"))){o(e.key);b[e.key]=e;h=a.data(j.parentNode,"tmplItem");h=h?h.key:0}if(e){k=e;while(k&&k.key!=h){k.nodes.push(j);k=k.parent}delete e._ctnt;delete e._wrap;a.data(j,"tmplItem",e)}function o(a){a=a+n;e=l[a]=l[a]||g(e,b[e.parent.key+n]||e.parent)}}}function u(a,d,c,b){if(!a)return l.pop();l.push({_:a,tmpl:d,item:this,data:c,options:b})}function w(d,c,b){return a.tmpl(a.template(d),c,b,this)}function x(b,d){var c=b.options||{};c.wrapped=d;return a.tmpl(a.template(b.tmpl),b.data,c,b.item)}function v(d,c){var b=this._wrap;return a.map(a(a.isArray(b)?b.join(""):b).filter(d||"*"),function(a){return c?a.innerText||a.textContent:a.outerHTML||s(a)})}function t(){var b=this.nodes;a.tmpl(null,null,null,this).insertBefore(b[0]);a(b).remove()}})(jQuery);
 </script>
 <script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof module&&"object"==typeof module.exports?module.exports=e(require("jquery")):e(jQuery)}(function(e){return function(e){"use strict";var t=e.tablesorter={version:"2.30.5",parsers:[],widgets:[],defaults:{theme:"default",widthFixed:!1,showProcessing:!1,headerTemplate:"{content}",onRenderTemplate:null,onRenderHeader:null,cancelSelection:!0,tabIndex:!0,dateFormat:"mmddyyyy",sortMultiSortKey:"shiftKey",sortResetKey:"ctrlKey",usNumberFormat:!0,delayInit:!1,serverSideSorting:!1,resort:!0,headers:{},ignoreCase:!0,sortForce:null,sortList:[],sortAppend:null,sortStable:!1,sortInitialOrder:"asc",sortLocaleCompare:!1,sortReset:!1,sortRestart:!1,emptyTo:"bottom",stringTo:"max",duplicateSpan:!0,textExtraction:"basic",textAttribute:"data-text",textSorter:null,numberSorter:null,initWidgets:!0,widgetClass:"widget-{name}",widgets:[],widgetOptions:{zebra:["even","odd"]},initialized:null,tableClass:"",cssAsc:"",cssDesc:"",cssNone:"",cssHeader:"",cssHeaderRow:"",cssProcessing:"",cssChildRow:"tablesorter-childRow",cssInfoBlock:"tablesorter-infoOnly",cssNoSort:"tablesorter-noSort",cssIgnoreRow:"tablesorter-ignoreRow",cssIcon:"tablesorter-icon",cssIconNone:"",cssIconAsc:"",cssIconDesc:"",cssIconDisabled:"",pointerClick:"click",pointerDown:"mousedown",pointerUp:"mouseup",selectorHeaders:"> thead th, > thead td",selectorSort:"th, td",selectorRemove:".remove-me",debug:!1,headerList:[],empties:{},strings:{},parsers:[],globalize:0,imgAttr:0},css:{table:"tablesorter",cssHasChild:"tablesorter-hasChildRow",childRow:"tablesorter-childRow",colgroup:"tablesorter-colgroup",header:"tablesorter-header",headerRow:"tablesorter-headerRow",headerIn:"tablesorter-header-inner",icon:"tablesorter-icon",processing:"tablesorter-processing",sortAsc:"tablesorter-headerAsc",sortDesc:"tablesorter-headerDesc",sortNone:"tablesorter-headerUnSorted"},language:{sortAsc:"Ascending sort applied, ",sortDesc:"Descending sort applied, ",sortNone:"No sort applied, ",sortDisabled:"sorting is disabled",nextAsc:"activate to apply an ascending sort",nextDesc:"activate to apply a descending sort",nextNone:"activate to remove the sort"},regex:{templateContent:/\{content\}/g,templateIcon:/\{icon\}/g,templateName:/\{name\}/i,spaces:/\s+/g,nonWord:/\W/g,formElements:/(input|select|button|textarea)/i,chunk:/(^([+\-]?(?:\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?)?$|^0x[0-9a-f]+$|\d+)/gi,chunks:/(^\\0|\\0$)/,hex:/^0x[0-9a-f]+$/i,comma:/,/g,digitNonUS:/[\s|\.]/g,digitNegativeTest:/^\s*\([.\d]+\)/,digitNegativeReplace:/^\s*\(([.\d]+)\)/,digitTest:/^[\-+(]?\d+[)]?$/,digitReplace:/[,.'"\s]/g},string:{max:1,min:-1,emptymin:1,emptymax:-1,zero:0,none:0,"null":0,top:!0,bottom:!1},keyCodes:{enter:13},dates:{},instanceMethods:{},setup:function(r,o){if(r&&r.tHead&&0!==r.tBodies.length&&!0!==r.hasInitialized){var s="",a=e(r),n=e.metadata;r.hasInitialized=!1,r.isProcessing=!0,r.config=o,e.data(r,"tablesorter",o),t.debug(o,"core")&&(console[console.group?"group":"log"]("Initializing tablesorter v"+t.version),e.data(r,"startoveralltimer",new Date)),o.supportsDataObject=function(e){return e[0]=parseInt(e[0],10),e[0]>1||1===e[0]&&parseInt(e[1],10)>=4}(e.fn.jquery.split(".")),o.emptyTo=o.emptyTo.toLowerCase(),o.stringTo=o.stringTo.toLowerCase(),o.last={sortList:[],clickedIndex:-1},/tablesorter\-/.test(a.attr("class"))||(s=""!==o.theme?" tablesorter-"+o.theme:""),o.namespace?o.namespace="."+o.namespace.replace(t.regex.nonWord,""):o.namespace=".tablesorter"+Math.random().toString(16).slice(2),o.table=r,o.$table=a.addClass(t.css.table+" "+o.tableClass+s+" "+o.namespace.slice(1)).attr("role","grid"),o.$headers=a.find(o.selectorHeaders),o.$table.children().children("tr").attr("role","row"),o.$tbodies=a.children("tbody:not(."+o.cssInfoBlock+")").attr({"aria-live":"polite","aria-relevant":"all"}),o.$table.children("caption").length&&((s=o.$table.children("caption")[0]).id||(s.id=o.namespace.slice(1)+"caption"),o.$table.attr("aria-labelledby",s.id)),o.widgetInit={},o.textExtraction=o.$table.attr("data-text-extraction")||o.textExtraction||"basic",t.buildHeaders(o),t.fixColumnWidth(r),t.addWidgetFromClass(r),t.applyWidgetOptions(r),t.setupParsers(o),o.totalRows=0,o.debug&&t.validateOptions(o),o.delayInit||t.buildCache(o),t.bindEvents(r,o.$headers,!0),t.bindMethods(o),o.supportsDataObject&&void 0!==a.data().sortlist?o.sortList=a.data().sortlist:n&&a.metadata()&&a.metadata().sortlist&&(o.sortList=a.metadata().sortlist),t.applyWidget(r,!0),o.sortList.length>0?t.sortOn(o,o.sortList,{},!o.initWidgets):(t.setHeadersCss(o),o.initWidgets&&t.applyWidget(r,!1)),o.showProcessing&&a.unbind("sortBegin"+o.namespace+" sortEnd"+o.namespace).bind("sortBegin"+o.namespace+" sortEnd"+o.namespace,function(e){clearTimeout(o.timerProcessing),t.isProcessing(r),"sortBegin"===e.type&&(o.timerProcessing=setTimeout(function(){t.isProcessing(r,!0)},500))}),r.hasInitialized=!0,r.isProcessing=!1,t.debug(o,"core")&&(console.log("Overall initialization time:"+t.benchmark(e.data(r,"startoveralltimer"))),t.debug(o,"core")&&console.groupEnd&&console.groupEnd()),a.triggerHandler("tablesorter-initialized",r),"function"==typeof o.initialized&&o.initialized(r)}else t.debug(o,"core")&&(r.hasInitialized?console.warn("Stopping initialization. Tablesorter has already been initialized"):console.error("Stopping initialization! No table, thead or tbody",r))},bindMethods:function(r){var o=r.$table,s=r.namespace,a="sortReset update updateRows updateAll updateHeaders addRows updateCell updateComplete sorton appendCache updateCache applyWidgetId applyWidgets refreshWidgets destroy mouseup mouseleave ".split(" ").join(s+" ");o.unbind(a.replace(t.regex.spaces," ")).bind("sortReset"+s,function(e,r){e.stopPropagation(),t.sortReset(this.config,function(e){e.isApplyingWidgets?setTimeout(function(){t.applyWidget(e,"",r)},100):t.applyWidget(e,"",r)})}).bind("updateAll"+s,function(e,r,o){e.stopPropagation(),t.updateAll(this.config,r,o)}).bind("update"+s+" updateRows"+s,function(e,r,o){e.stopPropagation(),t.update(this.config,r,o)}).bind("updateHeaders"+s,function(e,r){e.stopPropagation(),t.updateHeaders(this.config,r)}).bind("updateCell"+s,function(e,r,o,s){e.stopPropagation(),t.updateCell(this.config,r,o,s)}).bind("addRows"+s,function(e,r,o,s){e.stopPropagation(),t.addRows(this.config,r,o,s)}).bind("updateComplete"+s,function(){this.isUpdating=!1}).bind("sorton"+s,function(e,r,o,s){e.stopPropagation(),t.sortOn(this.config,r,o,s)}).bind("appendCache"+s,function(r,o,s){r.stopPropagation(),t.appendCache(this.config,s),e.isFunction(o)&&o(this)}).bind("updateCache"+s,function(e,r,o){e.stopPropagation(),t.updateCache(this.config,r,o)}).bind("applyWidgetId"+s,function(e,r){e.stopPropagation(),t.applyWidgetId(this,r)}).bind("applyWidgets"+s,function(e,r){e.stopPropagation(),t.applyWidget(this,!1,r)}).bind("refreshWidgets"+s,function(e,r,o){e.stopPropagation(),t.refreshWidgets(this,r,o)}).bind("removeWidget"+s,function(e,r,o){e.stopPropagation(),t.removeWidget(this,r,o)}).bind("destroy"+s,function(e,r,o){e.stopPropagation(),t.destroy(this,r,o)}).bind("resetToLoadState"+s,function(o){o.stopPropagation(),t.removeWidget(this,!0,!1);var s=e.extend(!0,{},r.originalSettings);(r=e.extend(!0,{},t.defaults,s)).originalSettings=s,this.hasInitialized=!1,t.setup(this,r)})},bindEvents:function(r,o,s){var a,n=(r=e(r)[0]).config,i=n.namespace,l=null;!0!==s&&(o.addClass(i.slice(1)+"_extra_headers"),(a=t.getClosest(o,"table")).length&&"TABLE"===a[0].nodeName&&a[0]!==r&&e(a[0]).addClass(i.slice(1)+"_extra_table")),a=(n.pointerDown+" "+n.pointerUp+" "+n.pointerClick+" sort keyup ").replace(t.regex.spaces," ").split(" ").join(i+" "),o.find(n.selectorSort).add(o.filter(n.selectorSort)).unbind(a).bind(a,function(r,o){var s,a,i,d=e(r.target),c=" "+r.type+" ";if(!(1!==(r.which||r.button)&&!c.match(" "+n.pointerClick+" | sort | keyup ")||" keyup "===c&&r.which!==t.keyCodes.enter||c.match(" "+n.pointerClick+" ")&&void 0!==r.which||c.match(" "+n.pointerUp+" ")&&l!==r.target&&!0!==o)){if(c.match(" "+n.pointerDown+" "))return l=r.target,void("1"===(i=d.jquery.split("."))[0]&&i[1]<4&&r.preventDefault());if(l=null,s=t.getClosest(e(this),"."+t.css.header),t.regex.formElements.test(r.target.nodeName)||d.hasClass(n.cssNoSort)||d.parents("."+n.cssNoSort).length>0||s.hasClass("sorter-false")||d.parents("button").length>0)return!n.cancelSelection;n.delayInit&&t.isEmptyObject(n.cache)&&t.buildCache(n),n.last.clickedIndex=s.attr("data-column")||s.index(),(a=n.$headerIndexed[n.last.clickedIndex][0])&&!a.sortDisabled&&t.initSort(n,a,r)}}),n.cancelSelection&&o.attr("unselectable","on").bind("selectstart",!1).css({"user-select":"none",MozUserSelect:"none"})},buildHeaders:function(r){var o,s,a,n;for(r.headerList=[],r.headerContent=[],r.sortVars=[],t.debug(r,"core")&&(a=new Date),r.columns=t.computeColumnIndex(r.$table.children("thead, tfoot").children("tr")),s=r.cssIcon?'<i class="'+(r.cssIcon===t.css.icon?t.css.icon:r.cssIcon+" "+t.css.icon)+'"></i>':"",r.$headers=e(e.map(r.$table.find(r.selectorHeaders),function(o,a){var n,i,l,d,c,g=e(o);if(!t.getClosest(g,"tr").hasClass(r.cssIgnoreRow))return/(th|td)/i.test(o.nodeName)||(c=t.getClosest(g,"th, td"),g.attr("data-column",c.attr("data-column"))),n=t.getColumnData(r.table,r.headers,a,!0),r.headerContent[a]=g.html(),""===r.headerTemplate||g.find("."+t.css.headerIn).length||(d=r.headerTemplate.replace(t.regex.templateContent,g.html()).replace(t.regex.templateIcon,g.find("."+t.css.icon).length?"":s),r.onRenderTemplate&&(i=r.onRenderTemplate.apply(g,[a,d]))&&"string"==typeof i&&(d=i),g.html('<div class="'+t.css.headerIn+'">'+d+"</div>")),r.onRenderHeader&&r.onRenderHeader.apply(g,[a,r,r.$table]),l=parseInt(g.attr("data-column"),10),o.column=l,c=t.getOrder(t.getData(g,n,"sortInitialOrder")||r.sortInitialOrder),r.sortVars[l]={count:-1,order:c?r.sortReset?[1,0,2]:[1,0]:r.sortReset?[0,1,2]:[0,1],lockedOrder:!1},void 0!==(c=t.getData(g,n,"lockedOrder")||!1)&&!1!==c&&(r.sortVars[l].lockedOrder=!0,r.sortVars[l].order=t.getOrder(c)?[1,1]:[0,0]),r.headerList[a]=o,g.addClass(t.css.header+" "+r.cssHeader),t.getClosest(g,"tr").addClass(t.css.headerRow+" "+r.cssHeaderRow).attr("role","row"),r.tabIndex&&g.attr("tabindex",0),o})),r.$headerIndexed=[],n=0;n<r.columns;n++)t.isEmptyObject(r.sortVars[n])&&(r.sortVars[n]={}),o=r.$headers.filter('[data-column="'+n+'"]'),r.$headerIndexed[n]=o.length?o.not(".sorter-false").length?o.not(".sorter-false").filter(":last"):o.filter(":last"):e();r.$table.find(r.selectorHeaders).attr({scope:"col",role:"columnheader"}),t.updateHeader(r),t.debug(r,"core")&&(console.log("Built headers:"+t.benchmark(a)),console.log(r.$headers))},addInstanceMethods:function(r){e.extend(t.instanceMethods,r)},setupParsers:function(e,r){var o,s,a,n,i,l,d,c,g,p,u,f,h,m,b=e.table,y=0,w=t.debug(e,"core"),x={};if(e.$tbodies=e.$table.children("tbody:not(."+e.cssInfoBlock+")"),h=void 0===r?e.$tbodies:r,0===(m=h.length))return w?console.warn("Warning: *Empty table!* Not building a parser cache"):"";for(w&&(f=new Date,console[console.group?"group":"log"]("Detecting parsers for each column")),s={extractors:[],parsers:[]};y<m;){if((o=h[y].rows).length)for(i=0,n=e.columns,l=0;l<n;l++){if((d=e.$headerIndexed[i])&&d.length&&(c=t.getColumnData(b,e.headers,i),u=t.getParserById(t.getData(d,c,"extractor")),p=t.getParserById(t.getData(d,c,"sorter")),g="false"===t.getData(d,c,"parser"),e.empties[i]=(t.getData(d,c,"empty")||e.emptyTo||(e.emptyToBottom?"bottom":"top")).toLowerCase(),e.strings[i]=(t.getData(d,c,"string")||e.stringTo||"max").toLowerCase(),g&&(p=t.getParserById("no-parser")),u||(u=!1),p||(p=t.detectParserForColumn(e,o,-1,i)),w&&(x["("+i+") "+d.text()]={parser:p.id,extractor:u?u.id:"none",string:e.strings[i],empty:e.empties[i]}),s.parsers[i]=p,s.extractors[i]=u,(a=d[0].colSpan-1)>0))for(i+=a,n+=a;a+1>0;)s.parsers[i-a]=p,s.extractors[i-a]=u,a--;i++}y+=s.parsers.length?m:1}w&&(t.isEmptyObject(x)?console.warn("  No parsers detected!"):console[console.table?"table":"log"](x),console.log("Completed detecting parsers"+t.benchmark(f)),console.groupEnd&&console.groupEnd()),e.parsers=s.parsers,e.extractors=s.extractors},addParser:function(e){var r,o=t.parsers.length,s=!0;for(r=0;r<o;r++)t.parsers[r].id.toLowerCase()===e.id.toLowerCase()&&(s=!1);s&&(t.parsers[t.parsers.length]=e)},getParserById:function(e){if("false"==e)return!1;var r,o=t.parsers.length;for(r=0;r<o;r++)if(t.parsers[r].id.toLowerCase()===e.toString().toLowerCase())return t.parsers[r];return!1},detectParserForColumn:function(r,o,s,a){for(var n,i,l,d=t.parsers.length,c=!1,g="",p=t.debug(r,"core"),u=!0;""===g&&u;)(l=o[++s])&&s<50?l.className.indexOf(t.cssIgnoreRow)<0&&(c=o[s].cells[a],g=t.getElementText(r,c,a),i=e(c),p&&console.log("Checking if value was empty on row "+s+", column: "+a+': "'+g+'"')):u=!1;for(;--d>=0;)if((n=t.parsers[d])&&"text"!==n.id&&n.is&&n.is(g,r.table,c,i))return n;return t.getParserById("text")},getElementText:function(r,o,s){if(!o)return"";var a,n=r.textExtraction||"",i=o.jquery?o:e(o);return"string"==typeof n?"basic"===n&&void 0!==(a=i.attr(r.textAttribute))?e.trim(a):e.trim(o.textContent||i.text()):"function"==typeof n?e.trim(n(i[0],r.table,s)):"function"==typeof(a=t.getColumnData(r.table,n,s))?e.trim(a(i[0],r.table,s)):e.trim(i[0].textContent||i.text())},getParsedText:function(e,r,o,s){void 0===s&&(s=t.getElementText(e,r,o));var a=""+s,n=e.parsers[o],i=e.extractors[o];return n&&(i&&"function"==typeof i.format&&(s=i.format(s,e.table,r,o)),a="no-parser"===n.id?"":n.format(""+s,e.table,r,o),e.ignoreCase&&"string"==typeof a&&(a=a.toLowerCase())),a},buildCache:function(r,o,s){var a,n,i,l,d,c,g,p,u,f,h,m,b,y,w,x,v,C,$,I,D,R,T=r.table,L=r.parsers,A=t.debug(r,"core");if(r.$tbodies=r.$table.children("tbody:not(."+r.cssInfoBlock+")"),g=void 0===s?r.$tbodies:s,r.cache={},r.totalRows=0,!L)return A?console.warn("Warning: *Empty table!* Not building a cache"):"";for(A&&(m=new Date),r.showProcessing&&t.isProcessing(T,!0),c=0;c<g.length;c++){for(x=[],a=r.cache[c]={normalized:[]},b=g[c]&&g[c].rows.length||0,l=0;l<b;++l)if(y={child:[],raw:[]},p=e(g[c].rows[l]),u=[],!p.hasClass(r.selectorRemove.slice(1)))if(p.hasClass(r.cssChildRow)&&0!==l)for(D=a.normalized.length-1,(w=a.normalized[D][r.columns]).$row=w.$row.add(p),p.prev().hasClass(r.cssChildRow)||p.prev().addClass(t.css.cssHasChild),f=p.children("th, td"),D=w.child.length,w.child[D]=[],C=0,I=r.columns,d=0;d<I;d++)(h=f[d])&&(w.child[D][d]=t.getParsedText(r,h,d),(v=f[d].colSpan-1)>0&&(C+=v,I+=v)),C++;else{for(y.$row=p,y.order=l,C=0,I=r.columns,d=0;d<I;++d){if((h=p[0].cells[d])&&C<r.columns&&(!($=void 0!==L[C])&&A&&console.warn("No parser found for row: "+l+", column: "+d+'; cell containing: "'+e(h).text()+'"; does it have a header?'),n=t.getElementText(r,h,C),y.raw[C]=n,i=t.getParsedText(r,h,C,n),u[C]=i,$&&"numeric"===(L[C].type||"").toLowerCase()&&(x[C]=Math.max(Math.abs(i)||0,x[C]||0)),(v=h.colSpan-1)>0)){for(R=0;R<=v;)i=r.duplicateSpan||0===R?n:"string"!=typeof r.textExtraction?t.getElementText(r,h,C+R)||"":"",y.raw[C+R]=i,u[C+R]=i,R++;C+=v,I+=v}C++}u[r.columns]=y,a.normalized[a.normalized.length]=u}a.colMax=x,r.totalRows+=a.normalized.length}if(r.showProcessing&&t.isProcessing(T),A){for(D=Math.min(5,r.cache[0].normalized.length),console[console.group?"group":"log"]("Building cache for "+r.totalRows+" rows (showing "+D+" rows in log) and "+r.columns+" columns"+t.benchmark(m)),n={},d=0;d<r.columns;d++)for(C=0;C<D;C++)n["row: "+C]||(n["row: "+C]={}),n["row: "+C][r.$headerIndexed[d].text()]=r.cache[0].normalized[C][d];console[console.table?"table":"log"](n),console.groupEnd&&console.groupEnd()}e.isFunction(o)&&o(T)},getColumnText:function(r,o,s,a){var n,i,l,d,c,g,p,u,f,h,m="function"==typeof s,b="all"===o,y={raw:[],parsed:[],$cell:[]},w=(r=e(r)[0]).config;if(!t.isEmptyObject(w)){for(c=w.$tbodies.length,n=0;n<c;n++)for(g=(l=w.cache[n].normalized).length,i=0;i<g;i++)d=l[i],a&&!d[w.columns].$row.is(a)||(h=!0,u=b?d.slice(0,w.columns):d[o],d=d[w.columns],p=b?d.raw:d.raw[o],f=b?d.$row.children():d.$row.children().eq(o),m&&(h=s({tbodyIndex:n,rowIndex:i,parsed:u,raw:p,$row:d.$row,$cell:f})),!1!==h&&(y.parsed[y.parsed.length]=u,y.raw[y.raw.length]=p,y.$cell[y.$cell.length]=f));return y}t.debug(w,"core")&&console.warn("No cache found - aborting getColumnText function!")},setHeadersCss:function(r){var o,s,a=r.sortList,n=a.length,i=t.css.sortNone+" "+r.cssNone,l=[t.css.sortAsc+" "+r.cssAsc,t.css.sortDesc+" "+r.cssDesc],d=[r.cssIconAsc,r.cssIconDesc,r.cssIconNone],c=["ascending","descending"],g=function(e,r){e.removeClass(i).addClass(l[r]).attr("aria-sort",c[r]).find("."+t.css.icon).removeClass(d[2]).addClass(d[r])},p=r.$table.find("tfoot tr").children("td, th").add(e(r.namespace+"_extra_headers")).removeClass(l.join(" ")),u=r.$headers.add(e("thead "+r.namespace+"_extra_headers")).removeClass(l.join(" ")).addClass(i).attr("aria-sort","none").find("."+t.css.icon).removeClass(d.join(" ")).end();for(u.not(".sorter-false").find("."+t.css.icon).addClass(d[2]),r.cssIconDisabled&&u.filter(".sorter-false").find("."+t.css.icon).addClass(r.cssIconDisabled),o=0;o<n;o++)if(2!==a[o][1]){if(u=r.$headers.filter(function(e){for(var o=!0,s=r.$headers.eq(e),a=parseInt(s.attr("data-column"),10),n=a+t.getClosest(s,"th, td")[0].colSpan;a<n;a++)o=!!o&&(o||t.isValueInArray(a,r.sortList)>-1);return o}),(u=u.not(".sorter-false").filter('[data-column="'+a[o][0]+'"]'+(1===n?":last":""))).length)for(s=0;s<u.length;s++)u[s].sortDisabled||g(u.eq(s),a[o][1]);p.length&&g(p.filter('[data-column="'+a[o][0]+'"]'),a[o][1])}for(n=r.$headers.length,o=0;o<n;o++)t.setColumnAriaLabel(r,r.$headers.eq(o))},getClosest:function(t,r){return e.fn.closest?t.closest(r):t.is(r)?t:t.parents(r).filter(":first")},setColumnAriaLabel:function(r,o,s){if(o.length){var a=parseInt(o.attr("data-column"),10),n=r.sortVars[a],i=o.hasClass(t.css.sortAsc)?"sortAsc":o.hasClass(t.css.sortDesc)?"sortDesc":"sortNone",l=e.trim(o.text())+": "+t.language[i];o.hasClass("sorter-false")||!1===s?l+=t.language.sortDisabled:(i=(n.count+1)%n.order.length,s=n.order[i],l+=t.language[0===s?"nextAsc":1===s?"nextDesc":"nextNone"]),o.attr("aria-label",l)}},updateHeader:function(e){var r,o,s,a,n=e.table,i=e.$headers.length;for(r=0;r<i;r++)s=e.$headers.eq(r),a=t.getColumnData(n,e.headers,r,!0),o="false"===t.getData(s,a,"sorter")||"false"===t.getData(s,a,"parser"),t.setColumnSort(e,s,o)},setColumnSort:function(e,t,r){var o=e.table.id;t[0].sortDisabled=r,t[r?"addClass":"removeClass"]("sorter-false").attr("aria-disabled",""+r),e.tabIndex&&(r?t.removeAttr("tabindex"):t.attr("tabindex","0")),o&&(r?t.removeAttr("aria-controls"):t.attr("aria-controls",o))},updateHeaderSortCount:function(r,o){var s,a,n,i,l,d,c,g,p=o||r.sortList,u=p.length;for(r.sortList=[],i=0;i<u;i++)if(c=p[i],(s=parseInt(c[0],10))<r.columns){switch(r.sortVars[s].order||(g=t.getOrder(r.sortInitialOrder)?r.sortReset?[1,0,2]:[1,0]:r.sortReset?[0,1,2]:[0,1],r.sortVars[s].order=g,r.sortVars[s].count=0),g=r.sortVars[s].order,a=(""+c[1]).match(/^(1|d|s|o|n)/),a=a?a[0]:""){case"1":case"d":a=1;break;case"s":a=l||0;break;case"o":a=0===(d=g[(l||0)%g.length])?1:1===d?0:2;break;case"n":a=g[++r.sortVars[s].count%g.length];break;default:a=0}l=0===i?a:l,n=[s,parseInt(a,10)||0],r.sortList[r.sortList.length]=n,a=e.inArray(n[1],g),r.sortVars[s].count=a>=0?a:n[1]%g.length}},updateAll:function(e,r,o){var s=e.table;s.isUpdating=!0,t.refreshWidgets(s,!0,!0),t.buildHeaders(e),t.bindEvents(s,e.$headers,!0),t.bindMethods(e),t.commonUpdate(e,r,o)},update:function(e,r,o){e.table.isUpdating=!0,t.updateHeader(e),t.commonUpdate(e,r,o)},updateHeaders:function(e,r){e.table.isUpdating=!0,t.buildHeaders(e),t.bindEvents(e.table,e.$headers,!0),t.resortComplete(e,r)},updateCell:function(r,o,s,a){if(e(o).closest("tr").hasClass(r.cssChildRow))console.warn('Tablesorter Warning! "updateCell" for child row content has been disabled, use "update" instead');else{if(t.isEmptyObject(r.cache))return t.updateHeader(r),void t.commonUpdate(r,s,a);r.table.isUpdating=!0,r.$table.find(r.selectorRemove).remove();var n,i,l,d,c,g,p=r.$tbodies,u=e(o),f=p.index(t.getClosest(u,"tbody")),h=r.cache[f],m=t.getClosest(u,"tr");if(o=u[0],p.length&&f>=0){if(l=p.eq(f).find("tr").not("."+r.cssChildRow).index(m),c=h.normalized[l],(g=m[0].cells.length)!==r.columns)for(d=0,n=!1,i=0;i<g;i++)n||m[0].cells[i]===o?n=!0:d+=m[0].cells[i].colSpan;else d=u.index();n=t.getElementText(r,o,d),c[r.columns].raw[d]=n,n=t.getParsedText(r,o,d,n),c[d]=n,"numeric"===(r.parsers[d].type||"").toLowerCase()&&(h.colMax[d]=Math.max(Math.abs(n)||0,h.colMax[d]||0)),!1!==(n="undefined"!==s?s:r.resort)?t.checkResort(r,n,a):t.resortComplete(r,a)}else t.debug(r,"core")&&console.error("updateCell aborted, tbody missing or not within the indicated table"),r.table.isUpdating=!1}},addRows:function(r,o,s,a){var n,i,l,d,c,g,p,u,f,h,m,b,y,w="string"==typeof o&&1===r.$tbodies.length&&/<tr/.test(o||""),x=r.table;if(w)o=e(o),r.$tbodies.append(o);else if(!(o&&o instanceof e&&t.getClosest(o,"table")[0]===r.table))return t.debug(r,"core")&&console.error("addRows method requires (1) a jQuery selector reference to rows that have already been added to the table, or (2) row HTML string to be added to a table with only one tbody"),!1;if(x.isUpdating=!0,t.isEmptyObject(r.cache))t.updateHeader(r),t.commonUpdate(r,s,a);else{for(c=o.filter("tr").attr("role","row").length,l=r.$tbodies.index(o.parents("tbody").filter(":first")),r.parsers&&r.parsers.length||t.setupParsers(r),d=0;d<c;d++){for(f=0,p=o[d].cells.length,u=r.cache[l].normalized.length,m=[],h={child:[],raw:[],$row:o.eq(d),order:u},g=0;g<p;g++)b=o[d].cells[g],n=t.getElementText(r,b,f),h.raw[f]=n,i=t.getParsedText(r,b,f,n),m[f]=i,"numeric"===(r.parsers[f].type||"").toLowerCase()&&(r.cache[l].colMax[f]=Math.max(Math.abs(i)||0,r.cache[l].colMax[f]||0)),(y=b.colSpan-1)>0&&(f+=y),f++;m[r.columns]=h,r.cache[l].normalized[u]=m}t.checkResort(r,s,a)}},updateCache:function(e,r,o){e.parsers&&e.parsers.length||t.setupParsers(e,o),t.buildCache(e,r,o)},appendCache:function(e,r){var o,s,a,n,i,l,d,c=e.table,g=e.$tbodies,p=[],u=e.cache;if(t.isEmptyObject(u))return e.appender?e.appender(c,p):c.isUpdating?e.$table.triggerHandler("updateComplete",c):"";for(t.debug(e,"core")&&(d=new Date),l=0;l<g.length;l++)if((a=g.eq(l)).length){for(n=t.processTbody(c,a,!0),s=(o=u[l].normalized).length,i=0;i<s;i++)p[p.length]=o[i][e.columns].$row,e.appender&&(!e.pager||e.pager.removeRows||e.pager.ajax)||n.append(o[i][e.columns].$row);t.processTbody(c,n,!1)}e.appender&&e.appender(c,p),t.debug(e,"core")&&console.log("Rebuilt table"+t.benchmark(d)),r||e.appender||t.applyWidget(c),c.isUpdating&&e.$table.triggerHandler("updateComplete",c)},commonUpdate:function(e,r,o){e.$table.find(e.selectorRemove).remove(),t.setupParsers(e),t.buildCache(e),t.checkResort(e,r,o)},initSort:function(r,o,s){if(r.table.isUpdating)return setTimeout(function(){t.initSort(r,o,s)},50);var a,n,i,l,d,c,g,p=!s[r.sortMultiSortKey],u=r.table,f=r.$headers.length,h=t.getClosest(e(o),"th, td"),m=parseInt(h.attr("data-column"),10),b=r.sortVars[m].order;if(h=h[0],r.$table.triggerHandler("sortStart",u),c=(r.sortVars[m].count+1)%b.length,r.sortVars[m].count=s[r.sortResetKey]?2:c,r.sortRestart)for(i=0;i<f;i++)g=r.$headers.eq(i),m!==(c=parseInt(g.attr("data-column"),10))&&(p||g.hasClass(t.css.sortNone))&&(r.sortVars[c].count=-1);if(p){if(r.sortList=[],r.last.sortList=[],null!==r.sortForce)for(a=r.sortForce,n=0;n<a.length;n++)a[n][0]!==m&&(r.sortList[r.sortList.length]=a[n]);if((l=b[r.sortVars[m].count])<2&&(r.sortList[r.sortList.length]=[m,l],h.colSpan>1))for(n=1;n<h.colSpan;n++)r.sortList[r.sortList.length]=[m+n,l],r.sortVars[m+n].count=e.inArray(l,b)}else if(r.sortList=e.extend([],r.last.sortList),t.isValueInArray(m,r.sortList)>=0)for(n=0;n<r.sortList.length;n++)(c=r.sortList[n])[0]===m&&(c[1]=b[r.sortVars[m].count],2===c[1]&&(r.sortList.splice(n,1),r.sortVars[m].count=-1));else if((l=b[r.sortVars[m].count])<2&&(r.sortList[r.sortList.length]=[m,l],h.colSpan>1))for(n=1;n<h.colSpan;n++)r.sortList[r.sortList.length]=[m+n,l],r.sortVars[m+n].count=e.inArray(l,b);if(r.last.sortList=e.extend([],r.sortList),r.sortList.length&&r.sortAppend&&(a=e.isArray(r.sortAppend)?r.sortAppend:r.sortAppend[r.sortList[0][0]],!t.isEmptyObject(a)))for(n=0;n<a.length;n++)if(a[n][0]!==m&&t.isValueInArray(a[n][0],r.sortList)<0){if(l=a[n][1],d=(""+l).match(/^(a|d|s|o|n)/))switch(c=r.sortList[0][1],d[0]){case"d":l=1;break;case"s":l=c;break;case"o":l=0===c?1:0;break;case"n":l=(c+1)%b.length;break;default:l=0}r.sortList[r.sortList.length]=[a[n][0],l]}r.$table.triggerHandler("sortBegin",u),setTimeout(function(){t.setHeadersCss(r),t.multisort(r),t.appendCache(r),r.$table.triggerHandler("sortBeforeEnd",u),r.$table.triggerHandler("sortEnd",u)},1)},multisort:function(e){var r,o,s,a,n=e.table,i=[],l=0,d=e.textSorter||"",c=e.sortList,g=c.length,p=e.$tbodies.length;if(!e.serverSideSorting&&!t.isEmptyObject(e.cache)){if(t.debug(e,"core")&&(o=new Date),"object"==typeof d)for(s=e.columns;s--;)"function"==typeof(a=t.getColumnData(n,d,s))&&(i[s]=a);for(r=0;r<p;r++)s=e.cache[r].colMax,e.cache[r].normalized.sort(function(r,o){var a,p,u,f,h,m,b;for(a=0;a<g;a++){if(u=c[a][0],f=c[a][1],l=0===f,e.sortStable&&r[u]===o[u]&&1===g)return r[e.columns].order-o[e.columns].order;if(p=/n/i.test(t.getSortType(e.parsers,u)),p&&e.strings[u]?(p="boolean"==typeof t.string[e.strings[u]]?(l?1:-1)*(t.string[e.strings[u]]?-1:1):e.strings[u]?t.string[e.strings[u]]||0:0,h=e.numberSorter?e.numberSorter(r[u],o[u],l,s[u],n):t["sortNumeric"+(l?"Asc":"Desc")](r[u],o[u],p,s[u],u,e)):(m=l?r:o,b=l?o:r,h="function"==typeof d?d(m[u],b[u],l,u,n):"function"==typeof i[u]?i[u](m[u],b[u],l,u,n):t["sortNatural"+(l?"Asc":"Desc")](r[u],o[u],u,e)),h)return h}return r[e.columns].order-o[e.columns].order});t.debug(e,"core")&&console.log("Applying sort "+c.toString()+t.benchmark(o))}},resortComplete:function(t,r){t.table.isUpdating&&t.$table.triggerHandler("updateComplete",t.table),e.isFunction(r)&&r(t.table)},checkResort:function(r,o,s){var a=e.isArray(o)?o:r.sortList;!1===(void 0===o?r.resort:o)||r.serverSideSorting||r.table.isProcessing?(t.resortComplete(r,s),t.applyWidget(r.table,!1)):a.length?t.sortOn(r,a,function(){t.resortComplete(r,s)},!0):t.sortReset(r,function(){t.resortComplete(r,s),t.applyWidget(r.table,!1)})},sortOn:function(r,o,s,a){var n=r.table;r.$table.triggerHandler("sortStart",n),t.updateHeaderSortCount(r,o),t.setHeadersCss(r),r.delayInit&&t.isEmptyObject(r.cache)&&t.buildCache(r),r.$table.triggerHandler("sortBegin",n),t.multisort(r),t.appendCache(r,a),r.$table.triggerHandler("sortBeforeEnd",n),r.$table.triggerHandler("sortEnd",n),t.applyWidget(n),e.isFunction(s)&&s(n)},sortReset:function(r,o){r.sortList=[],t.setHeadersCss(r),t.multisort(r),t.appendCache(r);var s;for(s=0;s<r.columns;s++)r.sortVars[s].count=-1;e.isFunction(o)&&o(r.table)},getSortType:function(e,t){return e&&e[t]?e[t].type||"":""},getOrder:function(e){return/^d/i.test(e)||1===e},sortNatural:function(e,r){if(e===r)return 0;e=e.toString(),r=r.toString();var o,s,a,n,i,l,d=t.regex;if(d.hex.test(r)){if(o=parseInt((e||"").match(d.hex),16),s=parseInt((r||"").match(d.hex),16),o<s)return-1;if(o>s)return 1}for(o=(e||"").replace(d.chunk,"\\0$1\\0").replace(d.chunks,"").split("\\0"),s=(r||"").replace(d.chunk,"\\0$1\\0").replace(d.chunks,"").split("\\0"),l=Math.max(o.length,s.length),i=0;i<l;i++){if(a=isNaN(o[i])?o[i]||0:parseFloat(o[i])||0,n=isNaN(s[i])?s[i]||0:parseFloat(s[i])||0,isNaN(a)!==isNaN(n))return isNaN(a)?1:-1;if(typeof a!=typeof n&&(a+="",n+=""),a<n)return-1;if(a>n)return 1}return 0},sortNaturalAsc:function(e,r,o,s){if(e===r)return 0;var a=t.string[s.empties[o]||s.emptyTo];return""===e&&0!==a?"boolean"==typeof a?a?-1:1:-a||-1:""===r&&0!==a?"boolean"==typeof a?a?1:-1:a||1:t.sortNatural(e,r)},sortNaturalDesc:function(e,r,o,s){if(e===r)return 0;var a=t.string[s.empties[o]||s.emptyTo];return""===e&&0!==a?"boolean"==typeof a?a?-1:1:a||1:""===r&&0!==a?"boolean"==typeof a?a?1:-1:-a||-1:t.sortNatural(r,e)},sortText:function(e,t){return e>t?1:e<t?-1:0},getTextValue:function(e,t,r){if(r){var o,s=e?e.length:0,a=r+t;for(o=0;o<s;o++)a+=e.charCodeAt(o);return t*a}return 0},sortNumericAsc:function(e,r,o,s,a,n){if(e===r)return 0;var i=t.string[n.empties[a]||n.emptyTo];return""===e&&0!==i?"boolean"==typeof i?i?-1:1:-i||-1:""===r&&0!==i?"boolean"==typeof i?i?1:-1:i||1:(isNaN(e)&&(e=t.getTextValue(e,o,s)),isNaN(r)&&(r=t.getTextValue(r,o,s)),e-r)},sortNumericDesc:function(e,r,o,s,a,n){if(e===r)return 0;var i=t.string[n.empties[a]||n.emptyTo];return""===e&&0!==i?"boolean"==typeof i?i?-1:1:i||1:""===r&&0!==i?"boolean"==typeof i?i?1:-1:-i||-1:(isNaN(e)&&(e=t.getTextValue(e,o,s)),isNaN(r)&&(r=t.getTextValue(r,o,s)),r-e)},sortNumeric:function(e,t){return e-t},addWidget:function(e){e.id&&!t.isEmptyObject(t.getWidgetById(e.id))&&console.warn('"'+e.id+'" widget was loaded more than once!'),t.widgets[t.widgets.length]=e},hasWidget:function(t,r){return(t=e(t)).length&&t[0].config&&t[0].config.widgetInit[r]||!1},getWidgetById:function(e){var r,o,s=t.widgets.length;for(r=0;r<s;r++)if((o=t.widgets[r])&&o.id&&o.id.toLowerCase()===e.toLowerCase())return o},applyWidgetOptions:function(r){var o,s,a,n=r.config,i=n.widgets.length;if(i)for(o=0;o<i;o++)(s=t.getWidgetById(n.widgets[o]))&&s.options&&(a=e.extend(!0,{},s.options),n.widgetOptions=e.extend(!0,a,n.widgetOptions),e.extend(!0,t.defaults.widgetOptions,s.options))},addWidgetFromClass:function(e){var r,o,s=e.config,a="^"+s.widgetClass.replace(t.regex.templateName,"(\\S+)+")+"$",n=new RegExp(a,"g"),i=(e.className||"").split(t.regex.spaces);if(i.length)for(r=i.length,o=0;o<r;o++)i[o].match(n)&&(s.widgets[s.widgets.length]=i[o].replace(n,"$1"))},applyWidgetId:function(r,o,s){var a,n,i,l=(r=e(r)[0]).config,d=l.widgetOptions,c=t.debug(l,"core"),g=t.getWidgetById(o);g&&(i=g.id,a=!1,e.inArray(i,l.widgets)<0&&(l.widgets[l.widgets.length]=i),c&&(n=new Date),!s&&l.widgetInit[i]||(l.widgetInit[i]=!0,r.hasInitialized&&t.applyWidgetOptions(r),"function"==typeof g.init&&(a=!0,c&&console[console.group?"group":"log"]("Initializing "+i+" widget"),g.init(r,g,l,d))),s||"function"!=typeof g.format||(a=!0,c&&console[console.group?"group":"log"]("Updating "+i+" widget"),g.format(r,l,d,!1)),c&&a&&(console.log("Completed "+(s?"initializing ":"applying ")+i+" widget"+t.benchmark(n)),console.groupEnd&&console.groupEnd()))},applyWidget:function(r,o,s){var a,n,i,l,d,c=(r=e(r)[0]).config,g=t.debug(c,"core"),p=[];if(!1===o||!r.hasInitialized||!r.isApplyingWidgets&&!r.isUpdating){if(g&&(d=new Date),t.addWidgetFromClass(r),clearTimeout(c.timerReady),c.widgets.length){for(r.isApplyingWidgets=!0,c.widgets=e.grep(c.widgets,function(t,r){return e.inArray(t,c.widgets)===r}),n=(i=c.widgets||[]).length,a=0;a<n;a++)(l=t.getWidgetById(i[a]))&&l.id?(l.priority||(l.priority=10),p[a]=l):g&&console.warn('"'+i[a]+'" was enabled, but the widget code has not been loaded!');for(p.sort(function(e,t){return e.priority<t.priority?-1:e.priority===t.priority?0:1}),n=p.length,g&&console[console.group?"group":"log"]("Start "+(o?"initializing":"applying")+" widgets"),a=0;a<n;a++)(l=p[a])&&l.id&&t.applyWidgetId(r,l.id,o);g&&console.groupEnd&&console.groupEnd()}c.timerReady=setTimeout(function(){r.isApplyingWidgets=!1,e.data(r,"lastWidgetApplication",new Date),c.$table.triggerHandler("tablesorter-ready"),o||"function"!=typeof s||s(r),g&&(l=c.widgets.length,console.log("Completed "+(!0===o?"initializing ":"applying ")+l+" widget"+(1!==l?"s":"")+t.benchmark(d)))},10)}},removeWidget:function(r,o,s){var a,n,i,l,d=(r=e(r)[0]).config;if(!0===o)for(o=[],l=t.widgets.length,i=0;i<l;i++)(n=t.widgets[i])&&n.id&&(o[o.length]=n.id);else o=(e.isArray(o)?o.join(","):o||"").toLowerCase().split(/[\s,]+/);for(l=o.length,a=0;a<l;a++)n=t.getWidgetById(o[a]),(i=e.inArray(o[a],d.widgets))>=0&&!0!==s&&d.widgets.splice(i,1),n&&n.remove&&(t.debug(d,"core")&&console.log((s?"Refreshing":"Removing")+' "'+o[a]+'" widget'),n.remove(r,d,d.widgetOptions,s),d.widgetInit[o[a]]=!1);d.$table.triggerHandler("widgetRemoveEnd",r)},refreshWidgets:function(r,o,s){var a,n,i=(r=e(r)[0]).config.widgets,l=t.widgets,d=l.length,c=[],g=function(t){e(t).triggerHandler("refreshComplete")};for(a=0;a<d;a++)(n=l[a])&&n.id&&(o||e.inArray(n.id,i)<0)&&(c[c.length]=n.id);t.removeWidget(r,c.join(","),!0),!0!==s?(t.applyWidget(r,o||!1,g),o&&t.applyWidget(r,!1,g)):g(r)},benchmark:function(e){return" ("+((new Date).getTime()-e.getTime())+" ms)"},log:function(){console.log(arguments)},debug:function(e,t){return e&&(!0===e.debug||"string"==typeof e.debug&&e.debug.indexOf(t)>-1)},isEmptyObject:function(e){for(var t in e)return!1;return!0},isValueInArray:function(e,t){var r,o=t&&t.length||0;for(r=0;r<o;r++)if(t[r][0]===e)return r;return-1},formatFloat:function(r,o){if("string"!=typeof r||""===r)return r;var s;return r=(o&&o.config?!1!==o.config.usNumberFormat:void 0===o||o)?r.replace(t.regex.comma,""):r.replace(t.regex.digitNonUS,"").replace(t.regex.comma,"."),t.regex.digitNegativeTest.test(r)&&(r=r.replace(t.regex.digitNegativeReplace,"-$1")),s=parseFloat(r),isNaN(s)?e.trim(r):s},isDigit:function(e){return isNaN(e)?t.regex.digitTest.test(e.toString().replace(t.regex.digitReplace,"")):""!==e},computeColumnIndex:function(r,o){var s,a,n,i,l,d,c,g,p,u,f=o&&o.columns||0,h=[],m=new Array(f);for(s=0;s<r.length;s++)for(d=r[s].cells,a=0;a<d.length;a++){for(c=s,g=(l=d[a]).rowSpan||1,p=l.colSpan||1,void 0===h[c]&&(h[c]=[]),n=0;n<h[c].length+1;n++)if(void 0===h[c][n]){u=n;break}for(f&&l.cellIndex===u||(l.setAttribute?l.setAttribute("data-column",u):e(l).attr("data-column",u)),n=c;n<c+g;n++)for(void 0===h[n]&&(h[n]=[]),m=h[n],i=u;i<u+p;i++)m[i]="x"}return t.checkColumnCount(r,h,m.length),m.length},checkColumnCount:function(e,t,r){var o,s,a=!0,n=[];for(o=0;o<t.length;o++)if(t[o]&&(s=t[o].length,t[o].length!==r)){a=!1;break}a||(e.each(function(e,t){var r=t.parentElement.nodeName;n.indexOf(r)<0&&n.push(r)}),console.error("Invalid or incorrect number of columns in the "+n.join(" or ")+"; expected "+r+", but found "+s+" columns"))},fixColumnWidth:function(r){var o,s,a,n,i,l=(r=e(r)[0]).config,d=l.$table.children("colgroup");if(d.length&&d.hasClass(t.css.colgroup)&&d.remove(),l.widthFixed&&0===l.$table.children("colgroup").length){for(d=e('<colgroup class="'+t.css.colgroup+'">'),o=l.$table.width(),n=(a=l.$tbodies.find("tr:first").children(":visible")).length,i=0;i<n;i++)s=parseInt(a.eq(i).width()/o*1e3,10)/10+"%",d.append(e("<col>").css("width",s));l.$table.prepend(d)}},getData:function(t,r,o){var s,a,n="",i=e(t);return i.length?(s=!!e.metadata&&i.metadata(),a=" "+(i.attr("class")||""),void 0!==i.data(o)||void 0!==i.data(o.toLowerCase())?n+=i.data(o)||i.data(o.toLowerCase()):s&&void 0!==s[o]?n+=s[o]:r&&void 0!==r[o]?n+=r[o]:" "!==a&&a.match(" "+o+"-")&&(n=a.match(new RegExp("\\s"+o+"-([\\w-]+)"))[1]||""),e.trim(n)):""},getColumnData:function(t,r,o,s,a){if("object"!=typeof r||null===r)return r;var n,i=(t=e(t)[0]).config,l=a||i.$headers,d=i.$headerIndexed&&i.$headerIndexed[o]||l.find('[data-column="'+o+'"]:last');if(void 0!==r[o])return s?r[o]:r[l.index(d)];for(n in r)if("string"==typeof n&&d.filter(n).add(d.find(n)).length)return r[n]},isProcessing:function(r,o,s){var a=(r=e(r))[0].config,n=s||r.find("."+t.css.header);o?(void 0!==s&&a.sortList.length>0&&(n=n.filter(function(){return!this.sortDisabled&&t.isValueInArray(parseFloat(e(this).attr("data-column")),a.sortList)>=0})),r.add(n).addClass(t.css.processing+" "+a.cssProcessing)):r.add(n).removeClass(t.css.processing+" "+a.cssProcessing)},processTbody:function(t,r,o){if(t=e(t)[0],o)return t.isProcessing=!0,r.before('<colgroup class="tablesorter-savemyplace"/>'),e.fn.detach?r.detach():r.remove();var s=e(t).find("colgroup.tablesorter-savemyplace");r.insertAfter(s),s.remove(),t.isProcessing=!1},clearTableBody:function(t){e(t)[0].config.$tbodies.children().detach()},characterEquivalents:{a:"áàâãäąå",A:"ÁÀÂÃÄĄÅ",c:"çćč",C:"ÇĆČ",e:"éèêëěę",E:"ÉÈÊËĚĘ",i:"íìİîïı",I:"ÍÌİÎÏ",o:"óòôõöō",O:"ÓÒÔÕÖŌ",ss:"ß",SS:"ẞ",u:"úùûüů",U:"ÚÙÛÜŮ"},replaceAccents:function(e){var r,o="[",s=t.characterEquivalents;if(!t.characterRegex){t.characterRegexArray={};for(r in s)"string"==typeof r&&(o+=s[r],t.characterRegexArray[r]=new RegExp("["+s[r]+"]","g"));t.characterRegex=new RegExp(o+"]")}if(t.characterRegex.test(e))for(r in s)"string"==typeof r&&(e=e.replace(t.characterRegexArray[r],r));return e},validateOptions:function(r){var o,s,a,n,i="headers sortForce sortList sortAppend widgets".split(" "),l=r.originalSettings;if(l){t.debug(r,"core")&&(n=new Date);for(o in l)if("undefined"===(a=typeof t.defaults[o]))console.warn('Tablesorter Warning! "table.config.'+o+'" option not recognized');else if("object"===a)for(s in l[o])a=t.defaults[o]&&typeof t.defaults[o][s],e.inArray(o,i)<0&&"undefined"===a&&console.warn('Tablesorter Warning! "table.config.'+o+"."+s+'" option not recognized');t.debug(r,"core")&&console.log("validate options time:"+t.benchmark(n))}},restoreHeaders:function(r){var o,s,a=e(r)[0].config,n=a.$table.find(a.selectorHeaders),i=n.length;for(o=0;o<i;o++)(s=n.eq(o)).find("."+t.css.headerIn).length&&s.html(a.headerContent[o])},destroy:function(r,o,s){if((r=e(r)[0]).hasInitialized){t.removeWidget(r,!0,!1);var a,n=e(r),i=r.config,l=n.find("thead:first"),d=l.find("tr."+t.css.headerRow).removeClass(t.css.headerRow+" "+i.cssHeaderRow),c=n.find("tfoot:first > tr").children("th, td");!1===o&&e.inArray("uitheme",i.widgets)>=0&&(n.triggerHandler("applyWidgetId",["uitheme"]),n.triggerHandler("applyWidgetId",["zebra"])),l.find("tr").not(d).remove(),a="sortReset update updateRows updateAll updateHeaders updateCell addRows updateComplete sorton appendCache updateCache applyWidgetId applyWidgets refreshWidgets removeWidget destroy mouseup mouseleave "+"keypress sortBegin sortEnd resetToLoadState ".split(" ").join(i.namespace+" "),n.removeData("tablesorter").unbind(a.replace(t.regex.spaces," ")),i.$headers.add(c).removeClass([t.css.header,i.cssHeader,i.cssAsc,i.cssDesc,t.css.sortAsc,t.css.sortDesc,t.css.sortNone].join(" ")).removeAttr("data-column").removeAttr("aria-label").attr("aria-disabled","true"),d.find(i.selectorSort).unbind("mousedown mouseup keypress ".split(" ").join(i.namespace+" ").replace(t.regex.spaces," ")),t.restoreHeaders(r),n.toggleClass(t.css.table+" "+i.tableClass+" tablesorter-"+i.theme,!1===o),n.removeClass(i.namespace.slice(1)),r.hasInitialized=!1,delete r.config.cache,"function"==typeof s&&s(r),t.debug(i,"core")&&console.log("tablesorter has been removed")}}};e.fn.tablesorter=function(r){return this.each(function(){var o=this,s=e.extend(!0,{},t.defaults,r,t.instanceMethods);s.originalSettings=r,!o.hasInitialized&&t.buildTable&&"TABLE"!==this.nodeName?t.buildTable(o,s):t.setup(o,s)})},window.console&&window.console.log||(t.logs=[],console={},console.log=console.warn=console.error=console.table=function(){var e=arguments.length>1?arguments:arguments[0];t.logs[t.logs.length]={date:Date.now(),log:e}}),t.addParser({id:"no-parser",is:function(){return!1},format:function(){return""},type:"text"}),t.addParser({id:"text",is:function(){return!0},format:function(r,o){var s=o.config;return r&&(r=e.trim(s.ignoreCase?r.toLocaleLowerCase():r),r=s.sortLocaleCompare?t.replaceAccents(r):r),r},type:"text"}),t.regex.nondigit=/[^\w,. \-()]/g,t.addParser({id:"digit",is:function(e){return t.isDigit(e)},format:function(r,o){var s=t.formatFloat((r||"").replace(t.regex.nondigit,""),o);return r&&"number"==typeof s?s:r?e.trim(r&&o.config.ignoreCase?r.toLocaleLowerCase():r):r},type:"numeric"}),t.regex.currencyReplace=/[+\-,. ]/g,t.regex.currencyTest=/^\(?\d+[\u00a3$\u20ac\u00a4\u00a5\u00a2?.]|[\u00a3$\u20ac\u00a4\u00a5\u00a2?.]\d+\)?$/,t.addParser({id:"currency",is:function(e){return e=(e||"").replace(t.regex.currencyReplace,""),t.regex.currencyTest.test(e)},format:function(r,o){var s=t.formatFloat((r||"").replace(t.regex.nondigit,""),o);return r&&"number"==typeof s?s:r?e.trim(r&&o.config.ignoreCase?r.toLocaleLowerCase():r):r},type:"numeric"}),t.regex.urlProtocolTest=/^(https?|ftp|file):\/\//,t.regex.urlProtocolReplace=/(https?|ftp|file):\/\/(www\.)?/,t.addParser({id:"url",is:function(e){return t.regex.urlProtocolTest.test(e)},format:function(r){return r?e.trim(r.replace(t.regex.urlProtocolReplace,"")):r},type:"text"}),t.regex.dash=/-/g,t.regex.isoDate=/^\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}/,t.addParser({id:"isoDate",is:function(e){return t.regex.isoDate.test(e)},format:function(e){var r=e?new Date(e.replace(t.regex.dash,"/")):e;return r instanceof Date&&isFinite(r)?r.getTime():e},type:"numeric"}),t.regex.percent=/%/g,t.regex.percentTest=/(\d\s*?%|%\s*?\d)/,t.addParser({id:"percent",is:function(e){return t.regex.percentTest.test(e)&&e.length<15},format:function(e,r){return e?t.formatFloat(e.replace(t.regex.percent,""),r):e},type:"numeric"}),t.addParser({id:"image",is:function(e,t,r,o){return o.find("img").length>0},format:function(t,r,o){return e(o).find("img").attr(r.config.imgAttr||"alt")||t},parsed:!0,type:"text"}),t.regex.dateReplace=/(\S)([AP]M)$/i,t.regex.usLongDateTest1=/^[A-Z]{3,10}\.?\s+\d{1,2},?\s+(\d{4})(\s+\d{1,2}:\d{2}(:\d{2})?(\s+[AP]M)?)?$/i,t.regex.usLongDateTest2=/^\d{1,2}\s+[A-Z]{3,10}\s+\d{4}/i,t.addParser({id:"usLongDate",is:function(e){return t.regex.usLongDateTest1.test(e)||t.regex.usLongDateTest2.test(e)},format:function(e){var r=e?new Date(e.replace(t.regex.dateReplace,"$1 $2")):e;return r instanceof Date&&isFinite(r)?r.getTime():e},type:"numeric"}),t.regex.shortDateTest=/(^\d{1,2}[\/\s]\d{1,2}[\/\s]\d{4})|(^\d{4}[\/\s]\d{1,2}[\/\s]\d{1,2})/,t.regex.shortDateReplace=/[\-.,]/g,t.regex.shortDateXXY=/(\d{1,2})[\/\s](\d{1,2})[\/\s](\d{4})/,t.regex.shortDateYMD=/(\d{4})[\/\s](\d{1,2})[\/\s](\d{1,2})/,t.convertFormat=function(e,r){e=(e||"").replace(t.regex.spaces," ").replace(t.regex.shortDateReplace,"/"),"mmddyyyy"===r?e=e.replace(t.regex.shortDateXXY,"$3/$1/$2"):"ddmmyyyy"===r?e=e.replace(t.regex.shortDateXXY,"$3/$2/$1"):"yyyymmdd"===r&&(e=e.replace(t.regex.shortDateYMD,"$1/$2/$3"));var o=new Date(e);return o instanceof Date&&isFinite(o)?o.getTime():""},t.addParser({id:"shortDate",is:function(e){return e=(e||"").replace(t.regex.spaces," ").replace(t.regex.shortDateReplace,"/"),t.regex.shortDateTest.test(e)},format:function(e,r,o,s){if(e){var a=r.config,n=a.$headerIndexed[s],i=n.length&&n.data("dateFormat")||t.getData(n,t.getColumnData(r,a.headers,s),"dateFormat")||a.dateFormat;return n.length&&n.data("dateFormat",i),t.convertFormat(e,i)||e}return e},type:"numeric"}),t.regex.timeTest=/^(0?[1-9]|1[0-2]):([0-5]\d)(\s[AP]M)$|^((?:[01]\d|[2][0-4]):[0-5]\d)$/i,t.regex.timeMatch=/(0?[1-9]|1[0-2]):([0-5]\d)(\s[AP]M)|((?:[01]\d|[2][0-4]):[0-5]\d)/i,t.addParser({id:"time",is:function(e){return t.regex.timeTest.test(e)},format:function(e){var r,o=(e||"").match(t.regex.timeMatch),s=new Date(e),a=e&&(null!==o?o[0]:"00:00 AM"),n=a?new Date("2000/01/01 "+a.replace(t.regex.dateReplace,"$1 $2")):a;return n instanceof Date&&isFinite(n)?(r=s instanceof Date&&isFinite(s)?s.getTime():0,r?parseFloat(n.getTime()+"."+s.getTime()):n.getTime()):e},type:"numeric"}),t.addParser({id:"metadata",is:function(){return!1},format:function(t,r,o){var s=r.config,a=s.parserMetadataName?s.parserMetadataName:"sortValue";return e(o).metadata()[a]},type:"numeric"}),t.addWidget({id:"zebra",priority:90,format:function(t,r,o){var s,a,n,i,l,d,c,g=new RegExp(r.cssChildRow,"i"),p=r.$tbodies.add(e(r.namespace+"_extra_table").children("tbody:not(."+r.cssInfoBlock+")"));for(l=0;l<p.length;l++)for(n=0,c=(s=p.eq(l).children("tr:visible").not(r.selectorRemove)).length,d=0;d<c;d++)a=s.eq(d),g.test(a[0].className)||n++,i=n%2==0,a.removeClass(o.zebra[i?1:0]).addClass(o.zebra[i?0:1])},remove:function(e,r,o,s){if(!s){var a,n,i=r.$tbodies,l=(o.zebra||["even","odd"]).join(" ");for(a=0;a<i.length;a++)(n=t.processTbody(e,i.eq(a),!0)).children().removeClass(l),t.processTbody(e,n,!1)}}})}(e),e.tablesorter});
+</script>
+<script type="text/javascript">
+/*
+    Copyright 2008-2013
+        Matthias Ehmann,
+        Michael Gerhaeuser,
+        Carsten Miller,
+        Bianca Valentin,
+        Alfred Wassermann,
+        Peter Wilfahrt
+    Dual licensed under the Apache License Version 2.0, or LGPL Version 3 licenses.
+    You should have received a copy of the GNU Lesser General Public License
+    along with JSXCompressor.  If not, see <http://www.gnu.org/licenses/>.
+    You should have received a copy of the Apache License along with JSXCompressor.
+    If not, see <http://www.apache.org/licenses/>.
+*/
+(function(){var e,r,n;(function(t){function o(e,r){return C.call(e,r)}function i(e,r){var n,t,o,i,a,u,c,f,s,l,p=r&&r.split("/"),h=k.map,d=h&&h["*"]||{};if(e&&"."===e.charAt(0))if(r){for(p=p.slice(0,p.length-1),e=p.concat(e.split("/")),f=0;e.length>f;f+=1)if(l=e[f],"."===l)e.splice(f,1),f-=1;else if(".."===l){if(1===f&&(".."===e[2]||".."===e[0]))break;f>0&&(e.splice(f-1,2),f-=2)}e=e.join("/")}else 0===e.indexOf("./")&&(e=e.substring(2));if((p||d)&&h){for(n=e.split("/"),f=n.length;f>0;f-=1){if(t=n.slice(0,f).join("/"),p)for(s=p.length;s>0;s-=1)if(o=h[p.slice(0,s).join("/")],o&&(o=o[t])){i=o,a=f;break}if(i)break;!u&&d&&d[t]&&(u=d[t],c=f)}!i&&u&&(i=u,a=c),i&&(n.splice(0,a,i),e=n.join("/"))}return e}function a(e,r){return function(){return h.apply(t,v.call(arguments,0).concat([e,r]))}}function u(e){return function(r){return i(r,e)}}function c(e){return function(r){b[e]=r}}function f(e){if(o(m,e)){var r=m[e];delete m[e],y[e]=!0,p.apply(t,r)}if(!o(b,e)&&!o(y,e))throw Error("No "+e);return b[e]}function s(e){var r,n=e?e.indexOf("!"):-1;return n>-1&&(r=e.substring(0,n),e=e.substring(n+1,e.length)),[r,e]}function l(e){return function(){return k&&k.config&&k.config[e]||{}}}var p,h,d,g,b={},m={},k={},y={},C=Object.prototype.hasOwnProperty,v=[].slice;d=function(e,r){var n,t=s(e),o=t[0];return e=t[1],o&&(o=i(o,r),n=f(o)),o?e=n&&n.normalize?n.normalize(e,u(r)):i(e,r):(e=i(e,r),t=s(e),o=t[0],e=t[1],o&&(n=f(o))),{f:o?o+"!"+e:e,n:e,pr:o,p:n}},g={require:function(e){return a(e)},exports:function(e){var r=b[e];return r!==void 0?r:b[e]={}},module:function(e){return{id:e,uri:"",exports:b[e],config:l(e)}}},p=function(e,r,n,i){var u,s,l,p,h,k,C=[];if(i=i||e,"function"==typeof n){for(r=!r.length&&n.length?["require","exports","module"]:r,h=0;r.length>h;h+=1)if(p=d(r[h],i),s=p.f,"require"===s)C[h]=g.require(e);else if("exports"===s)C[h]=g.exports(e),k=!0;else if("module"===s)u=C[h]=g.module(e);else if(o(b,s)||o(m,s)||o(y,s))C[h]=f(s);else{if(!p.p)throw Error(e+" missing "+s);p.p.load(p.n,a(i,!0),c(s),{}),C[h]=b[s]}l=n.apply(b[e],C),e&&(u&&u.exports!==t&&u.exports!==b[e]?b[e]=u.exports:l===t&&k||(b[e]=l))}else e&&(b[e]=n)},e=r=h=function(e,r,n,o,i){return"string"==typeof e?g[e]?g[e](r):f(d(e,r).f):(e.splice||(k=e,r.splice?(e=r,r=n,n=null):e=t),r=r||function(){},"function"==typeof n&&(n=o,o=i),o?p(t,e,r,n):setTimeout(function(){p(t,e,r,n)},4),h)},h.config=function(e){return k=e,k.deps&&h(k.deps,k.callback),h},n=function(e,r,n){r.splice||(n=r,r=[]),o(b,e)||o(m,e)||(m[e]=[e,r,n])},n.amd={jQuery:!0}})(),n("../node_modules/almond/almond",function(){}),n("jxg",[],function(){var e={};return"object"!=typeof JXG||JXG.extend||(e=JXG),e.extend=function(e,r,n,t){var o,i;n=n||!1,t=t||!1;for(o in r)(!n||n&&r.hasOwnProperty(o))&&(i=t?o.toLowerCase():o,e[i]=r[o])},e.extend(e,{boards:{},readers:{},elements:{},registerElement:function(e,r){e=e.toLowerCase(),this.elements[e]=r},registerReader:function(e,r){var n,t;for(n=0;r.length>n;n++)t=r[n].toLowerCase(),"function"!=typeof this.readers[t]&&(this.readers[t]=e)},shortcut:function(e,r){return function(){return e[r].apply(this,arguments)}},getRef:function(e,r){return e.select(r)},getReference:function(e,r){return e.select(r)},debugInt:function(){var e,r;for(e=0;arguments.length>e;e++)r=arguments[e],"object"==typeof window&&window.console&&console.log?console.log(r):"object"==typeof document&&document.getElementById("debug")&&(document.getElementById("debug").innerHTML+=r+"<br/>")},debugWST:function(){var r=Error();e.debugInt.apply(this,arguments),r&&r.stack&&(e.debugInt("stacktrace"),e.debugInt(r.stack.split("\n").slice(1).join("\n")))},debugLine:function(){var r=Error();e.debugInt.apply(this,arguments),r&&r.stack&&e.debugInt("Called from",r.stack.split("\n").slice(2,3).join("\n"))},debug:function(){e.debugInt.apply(this,arguments)}}),e}),n("utils/zip",["jxg"],function(e){var r=[0,128,64,192,32,160,96,224,16,144,80,208,48,176,112,240,8,136,72,200,40,168,104,232,24,152,88,216,56,184,120,248,4,132,68,196,36,164,100,228,20,148,84,212,52,180,116,244,12,140,76,204,44,172,108,236,28,156,92,220,60,188,124,252,2,130,66,194,34,162,98,226,18,146,82,210,50,178,114,242,10,138,74,202,42,170,106,234,26,154,90,218,58,186,122,250,6,134,70,198,38,166,102,230,22,150,86,214,54,182,118,246,14,142,78,206,46,174,110,238,30,158,94,222,62,190,126,254,1,129,65,193,33,161,97,225,17,145,81,209,49,177,113,241,9,137,73,201,41,169,105,233,25,153,89,217,57,185,121,249,5,133,69,197,37,165,101,229,21,149,85,213,53,181,117,245,13,141,77,205,45,173,109,237,29,157,93,221,61,189,125,253,3,131,67,195,35,163,99,227,19,147,83,211,51,179,115,243,11,139,75,203,43,171,107,235,27,155,91,219,59,187,123,251,7,135,71,199,39,167,103,231,23,151,87,215,55,183,119,247,15,143,79,207,47,175,111,239,31,159,95,223,63,191,127,255],n=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258,0,0],t=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,99,99],o=[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577],i=[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13],a=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],u=256;return e.Util=e.Util||{},e.Util.Unzip=function(c){function f(){return R+=8,O>X?c[X++]:-1}function s(){B=1}function l(){var e;try{return R++,e=1&B,B>>=1,0===B&&(B=f(),e=1&B,B=128|B>>1),e}catch(r){throw r}}function p(e){var n=0,t=e;try{for(;t--;)n=n<<1|l();e&&(n=r[n]>>8-e)}catch(o){throw o}return n}function h(){J=0}function d(e){j++,G[J++]=e,z.push(String.fromCharCode(e)),32768===J&&(J=0)}function g(){this.b0=0,this.b1=0,this.jump=null,this.jumppos=-1}function b(){for(;;){if(M[H]>=x)return-1;if(U[M[H]]===H)return M[H]++;M[H]++}}function m(){var e,r=P[F];if(17===H)return-1;if(F++,H++,e=b(),e>=0)r.b0=e;else if(r.b0=32768,m())return-1;if(e=b(),e>=0)r.b1=e,r.jump=null;else if(r.b1=32768,r.jump=P[F],r.jumppos=F,m())return-1;return H--,0}function k(e,r,n){var t;for(P=e,F=0,U=n,x=r,t=0;17>t;t++)M[t]=0;return H=0,m()?-1:0}function y(e){for(var r,n,t,o=0,i=e[o];;)if(t=l()){if(!(32768&i.b1))return i.b1;for(i=i.jump,r=e.length,n=0;r>n;n++)if(e[n]===i){o=n;break}}else{if(!(32768&i.b0))return i.b0;o++,i=e[o]}}function C(){var u,c,b,m,C,v,A,j,w,U,x,S,z,I,E,L,O;do if(u=l(),b=p(2),0===b)for(s(),U=f(),U|=f()<<8,S=f(),S|=f()<<8,65535&(U^~S)&&e.debug("BlockLen checksum mismatch\n");U--;)c=f(),d(c);else if(1===b)for(;;)if(C=r[p(7)]>>1,C>23?(C=C<<1|l(),C>199?(C-=128,C=C<<1|l()):(C-=48,C>143&&(C+=136))):C+=256,256>C)d(C);else{if(256===C)break;for(C-=257,w=p(t[C])+n[C],C=r[p(5)]>>3,i[C]>8?(x=p(8),x|=p(i[C]-8)<<8):x=p(i[C]),x+=o[C],C=0;w>C;C++)c=G[32767&J-x],d(c)}else if(2===b){for(A=Array(320),I=257+p(5),E=1+p(5),L=4+p(4),C=0;19>C;C++)A[C]=0;for(C=0;L>C;C++)A[a[C]]=p(3);for(w=q.length,m=0;w>m;m++)q[m]=new g;if(k(q,19,A,0))return h(),1;for(z=I+E,m=0,O=-1;z>m;)if(O++,C=y(q),16>C)A[m++]=C;else if(16===C){if(C=3+p(2),m+C>z)return h(),1;for(v=m?A[m-1]:0;C--;)A[m++]=v}else{if(C=17===C?3+p(3):11+p(7),m+C>z)return h(),1;for(;C--;)A[m++]=0}for(w=T.length,m=0;w>m;m++)T[m]=new g;if(k(T,I,A,0))return h(),1;for(w=T.length,m=0;w>m;m++)q[m]=new g;for(j=[],m=I;A.length>m;m++)j[m-I]=A[m];if(k(q,E,j,0))return h(),1;for(;;)if(C=y(T),C>=256){if(C-=256,0===C)break;for(C-=1,w=p(t[C])+n[C],C=y(q),i[C]>8?(x=p(8),x|=p(i[C]-8)<<8):x=p(i[C]),x+=o[C];w--;)c=G[32767&J-x],d(c)}else d(C)}while(!u);return h(),s(),0}function v(){var e,r,n,t,o,i,a,c,s=[];try{if(z=[],L=!1,s[0]=f(),s[1]=f(),120===s[0]&&218===s[1]&&(C(),E[I]=[z.join(""),"geonext.gxt"],I++),31===s[0]&&139===s[1]&&(S(),E[I]=[z.join(""),"file"],I++),80===s[0]&&75===s[1]&&(L=!0,s[2]=f(),s[3]=f(),3===s[2]&&4===s[3])){for(s[0]=f(),s[1]=f(),A=f(),A|=f()<<8,c=f(),c|=f()<<8,f(),f(),f(),f(),a=f(),a|=f()<<8,a|=f()<<16,a|=f()<<24,i=f(),i|=f()<<8,i|=f()<<16,i|=f()<<24,o=f(),o|=f()<<8,o|=f()<<16,o|=f()<<24,t=f(),t|=f()<<8,n=f(),n|=f()<<8,e=0,N=[];t--;)r=f(),"/"===r|":"===r?e=0:u-1>e&&(N[e++]=String.fromCharCode(r));for(w||(w=N),e=0;n>e;)r=f(),e++;j=0,8===c&&(C(),E[I]=Array(2),E[I][0]=z.join(""),E[I][1]=N.join(""),I++),S()}}catch(l){throw l}}var A,j,w,U,x,S,z=[],I=0,E=[],G=Array(32768),J=0,L=!1,O=c.length,X=0,B=1,R=0,T=Array(288),q=Array(32),F=0,P=null,H=(Array(64),Array(64),0),M=Array(17),N=[];M[0]=0,S=function(){var e,r,n,t,o,i,a=[];if(8&A&&(a[0]=f(),a[1]=f(),a[2]=f(),a[3]=f(),80===a[0]&&75===a[1]&&7===a[2]&&8===a[3]?(e=f(),e|=f()<<8,e|=f()<<16,e|=f()<<24):e=a[0]|a[1]<<8|a[2]<<16|a[3]<<24,r=f(),r|=f()<<8,r|=f()<<16,r|=f()<<24,n=f(),n|=f()<<8,n|=f()<<16,n|=f()<<24),L&&v(),a[0]=f(),8===a[0]){if(A=f(),f(),f(),f(),f(),f(),t=f(),4&A)for(a[0]=f(),a[2]=f(),H=a[0]+256*a[1],o=0;H>o;o++)f();if(8&A)for(o=0,N=[],i=f();i;)("7"===i||":"===i)&&(o=0),u-1>o&&(N[o++]=i),i=f();if(16&A)for(i=f();i;)i=f();2&A&&(f(),f()),C(),e=f(),e|=f()<<8,e|=f()<<16,e|=f()<<24,n=f(),n|=f()<<8,n|=f()<<16,n|=f()<<24,L&&v()}},e.Util.Unzip.prototype.unzipFile=function(e){var r;for(this.unzip(),r=0;E.length>r;r++)if(E[r][1]===e)return E[r][0];return""},e.Util.Unzip.prototype.unzip=function(){return v(),E}},e.Util}),n("utils/encoding",["jxg"],function(e){var r=0,n=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,10,3,3,3,3,3,3,3,3,3,3,3,3,4,3,3,11,6,6,6,5,8,8,8,8,8,8,8,8,8,8,8,0,12,24,36,60,96,84,12,12,12,48,72,12,12,12,12,12,12,12,12,12,12,12,12,12,0,12,12,12,12,12,0,12,0,12,12,12,24,12,12,12,12,12,24,12,24,12,12,12,12,12,12,12,12,12,24,12,12,12,12,12,24,12,12,12,12,12,12,12,24,12,12,12,12,12,12,12,12,12,36,12,36,12,12,12,36,12,12,12,12,12,36,12,36,12,12,12,36,12,12,12,12,12,12,12,12,12,12];return e.Util=e.Util||{},e.Util.UTF8={encode:function(e){var r,n,t="",o=e.length;if(e=e.replace(/\r\n/g,"\n"),"function"==typeof unescape&&"function"==typeof encodeURIComponent)return unescape(encodeURIComponent(e));for(r=0;o>r;r++)n=e.charCodeAt(r),128>n?t+=String.fromCharCode(n):n>127&&2048>n?(t+=String.fromCharCode(192|n>>6),t+=String.fromCharCode(128|63&n)):(t+=String.fromCharCode(224|n>>12),t+=String.fromCharCode(128|63&n>>6),t+=String.fromCharCode(128|63&n));return t},decode:function(e){var t,o,i,a=0,u=0,c=r,f=[],s=e.length,l=[];for(t=0;s>t;t++)o=e.charCodeAt(t),i=n[o],u=c!==r?63&o|u<<6:255>>i&o,c=n[256+c+i],c===r&&(u>65535?f.push(55232+(u>>10),56320+(1023&u)):f.push(u),a++,0===a%1e4&&(l.push(String.fromCharCode.apply(null,f)),f=[]));return l.push(String.fromCharCode.apply(null,f)),l.join("")},asciiCharCodeAt:function(e,r){var n=e.charCodeAt(r);if(n>255)switch(n){case 8364:n=128;break;case 8218:n=130;break;case 402:n=131;break;case 8222:n=132;break;case 8230:n=133;break;case 8224:n=134;break;case 8225:n=135;break;case 710:n=136;break;case 8240:n=137;break;case 352:n=138;break;case 8249:n=139;break;case 338:n=140;break;case 381:n=142;break;case 8216:n=145;break;case 8217:n=146;break;case 8220:n=147;break;case 8221:n=148;break;case 8226:n=149;break;case 8211:n=150;break;case 8212:n=151;break;case 732:n=152;break;case 8482:n=153;break;case 353:n=154;break;case 8250:n=155;break;case 339:n=156;break;case 382:n=158;break;case 376:n=159;break;default:}return n}},e.Util.UTF8}),n("utils/base64",["jxg","utils/encoding"],function(e,r){function n(e,r){return 255&e.charCodeAt(r)}function t(e,r){var n=o.indexOf(e.charAt(r));if(-1===n)throw Error("JSXGraph/utils/base64: Can't decode string (invalid character).");return n}var o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",i="=";return e.Util=e.Util||{},e.Util.Base64={encode:function(e){var t,a,u,c,f,s=[];for(f=r.encode(e),u=f.length,c=u%3,t=0;u-c>t;t+=3)a=n(f,t)<<16|n(f,t+1)<<8|n(f,t+2),s.push(o.charAt(a>>18),o.charAt(63&a>>12),o.charAt(63&a>>6),o.charAt(63&a));switch(c){case 1:a=n(f,u-1),s.push(o.charAt(a>>2),o.charAt(63&a<<4),i,i);break;case 2:a=n(f,u-2)<<8|n(f,u-1),s.push(o.charAt(a>>10),o.charAt(63&a>>4),o.charAt(63&a<<2),i)}return s.join("")},decode:function(e,n){var o,a,u,c,f,s,l=[],p=[];if(o=e.replace(/[^A-Za-z0-9\+\/=]/g,""),u=o.length,0!==u%4)throw Error("JSXGraph/utils/base64: Can't decode string (invalid input length).");for(o.charAt(u-1)===i&&(c=1,o.charAt(u-2)===i&&(c=2),u-=4),a=0;u>a;a+=4)f=t(o,a)<<18|t(o,a+1)<<12|t(o,a+2)<<6|t(o,a+3),p.push(f>>16,255&f>>8,255&f),0===a%1e4&&(l.push(String.fromCharCode.apply(null,p)),p=[]);switch(c){case 1:f=t(o,u)<<12|t(o,u+1)<<6|t(o,u+2),p.push(f>>10,255&f>>2);break;case 2:f=t(o,a)<<6|t(o,a+1),p.push(f>>4)}return l.push(String.fromCharCode.apply(null,p)),s=l.join(""),n&&(s=r.decode(s)),s},decodeAsArray:function(e){var r,n=this.decode(e),t=[],o=n.length;for(r=0;o>r;r++)t[r]=n.charCodeAt(r);return t}},e.Util.Base64}),n("../build/compressor.deps.js",["jxg","utils/zip","utils/base64"],function(e,r,n){return e.decompress=function(e){return unescape(new r.Unzip(n.decodeAsArray(e)).unzip()[0][0])},e}),window.JXG=r("../build/compressor.deps.js")})();
+</script>
+<script type="text/javascript">
+window.fileLoading = (function () {
+    var fileLoadingCallbacks = {};
+    var timestamp = new Date().getTime();
+    function loadKeywordsFile(filename, callback) {
+        fileLoadingCallbacks[filename] = callback;
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        // timestamp as an argument to prevent browsers from caching scripts
+        // see: http://stackoverflow.com/questions/866619/how-to-force-ie-to-reload-javascript
+        script.src = filename+'?time='+timestamp;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+    function getCallbackHandlerForKeywords(parent) {
+        var callableList = [];
+        return function (callable) {
+            if (!parent.isChildrenLoaded) {
+                callableList.push(callable);
+                if (callableList.length == 1) {
+                    loadKeywordsFile(parent.childFileName, function () {
+                        parent.isChildrenLoaded = true;
+                        for (var i = 0; i < callableList.length; i++) {
+                            callableList[i]();
+                        }
+                    });
+                }
+            } else {
+                callable();
+            }
+        }
+    }
+    function notifyFileLoaded(filename) {
+        fileLoadingCallbacks[filename]();
+    }
+    return {
+        getCallbackHandlerForKeywords: getCallbackHandlerForKeywords,
+        notify: notifyFileLoaded
+    }
+}());
+</script>
+<script type="text/javascript">
+window.model = (function () {
+    function Suite(data) {
+        var suite = createModelObject(data);
+        suite.source = data.source;
+        suite.relativeSource = data.relativeSource;
+        suite.fullName = data.parent ? data.parent.fullName + '.' + data.name : data.name;
+        suite.type = 'suite';
+        suite.template = 'suiteTemplate';
+        setStats(suite, data.statistics);
+        suite.metadata = data.metadata;
+        suite.populateKeywords = createIterablePopulator('Keyword');
+        suite.populateTests = createIterablePopulator('Test');
+        suite.populateSuites = createIterablePopulator('Suite');
+        suite.childrenNames = ['keyword', 'suite', 'test'];
+        suite.callWhenChildrenReady = function (callable) { callable(); };
+        suite.message = data.message;
+        suite.children = function () {
+            return suite.keywords().concat(suite.tests()).concat(suite.suites());
+        };
+        suite.searchTests = function (predicate) {
+            var tests = [];
+            var suites = this.suites();
+            for (var i in suites)
+                tests = tests.concat(suites[i].searchTests(predicate));
+            return tests.concat(util.filter(this.tests(), predicate));
+        };
+        suite.searchTestsInSuite = function (pattern, matcher) {
+            if (!matcher)
+                matcher = util.Matcher(pattern);
+            if (matcher.matchesAny([suite.fullName, suite.name]))
+                return suite.allTests();
+            var tests = [];
+            var suites = this.suites();
+            for (var i in suites)
+                tests = tests.concat(suites[i].searchTestsInSuite(pattern, matcher));
+            return tests;
+        };
+        suite.searchTestsByTag = function (tag) {
+            return suite.searchTests(function (test) {
+                if (tag.combined)
+                    return containsTagPattern(test.tags, tag.combined);
+                return containsTag(test.tags, tag.label);
+            });
+        };
+        suite.findSuiteByName = function (name) {
+            return findSuiteByName(suite, name);
+        };
+        suite.allTests = function () {
+            return suite.searchTests(function (test) {
+                return true;
+            });
+        };
+        return suite;
+    }
+    function containsTag(testTags, tagname) {
+        testTags = util.map(testTags, util.normalize);
+        return util.contains(testTags, util.normalize(tagname));
+    }
+    function containsTagPattern(testTags, pattern) {
+        var patterns;
+        if (pattern.indexOf('NOT') != -1) {
+            patterns = pattern.split('NOT');
+            if (!util.normalize(patterns[0]))
+                return util.all(util.map(patterns.slice(1), function (p) {
+                    return !containsTagPattern(testTags, p);
+                }));
+            return containsTagPattern(testTags, patterns[0]) &&
+                util.all(util.map(patterns.slice(1), function (p) {
+                    return !containsTagPattern(testTags, p);
+                }));
+        }
+        if (pattern.indexOf('OR') != -1) {
+            patterns = pattern.split('OR');
+            return util.any(util.map(patterns, function (p) {
+                return containsTagPattern(testTags, p);
+            }));
+        }
+        if (pattern.indexOf('AND') != -1) {
+            patterns = pattern.split('AND');
+            return util.all(util.map(patterns, function (p) {
+                return containsTagPattern(testTags, p);
+            }));
+        }
+        return util.Matcher(pattern).matchesAny(testTags);
+    }
+    function findSuiteByName(suite, name) {
+        if (suite.fullName == name)
+            return suite;
+        var subSuites = suite.suites();
+        for (var i in subSuites) {
+            var match = findSuiteByName(subSuites[i], name);
+            if (match)
+                return match;
+        }
+        return null;
+    }
+    function setStats(suite, stats) {
+        for (var name in stats) {
+            suite[name] = stats[name];
+        }
+    }
+    function createModelObject(data) {
+        return {
+            name: data.name,
+            doc: data.doc,
+            status: data.status,
+            times: data.times,
+            id: data.parent ? data.parent.id + '-' + data.id : data.id
+        };
+    }
+    function Test(data) {
+        var test = createModelObject(data);
+        test.type = 'test';
+        test.template = 'testTemplate';
+        test.fullName = data.parent.fullName + '.' + test.name;
+        test.formatParentName = function () { return util.formatParentName(test); };
+        test.timeout = data.timeout;
+        test.populateKeywords = createIterablePopulator('Keyword');
+        test.childrenNames = ['keyword'];
+        test.isChildrenLoaded = data.isChildrenLoaded;
+        test.callWhenChildrenReady = window.fileLoading.getCallbackHandlerForKeywords(test);
+        test.children = function () {
+            if (test.isChildrenLoaded)
+                return test.keywords();
+        };
+        test.tags = data.tags;
+        test.message = data.message;
+        test.matchesTagPattern = function (pattern) {
+            return containsTagPattern(test.tags, pattern);
+        };
+        test.matchesNamePattern = function (pattern) {
+            return util.Matcher(pattern).matchesAny([test.name, test.fullName]);
+        };
+        return test;
+    }
+    function Keyword(data) {
+        var kw = createModelObject(data);
+        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
+        kw.libname = data.libname;
+        kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
+        kw.type = data.type;
+        kw.template = 'keywordTemplate';
+        kw.arguments = data.args;
+        kw.assign = data.assign + (data.assign ? ' =' : '');
+        kw.tags = data.tags;
+        kw.timeout = data.timeout;
+        kw.populateKeywords = createIterablePopulator('Keyword');
+        kw.childrenNames = ['keyword'];
+        kw.isChildrenLoaded = data.isChildrenLoaded;
+        kw.callWhenChildrenReady = window.fileLoading.getCallbackHandlerForKeywords(kw);
+        kw.children = function () {
+            if (kw.isChildrenLoaded)
+                return kw.keywords();
+        };
+        return kw;
+    }
+    function Message(level, date, text, link) {
+        var message = {
+            type: 'message',
+            template: 'messageTemplate',
+            level: level,
+            time: util.timeFromDate(date),
+            date: util.dateFromDate(date),
+            text: text,
+            link: link
+        };
+        message.callWhenChildrenReady = function (callable) { callable(); };
+        return message;
+    }
+    function Times(timedata) {
+        var start = timedata[0];
+        var end = timedata[1];
+        var elapsed = timedata[2];
+        return {
+            elapsedMillis: elapsed,
+            elapsedTime: util.formatElapsed(elapsed),
+            startTime: util.dateTimeFromDate(start),
+            endTime:  util.dateTimeFromDate(end)
+        };
+    }
+    function createIterablePopulator(name) {
+        return function (populator) {
+            populateIterable(this, name, populator);
+        };
+    }
+    function populateIterable(obj, name, populator) {
+        name = name.toLowerCase() + 's';
+        obj[name] = createGetAllFunction(populator.numberOfItems, populator.creator);
+    }
+    function createGetAllFunction(numberOfElements, creator) {
+        var cached = null;
+        return function () {
+            if (cached === null) {
+                cached = [];
+                for (var i = 0; i < numberOfElements(); i++) {
+                    cached.push(creator(i));
+                }
+            }
+            return cached;
+        };
+    }
+    return {
+        Suite: Suite,
+        Test: Test,
+        Keyword: Keyword,
+        Message: Message,
+        Times: Times,
+        containsTag: containsTag,  // Exposed for tests
+        containsTagPattern: containsTagPattern  // Exposed for tests
+    };
+}());
+window.stats = (function () {
+    function Statistics(totalElems, tagElems, suiteElems) {
+        return {total: util.map(totalElems, totalStatElem),
+                tag:   util.map(tagElems, tagStatElem),
+                suite: util.map(suiteElems, suiteStatElem)};
+    }
+    function statElem(stat) {
+        stat.total = stat.pass + stat.fail + stat.skip;
+        var percents = calculatePercents(stat.total, stat.pass, stat.fail, stat.skip);
+        stat.passPercent = percents[0];
+        stat.skipPercent = percents[1];
+        stat.failPercent = percents[2];
+        var widths = calculateWidths(stat.passPercent, stat.skipPercent, stat.failPercent);
+        stat.passWidth = widths[0];
+        stat.skipWidth = widths[1];
+        stat.failWidth = widths[2];
+        return stat;
+    }
+    function totalStatElem(data) {
+        var stat = statElem(data);
+        stat.type = 'all';
+        return stat;
+    }
+    function tagStatElem(data) {
+        var stat = statElem(data);
+        stat.links = parseLinks(stat.links);
+        return stat;
+    }
+    function suiteStatElem(data) {
+        var stat = statElem(data);
+        stat.fullName = stat.label;
+        stat.formatParentName = function () { return util.formatParentName(stat); };
+        return stat;
+    }
+    function parseLinks(linksData) {
+        if (!linksData)
+            return [];
+        return util.map(linksData.split(':::'), function (link) {
+                var index = link.indexOf(':');
+                return {title: link.slice(0, index), url: link.slice(index+1)};
+            });
+    }
+    function calculatePercents(total, passed, failed, skipped) {
+        if (total == 0) {
+            return [0.0, 0.0, 0.0];
+        }
+        var pass = 100.0 * passed / total;
+        var skip = 100.0 * skipped / total;
+        var fail = 100.0 * failed / total;
+        if (pass > 0 && pass < 0.1)
+            pass = 0.1
+        if (fail > 0 && fail < 0.1)
+            fail = 0.1
+        if (skip > 0 && skip < 0.1)
+            skip = 0.1
+        if (pass > 99.95 && pass < 100)
+            pass = 99.9
+        if (fail > 99.95 && fail < 100)
+            fail = 99.9
+        if (skip > 99.95 && skip < 100)
+            skip = 99.9
+        return [Math.round(pass*10)/10, Math.round(skip*10)/10, Math.round(fail*10)/10];
+    }
+    function calculateWidths(num1, num2, num3) {
+        if (num1 + num2 + num3 === 0)
+            return [0.0, 0.0, 0.0];
+        // Make small percentages better visible
+        if (num1 > 0 && num1 < 1)
+            num1 = 1
+        if (num2 > 0 && num2 < 1)
+            num2 = 1
+        if (num3 > 0 && num3 < 1)
+            num3 = 1
+        // Handle situation where some are rounded up
+        while (num1 + num2 + num3 > 100) {
+            if (num1 > num2 && num1 > num3)
+                num1 -= 0.1;
+            else if (num2 > num1 && num2 > num3)
+                num2 -= 0.1;
+            else if (num3 > num1 && num3 > num2)
+                num3 -= 0.1;
+            else if (num1 > num3 && num1 == num2) {
+                num1 -= 0.1;
+                num2 -= 0.1;
+            }
+            else if (num1 > num2 && num1 == num3) {
+                num1 -= 0.1;
+                num3 -= 0.1;
+            }
+            else if (num2 > num1 && num2 == num3) {
+                num2 -= 0.1;
+                num3 -= 0.1;
+            }
+        }
+        return [Math.ceil(num1*10)/10, Math.ceil(num2*10)/10, Math.ceil(num3*10)/10];
+    }
+    return {
+        Statistics: Statistics
+    };
+}());
+</script>
+<script type="text/javascript">
+window.util = function () {
+    function map(elems, func) {
+        var ret = [];
+        for (var i = 0, len = elems.length; i < len; i++) {
+            ret[i] = func(elems[i]);
+        }
+        return ret;
+    }
+    function filter(elems, predicate) {
+        var ret = [];
+        for (var i = 0, len = elems.length; i < len; i++) {
+            if (predicate(elems[i]))
+                ret.push(elems[i]);
+        }
+        return ret;
+    }
+    function all(elems) {
+        for (var i = 0, len = elems.length; i < len; i++) {
+            if (!elems[i])
+                return false;
+        }
+        return true;
+    }
+    function any(elems) {
+        for (var i = 0, len = elems.length; i < len; i++) {
+            if (elems[i])
+                return elems[i];
+        }
+        return false;
+    }
+    function contains(elems, e) {
+        for (var i = 0, len = elems.length; i < len; i++) {
+            if (elems[i] == e)
+                return true;
+        }
+        return false;
+    }
+    function last(items) {
+        return items[items.length-1];
+    }
+    function unescape(string) {
+        return string.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+    }
+    function escape(string) {
+        return string.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+    function normalize(string) {
+        return string.toLowerCase().replace(/ /g, '').replace(/_/g, '');
+    }
+    function regexpEscape(string) {
+        return string.replace(/[-[\]{}()+?*.,\\^$|#]/g, "\\$&");
+    }
+    function Matcher(pattern) {
+        pattern = regexpEscape(normalize(pattern));
+        var rePattern = '^' + pattern.replace(/\\\?/g, '.').replace(/\\\*/g, '[\\s\\S]*') + '$';
+        var regexp = new RegExp(rePattern);
+        function matches(string) {
+            return regexp.test(normalize(string));
+        }
+        return {
+            matches: matches,
+            matchesAny: function (strings) {
+                for (var i = 0, len = strings.length; i < len; i++)
+                    if (matches(strings[i]))
+                        return true;
+                return false;
+            }
+        };
+    }
+    function formatParentName(item) {
+        var parentName = item.fullName.slice(0, item.fullName.length - item.name.length);
+        return parentName.replace(/\./g, ' . ');
+    }
+    function timeFromDate(date) {
+        if (!date)
+            return 'N/A';
+        return formatTime(date.getHours(), date.getMinutes(),
+                          date.getSeconds(), date.getMilliseconds());
+    }
+    function dateFromDate(date) {
+        if (!date)
+            return 'N/A';
+        return padTo(date.getFullYear(), 4) +
+               padTo(date.getMonth() + 1, 2) +
+               padTo(date.getDate(), 2);
+    }
+    function dateTimeFromDate(date) {
+        if (!date)
+            return 'N/A';
+        return dateFromDate(date) + ' ' + timeFromDate(date);
+    }
+    function formatTime(hours, minutes, seconds, milliseconds) {
+        return padTo(hours, 2) + ':' +
+               padTo(minutes, 2) + ':' +
+               padTo(seconds, 2) + '.' +
+               padTo(milliseconds, 3);
+    }
+    function formatElapsed(elapsed) {
+        var millis = elapsed;
+        var hours = Math.floor(millis / (60 * 60 * 1000));
+        millis -= hours * 60 * 60 * 1000;
+        var minutes = Math.floor(millis / (60 * 1000));
+        millis -= minutes * 60 * 1000;
+        var seconds = Math.floor(millis / 1000);
+        millis -= seconds * 1000;
+        return formatTime(hours, minutes, seconds, millis);
+    }
+    function padTo(number, len) {
+        var numString = number + "";
+        while (numString.length < len) numString = "0" + numString;
+        return numString;
+    }
+    function timestamp(millis) {
+        // used also by tools that do not set window.output.baseMillis
+        var base = window.output ? window.output.baseMillis : 0;
+        return new Date(base + millis);
+    }
+    function createGeneratedString(timestamp) {
+        var date = new Date(timestamp);
+        var dt = dateTimeFromDate(date).slice(0, 17);  // drop millis
+        var offset = date.getTimezoneOffset();
+        var sign = offset > 0 ? '-' : '+';
+        var hh = Math.floor(Math.abs(offset) / 60);
+        var mm = Math.abs(offset) % 60;
+        return dt + ' UTC' + sign + padTo(hh, 2) + ':' + padTo(mm, 2);
+    }
+    function createGeneratedAgoString(timestamp) {
+        function timeString(time, shortUnit) {
+            var unit = {y: 'year', d: 'day', h: 'hour', m: 'minute',
+                        s: 'second'}[shortUnit];
+            var end = time == 1 ? ' ' : 's ';
+            return time + ' ' + unit + end;
+        }
+        function compensateLeapYears(days, years) {
+            // Not a perfect algorithm but ought to be enough
+            return days - Math.floor(years / 4);
+        }
+        var generated = Math.round(timestamp / 1000);
+        var current = Math.round(new Date().getTime() / 1000);
+        var elapsed = current - generated;
+        var prefix = '';
+        if (elapsed < 0) {
+            prefix = '- ';
+            elapsed = Math.abs(elapsed);
+        }
+        var secs  = elapsed % 60;
+        var mins  = Math.floor(elapsed / 60) % 60;
+        var hours = Math.floor(elapsed / (60*60)) % 24;
+        var days  = Math.floor(elapsed / (60*60*24)) % 365;
+        var years = Math.floor(elapsed / (60*60*24*365));
+        if (years) {
+            days = compensateLeapYears(days, years);
+            return prefix + timeString(years, 'y') + timeString(days, 'd');
+        } else if (days) {
+            return prefix + timeString(days, 'd') + timeString(hours, 'h');
+        } else if (hours) {
+            return prefix + timeString(hours, 'h') + timeString(mins, 'm');
+        } else if (mins) {
+            return prefix + timeString(mins, 'm') + timeString(secs, 's');
+        } else {
+            return prefix + timeString(secs, 's');
+        }
+    }
+    function parseQueryString(query) {
+        var result = {};
+        if (!query)
+            return result;
+        var params = query.split('&');
+        var parts;
+        function decode(item) {
+            return decodeURIComponent(item.replace('+', ' '));
+        }
+        for (var i = 0, len = params.length; i < len; i++) {
+            parts = params[i].split('=');
+            result[decode(parts.shift())] = decode(parts.join('='));
+        }
+        return result;
+    }
+    return {
+        map: map,
+        filter: filter,
+        all: all,
+        any: any,
+        contains: contains,
+        last: last,
+        escape: escape,
+        unescape: unescape,
+        normalize: normalize,
+        regexpEscape: regexpEscape,
+        Matcher: Matcher,
+        formatParentName: formatParentName,
+        timeFromDate: timeFromDate,
+        dateFromDate: dateFromDate,
+        dateTimeFromDate: dateTimeFromDate,
+        formatElapsed: formatElapsed,
+        timestamp: timestamp,
+        createGeneratedString: createGeneratedString,
+        createGeneratedAgoString: createGeneratedAgoString,
+        parseQueryString: parseQueryString
+    };
+}();
+</script>
+<script type="text/javascript">
+window.testdata = function () {
+    var elementsById = {};
+    var idCounter = 0;
+    var _statistics = null;
+    var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
+    var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK'];
+    function addElement(elem) {
+        if (!elem.id)
+            elem.id = uniqueId();
+        elementsById[elem.id] = elem;
+        return elem;
+    }
+    function uniqueId() {
+        idCounter++;
+        return 'element-id-' + idCounter;
+    }
+    function times(stats) {
+        var startMillis = stats[1];
+        var elapsed = stats[2];
+        if (startMillis === null)
+            return [null, null, elapsed];
+        return [util.timestamp(startMillis),
+                util.timestamp(startMillis + elapsed),
+                elapsed];
+    }
+    function createMessage(element, strings) {
+        return model.Message(LEVELS[element[1]],
+                             util.timestamp(element[0]),
+                             strings.get(element[2]),
+                             strings.get(element[3]));
+    }
+    function parseStatus(stats) {
+        return STATUSES[stats[0]];
+    }
+    function childCreator(parent, childType) {
+        return function (elem, strings, index) {
+            return addElement(childType(parent, elem, strings, index));
+        };
+    }
+    function createBodyItem(parent, element, strings, index) {
+        if (element.length < 5)
+            return createMessage(element, strings);
+        var messages = util.filter(parent.children(), function (child) {
+            return child.type == 'message';
+        })
+        return createKeyword(parent, element, strings, index - messages.length);
+    }
+    function createKeyword(parent, element, strings, index) {
+        var kw = model.Keyword({
+            parent: parent,
+            type: KEYWORD_TYPES[element[0]],
+            id: 'k' + (index + 1),
+            name: strings.get(element[1]),
+            libname: strings.get(element[2]),
+            timeout: strings.get(element[3]),
+            args: strings.get(element[5]),
+            assign: strings.get(element[6]),
+            tags: strings.get(element[7]),
+            doc: function () {
+                var doc = strings.get(element[4]);
+                this.doc = function () { return doc; };
+                return doc;
+            },
+            status: parseStatus(element[8], strings),
+            times: model.Times(times(element[8])),
+            isChildrenLoaded: typeof(element[9]) !== 'number'
+        });
+        lazyPopulateKeywordsFromFile(kw, element[9], strings);
+        return kw;
+    }
+    function lazyPopulateKeywordsFromFile(parent, modelOrIndex, strings) {
+        var model, index, populator;
+        var creator = childCreator(parent, createBodyItem);
+        if (parent.isChildrenLoaded) {
+            model = modelOrIndex;
+            populator = Populator(model, strings, creator);
+        } else {
+            index = modelOrIndex;
+            parent.childFileName = window.settings['splitLogBase'] + '-' + index + '.js';
+            populator = SplitLogPopulator(index, creator);
+        }
+        parent.populateKeywords(populator);
+    }
+    function tags(taglist, strings) {
+        return util.map(taglist, strings.get);
+    }
+    function createTest(parent, element, strings, index) {
+        var status = element[4];
+        var test = model.Test({
+            parent: parent,
+            id: 't' + (index + 1),
+            name: strings.get(element[0]),
+            doc: function () {
+                var doc = strings.get(element[2]);
+                this.doc = function () { return doc; };
+                return doc;
+            },
+            timeout: strings.get(element[1]),
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
+            times: model.Times(times(status)),
+            tags: tags(element[3], strings),
+            isChildrenLoaded: typeof(element[5]) !== 'number'
+        });
+        lazyPopulateKeywordsFromFile(test, element[5], strings);
+        return test;
+    }
+    function createSuite(parent, element, strings, index) {
+        var status = element[5];
+        var suite = model.Suite({
+            parent: parent,
+            id: 's' + ((index || 0) + 1),
+            name: strings.get(element[0]),
+            source: strings.get(element[1]),
+            relativeSource: strings.get(element[2]),
+            doc: function () {
+                var doc = strings.get(element[3]);
+                this.doc = function () { return doc; };
+                return doc;
+            },
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
+            times: model.Times(times(status)),
+            statistics: suiteStats(util.last(element)),
+            metadata: parseMetadata(element[4], strings)
+        });
+        suite.populateKeywords(Populator(element[8], strings, childCreator(suite, createKeyword)));
+        suite.populateTests(Populator(element[7], strings, childCreator(suite, createTest)));
+        suite.populateSuites(Populator(element[6], strings, childCreator(suite, createSuite)));
+        return suite;
+    }
+    function parseMetadata(data, strings) {
+        var metadata = [];
+        for (var i=0; i<data.length; i+=2) {
+            metadata.push([strings.get(data[i]), strings.get(data[i+1])]);
+        }
+        return metadata;
+    }
+    function suiteStats(stats) {
+        return {
+            total: stats[0],
+            pass: stats[1],
+            fail: stats[2],
+            skip: stats[3]
+        };
+    }
+    function Populator(items, strings, creator) {
+        return {
+            numberOfItems: function () {
+                return items.length;
+            },
+            creator: function (index) {
+                return creator(items[index], strings, index);
+            }
+        };
+    }
+    function SplitLogPopulator(structureIndex, creator) {
+        return {
+            numberOfItems: function () {
+                return window['keywords'+structureIndex].length;
+            },
+            creator: function (index) {
+                return creator(window['keywords'+structureIndex][index],
+                               StringStore(window['strings'+structureIndex]),
+                               index);
+            }
+        };
+    }
+    function suite() {
+        var elem = window.output.suite;
+        if (elementsById[elem.id])
+            return elem;
+        var root = addElement(createSuite(null, elem, StringStore(window.output.strings)));
+        window.output.suite = root;
+        return root;
+    }
+    function findLoaded(id) {
+        return elementsById[id];
+    }
+    function ensureLoaded(id, callback) {
+        var ids = id.split('-');
+        var root = suite();
+        ids.shift();
+        loadItems(ids, root, [root.id], callback);
+    }
+    function loadItems(ids, current, result, callback) {
+        if (!ids.length) {
+            callback(result);
+            return;
+        }
+        current.callWhenChildrenReady(function () {
+            var id = ids.shift();
+            var type = id[0];
+            var index = parseInt(id.substring(1)) - 1;
+            var item = selectFrom(current, type, index);
+            if (item)
+                result.push(item.id);
+            else    // Invalid id. Should this be reported somewhere?
+                ids = [];
+            loadItems(ids, item, result, callback);
+        });
+    }
+    function selectFrom(element, type, index) {
+        if (type === 'k') {
+            var keywords = util.filter(element.keywords(), function (kw) {
+                return kw.type != 'message';
+            });
+            return keywords[index];
+        } else if (type === 't') {
+            return element.tests()[index];
+        } else {
+            return element.suites()[index];
+        }
+    }
+    function errorIterator() {
+        return {
+            next: function () {
+                return addElement(createMessage(window.output.errors.shift(),
+                                                StringStore(window.output.strings)));
+            },
+            hasNext: function () {
+                return window.output.errors.length > 0;
+            }
+        };
+    }
+    function statistics() {
+        if (!_statistics) {
+            var statData = window.output.stats;
+            _statistics = stats.Statistics(statData[0], statData[1], statData[2]);
+        }
+        return _statistics;
+    }
+    function StringStore(strings) {
+        function getText(id) {
+            var text = strings[id];
+            if (!text)
+                return '';
+            if (text[0] == '*')
+                return text.substring(1);
+            var extracted = extract(text);
+            strings[id] = '*' + extracted;
+            return extracted;
+        }
+        function extract(text) {
+            var decoded = JXG.Util.Base64.decodeAsArray(text);
+            var extracted = (new JXG.Util.Unzip(decoded)).unzip()[0][0];
+            return JXG.Util.UTF8.decode(extracted);
+        }
+        function get(id) {
+            if (id === null) return null;
+            return getText(id);
+        }
+        return {get: get};
+    }
+    return {
+        suite: suite,
+        errorIterator: errorIterator,
+        findLoaded: findLoaded,
+        ensureLoaded: ensureLoaded,
+        statistics: statistics,
+        StringStore: StringStore,  // exposed for tests
+        LEVELS: LEVELS
+    };
+}();
+</script>
+<script type="text/javascript">
+function removeJavaScriptDisabledWarning() {
+    // Not using jQuery here for maximum speed
+    document.getElementById('javascript-disabled').style.display = 'none';
+}
+function addJavaScriptDisabledWarning(error) {
+    if (window.console)
+        console.error('Opening failed: ' + error.name + ': ' + error.message);
+    document.getElementById('javascript-disabled').style.display = 'block';
+}
+function initLayout(suiteName, type) {
+    parseTemplates();
+    setTitle(suiteName, type);
+    addHeader();
+    addReportOrLogLink(type);
+}
+function parseTemplates() {
+    $('script[type="text/x-jquery-tmpl"]').map(function (idx, elem) {
+        $.template(elem.id, elem.text);
+    });
+}
+function testOrTask(text) {
+    return text.replace(/{(.*)}/, function (match, group, offset, string) {
+        if (!window.settings.rpa)
+            return group;
+        return {'TEST': 'TASK', 'Test': 'Task', 'test': 'task'}[group];
+    });
+}
+function setTitle(suiteName, type) {
+    var givenTitle = window.settings.title;
+    var title = givenTitle ? givenTitle : suiteName + " " + type;
+    document.title = util.unescape(title);
+}
+function addHeader() {
+    var generated = util.timestamp(window.output.generated);
+    $.tmpl('<h1>${title}</h1>' +
+           '<div id="generated">' +
+             '<span>Generated<br>${generated}</span><br>' +
+             '<span id="generated-ago">${ago} ago</span>' +
+           '</div>' +
+           '<div id="top-right-header">' +
+             '<div id="report-or-log-link"><a href="#"></a></div>' +
+           '</div>', {
+        generated: util.createGeneratedString(generated),
+        ago: util.createGeneratedAgoString(generated),
+        title: document.title
+    }).appendTo($('#header'));
+}
+function addReportOrLogLink(myType) {
+    var url;
+    var text;
+    var container = $('#report-or-log-link');
+    if (myType == 'Report') {
+        url = window.settings.logURL;
+        text = 'LOG';
+    } else {
+        url = window.settings.reportURL;
+        text = 'REPORT';
+    }
+    if (url) {
+        container.find('a').attr('href', url);
+        container.find('a').text(text);
+    } else {
+        container.remove();
+    }
+}
+function addStatistics() {
+    var statHeaders =
+        '<th class="stats-col-stat">Total</th>' +
+        '<th class="stats-col-stat">Pass</th>' +
+        '<th class="stats-col-stat">Fail</th>' +
+        '<th class="stats-col-stat">Skip</th>' +
+        '<th class="stats-col-elapsed">Elapsed</th>' +
+        '<th class="stats-col-graph">Pass / Fail / Skip</th>';
+    var statTable =
+        '<h2>{Test} Statistics</h2>' +
+        '<table class="statistics" id="total-stats"><thead><tr>' +
+        '<th class="stats-col-name">Total Statistics</th>' + statHeaders +
+        '</tr></thead></table>' +
+        '<table class="statistics" id="tag-stats"><thead><tr>' +
+        '<th class="stats-col-name">Statistics by Tag</th>' + statHeaders +
+        '</tr></thead></table>' +
+        '<table class="statistics" id="suite-stats"><thead><tr>' +
+        '<th class="stats-col-name">Statistics by Suite</th>' + statHeaders +
+        '</tr></thead></table>';
+    $(testOrTask(statTable)).appendTo('#statistics-container');
+    util.map(['total', 'tag', 'suite'], addStatTable);
+    addTooltipsToElapsedTimes();
+    enableStatisticsSorter();
+}
+function addTooltipsToElapsedTimes() {
+    $('.stats-col-elapsed').attr('title',
+        testOrTask('Total execution time of these {test}s. ') +
+        'Excludes suite setups and teardowns.');
+    $('#suite-stats').find('.stats-col-elapsed').attr('title',
+        'Total execution time of this suite.');
+}
+function enableStatisticsSorter() {
+    $.tablesorter.addParser({
+        id: 'statName',
+        type: 'numeric',
+        is: function(s) {
+            return false;  // do not auto-detect
+        },
+        format: function(string, table, cell, cellIndex) {
+            // Rows have class in format 'row-<index>'.
+            var index = $(cell).parent().attr('class').substring(4);
+            return parseInt(index);
+        }
+    });
+    $(".statistics").tablesorter({
+        sortInitialOrder: 'desc',
+        headers: {0: {sorter: 'statName', sortInitialOrder: 'asc'},
+                  6: {sorter: false}}
+    });
+}
+function addStatTable(tableName) {
+    var stats = window.testdata.statistics()[tableName];
+    if (tableName == 'tag' && stats.length == 0) {
+        renderNoTagStatTable();
+    } else {
+        renderStatTable(tableName, stats);
+    }
+}
+function renderNoTagStatTable() {
+    $('<tbody><tr class="row-0">' +
+        '<td class="stats-col-name">No Tags</td>' +
+        '<td class="stats-col-stat"></td>' +
+        '<td class="stats-col-stat"></td>' +
+        '<td class="stats-col-stat"></td>' +
+        '<td class="stats-col-stat"></td>' +
+        '<td class="stats-col-elapsed"></td>' +
+        '<td class="stats-col-graph">' +
+          '<div class="empty-graph"></div>' +
+        '</td>' +
+      '</tr></tbody>').appendTo('#tag-stats');
+}
+function renderStatTable(tableName, stats) {
+    var template = tableName + 'StatisticsRowTemplate';
+    var tbody = $('<tbody></tbody>');
+    for (var i = 0, len = stats.length; i < len; i++) {
+        $.tmpl(template, stats[i], {index: i}).appendTo(tbody);
+    }
+    tbody.appendTo('#' + tableName + '-stats');
+}
+$.template('statColumnsTemplate',
+    '<td class="stats-col-stat">${total}</td>' +
+    '<td class="stats-col-stat">${pass}</td>' +
+    '<td class="stats-col-stat">${fail}</td>' +
+    '<td class="stats-col-stat">${skip}</td>' +
+    '<td class="stats-col-elapsed">${elapsed}</td>' +
+    '<td class="stats-col-graph">' +
+      '{{if total}}' +
+      '<div class="graph">' +
+        '<div class="pass-bar" style="width: ${passWidth}%" title="${passPercent}%"></div>' +
+        '<div class="fail-bar" style="width: ${failWidth}%" title="${failPercent}%"></div>' +
+        '<div class="skip-bar" style="width: ${skipWidth}%" title="${skipPercent}%"></div>' +
+      '</div>' +
+      '{{else}}' +
+      '<div class="empty-graph"></div>' +
+      '{{/if}}' +
+    '</td>'
+);
+$.template('suiteStatusMessageTemplate',
+    '${total} {{= testOrTask("{test}")}}{{if total != 1}}s{{/if}} total, ' +
+    '${pass} passed, ${fail} failed, ${skip} skipped'
+);
+// For complete cross-browser experience..
+// http://www.quirksmode.org/js/events_order.html
+function stopPropagation(event) {
+    var event = event || window.event;
+    event.cancelBubble = true;
+    if (event.stopPropagation)
+        event.stopPropagation();
+}
+</script>
+<script type="text/javascript">
+window.output = {};
+</script>
+<script type="text/javascript">
+window.output["suite"] = [1,2,3,4,[],[1,0,59146],[[5,6,7,0,[],[1,18,59127],[[8,9,10,0,[],[1,19,59125],[[11,12,13,14,[],[1,21,59116],[],[[15,0,16,[17],[1,8349,24636],[[0,18,19,0,20,0,0,0,[1,8355,314],[[5,21,0,0,0,0,0,0,[3,8356,0],[[0,22,23,0,24,25,0,0,[3,8356,0],[]]]],[7,0,0,0,0,0,0,0,[1,8356,312],[[0,22,23,0,24,26,0,0,[1,8357,0],[[8357,2,27]]],[0,28,29,0,30,31,0,32,[1,8357,90],[]],[0,33,34,0,35,36,0,0,[1,8448,11],[[0,37,29,0,38,39,0,40,[1,8448,11],[[8459,2,41]]]]],[0,28,29,0,30,36,0,32,[1,8459,201],[]],[0,37,29,0,38,42,0,40,[1,8660,8],[[8668,2,43]]]]]]],[0,44,19,0,0,0,0,0,[1,8669,2],[[0,22,23,0,24,45,0,0,[1,8670,1],[[8671,2,0]]]]],[0,46,19,0,47,0,0,0,[1,8671,2],[[0,48,23,0,49,45,0,0,[1,8672,1],[]]]],[0,50,19,0,0,0,0,0,[1,8674,226],[[0,51,29,0,52,0,53,54,[1,8674,3],[[8677,2,55]]],[0,56,34,0,0,57,58,0,[1,8677,1],[[0,59,60,0,0,61,62,0,[1,8677,1],[[8678,2,63]]],[8678,2,64]]],[5,65,0,0,0,0,0,0,[3,8679,0],[[0,28,29,0,30,66,0,32,[3,8679,0],[]]]],[7,0,0,0,0,0,0,0,[1,8679,221],[[0,28,29,0,30,67,0,32,[1,8679,221],[]]]]]],[0,68,19,0,0,0,0,0,[1,8900,2853],[[0,33,34,0,35,69,0,0,[1,8901,2596],[[0,37,29,0,38,39,0,40,[1,8902,2595],[[11496,2,70]]]]],[0,71,29,0,72,73,74,54,[1,11497,255],[[11752,2,75]]],[0,76,23,0,77,78,0,0,[1,11752,0],[]]]],[0,79,19,0,80,0,0,0,[1,11753,5655],[[0,28,29,0,30,69,0,32,[1,11753,4691],[]],[0,33,34,0,35,81,0,0,[1,16444,964],[[0,37,29,0,38,39,0,40,[1,16445,963],[[17407,2,82]]]]]]],[0,83,19,0,0,0,0,0,[1,17408,113],[[0,28,29,0,30,84,0,32,[1,17409,112],[]]]],[0,85,19,0,86,0,0,0,[1,17521,2404],[[0,87,34,0,88,0,89,0,[1,17522,850],[[0,90,91,0,0,0,89,0,[1,17522,848],[[18370,2,92]]],[0,48,23,0,49,93,0,0,[1,18370,1],[]],[18372,2,92]]],[0,94,34,0,95,96,0,0,[1,18372,705],[[0,28,29,0,30,97,0,32,[1,18373,634],[]],[0,98,29,0,99,100,0,32,[1,19007,69],[[19008,2,101]]]]],[0,94,34,0,95,102,0,0,[1,19077,226],[[0,28,29,0,30,97,0,32,[1,19077,153],[]],[0,98,29,0,99,100,0,32,[1,19230,73],[[19230,2,103]]]]],[0,94,34,0,95,104,0,0,[1,19303,230],[[0,28,29,0,30,97,0,32,[1,19304,155],[]],[0,98,29,0,99,100,0,32,[1,19459,74],[[19459,2,105]]]]],[0,94,34,0,95,106,0,0,[1,19534,211],[[0,28,29,0,30,97,0,32,[1,19534,150],[]],[0,98,29,0,99,100,0,32,[1,19684,61],[[19684,2,107]]]]],[0,48,23,0,49,93,0,0,[1,19745,2],[]],[0,108,23,0,109,110,0,0,[1,19747,1],[[19748,2,111]]],[0,112,29,0,113,114,115,54,[1,19749,26],[[19775,2,116]]],[5,117,0,0,0,0,0,0,[1,19776,148],[[0,94,34,0,95,118,0,0,[1,19776,148],[[0,28,29,0,30,97,0,32,[1,19777,116],[]],[0,98,29,0,99,100,0,32,[1,19894,30],[[19894,2,119]]]]]]],[7,0,0,0,0,0,0,0,[3,19925,0],[[0,48,23,0,49,120,0,0,[3,19925,0],[]]]]]],[0,121,19,0,0,0,0,0,[1,19926,279],[[0,28,29,0,30,122,0,32,[1,19926,160],[]],[0,28,29,0,30,123,0,32,[1,20086,119],[]]]],[0,124,19,0,0,0,0,0,[1,20206,2479],[[0,28,29,0,30,125,0,32,[1,20206,106],[]],[0,28,29,0,30,126,0,32,[1,20312,137],[]],[0,28,29,0,30,127,0,32,[1,20449,2235],[]]]],[0,128,19,0,0,0,0,0,[1,22685,10300],[[0,129,19,0,0,130,0,0,[1,22685,8486],[[0,37,29,0,38,131,0,40,[1,22686,6707],[[29393,2,132]]],[0,28,29,0,30,133,0,32,[1,29394,1777],[]]]],[0,134,19,0,0,0,0,0,[1,31172,1813],[[0,33,34,0,35,135,0,0,[1,31172,1550],[[0,37,29,0,38,39,0,40,[1,31173,1549],[[32722,2,136]]]]],[0,137,19,0,0,0,0,0,[1,32723,221],[[0,33,34,0,35,138,0,0,[1,32723,29],[[0,37,29,0,38,39,0,40,[1,32724,27],[[32751,2,139]]]]],[0,28,29,0,30,138,0,32,[1,32752,192],[]]]],[0,140,19,0,0,0,0,0,[1,32944,41],[[0,141,29,0,142,143,144,54,[1,32945,37],[[32982,2,145],[32982,2,146]]],[0,48,23,0,49,147,0,0,[1,32983,0],[]],[0,148,149,0,150,151,144,0,[1,32983,1],[[32984,2,146]]],[0,152,149,0,153,144,144,0,[1,32984,1],[[32984,2,146]]]]]]]]]]],[154,0,155,[17],[1,32992,25391],[[0,156,23,0,157,158,159,0,[1,32997,1],[[32998,2,160]]],[0,161,91,0,0,159,162,0,[1,32998,16778],[[49776,2,163]]],[0,164,34,0,0,162,0,0,[1,49776,8607],[[0,165,29,0,166,167,0,168,[1,49776,3],[[49777,2,169],[49779,2,170],[49779,2,171]]],[0,172,29,0,173,174,0,175,[1,49779,0],[]],[0,176,29,0,177,0,0,168,[1,49780,7],[[49780,2,178],[49787,2,179],[49787,2,180]]],[0,181,29,0,182,53,0,168,[1,49787,8595],[[58382,2,183]]]]]]]],[[1,184,34,0,185,0,0,0,[1,1344,7005],[[0,164,34,0,0,53,0,0,[1,1345,6170],[[0,165,29,0,166,167,0,168,[1,1346,1063],[[1347,2,186],[2409,2,187]]],[0,172,29,0,173,174,0,175,[1,2410,4],[[2414,2,188]]],[0,176,29,0,177,0,0,168,[1,2415,284],[[2415,2,178],[2699,2,179],[2699,2,180]]],[0,181,29,0,182,53,0,168,[1,2700,4815],[[7515,2,189]]]]],[0,190,29,0,191,0,0,192,[1,7516,672],[]],[0,193,34,0,194,0,0,0,[1,8188,156],[[0,195,34,0,196,197,198,0,[1,8189,60],[[0,172,29,0,173,199,0,175,[1,8189,3],[[8192,2,200]]],[9,0,0,0,0,0,0,0,[1,8193,52],[[0,201,29,0,202,97,203,204,[1,8193,49],[[8242,2,205],[8242,2,206]]],[0,207,23,0,208,203,209,0,[1,8243,0],[[8243,2,210],[8243,2,211]]],[5,212,0,0,0,0,0,0,[1,8244,0],[[0,213,23,0,214,215,74,0,[1,8244,0],[[8244,2,216]]]]],[7,0,0,0,0,0,0,0,[3,8244,1],[[0,213,23,0,214,217,74,0,[3,8244,1],[]]]]]],[10,0,0,0,0,0,0,0,[3,8245,0],[[0,213,23,0,214,217,74,0,[3,8245,0],[]]]],[0,172,29,0,173,174,0,175,[1,8246,3],[[8249,2,218]]],[8249,2,219]]],[5,198,0,0,0,0,0,0,[1,8249,94],[[0,28,29,0,30,197,0,32,[1,8250,93],[]]]],[7,0,0,0,0,0,0,0,[3,8343,0],[[0,22,23,0,24,220,0,0,[3,8343,0],[]]]]]],[0,221,34,0,0,0,0,0,[1,8344,5],[[0,51,29,0,52,0,222,54,[1,8344,3],[[8347,2,223]]],[0,224,60,0,0,222,225,0,[1,8348,0],[[8348,2,226]]],[0,213,23,0,214,227,0,0,[1,8348,0],[]]]]]],[2,228,29,0,229,0,0,168,[1,58444,692],[[59136,2,230]]]],[2,2,0,0]]],[],[],[2,2,0,0]]],[],[],[2,2,0,0]]],[],[],[2,2,0,0]];
+</script>
+<script type="text/javascript">
+window.output["strings"] = [];
+</script>
+<script type="text/javascript">
+window.output["strings"] = window.output["strings"].concat(["*","*Testsuites","*/Users/saragilbert/Code/SQA/nelson-ta/testsuites","*../../testsuites","*<p>Argument file for running tests on Omena test4 environment (test4)\x3c/p>","*BUI","*/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI","*../../testsuites/BUI","*Regression","*/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression","*../../testsuites/BUI/regression","*New Booking","*/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/new_booking.robot","*../../testsuites/BUI/regression/new_booking.robot","*<p>A test suite for verifying modify booking functionality\x3c/p>","*Create A New Booking as","*<p>A new booker opens the page and does a successful booking\x3c/p>","*smoke","*Select Hotel","*booking","*<p>Select Hotel by using a number as an argument, default Lönnrotinkatu\x3c/p>","*&quot;${environment}&quot; == &quot;test-exhibition&quot;","*Log","*BuiltIn","*<p>Logs the given message with the given level.\x3c/p>","*No hotel to be selected","*Selecting Hotel: ${hotel}","*Selecting Hotel: Lönnrotin","*Click","*Browser","*<p>Simulates mouse click on the element found by <code>selector\x3c/code>.\x3c/p>","*//div[contains(@data-nelson-btn, \"hotels\")]","*PageContent, Setter","*Wait Until Visible","*common","*<p>An easier keyword for waiting until an element is visible\x3c/p>","*//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]","*Wait For Elements State","*<p>Waits for the element found by <code>selector\x3c/code> to satisfy state option.\x3c/p>","*${element}, visible, timeout=${timeout}","*PageContent, Wait","*Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] at state visible","*//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')], hidden, timeout=3s","*Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] at state hidden","*Select Dates","*${EMPTY}","*Select Guests","*<p>Selects the number of guests for the booking, current implementation will only check the dropdown\x3c/p>","*Log To Console","*<p>Logs the given message to the console.\x3c/p>","*Click Book or Find Rooms Button","*Get Url","*<p>Returns the current URL.\x3c/p>","*${url}","*Assertion, Getter, PageContent","*${url} = <a href=\"https://test4.omenahotels.com/en/#\">https://test4.omenahotels.com/en/#\x3c/a>","*Check If String Contains","*${url}, /booking/","*${booking}","*Check If String Contains Substring","*Helpers","*${string}, ${substring}","*${contains}","*${contains} = False","*${booking} = False","*${booking} == True","*//button[contains(@class, 'booking-form-button') and contains(text(), 'Find rooms')]","*//button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]","*Select a Standard Room","*${btnExtras}","*Waited for Element with selector (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] at state visible","*Get Element States","*<p>Get the active states from the element found by <code>selector\x3c/code>.\x3c/p>","*//div[contains(text(), 'Select room')], then, bool(value &amp; visible)","*${visible}","*${visible} = False","*Run Keyword If","*<p>Runs the given keyword with the given arguments, if <code>condition\x3c/code> is true.\x3c/p>","*${visible}, Select Standard and Remove Other Room Selection","*Click Continue to Extras Button","*<p>Clicks the continue to extras button\x3c/p>","*${btnPayment}","*Waited for Element with selector (//div[contains(@view,\"extras\")]//button[contains(text(), \"Continue to payment\")])[1] at state visible","*Continue to Payment","*(//button[normalize-space()='Continue to payment'])[1]","*Fill in Contact Information","*<p>Fills in Contact information that can be given as arguments or use default values Uses a password if the environment is bui and\x3c/p>","*Create Email and Return Inbox","*<p>Creates a new email address and returns the inbox object\x3c/p>","*${inbox}","*Create new Inbox","*MailSlurp","*${inbox} = {'created_at': datetime.datetime(2023, 7, 9, 17, 40, 13, 245000, tzinfo=tzutc()),\n 'description': None,\n 'domain_id': None,\n 'email_address': 'c05cb5fd-ff85-4e42-b90c-3d4a64bc9132@mailslurp.com',\n 'ex...","*${inbox.id}","*Click and Fill","*<p>A keyword combination of Click and Fill Text since most of the form fields need a click\x3c/p>","*id=firstName, ${firstName}","*${selector}","*Fill Text","*<p>Clears and fills the given <code>txt\x3c/code> into the text field found by <code>selector\x3c/code>.\x3c/p>","*${selector}, ${text}","*Fills the text 'Mos' in the given field.","*id=lastName, ${lastName}","*Fills the text 'Def' in the given field.","*id=email, ${inbox.email_address}","*Fills the text 'c05cb5fd-ff85-4e42-b90c-3d4a64bc9132@mailslurp.com' in the given field.","*id=phoneNumber, ${phone}","*Fills the text '040123942' in the given field.","*Set Suite Variable","*<p>Makes a variable available everywhere within the scope of the current suite.\x3c/p>","*$ID, ${inbox.id}","*${ID} = c05cb5fd-ff85-4e42-b90c-3d4a64bc9132","*Get Element Count","*<p>Returns the count of elements found with <code>selector\x3c/code>.\x3c/p>","*id=password","*${passwordVisible}","*${passwordVisible} = 1","*'${env}'=='bui' and '${passwordVisible}'&gt;'0'","*id=password, ${password}","*Fills the text 'NotARealPass123!' in the given field.","*No password filled","*Accept offers and Terms","*(//div[contains(text(), 'like to receive')])[1]","*(//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]","*Select Web Bank and Nordea as Payment Method","*//div[contains(text(), \"Web bank payment\")]","*//p[contains(text(), 'Nordea')]","*(//div[contains(@view,\"payment\")]//button[contains(text(), \"Pay\")])[1]","*Complete Payment Successfully","*Simulate Success or Failure","*success","*//a[contains(text(), 'Simulate ${which} to merchant')], visible, timeout=${timeout}","*Waited for Element with selector //a[contains(text(), 'Simulate success to merchant')] at state visible","*//a[contains(text(), 'Simulate ${which} to merchant')]","*Verify Payment was successful","*//p[contains(text(), 'Payment was successful')]","*Waited for Element with selector //p[contains(text(), 'Payment was successful')] at state visible","*Close Dialog","*//button[contains(text(), \"Ok\")]","*Waited for Element with selector //button[contains(text(), \"Ok\")] at state visible","*Save Booking Number 1","*Get Text","*<p>Returns text attribute of the element found by <code>selector\x3c/code>.\x3c/p>","*//p[contains(text(),'Booking number')]","*${str}","*Text: 'Booking number: 800055150'","*${str} = Booking number: 800055150","*${bookingNumber}","*Remove String","*String","*<p>Removes all <code>removables\x3c/code> from the given <code>string\x3c/code>.\x3c/p>","*${str}, Booking code${SPACE}","*Strip String","*<p>Remove leading and/or trailing whitespaces from the given string.\x3c/p>","*Confirm Email and Open Link","*<p>A new booker receives an email with a link to modify the booking\x3c/p>","*Get Variable Value","*<p>Returns variable value or <code>default\x3c/code> if the variable does not exist.\x3c/p>","*$ID","*${id}","*${id} = c05cb5fd-ff85-4e42-b90c-3d4a64bc9132","*Wait for Latest Booking Confirmation and Extract Link","*${modify_link}","eNrdj0EKwjAQRa9SxCyT1iZtrFhFEC/gASRpJzbYTMRERMS7m7rxDsLwYD5vBv785XxvzfM0Wry8szZbq2y4gWlnQ4zXsMrzCCEijMEju6ozsEnMtxPbr0L4jpSHNJMomHeAavAxXbDOu5QDJmjvLxbPX5MnOoXpGf3FtZQ1l1LRgi8WVEgjqGqamspGV7IvOmN6TfgB4XGEEKxHwvfxdgdS1uCUHdPaFVWnK9NTY5YVFSBKqptitvmXJutcbRhjH1hSil4=","*Open New Browser To URL","*New Browser","*<p>Create a new playwright Browser with specified options.\x3c/p>","*${browser}, ${headless}, timeout=${timeout}","*BrowserControl, Setter","*Switching browser to browser=d825d158-a299-4abf-bebe-acf52fa304ab","*Successfully changed active browser","*Reusing existing browser with id: browser=d825d158-a299-4abf-bebe-acf52fa304ab","*Set Browser Timeout","*<p>Sets the timeout used by most input and getter keywords.\x3c/p>","*${timeout}","*Config, Setter","*New Context","*<p>Create a new BrowserContext with specified options.\x3c/p>","eNpVjk0LwjAMhu/+irGzgnpRPPoBXgRx3kRG1qZbpTQlrQ4Z+++2TlCPed68ydONsiwHIdCFLbXWEEifr7LAdxynqHo68H5THCNUYPxAFbFAuSFDnLZzSxbzd9JoiSe1Zmo98l9H15YY9+fzsdgxD8VveoMHFIK1CzsLlUH5K0FKGR0//BYY5T06HChosoPDxDEqZLTiI/PQ2DriEOMuzkkPdd2keTGfjgfUahmaSGbz5TSS/t2UGG8JCChLR74ErpPu5TrqXx5QXaY=","*Successfully created context. ","*{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}","*New Page","*<p>Open a new Page.\x3c/p>","eNrtUFtqwzAQvIoI+FO2bElWHJKUQslfv3ICPVaxGlkylkxpT185LZTeobAM7OzMvq6r1pCSXb3/QC647KR3n2BQgHc0yxugqN5AZySDQXGGUErr4g/oKNG4gD3txpzndGiaDCkH8CmGevPV3oV787Th6SGp6HPVXUpsQlbHCYIcYy6OWsep8BAKqBjvLtweSlpwkqE0w790L0RPhZCY0LbFTFiG5TD0WAyKC0O0tUZV9FLWv5a7XAwVfcnLClXXwySdL6kmXCtuDbZ2zzED1mE1EI2pYbJnSg8t7SpGNnXy6zJ/79fraKC494QQzltOCuXSK0wKljS6+WfO7vz/kD8POTby/AXEMMSm","*Open Browser to Landing Page","*<p>A general startup keyword for opening a browser to the landing page.\x3c/p>","*{\"browser\": \"firefox\", \"headless\": false, \"devtools\": false, \"handleSIGHUP\": true, \"handleSIGINT\": true, \"handleSIGTERM\": true, \"slowMo\": 0.0, \"timeout\": 90000.0, \"deprecated_pos_args\": [], \"tracesDir\": \"/Users/saragilbert/Code/SQA/nelson-ta/reports/test4/browser/traces/397a1dc0-ec45-4493-892f-918dd3daa63f\"}","*Successfully created browser with options: {\"browser\":\"firefox\",\"headless\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":90000,\"deprecated_pos_args\":[],\"tracesDir\":\"/Users/saragilbert/Code/SQA/nelson-ta/reports/test4/browser/traces/397a1dc0-ec45-4493-892f-918dd3daa63f\"}","*No context open.","*Successfully initialized new page object and opened url: <a href=\"https://test4.omenahotels.com/en\">https://test4.omenahotels.com/en\x3c/a>","*Wait Until Network Is Idle","*<p>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.\x3c/p>","*HTTP, Wait","*Allow Cookies","*<p>Allow Cookies/Toggle Cookie allowance\x3c/p>","*Is Element Found","*<p>A keyword that has a very complex way of figuring out whether an element is found or not because I had trouble with the built-in keywords Can be solved differently if you have a better idea\x3c/p>","*id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll","*${cookieModalVisible}","*10s","*Set timeout to: 10000","*Get Elements","*<p>Returns a reference to Playwright <a href=\"https://playwright.dev/docs/api/class-locator\">Locator\x3c/a> for all matched elements by <code>selector\x3c/code>.\x3c/p>","*${els}","*Getter, PageContent","*Found 1 Locators successfully.","*${els} = ['element=beb6d2a2-d341-4cf2-a21d-74295cd3fdbd']","*Get Length","*<p>Returns and logs the length of the given item as an integer.\x3c/p>","*${count}","*Length is 1","*${count} = 1","*${count} &gt; 0","*Set Variable","*<p>Returns the given values which can then be assigned to a variables.\x3c/p>","*True","*${visible} = True","*False","*Set timeout to: 90000","*${cookieModalVisible} = True","*No Cookie Modal Visible","*Set Environment","*${currentUrl}","*${currentUrl} = <a href=\"https://test4.omenahotels.com/en/\">https://test4.omenahotels.com/en/\x3c/a>","*Get Environment From Url","*${env}","*${env} = test-omena","*${environment}, ${env}","*Close Browser","*<p>Closes the current browser.\x3c/p>","*Closed browser"]);
+</script>
+<script type="text/javascript">
+window.output["stats"] = [[{"elapsed":"00:00:50","fail":0,"label":"All Tests","pass":2,"skip":0}],[{"elapsed":"00:00:50","fail":0,"label":"smoke","pass":2,"skip":0}],[{"elapsed":"00:00:59","fail":0,"id":"s1","label":"Testsuites","name":"Testsuites","pass":2,"skip":0},{"elapsed":"00:00:59","fail":0,"id":"s1-s1","label":"Testsuites.BUI","name":"BUI","pass":2,"skip":0},{"elapsed":"00:00:59","fail":0,"id":"s1-s1-s1","label":"Testsuites.BUI.Regression","name":"Regression","pass":2,"skip":0},{"elapsed":"00:00:59","fail":0,"id":"s1-s1-s1-s1","label":"Testsuites.BUI.Regression.New Booking","name":"New Booking","pass":2,"skip":0}]];
+</script>
+<script type="text/javascript">
+window.output["errors"] = [];
+</script>
+<script type="text/javascript">
+window.output["baseMillis"] = 1688924394928;
+</script>
+<script type="text/javascript">
+window.output["generated"] = 59170;
+</script>
+<script type="text/javascript">
+window.output["expand_keywords"] = null;
+</script>
+<script type="text/javascript">
+window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
+</script>
+<title></title>
+</head>
+<body>
+<div id="javascript-disabled">
+  <h1>Opening Robot Framework log failed</h1>
+  <ul>
+    <li>Verify that you have <b>JavaScript enabled</b> in your browser.</li>
+    <li>Make sure you are using a <b>modern enough browser</b>. If using Internet Explorer, version 11 is required.</li>
+    <li>Check are there messages in your browser's <b>JavaScript error log</b>. Please report the problem if you suspect you have encountered a bug.</li>
+  </ul>
+</div>
+<script type="text/javascript">removeJavaScriptDisabledWarning();</script>
+
+<div id="header"></div>
+<div id="statistics-container"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    try {
+        var topsuite = window.testdata.suite();
+    } catch (error) {
+        addJavaScriptDisabledWarning(error);
+        return;
+    }
+    initLayout(topsuite.name, 'Log');
+    addStatistics();
+    addErrors();
+    addExecutionLog(topsuite);
+    addLogLevelSelector(window.settings['minLevel'], window.settings['defaultLevel']);
+    if (window.location.hash) {
+        makeElementVisible(window.location.hash.substring(1));
+    } else {
+        expandSuite(topsuite);
+    }
+    setTimeout(function () { loadAndExpandElementIds(window.output['expand_keywords']); }, 100);
+});
+
+function addLogLevelSelector(minLevel, defaultLevel) {
+    var controller = LogLevelController(minLevel, defaultLevel);
+    if (controller.showLogLevelSelector()) {
+        var selector = $.tmpl('logLevelSelectorTemplate', controller);
+        selector.find('select').val(controller.defaultLogLevel());
+        selector.appendTo($('#top-right-header'));
+        $('#report-or-log-link').find('a').css({'border-bottom-left-radius': '0'});
+        setMessageVisibility(controller.defaultLogLevel());
+    }
+}
+
+function addErrors() {
+    var errors = window.testdata.errorIterator();
+    if (errors.hasNext()) {
+        $.tmpl('errorHeaderTemplate').appendTo($('body'));
+        drawErrorsRecursively(errors, $('#errors'));
+    }
+}
+
+function drawErrorsRecursively(errors, target) {
+    var elements = popFromIterator(errors, 10);
+    $.tmpl('errorTemplate', elements).appendTo(target);
+    if (errors.hasNext())
+        setTimeout(function () { drawErrorsRecursively(errors, target); }, 0);
+    else {
+        // Errors may have moved scroll position. Resetting location re-scrolls.
+        if (window.location.hash)
+            window.location.replace(window.location.hash);
+        highlightLinkTarget();
+    }
+}
+
+function highlightLinkTarget() {
+    if (window.location.hash) {
+        var target = $(window.location.hash);
+        highlight(target);
+    }
+}
+
+function highlight(element, color) {
+    if (color === undefined)
+        color = 242;
+    if (color < 255) {
+        element.css({'background-color': 'rgb('+color+','+color+','+color+')'});
+        setTimeout(function () { highlight(element, color+1); }, 300);
+    } else {
+        element.css({'background-color': ''});
+    }
+}
+
+function popFromIterator(iterator, upTo) {
+    var result = [];
+    while (iterator.hasNext() > 0 && result.length < upTo)
+        result.push(iterator.next());
+    return result;
+}
+
+function makeElementVisible(id) {
+    window.testdata.ensureLoaded(id, function (ids) {
+        util.map(ids, expandElementWithId);
+        if (ids.length) {
+            expandFailed(window.testdata.findLoaded(util.last(ids)));
+            window.location.hash = '';
+            window.location.hash = id;
+            highlightLinkTarget();
+        }
+    });
+}
+
+function addExecutionLog(main) {
+    $('body').append($(testOrTask('<h2>{Test} Execution Log</h2>')),
+                     $.tmpl('suiteTemplate', main));
+}
+</script>
+
+<script type="text/x-jquery-tmpl" id="totalStatisticsRowTemplate">
+  <tr class="row-${$item.index}">
+    <td class="stats-col-name">
+      <div class="stat-name">
+        <span>{{html label}}</span>
+      </div>
+    </td>
+    {{tmpl($data) 'statColumnsTemplate'}}
+  </tr>
+</script>
+
+<script type="text/x-jquery-tmpl" id="tagStatisticsRowTemplate">
+  <tr class="row-${$item.index}">
+    <td class="stats-col-name" title="{{html doc}}">
+      <div class="stat-name">
+        <span>{{html label}}</span>
+        {{if info}}(${info}){{/if}}
+      </div>
+      <div class="tag-links">
+        {{each links}}
+        <span>[<a href="{{html $value.url}}" title="{{html $value.url}}">{{html $value.title}}</a>]</span>
+        {{/each}}
+      </div>
+    </td>
+    {{tmpl($data) 'statColumnsTemplate'}}
+  </tr>
+</script>
+
+<script type="text/x-jquery-tmpl" id="suiteStatisticsRowTemplate">
+  <tr onclick="makeElementVisible('${id}')" class="row-${$item.index}">
+    <td class="stats-col-name" title="{{html label}}">
+      <div class="stat-name">
+        <a href="#${id}"><span class="parent-name">{{html formatParentName}}</span>{{html name}}</a>
+      </div>
+    </td>
+    {{tmpl($data) 'statColumnsTemplate'}}
+  </tr>
+</script>
+
+<script type="text/x-jquery-tmpl" id="errorHeaderTemplate">
+  <h2>{{= testOrTask('{Test}')}} Execution Errors</h2>
+  <table id="errors"></table>
+</script>
+
+<script type="text/x-jquery-tmpl" id="errorTemplate">
+  <tr id="${id}" class="message-row">
+    <td class="error-time">
+      {{if link}}
+      <a onclick="makeElementVisible('${link}')" href="#${link}" title="Link to details">${date} ${time}</a>
+      {{else}}
+      ${date} ${time}
+      {{/if}}
+    </td>
+    <td class="${level.toLowerCase()} level"><span class="label ${level.toLowerCase()}">${level}</span></td>
+    <td class="message">{{html text}}</td>
+    <td class="select-message" onclick="javascript:selectMessage('${id}')" title="Select message text">
+      <div></div>
+    </td>
+  </tr>
+</script>
+
+<script type="text/x-jquery-tmpl" id="suiteTemplate">
+  <div id="${id}" class="suite">
+    <div class="element-header closed" onclick="toggleSuite('${id}')">
+      <div class="element-header-left" title="SUITE  {{html name}}  [${status}]">
+        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
+        <span class="label ${status.toLowerCase()}">SUITE</span>
+        <span class="name">{{html name}}</span>
+      </div>
+      <div class="element-header-right" onclick="stopPropagation(event)" title="">
+        <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
+        <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
+        <a class="link" title="Link to this suite" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+      </div>
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+    </div>
+    <div class="children">
+      <table class="metadata">
+        <tr>
+          <th>Full Name:</th>
+          <td>{{html fullName}}</td>
+        </tr>
+        {{if doc()}}
+        <tr>
+          <th>Documentation:</th>
+          <td class="doc">{{html doc()}}</td>
+        </tr>
+        {{/if}}
+        {{each metadata}}
+        <tr>
+          <th>{{html $value[0]}}:</th>
+          <td class="doc">{{html $value[1]}}</td>
+        </tr>
+        {{/each}}
+        {{if source}}
+        <tr>
+          <th>Source:</th>
+          {{if relativeSource}}
+          <td><a href="${relativeSource}">{{html source}}</a></td>
+          {{else}}
+          <td>{{html source}}</td>
+          {{/if}}
+        </tr>
+        {{/if}}
+        <tr>
+          <th>Start / End / Elapsed:</th>
+          <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
+        </tr>
+        <tr>
+          <th>Status:</th>
+          <td>{{tmpl($data) 'suiteStatusMessageTemplate'}}</td>
+        </tr>
+        {{if message()}}
+        <tr>
+          <th>Message:</th>
+          <td class="message">{{html message()}}</td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-jquery-tmpl" id="testTemplate">
+  <div id="${id}" class="test">
+    <div class="element-header closed" onclick="toggleTest('${id}')">
+      <div class="element-header-left" title="{{= testOrTask('{TEST}')}}  {{html name}}  [${status}]">
+        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
+        <span class="label ${status.toLowerCase()}">{{= testOrTask('{TEST}')}}</span>
+        <span class="name">{{html name}}</span>
+      </div>
+      <div class="element-header-right" onclick="stopPropagation(event)" title="">
+        <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
+        <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
+        <a class="link" title="Link to this {{= testOrTask('{test}')}}" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+      </div>
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+    </div>
+    <div class="children">
+      <table class="metadata">
+        <tr>
+          <th>Full Name:</th>
+          <td>{{html fullName}}</td>
+        </tr>
+        {{if doc()}}
+        <tr>
+          <th>Documentation:</th>
+          <td class="doc">{{html doc()}}</td>
+        </tr>
+        {{/if}}
+        {{if tags.length}}
+        <tr>
+          <th>Tags:</th>
+          <td>{{html tags.join(', ')}}</td>
+        </tr>
+        {{/if}}
+        {{if timeout}}
+        <tr>
+          <th>Timeout:</th>
+          <td>{{html timeout}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+          <th>Start / End / Elapsed:</th>
+          <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
+        </tr>
+        <tr>
+          <th>Status:</th>
+          <td><span class="label ${status.toLowerCase()}">${status}</span></td>
+        </tr>
+        {{if message()}}
+        <tr>
+          <th>Message:</th>
+          <td class="message">{{html message()}}</td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-jquery-tmpl" id="keywordTemplate">
+  <div id="${id}" class="keyword">
+    <div class="element-header closed" onclick="toggleKeyword('${id}')">
+      <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
+        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
+        <span class="label ${status.toLowerCase()}">${type}</span>
+        <span>{{html assign}}</span>
+        <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
+        <span class="arg">{{html arguments}}</span>
+      </div>
+      <div class="element-header-right" onclick="stopPropagation(event)">
+        <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
+        <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
+        <a class="link" title="Link to this item" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+      </div>
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+    </div>
+    <div class="children">
+      <table class="metadata keyword-metadata">
+        {{if doc()}}
+        <tr>
+          <th>Documentation:</th>
+          <td class="doc">{{html doc()}}</td>
+        </tr>
+        {{/if}}
+        {{if tags}}
+        <tr>
+          <th>Tags:</th>
+          <td>{{html tags}}</td>
+        </tr>
+        {{/if}}
+        {{if timeout}}
+        <tr>
+          <th>Timeout:</th>
+          <td>{{html timeout}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+          <th>Start / End / Elapsed:</th>
+          <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-jquery-tmpl" id="messageTemplate">
+  <table id="${id}" class="messages ${level.toLowerCase()}-message">
+    <tr class="message-row">
+      <td class="time">${time}</td>
+      <td class="${level.toLowerCase()} level"><span class="label ${level.toLowerCase()}">${level}</span></td>
+      <td class="message">{{html text}}</td>
+      <td class="select-message" onclick="javascript:selectMessage('${id}')" title="Select message text">
+        <div></div>
+      </td>
+    </tr>
+  </table>
+</script>
+
+<script type="text/x-jquery-tmpl" id="logLevelSelectorTemplate">
+  <div id="log-level-selector">
+  Log level:
+    <select onchange="logLevelSelected(this.options[selectedIndex].value)">
+      <option value="2">INFO</option>
+      <option value="1">DEBUG</option>
+      {{if showTrace()}}<option value="0">TRACE</option>{{/if}}
+    </select>
+  </div>
+</script>
+
+</body>
+</html>

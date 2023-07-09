@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230709 10:00:30.874" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.16 on darwin)" generated="20230709 20:13:24.414" rpa="false" schemaversion="3">
 <suite id="s1" name="Nelson-Ta" source="/Users/saragilbert/Code/SQA/nelson-ta">
 <suite id="s1-s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
 <suite id="s1-s1-s1" name="BUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI">
-<suite id="s1-s1-s1-s1" name="Feature" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature">
-<suite id="s1-s1-s1-s1-s1" name="Online Check In" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in">
-<suite id="s1-s1-s1-s1-s1-s1" name="BUI2-559" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-559.robot">
-<test id="s1-s1-s1-s1-s1-s1-t1" name="Debug" line="11">
+<suite id="s1-s1-s1-s1" name="Regression" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression">
+<suite id="s1-s1-s1-s1-s1" name="New Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/new_booking.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
 <kw name="Open New Browser To URL" library="common">
-<arg>https://test4.omenahotels.com/en/booking/#/confirmation/c2cd5fdd-fbf9-47cd-8b6e-b0e5e232821a?result=success&amp;email=2c9f8958-7ac5-4084-abd1-e39c9bedba36%40mailslurp.com</arg>
+<arg>${url}</arg>
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
 <arg>${headless}</arg>
@@ -16,23 +16,23 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230709 10:00:47.436" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/ed4dad5c-6b32-49ef-9317-23afe208a96a"}</msg>
-<msg timestamp="20230709 10:00:48.709" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/ed4dad5c-6b32-49ef-9317-23afe208a96a"}</msg>
-<status status="PASS" starttime="20230709 10:00:47.431" endtime="20230709 10:00:48.710"/>
+<msg timestamp="20230709 20:13:40.567" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/8c2f9f04-e393-46ea-a4d6-294d9a3a70b0"}</msg>
+<msg timestamp="20230709 20:13:41.862" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/results/browser/traces/8c2f9f04-e393-46ea-a4d6-294d9a3a70b0"}</msg>
+<status status="PASS" starttime="20230709 20:13:40.562" endtime="20230709 20:13:41.862"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230709 10:00:48.722" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230709 10:00:48.713" endtime="20230709 10:00:48.723"/>
+<msg timestamp="20230709 20:13:41.873" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230709 20:13:41.864" endtime="20230709 20:13:41.875"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230709 10:00:48.727" level="INFO">{
+<msg timestamp="20230709 20:13:41.879" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -42,291 +42,912 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230709 10:00:48.888" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230709 10:00:48.888" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230709 10:00:48.725" endtime="20230709 10:00:48.889"/>
+<msg timestamp="20230709 20:13:42.034" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230709 20:13:42.034" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230709 20:13:41.877" endtime="20230709 20:13:42.035"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230709 10:00:51.608" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en/booking/#/confirmation/c2cd5fdd-fbf9-47cd-8b6e-b0e5e232821a?result=success&amp;email=2c9f8958-7ac5-4084-abd1-e39c9bedba36%40mailslurp.com</msg>
-<status status="PASS" starttime="20230709 10:00:48.890" endtime="20230709 10:00:51.610"/>
+<msg timestamp="20230709 20:13:45.490" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
+<status status="PASS" starttime="20230709 20:13:42.037" endtime="20230709 20:13:45.491"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:47.426" endtime="20230709 10:00:51.612"/>
+<status status="PASS" starttime="20230709 20:13:40.559" endtime="20230709 20:13:45.495"/>
 </kw>
-<kw name="Uninvite guest" library="booking">
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230709 20:13:45.498" endtime="20230709 20:13:46.675"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<kw name="Is Element Found" library="common">
+<var>${cookieModalVisible}</var>
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<doc>A keyword that has a very complex way of figuring out whether an
+element is found or not because I had trouble with the built-in keywords
+Can be solved differently if you have a better idea</doc>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230709 20:13:46.687" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" starttime="20230709 20:13:46.680" endtime="20230709 20:13:46.688"/>
+</kw>
+<try>
+<branch type="TRY">
 <kw name="Get Elements" library="Browser">
-<var>${elements}</var>
-<arg>//*[contains(@class, "fa-user")]</arg>
+<var>${els}</var>
+<arg>${selector}</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<msg timestamp="20230709 10:00:53.079" level="INFO">Found 3 Locators successfully.</msg>
-<msg timestamp="20230709 10:00:53.081" level="INFO">${elements} = ['element=2544b021-69e4-418e-a7e8-7574ec38c0cd', 'element=787d05c4-a757-4570-b326-7a5561ec4341', 'element=97c185b7-f086-484f-ae5c-942706e684e6']</msg>
-<status status="PASS" starttime="20230709 10:00:51.618" endtime="20230709 10:00:53.081"/>
+<msg timestamp="20230709 20:13:46.745" level="INFO">Found 1 Locators successfully.</msg>
+<msg timestamp="20230709 20:13:46.746" level="INFO">${els} = ['element=c691bdef-2ee9-403b-8b26-14ac089b0725']</msg>
+<status status="PASS" starttime="20230709 20:13:46.693" endtime="20230709 20:13:46.746"/>
 </kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${count}</var>
+<arg>${els}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20230709 20:13:46.749" level="INFO">Length is 1</msg>
+<msg timestamp="20230709 20:13:46.750" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20230709 20:13:46.747" endtime="20230709 20:13:46.750"/>
+</kw>
+<if>
+<branch type="IF" condition="${count} &gt; 0">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230709 20:13:46.759" level="INFO">${visible} = True</msg>
+<status status="PASS" starttime="20230709 20:13:46.757" endtime="20230709 20:13:46.759"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:46.756" endtime="20230709 20:13:46.760"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230709 20:13:46.762" endtime="20230709 20:13:46.763"/>
+</kw>
+<status status="NOT RUN" starttime="20230709 20:13:46.761" endtime="20230709 20:13:46.764"/>
+</branch>
+<status status="PASS" starttime="20230709 20:13:46.751" endtime="20230709 20:13:46.764"/>
+</if>
+<status status="PASS" starttime="20230709 20:13:46.691" endtime="20230709 20:13:46.765"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230709 20:13:46.766" endtime="20230709 20:13:46.767"/>
+</kw>
+<status status="NOT RUN" starttime="20230709 20:13:46.765" endtime="20230709 20:13:46.768"/>
+</branch>
+<status status="PASS" starttime="20230709 20:13:46.689" endtime="20230709 20:13:46.768"/>
+</try>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230709 20:13:46.776" level="INFO">Set timeout to: 30000</msg>
+<status status="PASS" starttime="20230709 20:13:46.769" endtime="20230709 20:13:46.776"/>
+</kw>
+<msg timestamp="20230709 20:13:46.778" level="INFO">${cookieModalVisible} = True</msg>
+<status status="PASS" starttime="20230709 20:13:46.678" endtime="20230709 20:13:46.778"/>
+</kw>
+<if>
+<branch type="IF" condition="${cookieModalVisible}">
 <kw name="Click" library="Browser">
-<arg>(//*[contains(@class, "fa-user")])[2]</arg>
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230709 10:00:53.084" endtime="20230709 10:00:55.837"/>
+<status status="PASS" starttime="20230709 20:13:46.781" endtime="20230709 20:13:46.884"/>
 </kw>
-<kw name="Click Uninvite button" library="booking">
+<status status="PASS" starttime="20230709 20:13:46.780" endtime="20230709 20:13:46.885"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>No Cookie Modal Visible</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230709 20:13:46.887" endtime="20230709 20:13:46.888"/>
+</kw>
+<status status="NOT RUN" starttime="20230709 20:13:46.886" endtime="20230709 20:13:46.889"/>
+</branch>
+<status status="PASS" starttime="20230709 20:13:46.779" endtime="20230709 20:13:46.890"/>
+</if>
+<status status="PASS" starttime="20230709 20:13:46.676" endtime="20230709 20:13:46.891"/>
+</kw>
+<kw name="Set Environment" library="common">
+<kw name="Get Url" library="Browser">
+<var>${currentUrl}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<msg timestamp="20230709 20:13:46.901" level="INFO">${currentUrl} = https://test4.omenahotels.com/en/</msg>
+<status status="PASS" starttime="20230709 20:13:46.895" endtime="20230709 20:13:46.901"/>
+</kw>
+<kw name="Get Environment From Url" library="Helpers">
+<var>${env}</var>
+<arg>${currentUrl}</arg>
+<msg timestamp="20230709 20:13:46.905" level="INFO">${env} = test-omena</msg>
+<status status="PASS" starttime="20230709 20:13:46.903" endtime="20230709 20:13:46.905"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${environment}</arg>
+<arg>${env}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20230709 20:13:46.906" endtime="20230709 20:13:46.908"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:46.892" endtime="20230709 20:13:46.910"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:40.554" endtime="20230709 20:13:46.911"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Create A New Booking as" line="13">
+<kw name="Select Hotel" library="booking">
+<doc>Select Hotel by using a number as an argument, default Lönnrotinkatu</doc>
+<if>
+<branch type="IF" condition="&quot;${environment}&quot; == &quot;test-exhibition&quot;">
+<kw name="Log" library="BuiltIn">
+<arg>No hotel to be selected</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230709 20:13:46.935" endtime="20230709 20:13:46.936"/>
+</kw>
+<status status="NOT RUN" starttime="20230709 20:13:46.933" endtime="20230709 20:13:46.937"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Selecting Hotel: ${hotel}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230709 20:13:46.941" level="INFO">Selecting Hotel: Lönnrotin</msg>
+<status status="PASS" starttime="20230709 20:13:46.939" endtime="20230709 20:13:46.941"/>
+</kw>
 <kw name="Click" library="Browser">
-<arg>(//form/*/button)[2]</arg>
+<arg>//div[contains(@data-nelson-btn, "hotels")]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230709 10:00:55.842" endtime="20230709 10:00:56.724"/>
+<status status="PASS" starttime="20230709 20:13:46.944" endtime="20230709 20:13:47.095"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:55.839" endtime="20230709 10:00:56.726"/>
-</kw>
-<status status="PASS" starttime="20230709 10:00:51.615" endtime="20230709 10:00:56.728"/>
-</kw>
-<kw name="Verify Uninvite warning popup" library="booking">
-<kw name="Verify Element Presence" library="booking">
-<arg>//p[text()='Uninvite']</arg>
-<arg>${True}</arg>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${check}</var>
-<arg>Wait For Elements State</arg>
-<arg>${path}</arg>
-<arg>visible</arg>
-<arg>timeout=6</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Visible" library="common">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
 <kw name="Wait For Elements State" library="Browser">
-<arg>${path}</arg>
+<arg>${element}</arg>
 <arg>visible</arg>
-<arg>timeout=6</arg>
+<arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230709 10:00:56.767" level="INFO">Waited for Element with selector //p[text()='Uninvite'] at state visible</msg>
-<status status="PASS" starttime="20230709 10:00:56.741" endtime="20230709 10:00:56.769"/>
+<msg timestamp="20230709 20:13:47.120" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] at state visible</msg>
+<status status="PASS" starttime="20230709 20:13:47.102" endtime="20230709 20:13:47.121"/>
 </kw>
-<msg timestamp="20230709 10:00:56.770" level="INFO">${check} = True</msg>
-<status status="PASS" starttime="20230709 10:00:56.737" endtime="20230709 10:00:56.770"/>
+<status status="PASS" starttime="20230709 20:13:47.097" endtime="20230709 20:13:47.122"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${path}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230709 10:00:56.773" endtime="20230709 10:00:56.776"/>
+<kw name="Click" library="Browser">
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:13:47.123" endtime="20230709 20:13:47.228"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${true}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${True}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${check}==${True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.784" endtime="20230709 10:00:56.788"/>
-</kw>
-<status status="PASS" starttime="20230709 10:00:56.779" endtime="20230709 10:00:56.790"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${false}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${False}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.793" endtime="20230709 10:00:56.796"/>
-</kw>
-<status status="PASS" starttime="20230709 10:00:56.733" endtime="20230709 10:00:56.798"/>
-</kw>
-<kw name="Verify Element Presence" library="booking">
-<arg>//p[text()='Are you sure you want to uninvite']</arg>
-<arg>${True}</arg>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${check}</var>
-<arg>Wait For Elements State</arg>
-<arg>${path}</arg>
-<arg>visible</arg>
-<arg>timeout=6</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
 <kw name="Wait For Elements State" library="Browser">
-<arg>${path}</arg>
-<arg>visible</arg>
-<arg>timeout=6</arg>
+<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
+<arg>hidden</arg>
+<arg>timeout=3s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230709 10:00:56.822" level="INFO">Waited for Element with selector //p[text()='Are you sure you want to uninvite'] at state visible</msg>
-<status status="PASS" starttime="20230709 10:00:56.807" endtime="20230709 10:00:56.823"/>
+<msg timestamp="20230709 20:13:47.239" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Lönnrotin')] at state hidden</msg>
+<status status="PASS" starttime="20230709 20:13:47.229" endtime="20230709 20:13:47.240"/>
 </kw>
-<msg timestamp="20230709 10:00:56.824" level="INFO">${check} = True</msg>
-<status status="PASS" starttime="20230709 10:00:56.804" endtime="20230709 10:00:56.824"/>
+<status status="PASS" starttime="20230709 20:13:46.937" endtime="20230709 20:13:47.240"/>
+</branch>
+<status status="PASS" starttime="20230709 20:13:46.933" endtime="20230709 20:13:47.241"/>
+</if>
+<status status="PASS" starttime="20230709 20:13:46.930" endtime="20230709 20:13:47.242"/>
 </kw>
+<kw name="Select Dates" library="booking">
+<kw name="Log" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230709 20:13:47.251" level="INFO"/>
+<status status="PASS" starttime="20230709 20:13:47.247" endtime="20230709 20:13:47.251"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:47.244" endtime="20230709 20:13:47.252"/>
+</kw>
+<kw name="Select Guests" library="booking">
+<doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${path}</arg>
+<arg>${EMPTY}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230709 10:00:56.826" endtime="20230709 10:00:56.829"/>
+<status status="PASS" starttime="20230709 20:13:47.256" endtime="20230709 20:13:47.262"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${true}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${True}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${check}==${True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.835" endtime="20230709 10:00:56.843"/>
+<status status="PASS" starttime="20230709 20:13:47.254" endtime="20230709 20:13:47.264"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:56.831" endtime="20230709 10:00:56.845"/>
+<kw name="Click Book or Find Rooms Button" library="booking">
+<kw name="Get Url" library="Browser">
+<var>${url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<msg timestamp="20230709 20:13:47.280" level="INFO">${url} = https://test4.omenahotels.com/en/#</msg>
+<status status="PASS" starttime="20230709 20:13:47.269" endtime="20230709 20:13:47.280"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${false}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${False}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.846" endtime="20230709 10:00:56.849"/>
+<kw name="Check If String Contains" library="common">
+<var>${booking}</var>
+<arg>${url}</arg>
+<arg>/booking/</arg>
+<kw name="Check If String Contains Substring" library="Helpers">
+<var>${contains}</var>
+<arg>${string}</arg>
+<arg>${substring}</arg>
+<msg timestamp="20230709 20:13:47.293" level="INFO">${contains} = False</msg>
+<status status="PASS" starttime="20230709 20:13:47.287" endtime="20230709 20:13:47.294"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:56.800" endtime="20230709 10:00:56.851"/>
+<msg timestamp="20230709 20:13:47.297" level="INFO">${booking} = False</msg>
+<status status="PASS" starttime="20230709 20:13:47.282" endtime="20230709 20:13:47.297"/>
 </kw>
-<kw name="Verify Element Presence" library="booking">
-<arg>(//button[@type='button'][normalize-space()='Cancel'])[2]</arg>
-<arg>${True}</arg>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${check}</var>
-<arg>Wait For Elements State</arg>
-<arg>${path}</arg>
-<arg>visible</arg>
-<arg>timeout=6</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<if>
+<branch type="IF" condition="${booking} == True">
+<kw name="Click" library="Browser">
+<arg>//button[contains(@class, 'booking-form-button') and contains(text(), 'Find rooms')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230709 20:13:47.302" endtime="20230709 20:13:47.303"/>
+</kw>
+<status status="NOT RUN" starttime="20230709 20:13:47.300" endtime="20230709 20:13:47.304"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" library="Browser">
+<arg>//button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:13:47.307" endtime="20230709 20:13:47.695"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:47.305" endtime="20230709 20:13:47.696"/>
+</branch>
+<status status="PASS" starttime="20230709 20:13:47.299" endtime="20230709 20:13:47.696"/>
+</if>
+<status status="PASS" starttime="20230709 20:13:47.266" endtime="20230709 20:13:47.697"/>
+</kw>
+<kw name="Select a Standard Room" library="booking">
+<kw name="Wait Until Visible" library="common">
+<arg>${btnExtras}</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
 <kw name="Wait For Elements State" library="Browser">
-<arg>${path}</arg>
+<arg>${element}</arg>
 <arg>visible</arg>
-<arg>timeout=6</arg>
+<arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230709 10:00:56.875" level="INFO">Waited for Element with selector (//button[@type='button'][normalize-space()='Cancel'])[2] at state visible</msg>
-<status status="PASS" starttime="20230709 10:00:56.861" endtime="20230709 10:00:56.875"/>
+<msg timestamp="20230709 20:13:49.848" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
+<status status="PASS" starttime="20230709 20:13:47.705" endtime="20230709 20:13:49.849"/>
 </kw>
-<msg timestamp="20230709 10:00:56.876" level="INFO">${check} = True</msg>
-<status status="PASS" starttime="20230709 10:00:56.857" endtime="20230709 10:00:56.877"/>
+<status status="PASS" starttime="20230709 20:13:47.701" endtime="20230709 20:13:49.850"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${path}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230709 10:00:56.878" endtime="20230709 10:00:56.880"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${true}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${True}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${check}==${True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.885" endtime="20230709 10:00:56.887"/>
-</kw>
-<status status="PASS" starttime="20230709 10:00:56.881" endtime="20230709 10:00:56.888"/>
+<kw name="Get Element States" library="Browser">
+<var>${visible}</var>
+<arg>//div[contains(text(), 'Select room')]</arg>
+<arg>then</arg>
+<arg>bool(value &amp; visible)</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Get the active states from the element found by ``selector``.</doc>
+<msg timestamp="20230709 20:13:50.129" level="INFO">${visible} = False</msg>
+<status status="PASS" starttime="20230709 20:13:49.851" endtime="20230709 20:13:50.130"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${false}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${False}</arg>
+<arg>${visible}</arg>
+<arg>Select Standard and Remove Other Room Selection</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.889" endtime="20230709 10:00:56.894"/>
+<status status="PASS" starttime="20230709 20:13:50.134" endtime="20230709 20:13:50.154"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:56.852" endtime="20230709 10:00:56.895"/>
+<status status="PASS" starttime="20230709 20:13:47.699" endtime="20230709 20:13:50.158"/>
 </kw>
-<kw name="Verify Element Presence" library="booking">
-<arg>(//button[@type='button'][normalize-space()='Uninvite'])[2]</arg>
-<arg>${True}</arg>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${check}</var>
-<arg>Wait For Elements State</arg>
-<arg>${path}</arg>
-<arg>visible</arg>
-<arg>timeout=6</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Click Continue to Extras Button" library="booking">
+<doc>Clicks the continue to extras button</doc>
+<kw name="Click" library="Browser">
+<arg>${btnExtras}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:13:50.167" endtime="20230709 20:13:55.238"/>
+</kw>
+<kw name="Wait Until Visible" library="common">
+<arg>${btnPayment}</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
 <kw name="Wait For Elements State" library="Browser">
-<arg>${path}</arg>
+<arg>${element}</arg>
 <arg>visible</arg>
-<arg>timeout=6</arg>
+<arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230709 10:00:56.912" level="INFO">Waited for Element with selector (//button[@type='button'][normalize-space()='Uninvite'])[2] at state visible</msg>
-<status status="PASS" starttime="20230709 10:00:56.901" endtime="20230709 10:00:56.913"/>
+<msg timestamp="20230709 20:13:56.570" level="INFO">Waited for Element with selector (//div[contains(@view,"extras")]//button[contains(text(), "Continue to payment")])[1] at state visible</msg>
+<status status="PASS" starttime="20230709 20:13:55.242" endtime="20230709 20:13:56.570"/>
 </kw>
-<msg timestamp="20230709 10:00:56.914" level="INFO">${check} = True</msg>
-<status status="PASS" starttime="20230709 10:00:56.899" endtime="20230709 10:00:56.914"/>
+<status status="PASS" starttime="20230709 20:13:55.239" endtime="20230709 20:13:56.572"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:50.162" endtime="20230709 20:13:56.574"/>
+</kw>
+<kw name="Continue to Payment" library="booking">
+<kw name="Click" library="Browser">
+<arg>(//button[normalize-space()='Continue to payment'])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:13:56.578" endtime="20230709 20:13:56.680"/>
+</kw>
+<status status="PASS" starttime="20230709 20:13:56.576" endtime="20230709 20:13:56.681"/>
+</kw>
+<kw name="Fill in Contact Information" library="booking">
+<doc>Fills in Contact information that can be given as arguments or use default values
+Uses a password if the environment is bui and</doc>
+<kw name="Create Email and Return Inbox" library="common">
+<var>${inbox}</var>
+<doc>Creates a new email address and returns the inbox object</doc>
+<kw name="Create new Inbox" library="MailSlurp">
+<var>${inbox}</var>
+<msg timestamp="20230709 20:14:07.334" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 9, 17, 14, 7, 229000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': 'c707eb88-f687-4770-bcb4-49f77dcb30c5@mailslurp.com',
+ 'exp...</msg>
+<status status="PASS" starttime="20230709 20:13:56.687" endtime="20230709 20:14:07.334"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${path}</arg>
+<arg>${inbox.id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230709 10:00:56.917" endtime="20230709 10:00:56.926"/>
+<status status="PASS" starttime="20230709 20:14:07.335" endtime="20230709 20:14:07.342"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${true}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${True}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${check}==${True}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.931" endtime="20230709 10:00:56.933"/>
+<msg timestamp="20230709 20:14:07.345" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 9, 17, 14, 7, 229000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': 'c707eb88-f687-4770-bcb4-49f77dcb30c5@mailslurp.com',
+ 'exp...</msg>
+<status status="PASS" starttime="20230709 20:13:56.685" endtime="20230709 20:14:07.345"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:56.928" endtime="20230709 10:00:56.935"/>
+<kw name="Click and Fill" library="common">
+<arg>id=firstName</arg>
+<arg>${firstName}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:07.349" endtime="20230709 20:14:07.447"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${shown} == ${false}</arg>
-<arg>Should Be True</arg>
-<arg>${check}==${False}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20230709 10:00:56.937" endtime="20230709 10:00:56.942"/>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230709 20:14:07.451" level="INFO">Fills the text 'Mos' in the given field.</msg>
+<status status="PASS" starttime="20230709 20:14:07.449" endtime="20230709 20:14:07.610"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:56.896" endtime="20230709 10:00:56.945"/>
+<status status="PASS" starttime="20230709 20:14:07.346" endtime="20230709 20:14:07.611"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:56.730" endtime="20230709 10:00:56.947"/>
+<kw name="Click and Fill" library="common">
+<arg>id=lastName</arg>
+<arg>${lastName}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:07.615" endtime="20230709 20:14:07.826"/>
 </kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230709 20:14:07.830" level="INFO">Fills the text 'Def' in the given field.</msg>
+<status status="PASS" starttime="20230709 20:14:07.828" endtime="20230709 20:14:07.918"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:07.612" endtime="20230709 20:14:07.919"/>
+</kw>
+<kw name="Click and Fill" library="common">
+<arg>id=email</arg>
+<arg>${inbox.email_address}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:07.927" endtime="20230709 20:14:08.091"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230709 20:14:08.094" level="INFO">Fills the text 'c707eb88-f687-4770-bcb4-49f77dcb30c5@mailslurp.com' in the given field.</msg>
+<status status="PASS" starttime="20230709 20:14:08.092" endtime="20230709 20:14:08.171"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:07.920" endtime="20230709 20:14:08.173"/>
+</kw>
+<kw name="Click and Fill" library="common">
+<arg>id=phoneNumber</arg>
+<arg>${phone}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:08.179" endtime="20230709 20:14:08.352"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230709 20:14:08.356" level="INFO">Fills the text '040123942' in the given field.</msg>
+<status status="PASS" starttime="20230709 20:14:08.353" endtime="20230709 20:14:08.438"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:08.175" endtime="20230709 20:14:08.440"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${inbox.id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230709 20:14:08.442" endtime="20230709 20:14:08.448"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>$ID</arg>
+<arg>${inbox.id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20230709 20:14:08.455" level="INFO">${ID} = c707eb88-f687-4770-bcb4-49f77dcb30c5</msg>
+<status status="PASS" starttime="20230709 20:14:08.450" endtime="20230709 20:14:08.456"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${passwordVisible}</var>
+<arg>id=password</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20230709 20:14:08.472" level="INFO">${passwordVisible} = 1</msg>
+<status status="PASS" starttime="20230709 20:14:08.458" endtime="20230709 20:14:08.473"/>
+</kw>
+<if>
+<branch type="IF" condition="'${env}'=='bui' and '${passwordVisible}'&gt;'0'">
+<kw name="Click and Fill" library="common">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
+<kw name="Click" library="Browser">
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:08.480" endtime="20230709 20:14:08.620"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230709 20:14:08.623" level="INFO">Fills the text 'NotARealPass123!' in the given field.</msg>
+<status status="PASS" starttime="20230709 20:14:08.621" endtime="20230709 20:14:08.652"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:08.476" endtime="20230709 20:14:08.653"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:08.475" endtime="20230709 20:14:08.654"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>No password filled</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230709 20:14:08.656" endtime="20230709 20:14:08.657"/>
+</kw>
+<status status="NOT RUN" starttime="20230709 20:14:08.655" endtime="20230709 20:14:08.658"/>
+</branch>
+<status status="PASS" starttime="20230709 20:14:08.474" endtime="20230709 20:14:08.659"/>
+</if>
+<status status="PASS" starttime="20230709 20:13:56.683" endtime="20230709 20:14:08.660"/>
+</kw>
+<kw name="Accept offers and Terms" library="booking">
+<kw name="Click" library="Browser">
+<arg>(//div[contains(text(), 'like to receive')])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:08.664" endtime="20230709 20:14:08.814"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>(//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:08.815" endtime="20230709 20:14:08.980"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:08.661" endtime="20230709 20:14:08.981"/>
+</kw>
+<kw name="Select Web Bank and Nordea as Payment Method" library="booking">
+<kw name="Click" library="Browser">
+<arg>//div[contains(text(), "Web bank payment")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:08.985" endtime="20230709 20:14:09.090"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//p[contains(text(), 'Nordea')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:09.092" endtime="20230709 20:14:09.249"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>(//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:09.251" endtime="20230709 20:14:11.515"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:08.983" endtime="20230709 20:14:11.516"/>
+</kw>
+<kw name="Complete Payment Successfully" library="booking">
+<kw name="Simulate Success or Failure" library="booking">
+<arg>success</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>//a[contains(text(), 'Simulate ${which} to merchant')]</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230709 20:14:16.914" level="INFO">Waited for Element with selector //a[contains(text(), 'Simulate success to merchant')] at state visible</msg>
+<status status="PASS" starttime="20230709 20:14:11.523" endtime="20230709 20:14:16.914"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//a[contains(text(), 'Simulate ${which} to merchant')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:16.916" endtime="20230709 20:14:18.879"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:11.520" endtime="20230709 20:14:18.880"/>
+</kw>
+<kw name="Verify Payment was successful" library="booking">
+<kw name="Wait Until Visible" library="common">
+<arg>//p[contains(text(), 'Payment was successful')]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230709 20:14:20.700" level="INFO">Waited for Element with selector //p[contains(text(), 'Payment was successful')] at state visible</msg>
+<status status="PASS" starttime="20230709 20:14:18.886" endtime="20230709 20:14:20.701"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:18.884" endtime="20230709 20:14:20.703"/>
+</kw>
+<kw name="Close Dialog" library="booking">
+<kw name="Wait Until Visible" library="common">
+<arg>//button[contains(text(), "Ok")]</arg>
+<doc>An easier keyword for waiting until an element is visible</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230709 20:14:20.723" level="INFO">Waited for Element with selector //button[contains(text(), "Ok")] at state visible</msg>
+<status status="PASS" starttime="20230709 20:14:20.710" endtime="20230709 20:14:20.724"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:20.707" endtime="20230709 20:14:20.725"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//button[contains(text(), "Ok")]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230709 20:14:20.727" endtime="20230709 20:14:20.853"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:20.704" endtime="20230709 20:14:20.855"/>
+</kw>
+<kw name="Save Booking Number 1" library="booking">
+<kw name="Get Text" library="Browser">
+<var>${str}</var>
+<arg>//p[contains(text(),'Booking number')]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230709 20:14:20.904" level="INFO">Text: 'Booking number: 983100754'</msg>
+<msg timestamp="20230709 20:14:20.904" level="INFO">${str} = Booking number: 983100754</msg>
+<status status="PASS" starttime="20230709 20:14:20.859" endtime="20230709 20:14:20.905"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${bookingNumber}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230709 20:14:20.907" endtime="20230709 20:14:20.911"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${str}</var>
+<arg>${str}</arg>
+<arg>Booking code${SPACE}</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20230709 20:14:20.916" level="INFO">${str} = Booking number: 983100754</msg>
+<status status="PASS" starttime="20230709 20:14:20.912" endtime="20230709 20:14:20.917"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${str}</var>
+<arg>${str}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20230709 20:14:20.921" level="INFO">${str} = Booking number: 983100754</msg>
+<status status="PASS" starttime="20230709 20:14:20.919" endtime="20230709 20:14:20.922"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:20.856" endtime="20230709 20:14:20.924"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:18.882" endtime="20230709 20:14:20.925"/>
+</kw>
+<status status="PASS" starttime="20230709 20:14:11.518" endtime="20230709 20:14:20.927"/>
+</kw>
+<doc>A new booker opens the page and does a successful booking</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230709 20:13:46.914" endtime="20230709 20:14:20.930"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Confirm Email and Open Link" line="27">
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${id}</var>
+<arg>$ID</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230709 20:14:27.504" level="INFO">${id} = c707eb88-f687-4770-bcb4-49f77dcb30c5</msg>
+<status status="PASS" starttime="20230709 20:14:20.969" endtime="20230709 20:14:27.505"/>
+</kw>
+<kw name="Wait for Latest Booking Confirmation" library="MailSlurp">
+<var>${modify_link}</var>
+<arg>${id}</arg>
+<msg timestamp="20230709 20:15:19.466" level="INFO">${modify_link} = &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="multipart/mixed" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Please do not reply to this automated email, replies will ...</msg>
+<status status="PASS" starttime="20230709 20:14:27.507" endtime="20230709 20:15:19.467"/>
+</kw>
+<kw name="Open New Browser To URL" library="common">
+<arg>${modify_link}</arg>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230709 20:15:30.871" level="INFO">Switching browser to browser=b867f7b4-9755-4906-b162-58196350685b</msg>
+<msg timestamp="20230709 20:15:30.877" level="INFO">Successfully changed active browser</msg>
+<msg timestamp="20230709 20:15:30.877" level="INFO">Reusing existing browser with id: browser=b867f7b4-9755-4906-b162-58196350685b</msg>
+<status status="PASS" starttime="20230709 20:15:22.604" endtime="20230709 20:15:30.878"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" starttime="20230709 20:15:30.880" endtime="20230709 20:15:33.671"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230709 20:15:34.271" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230709 20:15:34.282" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230709 20:15:34.283" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230709 20:15:33.673" endtime="20230709 20:15:34.284"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230709 20:15:35.360" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230709 20:15:35.366" level="INFO">See also file:///Users/saragilbert/Code/SQA/nelson-ta/results/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230709 20:15:35.372" level="FAIL">Error: page.goto: Protocol error (Page.navigate): Invalid url: "&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="multipart/mixed" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Please do not reply to this automated email, replies will not be read.&lt;/p&gt;
+
+      &lt;p&gt;Hi,&lt;/p&gt;
+      &lt;p&gt;
+        You have made a payment to Markkinointinimi, which uses Paytrail's payment service. Below is your payment
+        information:
+      &lt;/p&gt;
+      &lt;p&gt;
+        Amount: 94.50 €&lt;br /&gt;Reference number: 6254663190&lt;br /&gt;Payment provider:: Paytrail Oyj (shown on your
+        statement as the payee)
+      &lt;/p&gt;
+
+      &lt;h4&gt;Do you have any questions?&lt;/h4&gt;
+      &lt;p&gt;
+        If you have any questions about your order (e.g. delivery, returns, or to request a receipt/invoice), please
+        contact Markkinointinimi.
+      &lt;/p&gt;
+      &lt;p&gt;If you have any questions about your payment, please contact our customer service.&lt;/p&gt;
+
+      &lt;p&gt;
+        Best regards,&lt;br /&gt;
+        Paytrail customer service team&lt;br /&gt;
+        &lt;a href="https://www.paytrail.com/en/customer-service"&gt;www.paytrail.com/en/customer-service&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+" Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13
+dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39
+_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36
+receiveMessage@chrome://juggler/content/components/Juggler.js:118:20
+
+=========================== logs ===========================
+navigating to "&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="multipart/mixed" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Please do not reply to this automated email, replies will not be read.&lt;/p&gt;
+
+      &lt;p&gt;Hi,&lt;/p&gt;
+      &lt;p&gt;
+        You have made a payment to Markkinointinimi, which uses Paytrail's payment service. Below is your payment
+        information:
+      &lt;/p&gt;
+      &lt;p&gt;
+        Amount: 94.50 €&lt;br /&gt;Reference number: 6254663190&lt;br /&gt;Payment provider:: Paytrail Oyj (shown on your
+        statement as the payee)
+      &lt;/p&gt;
+
+      &lt;h4&gt;Do you have any questions?&lt;/h4&gt;
+      &lt;p&gt;
+        If you have any questions about your order (e.g. delivery, returns, or to request a receipt/invoice), please
+        contact Markkinointinimi.
+      &lt;/p&gt;
+      &lt;p&gt;If you have any questions about your payment, please contact our customer service.&lt;/p&gt;
+
+      &lt;p&gt;
+        Best regards,&lt;br /&gt;
+        Paytrail customer service team&lt;br /&gt;
+        &lt;a href="https://www.paytrail.com/en/customer-service"&gt;www.paytrail.com/en/customer-service&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+", waiting until "load"
+============================================================</msg>
+<status status="FAIL" starttime="20230709 20:15:34.285" endtime="20230709 20:15:35.388"/>
+</kw>
+<status status="FAIL" starttime="20230709 20:15:19.470" endtime="20230709 20:16:15.038"/>
+</kw>
+<doc>A new booker receives an email with a link to modify the booking</doc>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230709 20:14:20.949" endtime="20230709 20:16:15.045">Error: page.goto: Protocol error (Page.navigate): Invalid url: "&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="multipart/mixed" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Please do not reply to this automated email, replies will not be read.&lt;/p&gt;
+
+      &lt;p&gt;Hi,&lt;/p&gt;
+      &lt;p&gt;
+        You have made a payment to Markkinointinimi, which uses Paytrail's payment service. Below is your payment
+        information:
+      &lt;/p&gt;
+      &lt;p&gt;
+        Amount: 94.50 €&lt;br /&gt;Reference number: 6254663190&lt;br /&gt;Payment provider:: Paytrail Oyj (shown on your
+    [ Message content over the limit has been removed. ]
+      &lt;h4&gt;Do you have any questions?&lt;/h4&gt;
+      &lt;p&gt;
+        If you have any questions about your order (e.g. delivery, returns, or to request a receipt/invoice), please
+        contact Markkinointinimi.
+      &lt;/p&gt;
+      &lt;p&gt;If you have any questions about your payment, please contact our customer service.&lt;/p&gt;
+
+      &lt;p&gt;
+        Best regards,&lt;br /&gt;
+        Paytrail customer service team&lt;br /&gt;
+        &lt;a href="https://www.paytrail.com/en/customer-service"&gt;www.paytrail.com/en/customer-service&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+", waiting until "load"
+============================================================</status>
+</test>
 <kw name="Close Browser" library="Browser" type="TEARDOWN">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20230709 10:00:57.626" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230709 10:00:56.949" endtime="20230709 10:00:57.627"/>
+<msg timestamp="20230709 20:16:15.546" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230709 20:16:15.127" endtime="20230709 20:16:15.546"/>
 </kw>
-<status status="PASS" starttime="20230709 10:00:47.418" endtime="20230709 10:00:57.629"/>
-</test>
-<status status="PASS" starttime="20230709 10:00:41.448" endtime="20230709 10:00:57.643"/>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230709 20:13:37.258" endtime="20230709 20:16:15.547"/>
 </suite>
-<status status="PASS" starttime="20230709 10:00:41.403" endtime="20230709 10:00:57.670"/>
+<status status="FAIL" starttime="20230709 20:13:37.212" endtime="20230709 20:16:15.567"/>
 </suite>
-<status status="PASS" starttime="20230709 10:00:41.376" endtime="20230709 10:00:57.678"/>
+<status status="FAIL" starttime="20230709 20:13:37.164" endtime="20230709 20:16:15.575"/>
 </suite>
-<status status="PASS" starttime="20230709 10:00:41.350" endtime="20230709 10:00:57.687"/>
+<status status="FAIL" starttime="20230709 20:13:37.121" endtime="20230709 20:16:15.584"/>
 </suite>
-<status status="PASS" starttime="20230709 10:00:41.313" endtime="20230709 10:00:57.695"/>
-</suite>
-<status status="PASS" starttime="20230709 10:00:40.633" endtime="20230709 10:00:57.703"/>
+<status status="FAIL" starttime="20230709 20:13:35.717" endtime="20230709 20:16:15.591"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Nelson-Ta">Nelson-Ta</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testsuites">Nelson-Ta.Testsuites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="BUI">Nelson-Ta.Testsuites.BUI</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Feature">Nelson-Ta.Testsuites.BUI.Feature</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Online Check In">Nelson-Ta.Testsuites.BUI.Feature.Online Check In</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="BUI2-559">Nelson-Ta.Testsuites.BUI.Feature.Online Check In.BUI2-559</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Nelson-Ta">Nelson-Ta</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="Testsuites">Nelson-Ta.Testsuites</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1-s1" name="BUI">Nelson-Ta.Testsuites.BUI</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1-s1-s1" name="Regression">Nelson-Ta.Testsuites.BUI.Regression</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="New Booking">Nelson-Ta.Testsuites.BUI.Regression.New Booking</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230709 20:15:35.360" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
 </errors>
 </robot>
