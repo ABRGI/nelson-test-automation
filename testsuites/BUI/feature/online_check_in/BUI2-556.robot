@@ -17,7 +17,7 @@ Select Hotel, Dates and Guests
     Select Guests
 
 Check Available Rooms and Select a Standard Room
-    Click Book Button
+    Click Book or Find Rooms Button
     Select a Standard Room
 
 Continue to Extras and Select Join for Free

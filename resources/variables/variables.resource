@@ -16,7 +16,6 @@ ${btnSaveAndSign}    //button[normalize-space()='Save and Sign']
 ${btnSave}        //button[normalize-space()='Save']
 ${password}      NotARealPass123!
 ${bookingNumber}
-${inbox_id}
 ${bookingUUID}
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
@@ -40,3 +39,5 @@ ${guestFirstname}  Shin
 ${guestLastname}  Suke
 ${childFirstname}   Dong
 ${childLastname}    Dong
+${url}
+${inbox_id}     bb99fbd9-e882-4f00-b772-ce50c2f9dffb

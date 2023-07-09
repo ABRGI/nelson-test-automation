@@ -2,7 +2,7 @@
 Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
-Resource           ${EXECDIR}/resources/keywords/common.resource
+Resource           ${EXECDIR}/resources/variables/variables.resource
 Library            Browser   
 Library            OperatingSystem
 Library            String
@@ -40,12 +40,14 @@ Is Element Visible
     [Return]    ${isVisible}
 
 Get Inbox ID
-    Log To Console      Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8
-    [Return]    492aa3bb-9e4b-410a-a02c-84f13ace89e8
+    Log To Console      Mailslurp: ${inbox_id}
+    [Return]    ${inbox_id}
 
 Create Email and Return Inbox
     [Documentation]    Creates a new email address and returns the inbox object
     ${inbox}=   Create new Inbox
+    #${inbox}=   Get Inbox      ${inbox_id}
+    Log To Console    ${inbox.id}
     [Return]    ${inbox}
 
 Wait For Confirmation Link
