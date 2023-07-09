@@ -28,6 +28,12 @@ class Helpers(object):
     def hello(self):
         return 'hi'
     
+    def check_if_string_contains_substring(self, string, substring):
+        if substring in string:
+            return True
+        else:
+            return False
+         
     def get_selectors_for_tomorrow(self):
         today = datetime.now().date()
         next_day = today + timedelta(days=1)

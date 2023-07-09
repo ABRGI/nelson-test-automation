@@ -17,8 +17,7 @@ Complete a new booking
     Select Hotel
     Select Dates
     Select Guests
-    Click Find Rooms Button
-    Click Book Button
+    Click Book or Find Rooms Button
     Select a Standard Room
     Click Continue to Extras Button
     Continue to Payment
@@ -61,11 +60,14 @@ Toggle Someone Else Checkbox
     [Documentation]    Toggles the "Someone else will be the main guest" checkbox
     Click    //span[contains(text(),"Someone else")]
 
-Click Book Button 
-    Click            //div[@data-nelson-btn='book']
-
-Click Find Rooms Button 
-    Click             //button[contains(text(), 'Find rooms')]
+Click Book or Find Rooms Button 
+    ${url}=         Get Url
+    ${booking}=     Check If String Contains     ${url}    /booking/
+    IF     ${booking} == True
+        Click    //button[contains(@class, 'booking-form-button') and contains(text(), 'Find rooms')]
+    ELSE
+        Click    //button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]
+    END
 
 Click Cancel
     [Documentation]    Clicks the cancel button
@@ -114,8 +116,7 @@ Marks the "Someone else will be the main guest" checkbox as <value>
 Select Guests
     [Arguments]    ${rooms}=1    ${persons}=1    ${children}=0
     [Documentation]    Selects the number of guests for the booking, current implementation will only check the dropdown
-    #Wait Until Visible    //*[local-name() = 'svg' and contains(@data-icon, 'user-group')]
-    Log to Console        Not yet implemented
+    Log to Console        ${EMPTY}
 
 Select 1 Room 2 Adult and 1 Children
     Click    //div[contains(@data-nelson-btn, 'guests')]
@@ -134,8 +135,7 @@ Choose Dates and Guests
     Select Guests
     
 Select Dates 
-    Log     Skipping date selection for now
-
+    Log     ${EMPTY}
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
@@ -409,7 +409,7 @@ Select Hotel Turku, Humalistonkatu
 
 Select Dates and Guests
     Choose Dates and Guests
-    Click Book Button
+    Click Book or Find Rooms Button
 
 Select Standard and Remove Other Room Selection 
     Click     //div[contains(text(), 'Select room')]
@@ -577,7 +577,7 @@ Click Save and Sign Button
    Click   //button[normalize-space()='Save and Sign']
 
 Edit guest popup change to "Booker information"
-   Verify Element Presence  //div[normalize-space()='Booker information' and @disabled]   ${False}
+   Verify Element Presence  //input[@id='email' and @disabled]   ${False}
 Verify notification "Before iniviting someone else to be the main guest in this room, you must fill in your own information"
    Verify Element Presence   //div[normalize-space()='Before inviting someone else to be the main guest in this room, you must fill in your own information.' and @disabled]  ${False} 
 Room name is removed
@@ -587,11 +587,12 @@ The "Purpose of the trip" checkbox is removed
 The "Save and sign" button changes to " Save and invite" button
    Verify Element Presence  //button[normalize-space()='Save and Sign']    ${False}
    Verify Element Presence  //button[normalize-space()='Save and invite']   ${True}
-Booker just completed payment for a reservation   
+
+Create a New Booking and Complete Payment  
     Select Hotel     Helsinki, Lönnrotinkatu
     Select Dates 
     Select Guests
-    Click Book Button
+    Click Book or Find Rooms Button
     Select a Standard Room
     Click Continue to Extras Button 
     Click Continue to Payment
@@ -691,7 +692,8 @@ Verify Guest information popup when guest not checkin
    Verify Element Presence  //button[normalize-space()='Uninvite']   ${True}
 
 Click Uninvite button
-   Click   //button[normalize-space()='Uninvite']
+   Click   (//form/*/button)[2]
+
 Click Remove button
    Click   //button[normalize-space()='Remove']
 Verify Uninvite warning popup
@@ -743,7 +745,8 @@ Verify Add guest popup UI when guest is children
 Fill in guest information when guest is adult 
     Fill Invite guest info and click invite button
 Uninvite guest 
-   Click     //p[text()='${guestFirstname} ${guestLastname}']
+   ${elements}=     Get Elements    //*[contains(@class, "fa-user")]
+   Click     (//*[contains(@class, "fa-user")])[2]
    Click Uninvite button
 Remove guest
    Click    //p[text()='${childFirstname} ${childLastname}']
@@ -759,6 +762,7 @@ Fill in guest information when guest is children
    Wait Until Visible   //input[@id='dateOfBirth']
    Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='dateOfBirth']    ${chilDateofbirth}
    Click   //button[normalize-space()='Save']
+
 Verify Invite guest UI after invite
     Click     //p[text()='${guestFirstname} ${guestLastname}']
     Verify Element Presence   //p[text()='Guest information']    ${True}

@@ -1,4 +1,4 @@
---doc Argument file for running tests on Omena staging environment (test3)
+--doc Argument file for running tests on Omena test4 environment (test4)
 --variable url:https://test4.omenahotels.com/
 --variable HEADLESS:True
 --variable headless:True
@@ -7,3 +7,4 @@
 --variable MUI_URL:$MUI_URL
 --variable MUI_PASSWORD:$MUI_PASSWORD
 --variable MUI_USERNAME:$MUI_USERNAME
+--exclude skip
