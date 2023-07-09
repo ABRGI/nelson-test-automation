@@ -10,6 +10,10 @@ Library            Process
 
 *** Keywords ***
 
+Check If String Contains
+    [Arguments]    ${string}    ${substring}
+    ${contains}=    Check If String Contains Substring    ${string}    ${substring}
+    [Return]    ${contains}
 
 Set Environment
     ${currentUrl}=     Get Url
