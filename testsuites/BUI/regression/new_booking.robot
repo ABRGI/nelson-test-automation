@@ -4,7 +4,6 @@ Suite Setup       Open Browser to Landing Page
 Suite Teardown    Close Browser
 Resource           ${EXECDIR}/resources/keywords/common.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
-Library            Browser     auto_closing_level=SUITE
 Documentation      A test suite for verifying modify booking functionality
 Force Tags         smoke
 

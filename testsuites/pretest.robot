@@ -5,7 +5,6 @@ Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
-Library            Browser     
 Force Tags         pretest
 
 
