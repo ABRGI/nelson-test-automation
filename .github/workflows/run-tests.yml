@@ -47,13 +47,14 @@ jobs:
 
   pre_tests:
     runs-on: ubuntu-latest
-
+    needs: setup
     steps:
       - name: Run Pre-Tests
         run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
 
   test4:
     runs-on: ubuntu-latest
+    needs: setup
 
     steps:
       - name: Test Omena Testing Environment test4
@@ -62,6 +63,7 @@ jobs:
 
   exhibition_test:
     runs-on: ubuntu-latest
+    needs: setup
 
     steps:
       - name: Test EC Testing Environment exhibition-test
