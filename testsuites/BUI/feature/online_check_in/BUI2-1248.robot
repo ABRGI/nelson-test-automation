@@ -38,3 +38,13 @@ Verify booker invites guest with already used email address
    Verify Invite guest popup UI when guest is adult
    Fill Invite guest info and click invite button   Auto   Test   finlong1111@gmail.com
    Verify Warning Popup is displayed with booker email
+
+Verify booker univites guest in case guest has not completed online check-in
+   Booker just completed payment for a reservation with 1 room 3 guest
+   Booker is brought back to Comfirmation Landing page
+   Booker is main guest and completes check-in process
+   Click the first guest invite
+   Verify Invite guest popup UI when guest is adult
+   Fill in guest information when guest is adult
+   Uninvite guest
+   Click Univite button in Uninvite warning popup

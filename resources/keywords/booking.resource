@@ -865,3 +865,24 @@ Search & select nationality
 Verify required field presence
    [Arguments]   ${fieldLabel}   ${shown}
    Verify Element Presence    //div[normalize-space()='${fieldLabel}*']//input[@required]   ${shown}
+Open the right panel to update guest info in case the booking has 1 room
+   [Arguments]   ${guestOrder}
+    IF   ${guestOrder} == 2 or ${guestOrder} == 4
+        Click   (//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${1}}]
+    ELSE IF   ${guestOrder} == 1   
+        Click   (//*[name()='svg' and @data-icon="chevron-right"])[1]
+    ELSE
+        Click   (//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${2}}]
+    END
+Open the right panel to update guest info in case the booking has multiple rooms
+   [Arguments]  ${roomName}   ${roomOrder}   ${guestOrder}
+    IF   ${roomOrder} > 1
+       Click   (//*[name()='svg' and @data-icon="caret-up"])[${roomOrder}]
+    END
+    IF   ${guestOrder} == 2 or ${guestOrder} == 4
+        Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${1}}]
+    ELSE IF   ${guestOrder} == 1   
+        Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[1]
+    ELSE
+        Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${2}}]
+    END
