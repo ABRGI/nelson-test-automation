@@ -1,4 +1,4 @@
---doc Argument file for running tests on Omena test environmen (test4)
+--doc Argument file for running tests on Omena Staging Environmen (test3)
 --variable url:https://test3.omenahotels.com/
 --variable HEADLESS:True
 --variable headless:True
