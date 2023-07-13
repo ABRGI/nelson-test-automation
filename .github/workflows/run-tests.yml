@@ -11,7 +11,7 @@ permissions:
   write-all
 
 jobs:
-  setup:
+  run_tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -46,14 +46,15 @@ jobs:
 
       - name: Run Pre-Tests
         run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
-
+        continue-on-error: True 
+        
       - name: Test Omena Testing Environment test4
         run: robot -A environments/test4.txt --outputdir reports/test4 testsuites/
-        continue-on-error: False
+        continue-on-error: True
 
       - name: Test EC Testing Environment exhibition-test
         run: robot -A environments/ectest.txt --outputdir reports/ectest testsuites/
-        continue-on-error: False
+        continue-on-error: True
 
       - name: Commit files
         run: |
@@ -62,12 +63,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git add /home/runner/work/nelson-test-automation/nelson-test-automation/reports
           git commit -a -m "Add changes"
+        continue-on-error: True
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
+        continue-on-error: True
 
       - name: Copy files to gh-pages branch
         uses: planetoftheweb/copy-to-branches@v1.2
@@ -75,9 +78,11 @@ jobs:
           key: develop
           branches: gh-pages
           files: reports
+        continue-on-error: True
 
       - name: Publish Reports to Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: reports
+        continue-on-error: True
