@@ -56,7 +56,7 @@ jobs:
         continue-on-error: False
 
   report:
-    needs: test
+    needs: setup
     runs-on: ubuntu-latest
     if: always()
 
