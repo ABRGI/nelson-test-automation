@@ -55,12 +55,6 @@ jobs:
         run: robot -A environments/ectest.txt --outputdir reports/ectest testsuites/
         continue-on-error: False
 
-  report:
-    needs: setup
-    runs-on: ubuntu-latest
-    if: always()
-
-    steps:
       - name: Commit files
         run: |
           echo "Commit reporting files"
