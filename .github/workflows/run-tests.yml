@@ -44,11 +44,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           rfbrowser init
 
-  test:
-    runs-on: ubuntu-latest
-    needs: setup
-
-    steps:
       - name: Run Pre-Tests
         run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
 
