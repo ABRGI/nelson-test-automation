@@ -5,3 +5,4 @@
 --variable environment:
 --outputdir reports/ecprod/
 --variable browser:Firefox
+--include exhiition_court
