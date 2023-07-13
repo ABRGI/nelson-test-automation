@@ -1,0 +1,8 @@
+--doc Argument file for running tests on EC Test Environment
+--variable url:https://test-exhibition.bookn.io/en/booking/
+--variable HEADLESS:True
+--variable headless:True
+--variable environment:
+--outputdir reports/ecprod/
+--variable browser:Firefox
+--include exhibition_court

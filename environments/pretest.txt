@@ -1,0 +1,11 @@
+--doc Argument file for running Pre-Test verifications
+--variable url:https://test4.omenahotels.com/en
+--variable HEADLESS:True
+--variable headless:True
+--outputdir reports/pretest/
+--variable browser:Firefox
+--variable MUI_URL:$MUI_URL
+--variable MUI_PASSWORD:$MUI_PASSWORD
+--variable MUI_USERNAME:$MUI_USERNAME
+--variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY
+--include pretest
