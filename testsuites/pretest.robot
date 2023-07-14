@@ -6,11 +6,13 @@ Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
 Force Tags         pretest
+Library            RequestsLibrary
 
 
 *** Variables ***
 
 ${inbox_object}
+${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
 
 *** Test Cases ***
 
@@ -34,7 +36,7 @@ Pre-Test: Verify Variables are Set
     END
 
 Pre-Test: Verify BUI is Up
-    Pass Execution     TBD: BUI is up and running
+    Pass Execution     TBD: BUI is up and runnin
 
 Pre-Test: Verify API is Up
     Pass Execution     TBD: API is up and running

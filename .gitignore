@@ -4,7 +4,6 @@ venv
 .env
 test.robot
 examples
-scripts
 *.pyc
 .pytest_cache
 .robotcode_cache

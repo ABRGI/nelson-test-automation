@@ -64,14 +64,10 @@ jobs:
 
       - name: Run Pre-Tests
         run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
-        continue-on-error: True 
+        continue-on-error: False 
         
-      - name: Test Omena Testing Environment test4
-        run: robot -A environments/test4.txt --outputdir reports/test4 testsuites/
-        continue-on-error: True
-
-      - name: Test EC Testing Environment exhibition-test
-        run: robot -A environments/ectest.txt --outputdir reports/ectest testsuites/
+      - name: Run Test Suites from scripts/run_tests.sh
+        run: scripts/run_tests.sh
         continue-on-error: True
 
       - name: Commit files

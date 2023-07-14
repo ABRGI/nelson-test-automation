@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 5.0.1 (Python 3.9.16 on darwin)" generated="20230703 15:37:02.780" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on darwin)" generated="20230714 15:39:26.946" rpa="false" schemaversion="3">
 <suite id="s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
 <suite id="s1-s1" name="BUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI">
 <suite id="s1-s1-s1" name="Feature" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature">
@@ -7,6 +7,8 @@
 <suite id="s1-s1-s1-s1-s1" name="BUI2-556" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-556.robot">
 <kw name="Open Browser to Landing Page" library="common" type="SETUP">
 <doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Open New Browser To URL" library="common">
+<arg>${url}</arg>
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
 <arg>${headless}</arg>
@@ -14,23 +16,23 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:37.882" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/0/browser/traces/da5d3d38-b2e2-445d-bf8d-3fe336759db5"}</msg>
-<msg timestamp="20230703 15:36:39.614" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/0/browser/traces/da5d3d38-b2e2-445d-bf8d-3fe336759db5"}</msg>
-<status status="PASS" starttime="20230703 15:36:37.880" endtime="20230703 15:36:39.614"/>
+<msg timestamp="20230714 15:39:28.217" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/browser/traces/35938ef9-36dd-4210-bfb6-6398a7a0fe61"}</msg>
+<msg timestamp="20230714 15:39:30.953" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/browser/traces/35938ef9-36dd-4210-bfb6-6398a7a0fe61"}</msg>
+<status status="PASS" starttime="20230714 15:39:28.216" endtime="20230714 15:39:30.954"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:39.618" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230703 15:36:39.615" endtime="20230703 15:36:39.619"/>
+<msg timestamp="20230714 15:39:30.957" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230714 15:39:30.954" endtime="20230714 15:39:30.957"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:39.620" level="INFO">{
+<msg timestamp="20230714 15:39:30.958" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -40,305 +42,94 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230703 15:36:40.191" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:40.191" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:39.619" endtime="20230703 15:36:40.192"/>
+<msg timestamp="20230714 15:39:31.039" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230714 15:39:31.039" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230714 15:39:30.957" endtime="20230714 15:39:31.039"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230703 15:36:45.239" level="INFO">Successfully initialized new page object and opened url: https://test3.omenahotels.com/</msg>
-<status status="PASS" starttime="20230703 15:36:40.192" endtime="20230703 15:36:45.239"/>
+<msg timestamp="20230714 15:39:33.792" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230714 15:39:33.793" level="FAIL">Execution terminated by signal</msg>
+<status status="FAIL" starttime="20230714 15:39:31.039" endtime="20230714 15:39:33.803"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:28.215" endtime="20230714 15:39:33.803"/>
 </kw>
 <kw name="Wait Until Network Is Idle" library="Browser">
 <tag>HTTP</tag>
 <tag>Wait</tag>
 <doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230703 15:36:45.240" endtime="20230703 15:36:46.874"/>
+<status status="NOT RUN" starttime="20230714 15:39:33.803" endtime="20230714 15:39:33.803"/>
 </kw>
 <kw name="Allow Cookies" library="common">
 <doc>Allow Cookies/Toggle Cookie allowance</doc>
-<kw name="Is Element Found" library="common">
-<var>${cookieModalVisible}</var>
-<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
-<doc>A keyword that has a very complex way of figuring out whether an
-element is found or not because I had trouble with the built-in keywords
-Can be solved differently if you have a better idea</doc>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>10s</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:46.879" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" starttime="20230703 15:36:46.876" endtime="20230703 15:36:46.879"/>
+<status status="NOT RUN" starttime="20230714 15:39:33.804" endtime="20230714 15:39:33.804"/>
 </kw>
-<try>
-<branch type="TRY">
-<kw name="Get Elements" library="Browser">
-<var>${els}</var>
-<arg>${selector}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230703 15:36:46.987" level="INFO">Found 1 Locators successfully.</msg>
-<msg timestamp="20230703 15:36:46.987" level="INFO">${els} = ['element=61d1dd39-4186-429f-92b2-37557b18aefc']</msg>
-<status status="PASS" starttime="20230703 15:36:46.881" endtime="20230703 15:36:46.987"/>
+<kw name="Set Environment" library="common">
+<status status="NOT RUN" starttime="20230714 15:39:33.804" endtime="20230714 15:39:33.804"/>
 </kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${count}</var>
-<arg>${els}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230703 15:36:46.989" level="INFO">Length is 1</msg>
-<msg timestamp="20230703 15:36:46.989" level="INFO">${count} = 1</msg>
-<status status="PASS" starttime="20230703 15:36:46.988" endtime="20230703 15:36:46.989"/>
+<status status="FAIL" starttime="20230714 15:39:28.214" endtime="20230714 15:39:33.805"/>
 </kw>
-<if>
-<branch type="IF" condition="${count} &gt; 0">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>True</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 15:36:46.991" level="INFO">${visible} = True</msg>
-<status status="PASS" starttime="20230703 15:36:46.990" endtime="20230703 15:36:46.991"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:46.990" endtime="20230703 15:36:46.992"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:46.993" endtime="20230703 15:36:46.993"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:46.992" endtime="20230703 15:36:46.993"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:46.989" endtime="20230703 15:36:46.993"/>
-</if>
-<status status="PASS" starttime="20230703 15:36:46.880" endtime="20230703 15:36:46.994"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:46.995" endtime="20230703 15:36:46.995"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:46.994" endtime="20230703 15:36:46.995"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:46.880" endtime="20230703 15:36:46.995"/>
-</try>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:47.001" level="INFO">Set timeout to: 90000</msg>
-<status status="PASS" starttime="20230703 15:36:46.996" endtime="20230703 15:36:47.001"/>
-</kw>
-<msg timestamp="20230703 15:36:47.002" level="INFO">${cookieModalVisible} = True</msg>
-<status status="PASS" starttime="20230703 15:36:46.875" endtime="20230703 15:36:47.002"/>
-</kw>
-<if>
-<branch type="IF" condition="${cookieModalVisible}">
-<kw name="Click" library="Browser">
-<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 15:36:47.003" endtime="20230703 15:36:47.362"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:47.003" endtime="20230703 15:36:47.363"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>No Cookie Modal Visible</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.363" endtime="20230703 15:36:47.364"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:47.363" endtime="20230703 15:36:47.364"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:47.002" endtime="20230703 15:36:47.364"/>
-</if>
-<status status="PASS" starttime="20230703 15:36:46.875" endtime="20230703 15:36:47.365"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:37.879" endtime="20230703 15:36:47.365"/>
-</kw>
-<test id="s1-s1-s1-s1-s1-t1" name="Create a new booking, check-in and verify door code is displayed" line="13">
-<kw name="Select Hotel" library="booking">
-<arg>Helsinki, Lönnrotinkatu</arg>
-<doc>Select Hotel by using a number as an argument, default Lönnrotinkatu</doc>
-<kw name="Get Environment" library="booking">
-<var>${env}</var>
-<kw name="Get Url" library="Browser">
-<var>${currentUrl}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<msg timestamp="20230703 15:36:47.378" level="INFO">${currentUrl} = https://test3.omenahotels.com/fi/</msg>
-<status status="PASS" starttime="20230703 15:36:47.372" endtime="20230703 15:36:47.378"/>
-</kw>
-<kw name="Get Environment From Url" library="Helpers">
-<var>${env}</var>
-<arg>${currentUrl}</arg>
-<msg timestamp="20230703 15:36:47.379" level="INFO">${env} = test-omena</msg>
-<status status="PASS" starttime="20230703 15:36:47.378" endtime="20230703 15:36:47.379"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${env}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230703 15:36:47.379" endtime="20230703 15:36:47.380"/>
-</kw>
-<msg timestamp="20230703 15:36:47.381" level="INFO">${env} = test-omena</msg>
-<status status="PASS" starttime="20230703 15:36:47.371" endtime="20230703 15:36:47.381"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${env}&quot; == &quot;test-exhibition&quot;">
-<kw name="Log" library="BuiltIn">
-<arg>No hotel to be selected</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.382" endtime="20230703 15:36:47.382"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:47.382" endtime="20230703 15:36:47.383"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Selecting Hotel: ${hotel}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230703 15:36:47.384" level="INFO">Selecting Hotel: Helsinki, Lönnrotinkatu</msg>
-<status status="PASS" starttime="20230703 15:36:47.383" endtime="20230703 15:36:47.384"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//div[contains(@data-nelson-btn, "hotels")]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20230703 15:37:02.219" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg timestamp="20230703 15:37:02.220" level="INFO">See also file:///Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/0/playwright-log.txt for additional details.</msg>
-<msg timestamp="20230703 15:37:02.221" level="FAIL">Execution terminated by signal</msg>
-<status status="FAIL" starttime="20230703 15:36:47.385" endtime="20230703 15:37:02.237"/>
-</kw>
-<kw name="Wait Until Visible" library="common">
-<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
-<doc>An easier keyword for waiting until an element is visible</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.238" endtime="20230703 15:37:02.239"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.239" endtime="20230703 15:37:02.240"/>
-</kw>
-<kw name="Wait For Elements State" library="Browser">
-<arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
-<arg>hidden</arg>
-<arg>timeout=3s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.240" endtime="20230703 15:37:02.241"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:47.383" endtime="20230703 15:37:02.241"/>
-</branch>
-<status status="FAIL" starttime="20230703 15:36:47.381" endtime="20230703 15:37:02.242"/>
-</if>
-<status status="FAIL" starttime="20230703 15:36:47.370" endtime="20230703 15:37:02.243"/>
-</kw>
-<kw name="Select Dates" library="booking">
-<doc>A keyword for selecting dates for booking</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.244" endtime="20230703 15:37:02.244"/>
-</kw>
-<kw name="Select Guests" library="booking">
-<doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.245" endtime="20230703 15:37:02.245"/>
-</kw>
-<kw name="Click Book Button" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.246" endtime="20230703 15:37:02.246"/>
-</kw>
-<kw name="Select a Standard Room" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.246" endtime="20230703 15:37:02.246"/>
-</kw>
-<kw name="Click Continue to Extras Button" library="booking">
-<doc>Clicks the continue to extras button</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.248" endtime="20230703 15:37:02.249"/>
-</kw>
-<kw name="Continue to Payment" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.250" endtime="20230703 15:37:02.250"/>
-</kw>
-<kw name="Select Join for Free" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.251" endtime="20230703 15:37:02.251"/>
-</kw>
-<kw name="Fill in Contact Information" library="booking">
-<doc>TBD: Use test data instead of hardcoded values</doc>
-<status status="NOT RUN" starttime="20230703 15:37:02.251" endtime="20230703 15:37:02.252"/>
-</kw>
-<kw name="Accept offers and Terms" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.252" endtime="20230703 15:37:02.253"/>
-</kw>
-<kw name="Select Web Bank and Nordea as Payment Method" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.253" endtime="20230703 15:37:02.253"/>
-</kw>
-<kw name="Complete Payment Successfully" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.254" endtime="20230703 15:37:02.255"/>
-</kw>
-<kw name="Click Check In Button" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.255" endtime="20230703 15:37:02.256"/>
-</kw>
-<kw name="Fill Check in Slide" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.257" endtime="20230703 15:37:02.258"/>
-</kw>
-<kw name="Click Save and Sign Button and Sign if Required" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.258" endtime="20230703 15:37:02.259"/>
-</kw>
-<kw name="Complete Check in" library="booking">
-<status status="NOT RUN" starttime="20230703 15:37:02.259" endtime="20230703 15:37:02.259"/>
-</kw>
-<kw name="Wait Until Door Code is Available" library="checkin">
-<status status="NOT RUN" starttime="20230703 15:37:02.261" endtime="20230703 15:37:02.261"/>
-</kw>
-<kw name="Check Door Code and verify it is not empty" library="checkin">
-<status status="NOT RUN" starttime="20230703 15:37:02.262" endtime="20230703 15:37:02.262"/>
-</kw>
-<kw name="Verify Page Elements after Check-in" library="checkin">
-<status status="NOT RUN" starttime="20230703 15:37:02.263" endtime="20230703 15:37:02.263"/>
-</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Select Hotel, Dates and Guests" line="14">
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="FAIL" starttime="20230703 15:36:47.367" endtime="20230703 15:37:02.265">Execution terminated by signal
-
-Also parent suite teardown failed:
-Error: browserContext.close: Target page, context or browser has been closed</status>
+<status status="FAIL" starttime="20230714 15:39:33.805" endtime="20230714 15:39:33.807">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Check Available Rooms and Select a Standard Room" line="19">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.809" endtime="20230714 15:39:33.811">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Continue to Extras and Select Join for Free" line="23">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.812" endtime="20230714 15:39:33.813">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t4" name="Fill in Booker Contact Information" line="28">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.814" endtime="20230714 15:39:33.815">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t5" name="Pay using Web Bank and Nordea" line="32">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.816" endtime="20230714 15:39:33.818">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t6" name="Check In Online" line="36">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.819" endtime="20230714 15:39:33.821">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t7" name="Wait for Door Code and Verify Page" line="42">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.822" endtime="20230714 15:39:33.823">Parent suite setup failed:
+Execution terminated by signal</status>
 </test>
 <kw name="Close Browser" library="Browser" type="TEARDOWN">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20230703 15:37:02.289" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg timestamp="20230703 15:37:02.290" level="INFO">See also file:///Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/0/playwright-log.txt for additional details.</msg>
-<msg timestamp="20230703 15:37:02.290" level="FAIL">Error: browserContext.close: Target page, context or browser has been closed</msg>
-<status status="FAIL" starttime="20230703 15:37:02.278" endtime="20230703 15:37:02.291">Error: browserContext.close: Target page, context or browser has been closed</status>
+<msg timestamp="20230714 15:39:33.832" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230714 15:39:33.826" endtime="20230714 15:39:33.833"/>
 </kw>
-<status status="FAIL" starttime="20230703 15:36:32.927" endtime="20230703 15:37:02.294">Suite teardown failed:
-Error: browserContext.close: Target page, context or browser has been closed</status>
+<doc>This is a test suite for booking a room and checking in online</doc>
+<status status="FAIL" starttime="20230714 15:39:26.979" endtime="20230714 15:39:33.833">Suite setup failed:
+Execution terminated by signal</status>
 </suite>
-<status status="FAIL" starttime="20230703 15:36:32.926" endtime="20230703 15:37:02.307"/>
-</suite>
-<status status="FAIL" starttime="20230703 15:36:32.924" endtime="20230703 15:37:02.310"/>
-</suite>
-<suite id="s1-s1-s2" name="Regression" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression">
-<suite id="s1-s1-s2-s1" name="Modify Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/modify_booking.robot">
+<suite id="s1-s1-s1-s1-s2" name="BUI2-557" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-557.robot">
+<test id="s1-s1-s1-s1-s2-t1" name="Create a new Booking" line="11">
 <kw name="Open Browser to Landing Page" library="common" type="SETUP">
 <doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Open New Browser To URL" library="common">
+<arg>${url}</arg>
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
 <arg>${headless}</arg>
@@ -346,978 +137,348 @@ Error: browserContext.close: Target page, context or browser has been closed</st
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:38.051" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/4/browser/traces/b661e019-c28d-4f7e-b19b-b146969b0d43"}</msg>
-<msg timestamp="20230703 15:36:39.691" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/4/browser/traces/b661e019-c28d-4f7e-b19b-b146969b0d43"}</msg>
-<status status="PASS" starttime="20230703 15:36:38.050" endtime="20230703 15:36:39.692"/>
+<status status="FAIL" starttime="20230714 15:39:33.911" endtime="20230714 15:39:33.912"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:39.696" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230703 15:36:39.692" endtime="20230703 15:36:39.696"/>
+<status status="NOT RUN" starttime="20230714 15:39:33.913" endtime="20230714 15:39:33.913"/>
 </kw>
 <kw name="New Context" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:39.697" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230703 15:36:40.184" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:40.184" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:39.696" endtime="20230703 15:36:40.184"/>
+<status status="NOT RUN" starttime="20230714 15:39:33.913" endtime="20230714 15:39:33.913"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230703 15:36:45.124" level="INFO">Successfully initialized new page object and opened url: https://test3.omenahotels.com/</msg>
-<status status="PASS" starttime="20230703 15:36:40.185" endtime="20230703 15:36:45.124"/>
+<status status="NOT RUN" starttime="20230714 15:39:33.914" endtime="20230714 15:39:33.914"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:33.911" endtime="20230714 15:39:33.915"/>
 </kw>
 <kw name="Wait Until Network Is Idle" library="Browser">
 <tag>HTTP</tag>
 <tag>Wait</tag>
 <doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230703 15:36:45.125" endtime="20230703 15:36:46.857"/>
+<status status="NOT RUN" starttime="20230714 15:39:33.916" endtime="20230714 15:39:33.916"/>
 </kw>
 <kw name="Allow Cookies" library="common">
 <doc>Allow Cookies/Toggle Cookie allowance</doc>
-<kw name="Is Element Found" library="common">
-<var>${cookieModalVisible}</var>
-<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
-<doc>A keyword that has a very complex way of figuring out whether an
-element is found or not because I had trouble with the built-in keywords
-Can be solved differently if you have a better idea</doc>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>10s</arg>
-<tag>Config</tag>
+<status status="NOT RUN" starttime="20230714 15:39:33.916" endtime="20230714 15:39:33.916"/>
+</kw>
+<kw name="Set Environment" library="common">
+<status status="NOT RUN" starttime="20230714 15:39:33.916" endtime="20230714 15:39:33.917"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:33.910" endtime="20230714 15:39:33.917"/>
+</kw>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:46.863" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" starttime="20230703 15:36:46.859" endtime="20230703 15:36:46.863"/>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230714 15:39:33.920" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230714 15:39:33.917" endtime="20230714 15:39:33.920"/>
 </kw>
-<try>
-<branch type="TRY">
-<kw name="Get Elements" library="Browser">
-<var>${els}</var>
-<arg>${selector}</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230703 15:36:46.977" level="INFO">Found 1 Locators successfully.</msg>
-<msg timestamp="20230703 15:36:46.977" level="INFO">${els} = ['element=4553a605-ceb9-43ec-85f5-fa769a607452']</msg>
-<status status="PASS" starttime="20230703 15:36:46.865" endtime="20230703 15:36:46.977"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${count}</var>
-<arg>${els}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230703 15:36:46.979" level="INFO">Length is 1</msg>
-<msg timestamp="20230703 15:36:46.979" level="INFO">${count} = 1</msg>
-<status status="PASS" starttime="20230703 15:36:46.978" endtime="20230703 15:36:46.979"/>
-</kw>
-<if>
-<branch type="IF" condition="${count} &gt; 0">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>True</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 15:36:46.981" level="INFO">${visible} = True</msg>
-<status status="PASS" starttime="20230703 15:36:46.981" endtime="20230703 15:36:46.981"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:46.980" endtime="20230703 15:36:46.982"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:46.982" endtime="20230703 15:36:46.983"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:46.982" endtime="20230703 15:36:46.983"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:46.979" endtime="20230703 15:36:46.983"/>
-</if>
-<status status="PASS" starttime="20230703 15:36:46.864" endtime="20230703 15:36:46.983"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Set Variable" library="BuiltIn">
-<var>${visible}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:46.984" endtime="20230703 15:36:46.985"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:46.984" endtime="20230703 15:36:46.985"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:46.864" endtime="20230703 15:36:46.985"/>
-</try>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:46.990" level="INFO">Set timeout to: 90000</msg>
-<status status="PASS" starttime="20230703 15:36:46.986" endtime="20230703 15:36:46.990"/>
-</kw>
-<msg timestamp="20230703 15:36:46.991" level="INFO">${cookieModalVisible} = True</msg>
-<status status="PASS" starttime="20230703 15:36:46.858" endtime="20230703 15:36:46.991"/>
-</kw>
-<if>
-<branch type="IF" condition="${cookieModalVisible}">
-<kw name="Click" library="Browser">
-<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 15:36:46.993" endtime="20230703 15:36:47.412"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:46.992" endtime="20230703 15:36:47.413"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>No Cookie Modal Visible</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.414" endtime="20230703 15:36:47.414"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:47.414" endtime="20230703 15:36:47.415"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:46.992" endtime="20230703 15:36:47.415"/>
-</if>
-<status status="PASS" starttime="20230703 15:36:46.858" endtime="20230703 15:36:47.415"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:38.048" endtime="20230703 15:36:47.416"/>
-</kw>
-<test id="s1-s1-s2-s1-t1" name="A new booker opens the edit guest page and changes the main guest to someone else" line="12">
-<kw name="Pass Execution" library="BuiltIn">
-<arg>TBD</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230703 15:36:47.430" level="INFO">Execution passed with message:
-TBD</msg>
-<status status="PASS" starttime="20230703 15:36:47.429" endtime="20230703 15:36:47.431"/>
-</kw>
-<kw name="A new booker makes a reservation" library="booking">
-<doc>A new booker makes a reservation</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.432" endtime="20230703 15:36:47.432"/>
-</kw>
-<kw name="Successfully completes a payment" library="booking">
-<doc>The payment is successfully completed</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.433" endtime="20230703 15:36:47.433"/>
-</kw>
-<kw name="Booker clicks on main guest name" library="booking">
-<doc>Booker clicks on main guest name</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.433" endtime="20230703 15:36:47.434"/>
-</kw>
-<kw name="Edit guest page is opened" library="booking">
-<doc>Verifeies guest page is opened</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.434" endtime="20230703 15:36:47.434"/>
-</kw>
-<kw name="Save and Sign button is visible" library="booking">
-<doc>Verifies the save and sign button is visible</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.435" endtime="20230703 15:36:47.435"/>
-</kw>
-<kw name="Toggle Someone Else Checkbox" library="booking">
-<doc>Toggles the "Someone else will be the main guest" checkbox</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.436" endtime="20230703 15:36:47.436"/>
-</kw>
-<kw name="Save and Sign button is visible" library="booking">
-<doc>Verifies the save and sign button is visible</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.437" endtime="20230703 15:36:47.437"/>
-</kw>
-<kw name="Fill in Other Guest Details" library="booking">
-<doc>Fills in other guest details, which can be given as arguments or uses default values</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.438" endtime="20230703 15:36:47.438"/>
-</kw>
-<kw name="Click Save and Sign" library="booking">
-<doc>Clicks the save and sign button</doc>
-<status status="NOT RUN" starttime="20230703 15:36:47.439" endtime="20230703 15:36:47.439"/>
-</kw>
+<status status="FAIL" starttime="20230714 15:39:33.909" endtime="20230714 15:39:33.920">Setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t2" name="Add Someone Else as the Main Guest" line="25">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.921" endtime="20230714 15:39:33.922">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t3" name="Validation shows msg for fields marked" line="39">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.922" endtime="20230714 15:39:33.923">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t4" name="Showing imported passport when the National is not Finland" line="62">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.924" endtime="20230714 15:39:33.925">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230714 15:39:33.840" endtime="20230714 15:39:33.926"/>
+</suite>
+<suite id="s1-s1-s1-s1-s3" name="BUI2-558" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-558.robot">
+<test id="s1-s1-s1-s1-s3-t1" name="Verify notification when marking someone else as a guest" line="9">
+<tag>robot:exit</tag>
 <tag>skip</tag>
-<status status="PASS" starttime="20230703 15:36:47.417" endtime="20230703 15:36:47.440">TBD</status>
+<status status="FAIL" starttime="20230714 15:39:33.933" endtime="20230714 15:39:33.934">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t2" name="Verify room name in Edit guest popup when marking someone else as a guest" line="15">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.935" endtime="20230714 15:39:33.936">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t3" name="Verify Purpose of trip checkbox in Edit guest popup when marking someone else as a guest" line="21">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.936" endtime="20230714 15:39:33.937">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t4" name="Verify Save and invite button when marking someone else as a guest" line="27">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.938" endtime="20230714 15:39:33.939">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t5" name="Verify Invite guest popup UI" line="33">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.939" endtime="20230714 15:39:33.940">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t6" name="Verify email field validation when inviting guest" line="42">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.941" endtime="20230714 15:39:33.942">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t7" name="Verify invalid email field validation when inviting guest" line="51">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.943" endtime="20230714 15:39:33.945">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t8" name="Verify Warning popup when inviting blocked guest" line="60">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.946" endtime="20230714 15:39:33.947">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t9" name="Verify invite guest with guest email same as booker email" line="71">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.948" endtime="20230714 15:39:33.949">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t10" name="Verify invite guest with valid information" line="84">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.950" endtime="20230714 15:39:33.950">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230714 15:39:33.932" endtime="20230714 15:39:33.951"/>
+</suite>
+<suite id="s1-s1-s1-s1-s4" name="BUI2-559" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-559.robot">
+<test id="s1-s1-s1-s1-s4-t1" name="UI authentication Formerly guest info when invited adult" line="13">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.954" endtime="20230714 15:39:33.955">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t2" name="Univite pop-up UI validation" line="31">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.956" endtime="20230714 15:39:33.957">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t3" name="UI authentication Formerly guest info when invited child" line="51">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.958" endtime="20230714 15:39:33.959">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t4" name="UI validation when remove guest" line="70">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.960" endtime="20230714 15:39:33.962">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t5" name="UI validation when uninvite guest" line="89">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.963" endtime="20230714 15:39:33.964">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230714 15:39:33.953" endtime="20230714 15:39:33.965"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:26.977" endtime="20230714 15:39:33.967"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:26.975" endtime="20230714 15:39:33.971"/>
+</suite>
+<suite id="s1-s1-s2" name="Regression" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression">
+<suite id="s1-s1-s2-s1" name="Modify Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/modify_booking.robot">
+<test id="s1-s1-s2-s1-t1" name="A new booker opens the edit guest page and changes the main guest to someone else" line="12">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.977" endtime="20230714 15:39:33.979">Test execution stopped due to a fatal error.</status>
 </test>
 <doc>A test suite for verifying modify booking functionality</doc>
-<status status="PASS" starttime="20230703 15:36:32.944" endtime="20230703 15:36:47.455"/>
+<status status="FAIL" starttime="20230714 15:39:33.975" endtime="20230714 15:39:33.980"/>
 </suite>
-<status status="PASS" starttime="20230703 15:36:32.943" endtime="20230703 15:36:47.810"/>
+<suite id="s1-s1-s2-s2" name="New Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/new_booking.robot">
+<test id="s1-s1-s2-s2-t1" name="Create A New Booking as" line="12">
+<doc>A new booker opens the page and does a successful booking</doc>
+<tag>robot:exit</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230714 15:39:33.983" endtime="20230714 15:39:33.984">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-s2-t2" name="Confirm Email and Open Link" line="26">
+<doc>A new booker receives an email with a link to modify the booking</doc>
+<tag>robot:exit</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230714 15:39:33.985" endtime="20230714 15:39:33.986">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230714 15:39:33.982" endtime="20230714 15:39:33.987"/>
 </suite>
-<status status="FAIL" starttime="20230703 15:36:32.923" endtime="20230703 15:37:02.313"/>
+<status status="FAIL" starttime="20230714 15:39:33.974" endtime="20230714 15:39:33.989"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:26.973" endtime="20230714 15:39:33.991"/>
 </suite>
 <suite id="s1-s2" name="MUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI">
 <suite id="s1-s2-s1" name="EC" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/EC">
 <suite id="s1-s2-s1-s1" name="New Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/EC/new_booking.robot">
-<test id="s1-s2-s1-s1-t1" name="Create A New Booking on Booking.com for today and verify Emails" line="17">
-<kw name="Get Inbox ID" library="common">
-<var>${id}</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230703 15:36:38.054" endtime="20230703 15:36:38.055"/>
-</kw>
-<msg timestamp="20230703 15:36:38.055" level="INFO">${id} = 492aa3bb-9e4b-410a-a02c-84f13ace89e8</msg>
-<status status="PASS" starttime="20230703 15:36:38.053" endtime="20230703 15:36:38.055"/>
-</kw>
-<kw name="Open New Browser To URL" library="common">
-<arg>https://secure.booking.com/book.html?hotel_id=10304890&amp;test=1</arg>
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>${headless}</arg>
-<arg>timeout=${timeout}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:38.058" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/6/browser/traces/986a8aaf-8c98-456e-a588-ce33a8cb76c8"}</msg>
-<msg timestamp="20230703 15:36:39.713" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/6/browser/traces/986a8aaf-8c98-456e-a588-ce33a8cb76c8"}</msg>
-<status status="PASS" starttime="20230703 15:36:38.056" endtime="20230703 15:36:39.713"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:39.717" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230703 15:36:39.714" endtime="20230703 15:36:39.717"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:39.719" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230703 15:36:40.136" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:40.136" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:39.718" endtime="20230703 15:36:40.136"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>${url}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230703 15:36:46.375" level="INFO">Successfully initialized new page object and opened url: https://secure.booking.com/book.html?hotel_id=10304890&amp;test=1</msg>
-<status status="PASS" starttime="20230703 15:36:40.137" endtime="20230703 15:36:46.376"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:38.056" endtime="20230703 15:36:46.377"/>
-</kw>
-<kw name="Get Selectors For Tomorrow" library="Helpers">
-<var>${day}</var>
-<var>${month}</var>
-<msg timestamp="20230703 15:36:46.379" level="INFO">${day} = 4</msg>
-<msg timestamp="20230703 15:36:46.379" level="INFO">${month} = 7</msg>
-<status status="PASS" starttime="20230703 15:36:46.378" endtime="20230703 15:36:46.379"/>
-</kw>
-<kw name="Select Options By" library="Browser">
-<arg>id=check-availability__checkin-monthday</arg>
-<arg>value</arg>
-<arg>${day}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 15:36:46.380" endtime="20230703 15:36:46.870"/>
-</kw>
-<kw name="Select Options By" library="Browser">
-<arg>id=check-availability__checkin-yearmonth</arg>
-<arg>value</arg>
-<arg>2023-${month}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 15:36:46.870" endtime="20230703 15:36:48.541"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//span[contains(text(), 'Check availability')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230703 15:36:48.541" endtime="20230703 15:36:51.027"/>
-</kw>
-<kw name="Wait Until Network Is Idle" library="Browser">
-<tag>HTTP</tag>
-<tag>Wait</tag>
-<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="PASS" starttime="20230703 15:36:51.028" endtime="20230703 15:36:57.801"/>
-</kw>
-<kw name="Check URL Contains" library="common">
-<var>${urlContains}</var>
-<arg>searchresults</arg>
-<kw name="Get Url" library="Browser">
-<var>${current_url}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<msg timestamp="20230703 15:36:57.807" level="INFO">${current_url} = https://www.booking.com/searchresults.html?aid=304142&amp;label=gen173nr-1FCBIoggI46AdIM1gEaEiIAQGYATG4AQfIAQ_YAQHoAQH4AQOIAgGoAgO4AtqBi6UGwAIB0gIkNDFmYzliN2EtMGNhMS00OTk4LWIzMTQtMDlmOTYzZjJkYjVk2AIF4AIB&amp;...</msg>
-<status status="PASS" starttime="20230703 15:36:57.803" endtime="20230703 15:36:57.807"/>
-</kw>
-<if>
-<branch type="IF" condition="'${expected_string}' in '${current_url}'">
-<kw name="Log" library="BuiltIn">
-<arg>URL contains the expected string: ${expected_string}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230703 15:36:57.809" level="INFO">URL contains the expected string: searchresults</msg>
-<status status="PASS" starttime="20230703 15:36:57.808" endtime="20230703 15:36:57.809"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${urlContains}</var>
-<arg>True</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230703 15:36:57.809" level="INFO">${urlContains} = True</msg>
-<status status="PASS" starttime="20230703 15:36:57.809" endtime="20230703 15:36:57.809"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:57.808" endtime="20230703 15:36:57.810"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>URL does not contain the expected string: ${expected_string}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.810" endtime="20230703 15:36:57.810"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${urlContains}</var>
-<arg>False</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.810" endtime="20230703 15:36:57.811"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:57.810" endtime="20230703 15:36:57.811"/>
-</branch>
-<status status="PASS" starttime="20230703 15:36:57.807" endtime="20230703 15:36:57.811"/>
-</if>
-<msg timestamp="20230703 15:36:57.811" level="INFO">${urlContains} = True</msg>
-<status status="PASS" starttime="20230703 15:36:57.802" endtime="20230703 15:36:57.811"/>
-</kw>
-<if>
-<branch type="IF" condition="'${urlContains}' == 'True'">
-<kw name="Fail" library="BuiltIn">
-<arg>Rooms not is not available for this date</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20230703 15:36:57.813" level="FAIL">Rooms not is not available for this date</msg>
-<status status="FAIL" starttime="20230703 15:36:57.812" endtime="20230703 15:36:57.813"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:57.812" endtime="20230703 15:36:57.813"/>
-</branch>
-<branch type="ELSE">
-<kw name="Select Options By" library="Browser">
-<arg>//select[contains(@id, 'unit')]</arg>
-<arg>value</arg>
-<arg>1</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.814" endtime="20230703 15:36:57.814"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//span[contains(text(), 'reserve')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.814" endtime="20230703 15:36:57.815"/>
-</kw>
-<kw name="Get Inbox ID" library="common">
-<var>${id}</var>
-<status status="NOT RUN" starttime="20230703 15:36:57.815" endtime="20230703 15:36:57.815"/>
-</kw>
-<kw name="Click and Fill" library="common">
-<arg>id=firstname</arg>
-<arg>${firstName}</arg>
-<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.815" endtime="20230703 15:36:57.816"/>
-</kw>
-<kw name="Click and Fill" library="common">
-<arg>id=lastname</arg>
-<arg>${lastName}</arg>
-<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.817" endtime="20230703 15:36:57.817"/>
-</kw>
-<kw name="Click and Fill" library="common">
-<arg>id=email</arg>
-<arg>${id}@mailslurp.com</arg>
-<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.817" endtime="20230703 15:36:57.817"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${id}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.818" endtime="20230703 15:36:57.818"/>
-</kw>
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>$ID</arg>
-<arg>${id}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.818" endtime="20230703 15:36:57.819"/>
-</kw>
-<kw name="Click and Fill" library="common">
-<arg>id=remarks</arg>
-<arg>testRemark</arg>
-<doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.819" endtime="20230703 15:36:57.819"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//input[contains(@class, 'guest-name-input')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.820" endtime="20230703 15:36:57.820"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//span[contains(text(), 'Final details')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.820" endtime="20230703 15:36:57.820"/>
-</kw>
-<kw name="Wait Until Visible" library="common">
-<arg>//select[@data-phone-country]</arg>
-<doc>An easier keyword for waiting until an element is visible</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.820" endtime="20230703 15:36:57.821"/>
-</kw>
-<kw name="Select Options By" library="Browser">
-<arg>//select[@data-phone-country]</arg>
-<arg>value</arg>
-<arg>FI</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.821" endtime="20230703 15:36:57.821"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>id=phone</arg>
-<arg>${phone}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.821" endtime="20230703 15:36:57.821"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//button[@name='book']</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.822" endtime="20230703 15:36:57.822"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${longer}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.822" endtime="20230703 15:36:57.822"/>
-</kw>
-<kw name="Wait Until Visible" library="common">
-<arg>//button[contains(@class, 'bui-modal__close')]</arg>
-<doc>An easier keyword for waiting until an element is visible</doc>
-<status status="NOT RUN" starttime="20230703 15:36:57.822" endtime="20230703 15:36:57.823"/>
-</kw>
-<status status="NOT RUN" starttime="20230703 15:36:57.814" endtime="20230703 15:36:57.823"/>
-</branch>
-<status status="FAIL" starttime="20230703 15:36:57.812" endtime="20230703 15:36:57.823"/>
-</if>
-<status status="FAIL" starttime="20230703 15:36:38.048" endtime="20230703 15:36:57.824">Rooms not is not available for this date</status>
+<test id="s1-s2-s1-s1-t1" name="Create A New Booking on Booking.com for today and verify Emails" line="31">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.998" endtime="20230714 15:39:33.999">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-s1-s1-t2" name="Verify Emails and Get Booking No" line="49">
-<kw name="Get Inbox ID" library="common">
-<var>${id}</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230703 15:36:57.888" endtime="20230703 15:36:57.889"/>
-</kw>
-<msg timestamp="20230703 15:36:57.889" level="INFO">${id} = 492aa3bb-9e4b-410a-a02c-84f13ace89e8</msg>
-<status status="PASS" starttime="20230703 15:36:57.887" endtime="20230703 15:36:57.889"/>
-</kw>
-<kw name="Wait for Latest Booking Confirmation" library="MailSlurp">
-<var>${confirmationEmail}</var>
-<arg>${id}</arg>
-<arg>is confirmed</arg>
-<msg timestamp="20230703 15:36:58.519" level="FAIL">TypeError: expected string or bytes-like object</msg>
-<status status="FAIL" starttime="20230703 15:36:57.890" endtime="20230703 15:36:58.530"/>
-</kw>
-<kw name="Wait for Latest Booking Confirmation" library="MailSlurp">
-<var>${welcomeEmail}</var>
-<arg>${id}</arg>
-<arg>Welcome to Exhibition Court Hotel</arg>
-<status status="NOT RUN" starttime="20230703 15:36:58.531" endtime="20230703 15:36:58.531"/>
-</kw>
-<kw name="Get Confirmation Number from Email" library="MailSlurp">
-<var>${bookingNo}</var>
-<arg>${welcomeEmail}</arg>
-<status status="NOT RUN" starttime="20230703 15:36:58.532" endtime="20230703 15:36:58.532"/>
-</kw>
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${BDCNo}</arg>
-<arg>${bookingNo}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:58.532" endtime="20230703 15:36:58.532"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:57.881" endtime="20230703 15:36:58.533">TypeError: expected string or bytes-like object</status>
+<test id="s1-s2-s1-s1-t2" name="Verify Emails and Get Booking No" line="66">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.999" endtime="20230714 15:39:34.001">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-s1-s1-t3" name="Create A New Booking on Booking.com for a later date and verify Emails" line="56">
-<kw name="Pass Execution" library="BuiltIn">
-<arg>TBD</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230703 15:36:58.542" level="INFO">Execution passed with message:
-TBD</msg>
-<status status="PASS" starttime="20230703 15:36:58.542" endtime="20230703 15:36:58.542"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:58.539" endtime="20230703 15:36:58.543">TBD</status>
+<test id="s1-s2-s1-s1-t3" name="Create A New Booking on Booking.com for a later date and verify Emails" line="73">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.001" endtime="20230714 15:39:34.002">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-s1-s1-t4" name="Cancel Booking via BDC" line="59">
-<kw name="Pass Execution" library="BuiltIn">
-<arg>Can't cancel if done upon the next 24 hours</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230703 15:36:58.549" level="INFO">Execution passed with message:
-Can't cancel if done upon the next 24 hours</msg>
-<status status="PASS" starttime="20230703 15:36:58.549" endtime="20230703 15:36:58.549"/>
-</kw>
-<status status="PASS" starttime="20230703 15:36:58.546" endtime="20230703 15:36:58.549">Can't cancel if done upon the next 24 hours</status>
+<test id="s1-s2-s1-s1-t4" name="Cancel Booking via BDC" line="76">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.003" endtime="20230714 15:39:34.004">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-s1-s1-t5" name="Open Booking in MUI" line="62">
-<kw name="Open Browser to Nelson Portal and Navigate to Test Exhibition" library="mui">
-<kw name="Open Browser to Nelson Portal" library="mui">
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>${headless}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:58.558" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/6/browser/traces/9c621bee-2127-4f58-a328-a15f71dd56ef"}</msg>
-<msg timestamp="20230703 15:36:59.732" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/6/browser/traces/9c621bee-2127-4f58-a328-a15f71dd56ef"}</msg>
-<status status="PASS" starttime="20230703 15:36:58.557" endtime="20230703 15:36:59.733"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" starttime="20230703 15:36:59.733" endtime="20230703 15:36:59.734"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:59.735" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230703 15:36:59.781" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:59.781" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:59.734" endtime="20230703 15:36:59.782"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>%{MUI_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230703 15:36:59.783" level="FAIL">Environment variable '%{MUI_URL}' not found.</msg>
-<status status="FAIL" starttime="20230703 15:36:59.782" endtime="20230703 15:36:59.783"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:58.557" endtime="20230703 15:36:59.785"/>
-</kw>
-<kw name="Log in to Nelson Portal" library="mui">
-<status status="NOT RUN" starttime="20230703 15:36:59.786" endtime="20230703 15:36:59.786"/>
-</kw>
-<kw name="Select Environment" library="mui">
-<arg>Test Exhibition</arg>
-<status status="NOT RUN" starttime="20230703 15:36:59.786" endtime="20230703 15:36:59.786"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:58.556" endtime="20230703 15:36:59.787"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>In Nelson, looking for booking: ${BDCNo}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:59.787" endtime="20230703 15:36:59.788"/>
-</kw>
-<kw name="Search with String" library="mui">
-<arg>${BDCNo}</arg>
-<status status="NOT RUN" starttime="20230703 15:36:59.788" endtime="20230703 15:36:59.788"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:59.788" endtime="20230703 15:36:59.788"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>//*[contains(text(), '${BDCNo}')]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:59.788" endtime="20230703 15:36:59.789"/>
-</kw>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<arg>2</arg>
-<arg>5</arg>
-<arg>Click View Guests Button</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:59.789" endtime="20230703 15:36:59.789"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:58.554" endtime="20230703 15:36:59.790">Environment variable '%{MUI_URL}' not found.</status>
+<test id="s1-s2-s1-s1-t5" name="Open Booking in MUI" line="79">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.004" endtime="20230714 15:39:34.005">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-s1-s1-t6" name="Start Creating a new Booking in MUI" line="70">
-<kw name="Open Browser to Nelson Portal and Navigate to Test Exhibition" library="mui">
-<kw name="Open Browser to Nelson Portal" library="mui">
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>${headless}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:59.845" level="INFO">Switching browser to browser=ff7b5375-4c43-4bec-bc73-23b75ebf4a76</msg>
-<msg timestamp="20230703 15:36:59.847" level="INFO">Successfully changed active browser</msg>
-<msg timestamp="20230703 15:36:59.847" level="INFO">Reusing existing browser with id: browser=ff7b5375-4c43-4bec-bc73-23b75ebf4a76</msg>
-<status status="PASS" starttime="20230703 15:36:59.844" endtime="20230703 15:36:59.847"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" starttime="20230703 15:36:59.847" endtime="20230703 15:36:59.848"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:59.848" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230703 15:36:59.869" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:59.869" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:59.848" endtime="20230703 15:36:59.869"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>%{MUI_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230703 15:36:59.870" level="FAIL">Environment variable '%{MUI_URL}' not found.</msg>
-<status status="FAIL" starttime="20230703 15:36:59.869" endtime="20230703 15:36:59.870"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:59.844" endtime="20230703 15:36:59.872"/>
-</kw>
-<kw name="Log in to Nelson Portal" library="mui">
-<status status="NOT RUN" starttime="20230703 15:36:59.872" endtime="20230703 15:36:59.872"/>
-</kw>
-<kw name="Select Environment" library="mui">
-<arg>Test Exhibition</arg>
-<status status="NOT RUN" starttime="20230703 15:36:59.873" endtime="20230703 15:36:59.873"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:59.843" endtime="20230703 15:36:59.873"/>
-</kw>
-<kw name="Open Reservations Page" library="mui">
-<status status="NOT RUN" starttime="20230703 15:36:59.874" endtime="20230703 15:36:59.874"/>
-</kw>
-<kw name="Click New Reservation Button" library="mui">
-<status status="NOT RUN" starttime="20230703 15:36:59.874" endtime="20230703 15:36:59.874"/>
-</kw>
-<kw name="Select Normal Reservation" library="mui">
-<status status="NOT RUN" starttime="20230703 15:36:59.874" endtime="20230703 15:36:59.875"/>
-</kw>
-<kw name="Switch Page" library="Browser">
-<var>${previous}</var>
-<arg>NEW</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Switches the active browser page to another open page by ``id`` or ``NEW``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:59.875" endtime="20230703 15:36:59.875"/>
-</kw>
-<kw name="Wait Until Network Is Idle" library="Browser">
-<tag>HTTP</tag>
-<tag>Wait</tag>
-<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:59.875" endtime="20230703 15:36:59.875"/>
-</kw>
-<kw name="Create a successful booking and return UUID" library="booking">
-<var>${uuid}</var>
-<arg>True</arg>
-<status status="NOT RUN" starttime="20230703 15:36:59.876" endtime="20230703 15:36:59.876"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:59.841" endtime="20230703 15:36:59.876">Environment variable '%{MUI_URL}' not found.</status>
+<test id="s1-s2-s1-s1-t6" name="Cancel Booking in MUI" line="87">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.006" endtime="20230714 15:39:34.006">Test execution stopped due to a fatal error.</status>
 </test>
-<kw name="Close Browser" library="Browser" type="TEARDOWN">
-<arg>ALL</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<msg timestamp="20230703 15:37:02.114" level="INFO">Closed all browsers</msg>
-<status status="PASS" starttime="20230703 15:36:59.977" endtime="20230703 15:37:02.115"/>
-</kw>
-<doc>A test suite for verifying modify booking functionality</doc>
-<status status="FAIL" starttime="20230703 15:36:32.933" endtime="20230703 15:37:02.116"/>
-</suite>
-<status status="FAIL" starttime="20230703 15:36:32.931" endtime="20230703 15:37:02.130"/>
-</suite>
-<suite id="s1-s2-s2" name="Feature" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/feature">
-<suite id="s1-s2-s2-s1" name="MUI-430" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/feature/MUI-430.robot">
-<kw name="Open Browser to Nelson Portal and Login" library="mui" type="SETUP">
-<kw name="Open Browser to Nelson Portal" library="mui">
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>${headless}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:38.052" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/7/browser/traces/5b6df146-5436-4a55-9e81-664e80ff9aff"}</msg>
-<msg timestamp="20230703 15:36:39.755" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/7/browser/traces/5b6df146-5436-4a55-9e81-664e80ff9aff"}</msg>
-<status status="PASS" starttime="20230703 15:36:38.050" endtime="20230703 15:36:39.755"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230703 15:36:39.759" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230703 15:36:39.756" endtime="20230703 15:36:39.760"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:39.761" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230703 15:36:40.247" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:40.247" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:39.760" endtime="20230703 15:36:40.248"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>%{MUI_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230703 15:36:40.250" level="FAIL">Environment variable '%{MUI_URL}' not found.</msg>
-<status status="FAIL" starttime="20230703 15:36:40.248" endtime="20230703 15:36:40.250"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:38.050" endtime="20230703 15:36:40.252"/>
-</kw>
-<kw name="Log in to Nelson Portal" library="mui">
-<status status="NOT RUN" starttime="20230703 15:36:40.253" endtime="20230703 15:36:40.253"/>
-</kw>
-<kw name="Select Environment" library="mui">
-<arg>${environment}</arg>
-<status status="NOT RUN" starttime="20230703 15:36:40.254" endtime="20230703 15:36:40.254"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:38.048" endtime="20230703 15:36:40.254"/>
-</kw>
-<test id="s1-s2-s2-s1-t1" name="Filter Check in incomplete and open reservation" line="12">
-<doc>Test case verifying the functionality of the Check in incomplete filter
-when it's toggled on</doc>
-<status status="FAIL" starttime="20230703 15:36:40.255" endtime="20230703 15:36:40.261">Parent suite setup failed:
-Environment variable '%{MUI_URL}' not found.</status>
-</test>
-<test id="s1-s2-s2-s1-t2" name="Remove filter and open a reservation" line="23">
-<doc>Test case verifying the functionality of the Check in incomplete filter
-when it's toggled off</doc>
-<status status="FAIL" starttime="20230703 15:36:40.267" endtime="20230703 15:36:40.272">Parent suite setup failed:
-Environment variable '%{MUI_URL}' not found.</status>
-</test>
-<kw name="Close Browser" library="Browser" type="TEARDOWN">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<msg timestamp="20230703 15:36:42.085" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230703 15:36:40.280" endtime="20230703 15:36:42.085"/>
-</kw>
-<doc>This file contains test cases for testing MUI-430.robot</doc>
-<status status="FAIL" starttime="20230703 15:36:32.936" endtime="20230703 15:36:42.085">Suite setup failed:
-Environment variable '%{MUI_URL}' not found.</status>
-</suite>
-<status status="FAIL" starttime="20230703 15:36:32.935" endtime="20230703 15:36:42.097"/>
-</suite>
-<status status="FAIL" starttime="20230703 15:36:32.930" endtime="20230703 15:37:02.135"/>
-</suite>
-<suite id="s1-s3" name="Others" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/Others">
-<suite id="s1-s3-s1" name="Example" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/Others/example.robot">
-<test id="s1-s3-s1-t1" name="Open Nelson Portal" line="9">
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>false</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230703 15:36:37.668" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/8/browser/traces/797e9cfd-a017-4749-995f-cde54a3a7e10"}</msg>
-<msg timestamp="20230703 15:36:39.311" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/pabot_results/8/browser/traces/797e9cfd-a017-4749-995f-cde54a3a7e10"}</msg>
-<status status="PASS" starttime="20230703 15:36:37.667" endtime="20230703 15:36:39.312"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230703 15:36:39.314" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230703 15:36:39.408" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230703 15:36:39.408" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230703 15:36:39.313" endtime="20230703 15:36:39.408"/>
-</kw>
-<kw name="EnvHandler.Get Environment Variable">
-<var>${url}</var>
-<arg>MUI_LINK</arg>
-<msg timestamp="20230703 15:36:39.416" level="FAIL">No keyword with name 'EnvHandler.Get Environment Variable' found.</msg>
-<status status="FAIL" starttime="20230703 15:36:39.416" endtime="20230703 15:36:39.416"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>${url}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:39.417" endtime="20230703 15:36:39.417"/>
-</kw>
-<tag>skip</tag>
-<status status="FAIL" starttime="20230703 15:36:37.663" endtime="20230703 15:36:39.418">No keyword with name 'EnvHandler.Get Environment Variable' found.</status>
-</test>
-<test id="s1-s3-s1-t2" name="Login Nelson Portal" line="15">
-<kw name="EnvHandler.Get Environment Variable">
-<var>${password}</var>
-<arg>MUI_PASSWORD</arg>
-<msg timestamp="20230703 15:36:39.652" level="FAIL">No keyword with name 'EnvHandler.Get Environment Variable' found.</msg>
-<status status="FAIL" starttime="20230703 15:36:39.652" endtime="20230703 15:36:39.652"/>
-</kw>
-<kw name="EnvHandler.Get Environment Variable">
-<var>${username}</var>
-<arg>MUI_USERNAME</arg>
-<status status="NOT RUN" starttime="20230703 15:36:39.660" endtime="20230703 15:36:39.660"/>
-</kw>
-<kw name="Type Secret" library="Browser">
-<arg>id=loginUsername</arg>
-<arg>${username}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given secret from ``variable_name`` into the text field
-found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:39.661" endtime="20230703 15:36:39.661"/>
-</kw>
-<kw name="Type Secret" library="Browser">
-<arg>id=loginPassword</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given secret from ``variable_name`` into the text field
-found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230703 15:36:39.662" endtime="20230703 15:36:39.662"/>
-</kw>
-<tag>skip</tag>
-<status status="FAIL" starttime="20230703 15:36:39.641" endtime="20230703 15:36:39.662">No keyword with name 'EnvHandler.Get Environment Variable' found.</status>
-</test>
-<kw name="Close Browser" library="Browser" type="TEARDOWN">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<msg timestamp="20230703 15:36:41.786" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230703 15:36:39.669" endtime="20230703 15:36:41.786"/>
-</kw>
-<status status="FAIL" starttime="20230703 15:36:32.920" endtime="20230703 15:36:41.786"/>
-</suite>
-<status status="FAIL" starttime="20230703 15:36:32.918" endtime="20230703 15:36:41.802"/>
-</suite>
-<doc>Argument file for running tests on Omena test environmen (test4)</doc>
-<status status="FAIL" starttime="20230703 15:36:32.898" endtime="20230703 15:37:02.317"/>
-</suite>
-<statistics>
-<total>
-<stat pass="3" fail="9" skip="0">All Tests</stat>
-</total>
-<tag>
-<stat pass="1" fail="2" skip="0">skip</stat>
-<stat pass="0" fail="1" skip="0">smoke, booking, BUI2-556, online-checkin</stat>
-</tag>
-<suite>
-<stat pass="3" fail="9" skip="0" id="s1" name="Testsuites">Testsuites</stat>
-<stat pass="1" fail="1" skip="0" id="s1-s1" name="BUI">Testsuites.BUI</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Feature">Testsuites.BUI.Feature</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Online Check In">Testsuites.BUI.Feature.Online Check In</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="BUI2-556">Testsuites.BUI.Feature.Online Check In.BUI2-556</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s2" name="Regression">Testsuites.BUI.Regression</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s2-s1" name="Modify Booking">Testsuites.BUI.Regression.Modify Booking</stat>
-<stat pass="2" fail="6" skip="0" id="s1-s2" name="MUI">Testsuites.MUI</stat>
-<stat pass="2" fail="4" skip="0" id="s1-s2-s1" name="EC">Testsuites.MUI.EC</stat>
-<stat pass="2" fail="4" skip="0" id="s1-s2-s1-s1" name="New Booking">Testsuites.MUI.EC.New Booking</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s2-s2" name="Feature">Testsuites.MUI.Feature</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s2-s2-s1" name="MUI-430">Testsuites.MUI.Feature.MUI-430</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s3" name="Others">Testsuites.Others</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s3-s1" name="Example">Testsuites.Others.Example</stat>
-</suite>
-</statistics>
 <errors>
-<msg timestamp="20230703 15:36:34.075" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 14: Setting variable '${MUI_PASSWORD}' failed: Environment variable '%{MUI_PASSWORD}' not found.</msg>
-<msg timestamp="20230703 15:36:34.078" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 13: Setting variable '${MUI_USERNAME}' failed: Environment variable '%{MUI_USERNAME}' not found.</msg>
-<msg timestamp="20230703 15:37:02.219" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+<msg timestamp="20230714 15:39:27.252" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.256" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 4: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.419" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.424" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 7: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.443" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.454" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/checkin.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.792" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
 Error: Tried to take screenshot, but no page was open.</msg>
-<msg timestamp="20230703 15:37:02.289" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg timestamp="20230703 15:36:34.146" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 14: Setting variable '${MUI_PASSWORD}' failed: Environment variable '%{MUI_PASSWORD}' not found.</msg>
-<msg timestamp="20230703 15:36:34.149" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 13: Setting variable '${MUI_USERNAME}' failed: Environment variable '%{MUI_USERNAME}' not found.</msg>
-<msg timestamp="20230703 15:36:34.061" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 14: Setting variable '${MUI_PASSWORD}' failed: Environment variable '%{MUI_PASSWORD}' not found.</msg>
-<msg timestamp="20230703 15:36:34.065" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 13: Setting variable '${MUI_USERNAME}' failed: Environment variable '%{MUI_USERNAME}' not found.</msg>
+<msg timestamp="20230714 15:39:33.859" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.870" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 4: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.888" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.895" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 7: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.903" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:34.008" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>
