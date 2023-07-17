@@ -59,6 +59,6 @@ Verify UI when Booker has fully updated information
    Verify UI Guest information component shown
    Click New Guest
    Verify UI Invite Guest Components
-   Fill Invite guest info and click invite button      ${guestFirstname}   ${guestLastname}   ${guestEmail}
-   Switch To Invite Guest URL Confirmation Page        ${guestEmail}
+   Fill Invite guest info and click invite button      ${guestFirstname}   ${guestLastname}   ${fullEmail}
+   Switch To Invite Guest URL Confirmation Page        ${fullEmail}
    Verify Check In Button Showed In Invited Guest Name  

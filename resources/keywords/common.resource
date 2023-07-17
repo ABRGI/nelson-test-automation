@@ -2,16 +2,32 @@
 Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
-Library            Browser   
+Resource           ${EXECDIR}/resources/variables/variables.resource
+Library            Browser    run_on_failure=Take Custom Screenshot    auto_closing_level=SUITE
 Library            OperatingSystem
 Library            String
 Library            Process
 
 *** Keywords ***
 
+Take Custom Screenshot
+    [Documentation]    Sets the screenshot directory and filename
+    Take Screenshot    filename=${OUTPUTDIR}/screenshots/${SUITE NAME}_${TEST NAME}_{index}.png
+
+Check If String Contains
+    [Arguments]    ${string}    ${substring}
+    ${contains}=    Check If String Contains Substring    ${string}    ${substring}
+    [Return]    ${contains}
+
+Set Environment
+    ${currentUrl}=     Get Url
+    ${env}=        Get Environment From Url    ${currentUrl}
+    Set Variable   ${environment}    ${env}    
+
 Check URL Contains
     [Arguments]    ${expected_string}
-    ${current_url}=    Get URL
+    Set Browser Timeout     3s
+    ${current_url}=    Get URL      
     IF    '${expected_string}' in '${current_url}'    
         Log    URL contains the expected string: ${expected_string}
         ${urlContains}      Set Variable    True
@@ -19,6 +35,7 @@ Check URL Contains
         Log    URL does not contain the expected string: ${expected_string}
         ${urlContains}      Set Variable    False
     END
+    Set Browser Timeout     ${timeout}
     [Return]    ${urlContains}
 
 Is Element Visible
@@ -27,12 +44,14 @@ Is Element Visible
     [Return]    ${isVisible}
 
 Get Inbox ID
-    Log To Console      Mailslurp: 492aa3bb-9e4b-410a-a02c-84f13ace89e8
-    [Return]    492aa3bb-9e4b-410a-a02c-84f13ace89e8
+    Log To Console      Mailslurp: ${inbox_id}
+    [Return]    ${inbox_id}
 
 Create Email and Return Inbox
     [Documentation]    Creates a new email address and returns the inbox object
     ${inbox}=   Create new Inbox
+    #${inbox}=   Get Inbox      ${inbox_id}
+    Log To Console    ${inbox.id}
     [Return]    ${inbox}
 
 Wait For Confirmation Link
@@ -100,13 +119,11 @@ Open New Browser To URL
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
-    New Browser    ${browser}    ${headless}    timeout=${timeout}   
-    Set Browser Timeout    ${timeout}
-    New Context    
-    New Page       ${url}
+    Open New Browser To URL    ${url}
     Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
     Allow Cookies 
+    Set Environment 
 
 Open Browser Directly to Extras
     [Documentation]    This keyword is used only for debugging purposes if you want to use a quicker 

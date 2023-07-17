@@ -35,15 +35,6 @@ Fill in missing environment variables to file or export them manually. And run s
 ./setenv.sh
 ```
 
-Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable). Or with the from [EnvHandler.py](resources/libraries/EnvHandler.py) with keyword EnvHandler.Get Environment Variable.
-
-``` robot
-    ${username}=    EnvHandler.Get Environment Variable    MY_USERNAME
-    Type Secret     id=loginUsername    ${username}
-```
-
-See [example.robot](/testsuites/example.robot)
-
 ## Python Versions
 
 Let's use Python 3.10 for this project. You can check your version using the following cmd.
@@ -90,6 +81,12 @@ Before running tests, you will need to set some environment variables. That can 
 
 ``` bash
 robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ testsuites/
+```
+
+When running tests in CI, we use pabot to execute tests in parallel. Arguments for each environment have been set in environment files in environments folder.
+
+```bash
+pabot -A environments/test4.txt -A environments/test3.txt testsuites/ 
 ```
 
 ### Branches and environments

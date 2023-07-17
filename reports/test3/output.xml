@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on darwin)" generated="20230714 15:39:26.946" rpa="false" schemaversion="3">
+<suite id="s1" name="Testsuites" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites">
+<suite id="s1-s1" name="BUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI">
+<suite id="s1-s1-s1" name="Feature" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature">
+<suite id="s1-s1-s1-s1" name="Online Check In" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in">
+<suite id="s1-s1-s1-s1-s1" name="BUI2-556" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-556.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Open New Browser To URL" library="common">
+<arg>${url}</arg>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230714 15:39:28.217" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "deprecated_pos_args": [], "tracesDir": "/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/browser/traces/35938ef9-36dd-4210-bfb6-6398a7a0fe61"}</msg>
+<msg timestamp="20230714 15:39:30.953" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"deprecated_pos_args":[],"tracesDir":"/Users/saragilbert/Code/SQA/nelson-ta/reports/test3/browser/traces/35938ef9-36dd-4210-bfb6-6398a7a0fe61"}</msg>
+<status status="PASS" starttime="20230714 15:39:28.216" endtime="20230714 15:39:30.954"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230714 15:39:30.957" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230714 15:39:30.954" endtime="20230714 15:39:30.957"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230714 15:39:30.958" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230714 15:39:31.039" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230714 15:39:31.039" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230714 15:39:30.957" endtime="20230714 15:39:31.039"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230714 15:39:33.792" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230714 15:39:33.793" level="FAIL">Execution terminated by signal</msg>
+<status status="FAIL" starttime="20230714 15:39:31.039" endtime="20230714 15:39:33.803"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:28.215" endtime="20230714 15:39:33.803"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.803" endtime="20230714 15:39:33.803"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.804" endtime="20230714 15:39:33.804"/>
+</kw>
+<kw name="Set Environment" library="common">
+<status status="NOT RUN" starttime="20230714 15:39:33.804" endtime="20230714 15:39:33.804"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:28.214" endtime="20230714 15:39:33.805"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Select Hotel, Dates and Guests" line="14">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.805" endtime="20230714 15:39:33.807">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Check Available Rooms and Select a Standard Room" line="19">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.809" endtime="20230714 15:39:33.811">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Continue to Extras and Select Join for Free" line="23">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.812" endtime="20230714 15:39:33.813">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t4" name="Fill in Booker Contact Information" line="28">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.814" endtime="20230714 15:39:33.815">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t5" name="Pay using Web Bank and Nordea" line="32">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.816" endtime="20230714 15:39:33.818">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t6" name="Check In Online" line="36">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.819" endtime="20230714 15:39:33.821">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s1-t7" name="Wait for Door Code and Verify Page" line="42">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230714 15:39:33.822" endtime="20230714 15:39:33.823">Parent suite setup failed:
+Execution terminated by signal</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230714 15:39:33.832" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230714 15:39:33.826" endtime="20230714 15:39:33.833"/>
+</kw>
+<doc>This is a test suite for booking a room and checking in online</doc>
+<status status="FAIL" starttime="20230714 15:39:26.979" endtime="20230714 15:39:33.833">Suite setup failed:
+Execution terminated by signal</status>
+</suite>
+<suite id="s1-s1-s1-s1-s2" name="BUI2-557" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-557.robot">
+<test id="s1-s1-s1-s1-s2-t1" name="Create a new Booking" line="11">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Open New Browser To URL" library="common">
+<arg>${url}</arg>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" starttime="20230714 15:39:33.911" endtime="20230714 15:39:33.912"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.913" endtime="20230714 15:39:33.913"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.913" endtime="20230714 15:39:33.913"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.914" endtime="20230714 15:39:33.914"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:33.911" endtime="20230714 15:39:33.915"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.916" endtime="20230714 15:39:33.916"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<status status="NOT RUN" starttime="20230714 15:39:33.916" endtime="20230714 15:39:33.916"/>
+</kw>
+<kw name="Set Environment" library="common">
+<status status="NOT RUN" starttime="20230714 15:39:33.916" endtime="20230714 15:39:33.917"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:33.910" endtime="20230714 15:39:33.917"/>
+</kw>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230714 15:39:33.920" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230714 15:39:33.917" endtime="20230714 15:39:33.920"/>
+</kw>
+<status status="FAIL" starttime="20230714 15:39:33.909" endtime="20230714 15:39:33.920">Setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t2" name="Add Someone Else as the Main Guest" line="25">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.921" endtime="20230714 15:39:33.922">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t3" name="Validation shows msg for fields marked" line="39">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.922" endtime="20230714 15:39:33.923">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s2-t4" name="Showing imported passport when the National is not Finland" line="62">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.924" endtime="20230714 15:39:33.925">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230714 15:39:33.840" endtime="20230714 15:39:33.926"/>
+</suite>
+<suite id="s1-s1-s1-s1-s3" name="BUI2-558" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-558.robot">
+<test id="s1-s1-s1-s1-s3-t1" name="Verify notification when marking someone else as a guest" line="9">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.933" endtime="20230714 15:39:33.934">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t2" name="Verify room name in Edit guest popup when marking someone else as a guest" line="15">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.935" endtime="20230714 15:39:33.936">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t3" name="Verify Purpose of trip checkbox in Edit guest popup when marking someone else as a guest" line="21">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.936" endtime="20230714 15:39:33.937">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t4" name="Verify Save and invite button when marking someone else as a guest" line="27">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.938" endtime="20230714 15:39:33.939">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t5" name="Verify Invite guest popup UI" line="33">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.939" endtime="20230714 15:39:33.940">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t6" name="Verify email field validation when inviting guest" line="42">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.941" endtime="20230714 15:39:33.942">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t7" name="Verify invalid email field validation when inviting guest" line="51">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.943" endtime="20230714 15:39:33.945">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t8" name="Verify Warning popup when inviting blocked guest" line="60">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.946" endtime="20230714 15:39:33.947">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t9" name="Verify invite guest with guest email same as booker email" line="71">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.948" endtime="20230714 15:39:33.949">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s3-t10" name="Verify invite guest with valid information" line="84">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.950" endtime="20230714 15:39:33.950">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230714 15:39:33.932" endtime="20230714 15:39:33.951"/>
+</suite>
+<suite id="s1-s1-s1-s1-s4" name="BUI2-559" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/feature/online_check_in/BUI2-559.robot">
+<test id="s1-s1-s1-s1-s4-t1" name="UI authentication Formerly guest info when invited adult" line="13">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.954" endtime="20230714 15:39:33.955">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t2" name="Univite pop-up UI validation" line="31">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.956" endtime="20230714 15:39:33.957">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t3" name="UI authentication Formerly guest info when invited child" line="51">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.958" endtime="20230714 15:39:33.959">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t4" name="UI validation when remove guest" line="70">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.960" endtime="20230714 15:39:33.962">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s4-t5" name="UI validation when uninvite guest" line="89">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.963" endtime="20230714 15:39:33.964">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230714 15:39:33.953" endtime="20230714 15:39:33.965"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:26.977" endtime="20230714 15:39:33.967"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:26.975" endtime="20230714 15:39:33.971"/>
+</suite>
+<suite id="s1-s1-s2" name="Regression" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression">
+<suite id="s1-s1-s2-s1" name="Modify Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/modify_booking.robot">
+<test id="s1-s1-s2-s1-t1" name="A new booker opens the edit guest page and changes the main guest to someone else" line="12">
+<tag>robot:exit</tag>
+<tag>skip</tag>
+<status status="FAIL" starttime="20230714 15:39:33.977" endtime="20230714 15:39:33.979">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230714 15:39:33.975" endtime="20230714 15:39:33.980"/>
+</suite>
+<suite id="s1-s1-s2-s2" name="New Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/BUI/regression/new_booking.robot">
+<test id="s1-s1-s2-s2-t1" name="Create A New Booking as" line="12">
+<doc>A new booker opens the page and does a successful booking</doc>
+<tag>robot:exit</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230714 15:39:33.983" endtime="20230714 15:39:33.984">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-s2-t2" name="Confirm Email and Open Link" line="26">
+<doc>A new booker receives an email with a link to modify the booking</doc>
+<tag>robot:exit</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230714 15:39:33.985" endtime="20230714 15:39:33.986">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>A test suite for verifying modify booking functionality</doc>
+<status status="FAIL" starttime="20230714 15:39:33.982" endtime="20230714 15:39:33.987"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:33.974" endtime="20230714 15:39:33.989"/>
+</suite>
+<status status="FAIL" starttime="20230714 15:39:26.973" endtime="20230714 15:39:33.991"/>
+</suite>
+<suite id="s1-s2" name="MUI" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI">
+<suite id="s1-s2-s1" name="EC" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/EC">
+<suite id="s1-s2-s1-s1" name="New Booking" source="/Users/saragilbert/Code/SQA/nelson-ta/testsuites/MUI/EC/new_booking.robot">
+<test id="s1-s2-s1-s1-t1" name="Create A New Booking on Booking.com for today and verify Emails" line="31">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.998" endtime="20230714 15:39:33.999">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-s1-s1-t2" name="Verify Emails and Get Booking No" line="66">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:33.999" endtime="20230714 15:39:34.001">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-s1-s1-t3" name="Create A New Booking on Booking.com for a later date and verify Emails" line="73">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.001" endtime="20230714 15:39:34.002">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-s1-s1-t4" name="Cancel Booking via BDC" line="76">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.003" endtime="20230714 15:39:34.004">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-s1-s1-t5" name="Open Booking in MUI" line="79">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.004" endtime="20230714 15:39:34.005">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-s1-s1-t6" name="Cancel Booking in MUI" line="87">
+<tag>exhibition_court</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230714 15:39:34.006" endtime="20230714 15:39:34.006">Test execution stopped due to a fatal error.</status>
+</test>
+<errors>
+<msg timestamp="20230714 15:39:27.252" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.256" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 4: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.419" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.424" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 7: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.443" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:27.454" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/checkin.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.792" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230714 15:39:33.859" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.870" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/common.resource' on line 4: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.888" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.895" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/booking.resource' on line 7: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:33.903" level="ERROR">Error in file '/Users/saragilbert/Code/SQA/nelson-ta/resources/keywords/mui.resource' on line 3: Importing library '/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+Traceback (most recent call last):
+  File "/Users/saragilbert/Code/SQA/nelson-ta/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
+    import mailslurp_client
+PYTHONPATH:
+  /Users/saragilbert/Code/SQA/nelson-ta/resources/libraries
+  /Users/saragilbert/opt/anaconda3/bin
+  /Users/saragilbert/opt/anaconda3/lib/python39.zip
+  /Users/saragilbert/opt/anaconda3/lib/python3.9
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/lib-dynload
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages
+  /Users/saragilbert/opt/anaconda3/lib/python3.9/site-packages/aeosa</msg>
+<msg timestamp="20230714 15:39:34.008" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>
