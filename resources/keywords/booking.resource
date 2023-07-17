@@ -886,3 +886,19 @@ Open the right panel to update guest info in case the booking has multiple rooms
     ELSE
         Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${2}}]
     END
+Verify UI Guest information component shown
+     Wait For Elements State    (//p[normalize-space()='Guest info needed'])[1]    visible
+Click New Guest
+    Click    (//p[normalize-space()='New Guest'])[1]
+
+Verify UI Invite Guest Components
+    Verify Element Presence    //p[normalize-space()='Invite guest']     ${true}
+    Verify Element Presence    //span[contains(@class,'chakra-checkbox__control')]/following-sibling::span[normalize-space()='Underage']     ${true}
+Switch To Invite Guest URL Confirmation Page
+    [Arguments]            ${email}
+    ${url} =        Get Url
+    ${Url_import}  ${Nouse} =   Split String From Right     ${Url}  email=
+    [Return]     ${Url_import}
+    Go to        ${Url_import}email=${email}
+Verify Check In Button Showed In Invited Guest Name 
+    Verify Element Presence       (//p[contains(text(),'Shin Suke')]/parent::div/following-sibling::div/button[normalize-space()='Check in'])[1]     ${true}

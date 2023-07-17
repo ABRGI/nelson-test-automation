@@ -1,5 +1,5 @@
 *** Settings ***
-Test Setup       Open Browser to Landing Page
+Test Setup       Open Browser to Landing Page      
 Test Teardown    Close Browser
 Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/common.resource
@@ -14,6 +14,7 @@ Verify UI when Booker has not update Information
    Booker does not update information
    Verify UI confirmation landing page when Booker does not update information 
 
+    
 Verify User changes to another nationality than Finland and vice versa
    Booker just completed payment for a reservation with 1 room 3 guest
    Booker is brought back to Comfirmation Landing page
@@ -48,3 +49,16 @@ Verify booker univites guest in case guest has not completed online check-in
    Fill in guest information when guest is adult
    Uninvite guest
    Click Univite button in Uninvite warning popup
+
+Verify UI when Booker has fully updated information
+   Booker just completed payment for a reservation with 1 room 3 guest
+   Click Check In Button
+   Fill In Guest info
+   Click Save and Sign
+   Sign
+   Verify UI Guest information component shown
+   Click New Guest
+   Verify UI Invite Guest Components
+   Fill Invite guest info and click invite button      ${guestFirstname}   ${guestLastname}   ${guestEmail}
+   Switch To Invite Guest URL Confirmation Page        ${guestEmail}
+   Verify Check In Button Showed In Invited Guest Name  

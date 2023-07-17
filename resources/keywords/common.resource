@@ -104,7 +104,6 @@ Open Browser to Landing Page
     Set Browser Timeout    ${timeout}
     New Context    
     New Page       ${url}
-    Set Viewport Size   ${viewportWidth}   ${viewportHeight}
     Wait Until Network Is Idle       
     #Set Viewport Size    1920    1080
     Allow Cookies 
