@@ -4,6 +4,7 @@ ${timeout}        90s
 ${firstName}      Mos
 ${lastName}       Def
 ${headless}       False
+${url}            https://test3.omenahotels.com/en
 ${emailUsername}  nelsontestar
 ${emailDomain}    gmail.com
 ${fullEmail}          ${emailUsername}@${emailDomain}
