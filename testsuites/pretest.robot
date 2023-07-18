@@ -16,16 +16,10 @@ ${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
 
 Pre-Test: Verify Variables are Set
     
-    @{vars}=    Create List    ${inbox_id}    ${MAILSLURP_API_KEY}       ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}    ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}   
+    @{vars}=    Create List    ${inbox_id}      ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}    ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}   
     FOR   ${var}    IN    @{vars}
         Should Not Be Empty    ${var}
     END
-
-Pre-Test: Get Non-Member Inbox
-    [Documentation]        Verifies the Mailslurp keywords are running
-    ${inbox}=    Create new Inbox
-    Set Suite Variable    ${inboxId}    ${inbox.id}
-    Log To Console    ${inbox}
 
 Pre-Test: Get Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
