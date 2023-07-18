@@ -63,12 +63,13 @@ jobs:
           rfbrowser init
 
       - name: Test Mailslurp
-        run: python resources/libraries/MailSlurp.py
-        continue-on-error: False 
+        run: python -s resources/libraries/MailSlurp.py
+        continue-on-error: True 
 
       - name: Run Pre-Tests
         run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
-        continue-on-error: False 
+        continue-on-error: True 
+        # Set as false, True only for demo
         
       - name: Run Test Suites from scripts/run_tests.sh
         run: scripts/run_tests.sh

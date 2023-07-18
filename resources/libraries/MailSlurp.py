@@ -29,6 +29,8 @@ class MailSlurp(object):
     # function for creating an email address returns an inbox with an id and email_address
     @keyword("Create new Inbox")
     def create_new_inbox(self):
+        print('Debug Config')
+        print(self.configuration)
         with mailslurp_client.ApiClient(self.configuration) as api_client:
             # create an inbox using the inbox controller
             api_instance = mailslurp_client.InboxControllerApi(api_client)
