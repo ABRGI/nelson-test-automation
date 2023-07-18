@@ -156,8 +156,8 @@ Select Dates With Options
     IF    '${url}' == 'https://test-exhibition.bookn.io/en/booking/'
         Log     Skipping date selection for now
     ELSE
-        Click First Element Found     //*[local-name() = 'svg' and contains(@data-icon, 'calendar-days')]
-        #Click    //div[contains(@class, 'booking-form-dates')]
+        #Click First Element Found     //*[local-name() = 'svg' and contains(@data-icon, 'calendar-days')]
+        Click    //div[contains(@class, 'booking-form-dates')]
         ${container}=    Get Element    //div[@class="container__months"]
         ${html}=    Get Property    ${container}    innerHTML
         Log    ${html}
@@ -478,12 +478,22 @@ Wait for invite guest page
    run keyword If    ${shown == ${False}}    Wait For Elements State    //button[normalize-space()='Cancel']    hidden
 
 Fill Invite guest info and click invite button
+   [Arguments]   ${firstName}   ${lastName}   ${email}
    Wait Until Visible   //div[contains(@class,'chakra-offset-slide')]//form
+   Click   //input[@id='firstName']
+   Wait Until Visible   //input[@id='firstName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='firstName']    ${firstName} 
+   Click   //input[@id='lastName']
+   Wait Until Visible   //input[@id='lastName']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='lastName']    ${lastName}
+   Click   //input[@id='email']
+   Wait Until Visible   //input[@id='email']
+   Wait Until Keyword Succeeds    20s    2s    Type Text    //input[@id='email']    ${email}
    ${inbox}=         Create Email and Return Inbox
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email    ${inbox.email_address}
-   Click   //button[normalize-space()='Invite']
+    Click   //button[normalize-space()='Invite']
 
 Open Edit booker info
    ##Wait Until Network Is Idle    timeout=4s
@@ -597,6 +607,19 @@ Create a New Booking and Complete Payment
     Select Hotel     Helsinki, Lönnrotinkatu
     Select Dates 
     Select Guests
+    Click Book or Find Rooms Button
+    Select a Standard Room
+    Click Continue to Extras Button 
+    Click Continue to Payment
+    Check Regular Rate 2
+    Fill in Contact Information
+    Accept offers and Terms
+    Select Web Bank and Nordea as Payment Method
+    Complete Payment Successfully
+Booker just completed payment for a reservation with 1 room 3 guest
+    Select Hotel     Helsinki, Lönnrotinkatu
+    Select Dates 
+    Select 1 Room 2 Adult and 1 Children
     Click Book or Find Rooms Button
     Select a Standard Room
     Click Continue to Extras Button 
@@ -722,7 +745,7 @@ Booker is main guest and completes check-in process
     Sign 
 Invite adult guest
     Click the first guest invite
-    Fill Invite guest info and click invite button
+    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${fullEmail}
 Click the first guest invite
     Click   (//p[normalize-space()='New Guest'])[1]
 Click the secondary guest invite
@@ -748,7 +771,7 @@ Verify Add guest popup UI when guest is children
     Verify Element Presence   //button[normalize-space()='Cancel']  ${True}
     Verify Element Presence   //button[normalize-space()='Save']  ${True}
 Fill in guest information when guest is adult 
-    Fill Invite guest info and click invite button
+    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${fullEmail}
 Uninvite guest 
    ${elements}=     Get Elements    //*[contains(@class, "fa-user")]
    Click     (//*[contains(@class, "fa-user")])[2]
@@ -804,3 +827,64 @@ Verify Comfirmation Landing page when Booker has not updated information
     Verify Element Presence  //p[normalize-space()='Standard room 2']  ${True}
     Verify Element Presence    //p[normalize-space()='2 guests']   ${True}
     Verify Element Presence  //p[normalize-space()='Check in or invite a guest'][1]  ${True}
+Booker does not update information
+    Wait For Elements State   (//button[text()='Check in'])[1]    visible 
+    Verify Element Presence  //p[text()='Booked by']  ${False}
+Verify UI confirmation landing page when Booker does not update information 
+    Wait For Elements State    (//p[text()='New Guest'])[1]    visible
+    Verify Element Presence      (//p[text()='New Guest'])[1]/ancestor::div[contains(@class,"disabled")]   ${True}
+    Wait For Elements State    (//p[text()='New Guest'])[2]    visible
+    Verify Element Presence    (//p[text()='New Guest'])[2]/ancestor::div[contains(@class,"disabled")]   ${True}
+    Wait For Elements State   //p[text()='room']   visible
+    Wait For Elements State   //button[normalize-space()='Download full receipt']   visible
+    Wait For Elements State   //p[text()='Booking number']   visible
+    Wait For Elements State   //a[@rel='noopener noreferrer']   visible
+    Wait For Elements State   //button[normalize-space()='My bookings']   visible
+Search & select nationality
+   [Arguments]   ${nationality}
+   #Open nationality Dropdown-list
+   Click   //button[@aria-haspopup="dialog"]//*[name()='svg' and @data-icon="caret-down"]
+   #Enter nationality into Search box
+   Type Text   //input[@placeholder="Search country"]   ${nationality}
+   #Select desired nationality by clicking on it
+   Click   //div[text()='${nationality}']
+Verify required field presence
+   [Arguments]   ${fieldLabel}   ${shown}
+   Verify Element Presence    //div[normalize-space()='${fieldLabel}*']//input[@required]   ${shown}
+Open the right panel to update guest info in case the booking has 1 room
+   [Arguments]   ${guestOrder}
+    IF   ${guestOrder} == 2 or ${guestOrder} == 4
+        Click   (//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${1}}]
+    ELSE IF   ${guestOrder} == 1   
+        Click   (//*[name()='svg' and @data-icon="chevron-right"])[1]
+    ELSE
+        Click   (//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${2}}]
+    END
+Open the right panel to update guest info in case the booking has multiple rooms
+   [Arguments]  ${roomName}   ${roomOrder}   ${guestOrder}
+    IF   ${roomOrder} > 1
+       Click   (//*[name()='svg' and @data-icon="caret-up"])[${roomOrder}]
+    END
+    IF   ${guestOrder} == 2 or ${guestOrder} == 4
+        Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${1}}]
+    ELSE IF   ${guestOrder} == 1   
+        Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[1]
+    ELSE
+        Click   (//p[text()='${roomName}']/ancestor::div[contains(@class, "chakra-accordion__item")]//*[name()='svg' and @data-icon="chevron-right"])[${${guestOrder} + ${2}}]
+    END
+Verify UI Guest information component shown
+     Wait For Elements State    (//p[normalize-space()='Guest info needed'])[1]    visible
+Click New Guest
+    Click    (//p[normalize-space()='New Guest'])[1]
+
+Verify UI Invite Guest Components
+    Verify Element Presence    //p[normalize-space()='Invite guest']     ${true}
+    Verify Element Presence    //span[contains(@class,'chakra-checkbox__control')]/following-sibling::span[normalize-space()='Underage']     ${true}
+Switch To Invite Guest URL Confirmation Page
+    [Arguments]            ${email}
+    ${url} =        Get Url
+    ${Url_import}  ${Nouse} =   Split String From Right     ${Url}  email=
+    [Return]     ${Url_import}
+    Go to        ${Url_import}email=${email}
+Verify Check In Button Showed In Invited Guest Name 
+    Verify Element Presence       (//p[contains(text(),'Shin Suke')]/parent::div/following-sibling::div/button[normalize-space()='Check in'])[1]     ${true}
