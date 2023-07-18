@@ -41,4 +41,4 @@ ${guestLastname}  Suke
 ${childFirstname}   Dong
 ${childLastname}    Dong
 ${url}
-${inbox_id}     bb99fbd9-e882-4f00-b772-ce50c2f9dffb
+${inbox_id}     492aa3bb-9e4b-410a-a02c-84f13ace89e8    #Static Email that in Mailslurp, name Nelson-Test

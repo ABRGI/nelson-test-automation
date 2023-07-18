@@ -19,20 +19,17 @@ Pre-Test: Verify Variables are Set
     @{vars}=    Create List    ${inbox_id}    ${MAILSLURP_API_KEY}       ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}    ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}   
     FOR   ${var}    IN    @{vars}
         Should Not Be Empty    ${var}
-        Log To Console     ${var}
     END
 
 Pre-Test: Get Non-Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
-    ${is}=     Get All Inboxes
-    Log To Console     ${is}
     ${inbox}=    Create new Inbox
     Set Suite Variable    ${inboxId}    ${inbox.id}
-    Log To Console    ${inbox_id}
+    Log To Console    ${inbox}
 
 Pre-Test: Get Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
-    ${inbox}=    Get Inbox     492aa3bb-9e4b-410a-a02c-84f13ace89e8
+    ${inbox}=    Get Inbox     ${inbox_id}
     Set Suite Variable    ${inbox_object}    ${inbox}
     Log To Console    ${inbox.name}
 
