@@ -1,5 +1,4 @@
 
-export TESTMO_TOKEN=testmo_api_eyJpdiI6Im5PZjZ5WU1uZjdwRXdOVTcxQVRreVE9PSIsInZhbHVlIjoiaWptQnZPbG10bkMzT0RpVHVJSDAxRmZsV1J0cWM2dFVTU3NxUzdkZi9BST0iLCJtYkZi9BST0iLCJtYWMiOiJhMTU0Y2FmYmQ2YzA3OTgzMWEwODhiOWJjMDBlYWY5ZjhmMjA0ZGRjZTMyYmE2NjYxNjBhYzQ3ZGJlYzc5MGY0IiwidGFnIjoiIn0=
 robot -A environments/test4.txt \
 --include pretest \
 --outputdir reports/test4 \
