@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.11.4 on win32)" generated="20230718 08:38:54.325" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.11.4 on win32)" generated="20230718 09:24:12.994" rpa="false" schemaversion="3">
 <suite id="s1" name="Pretest" source="C:\Users\SaraGilbert\nelson-test-automation\testsuites\pretest.robot">
-<test id="s1-t1" name="Pre-Test: Get Non-Member Inbox" line="17">
-<kw name="Create new Inbox" library="MailSlurp">
-<var>${inbox}</var>
-<msg timestamp="20230718 08:38:56.154" level="FAIL">TypeError: expected string or bytes-like object, got 'NoneType'</msg>
-<status status="FAIL" starttime="20230718 08:38:55.480" endtime="20230718 08:38:56.160"/>
-</kw>
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${inboxId}</arg>
-<arg>${inbox.id}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20230718 08:38:56.162" endtime="20230718 08:38:56.162"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${inbox_id}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230718 08:38:56.162" endtime="20230718 08:38:56.162"/>
-</kw>
-<doc>Verifies the Mailslurp keywords are running</doc>
-<tag>pretest</tag>
-<status status="FAIL" starttime="20230718 08:38:55.480" endtime="20230718 08:38:56.163">TypeError: expected string or bytes-like object, got 'NoneType'</status>
-</test>
-<test id="s1-t2" name="Pre-Test: Get Member Inbox" line="23">
-<kw name="Log To Console" library="BuiltIn">
-<arg>${inbox_id}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230718 08:38:56.173" endtime="20230718 08:38:56.173"/>
-</kw>
-<kw name="Get Inbox" library="MailSlurp">
-<var>${inbox}</var>
-<arg>${inbox_id}</arg>
-<msg timestamp="20230718 08:38:56.796" level="FAIL">TypeError: expected string or bytes-like object, got 'NoneType'</msg>
-<status status="FAIL" starttime="20230718 08:38:56.174" endtime="20230718 08:38:56.796"/>
-</kw>
-<kw name="Set Suite Variable" library="BuiltIn">
-<arg>${inbox_object}</arg>
-<arg>${inbox}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20230718 08:38:56.796" endtime="20230718 08:38:56.796"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${inbox.name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230718 08:38:56.802" endtime="20230718 08:38:56.802"/>
-</kw>
-<doc>Verifies the Mailslurp keywords are running</doc>
-<tag>pretest</tag>
-<status status="FAIL" starttime="20230718 08:38:56.172" endtime="20230718 08:38:56.804">TypeError: expected string or bytes-like object, got 'NoneType'</status>
-</test>
-<test id="s1-t3" name="Pre-Test: Verify Variables are Set" line="30">
+<test id="s1-t1" name="Pre-Test: Verify Variables are Set" line="18">
 <kw name="Create List" library="BuiltIn">
 <var>@{vars}</var>
 <arg>${inbox_id}</arg>
@@ -61,8 +13,8 @@
 <arg>${MUI_USERNAME}</arg>
 <arg>${MUI_PASSWORD}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230718 08:38:56.815" level="INFO">@{vars} = [ bb99fbd9-e882-4f00-b772-ce50c2f9dffb | $MAILSLURP_API_KEY | $MUI_URL | $MUI_USERNAME | $MUI_PASSWORD | $MUI_URL | $MUI_USERNAME | $MUI_PASSWORD ]</msg>
-<status status="PASS" starttime="20230718 08:38:56.814" endtime="20230718 08:38:56.815"/>
+<msg timestamp="20230718 09:24:14.126" level="INFO">@{vars} = [ bb99fbd9-e882-4f00-b772-ce50c2f9dffb | $MAILSLURP_API_KEY | $MUI_URL | $MUI_USERNAME | $MUI_PASSWORD | $MUI_URL | $MUI_USERNAME | $MUI_PASSWORD ]</msg>
+<status status="PASS" starttime="20230718 09:24:14.126" endtime="20230718 09:24:14.126"/>
 </kw>
 <for flavor="IN">
 <var>${var}</var>
@@ -72,142 +24,252 @@
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.818" level="INFO">Length is 36</msg>
-<status status="PASS" starttime="20230718 08:38:56.817" endtime="20230718 08:38:56.818"/>
+<msg timestamp="20230718 09:24:14.141" level="INFO">Length is 36</msg>
+<status status="PASS" starttime="20230718 09:24:14.141" endtime="20230718 09:24:14.141"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.817" endtime="20230718 08:38:56.818"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.141" endtime="20230718 09:24:14.142"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.141" endtime="20230718 09:24:14.142"/>
 </iter>
 <iter>
 <var name="${var}">$MAILSLURP_API_KEY</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.818" level="INFO">Length is 18</msg>
-<status status="PASS" starttime="20230718 08:38:56.818" endtime="20230718 08:38:56.818"/>
+<msg timestamp="20230718 09:24:14.142" level="INFO">Length is 18</msg>
+<status status="PASS" starttime="20230718 09:24:14.142" endtime="20230718 09:24:14.144"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.818" endtime="20230718 08:38:56.818"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.144" endtime="20230718 09:24:14.144"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.142" endtime="20230718 09:24:14.144"/>
 </iter>
 <iter>
 <var name="${var}">$MUI_URL</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.819" level="INFO">Length is 8</msg>
-<status status="PASS" starttime="20230718 08:38:56.819" endtime="20230718 08:38:56.819"/>
+<msg timestamp="20230718 09:24:14.144" level="INFO">Length is 8</msg>
+<status status="PASS" starttime="20230718 09:24:14.144" endtime="20230718 09:24:14.144"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.819" endtime="20230718 08:38:56.819"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.147" endtime="20230718 09:24:14.147"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.144" endtime="20230718 09:24:14.147"/>
 </iter>
 <iter>
 <var name="${var}">$MUI_USERNAME</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.819" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20230718 08:38:56.819" endtime="20230718 08:38:56.819"/>
+<msg timestamp="20230718 09:24:14.148" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20230718 09:24:14.148" endtime="20230718 09:24:14.148"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.819" endtime="20230718 08:38:56.819"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.148" endtime="20230718 09:24:14.149"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.147" endtime="20230718 09:24:14.149"/>
 </iter>
 <iter>
 <var name="${var}">$MUI_PASSWORD</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.820" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20230718 08:38:56.820" endtime="20230718 08:38:56.820"/>
+<msg timestamp="20230718 09:24:14.150" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20230718 09:24:14.150" endtime="20230718 09:24:14.150"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.819" endtime="20230718 08:38:56.820"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.150" endtime="20230718 09:24:14.151"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.150" endtime="20230718 09:24:14.151"/>
 </iter>
 <iter>
 <var name="${var}">$MUI_URL</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.820" level="INFO">Length is 8</msg>
-<status status="PASS" starttime="20230718 08:38:56.820" endtime="20230718 08:38:56.820"/>
+<msg timestamp="20230718 09:24:14.151" level="INFO">Length is 8</msg>
+<status status="PASS" starttime="20230718 09:24:14.151" endtime="20230718 09:24:14.151"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.820" endtime="20230718 08:38:56.821"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.151" endtime="20230718 09:24:14.152"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.151" endtime="20230718 09:24:14.152"/>
 </iter>
 <iter>
 <var name="${var}">$MUI_USERNAME</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.821" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20230718 08:38:56.821" endtime="20230718 08:38:56.821"/>
+<msg timestamp="20230718 09:24:14.152" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20230718 09:24:14.152" endtime="20230718 09:24:14.152"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.821" endtime="20230718 08:38:56.821"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.152" endtime="20230718 09:24:14.153"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.152" endtime="20230718 09:24:14.153"/>
 </iter>
 <iter>
 <var name="${var}">$MUI_PASSWORD</var>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20230718 08:38:56.822" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20230718 08:38:56.821" endtime="20230718 08:38:56.822"/>
+<msg timestamp="20230718 09:24:14.153" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20230718 09:24:14.153" endtime="20230718 09:24:14.153"/>
 </kw>
-<status status="PASS" starttime="20230718 08:38:56.821" endtime="20230718 08:38:56.822"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:14.153" endtime="20230718 09:24:14.154"/>
+</kw>
+<status status="PASS" starttime="20230718 09:24:14.153" endtime="20230718 09:24:14.154"/>
 </iter>
-<status status="PASS" starttime="20230718 08:38:56.817" endtime="20230718 08:38:56.822"/>
+<status status="PASS" starttime="20230718 09:24:14.141" endtime="20230718 09:24:14.154"/>
 </for>
 <tag>pretest</tag>
-<status status="PASS" starttime="20230718 08:38:56.813" endtime="20230718 08:38:56.823"/>
+<status status="PASS" starttime="20230718 09:24:14.126" endtime="20230718 09:24:14.154"/>
 </test>
-<test id="s1-t4" name="Pre-Test: Verify BUI is Up" line="36">
+<test id="s1-t2" name="Pre-Test: Get Non-Member Inbox" line="26">
+<kw name="Get All Inboxes" library="MailSlurp">
+<var>${is}</var>
+<msg timestamp="20230718 09:24:15.098" level="INFO">${is} = {'content': [{'created_at': datetime.datetime(2023, 6, 5, 4, 27, 29, 380000, tzinfo=tzutc()),
+              'domain_id': None,
+              'email_address': '492aa3bb-9e4b-410a-a02c-84f13ace89e8@mail...</msg>
+<status status="PASS" starttime="20230718 09:24:14.162" endtime="20230718 09:24:15.098"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${is}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:15.098" endtime="20230718 09:24:15.117"/>
+</kw>
+<kw name="Create new Inbox" library="MailSlurp">
+<var>${inbox}</var>
+<msg timestamp="20230718 09:24:15.932" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 7, 18, 6, 24, 15, 399000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': '410a2d68-9955-4939-9e56-260e7c1a8b9d@mailslurp.com',
+ 'ex...</msg>
+<status status="PASS" starttime="20230718 09:24:15.118" endtime="20230718 09:24:15.932"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${inboxId}</arg>
+<arg>${inbox.id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20230718 09:24:15.937" level="INFO">${inboxId} = 410a2d68-9955-4939-9e56-260e7c1a8b9d</msg>
+<status status="PASS" starttime="20230718 09:24:15.932" endtime="20230718 09:24:15.937"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${inbox_id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:15.938" endtime="20230718 09:24:15.940"/>
+</kw>
+<doc>Verifies the Mailslurp keywords are running</doc>
+<tag>pretest</tag>
+<status status="PASS" starttime="20230718 09:24:14.161" endtime="20230718 09:24:15.941"/>
+</test>
+<test id="s1-t3" name="Pre-Test: Get Member Inbox" line="34">
+<kw name="Get Inbox" library="MailSlurp">
+<var>${inbox}</var>
+<arg>492aa3bb-9e4b-410a-a02c-84f13ace89e8</arg>
+<msg timestamp="20230718 09:24:16.754" level="INFO">None</msg>
+<msg timestamp="20230718 09:24:16.754" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 6, 5, 4, 27, 29, 380000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': '492aa3bb-9e4b-410a-a02c-84f13ace89e8@mailslurp.com',
+ 'exp...</msg>
+<status status="PASS" starttime="20230718 09:24:15.949" endtime="20230718 09:24:16.754"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${inbox_object}</arg>
+<arg>${inbox}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20230718 09:24:16.754" level="INFO">${inbox_object} = {'created_at': datetime.datetime(2023, 6, 5, 4, 27, 29, 380000, tzinfo=tzutc()),
+ 'description': None,
+ 'domain_id': None,
+ 'email_address': '492aa3bb-9e4b-410a-a02c-84f13ace89e8@mailslurp.com',
+ 'exp...</msg>
+<status status="PASS" starttime="20230718 09:24:16.754" endtime="20230718 09:24:16.754"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${inbox.name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230718 09:24:16.759" endtime="20230718 09:24:16.762"/>
+</kw>
+<doc>Verifies the Mailslurp keywords are running</doc>
+<tag>pretest</tag>
+<status status="PASS" starttime="20230718 09:24:15.948" endtime="20230718 09:24:16.763"/>
+</test>
+<test id="s1-t4" name="Pre-Test: Verify BUI is Up" line="40">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: BUI is up and runnin</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230718 08:38:56.828" level="INFO">Execution passed with message:
+<msg timestamp="20230718 09:24:16.772" level="INFO">Execution passed with message:
 TBD: BUI is up and runnin</msg>
-<status status="PASS" starttime="20230718 08:38:56.828" endtime="20230718 08:38:56.828"/>
+<status status="PASS" starttime="20230718 09:24:16.772" endtime="20230718 09:24:16.772"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20230718 08:38:56.828" endtime="20230718 08:38:56.829">TBD: BUI is up and runnin</status>
+<status status="PASS" starttime="20230718 09:24:16.771" endtime="20230718 09:24:16.773">TBD: BUI is up and runnin</status>
 </test>
-<test id="s1-t5" name="Pre-Test: Verify API is Up" line="39">
+<test id="s1-t5" name="Pre-Test: Verify API is Up" line="43">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: API is up and running</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230718 08:38:56.833" level="INFO">Execution passed with message:
+<msg timestamp="20230718 09:24:16.778" level="INFO">Execution passed with message:
 TBD: API is up and running</msg>
-<status status="PASS" starttime="20230718 08:38:56.833" endtime="20230718 08:38:56.833"/>
+<status status="PASS" starttime="20230718 09:24:16.778" endtime="20230718 09:24:16.778"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20230718 08:38:56.832" endtime="20230718 08:38:56.834">TBD: API is up and running</status>
+<status status="PASS" starttime="20230718 09:24:16.777" endtime="20230718 09:24:16.778">TBD: API is up and running</status>
 </test>
-<test id="s1-t6" name="Pre-Test: Verify MUI is Up" line="42">
+<test id="s1-t6" name="Pre-Test: Verify MUI is Up" line="46">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: MUI is up and running</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230718 08:38:56.839" level="INFO">Execution passed with message:
+<msg timestamp="20230718 09:24:16.785" level="INFO">Execution passed with message:
 TBD: MUI is up and running</msg>
-<status status="PASS" starttime="20230718 08:38:56.839" endtime="20230718 08:38:56.839"/>
+<status status="PASS" starttime="20230718 09:24:16.785" endtime="20230718 09:24:16.785"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20230718 08:38:56.838" endtime="20230718 08:38:56.839">TBD: MUI is up and running</status>
+<status status="PASS" starttime="20230718 09:24:16.784" endtime="20230718 09:24:16.785">TBD: MUI is up and running</status>
 </test>
-<test id="s1-t7" name="Verify Rooms are Available" line="45">
+<test id="s1-t7" name="Verify Rooms are Available" line="49">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: Check Rooms are available, for example API</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20230718 08:38:56.843" level="INFO">Execution passed with message:
+<msg timestamp="20230718 09:24:16.790" level="INFO">Execution passed with message:
 TBD: Check Rooms are available, for example API</msg>
-<status status="PASS" starttime="20230718 08:38:56.842" endtime="20230718 08:38:56.843"/>
+<status status="PASS" starttime="20230718 09:24:16.789" endtime="20230718 09:24:16.790"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20230718 08:38:56.842" endtime="20230718 08:38:56.843">TBD: Check Rooms are available, for example API</status>
+<status status="PASS" starttime="20230718 09:24:16.789" endtime="20230718 09:24:16.790">TBD: Check Rooms are available, for example API</status>
 </test>
 <doc>Argument file for running Pre-Test verifications</doc>
-<status status="FAIL" starttime="20230718 08:38:54.326" endtime="20230718 08:38:56.846"/>
+<status status="PASS" starttime="20230718 09:24:12.994" endtime="20230718 09:24:16.794"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="2" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="5" fail="2" skip="0">pretest</stat>
+<stat pass="7" fail="0" skip="0">pretest</stat>
 </tag>
 <suite>
-<stat pass="5" fail="2" skip="0" id="s1" name="Pretest">Pretest</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="Pretest">Pretest</stat>
 </suite>
 </statistics>
 <errors>

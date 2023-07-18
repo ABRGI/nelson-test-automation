@@ -25,6 +25,7 @@ Pre-Test: Verify Variables are Set
 
 Pre-Test: Get Non-Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
+    Log To Console    ${MAILSLURP_API_KEY}
     ${is}=     Get All Inboxes
     Log To Console     ${is}
     ${inbox}=    Create new Inbox
