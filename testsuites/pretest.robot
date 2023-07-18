@@ -6,34 +6,36 @@ Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
 Force Tags         pretest
-Library            RequestsLibrary
-
 
 *** Variables ***
 
 ${inbox_object}
 ${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
+${MAILSLURP_API_KEY}    %{MAILSLURP_API_KEY} 
 
 *** Test Cases ***
 
+Pre-Test: Verify Variables are Set
+    
+    @{vars}=    Create List    ${inbox_id}    ${MAILSLURP_API_KEY}       ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}    ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}   
+    FOR   ${var}    IN    @{vars}
+        Should Not Be Empty    ${var}
+        Log To Console     ${var}
+    END
+
 Pre-Test: Get Non-Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
+    ${is}=     Get All Inboxes
+    Log To Console     ${is}
     ${inbox}=    Create new Inbox
     Set Suite Variable    ${inboxId}    ${inbox.id}
     Log To Console    ${inbox_id}
 
 Pre-Test: Get Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
-    Log To Console    ${inbox_id}
-    ${inbox}=    Get Inbox     ${inbox_id}
+    ${inbox}=    Get Inbox     492aa3bb-9e4b-410a-a02c-84f13ace89e8
     Set Suite Variable    ${inbox_object}    ${inbox}
     Log To Console    ${inbox.name}
-
-Pre-Test: Verify Variables are Set
-    @{vars}=    Create List    ${inbox_id}    ${MAILSLURP_API_KEY}       ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}    ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}   
-    FOR   ${var}    IN    @{vars}
-        Should Not Be Empty    ${var}
-    END
 
 Pre-Test: Verify BUI is Up
     Pass Execution     TBD: BUI is up and runnin

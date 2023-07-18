@@ -14,7 +14,7 @@ class MailSlurp(object):
     # configure the mailslurp client using your API KEY
     def __init__(self):
         self.configuration = mailslurp_client.Configuration()
-        self.configuration.api_key['x-api-key'] = "76f2cba58fc827f5252020446f37f7f1fe736b20de1b03df48e5d77c5231ef91" #os.environ.get('MAILSLURP_API_KEY')
+        self.configuration.api_key['x-api-key'] = os.environ.get('MAILSLURP_API_KEY')
         self.api_client = mailslurp_client.ApiClient(self.configuration)
         self.email_client = mailslurp_client.EmailControllerApi(self.api_client)
               
@@ -51,7 +51,7 @@ class MailSlurp(object):
             return email
 
     @keyword("Wait for Latest Booking Confirmation")
-    def wait_for_latest_booking_confirmation(self, inbox_id="ec6787c2-caab-47c0-8dd0-a741e0d955e7", search_text="Booking confirmation"):
+    def wait_for_latest_booking_confirmation(self, inbox_id="492aa3bb-9e4b-410a-a02c-84f13ace89e8", search_text="Booking confirmation"):
         with mailslurp_client.ApiClient(self.configuration) as api_client:
             api_instance = mailslurp_client.WaitForControllerApi(api_client)
             match_options = {'matches': [{'field': 'SUBJECT','should':'CONTAIN','value':f'{search_text}'}]}
@@ -78,14 +78,14 @@ class MailSlurp(object):
         return bno
     
     @keyword("Wait for Latest Booking Confirmation and Extract Link")
-    def wait_for_latest_booking_confirmation_and_extract_link(self, inbox_id="ec6787c2-caab-47c0-8dd0-a741e0d955e7"):
+    def wait_for_latest_booking_confirmation_and_extract_link(self, inbox_id="492aa3bb-9e4b-410a-a02c-84f13ace89e8"):
         body = self.wait_for_latest_booking_confirmation(inbox_id)
         link = self.extract_link(body)
         return link
 
 if __name__ == '__main__':
     m = MailSlurp()
-    
+    i = m.create_new_inbox()
     #inbox_id = "efc7c87b-8bcf-4ad9-bb4e-c5c459b2d526"
 
 
