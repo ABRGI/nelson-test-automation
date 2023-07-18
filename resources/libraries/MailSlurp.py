@@ -33,6 +33,8 @@ class MailSlurp(object):
             # create an inbox using the inbox controller
             api_instance = mailslurp_client.InboxControllerApi(api_client)
             inbox = api_instance.create_inbox()
+            print(inbox)
+            print(self)
             return inbox
     
     @keyword("Get Inbox")
