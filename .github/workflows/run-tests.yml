@@ -72,7 +72,7 @@ jobs:
         # Set as false, True only for demo
     
       - name: Make the script executable
-        run: chmod +x scripts/run_tests.sh && chmod +x scripts/run_run_upload.sh
+        run: chmod +x scripts/run_tests.sh && chmod +x scripts/run_upload.sh
 
       - name: Run Test Suites from scripts/run_tests.sh
         run: scripts/run_tests.sh
