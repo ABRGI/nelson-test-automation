@@ -10,14 +10,24 @@ from mailslurp_client.api.inbox_controller_api import InboxControllerApi
 class MailSlurp(object):
     ROBOT_LIBRARY_VERSION = '1.0.0'
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    # 76f2cba58fc827f5252020446f37f7f1fe736b20de1b03df48e5d77c5231ef91
     # configure the mailslurp client using your API KEY
     def __init__(self):
         self.configuration = mailslurp_client.Configuration()
-        self.configuration.api_key['x-api-key'] = os.environ.get('MAILSLURP_API_KEY')
+        self.configuration.api_key['x-api-key'] = self.set_api_key()
         self.api_client = mailslurp_client.ApiClient(self.configuration)
         self.email_client = mailslurp_client.EmailControllerApi(self.api_client)
-              
+    
+    def set_api_key(self):
+        try:
+            key = os.environ.get('MAILSLURP_API_KEY')
+            if key == None:
+                print("Mailslurp Key not Found")
+                print("Quitting...")
+                quit()
+        except Exception as e:
+            print(e)
+        return key
+        
     @keyword("Get All Inboxes")
     def get_all_inboxes(self):
         with mailslurp_client.ApiClient(self.configuration) as api_client:
@@ -89,7 +99,7 @@ class MailSlurp(object):
 
 if __name__ == '__main__':
     m = MailSlurp()
-    i = m.create_new_inbox()
+    i = m.get_all_inboxes()
     #inbox_id = "efc7c87b-8bcf-4ad9-bb4e-c5c459b2d526"
 
 

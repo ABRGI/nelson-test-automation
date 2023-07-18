@@ -1,5 +1,14 @@
 #!/bin/bash
 
+export MAILSLURP_API_KEY="$MAILSLURP_API_KEY"
+
+if [ -z "$MAILSLURP_API_KEY" ]; then
+    echo "MAILSLURP_API_KEY is not set, exiting..."
+    exit 1
+else
+    echo MS is set and accessible.
+fi
+
 # Define the array of environment URLs
 # TBD: Add to variables somewhere
 environments=(
@@ -19,7 +28,7 @@ for url in "${environments[@]}"; do
 
   # Check if the response is "true"
   if [[ $response == "false" ]]; then
-    
+    echo "Running tests for ${url##*/}"
     robot -A environments/${url##*/}.txt --outputdir reports/${url##*/} testsuites/
     # Exit the loop if the command was executed
     break
