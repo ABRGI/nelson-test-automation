@@ -1,5 +1,5 @@
 ** Variables **
-${browser}        chromium
+${browser}        firefox
 ${timeout}        90s
 ${firstName}      Mos
 ${lastName}       Def
@@ -41,4 +41,5 @@ ${guestLastname}  Suke
 ${childFirstname}   Dong
 ${childLastname}    Dong
 ${url}
+${MUI_URL}      https://admin.nelson.management/#/login
 ${inbox_id}     492aa3bb-9e4b-410a-a02c-84f13ace89e8    #Static Email that in Mailslurp, name Nelson-Test
