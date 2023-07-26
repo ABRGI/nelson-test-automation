@@ -25,6 +25,19 @@ on:
             type: environment
             required: false
 
+env:
+    TEST_ENV: "staging"
+    MUI_PASSWORD: ${{ secrets.MUI_PASSWORD }}
+    MUI_URL: ${{ secrets.MUI_URL }}
+    MUI_USERNAME: ${{ secrets.MUI_USERNAME }}
+    TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+    TEST_EMAIL_PASSWORD: ${{ secrets.TEST_EMAIL_PASSWORD }}
+    ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    CLIENT_ID: ${{ secrets.CLIENT_ID }}
+    CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+    REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+    MAILSLURP_API_KEY: ${{ secrets.MAILSLURP_API_KEY }}
+    
 permissions:
   write-all
 
@@ -33,20 +46,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set Environment Variables
-        env:
-          TEST_ENV: "staging"
-          MUI_PASSWORD: ${{ secrets.MUI_PASSWORD }}
-          MUI_URL: ${{ secrets.MUI_URL }}
-          MUI_USERNAME: ${{ secrets.MUI_USERNAME }}
-          TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
-          TEST_EMAIL_PASSWORD: ${{ secrets.TEST_EMAIL_PASSWORD }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-          MAILSLURP_API_KEY: ${{ secrets.MAILSLURP_API_KEY }}
-        run: echo "Environment variables set"
 
       - name: Checkout code
         uses: actions/checkout@v3
