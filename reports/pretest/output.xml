@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.11.4 on linux)" generated="20230726 10:13:49.785" rpa="false" schemaversion="3">
-<errors>
-<msg timestamp="20230726 10:13:49.998" level="ERROR">Execution stopped by user.</msg>
-</errors>
-</robot>
