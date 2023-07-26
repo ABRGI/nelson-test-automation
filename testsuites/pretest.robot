@@ -40,6 +40,3 @@ Pre-Test: Verify MUI is Up
 
 Verify Rooms are Available
     Pass Execution    TBD: Check Rooms are available, for example API
-
-    # AKITA_API_KEY=apk_3LRdkFdLrfQWZ8eeD3I2qU
-    # AKITA_API_SECRET=08ec4b86ab751f041a28e3dafac9d609ddec7b2ec3b6a197102333e8dfd633c8
