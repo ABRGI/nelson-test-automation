@@ -37,7 +37,7 @@ env:
     CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
     REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
     MAILSLURP_API_KEY: ${{ secrets.MAILSLURP_API_KEY }}
-    
+
 permissions:
   write-all
 
@@ -60,6 +60,7 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           rfbrowser init
+          npm install -g @testmo/testmo-cli
 
       - name: Test Mailslurp
         run: python -s resources/libraries/MailSlurp.py
@@ -110,5 +111,6 @@ jobs:
 
       - name: Publish Reports to Testmo
         run: |
+        
          echo "Push Results to Testmo"
          ./scripts/run_upload.sh
