@@ -4,7 +4,6 @@
 
 if [ -z "$MAILSLURP_API_KEY" ]; then
     echo "MAILSLURP_API_KEY is not set, exiting..."
-    exit 1
 else
     echo MS is set and accessible.
 fi

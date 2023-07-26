@@ -16,7 +16,7 @@ ${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
 
 Pre-Test: Verify Variables are Set
     [Documentation]    Test case that verifies all environment variables are set 
-    @{vars}=    Create List    ${inbox_id}      %{MUI_URL}    %{MUI_USERNAME}    %{MUI_PASSWORD}    %{MAILSLURP_API_KEY}
+    @{vars}=    Create List    ${inbox_id}      ${MUI_URL}    ${MUI_USERNAME}    ${MUI_PASSWORD}    ${MAILSLURP_API_KEY}
     FOR   ${var}    IN    @{vars}
         Should Not Be Empty    ${var}
     END
