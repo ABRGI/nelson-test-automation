@@ -68,10 +68,10 @@ jobs:
 
       - name: Run Pre-Tests
         run: robot --argumentfile environments/pretest.txt \
-            --variable MUI_URL:$MUI_URL \
-            --variable MUI_USERNAME:$MUI_USERNAME \
-            --variable MUI_PASSWORD:$MUI_PASSWORD \
-            --variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY \
+            --variable MUI_URL:${{ secrets.MUI_URL }} \
+            --variable MUI_USERNAME:${{ secrets.MUI_USERNAME }} \
+            --variable MUI_PASSWORD:${{ secrets.MUI_PASSWORD }} \
+            --variable MAILSLURP_API_KEY:${{ secrets.MAILSLURP_API_KEY }} \
             --outputdir reports/pretest \
             testsuites/pretest.robot
         continue-on-error: True 
@@ -81,13 +81,7 @@ jobs:
         run: chmod +x scripts/run_tests.sh && chmod +x scripts/run_upload.sh
 
       - name: Run Omena
-        run: robot --argumentfile environments/test4.txt \
-            --variable MUI_URL:$MUI_URL \
-            --variable MUI_USERNAME:$MUI_USERNAME \
-            --variable MUI_PASSWORD:$MUI_PASSWORD \
-            --variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY \
-            --outputdir reports/test2 \
-            testsuites/
+        run: ./scripts/run_tests.sh 
         continue-on-error: True 
 
       - name: Commit files
