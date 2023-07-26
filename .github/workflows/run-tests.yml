@@ -64,7 +64,7 @@ jobs:
 
       - name: Test Mailslurp
         run: python -s resources/libraries/MailSlurp.py
-        continue-on-error: True 
+        continue-on-error: False 
 
       - name: Run Pre-Tests
         run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot

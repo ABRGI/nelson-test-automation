@@ -3,7 +3,7 @@ Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
-Library            Browser    run_on_failure=Take Custom Screenshot    auto_closing_level=SUITE
+Library            Browser    #run_on_failure=Take Custom Screenshot    auto_closing_level=SUITE
 Library            OperatingSystem
 Library            String
 Library            Process
@@ -12,7 +12,7 @@ Library            Process
 
 Take Custom Screenshot
     [Documentation]    Sets the screenshot directory and filename
-    Take Screenshot    filename=${OUTPUTDIR}/screenshots/${SUITE NAME}_${TEST NAME}_{index}.png
+    Pass Execution     TBD
 
 Check If String Contains
     [Arguments]    ${string}    ${substring}

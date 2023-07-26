@@ -25,3 +25,6 @@ tmp/
 *.out
 pabot_results/
 resources/reporting
+report.html
+output.xml
+log.html
