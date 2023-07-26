@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export MAILSLURP_API_KEY="$MAILSLURP_API_KEY"
+#export MAILSLURP_API_KEY="$MAILSLURP_API_KEY"
 
 if [ -z "$MAILSLURP_API_KEY" ]; then
     echo "MAILSLURP_API_KEY is not set, exiting..."
