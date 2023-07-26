@@ -67,16 +67,26 @@ jobs:
         continue-on-error: False 
 
       - name: Run Pre-Tests
-        run: robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
+        run: robot -A environments/pretest.txt \
+            --variable MUI_URL:$MUI_URL \
+            --variable MUI_USERNAME:$MUI_USERNAME \
+            --variable MUI_PASSWORD:$MUI_PASSWORD \
+            --variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY \
+            --outputdir reports/pretest testsuites/pretest.robot
         continue-on-error: True 
         # Set as false, True only for demo
     
       - name: Make the script executable
         run: chmod +x scripts/run_tests.sh && chmod +x scripts/run_upload.sh
 
-      - name: Run Test Suites from scripts/run_tests.sh
-        run: scripts/run_tests.sh
-        continue-on-error: True
+      - name: Run Omena
+        run: robot -A environments/test2.txt \
+            --variable MUI_URL:$MUI_URL \
+            --variable MUI_USERNAME:$MUI_USERNAME \
+            --variable MUI_PASSWORD:$MUI_PASSWORD \
+            --variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY \
+            --outputdir reports/test2 testsuites/test2.robot
+        continue-on-error: True 
 
       - name: Commit files
         run: |
