@@ -4,6 +4,9 @@ import string
 import mailslurp_client
 import re
 from datetime import datetime, timedelta
+import requests
+import json 
+from robot.api.deco import keyword
 
 __version__ = '1.0.0'
 
@@ -12,6 +15,17 @@ class Helpers(object):
     ROBOT_LIBRARY_VERSION = __version__
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
+    @keyword("Get Config")
+    def get_config(self, url):
+        url = url.rstrip('/en')
+        config = requests.get(f'{url}/feature-config.json').json()
+        return config
+    
+    @keyword("Get Config Item")
+    def get_config_item(self, url, item):
+        config = self.get_config(url)
+        return config[item]
+    
     def get_random_name(self, email_length=4):
         letters = string.ascii_lowercase[:12]
         return ''.join(random.choice(letters) for i in range(email_length))
@@ -85,6 +99,10 @@ class Helpers(object):
 
 if __name__ == '__main__':
     h = Helpers()
+    isBreakfast = h.get_config_item('https://test4.omenahotels.com', 'breakfast')
+    print(isBreakfast)
+    c = h.get_config('https://test4.omenahotels.com')
+
     he = h.get_selectors_for_tomorrow()
     
     env = h.get_environment_from_url('https://test4.omenahotels.com/en/')

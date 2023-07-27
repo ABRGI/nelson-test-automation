@@ -37,6 +37,9 @@ env:
     CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
     REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
     MAILSLURP_API_KEY: ${{ secrets.MAILSLURP_API_KEY }}
+    GMAIL_ACCESS_TOKEN: ${{ secrets.GMAIL_ACCESS_TOKEN }}
+    GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+    GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
 
 permissions:
   write-all

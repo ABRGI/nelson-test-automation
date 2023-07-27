@@ -152,10 +152,15 @@ Wait Until Visible
     [Arguments]    ${element}
     Wait For Elements State     ${element}        visible     timeout=${timeout}
 
+Is Item Enabled
+    [Documentation]    Checks if an item is true/false in config, by default checks for forceSSN
+    [Arguments]    ${item}=forceSSN
+    ${isItem}=     Get Config Item    ${url}     ${item}
+    [Return]    ${isItem}
+
 Is Force Signature Enabled
-    [Documentation]    Checks if the force signature is on or off
-    # TODO: Modify this to be a common method to check _any_ value of the config
-    # TODO: Modify feature-config url to depend on environment
+    # Use "Is Item Enabled" instead, this is deprecated and only works for test4
+    [Documentation]    Should no longer be used, use Is Item Enabled instead
     ${output}    Run Process    curl    https://test4.omenahotels.com/feature-config.json
     ${forceSSN}    Get Line    ${output.stdout}    8
     ${forceSignature}    Get Line    ${output.stdout}    9

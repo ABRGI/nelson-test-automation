@@ -234,8 +234,8 @@ Sign
     Wait For Elements State     //div[contains(@class, 'chakra-modal__body')]       hidden    timeout=${timeout}
 
 Click Save and Sign Button and Sign if Required
-    ${forceSignature}=    common.Is Force Signature Enabled
-    IF   '${forceSignature}' == 'true'
+    ${forceSignature}=     Is Item Enabled    
+    IF   '${forceSignature}' == 'True'
         Click                 //button[contains(text(), "Save and Sign")] 
         Sign
     ELSE
