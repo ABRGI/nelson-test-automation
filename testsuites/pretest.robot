@@ -15,6 +15,12 @@ ${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
 
 *** Test Cases ***
 
+Pre-Test: Get Config
+    [Documentation]    Test case that checks the config file
+    ${config}=    Get Config    ${url}
+    Log To Console    Config for environment:
+    Log To Console    ${config}
+
 Pre-Test: Check Gmail
     ${e}=     Get Latest Email Id By Subject
     Log To Console     Latest email content:
