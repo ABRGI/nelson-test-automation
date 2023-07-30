@@ -13,15 +13,17 @@ ENV TZ GMT+2
 ENV ROBOT_THREADS 1
 ENV ROBOT_UID 1000
 ENV ROBOT_GID 1000
+ENV MAILSLURP_API_KEY   ${MAILSLURP_API_KEY}
+ENV MUI_URL             ${MUI_URL}
+ENV MUI_USERNAME        ${MUI_USERNAME}
+ENV MUI_PASSWORD        ${MUI_PASSWORD}
 
 ## Copy required files
 COPY requirements.txt /opt/sqa/requirements.txt
 COPY resources/     /opt/sqa/resources
 COPY scripts/       /opt/sqa/scripts
 COPY testsuites/       /opt/sqa/testsuites
-COPY ./setenv.sh       /opt/sqa/setenv.sh
-COPY ./credentials.json     /opt/sqa/credentials.json
-RUN  chmod +x   /opt/sqa/setenv.sh
+
 # Install dependencies
 RUN apt update
 RUN apt-get install -y python3-pip && ln -sf python3 /usr/bin/python

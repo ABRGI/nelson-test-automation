@@ -1,0 +1,7 @@
+--doc Argument file for running Pre-Test verifications
+--variable url:https://test4.omenahotels.com/en
+--variable HEADLESS:True
+--variable headless:True
+--outputdir reports/pretest/
+--variable browser:Firefox
+--include pretest

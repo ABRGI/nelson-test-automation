@@ -23,30 +23,16 @@ If VS Code is used, it will also prompt to use the venv automatically so this st
 
 Environment variables, mostly secrets at this point, will be saved in .env file that must not be pushed to git at any time! To set your environment up, do following:
 
-Rename .env_remove_this to .env
-
-``` bash
-mv .envREMOVE .env
-```
-
-Fill in missing environment variables to file or export them manually. And run setenv script.
+Create a file .env in the root directory and use setenv.sh script or source .env in CLI. Verify variables are accessible.
 
 ``` bash
 ./setenv.sh
 ```
 
-Environment variables can be used with the library [Operating System](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html#Get%20Environment%20Variable). Or with the from [EnvHandler.py](resources/libraries/EnvHandler.py) with keyword EnvHandler.Get Environment Variable.
-
-``` robot
-    ${username}=    EnvHandler.Get Environment Variable    MY_USERNAME
-    Type Secret     id=loginUsername    ${username}
-```
-
-See [example.robot](/testsuites/example.robot)
-
+If you are using RobotCode Debugger features in VS Code, environment variables need to be set from the extension settings.
 ## Python Versions
 
-Let's use Python 3.10 for this project. You can check your version using the following cmd.
+Let's use Python 3.10 for this project. You can check your version using the following cmd. Python 3.11 seems to be working as well.
 
 ```python --version
 ```
@@ -70,9 +56,9 @@ python --version
 
 [resources](/resources/) is the main folder for libraries, variables, python files, other files, anything that is used in the test cases. For now, resources are divided into [keywords](/resources/keywords/), [libraries](/resources/libraries/) and [variables](/resources/variables/).
 
-Test Suites are divided into [MUI](/testsuites/MUI/), [BUI](/testsuites/BUI/) and [API](/testsuites/API/) and new test cases should be added accordingly.
+Test Suites are divided into [MUI](/testsuites/MUI/), [BUI](/testsuites/BUI/) and [API](/testsuites/API/) and new test cases should be added accordingly. Each folder also contains subfolders for features and regression tests.
 
-All of the above are divided into features and regression tests. Feature tests can be named for example with the Jira Ticket number and ordered to subfolders like [OnlineCheckIn](/testsuites/MUI/feature/OnlineCheckIn/). This will be up to you in later phases to see what works best.
+All of the above are divided into features and regression tests. Feature tests can be named for example with the Jira Ticket number and ordered to subfolders like [OnlineCheckIn](/testsuites/MUI/feature/online_check_in/). This will be up to you in later phases to see what works best.
 
 ## Test Suite and Test Case Naming
 
@@ -89,7 +75,13 @@ Regarding casing, I have now started to use camelCase for general variables and 
 Before running tests, you will need to set some environment variables. That can be done by running tests with.
 
 ``` bash
-robot --variable browser:chromium --variable headless:False --variable url:https://test4.omenahotels.com/ testsuites/
+robot -A environments/env_name.txt testsuites/
+```
+
+When running tests in CI, we will start using pabot to execute tests in paralle at some point. Arguments for each environment have been set in environment files in environments folder. Currently tests are run separately.
+
+```bash
+pabot -A environments/test4.txt -A environments/test3.txt testsuites/ 
 ```
 
 ### Branches and environments
@@ -98,14 +90,11 @@ We are using develop branch for running against staging environment(s) and maste
 
 ### Tags
 
-Currently we exclude tests that are tagged with skip.
+Currently we exclude tests that are tagged with skip. Include tags that make sense in your opinion to your test cases. There are no strict rules for these at this point.
 
 ## Debugging
 
 I suggest using [RoboCode VS Code Extension](https://github.com/d-biehl/robotcode) for debugging. Set up variables in extension settings.
-
-- headless - true, false
-- browser - chromium, firefox
 
 ## Version Control
 
@@ -119,18 +108,33 @@ When starting a new test case:
 
 Branch will be named after the Jira issue.
 
-## CI and reporting
+## GitHub Actions / Testing CI
 
-Initial CI has been done in python-app.yaml, which will run the tests on push to develop and upload results to GitHub pages with the default RobotFramework report.
+Initial CI has been done in [/.github/workflows/run-tests.yml], which will run the tests on push to develop and upload results to GitHub pages with the default RobotFramework report.
 
-Run command is currently as follows but also sbuject to change:
+Run command is currently as follows but also subject to change:
 
 ```bash
-robot --variable browser:chromium --variable headless:True --variable url:https://test4.omenahotels.com/ --variable MUI-Link:https://admin.nelson.management/#/login --outputdir reports/ testsuites/
+robot -A environments/env_name.txt --outputdir reports/pretest testsuites/
 ```
 
 GitHub pages are deployed from [gh-pages branch](https://github.com/ABRGI/nelson-test-automation/tree/gh-pages) and are visible at: 
 [https://abrgi.github.io/nelson-test-automation/report.html](https://abrgi.github.io/nelson-test-automation).
+
+## Reporting
+
+### GitHub Pages
+GitHub pages are deployed from [gh-pages branch](https://github.com/ABRGI/nelson-test-automation/tree/gh-pages) and are visible at: 
+[https://abrgi.github.io/nelson-test-automation/report.html](https://abrgi.github.io/nelson-test-automation).
+
+This is done in the latter part of the yml file, where the runner will commit all result files from the current branch into the gh-pages branch. Pages will then update immediately. 
+
+See GitHub Pages and GitHub Actions documentation for more.
+
+### Testmo
+
+We are currently testing out Testmo - a tool for reporting test results and managing manual test cases. The script [/scripts/run_upload.sh] will on run upload test results 
+
 
 ## API Tests
 

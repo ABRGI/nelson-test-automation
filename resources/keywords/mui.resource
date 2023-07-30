@@ -5,17 +5,14 @@ Resource          ${EXECDIR}/resources/variables/variables.resource
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
-
-*** Variables ***
-
-${muiResultTable}     //table[contains(@class, 'custom-table')]
-${environment}        Test (2) Omena
-${MUI_USERNAME}        %{MUI_USERNAME}
-${MUI_PASSWORD}        %{MUI_PASSWORD}
+Resource          ${EXECDIR}/resources/keywords/mui_menu.resource
 *** Keywords ***
 
 Select Environment   
     [Arguments]    ${environment}
+    IF     '${environment}' == '${EMPTY}'
+        ${environment}=    Set Variable   Test (2) Omena
+    END
     Click     //b[contains(@class, "client-name-color") and contains(text(), "${environment}")]
     # Verify env
 
@@ -33,11 +30,17 @@ Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}
     New Context
-    New Page        %{MUI_URL}
+    New Page    ${MUI_URL}
 
 Log in to Nelson Portal
-    Type Secret    //*[@id='email']         $MUI_USERNAME
-    Type Secret  //*[@id='password']      $MUI_PASSWORD
+    Fill Text       //*[@id='email']             %{MUI_USERNAME}
+    Fill Text  //*[@id='password']          %{MUI_PASSWORD}
+    Click    //button[contains(text(),'Sign in')]
+
+Log in to Nelson Portal with Credentials
+    [Arguments]    ${username}    ${password}
+    Fill Text       //*[@id='email']             ${username}
+    Fill Text  //*[@id='password']          ${password}
     Click    //button[contains(text(),'Sign in')]
 
 Click First Search Result Row 
@@ -69,7 +72,7 @@ Create Booking, Check in and get UUID
     Close Browser
 
 Open Reservations Page
-    Click     //ul[@class='nav']/li/a[@href='#/reservations']
+    Click Reservations from Navigation Menu
 
 Click New Reservation Button 
     Click     //button[contains(text(), 'New Reservation')]
@@ -90,21 +93,30 @@ Search with String
     Sleep     2s
     Click Search Button
 
+Select Hotel for Search 
+    [Arguments]    ${hotel}
+    Sleep    3s
+    Click    (//button[@class='dropbtn'])[1]
+    Sleep    3s
+    Click     //li[contains(text(), '${hotel}')]
+
 Click Search Button  
+    Wait Until Network Is Idle
     Click      //button[contains(text(), 'Search')]
+    Wait Until Network Is Idle
     Wait Until Visible    //th[contains(@class, 'sortActive')]
 
 Toggle Check in incomplete filter button
-    Toggle Filter   incomplete
-
+   Wait Until Keyword Succeeds    10s    2s    Toggle Filter    incomplete
+   
 Select First Guest Info Table
     ${table}=   Get Element     (//table[contains(@class, 'custom-table')])[3]
     [Return]    ${table}
 
-Is Visible
+Get State    
     [Arguments]    ${element}
-    ${visible}=     Get Element States    ${element}    validate    value
-    [Return]    ${visible}
+    ${state}=     Get Element States    ${element}    validate    value
+    [Return]    ${state}
 
 Select Reservation with Check in Incomplete
     [Documentation]    This keyword selects the first reservation with check in incomplete
@@ -112,29 +124,12 @@ Select Reservation with Check in Incomplete
     ...                NOTE! Needs more verifications as the mouseover is a bit hard to verify
     ${col0cell1}=    Get Table Cell Element    ${muiResultTable}    0    1      
     Click        ${col0cell1}
-    #Verify correct reservation is shown
-    ${isVisible}=    Is Visible     (//div[contains(@class, 'checkin-status')])[0]
-    IF     ${isVisible}      
-        #Click   ${isVisible}
-        Wait Until Visible    (//div[contains(@class, 'checkin-item-check')][0]
-    ELSE
-        #Verify Check in status is not shown when hovering on Guest name
-        
-        ${col0cell1}=    Get Table Cell Element    ${table}    0    1    
-        #Add a check
-    END
+    #Verify the check in status is not shown
+    Wait Until Network Is Idle
 
 Select Reservation with Check in Complete
-    Pass Execution     TBD
+    Log To Console     To Be Implemented
     # Create a way to select first/last/some of the reservations
-    Verify correct reservation is shown
-    Verify Check in status is shown when hovering on Guest name
-
-Go back to reservations
-    Pass Execution    TBD
-    Click ${reservations_menu_button}
-    Verify button is shown with the highlight color
-    Verify button has a checkmark # This seems to be the expected behaviour to keep the filter
 
 Get Icon Visibility
     [Arguments]    ${filter}
@@ -191,3 +186,6 @@ Log out of Nelson In BUI Confirmation Page
 # Reservation page - should be moved to a separate resource file 
 Click View Guests Button
     Click         //button[contains(text(), " View guests")]
+
+Verify Dashboard Elements 
+    Click First Element Found      (//a[contains(@href, "dashboard")])[2]

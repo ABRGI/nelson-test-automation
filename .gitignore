@@ -4,7 +4,6 @@ venv
 .env
 test.robot
 examples
-scripts
 *.pyc
 .pytest_cache
 .robotcode_cache
@@ -23,3 +22,9 @@ gmail_token.json
 ./report.html
 dockerfile
 tmp/
+*.out
+pabot_results/
+resources/reporting
+report.html
+output.xml
+log.html

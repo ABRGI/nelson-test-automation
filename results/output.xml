@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.4 on darwin)" generated="20230730 21:16:06.112" rpa="false" schemaversion="3">
+<suite id="s1" name="Nelson-Test-Automation" source="/Users/sara/code/nelson-test-automation">
+<suite id="s1-s1" name="Testsuites" source="/Users/sara/code/nelson-test-automation/testsuites">
+<suite id="s1-s1-s1" name="BUI" source="/Users/sara/code/nelson-test-automation/testsuites/BUI">
+<suite id="s1-s1-s1-s1" name="Feature" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/feature">
+<suite id="s1-s1-s1-s1-s1" name="Online Check In" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/feature/online_check_in">
+<suite id="s1-s1-s1-s1-s1-s1" name="BUI2-556" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/feature/online_check_in/BUI2-556.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<kw name="Open New Browser To URL" library="common">
+<arg>${url}</arg>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230730 21:16:07.016" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "tracesDir": "/Users/sara/code/nelson-test-automation/results/browser/traces/e24fcaf8-ae1a-4dbd-a19e-63bbda0b692c"}</msg>
+<msg timestamp="20230730 21:16:07.672" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"tracesDir":"/Users/sara/code/nelson-test-automation/results/browser/traces/e24fcaf8-ae1a-4dbd-a19e-63bbda0b692c"}</msg>
+<status status="PASS" starttime="20230730 21:16:07.016" endtime="20230730 21:16:07.672"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230730 21:16:07.675" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230730 21:16:07.672" endtime="20230730 21:16:07.675"/>
+</kw>
+<kw name="New Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230730 21:16:07.676" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg timestamp="20230730 21:16:07.772" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230730 21:16:07.772" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<status status="PASS" starttime="20230730 21:16:07.675" endtime="20230730 21:16:07.772"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230730 21:16:08.621" level="INFO">Successfully initialized new page object and opened url: https://test3.omenahotels.com/en</msg>
+<status status="PASS" starttime="20230730 21:16:07.773" endtime="20230730 21:16:08.621"/>
+</kw>
+<status status="PASS" starttime="20230730 21:16:07.016" endtime="20230730 21:16:08.622"/>
+</kw>
+<kw name="Wait Until Network Is Idle" library="Browser">
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until there has been at least one instance of 500 ms of no network traffic on the page after loading.</doc>
+<status status="PASS" starttime="20230730 21:16:08.622" endtime="20230730 21:16:09.125"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<kw name="Is Element Found" library="common">
+<var>${cookieModalVisible}</var>
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<doc>A keyword that has a very complex way of figuring out whether an
+element is found or not because I had trouble with the built-in keywords
+Can be solved differently if you have a better idea</doc>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230730 21:16:09.130" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" starttime="20230730 21:16:09.127" endtime="20230730 21:16:09.130"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Get Elements" library="Browser">
+<var>${els}</var>
+<arg>${selector}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20230730 21:16:13.883" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230730 21:16:13.883" level="INFO">See also file:///Users/sara/code/nelson-test-automation/results/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230730 21:16:13.883" level="FAIL">Execution terminated by signal</msg>
+<status status="FAIL" starttime="20230730 21:16:09.131" endtime="20230730 21:16:13.889"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${count}</var>
+<arg>${els}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20230730 21:16:13.889" endtime="20230730 21:16:13.889"/>
+</kw>
+<if>
+<branch type="IF" condition="${count} &gt; 0">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230730 21:16:13.889" endtime="20230730 21:16:13.889"/>
+</kw>
+<status status="NOT RUN" starttime="20230730 21:16:13.889" endtime="20230730 21:16:13.890"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230730 21:16:13.890" endtime="20230730 21:16:13.890"/>
+</kw>
+<status status="NOT RUN" starttime="20230730 21:16:13.890" endtime="20230730 21:16:13.890"/>
+</branch>
+<status status="NOT RUN" starttime="20230730 21:16:13.889" endtime="20230730 21:16:13.890"/>
+</if>
+<status status="FAIL" starttime="20230730 21:16:09.131" endtime="20230730 21:16:13.890"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="FAIL" starttime="20230730 21:16:13.890" endtime="20230730 21:16:13.890"/>
+</kw>
+<status status="FAIL" starttime="20230730 21:16:13.890" endtime="20230730 21:16:13.890"/>
+</branch>
+<status status="FAIL" starttime="20230730 21:16:09.131" endtime="20230730 21:16:13.890"/>
+</try>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20230730 21:16:13.890" endtime="20230730 21:16:13.890"/>
+</kw>
+<status status="FAIL" starttime="20230730 21:16:09.126" endtime="20230730 21:16:13.891"/>
+</kw>
+<if>
+<branch type="IF" condition="${cookieModalVisible}">
+<kw name="Click" library="Browser">
+<arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230730 21:16:13.891" endtime="20230730 21:16:13.891"/>
+</kw>
+<status status="NOT RUN" starttime="20230730 21:16:13.891" endtime="20230730 21:16:13.891"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>No Cookie Modal Visible</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230730 21:16:13.891" endtime="20230730 21:16:13.891"/>
+</kw>
+<status status="NOT RUN" starttime="20230730 21:16:13.891" endtime="20230730 21:16:13.891"/>
+</branch>
+<status status="NOT RUN" starttime="20230730 21:16:13.891" endtime="20230730 21:16:13.891"/>
+</if>
+<status status="FAIL" starttime="20230730 21:16:09.125" endtime="20230730 21:16:13.891"/>
+</kw>
+<kw name="Set Environment" library="common">
+<status status="NOT RUN" starttime="20230730 21:16:13.892" endtime="20230730 21:16:13.892"/>
+</kw>
+<status status="FAIL" starttime="20230730 21:16:07.015" endtime="20230730 21:16:13.892"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Select Hotel, Dates and Guests" line="14">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.892" endtime="20230730 21:16:13.893">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="Check Available Rooms and Select a Standard Room" line="19">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.896" endtime="20230730 21:16:13.897">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t3" name="Continue to Extras and Select Join for Free" line="23">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.900" endtime="20230730 21:16:13.901">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t4" name="Fill in Booker Contact Information" line="28">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.904" endtime="20230730 21:16:13.905">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t5" name="Pay using Web Bank and Nordea" line="32">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.907" endtime="20230730 21:16:13.907">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t6" name="Check In Online" line="36">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.910" endtime="20230730 21:16:13.911">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t7" name="Wait for Door Code and Verify Page" line="42">
+<tag>robot:exit</tag>
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20230730 21:16:13.913" endtime="20230730 21:16:13.913">Test execution stopped due to a fatal error.</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230730 21:16:13.918" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20230730 21:16:13.918" level="INFO">See also file:///Users/sara/code/nelson-test-automation/results/playwright-log.txt for additional details.</msg>
+<msg timestamp="20230730 21:16:13.918" level="FAIL">Error: browserContext.close: Target page, context or browser has been closed</msg>
+<status status="FAIL" starttime="20230730 21:16:13.915" endtime="20230730 21:16:13.919">Error: browserContext.close: Target page, context or browser has been closed</status>
+</kw>
+<doc>This is a test suite for booking a room and checking in online</doc>
+<status status="FAIL" starttime="20230730 21:16:06.147" endtime="20230730 21:16:13.919">Suite setup failed:
+Execution terminated by signal
+
+Also suite teardown failed:
+Error: browserContext.close: Target page, context or browser has been closed</status>
+</suite>
+<status status="FAIL" starttime="20230730 21:16:06.146" endtime="20230730 21:16:13.921"/>
+</suite>
+<status status="FAIL" starttime="20230730 21:16:06.145" endtime="20230730 21:16:13.922"/>
+</suite>
+<status status="FAIL" starttime="20230730 21:16:06.145" endtime="20230730 21:16:13.923"/>
+</suite>
+<status status="FAIL" starttime="20230730 21:16:06.144" endtime="20230730 21:16:13.923"/>
+</suite>
+<status status="FAIL" starttime="20230730 21:16:06.135" endtime="20230730 21:16:13.924"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="0" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+<stat pass="0" fail="7" skip="0">smoke, booking, BUI2-556, online-checkin</stat>
+</tag>
+<suite>
+<stat pass="0" fail="7" skip="0" id="s1" name="Nelson-Test-Automation">Nelson-Test-Automation</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1" name="Testsuites">Nelson-Test-Automation.Testsuites</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1-s1" name="BUI">Nelson-Test-Automation.Testsuites.BUI</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1-s1-s1" name="Feature">Nelson-Test-Automation.Testsuites.BUI.Feature</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1-s1-s1-s1" name="Online Check In">Nelson-Test-Automation.Testsuites.BUI.Feature.Online Check In</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1-s1-s1-s1-s1" name="BUI2-556">Nelson-Test-Automation.Testsuites.BUI.Feature.Online Check In.BUI2-556</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
