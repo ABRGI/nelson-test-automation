@@ -22,7 +22,7 @@ for url in "${environments[@]}"; do
   # Check if the response is "true"
   if [[ $response == "false" ]]; then
     echo "Running tests for ${url##*/}"
-    robot -A environments/${url##*/}.txt --outputdir reports/${url##*/} testsuites/
+    robot -L trace -A environments/${url##*/}.txt --outputdir reports/${url##*/} --xunit xunit.xml testsuites/
     # Exit the loop if the command was executed
     break
   else

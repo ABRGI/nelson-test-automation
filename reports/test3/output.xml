@@ -1,61 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.11.4 on darwin)" generated="20230726 13:55:01.971" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.11.4 on darwin)" generated="20230730 21:48:18.737" rpa="false" schemaversion="3">
 <suite id="s1" name="Testsuites" source="/Users/sara/code/nelson-test-automation/testsuites">
 <suite id="s1-s1" name="BUI" source="/Users/sara/code/nelson-test-automation/testsuites/BUI">
-<suite id="s1-s1-s1" name="Regression" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/regression">
-<suite id="s1-s1-s1-s1" name="New Booking" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/regression/new_booking.robot">
-<kw name="Open Browser to Landing Page" library="common" type="SETUP">
-<doc>A general startup keyword for opening a browser to the landing page.</doc>
-<kw name="Open New Browser To URL" library="common">
-<arg>${url}</arg>
-<kw name="New Browser" library="Browser">
-<arg>${browser}</arg>
-<arg>${headless}</arg>
-<arg>timeout=${timeout}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230726 13:55:02.404" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 90000.0, "tracesDir": "/Users/sara/code/nelson-test-automation/reports/test3/browser/traces/c711c8a6-4b35-4f0c-81e6-f339e1877e65"}</msg>
-<msg timestamp="20230726 13:55:02.752" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":90000,"tracesDir":"/Users/sara/code/nelson-test-automation/reports/test3/browser/traces/c711c8a6-4b35-4f0c-81e6-f339e1877e65"}</msg>
-<status status="PASS" starttime="20230726 13:55:02.403" endtime="20230726 13:55:02.753"/>
-</kw>
-<kw name="Set Browser Timeout" library="Browser">
-<arg>${timeout}</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230726 13:55:02.755" level="INFO">No context open.</msg>
-<status status="PASS" starttime="20230726 13:55:02.753" endtime="20230726 13:55:02.755"/>
-</kw>
-<kw name="New Context" library="Browser">
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230726 13:55:02.755" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "hideRfBrowser": "",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  }
-}</msg>
-<msg timestamp="20230726 13:55:02.768" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230726 13:55:02.768" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}}</msg>
-<status status="PASS" starttime="20230726 13:55:02.755" endtime="20230726 13:55:02.768"/>
-</kw>
-<kw name="New Page" library="Browser">
-<arg>${url}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230726 13:55:03.174" level="INFO">See also file:///Users/sara/code/nelson-test-automation/reports/test3/playwright-log.txt for additional details.</msg>
+<suite id="s1-s1-s1" name="Feature" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/feature">
+<suite id="s1-s1-s1-s1" name="Online Check In" source="/Users/sara/code/nelson-test-automation/testsuites/BUI/feature/online_check_in">
 <errors>
-<msg timestamp="20230726 13:55:03.174" level="ERROR">Execution stopped by user.</msg>
+<msg timestamp="20230730 21:48:18.935" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>

@@ -8,6 +8,3 @@
 --variable MUI_PASSWORD:$MUI_PASSWORD
 --variable MUI_USERNAME:$MUI_USERNAME
 --variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY
---exclude skip
---exclude pretest
---include smoke
