@@ -1,0 +1,147 @@
+{"level":30,"time":"2023-07-30T19:41:25.632Z","pid":14197,"hostname":"fv-az267-733","msg":"Listening on 38371"}
+{"level":30,"time":"2023-07-30T19:41:25.714Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:25.715Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:25.719Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:25.719Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:25.916Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:25.916Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:25.920Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:25.920Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.153Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.153Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.157Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.158Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.166Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.166Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.169Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.169Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.630Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.630Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.635Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.635Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.642Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.642Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.645Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.645Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.650Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.650Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.652Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.652Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.657Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.657Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.659Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.659Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.664Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.664Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-07-30T19:41:26.668Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.669Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-30T19:41:26.686Z","pid":14197,"hostname":"fv-az267-733","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-07-30T19:41:26.687Z","pid":14197,"hostname":"fv-az267-733","msg":"End of node method closeAllBrowsers"}
