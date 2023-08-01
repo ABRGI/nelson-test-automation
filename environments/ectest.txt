@@ -6,3 +6,5 @@
 --outputdir reports/ecprod/
 --variable browser:Firefox
 --include exhibition_court
+--exclude pretest
+--exclude skip

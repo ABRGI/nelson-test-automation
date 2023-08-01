@@ -76,7 +76,7 @@ jobs:
       - name: Make the script executable
         run: chmod +x scripts/run_tests.sh && chmod +x scripts/run_upload.sh
 
-      - name: Run Omena
+      - name: Run Tests on listed Environments
         run: ./scripts/run_tests.sh 
         continue-on-error: True 
 
