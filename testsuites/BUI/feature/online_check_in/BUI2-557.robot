@@ -28,7 +28,8 @@ Add Someone Else as the Main Guest
     Fill In Booker info
     Click Save and invite
     Wait for invite guest page    ${True}
-    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${guestEmail}
+    ${email}=     Create Email and Return Inbox
+    Fill Invite guest info and click invite button   ${guestFirstname}   ${guestLastname}   ${email}
     Wait for invite guest page    ${False}
     Open Edit booker info
     Verify All information is disbled
