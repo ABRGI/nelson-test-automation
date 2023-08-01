@@ -3,7 +3,7 @@ Documentation      A test suite that will verify external libraries and variable
 ...                Must pass in order for everything else to work as expected
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
-Library            ${EXECDIR}/resources/libraries/GmailClient.py
+#Library            ${EXECDIR}/resources/libraries/GmailClient.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
 Force Tags         pretest

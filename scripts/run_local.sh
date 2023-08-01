@@ -1,1 +1,0 @@
-robot -A environments/test3.txt --outputdir reports/test3 --variable MAILSLURP_API_KEY:3b12b09cc897c651b281343b8fb2daeef311b6e343ba984b11a374c70b66dd60 --xunit xunit.xml  testsuites/

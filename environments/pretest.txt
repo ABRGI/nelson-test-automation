@@ -5,3 +5,7 @@
 --outputdir reports/pretest/
 --variable browser:Firefox
 --include pretest
+--variable MUI_URL:$MUI_URL
+--variable MUI_PASSWORD:$MUI_PASSWORD
+--variable MUI_USERNAME:$MUI_USERNAME
+--variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY
