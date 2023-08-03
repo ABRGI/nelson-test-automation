@@ -22,8 +22,6 @@ for url in "${environments[@]}"; do
   # Check if the response is "true"
   if [[ $response == "false" ]]; then
     echo "Running tests for environment ${url##*/}"
-    robot -L trace -A environments/${url##*/}.txt --outputdir reports/${url##*/} --xunit xunit.xml testsuites/
-    echo "Upload results to testmo"
     echo "***"
     testmo automation:run:submit \
     --instance https://softico.testmo.net \
@@ -31,6 +29,8 @@ for url in "${environments[@]}"; do
     --name "Robot test run ${url##*/}" \
     --source "CI" \
     --results reports/${url##*/}/*.xml \
+    -- robot -L trace -A environments/${url##*/}.txt --outputdir reports/${url##*/} --xunit xunit.xml testsuites/
+    echo "Upload results to testmo"
     break
   else
     echo $response

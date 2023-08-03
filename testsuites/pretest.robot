@@ -21,11 +21,6 @@ Pre-Test: Get Config
     Log To Console    Config for environment:
     Log To Console    ${config}
 
-Pre-Test: Check Gmail
-    ${e}=     Get Latest Email Id By Subject
-    Log To Console     Latest email content:
-    Log To Console     ${e}
-
 Pre-Test: Verify Variables are Set
     [Documentation]    Test case that verifies all environment variables are set 
     @{vars}=    Create List    ${inbox_id}      ${MUI_URL}    ${MUI_USERNAME}   ${MUI_PASSWORD}    ${MAILSLURP_API_KEY}
