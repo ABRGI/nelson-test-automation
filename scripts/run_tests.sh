@@ -12,13 +12,13 @@ environments=(
 
 # Run the pretest suite
 # TBD: Add whatever needs to be done before the tests
-robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
+# robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
 
 # Iterate over the array of environments
 for url in "${environments[@]}"; do
   # Send GET request and capture the response
   response=$(curl -sb -o /dev/null "$url")
-
+  echo "Response from $url: $response"
   # Check if the response is "true"
   if [[ $response == "false" ]]; then
     echo "Running tests for environment ${url##*/}"
@@ -29,7 +29,10 @@ for url in "${environments[@]}"; do
     --name "Robot test run ${url##*/}" \
     --source "CI" \
     --results reports/${url##*/}/*.xml \
-    -- robot -L trace -A environments/${url##*/}.txt --outputdir reports/${url##*/} --xunit xunit.xml testsuites/
+    -- robot -L trace -A environments/${url##*/}.txt \
+     --outputdir reports/${url##*/} \
+     --xunit xunit.xml \
+     testsuites/
     echo "Upload results to testmo"
     break
   else
