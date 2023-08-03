@@ -26,7 +26,7 @@ Complete a new booking
     Select Web Bank and Nordea as Payment Method
     Complete Payment Successfully
 
-A new booker makes a reservation
+Create a new Booking
     [Documentation]    A new booker makes a reservation
     Select Hotel
     Choose Dates and Guests
@@ -42,18 +42,18 @@ Booker clicks on booker information
     Click    (//p[contains(text(), "Details needed for receiving")])[1]
     # Wait Until Visible
 
-Booker clicks on main guest name
+Booker Clicks on Main Guest Name
     [Documentation]    Booker clicks on main guest name
     Click    (//p[contains(text(), "Details needed for receiving")])[2]
     # Wait Until Visible
 
-Edit guest page is opened
+Verify Edit Guest Page is Open
     [Documentation]    Verifeies guest page is opened
     Wait Until Visible    id=chakra-modal-114
+    Wait Until Visible    //button[@data-ga4-event="add_guest_information"]
 
 Save and Sign button is visible
     [Documentation]    Verifies the save and sign button is visible
-    Wait Until Visible    //button[@data-ga4-event="add_guest_information"]
 
 Toggle Someone Else Checkbox
     [Documentation]    Toggles the "Someone else will be the main guest" checkbox

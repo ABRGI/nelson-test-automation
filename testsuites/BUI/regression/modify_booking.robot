@@ -10,11 +10,11 @@ Force Tags         skip
 *** Test Cases ***
 
 A new booker opens the edit guest page and changes the main guest to someone else
-    Pass Execution     TBD
-    A new booker makes a reservation
-    Successfully completes a payment
-    Booker clicks on main guest name
-    Edit guest page is opened
+    Create a New Booking and Complete Payment
+    Booker Clicks on Main Guest Name
+    Verify Edit Guest Page is Open
+
+    ##
     Save and Sign button is visible
     Toggle Someone Else Checkbox
     Save and Sign button is visible 
