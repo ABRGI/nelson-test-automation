@@ -20,7 +20,7 @@ for url in "${environments[@]}"; do
   response=$(curl -sb -o /dev/null "$url")
   echo "Response from $url: $response"
   # Check if the response is "true"
-  if [[ $response == "false" ]]; then
+  if [[ $response == "true" ]]; then
     echo "Running tests for environment ${url##*/}"
     echo "***"
     testmo automation:run:submit \
