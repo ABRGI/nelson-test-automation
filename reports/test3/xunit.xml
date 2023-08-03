@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Testsuites" tests="34" errors="0" failures="16" skipped="0" time="793.951" timestamp="2023-08-03T09:22:57.789000">
+<testsuite name="BUI" tests="18" errors="0" failures="3" skipped="0" time="679.799" timestamp="2023-08-03T09:22:57.807000">
+<testsuite name="Feature" tests="16" errors="0" failures="3" skipped="0" time="631.344" timestamp="2023-08-03T09:22:57.809000">
+<testsuite name="Online Check In" tests="16" errors="0" failures="3" skipped="0" time="631.340" timestamp="2023-08-03T09:22:57.811000">
+<testsuite name="BUI2-1248" tests="5" errors="0" failures="2" skipped="0" time="301.823" timestamp="2023-08-03T09:22:57.812000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify UI when Booker has not update Information" time="50.968">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify User changes to another nationality than Finland and vice versa" time="61.413">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify booker invites guest with already used email address" time="64.230">
+<failure message="'False==True' should be true." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify booker univites guest in case guest has not completed online check-in" time="62.950">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify UI when Booker has fully updated information" time="61.180">
+<failure message="'False==True' should be true." type="AssertionError"/>
+</testcase>
+</testsuite>
+<testsuite name="BUI2-556" tests="7" errors="0" failures="0" skipped="0" time="70.796" timestamp="2023-08-03T09:27:59.640000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Select Hotel, Dates and Guests" time="0.427">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Check Available Rooms and Select a Standard Room" time="4.357">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Continue to Extras and Select Join for Free" time="5.644">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Fill in Booker Contact Information" time="2.172">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Pay using Web Bank and Nordea" time="14.269">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Check In Online" time="15.493">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Wait for Door Code and Verify Page" time="21.369">
+</testcase>
+<properties>
+<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
+</properties>
+</testsuite>
+<testsuite name="BUI2-557" tests="4" errors="0" failures="1" skipped="0" time="258.702" timestamp="2023-08-03T09:29:10.444000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Create a new Booking" time="38.453">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Add Someone Else as the Main Guest" time="101.037">
+<failure message="TimeoutError: locator.waitFor: Timeout 90000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//button[text()=&quot;Check in&quot;])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Validation shows msg for fields marked" time="79.842">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Showing imported passport when the National is not Finland" time="39.343">
+</testcase>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="Regression" tests="2" errors="0" failures="0" skipped="0" time="48.449" timestamp="2023-08-03T09:33:29.155000">
+<testsuite name="Create Booking" tests="2" errors="0" failures="0" skipped="0" time="48.439" timestamp="2023-08-03T09:33:29.157000">
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Create A New Booking as" time="26.761">
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Confirm Email and Open Link" time="14.860">
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="MUI" tests="16" errors="0" failures="13" skipped="0" time="114.130" timestamp="2023-08-03T09:34:17.608000">
+<testsuite name="EC" tests="7" errors="0" failures="4" skipped="0" time="106.765" timestamp="2023-08-03T09:34:17.610000">
+<testsuite name="Smoke" tests="7" errors="0" failures="4" skipped="0" time="106.757" timestamp="2023-08-03T09:34:17.611000">
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Create A New Booking on Booking.com for today and verify Emails" time="39.786">
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Verify Emails and Get Booking No" time="61.538">
+<failure message="ApiException: (408)&#10;Reason: &#10;HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 03 Aug 2023 09:36:00 GMT', 'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '1082', 'Connection': 'keep-alive', 'X-XSS-Protection': '1; mode=block', 'Referrer-Policy': 'same-origin', 'Strict-Transport-Security': 'max-age=63072000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': &quot;default-src https: 'self' app.mailslurp.com *.mailslurp.com *.mailslurp.link *.mailslurp.dev http://localhost:3000; object-src none; frame-ancestors 'self' app.mailslurp.com *.mailslurp.com *.mailslurp.link *.mailslurp.dev http://localhost:3000; img-src * data: 'unsafe-inline'; style-src * data: 'unsafe-inline';&quot;, 'Vary': 'origin,access-control-request-method,access-control-request-headers,accept-encoding', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'})&#10;HTTP response body: {&quot;message&quot;:&quot;Failed to satisfy email query for inbox ID `492aa3bb-9e4b-410a-a02c-84f13ace89e8` for user ID `a2f48756-8279-471d-bb55-980a32334d37`. Expected minimum message count of `1`. Found at most `0`(after max timeout of `60000 ms` and a back-off period of `1000 ms`). Did you send an email to the inbox? The inbox's email address is `492aa3bb-9e4b-410a-a02c-84f13ace89e8@mailslurp.com`. Sort direction `ASC`, unread only `false`, match options `{\&quot;matches\&quot;:[{\&quot;field\&quot;:\&quot;SUBJECT\&quot;,\&quot;should\&quot;:\&quot;CONTAIN\&quot;,\&quot;value\&quot;:\&quot;Welcome to Exhibition Court Hotel\&quot;}],\&quot;conditions\&quot;:null}`, created at after `2000-01-01T00:00:00Z` and created at before `3000-01-01T00:00:00Z`&quot;,&quot;caseNumber&quot;:&quot;CASE-NF-8a0be157-9786-4c30-bdae-42570ff0d4e1&quot;,&quot;errorClass&quot;:&quot;GetMessagesRetryException&quot;,&quot;errorCode&quot;:&quot;E_001_UNEXPECTED_ERROR&quot;,&quot;comment&quot;:&quot;If your error persists please submit a ticket at `https://mailslurp.zendesk.com/hc/en-us/requests/new`. Please include your error `caseNumber` if available to help support debug the issue. Sharing screenshots or samples of your code will help the team understand.&quot;}&#10;" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Create A New Booking on Booking.com for a later date and verify Emails" time="0.006">
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Cancel Booking via BDC" time="0.003">
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Open Booking in MUI" time="1.588">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Cancel Booking in MUI" time="0.016">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Start Creating a new Booking in MUI" time="0.417">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Feature" tests="2" errors="0" failures="2" skipped="0" time="3.671" timestamp="2023-08-03T09:36:04.376000">
+<testsuite name="MUI-430" tests="2" errors="0" failures="2" skipped="0" time="3.662" timestamp="2023-08-03T09:36:04.378000">
+<testcase classname="Testsuites.MUI.Feature.MUI-430" name="Filter all reservations with Check-in incomplete" time="1.599">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Feature.MUI-430" name="Remove filter and find a reservation with Check-in complete" time="0.417">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains test cases for testing MUI-430.robot"/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Regression" tests="7" errors="0" failures="7" skipped="0" time="3.689" timestamp="2023-08-03T09:36:08.047000">
+<testsuite name="Smoke" tests="7" errors="0" failures="7" skipped="0" time="3.681" timestamp="2023-08-03T09:36:08.049000">
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in without Password" time="1.645">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in without Username" time="0.365">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.356">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Log in with correct Username and Password" time="0.267">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Verify Users Page" time="0.011">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Verify User Profile" time="0.010">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Log Out" time="0.008">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains smoke tests for MUI"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<properties>
+<property name="Documentation" value="Argument file for running tests on Omena Staging Environmen (test3)"/>
+</properties>
+</testsuite>
