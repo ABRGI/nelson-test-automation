@@ -1,0 +1,857 @@
+{"level":30,"time":"2023-08-07T09:47:29.134Z","pid":4972,"hostname":"fv-az877-993","msg":"Listening on 56713"}
+{"level":30,"time":"2023-08-07T09:47:29.164Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.165Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.169Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:47:29.426Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-1vRapt -juggler-pipe -silent
+<launched> pid=5243
+[pid=5243][err] Error: no DISPLAY environment variable specified
+[pid=5243] <process did exit: exitCode=1, signal=null>
+[pid=5243] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.432Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.432Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2023-08-07T09:47:29.439Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.439Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.443Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.443Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.447Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.447Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.451Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.451Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.455Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-08-07T09:47:29.455Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.459Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.459Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.483Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.484Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.486Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.486Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.491Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:47:29.740Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-VGe7iQ -juggler-pipe -silent
+<launched> pid=5506
+[pid=5506][err] Error: no DISPLAY environment variable specified
+[pid=5506] <process did exit: exitCode=1, signal=null>
+[pid=5506] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.743Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.743Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:47:29.757Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.757Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.762Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:47:29.762Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.194Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.194Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.202Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.202Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.207Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.207Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.209Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.209Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.214Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.214Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.216Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.217Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.220Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:31.460Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-k6EaSC -juggler-pipe -silent
+<launched> pid=5785
+[pid=5785][err] Error: no DISPLAY environment variable specified
+[pid=5785] <process did exit: exitCode=1, signal=null>
+[pid=5785] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.467Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.467Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.478Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.478Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.481Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.481Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.484Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method click"}
+================= Original suppressed error =================
+Error: Could not find active page
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at findLocator (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8144:3)
+    at internalClick (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8995:25)
+    at click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8978:24)
+    at PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.484Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  click"}
+{"level":30,"time":"2023-08-07T09:48:31.487Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.488Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.494Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.494Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.496Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.496Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.499Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:31.780Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-So4o6J -juggler-pipe -silent
+<launched> pid=6048
+[pid=6048][err] Error: no DISPLAY environment variable specified
+[pid=6048] <process did exit: exitCode=1, signal=null>
+[pid=6048] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.817Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.817Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.827Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.828Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.832Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-08-07T09:48:31.832Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:31.836Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.836Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.857Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.857Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.860Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.860Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:31.863Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:32.109Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-R0M3Qq -juggler-pipe -silent
+<launched> pid=6311
+[pid=6311][err] Error: no DISPLAY environment variable specified
+[pid=6311] <process did exit: exitCode=1, signal=null>
+[pid=6311] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.112Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.112Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.122Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.122Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.124Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.125Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.128Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:32.364Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-loOLvN -juggler-pipe -silent
+<launched> pid=6575
+[pid=6575][err] Error: no DISPLAY environment variable specified
+[pid=6575] <process did exit: exitCode=1, signal=null>
+[pid=6575] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.367Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.368Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.376Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.377Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.379Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-08-07T09:48:32.379Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.383Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.383Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.401Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.401Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.403Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.403Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.406Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:32.644Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-mjkVWm -juggler-pipe -silent
+<launched> pid=6838
+[pid=6838][err] Error: no DISPLAY environment variable specified
+[pid=6838] <process did exit: exitCode=1, signal=null>
+[pid=6838] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.648Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.648Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.655Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.655Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.659Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.659Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.662Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:32.894Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-XUlB4L -juggler-pipe -silent
+<launched> pid=7101
+[pid=7101][err] Error: no DISPLAY environment variable specified
+[pid=7101] <process did exit: exitCode=1, signal=null>
+[pid=7101] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.897Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.898Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:32.904Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.904Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.907Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.907Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:32.910Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:33.142Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-Pw2Bow -juggler-pipe -silent
+<launched> pid=7364
+[pid=7364][err] Error: no DISPLAY environment variable specified
+[pid=7364] <process did exit: exitCode=1, signal=null>
+[pid=7364] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.145Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.{"level":30,"time":"2023-08-07T09:48:33.527Z","pid":2324,"hostname":"fv-az877-993","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-08-07T09:48:33.527Z","pid":2324,"hostname":"fv-az877-993","msg":"End of node method closeAllBrowsers"}
+==========
+{"level":30,"time":"2023-08-07T09:48:33.145Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.153Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.153Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.155Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.155Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.158Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-07T09:48:33.391Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+<launching> /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1419/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D6XdyC -juggler-pipe -silent
+<launched> pid=7628
+[pid=7628][err] Error: no DISPLAY environment variable specified
+[pid=7628] <process did exit: exitCode=1, signal=null>
+[pid=7628] starting temporary directories cleanup
+============================================================
+    at _newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9284:48)
+    at newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9645:33)
+    at PlaywrightServer.newBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.394Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.394Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.402Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.402Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.405Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.405Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.407Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method click"}
+================= Original suppressed error =================
+Error: Could not find active page
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at findLocator (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8144:3)
+    at internalClick (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8995:25)
+    at click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8978:24)
+    at PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.407Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  click"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.409Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-08-07T09:48:33.409Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.414Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.414Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.416Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.416Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.418Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method click"}
+================= Original suppressed error =================
+Error: Could not find active page
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at findLocator (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8144:3)
+    at internalClick (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8995:25)
+    at click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8978:24)
+    at PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.419Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  click"}
+{"level":30,"time":"2023-08-07T09:48:33.420Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.421Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.426Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.426Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.427Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.428Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.429Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method click"}
+================= Original suppressed error =================
+Error: Could not find active page
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at findLocator (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8144:3)
+    at internalClick (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8995:25)
+    at click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8978:24)
+    at PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.430Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  click"}
+{"level":30,"time":"2023-08-07T09:48:33.431Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8187:11)
+    at takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8226:3)
+    at PlaywrightServer.takeScreenshot (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9913:34)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.432Z","pid":4972,"hostname":"fv-az877-993","msg":"Error of node method  takeScreenshot"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.436Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.436Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.438Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-08-07T09:48:33.439Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9385:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9898:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10144:57)
+    at /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:394:13)
+    at ServerHttp2Stream.onEnd (/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:381:22)
+    at ServerHttp2Stream.emit (node:events:526:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-08-07T09:48:33.442Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.442Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-07T09:48:33.524Z","pid":4972,"hostname":"fv-az877-993","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-08-07T09:48:33.524Z","pid":4972,"hostname":"fv-az877-993","msg":"End of node method closeAllBrowsers"}
