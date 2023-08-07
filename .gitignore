@@ -31,3 +31,4 @@ log.html
 jira_tiket_drafts.md
 test_data.json
 sara/
+scripts/run_local.sh

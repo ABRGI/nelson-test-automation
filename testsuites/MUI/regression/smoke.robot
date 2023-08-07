@@ -23,7 +23,7 @@ Log in with correct Username and Password
     Open Browser to Nelson Portal
     Log in to Nelson Portal
     Verify Dashboard Elements
-    Select Environment   test2
+    Select Environment   ${ENVIRONMENT}
 
 Verify Users Page
     Click     //a[contains(@href, "users") and (@class="capitalize")]

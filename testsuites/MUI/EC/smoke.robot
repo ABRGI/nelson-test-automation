@@ -3,28 +3,10 @@
 
 Suite Teardown    Close Browser    ALL
 Resource           ${EXECDIR}/resources/keywords/common.resource
-Resource           ${EXECDIR}/resources/keywords/booking.resource
-Resource          ${EXECDIR}/resources/keywords/mui.resource
+Resource          ${EXECDIR}/resources/keywords/EC.resource
 Library            Browser     auto_closing_level=SUITE
 Documentation      A test suite for verifying modify booking functionality
 Force Tags        exhibition_court
-
-*** Variables ***
-
-${BDCNo}     547370586    #Default for debug, is overridden in full test suite run
-${BDCHotelId}    10304890
-
-*** Keywords ***
-# MOVE
-
-Fill in Card Details
-    Click and Fill       id=cc_name    Card Holder 
-    Select Options By    id=cc_type    value     Visa
-    Click and Fill       id=cc_number    4153013999700321
-    Select Options By    id=cc_month    value     11
-    Select Options By    id=ccYear    value     2023   
-    Click and Fill       id=cc_cvc    321
-
 
 *** Test Cases ***
 

@@ -21,11 +21,6 @@ Open Browser to Nelson Portal and Login
     Log in to Nelson Portal
     Select Environment    ${environment}
 
-Open Browser to Nelson Portal and Navigate to Test Exhibition
-    Open Browser to Nelson Portal
-    Log in to Nelson Portal
-    Select Environment    Test Exhibition
-
 Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
     Set Browser Timeout    ${timeout}

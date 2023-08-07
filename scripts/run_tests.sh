@@ -14,6 +14,7 @@ environments=(
 # TBD: Add whatever needs to be done before the tests
 # robot -A environments/pretest.txt --outputdir reports/pretest testsuites/pretest.robot
 
+
 # Iterate over the array of environments
 for url in "${environments[@]}"; do
   # Send GET request and capture the response

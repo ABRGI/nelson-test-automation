@@ -5,6 +5,7 @@ from robot.api.deco import keyword
 from bs4 import BeautifulSoup
 from mailslurp_client.api.email_controller_api import EmailControllerApi
 from mailslurp_client.api.inbox_controller_api import InboxControllerApi
+from dotenv import load_dotenv
 
 # define a library to use mailslurp functions in robot test
 class MailSlurp(object):
@@ -22,8 +23,13 @@ class MailSlurp(object):
             key = os.environ.get('MAILSLURP_API_KEY')
             if key == None:
                 print("Mailslurp Key not Found")
-                print("Quitting...")
-                quit()
+                try:
+                    load_dotenv()
+                    key = os.getenv('MAILSLURP_API_KEY')
+                    if key != None:
+                        print('Found key from dotenv')
+                except Exception as e:
+                    print(e)
         except Exception as e:
             print(e)
         return key

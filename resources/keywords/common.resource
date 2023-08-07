@@ -7,6 +7,7 @@ Library            Browser    #run_on_failure=Take Custom Screenshot    auto_clo
 Library            OperatingSystem
 Library            String
 Library            Process
+Library            RequestsLibrary
 
 *** Keywords ***
 
@@ -23,6 +24,13 @@ Set Environment
     ${currentUrl}=     Get Url
     ${env}=        Get Environment From Url    ${currentUrl}
     Set Variable   ${environment}    ${env}    
+
+Get BUI Status
+    [Documentation]    Get the status of the microservice
+    [Arguments]    ${env_name}=test4
+    Create Session    frends    ${microservice_url}
+    ${response}=    GET On Session    frends    /status/${env_name}
+    [Return]    ${response.json()}
 
 Check URL Contains
     [Arguments]    ${expected_string}

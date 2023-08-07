@@ -3,6 +3,7 @@ Documentation      A test suite that will verify external libraries and variable
 ...                Must pass in order for everything else to work as expected
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
+Library            RequestsLibrary
 #Library            ${EXECDIR}/resources/libraries/GmailClient.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
@@ -14,6 +15,14 @@ ${inbox_object}
 ${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
 
 *** Test Cases ***
+
+Pre-Test: Get BUI Status
+    ${response}=    Get BUI Status
+    IF    '${response}' == 'False'
+        Fail    BUI is not up and running
+    ELSE
+        Log To Console    BUI is up and running
+    END
 
 Pre-Test: Get Config
     [Documentation]    Test case that checks the config file
@@ -37,7 +46,7 @@ Pre-Test: Get Member Inbox
     Log To Console     ${i}
 
 Pre-Test: Verify BUI is Up
-    Pass Execution     TBD: BUI is up and runnin
+    Should Be True
 
 Pre-Test: Verify API is Up
     Pass Execution     TBD: API is up and running
