@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Nelson QA Status Page</title>
+    <link href="style.css" rel="stylesheet" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nelson QA Status Page</h1>
+        <div id="status">
+                <div id="test3" class="alert">Omena Test Environment (test3)</div>
+                <div id="test4" class="alert">Omena Staging Environment (test4)</div>
+                <div id="ectest" class="alert">NOT IMPLEMENTED</div>
+                <div id="salotest" class="alert">NOT IMPLEMENTED</div>
+        </div>
+        <h2>Latest Test Results</h2>
+        <div id="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="pretest-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#pretest-collapse" aria-expanded="false" aria-controls="pretest-collapse">
+                        pretest
+                    </button>
+                </h2>
+                <div id="pretest-collapse" class="accordion-collapse collapse show" aria-labelledby="pretest-heading"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <button class="btn btn-primary btn-run">Run tests now</button>
+                        <div class="iframe-container">
+                            <iframe src="pretest/report.html" title="Report" frameborder="0"></iframe>
+                        </div>
+                        <br>
+                        <h3>Full logs</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="pretest/log.html">log.html</a></li>
+                            <li><a href="pretest/report.html">report.html</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="ectest-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#ectest-collapse" aria-expanded="false" aria-controls="ectest-collapse">
+                        ectest
+                    </button>
+                </h2>
+                <div id="ectest-collapse" class="accordion-collapse collapse show" aria-labelledby="ectest-heading"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <button class="btn btn-primary btn-run">Run tests now</button>
+                        <div class="iframe-container">
+                            <iframe src="ectest/report.html" title="Report" frameborder="0"></iframe>
+                        </div>
+                        <br>
+                        <h3>Full logs</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="ectest/log.html">log.html</a></li>
+                            <li><a href="ectest/report.html">report.html</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="test3-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#test3-collapse" aria-expanded="false" aria-controls="test3-collapse">
+                        test3
+                    </button>
+                </h2>
+                <div id="test3-collapse" class="accordion-collapse collapse show" aria-labelledby="test3-heading"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <button class="btn btn-primary btn-run">Run tests now</button>
+                        <div class="iframe-container">
+                            <iframe src="test3/report.html" title="Report" frameborder="0"></iframe>
+                        </div>
+                        <br>
+                        <h3>Full logs</h3>
+                        <ul class="list-unstyled">
+
+                            <li><a href="test3/log.html">log.html</a></li>
+                            <li><a href="test3/report.html">report.html</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="test4-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#test4-collapse" aria-expanded="false" aria-controls="test4-collapse">
+                        test4
+                    </button>
+                </h2>
+                <div id="test4-collapse" class="accordion-collapse collapse show" aria-labelledby="test4-heading"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <button class="btn btn-primary btn-run">Run tests now</button>
+                        <div class="iframe-container">
+                            <iframe src="test4/report.html" title="Report" frameborder="0"></iframe>
+                        </div>
+                        <br>
+                        <h3>Full logs</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="test4/log.html">log.html</a></li>
+                            <li><a href="test4/report.html">report.html</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous">
+        window.onload = function () {
+            const envs = ['test3', 'test4'];
+
+            envs.forEach(getStatus);
+
+            function getStatus(env) {
+                const url = "https://softico-dev-agent.frendsapp.com/api/qa/v1/status/" + env;
+
+                fetch(url)
+                    .then(res => res.json())
+                    .then(data => setStatus(data, env))
+                    .catch(error => {
+                        console.error('Error fetching status:', error);
+                        setStatus(false, env);
+                    });
+            }
+
+            function setStatus(data, env) {
+                const element = document.getElementById(env);
+                p = document.createElement('span');
+                if (data === true || data === 'true') {
+                    element.classList.add('alert-success');
+                    p.innerText = ' is up 🎉 🎉 🎉';
+                    element.appendChild(p);
+                } else {
+                    element.classList.add('alert-danger');
+                    p.innerText = ' is down 🆘 🆘 🆘';
+                    element.appendChild(p);
+                }
+            }
+        };
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
