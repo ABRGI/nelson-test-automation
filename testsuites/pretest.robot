@@ -8,14 +8,15 @@ Library            RequestsLibrary
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
 Force Tags         pretest
+Suite Setup       Pre-Test: Verify BUI is Up
+
 
 *** Variables ***
 
 ${inbox_object}
 ${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
 
-*** Test Cases ***
-
+*** Keywords ***
 Pre-Test: Get BUI Status
     ${response}=    Get BUI Status
     IF    '${response}' == 'False'
@@ -23,6 +24,13 @@ Pre-Test: Get BUI Status
     ELSE
         Log To Console    BUI is up and running
     END
+    [Return]    ${response}
+
+Pre-Test: Verify BUI is Up
+    ${status}=     Pre-Test: Get BUI Status
+    Should Be True    ${status}
+
+*** Test Cases ***
 
 Pre-Test: Get Config
     [Documentation]    Test case that checks the config file
@@ -44,9 +52,6 @@ Pre-Test: Get Member Inbox
     Log To Console    ${inbox.name}
     ${i}=     Create new Inbox
     Log To Console     ${i}
-
-Pre-Test: Verify BUI is Up
-    Should Be True
 
 Pre-Test: Verify API is Up
     Pass Execution     TBD: API is up and running

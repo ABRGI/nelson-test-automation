@@ -96,7 +96,7 @@ class Helpers(object):
         else:
             e = e+'omena'
         return e
-
+    
 if __name__ == '__main__':
     h = Helpers()
     isBreakfast = h.get_config_item('https://test4.omenahotels.com', 'breakfast')

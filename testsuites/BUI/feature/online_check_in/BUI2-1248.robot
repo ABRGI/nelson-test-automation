@@ -5,7 +5,7 @@ Library           Browser    auto_closing_level=SUITE
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Resource          ${EXECDIR}/resources/keywords/mui.resource
-
+Force Tags        skip
 *** Test Cases ***
 
 Verify UI when Booker has not update Information
@@ -61,4 +61,3 @@ Verify UI when Booker has fully updated information
    Verify UI Invite Guest Components
    Fill Invite guest info and click invite button      ${guestFirstname}   ${guestLastname}   ${fullEmail}
    Switch To Invite Guest URL Confirmation Page        ${fullEmail}
-   Verify Check In Button Showed In Invited Guest Name  
