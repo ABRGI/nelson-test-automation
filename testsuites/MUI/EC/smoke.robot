@@ -4,25 +4,27 @@
 Suite Teardown    Close Browser    ALL
 Resource           ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/EC.resource
-Library            Browser     auto_closing_level=SUITE
+Library            Browser         auto_closing_level=SUITE
 Documentation      A test suite for verifying modify booking functionality
 Force Tags        exhibition_court
 
-*** Test Cases ***
 
-Create A New Booking on Booking.com for today and verify Emails
-    ${id}=     Get Inbox ID
+*** Keywords ***
+
+Open Booking.com
+    [Arguments]    ${BDCUrl}    ${BDCHotelId}
     Open New Browser To URL     ${BDCUrl}${BDCHotelId}&test=1
     Log To Console        ${BDCUrl}${BDCHotelId}&test=1
-    ${day}    ${month}    Get Selectors for Far Date
+
+Check Availability for Today
+    ${day}    ${month}    Get Selectors for For Date
     Select Options By    id=check-availability__checkin-monthday    value     ${day} 
     Select Options By    id=check-availability__checkin-yearmonth   value     2023-${month}        #TBD: Add year to be dynamic
     Click                 //span[contains(text(), 'Check availability')]
-    Wait Until Network Is Idle
-    ${reserveButton}=     Is Element Visible    //button[@name='book']
-    Select Options By    //select[contains(@id, 'unit')]    value     1
-    Click                 //span[contains(text(), 'reserve')]
-    ${id}=         Get Inbox ID
+   # Wait Until Network Is Idle
+
+Fill Contact Information in BDC
+    ${id}=     Get Inbox ID
     Click and Fill     id=firstname    ${firstName}
     Click and Fill     id=lastname    ${lastName}
     Click and Fill    id=email       ${id}@mailslurp.com
@@ -34,21 +36,42 @@ Create A New Booking on Booking.com for today and verify Emails
     Click         id=firstname
     Click         id=lastname
     Click         id=email
+    ${isVisible}=     Is Element Visible    //div[contains(@class, 'bui-modal--active')]
+    IF     '${isVisible}' == 'True'
+        Click         //button[contains(@class, 'bui-modal__close')]
+    END
     Click         id=bp-control-group__label--notstayer
     Click          //span[contains(text(), 'Final details')]
     Wait Until Visible        //select[@data-phone-country]
     Select Options By         //select[@data-phone-country]    value     FI         
     Fill Text      id=phone     ${phone}
-    Fill in Card Details
+
+Click BDC Book Button
     Click        //button[@name='book']
     Set Browser Timeout    ${longer}
     Wait Until Visible    //button[contains(@class, 'bui-modal__close')]
 
+*** Test Cases *** 
+
+Open BDC and Check for Availability
+    Open Booking.com    ${BDCUrl}    ${BDCHotelId}
+    Check Availability for Today
+
+Create Reservation
+    ${reserveButton}=     Is Element Visible    //button[@name='book']
+    Select Options By    //select[contains(@id, 'unit')]    value     1
+    Click                 //span[contains(text(), 'reserve')]
+
+Fill Contact Information and Payment Details
+    ${id}=         Get Inbox ID
+    Fill Contact Information in BDC
+    Fill in Card Details
+    Click BDC Book Button
 
 Verify Emails and Get Booking No
     ${id}=     Get Inbox ID
     ${confirmationEmail}=         Wait for Latest Booking Confirmation            ${id}    is confirmed
-    ${welcomeEmail}=     Wait for Latest Booking Confirmation       ${id}        Welcome to Exhibition Court Hotel
+    ${welcomeEmail}=     Wait for Latest Booking Confirmation       ${id}        Booking confirmation
     ${bookingNo}=         Get Confirmation Number from Email     ${welcomeEmail}
     Set Suite Variable     ${BDCNo}        ${bookingNo}
 

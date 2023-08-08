@@ -3,7 +3,7 @@ Documentation      A test suite for verifying modify booking functionality
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
-Library            Browser    #run_on_failure=Take Custom Screenshot    auto_closing_level=SUITE
+Library            Browser    auto_closing_level=SUITE
 Library            OperatingSystem
 Library            String
 Library            Process

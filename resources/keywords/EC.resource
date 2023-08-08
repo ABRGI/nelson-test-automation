@@ -26,4 +26,4 @@ Fill in Card Details
 Open Browser to Nelson Portal and Navigate to Test Exhibition
     Open Browser to Nelson Portal
     Log in to Nelson Portal
-    Select Environment    Test Exhibition
+    Select Environment    Test Kensington

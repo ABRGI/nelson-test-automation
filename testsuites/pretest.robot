@@ -14,7 +14,7 @@ Suite Setup       Pre-Test: Verify BUI is Up
 *** Variables ***
 
 ${inbox_object}
-${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1
+
 
 *** Keywords ***
 Pre-Test: Get BUI Status

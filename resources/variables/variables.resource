@@ -42,3 +42,4 @@ ${childLastname}    Dong
 ${url}
 ${MUI_URL}      https://admin.nelson.management/#/login
 ${inbox_id}     492aa3bb-9e4b-410a-a02c-84f13ace89e8    #Static Email that in Mailslurp, name Nelson-Test
+${microservice_url}    https://softico-dev-agent.frendsapp.com/api/qa/v1

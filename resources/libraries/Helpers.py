@@ -55,7 +55,7 @@ class Helpers(object):
         month_number = next_day.month
         return str(day_number), str(month_number)
     
-    def get_selectors_for_far_date(self):
+    def get_selectors_for_for_date(self):
         today = datetime.now().date()
         next_day = today + timedelta(days=60)
         day_number = next_day.day

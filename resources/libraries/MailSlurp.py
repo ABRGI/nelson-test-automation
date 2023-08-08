@@ -75,7 +75,7 @@ class MailSlurp(object):
         with mailslurp_client.ApiClient(self.configuration) as api_client:
             api_instance = mailslurp_client.WaitForControllerApi(api_client)
             match_options = {'matches': [{'field': 'SUBJECT','should':'CONTAIN','value':f'{search_text}'}]}
-            emails = api_instance.wait_for_matching_emails(inbox_id=inbox_id, match_options=match_options, timeout=60000, unread_only=False, count=1)
+            emails = api_instance.wait_for_matching_emails(inbox_id=inbox_id, match_options=match_options, timeout=60000, unread_only=True, count=10)
             for e in emails:
                 email = self.email_client.get_email_html(email_id=e.id)
                 return email
@@ -102,15 +102,26 @@ class MailSlurp(object):
         body = self.wait_for_latest_booking_confirmation(inbox_id)
         link = self.extract_link(body)
         return link
+    
+    @keyword("Mark All Emails as Read")
+    def mark_all_emails_as_read(self, inbox_id=["492aa3bb-9e4b-410a-a02c-84f13ace89e8"]):
+        with mailslurp_client.ApiClient(self.configuration) as api_client:
+            ec = mailslurp_client.EmailControllerApi(api_client)
+            mails = ec.get_emails_paginated(inbox_id=inbox_id, size=100)
+            mails = mails.content
+            for m in mails:
+                ec.mark_as_read(m.id)
+            print('All read!')
 
 if __name__ == '__main__':
     m = MailSlurp()
+    m.mark_all_emails_as_read()
     i = m.get_all_inboxes()
     #inbox_id = "efc7c87b-8bcf-4ad9-bb4e-c5c459b2d526"
 
-
-    link = m.wait_for_latest_booking_confirmation_and_extract_link()
-    print(link)
+    e = m.wait_for_latest_booking_confirmation()
+    e = m.get_confirmation_number_from_email(e)
+    print(e)
     #e = m.wait_for_latest_booking_confirmation('492aa3bb-9e4b-410a-a02c-84f13ace89e8', 'Welcome to Exhibition')
     #bn = m.get_confirmation_number_from_email(e)
     
