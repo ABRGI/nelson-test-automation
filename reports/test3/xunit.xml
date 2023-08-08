@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Testsuites" tests="34" errors="0" failures="20" skipped="0" time="1036.128" timestamp="2023-08-03T12:33:45.661000">
+<testsuite name="BUI" tests="18" errors="0" failures="6" skipped="0" time="856.337" timestamp="2023-08-03T12:33:45.668000">
+<testsuite name="Feature" tests="16" errors="0" failures="4" skipped="0" time="683.035" timestamp="2023-08-03T12:33:45.669000">
+<testsuite name="Online Check In" tests="16" errors="0" failures="4" skipped="0" time="683.034" timestamp="2023-08-03T12:33:45.669000">
+<testsuite name="BUI2-1248" tests="5" errors="0" failures="3" skipped="0" time="366.088" timestamp="2023-08-03T12:33:45.670000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify UI when Booker has not update Information" time="52.153">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify User changes to another nationality than Finland and vice versa" time="55.829">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify booker invites guest with already used email address" time="52.606">
+<failure message="'False==True' should be true." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify booker univites guest in case guest has not completed online check-in" time="140.527">
+<failure message="TimeoutError: locator.click: Timeout 90000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//button[@type=\'button\'][normalize-space()=\'Uninvite\'])[2]')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-1248" name="Verify UI when Booker has fully updated information" time="64.249">
+<failure message="'False==True' should be true." type="AssertionError"/>
+</testcase>
+</testsuite>
+<testsuite name="BUI2-556" tests="7" errors="0" failures="0" skipped="0" time="81.052" timestamp="2023-08-03T12:39:51.760000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Select Hotel, Dates and Guests" time="0.344">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Check Available Rooms and Select a Standard Room" time="1.897">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Continue to Extras and Select Join for Free" time="11.015">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Fill in Booker Contact Information" time="1.768">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Pay using Web Bank and Nordea" time="14.288">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Check In Online" time="9.058">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Wait for Door Code and Verify Page" time="38.605">
+</testcase>
+<properties>
+<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
+</properties>
+</testsuite>
+<testsuite name="BUI2-557" tests="4" errors="0" failures="1" skipped="0" time="235.885" timestamp="2023-08-03T12:41:12.815000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Create a new Booking" time="37.438">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Add Someone Else as the Main Guest" time="94.614">
+<failure message="TimeoutError: locator.waitFor: Timeout 90000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//button[text()=&quot;Check in&quot;])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Validation shows msg for fields marked" time="69.353">
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Showing imported passport when the National is not Finland" time="34.469">
+</testcase>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="Regression" tests="2" errors="0" failures="2" skipped="0" time="173.299" timestamp="2023-08-03T12:45:08.705000">
+<testsuite name="Create Booking" tests="2" errors="0" failures="2" skipped="0" time="173.296" timestamp="2023-08-03T12:45:08.706000">
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Create A New Booking as" time="107.010">
+<failure message="TimeoutError: locator.waitFor: Timeout 90000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//a[contains(text(), \'Simulate success to merchant\')]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Confirm Email and Open Link" time="61.662">
+<failure message="ApiException: (408)&#10;Reason: &#10;HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 03 Aug 2023 09:48:01 GMT', 'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '1069', 'Connection': 'keep-alive', 'X-XSS-Protection': '1; mode=block', 'Referrer-Policy': 'same-origin', 'Strict-Transport-Security': 'max-age=63072000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': &quot;default-src https: 'self' app.mailslurp.com *.mailslurp.com *.mailslurp.link *.mailslurp.dev http://localhost:3000; object-src none; frame-ancestors 'self' app.mailslurp.com *.mailslurp.com *.mailslurp.link *.mailslurp.dev http://localhost:3000; img-src * data: 'unsafe-inline'; style-src * data: 'unsafe-inline';&quot;, 'Vary': 'origin,access-control-request-method,access-control-request-headers,accept-encoding', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'})&#10;HTTP response body: {&quot;message&quot;:&quot;Failed to satisfy email query for inbox ID `dfef6f72-6af9-4e81-8523-d18f4fa56875` for user ID `a2f48756-8279-471d-bb55-980a32334d37`. Expected minimum message count of `1`. Found at most `0`(after max timeout of `60000 ms` and a back-off period of `1000 ms`). Did you send an email to the inbox? The inbox's email address is `dfef6f72-6af9-4e81-8523-d18f4fa56875@mailslurp.com`. Sort direction `ASC`, unread only `false`, match options `{\&quot;matches\&quot;:[{\&quot;field\&quot;:\&quot;SUBJECT\&quot;,\&quot;should\&quot;:\&quot;CONTAIN\&quot;,\&quot;value\&quot;:\&quot;Booking confirmation\&quot;}],\&quot;conditions\&quot;:null}`, created at after `2000-01-01T00:00:00Z` and created at before `3000-01-01T00:00:00Z`&quot;,&quot;caseNumber&quot;:&quot;CASE-NF-93379f5c-6c3d-472a-86f9-3ff80080db7e&quot;,&quot;errorClass&quot;:&quot;GetMessagesRetryException&quot;,&quot;errorCode&quot;:&quot;E_001_UNEXPECTED_ERROR&quot;,&quot;comment&quot;:&quot;If your error persists please submit a ticket at `https://mailslurp.zendesk.com/hc/en-us/requests/new`. Please include your error `caseNumber` if available to help support debug the issue. Sharing screenshots or samples of your code will help the team understand.&quot;}&#10;" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="MUI" tests="16" errors="0" failures="14" skipped="0" time="179.782" timestamp="2023-08-03T12:48:02.006000">
+<testsuite name="EC" tests="7" errors="0" failures="5" skipped="0" time="173.201" timestamp="2023-08-03T12:48:02.007000">
+<testsuite name="Smoke" tests="7" errors="0" failures="5" skipped="0" time="173.198" timestamp="2023-08-03T12:48:02.008000">
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Create A New Booking on Booking.com for today and verify Emails" time="106.179">
+<failure message="TimeoutError: locator.click: Timeout 90000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('id=cc_number')&#10;  locator resolved to &lt;input value=&quot;&quot; size=&quot;22&quot; type=&quot;text&quot; required=&quot;&quot; id=&quot;c…/&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div id=&quot;_myfhxcd8p&quot; class=&quot;bui-modal&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--lock-scroll&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #1&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div class=&quot;bui-overlay__align&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--lock-scroll bui-…&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #2&#10;    [ Message content over the limit has been removed. ]&#10;  waiting 500ms&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div class=&quot;bui-overlay__align&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--active&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #13&#10;  waiting 500ms&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div tabindex=&quot;0&quot; role=&quot;region&quot; id=&quot;onetrust-banner-s…&gt;…&lt;/div&gt; from &lt;div id=&quot;onetrust-consent-sdk&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #14&#10;  waiting 500ms&#10;  waiting for eleme&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Verify Emails and Get Booking No" time="63.669">
+<failure message="ApiException: (408)&#10;Reason: &#10;HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 03 Aug 2023 09:50:51 GMT', 'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '1082', 'Connection': 'keep-alive', 'X-XSS-Protection': '1; mode=block', 'Referrer-Policy': 'same-origin', 'Strict-Transport-Security': 'max-age=63072000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': &quot;default-src https: 'self' app.mailslurp.com *.mailslurp.com *.mailslurp.link *.mailslurp.dev http://localhost:3000; object-src none; frame-ancestors 'self' app.mailslurp.com *.mailslurp.com *.mailslurp.link *.mailslurp.dev http://localhost:3000; img-src * data: 'unsafe-inline'; style-src * data: 'unsafe-inline';&quot;, 'Vary': 'origin,access-control-request-method,access-control-request-headers,accept-encoding', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'})&#10;HTTP response body: {&quot;message&quot;:&quot;Failed to satisfy email query for inbox ID `492aa3bb-9e4b-410a-a02c-84f13ace89e8` for user ID `a2f48756-8279-471d-bb55-980a32334d37`. Expected minimum message count of `1`. Found at most `0`(after max timeout of `60000 ms` and a back-off period of `1000 ms`). Did you send an email to the inbox? The inbox's email address is `492aa3bb-9e4b-410a-a02c-84f13ace89e8@mailslurp.com`. Sort direction `ASC`, unread only `false`, match options `{\&quot;matches\&quot;:[{\&quot;field\&quot;:\&quot;SUBJECT\&quot;,\&quot;should\&quot;:\&quot;CONTAIN\&quot;,\&quot;value\&quot;:\&quot;Welcome to Exhibition Court Hotel\&quot;}],\&quot;conditions\&quot;:null}`, created at after `2000-01-01T00:00:00Z` and created at before `3000-01-01T00:00:00Z`&quot;,&quot;caseNumber&quot;:&quot;CASE-NF-47d4542c-eade-472a-8d96-b71e69c34247&quot;,&quot;errorClass&quot;:&quot;GetMessagesRetryException&quot;,&quot;errorCode&quot;:&quot;E_001_UNEXPECTED_ERROR&quot;,&quot;comment&quot;:&quot;If your error persists please submit a ticket at `https://mailslurp.zendesk.com/hc/en-us/requests/new`. Please include your error `caseNumber` if available to help support debug the issue. Sharing screenshots or samples of your code will help the team understand.&quot;}&#10;" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Create A New Booking on Booking.com for a later date and verify Emails" time="0.004">
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Cancel Booking via BDC" time="0.003">
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Open Booking in MUI" time="0.766">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Cancel Booking in MUI" time="0.006">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.EC.Smoke" name="Start Creating a new Booking in MUI" time="0.171">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Feature" tests="2" errors="0" failures="2" skipped="0" time="3.238" timestamp="2023-08-03T12:50:55.209000">
+<testsuite name="MUI-430" tests="2" errors="0" failures="2" skipped="0" time="3.234" timestamp="2023-08-03T12:50:55.210000">
+<testcase classname="Testsuites.MUI.Feature.MUI-430" name="Filter all reservations with Check-in incomplete" time="0.608">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Feature.MUI-430" name="Remove filter and find a reservation with Check-in complete" time="0.179">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains test cases for testing MUI-430.robot"/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Regression" tests="7" errors="0" failures="7" skipped="0" time="3.341" timestamp="2023-08-03T12:50:58.447000">
+<testsuite name="Smoke" tests="7" errors="0" failures="7" skipped="0" time="3.338" timestamp="2023-08-03T12:50:58.448000">
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in without Password" time="0.701">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in without Username" time="0.203">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.095">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Log in with correct Username and Password" time="0.095">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:386:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:118:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Verify Users Page" time="0.004">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Verify User Profile" time="0.003">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Log Out" time="0.003">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains smoke tests for MUI"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<properties>
+<property name="Documentation" value="Argument file for running tests on Omena Staging Environmen (test3)"/>
+</properties>
+</testsuite>
