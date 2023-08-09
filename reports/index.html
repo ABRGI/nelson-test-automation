@@ -228,7 +228,7 @@
             }
             
             function getSettings(env) {
-                const config_url = "http://softico-dev-agent.frendsapp.com/api/qa/v1/config/"+env;
+                const config_url = "https://softico-dev-agent.frendsapp.com/api/qa/v1/config/"+env;
                 fetch(config_url)
                     .then(res => res.json())
                     .then(data => setSettings(data.Body, env))
