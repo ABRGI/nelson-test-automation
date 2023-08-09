@@ -8,18 +8,96 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Nelson QA Status Page</title>
     <link href="style.css" rel="stylesheet" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/db3b14b70d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Nelson QA Status Page</h1>
-        <div id="status">
-                <div id="test3" class="alert">Omena Test Environment (test3)</div>
-                <div id="test4" class="alert">Omena Staging Environment (test4)</div>
-                <div id="ectest" class="alert">NOT IMPLEMENTED</div>
-                <div id="salotest" class="alert">NOT IMPLEMENTED</div>
+    <nav class="navbar bg-dark fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/nelson-white.png" alt="Logo" class="d-inline-block align-text-top">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Status</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Test Results
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#test3-results">Omena Test</a></li>
+                  <li><a class="dropdown-item" href="#test4-results">Omena Staging</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#kstest-results">KS Test</a></li>
+                  <li><a class="dropdown-item" href="#kstest-results">Salo Test</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a id="runButton" class="nav-link" aria-current="page" href="#">Run Tests</a>
+                
+              </li>
+            </ul>
+          </div>
         </div>
-        <h2>Latest Test Results</h2>
+      </nav>
+    <div id="maincontainer" class="container container-sm">
+        
+        <div id="status" class="container">
+            <div id="info" class="row">
+                <h1>Nelson QA Status Page</h1>
+            </div>
+            
+            <div class="loading" id="spinner" style="display:none"><p>Running tests... Not yet implemented, but a modal will show up with results</p></div> 
+                    <div class="modal fade" id="results-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="results" style="display:none">Results would be shown here!</div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <div class="row">
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div id="test3" class="card">
+                        <h4 class="card-header">Omena Staging (test3)</h4>
+                        <div class="card-body">
+                            <h6 iclass="card-subtitle mb-2 text-body-secondary">Status: <span id="test3-status"></span></h6>
+                            <p class="card-text config" id="test3-config"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div id="test4" class="card">
+                        <h4 class="card-header">Omena Testing (test4)</h4>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Status: <span id="test4-status"></span></h6>
+                            <p class="card-text config" id="test4-config"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div id="test4" class="card">
+                        <h4 class="card-header">Other Env</h4>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Status: <span id="test3-status"></span></h6>
+                            <p class="card-text config" id="test4-config"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="result-container">
+        <h2 id="test-results">Latest Test Results</h2>
         <div id="accordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="pretest-heading">
@@ -44,10 +122,7 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="accordion-item">
+            <div class="accordion-item" id="kctest">
                 <h2 class="accordion-header" id="ectest-heading">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#ectest-collapse" aria-expanded="false" aria-controls="ectest-collapse">
@@ -57,7 +132,6 @@
                 <div id="ectest-collapse" class="accordion-collapse collapse show" aria-labelledby="ectest-heading"
                     data-bs-parent="#accordion">
                     <div class="accordion-body">
-                        <button class="btn btn-primary btn-run">Run tests now</button>
                         <div class="iframe-container">
                             <iframe src="ectest/report.html" title="Report" frameborder="0"></iframe>
                         </div>
@@ -70,10 +144,7 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="accordion-item">
+            <div class="accordion-item" id="test3-results">
                 <h2 class="accordion-header" id="test3-heading">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#test3-collapse" aria-expanded="false" aria-controls="test3-collapse">
@@ -83,14 +154,12 @@
                 <div id="test3-collapse" class="accordion-collapse collapse show" aria-labelledby="test3-heading"
                     data-bs-parent="#accordion">
                     <div class="accordion-body">
-                        <button class="btn btn-primary btn-run">Run tests now</button>
                         <div class="iframe-container">
                             <iframe src="test3/report.html" title="Report" frameborder="0"></iframe>
                         </div>
                         <br>
                         <h3>Full logs</h3>
                         <ul class="list-unstyled">
-
                             <li><a href="test3/log.html">log.html</a></li>
                             <li><a href="test3/report.html">report.html</a></li>
                         </ul>
@@ -98,7 +167,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
+            <div id="test4-results" class="accordion-item">
                 <h2 class="accordion-header" id="test4-heading">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#test4-collapse" aria-expanded="false" aria-controls="test4-collapse">
@@ -108,7 +177,6 @@
                 <div id="test4-collapse" class="accordion-collapse collapse show" aria-labelledby="test4-heading"
                     data-bs-parent="#accordion">
                     <div class="accordion-body">
-                        <button class="btn btn-primary btn-run">Run tests now</button>
                         <div class="iframe-container">
                             <iframe src="test4/report.html" title="Report" frameborder="0"></iframe>
                         </div>
@@ -122,12 +190,14 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
     <script crossorigin="anonymous">
         window.onload = function () {
             const envs = ['test3', 'test4'];
 
             envs.forEach(getStatus);
+            envs.forEach(getSettings);
 
             function getStatus(env) {
                 const url = "https://softico-dev-agent.frendsapp.com/api/qa/v1/status/" + env;
@@ -141,20 +211,100 @@
                     });
             }
 
+
             function setStatus(data, env) {
-                const element = document.getElementById(env);
-                p = document.createElement('span');
+                const element = document.getElementById(env+'-status');
+                const alert = document.getElementById(env);
+                p = document.createElement('p');
                 if (data === true || data === 'true') {
-                    element.classList.add('alert-success');
-                    p.innerText = ' is up 🎉 🎉 🎉';
-                    element.appendChild(p);
+                    alert.classList.add('alert-success');
+                    element.innerText = ' operational';
+                    //element.appendChild(p);
                 } else {
-                    element.classList.add('alert-danger');
-                    p.innerText = ' is down 🆘 🆘 🆘';
-                    element.appendChild(p);
+                    alert.classList.add('alert-danger');
+                    element.innerText = ' not responding';
+                    //element.appendChild(p);
                 }
             }
-        };
+            
+            function getSettings(env) {
+                const config_url = "http://softico-dev-agent.frendsapp.com/api/qa/v1/config/"+env;
+                fetch(config_url)
+                    .then(res => res.json())
+                    .then(data => setSettings(data.Body, env))
+                    .catch(error => {
+                        console.error('Error fetching settings:', error);
+                        setSettings(false, env);
+                    });
+            }
+
+            function setSettings(data, env) {
+                const element = document.getElementById(env+"-config");
+                for (const key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        const i = document.createElement('i'); 
+                        const p = document.createElement('p');
+                        let onOff = '';
+                        if (data[key] === true) {
+                            //onOff = "ON";
+                            i.classList.add('fa-regular','fa-eye');
+                            i.style.color = '#21a121';
+                        } else if (data[key] === false) {
+                            i.classList.add('fa-regular','fa-eye-slash','fa-beat');
+                            i.style.color = '#a12121';
+                            //onOff = "OFF";
+                        }
+                        p.textContent = `${key}: `;
+                        p.appendChild(i);
+                        element.appendChild(p); 
+                    }
+                }
+            }
+ 
+        }; // window.onload
+
+        // onclick
+        document.getElementById('runButton').addEventListener('click', function() {
+
+            console.log('Fetching data...')
+            showSpinner();
+    
+            setTimeout(() => {
+                const result = { data: 'Example Result' };
+                hideSpinner();
+                displayResult(result);
+            }, 4000); // Simulating a 2-second delay for demonstration purposes
+            
+
+            function showSpinner() {
+                const spinner = document.getElementById('spinner');
+                spinner.style.display = 'block';
+            }
+            
+            function hideSpinner() {
+                const spinner = document.getElementById('spinner');
+                spinner.style.display = 'none';
+            }
+            
+            function showSpinner() {
+                const spinner = document.getElementById('spinner');
+                spinner.style.display = 'block';
+            }
+        
+            function hideSpinner() {
+                const spinner = document.getElementById('spinner');
+                spinner.style.display = 'none';
+            }
+
+            function displayResult(result) {
+                const resultElement = document.getElementById('results');
+                resultElement.innerHTML = result.data;
+                resultElement.style.display = 'block';
+                const modal = new bootstrap.Modal(document.getElementById('results-modal'));
+                modal.show();
+            }
+        
+        });     
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
