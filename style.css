@@ -1,7 +1,48 @@
-body {
-    padding: 20px;
+:root {
+    --nelson-green: #285557;
+    --link-on-dark-active: #ecf598;
+    --link-on-dark: #fff;
 }
 
+.bg-dark {
+    background-color: var(--nelson-green) !important;
+}
+
+.nav-link:focus {
+    color: var(--link-on-dark);
+}
+
+h1 {
+    padding-top: 50px;
+}
+
+body {
+    padding: 20px;
+    font-family: var(--bs-font-sans-serif);
+}
+
+.bg-dark a.active,
+.bg-dark a:hover {
+    color: var(--link-on-dark-active);
+}
+
+.bg-dark a {
+    color: var(--link-on-dark);
+}
+
+.bg-dark .dropdown-item,
+a.dropdown-item,
+a.dropdown-item:hover  {
+    color: var(--nelson-green)
+}
+
+.config {
+    font-size: 11px;
+}
+
+.config p {
+    margin-bottom: 0;
+}
 .iframe-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -33,7 +74,5 @@ body {
     font-weight: bold;
 }
 
-#status span {
-    font-weight: normal;
-}
+
 
