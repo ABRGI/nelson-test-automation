@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation      A test suite for verifying modify booking functionality
+Documentation      A common resource file for all keyword and test case files 
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
@@ -21,12 +21,13 @@ Check If String Contains
     [Return]    ${contains}
 
 Set Environment
+    [Documentation]    A keyword that gets the environment from URL and checks it is the same as variable
     ${currentUrl}=     Get Url
     ${env}=        Get Environment From Url    ${currentUrl}
-    Set Variable   ${environment}    ${env}    
+    Should Be Equal As Strings    ${env}    ${environment}
 
 Get BUI Status
-    [Documentation]    Get the status of the microservice
+    [Documentation]    Get the status of the microservice - running on Softico
     [Arguments]    ${env_name}=test4
     Create Session    frends    ${microservice_url}
     ${response}=    GET On Session    frends    /status/${env_name}
@@ -64,12 +65,14 @@ Create Email and Return Inbox
 
 Wait For Confirmation Link
     [Arguments]     ${inbox_id}
+    [Documentation]    Waits for latest Booking Confirmation and extracts the link from email
     ${email}    Wait For Latest Booking Confirmation   ${inbox_id}
     ${link}     Extract Link            ${email.body}
     [Return]    ${link}
 
 Read Email and Return Link
     [Arguments]     ${inbox}
+    [Documentation]    Waits for latest Booking Confirmation and extracts the link from email
     ${link}=    Wait For Confirmation Link      ${inbox.id}
     [Return]    ${link}
 
@@ -120,15 +123,24 @@ Verify Texts
 
 Open New Browser To URL
     [Arguments]    ${url}
-    New Browser    ${browser}    ${headless}    timeout=${timeout}
+    New Browser    ${browser}    ${headless}    timeout=${timeout}     downloadsPath=${EXECDIR}/resources/downloads
     Set Browser Timeout    ${timeout}
-    New Context 
+    New Context     acceptDownloads=True   
     New Page       ${url}
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
-    Open New Browser To URL    ${url}
-    Wait Until Network Is Idle       
+    Log To Console     Environment: ${environment}
+    IF     '${environment}' == 'test3'
+                Set Suite Variable   ${url.landing.page}     https://test3.omenahotels.com/en
+    ELSE IF     '${environment}' == 'ks_test'
+                Set Suite Variable   ${url.landing.page}     https://test.kensingtonstay.com/en
+    ELSE IF     '${environment}' == 'salo_test'
+                Set Suite Variable   ${url.landing.page}      https://test.kensingtonstay.com/en
+    ELSE IF    '${environment}' == 'test4'
+                Set Suite Variable   ${url.landing.page}     https://test4.omenahotels.com/
+    END
+    Open New Browser To URL    ${url.landing.page}
     #Set Viewport Size    1920    1080
     Allow Cookies 
     Set Environment 
@@ -155,6 +167,13 @@ Click and Fill
     Click          ${selector}
     Fill Text      ${selector}    ${text}
 
+
+Click and Fill with Sleep
+    [Documentation]     A keyword combination of Click and Fill, for too quick runs, added 1s sleep after input
+    [Arguments]    ${selector}    ${text}
+    Click and Fill    ${selector}    ${text}
+    Sleep         1s        BDC is weird with these fields
+
 Wait Until Visible 
     [Documentation]     An easier keyword for waiting until an element is visible
     [Arguments]    ${element}
@@ -180,3 +199,7 @@ Is Force Signature Enabled
     Run Keyword If    '${forceSignature}' == 'false'    Log    Forcing signature off => call Click Save
     [Return]    ${forceSignature}
 
+Get State    
+    [Arguments]    ${element}
+    ${state}=     Get Element States    ${element}    validate    value
+    [Return]    ${state}

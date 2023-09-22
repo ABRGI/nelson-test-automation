@@ -4,11 +4,10 @@ Documentation      A test suite that will verify external libraries and variable
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            RequestsLibrary
-#Library            ${EXECDIR}/resources/libraries/GmailClient.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
 Force Tags         pretest
-Suite Setup       Pre-Test: Verify BUI is Up
+Suite Setup        Pre-Test: Verify BUI is Up
 
 
 *** Variables ***
@@ -32,19 +31,6 @@ Pre-Test: Verify BUI is Up
 
 *** Test Cases ***
 
-Pre-Test: Get Config
-    [Documentation]    Test case that checks the config file
-    ${config}=    Get Config    ${url}
-    Log To Console    Config for environment:
-    Log To Console    ${config}
-
-Pre-Test: Verify Variables are Set
-    [Documentation]    Test case that verifies all environment variables are set 
-    @{vars}=    Create List    ${inbox_id}      ${MUI_URL}    ${MUI_USERNAME}   ${MUI_PASSWORD}    ${MAILSLURP_API_KEY}
-    FOR   ${var}    IN    @{vars}
-        Should Not Be Empty    ${var}
-    END
-
 Pre-Test: Get Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
     ${inbox}=    Get Inbox     ${inbox_id}
@@ -52,6 +38,12 @@ Pre-Test: Get Member Inbox
     Log To Console    ${inbox.name}
     ${i}=     Create new Inbox
     Log To Console     ${i}
+
+Pre-Test: Get Config
+    [Documentation]    Test case that checks the config file
+    ${config}=    Get Config    ${url}
+    Log To Console    Config for environment:
+    Log To Console    ${config}
 
 Pre-Test: Verify API is Up
     Pass Execution     TBD: API is up and running

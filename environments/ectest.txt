@@ -1,9 +1,0 @@
---doc Argument file for running tests on Kensington Test Environment
---variable url:https://test-exhibition.bookn.io/en/booking/
---variable headless:False
---variable environment:
---outputdir reports/ecprod/
---variable browser:Firefox
---include exhibition_court
---exclude pretest
---exclude skip

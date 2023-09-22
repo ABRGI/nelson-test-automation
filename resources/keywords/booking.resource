@@ -8,23 +8,32 @@ Library           Browser
 
 *** Keywords ***
 
+
 Complete a new booking
     [Documentation]    A complete booking process from start to finish
     ...                This is currently duplicate to "Create a new booking" test case 
-    [Arguments]        ${isBrowserOpen}=False
-    Run Keyword If    '${isBrowserOpen}'=='False'        Open Browser to Landing Page
-    Select Hotel
-    Select Dates
-    Select Guests
-    Click Book or Find Rooms Button
+    [Arguments]        ${isBrowserOpen}=False       
+    Run Keyword If    ${isBrowserOpen}=='False'        Open Browser to Landing Page    
+    IF     '${environment}' == 'True'
+        Select Hotel
+        Select Dates
+        Select Guests
+        Click Book or Find Rooms Button
+    END
     Select a Standard Room
     Click Continue to Extras Button
     Continue to Payment
-    Select Join for Free
-    Fill in Contact Information 
-    Accept offers and Terms
-    Select Web Bank and Nordea as Payment Method
-    Complete Payment Successfully
+    IF     '${environment}' == 'omena'
+        Select Join for Free
+        Fill in Contact Information 
+        Accept offers and Terms
+        Select Web Bank and Nordea as Payment Method
+        Complete Payment Successfully
+    ELSE 
+        Fill In Contact Information 
+        Accept offers and Terms
+        Click     (//button[text()='Pay'])[1]
+    END
 
 Create a new Booking
     [Documentation]    A new booker makes a reservation
@@ -85,7 +94,7 @@ Signature modal is visible
     Wait Until Visible    id=chakra-modal--body-115
 
 Fill in Other Guest Details
-    [Arguments]    ${firstName}=Snoop    ${lastName}=Dogg    ${email}=nelsontestar@gmail.com    ${phone}=040123942    ${ssn}=170479-371J
+    [Arguments]    ${firstName}=Snoop    ${lastName}=Dogg    ${email}=nelsontestar@gmail.com    ${phone}=401705972    ${ssn}=170479-371J
     [Documentation]    Fills in other guest details, which can be given as arguments or uses default values
     ${inbox}=         Create Email and Return Inbox
     Click and Fill    id=firstName    ${firstName}
@@ -138,7 +147,7 @@ Select Dates
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
-    IF         "${environment}" == "test-exhibition"
+    IF         "${environment}" == "ks_test"
         Log   No hotel to be selected    
     ELSE
         Log    Selecting Hotel: ${hotel}
@@ -200,7 +209,13 @@ Fill in Contact Information
     Click and Fill    id=firstName    ${firstName}
     Click and Fill    id=lastName    ${lastName}
     Click and Fill    id=email    ${inbox.email_address}
-    Click and Fill    id=phoneNumber    ${phone}
+    ${u}=     Get Url
+    ${e}=     Get Environment From Url       ${u}
+    IF     '${e}' == 'test-kensington'
+        Click and Fill    id=phoneNumber    ${phone.uk}
+    ELSE
+        Click and Fill    id=phoneNumber    ${phone}
+    END
     Log To Console    ${inbox.id}
     Set Suite Variable      $ID     ${inbox.id}
     ${passwordVisible}=        Get Element Count    id=password      
@@ -242,6 +257,13 @@ Click Save and Sign Button and Sign if Required
         Click                 //button[contains(text(), "Save")]    
     END
     
+
+Click Upload ID Button
+    Click                 //button[text()="Save and Upload ID"]
+    Wait Until Visible    //button[text()="Upload photo"]
+
+Upload Photo
+    Click                 //button[text()="Upload photo"]
 
 Complete Check in    
     Wait Until Visible    //p[contains(text(), "completed")]

@@ -61,7 +61,16 @@ class Helpers(object):
         day_number = next_day.day
         month_number = next_day.month
         return str(day_number), str(month_number)
-        
+    
+    def get_tomorrows_day_number(self):
+        today = datetime.now().date().day+1
+        return today
+    
+    def get_day_after_tomorrow(self):
+        today = self.get_tomorrows_day_number()
+        day_after = today + 1
+        return day_after
+    
     def find_visible_element(self, elements):
         for i in elements:
             print(i)
@@ -87,14 +96,12 @@ class Helpers(object):
     
     def get_environment_from_url(self, url):
         e = ''
-        if 'test' in url:
-            e = 'test-'
-        else:
-            e = 'prod-'
-        if 'exhibition' in url:
-            e = e+'exhibition'
-        else:
-            e = e+'omena'
+        if 'test4' in url:
+            e = 'test4'
+        elif 'test3' in url:
+            e = 'test3'
+        if 'test.kensington' in url:
+            e = 'ks_test'
         return e
     
 if __name__ == '__main__':
