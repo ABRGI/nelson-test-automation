@@ -36,8 +36,8 @@ Pre-Test: Get Member Inbox
     ${inbox}=    Get Inbox     ${inbox_id}
     Set Suite Variable    ${inbox_object}    ${inbox}
     Log To Console    ${inbox.name}
-    ${i}=     Create new Inbox
-    Log To Console     ${i}
+    #${i}=     Create new Inbox
+    #Log To Console     ${i}
 
 Pre-Test: Get Config
     [Documentation]    Test case that checks the config file

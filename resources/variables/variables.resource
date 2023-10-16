@@ -71,10 +71,9 @@ ${url.prod.ks_home}    https://kensingtonstay.com
 ${url}          https://test4.omenahotels.com/en
 ${url.landing.page}
 ${BDCUrl}       https://secure.booking.com/book.html?hotel_id=
-${url}
 ${MUI_URL}      https://admin.nelson.management/#/login
 
 # INITS & OTHER TO BE CHECKED
-${environment}      test3
+${environment}      test4
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'

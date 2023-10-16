@@ -1,0 +1,11 @@
+--doc Argument file for running tests on Kensington Test Environment
+--variable url:https://test.kensingtonstay.com/
+--variable headless:False
+--variable environment:ks_test
+--variable isOmena:False
+--variable 
+--outputdir reports/kstest/
+--variable browser:Firefox
+--include kensington_stay
+--exclude pretest
+--exclude skip

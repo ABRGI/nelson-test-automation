@@ -138,7 +138,7 @@ Open Browser to Landing Page
     ELSE IF     '${environment}' == 'salo_test'
                 Set Suite Variable   ${url.landing.page}      https://test.kensingtonstay.com/en
     ELSE IF    '${environment}' == 'test4'
-                Set Suite Variable   ${url.landing.page}     https://test4.omenahotels.com/
+                Set Suite Variable   ${url.landing.page}     https://test4.omenahotels.com/en
     END
     Open New Browser To URL    ${url.landing.page}
     #Set Viewport Size    1920    1080
