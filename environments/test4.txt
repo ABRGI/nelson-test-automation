@@ -2,11 +2,13 @@
 --variable url:https://test4.omenahotels.com/en
 --variable HEADLESS:True
 --variable headless:False
+--variable url.landing.page:https://test4.omenahotels.com/en
 --outputdir reports/test4/
 --variable browser:Firefox
 --variable MUI_URL:$MUI_URL
 --variable MUI_PASSWORD:$MUI_PASSWORD
 --variable MUI_USERNAME:$MUI_USERNAME
+--variable environment:test4
 --variable MAILSLURP_API_KEY:$MAILSLURP_API_KEY
 --exclude skip
 --exclude pretest

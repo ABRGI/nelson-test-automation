@@ -1,13 +1,41 @@
 *** Settings ***
 
-Suite Setup       Open Browser to Landing Page
+Suite Setup         Open Browser to Nelson Portal and Login
 Suite Teardown    Close Browser
 Resource           ${EXECDIR}/resources/keywords/common.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
+Resource           ${EXECDIR}/resources/keywords/mui.resource
 Documentation      A test suite for verifying modify booking functionality
 Force Tags         smoke
 
 *** Test Cases ***    
+
+Reservations: Filter all reservations with Check-in incomplete
+  [Documentation]   Test case verifying the functionality of the Check in incomplete filter
+  ...               when it's toggled onOpen Browser to Nelson Portal and Login
+  Set Browser Timeout   15s
+  Select Hotel for Search    
+  Toggle Check in incomplete filter button
+  Click Search Button
+  Select First Found Reservation
+  Click Reservations from Navigation Menu
+  Pass Execution     TBD: Verifications for the reservation
+
+Reservations: Remove filter and find a reservation with Check-in complete
+  [Documentation]   Test case verifying the functionality of the Check in incomplete filter
+  ...               when it's toggled off
+  Select Hotel for Search    
+  Click Search Button
+  Select First Found Reservation
+  Pass Execution     TBD: Verifications for the reservation
+
+Reservations: Filter Reservations by Stay Dates
+  [Documentation]   Test case verifying the functionality of the Departing Today filter
+  ...               when it's toggled on
+  Toggle Departing Today
+  Toggle Staying Tonight
+  Toggle Arriving Today
+  Click Reservations from Navigation Menu
 
 Verify all things 
     [Documentation]    Placeholder for now

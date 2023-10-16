@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Testsuites" tests="35" errors="0" failures="35" skipped="0" time="135.108" timestamp="2023-08-15T08:08:44.231000">
+<testsuite name="BUI" tests="13" errors="0" failures="13" skipped="0" time="135.085" timestamp="2023-08-15T08:08:44.239000">
+<testsuite name="Feature" tests="11" errors="0" failures="11" skipped="0" time="135.081" timestamp="2023-08-15T08:08:44.240000">
+<testsuite name="Online Check In" tests="11" errors="0" failures="11" skipped="0" time="135.080" timestamp="2023-08-15T08:08:44.240000">
+<testsuite name="BUI2-556" tests="7" errors="0" failures="7" skipped="0" time="135.074" timestamp="2023-08-15T08:08:44.241000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Select Hotel, Dates and Guests" time="0.352">
+<failure message="Parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Check Available Rooms and Select a Standard Room" time="1.979">
+<failure message="Parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Continue to Extras and Select Join for Free" time="10.442">
+<failure message="Parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Fill in Booker Contact Information" time="11.161">
+<failure message="Parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Pay using Web Bank and Nordea" time="23.987">
+<failure message="Parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Check In Online" time="83.126">
+<failure message="Execution terminated by signal&#10;&#10;Also parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-556" name="Wait for Door Code and Verify Page" time="0.004">
+<failure message="Execution terminated by signal&#10;&#10;Also parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
+</properties>
+</testsuite>
+<testsuite name="BUI2-557" tests="4" errors="0" failures="4" skipped="0" time="0.002" timestamp="2023-08-15T08:10:59.318000">
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Create a new Booking" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Add Someone Else as the Main Guest" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Validation shows msg for fields marked" time="0.001">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Feature.Online Check In.BUI2-557" name="Showing imported passport when the National is not Finland" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="Regression" tests="2" errors="0" failures="2" skipped="0" time="0.001" timestamp="2023-08-15T08:10:59.322000">
+<testsuite name="Create Booking" tests="2" errors="0" failures="2" skipped="0" time="0.001" timestamp="2023-08-15T08:10:59.322000">
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Create A New Booking as" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Confirm Email and Open Link" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="Customer Specific" tests="13" errors="0" failures="13" skipped="0" time="0.009" timestamp="2023-08-15T08:10:59.324000">
+<testsuite name="Kensington Stay" tests="13" errors="0" failures="13" skipped="0" time="0.007" timestamp="2023-08-15T08:10:59.325000">
+<testsuite name="Confirm Bdc Booking" tests="3" errors="0" failures="3" skipped="0" time="0.001" timestamp="2023-08-15T08:10:59.325000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Create A New Booking on Booking.com for a later date and verify Emails" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Open Booking in MUI" time="0.001">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Cancel Booking in MUI" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Create Bdc Booking" tests="4" errors="0" failures="4" skipped="0" time="0.002" timestamp="2023-08-15T08:10:59.326000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Open BDC and Check for Availability" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Create Reservation in BDC" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Fill Contact Information and Payment Details" time="0.001">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Verify Emails and Get Booking No" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Create Bui Booking" tests="5" errors="0" failures="5" skipped="0" time="0.002" timestamp="2023-08-15T08:10:59.329000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Kensington Stay Home Page" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Menu and Click Book a Room" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Verify Booking Page Elements" time="0.001">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Create New Booking in KS" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Verify Booking Complete" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying the Kensington Stay Home Page"/>
+</properties>
+</testsuite>
+<testsuite name="Create Mui Booking" tests="1" errors="0" failures="1" skipped="0" time="0.001" timestamp="2023-08-15T08:10:59.331000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Mui Booking" name="Start Creating a new Booking in MUI" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="MUI" tests="9" errors="0" failures="9" skipped="0" time="0.006" timestamp="2023-08-15T08:10:59.333000">
+<testsuite name="Feature" tests="2" errors="0" failures="2" skipped="0" time="0.002" timestamp="2023-08-15T08:10:59.333000">
+<testsuite name="MUI-430" tests="2" errors="0" failures="2" skipped="0" time="0.002" timestamp="2023-08-15T08:10:59.333000">
+<testcase classname="Testsuites.MUI.Feature.MUI-430" name="Filter all reservations with Check-in incomplete" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Feature.MUI-430" name="Remove filter and find a reservation with Check-in complete" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains test cases for testing MUI-430.robot"/>
+</properties>
+</testsuite>
+</testsuite>
+<testsuite name="Regression" tests="7" errors="0" failures="7" skipped="0" time="0.003" timestamp="2023-08-15T08:10:59.335000">
+<testsuite name="Smoke" tests="7" errors="0" failures="7" skipped="0" time="0.003" timestamp="2023-08-15T08:10:59.335000">
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in without Password" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in without Username" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.001">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Log in with correct Username and Password" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Verify Users Page" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Verify User Profile" time="0.000">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Smoke" name="Log Out" time="0.001">
+<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains smoke tests for MUI"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<properties>
+<property name="Documentation" value="Argument file for running tests on Omena test4 environment (test4)"/>
+</properties>
+</testsuite>

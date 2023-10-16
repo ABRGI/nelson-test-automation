@@ -11,6 +11,7 @@ Force Tags        smoke, booking, BUI2-556, online-checkin
 
 *** Test Cases ***
 
+
 Select Hotel, Dates and Guests
     Select Hotel     Helsinki, Lönnrotinkatu
     Select Dates

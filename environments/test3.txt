@@ -2,8 +2,10 @@
 --variable url:https://test3.omenahotels.com/en
 --variable HEADLESS:True
 --variable headless:True
+--variable url.landing.page:https://test3.omenahotels.com/en
 --outputdir reports/test3/
 --variable browser:Firefox
+--variable environment:test3
 --variable MUI_URL:$MUI_URL
 --variable MUI_PASSWORD:$MUI_PASSWORD
 --variable MUI_USERNAME:$MUI_USERNAME

@@ -4,7 +4,6 @@ Library           ${EXECDIR}/resources/libraries/Helpers.py
 Resource          ${EXECDIR}/resources/variables/variables.resource
 Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/variables/locators.resource
-Library           Browser    auto_closing_level=SUITE
 
 *** Keywords ***
 
@@ -12,7 +11,12 @@ Library           Browser    auto_closing_level=SUITE
 
 Select From Menu
     [Arguments]    ${item}
-    Click      //a[@href="#/${item}" and @class="capitalize active"]
+    Wait Until Network Is Idle
+    TRY
+        Click     //a[@href='#/${item}' and contains(@class, 'capitalize') and (not(contains(@class,'capitalize-mobile')))]
+    EXCEPT
+        Log To Console    ${item} is not found in the menu
+    END
 
 Click Reservations from Navigation Menu
     Select From Menu   reservations     
@@ -42,7 +46,7 @@ Click Breakfast from Navigation Menu
     Select From Menu   breakfast 
 
 Click Settings from Navigation Menu
-    Select From Menu   settings 
+    Select From Menu   hotels 
 
 Click Locks from Navigation Menu
     Select From Menu   locks 

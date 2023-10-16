@@ -32,3 +32,10 @@ jira_tiket_drafts.md
 test_data.json
 sara/
 scripts/run_local.sh
+links.csv
+temp.csv
+resources/downloads
+scripts/run_local_testmo.sh
+libraries/Data.py
+libraries/EnvHandler.py
+libraries/__pycache__
