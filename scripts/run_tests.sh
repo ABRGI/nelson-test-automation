@@ -27,7 +27,7 @@ for url in "${environments[@]}"; do
     robot -L trace -A environments/${url##*/}.txt \
      --outputdir reports/${url##*/} \
      --xunit xunit.xml \
-     testsuites/BUI/regression/create_booking_and_check_in.robot
+     testsuites/
   else
     echo $response
     echo "Environment $url is offline, not running tests."
