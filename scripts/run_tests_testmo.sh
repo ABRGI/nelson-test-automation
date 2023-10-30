@@ -24,10 +24,18 @@ for url in "${environments[@]}"; do
   if [[ $response == "true" ]]; then
     echo "Running tests for environment ${url##*/}"
     echo "***"
-    robot -L trace -A environments/${url##*/}.txt \
+    testmo automation:run:submit \
+    --instance https://softico.testmo.net \
+    --project-id 1 \
+    --name "Robot test run ${url##*/}" \
+    --source "CI" \
+    --results reports/${url##*/}/*.xml \
+    -- robot -L trace -A environments/${url##*/}.txt \
      --outputdir reports/${url##*/} \
      --xunit xunit.xml \
      testsuites/
+    echo "Upload results to testmo"
+    break
   else
     echo $response
     echo "Environment $url is offline, not running tests."

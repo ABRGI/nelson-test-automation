@@ -202,7 +202,7 @@ Select Room and Extras
     Wait Until Network Is Idle    #timeout=33s
 
 Fill in Contact Information 
-    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=040123942    ${ssn}=170479-371J    ${env}=bui
+    [Arguments]    ${firstName}=Mos    ${lastName}=Def    ${phone}=401705972    ${ssn}=170479-371J    ${env}=bui
     [Documentation]    Fills in Contact information that can be given as arguments or use default values
     ...                Uses a password if the environment is bui and
     ${inbox}=         Create Email and Return Inbox

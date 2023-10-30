@@ -16,9 +16,9 @@ ${reports.hotels.button}    (//form//button[@class="dropbtn"])[2]
 Select Environment   
     [Arguments]    ${environment}
     IF     '${environment}' == '${EMPTY}'
-        ${e}=    Set Variable       Test (2) Omena
+        ${e}=    Set Variable       Test Omena
     ELSE IF     '${environment}' == 'test4'
-        ${e}=    Set Variable       Test (2) Omena
+        ${e}=    Set Variable       Test Omena
     ELSE IF     '${environment}' == 'test3'
         ${e}=    Set Variable       Staging Omena
     ELSE IF     '${environment}' == 'test_salo'
@@ -62,13 +62,21 @@ Create Booking, Check in and get UUID
 Open Reservations Page
     Click Reservations from Navigation Menu
 
-Open A MUI Client
+Open A MUI Client§
     [Arguments]    ${client}
     Click    //b[normalize-space()='${client}']
+
+
+Start New Reservation Flow in MUI
+    [Arguments]    ${type}=Normal
+    Click    //button[normalize-space()='New Reservation']
+    Click     //div[@class="normal-checkbox radio-style"]/div[@class="checkbox-label"]
+
 
 New Reservation MUI
     Wait Until Network Is Idle    timeout=33s
     Click    //button[normalize-space()='New Reservation']
+    
 
 Create New Reservation MUI
     Wait Until Visible    //button[normalize-space()='Create']
