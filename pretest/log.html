@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 5.0.1 (Python 3.11.4 on darwin)" name="Generator">
+<meta content="Robot Framework 6.1.1 (Python 3.11.6 on linux)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -560,6 +560,9 @@ function toggleSuite(suiteId) {
 }
 function toggleTest(testId) {
     toggleElement(testId, ['keyword']);
+    var test = window.testdata.findLoaded(testId);
+    if (test.status == "FAIL" || test.status == "SKIP")
+        expandFailed(test);
 }
 function toggleKeyword(kwId) {
     toggleElement(kwId, ['keyword']);
@@ -623,7 +626,7 @@ function loadAndExpandElementIds(ids) {
     }
 }
 function expandFailed(element) {
-    if (element.status == "FAIL") {
+    if (element.status == "FAIL" || (element.type == "test" && element.status == "SKIP")) {
         window.elementsToExpand = [element];
         window.expandDecider = function (e) {
             return e.status == "FAIL";
@@ -1355,7 +1358,7 @@ window.testdata = function () {
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
     var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK'];
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1803,31 +1806,31 @@ function stopPropagation(event) {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[1,0,334],[],[[5,0,0,[6],[1,329,2],[[0,7,8,0,9,10,0,0,[1,330,0],[]]]]],[],[1,1,0,0]];
+window.output["suite"] = [1,2,3,4,[],[1,0,2724],[],[[5,0,6,[7],[1,2029,468],[[0,8,9,0,0,10,11,0,[1,2030,462],[[2492,2,12],[2492,2,13]]],[0,14,15,0,16,17,0,0,[1,2493,1],[[2494,2,18]]],[0,19,15,0,20,21,0,0,[1,2494,2],[]]]],[22,0,23,[7],[1,2508,201],[[0,24,25,0,0,26,27,0,[1,2509,198],[[2707,2,28]]],[0,19,15,0,20,29,0,0,[1,2707,1],[]],[0,19,15,0,20,27,0,0,[1,2708,1],[]]]],[30,0,0,[7],[1,2712,1,31],[[0,32,15,0,33,31,0,0,[1,2713,0],[[2713,2,34]]]]],[35,0,0,[7],[1,2716,1,36],[[0,32,15,0,33,36,0,0,[1,2716,1],[[2717,2,37]]]]],[38,0,0,[7],[1,2720,1,39],[[0,32,15,0,33,39,0,0,[1,2720,1],[[2720,2,40]]]]]],[[1,41,0,0,0,0,0,0,[1,1602,427],[[0,42,0,0,0,0,43,0,[1,1603,426],[[0,44,45,0,46,0,47,0,[1,1603,422],[[0,48,49,0,50,51,0,0,[1,1604,0],[[1604,2,52]]],[0,53,49,0,54,55,47,0,[1,1605,418],[[2022,2,56],[2023,2,57],[2023,2,58],[2023,2,59]]],[2025,2,60]]],[5,61,0,0,0,0,0,0,[3,2026,1],[[0,62,15,0,63,64,0,0,[3,2027,0],[]]]],[7,0,0,0,0,0,0,0,[1,2027,1],[[0,19,15,0,20,65,0,0,[1,2027,1],[]]]],[2029,2,66]]],[0,67,15,0,68,43,0,0,[1,2029,0],[]]]]],[5,5,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*A","*/Users/sara/code/nelson-test-automation/a.robot","*../../a.robot","*<p>Argument file for running Pre-Test verifications\x3c/p>","*Start","*pretest","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*${microservice_url}"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Pretest","*/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot","*../../testsuites/pretest.robot","*<p>Argument file for running Pre-Test verifications\x3c/p>","*Pre-Test: Get Member Inbox","*<p>Verifies the Mailslurp keywords are running\x3c/p>","*pretest","*Get Inbox","*MailSlurp","*${inbox_id}","*${inbox}","*Nelson-FW","*${inbox} = {'created_at': datetime.datetime(2023, 8, 29, 16, 41, 10, 600000, tzinfo=tzlocal()),\n 'description': '',\n 'domain_id': None,\n 'email_address': '35ac21dc-e785-4cad-8949-6f32023a286d@mailslurp.com',\n 'e...","*Set Suite Variable","*BuiltIn","*<p>Makes a variable available everywhere within the scope of the current suite.\x3c/p>","*${inbox_object}, ${inbox}","*${inbox_object} = {'created_at': datetime.datetime(2023, 8, 29, 16, 41, 10, 600000, tzinfo=tzlocal()),\n 'description': '',\n 'domain_id': None,\n 'email_address': '35ac21dc-e785-4cad-8949-6f32023a286d@mailslurp.com',\n 'e...","*Log To Console","*<p>Logs the given message to the console.\x3c/p>","*${inbox.name}","*Pre-Test: Get Config","*<p>Test case that checks the config file\x3c/p>","*Get Config","*Helpers","*${url}","*${config}","*${config} = {'membership': True, 'eciLco': True, 'breakfast': True, 'compensate': False, 'cancellationPolicyHours': 24, 'extraBed': True, 'defaultGuestNationality': 'FIN', 'findBookingShortcut': False, 'excludePr...","*Config for environment:","*Pre-Test: Verify API is Up","*TBD: API is up and running","*Pass Execution","*<p>Skips rest of the current test, setup, or teardown with PASS status.\x3c/p>","*Execution passed with message:\nTBD: API is up and running","*Pre-Test: Verify MUI is Up","*TBD: MUI is up and running","*Execution passed with message:\nTBD: MUI is up and running","*Verify Rooms are Available","*TBD: Check Rooms are available, for example API","*Execution passed with message:\nTBD: Check Rooms are available, for example API","*Pre-Test: Verify BUI is Up","*Pre-Test: Get BUI Status","*${status}","*Get BUI Status","*common","*<p>Get the status of the microservice - running on Softico\x3c/p>","*${response}","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","*frends, ${microservice_url}","eNptjDEOwjAMRa/iA6QNrJUyITGycALTuK1FG4fYqUCIu6OqjPzt6T+9UyE0TiNcSZUlQdWNOsCZUcNQKEV1UMscJrOsnfcqg3EvTaS1wZGStbuFObe9LB4z+wf69ehgIoxUNLw/Dv6tF7kz7T9Wm8JFEjkwXkiq/SgXeW7STisVHl7hjLPS/2ikWx3DAb7tikVh","*GET On Session","*<p>Sends a GET request on a previously created HTTP Session.\x3c/p>","*frends, /status/${env_name}","*GET Request : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 \n path_url=/api/qa/v1/status/test4 \n headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n ","*GET Response : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 \n status=200, reason=OK \n headers={'Content-Length': '4', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-HTTPAPI/2.0', 'Date': 'Mon, 30 Oct 2023 17:30:04 GMT'} \n body=true \n ","eNqtj89OAjEQxu8+xQQPeNkOGwyHDZJ40xsRjOfSztLGpVM7syhvb1fCG3ibv7/v+5CzYmBR8so8OOsC4faigRMuTduaFf6sHnGIB8x/02mIEpWabN2nPZLgWIa6X6LjlMhp5JQryuRL17aLRQevSciNhd7oayTRD1tSTMcO3tOZSuwjeXjZ77c7KNcDiAIHqidwsp5AGSaDMBfuNTpuPJ2bKpzU9IWSF5uzcXyaG3j2fnpzVLRynVWCq0Qtq60JLFo4HYcLWH+OQt7AjqiDtYVQqH+aBdUsHd5CmULWayDPTkxkpIRDxYpi/bfJkW9GqWZM0NNwr4M039d4Mtv8G2qNdnMHcGvNVDz8ApXPn/0=","*${response} = &lt;Response [200]&gt;","*${response} = True","*'${response}' == 'False'","*Fail","*<p>Fails the test with the given message and optionally alters its tags.\x3c/p>","*BUI is not up and running","*BUI is up and running","*${status} = True","*Should Be True","*<p>Fails if the given condition is not true.\x3c/p>","*Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 64: Creating keyword 'Save and Sign button is visible' failed: User keyword cannot be empty."]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:00","fail":0,"label":"All Tests","pass":1,"skip":0}],[{"elapsed":"00:00:00","fail":0,"label":"pretest","pass":1,"skip":0}],[{"elapsed":"00:00:00","fail":0,"id":"s1","label":"A","name":"A","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:01","fail":0,"label":"All Tests","pass":5,"skip":0}],[{"elapsed":"00:00:01","fail":0,"label":"pretest","pass":5,"skip":0}],[{"elapsed":"00:00:03","fail":0,"id":"s1","label":"Pretest","name":"Pretest","pass":5,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [];
+window.output["errors"] = [[807,4,69]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1690885082221;
+window.output["baseMillis"] = 1698687002653;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 337;
+window.output["generated"] = 2734;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
 </script>
 <script type="text/javascript">
-window.settings = {"defaultLevel":"INFO","minLevel":"NONE","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
+window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
 </script>
 <title></title>
 </head>
@@ -1928,8 +1931,8 @@ function makeElementVisible(id) {
         util.map(ids, expandElementWithId);
         if (ids.length) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
-            window.location.hash = '';
             window.location.hash = id;
+            document.getElementById(id).scrollIntoView();
             highlightLinkTarget();
         }
     });

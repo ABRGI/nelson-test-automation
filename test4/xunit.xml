@@ -1,245 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Testsuites" tests="55" errors="0" failures="52" skipped="0" time="0.563" timestamp="2023-10-30T19:03:37.119000">
-<testsuite name="BUI" tests="13" errors="0" failures="13" skipped="0" time="0.182" timestamp="2023-10-30T19:03:37.124000">
-<testsuite name="Regression" tests="13" errors="0" failures="13" skipped="0" time="0.180" timestamp="2023-10-30T19:03:37.125000">
-<testsuite name="Create Booking" tests="2" errors="0" failures="2" skipped="0" time="0.095" timestamp="2023-10-30T19:03:37.125000">
-<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Create A New Booking as" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="7" skipped="0" time="1.963" timestamp="2023-10-30T17:31:37.729000">
+<testcase classname="Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Confirm Email and Open Link" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testcase classname="Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="7" skipped="0" time="0.030" timestamp="2023-10-30T19:03:37.221000">
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testcase classname="Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testcase classname="Create Booking And Check In" name="Fill in Booker Contact Information" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="0.001">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testcase classname="Create Booking And Check In" name="Pay using Web Bank and Nordea" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Fill in Booker Contact Information" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testcase classname="Create Booking And Check In" name="Check In Online" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Pay using Web Bank and Nordea" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
+<testcase classname="Create Booking And Check In" name="Wait for Door Code and Verify Page" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: browserType.launch: &#10;╔════════════════════════════════════════════════════════════════════════════════════════════════╗&#10;║ Looks like you launched a headed browser without having a XServer running.                     ║&#10;║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║&#10;║                                                                                                ║&#10;║ &lt;3 Playwright Team                                                                             ║&#10;╚════════════════════════════════════════════════════════════════════════════════════════════════╝&#10;=========================== logs ===========================&#10;&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-YkvfW3 -juggler-pipe -silent&#10;&lt;launched&gt; pid=3312&#10;[pid=3312][err] Error: no DISPLAY environment variable specified&#10;[pid=3312] &lt;process did exit: exitCode=1, signal=null&gt;&#10;[pid=3312] starting temporary directories cleanup&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Check In Online" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Wait for Door Code and Verify Page" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
-</properties>
-</testsuite>
-<testsuite name="Online Check In" tests="4" errors="0" failures="4" skipped="0" time="0.054" timestamp="2023-10-30T19:03:37.251000">
-<testsuite name="BUI2-557" tests="4" errors="0" failures="4" skipped="0" time="0.053" timestamp="2023-10-30T19:03:37.252000">
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Create a new Booking" time="0.011">
-<failure message="Setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Add Someone Else as the Main Guest" time="0.011">
-<failure message="Setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Validation shows msg for fields marked" time="0.010">
-<failure message="Setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Showing imported passport when the National is not Finland" time="0.011">
-<failure message="Setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-</testsuite>
-</testsuite>
-</testsuite>
-</testsuite>
-<testsuite name="Customer Specific" tests="13" errors="0" failures="13" skipped="0" time="0.128" timestamp="2023-10-30T19:03:37.306000">
-<testsuite name="Kensington Stay" tests="13" errors="0" failures="13" skipped="0" time="0.128" timestamp="2023-10-30T19:03:37.306000">
-<testsuite name="Confirm Bdc Booking" tests="3" errors="0" failures="3" skipped="0" time="0.029" timestamp="2023-10-30T19:03:37.307000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Create A New Booking on Booking.com for a later date and verify Emails" time="0.000">
-<failure message="TBD&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Open Booking in MUI" time="0.010">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Cancel Booking in MUI" time="0.005">
-<failure message="No keyword with name 'Click' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Create Bdc Booking" tests="4" errors="0" failures="4" skipped="0" time="0.059" timestamp="2023-10-30T19:03:37.336000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Open BDC and Check for Availability" time="0.009">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Start Reservation Process" time="0.003">
-<failure message="No keyword with name 'Get Element States' found. Did you try using keyword 'RequestsLibrary.GET' and forgot to use enough whitespace between keyword and arguments?&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Fill Contact Information and Payment Details" time="0.023">
-<failure message="No keyword with name 'Click' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Verify Confirmation Email" time="0.007">
-<failure message="No keyword with name 'Wait for Latest Booking Confirmation' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Create Bui Booking" tests="5" errors="0" failures="5" skipped="0" time="0.018" timestamp="2023-10-30T19:03:37.396000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Kensington Stay Home Page" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'Set Browser Timeout' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Menu and Click Book a Room" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'Set Browser Timeout' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Verify Booking Page Elements" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'Set Browser Timeout' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Create New Booking in KS" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'Set Browser Timeout' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Start Check in Process" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'Set Browser Timeout' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying the Kensington Stay Home Page"/>
-</properties>
-</testsuite>
-<testsuite name="Create Mui Booking" tests="1" errors="0" failures="1" skipped="0" time="0.020" timestamp="2023-10-30T19:03:37.414000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Mui Booking" name="Start Creating a new Booking in MUI" time="0.007">
-<failure message="No keyword with name 'Open Browser to Nelson Portal and Navigate to Test Exhibition' found. Did you try using keyword 'mui.Open Browser To Nelson Portal' and forgot to use enough whitespace between keyword and arguments?&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-</testsuite>
-</testsuite>
-<testsuite name="MUI" tests="22" errors="0" failures="22" skipped="0" time="0.176" timestamp="2023-10-30T19:03:37.434000">
-<testsuite name="Regression" tests="22" errors="0" failures="22" skipped="0" time="0.175" timestamp="2023-10-30T19:03:37.435000">
-<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="0.020" timestamp="2023-10-30T19:03:37.435000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Booking" name="Create New Booking" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="0.019" timestamp="2023-10-30T19:03:37.456000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Gbe" name="Create New Group Booking" time="0.001">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying GBE2 in MUI"/>
-</properties>
-</testsuite>
-<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="0.020" timestamp="2023-10-30T19:03:37.476000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.001">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Verify all things" time="0.000">
-<failure message="Parent suite setup failed:&#10;No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Mui.Smoke" tests="16" errors="0" failures="16" skipped="0" time="0.114" timestamp="2023-10-30T19:03:37.496000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Log in with correct Username and Password" time="0.008">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Open Reports Page and Verify" time="0.005">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.016">
-<failure message="No keyword with name 'Click' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Usage Page" time="0.005">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Maintenance Page" time="0.005">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Customers Page" time="0.004">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Pricing Page" time="0.005">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Allotments Page" time="0.004">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Vouchers Page" time="0.005">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Breakfast Page" time="0.004">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Settings Page" time="0.004">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Locks Page" time="0.004">
-<failure message="No keyword with name 'Wait Until Network Is Idle' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Log Out" time="0.001">
-<failure message="No keyword with name 'Click' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in without Password" time="0.009">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in without Username" time="0.010">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.010">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="This file contains smoke tests for MUI"/>
-</properties>
-</testsuite>
-</testsuite>
-</testsuite>
-<testsuite name="OTA" tests="7" errors="0" failures="4" skipped="0" time="0.070" timestamp="2023-10-30T19:03:37.611000">
-<testsuite name="Bdc" tests="4" errors="0" failures="4" skipped="0" time="0.033" timestamp="2023-10-30T19:03:37.611000">
-<testcase classname="Testsuites.OTA.Bdc" name="Open BDC and Check for Availability" time="0.005">
-<failure message="No keyword with name 'New Browser' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Bdc" name="Create Reservation in BDC" time="0.002">
-<failure message="No keyword with name 'Get Element States' found. Did you try using keyword 'RequestsLibrary.GET' and forgot to use enough whitespace between keyword and arguments?&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Bdc" name="Fill Contact Information and Payment Details" time="0.014">
-<failure message="No keyword with name 'Click' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Bdc" name="Verify Confirmation Email Arrives" time="0.005">
-<failure message="No keyword with name 'Wait for Latest Booking Confirmation' found.&#10;&#10;Also parent suite teardown failed:&#10;No keyword with name 'Close Browser' found." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying BDC booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Expedia" tests="3" errors="0" failures="0" skipped="0" time="0.037" timestamp="2023-10-30T19:03:37.644000">
-<testcase classname="Testsuites.OTA.Expedia" name="Check Availability in Expedia" time="0.002">
-</testcase>
-<testcase classname="Testsuites.OTA.Expedia" name="Select Hotel and Create Booking" time="0.004">
-</testcase>
-<testcase classname="Testsuites.OTA.Expedia" name="Fill Booker Details" time="0.018">
-</testcase>
-<properties>
-<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
-</properties>
-</testsuite>
-</testsuite>
 <properties>
 <property name="Documentation" value="Argument file for running tests on Omena test4 environment (test4)"/>
 </properties>
