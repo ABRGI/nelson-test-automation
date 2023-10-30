@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="0" skipped="0" time="87.858" timestamp="2023-10-30T18:02:58.470000">
+<testcase classname="Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.526">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="3.295">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="6.572">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Fill in Booker Contact Information" time="2.133">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Pay using Web Bank and Nordea" time="15.613">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Check In Online" time="14.112">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Wait for Door Code and Verify Page" time="37.660">
+</testcase>
+<properties>
+<property name="Documentation" value="Argument file for running tests on Omena Staging Environmen (test3)"/>
+</properties>
+</testsuite>

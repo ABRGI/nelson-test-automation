@@ -1,0 +1,774 @@
+{"level":30,"time":"2023-10-30T18:02:59.758Z","pid":2357,"hostname":"fv-az577-777","msg":"Listening on 34631"}
+{"level":30,"time":"2023-10-30T18:02:59.797Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T18:02:59.798Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T18:02:59.807Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-10-30T18:03:00.592Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-10-30T18:03:00.600Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-10-30T18:03:00.601Z","pid":2357,"hostname":"fv-az577-777","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-30T18:03:00.601Z","pid":2357,"hostname":"fv-az577-777","msg":"Trace file: "}
+{"level":30,"time":"2023-10-30T18:03:00.658Z","pid":2357,"hostname":"fv-az577-777","msg":"Changed active context"}
+{"level":30,"time":"2023-10-30T18:03:00.659Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method newContext"}
+{"level":30,"time":"2023-10-30T18:03:00.663Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-10-30T18:03:00.663Z","pid":2357,"hostname":"fv-az577-777","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-30T18:03:01.622Z","pid":2357,"hostname":"fv-az577-777","msg":"Video path: undefined"}
+{"level":30,"time":"2023-10-30T18:03:01.622Z","pid":2357,"hostname":"fv-az577-777","msg":"Changed active page"}
+{"level":30,"time":"2023-10-30T18:03:05.468Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method newPage"}
+{"level":30,"time":"2023-10-30T18:03:05.484Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:03:05.484Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-10-30T18:03:05.485Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:03:05.554Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:03:05.555Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:03:05.567Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:05.567Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-10-30T18:03:05.659Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:05.670Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:05.670Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //div[contains(@data-nelson-btn, \"hotels\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:05.756Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:05.761Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:05.761Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T18:03:05.774Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:05.778Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:05.778Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T18:03:06.119Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:06.123Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:06.123Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T18:03:06.184Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:06.209Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:06.209Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //button[contains(@class, 'booking-form-button') and contains(text(), 'Book')] in page."}
+{"level":30,"time":"2023-10-30T18:03:06.484Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:06.490Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:06.491Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:09.236Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:09.242Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:03:09.242Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //div[contains(text(), 'Select room')] in page."}
+{"level":30,"time":"2023-10-30T18:03:09.492Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:03:09.503Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:09.503Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:12.274Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:12.284Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:12.284Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"extras\")]//button[contains(text(), \"Continue to payment\")])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:13.643Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:13.646Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:13.646Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[normalize-space()='Continue to payment'])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:13.756Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:13.760Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:13.760Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //input[@value='memberRate' and @checked=''] in page."}
+{"level":30,"time":"2023-10-30T18:03:16.045Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:16.051Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:16.051Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked] in page."}
+{"level":30,"time":"2023-10-30T18:03:16.070Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:16.817Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:16.817Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=firstName in page."}
+{"level":30,"time":"2023-10-30T18:03:16.876Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:16.879Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:16.880Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=firstName in page."}
+{"level":30,"time":"2023-10-30T18:03:16.959Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:16.962Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:16.963Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=lastName in page."}
+{"level":30,"time":"2023-10-30T18:03:17.136Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.140Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.140Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=lastName in page."}
+{"level":30,"time":"2023-10-30T18:03:17.218Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.224Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.224Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2023-10-30T18:03:17.381Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.384Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.384Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2023-10-30T18:03:17.453Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.460Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.460Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=phoneNumber in page."}
+{"level":30,"time":"2023-10-30T18:03:17.620Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.623Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.623Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=phoneNumber in page."}
+{"level":30,"time":"2023-10-30T18:03:17.702Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.708Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2023-10-30T18:03:17.709Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: id=password in page."}
+{"level":30,"time":"2023-10-30T18:03:17.732Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementCount"}
+{"level":30,"time":"2023-10-30T18:03:17.735Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.735Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2023-10-30T18:03:17.871Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.874Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.875Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2023-10-30T18:03:17.903Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:17.907Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:17.907Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//div[contains(text(), 'like to receive')])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:18.073Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.076Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.076Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//*[contains(text(),'Accept')]/ancestor::label//span[contains(@class,'chakra-checkbox__control')])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:18.205Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.215Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.215Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //div[contains(text(), \"Web bank payment\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:18.312Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.315Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.316Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //p[contains(text(), 'Nordea')] in page."}
+{"level":30,"time":"2023-10-30T18:03:18.482Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.485Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.485Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"payment\")]//button[contains(text(), \"Pay\")])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:18.625Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:18.629Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:18.629Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //a[contains(text(), 'Simulate success to merchant')] in page."}
+{"level":30,"time":"2023-10-30T18:03:29.835Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:29.838Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:29.838Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //a[contains(text(), 'Simulate success to merchant')] in page."}
+{"level":30,"time":"2023-10-30T18:03:31.032Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:31.052Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:31.053Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //p[contains(text(), 'Payment was successful')] in page."}
+{"level":30,"time":"2023-10-30T18:03:33.383Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:33.388Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:33.388Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //button[contains(text(), \"Ok\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:33.393Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:33.399Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:33.399Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //button[contains(text(), \"Ok\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:33.585Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:33.589Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-30T18:03:33.589Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //p[contains(text(),'Booking number')] in page."}
+{"level":30,"time":"2023-10-30T18:03:33.821Z","pid":2357,"hostname":"fv-az577-777","msg":"Retrieved text for element //p[contains(text(),'Booking number')] containing Booking number: 510752821"}
+{"level":30,"time":"2023-10-30T18:03:33.821Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-30T18:03:33.834Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:33.834Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[text()=\"Check in\"])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:33.841Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:33.843Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:33.844Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[text()=\"Check in\"])[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:33.988Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:33.992Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:33.992Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//div[contains(@class, \"chakra-offset-slide\")])[2] in page."}
+{"level":30,"time":"2023-10-30T18:03:34.022Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:34.025Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:34.025Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=firstName in page."}
+{"level":30,"time":"2023-10-30T18:03:34.904Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:34.907Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:34.907Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=lastName in page."}
+{"level":30,"time":"2023-10-30T18:03:34.983Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:34.985Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:34.985Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=ssn in page."}
+{"level":30,"time":"2023-10-30T18:03:35.054Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.057Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.057Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=address in page."}
+{"level":30,"time":"2023-10-30T18:03:35.178Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.181Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.181Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=city in page."}
+{"level":30,"time":"2023-10-30T18:03:35.296Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.299Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.299Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with id=postalCode in page."}
+{"level":30,"time":"2023-10-30T18:03:35.397Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-30T18:03:35.400Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:35.401Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //span[contains(text(), \"Travelling for work\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:35.573Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:36.369Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:36.369Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //button[contains(text(), \"Save and Sign\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:36.452Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:36.455Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:36.455Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:39.969Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:39.974Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:39.974Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.116Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.118Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.119Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":326.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.134Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.138Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.138Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.145Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.148Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.148Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.208Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.217Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.217Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.241Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.242Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.242Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":327.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.267Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.270Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.270Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.286Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.288Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.289Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.302Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.307Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.307Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.324Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.325Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.325Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":328.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.335Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.338Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.339Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.346Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.350Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.350Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.357Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.361Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.361Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.373Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.375Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.375Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":329.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.395Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.398Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.398Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.403Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.405Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.405Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.416Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.420Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.420Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.447Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.449Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.449Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":330.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.463Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.465Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.466Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.473Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.475Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.475Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.485Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.489Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.489Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.519Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.520Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.520Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":331.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.527Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.530Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.530Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.537Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.539Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.539Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.545Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.549Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.549Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.557Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.558Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.559Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":332.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.567Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.570Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.570Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.576Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.579Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.579Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.595Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.598Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.598Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.616Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.618Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.619Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":333.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.622Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.625Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.625Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.629Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.631Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.631Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.640Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.644Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.644Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.655Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.656Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.656Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":334.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.667Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.670Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.670Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.673Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.675Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.675Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.680Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.683Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.684Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.693Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.695Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.695Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":335.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.697Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.699Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.699Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.702Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.705Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.705Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.713Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.717Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.717Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.727Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.729Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":336.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.728Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.732Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.735Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.735Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.738Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.740Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.740Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.747Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.751Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.751Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.764Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.766Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.766Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":337.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.769Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.771Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.771Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.773Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.775Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.775Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.781Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.784Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.784Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.792Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.794Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.794Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":338.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.812Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.816Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.816Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.820Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.822Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.822Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.827Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.830Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.830Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.838Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.839Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.839Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":339.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.846Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.853Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.853Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.856Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.858Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.858Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.863Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.866Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.866Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.876Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.878Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.878Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":340.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.881Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.883Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.883Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.886Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.888Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.888Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.894Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.897Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.897Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.919Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.922Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.922Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":341.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.925Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.927Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.927Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.930Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.932Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.932Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.937Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.940Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.941Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:40.951Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.952Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.952Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":342.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.963Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:40.966Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.966Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.969Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.971Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.971Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:40.978Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:40.982Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:40.982Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.000Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.002Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.002Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":343.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.005Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.007Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.007Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.010Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.012Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.012Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.019Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.024Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.024Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.036Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.037Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.037Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":344.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.047Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.062Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.062Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.077Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.079Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.079Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.085Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.088Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.088Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.104Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.105Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.105Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":345.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.108Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.110Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.110Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.112Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.115Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.115Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.119Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.123Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.123Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.135Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.136Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.136Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":346.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.148Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.150Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.150Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.155Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.157Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.157Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.164Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.167Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.167Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.179Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.180Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.180Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":347.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.182Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.184Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.184Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.187Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.189Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.189Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.196Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.200Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.200Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.226Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.228Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.228Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":348.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.230Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.232Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.232Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.235Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.237Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.237Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.242Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.245Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.246Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.254Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.255Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.255Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":349.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.264Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.267Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.267Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.270Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.272Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.272Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.277Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.280Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.280Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.289Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.290Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.290Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":350.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.300Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.302Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.302Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.305Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.307Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.307Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.312Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.315Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.315Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.329Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.331Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.332Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":351.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.334Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.336Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.336Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.338Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.341Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.341Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.345Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.349Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.349Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.363Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.365Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.365Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":352.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.367Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.369Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.370Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.372Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.374Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.374Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.379Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.382Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.382Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.391Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.393Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.393Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":353.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.398Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.401Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.401Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.403Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.406Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.406Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.411Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.414Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.414Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.424Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.425Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.425Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":354.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.430Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.432Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.432Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.435Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.437Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.437Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.444Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.447Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.447Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.460Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.463Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.464Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":355.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.467Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.469Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.469Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.472Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.474Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.474Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.479Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.482Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.482Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.496Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.498Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.498Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":356.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.500Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.502Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.502Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.505Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.507Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.507Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.512Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.515Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.515Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.529Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.531Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.531Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":357.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.534Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.536Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.536Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.539Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.541Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.541Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.546Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.549Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.549Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.558Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.560Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.560Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":358.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.564Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.567Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.567Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.570Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.572Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.572Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.578Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.582Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.582Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.593Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.597Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.597Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":359.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.599Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.601Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.602Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.604Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.606Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.606Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.610Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.614Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.614Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.623Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.624Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":360.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.624Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.629Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.632Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.632Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.635Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.637Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.637Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.642Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.646Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.646Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.654Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.655Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.655Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":361.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.663Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.665Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.665Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.667Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.669Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.669Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.674Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.677Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.677Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.686Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.687Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.687Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":362.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.699Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.701Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.701Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.704Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.706Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.706Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.713Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.716Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.717Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.726Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.728Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.728Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":363.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.730Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.732Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.732Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.735Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.737Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.737Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.742Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.746Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.746Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.756Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.757Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.758Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":364.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.762Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.765Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.765Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.768Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.770Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.770Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.774Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.778Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.778Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.787Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.788Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.788Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":365.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.796Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.798Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.798Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.801Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.803Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.803Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.808Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.811Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.812Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.824Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.825Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.825Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":366.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.829Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.834Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.834Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.837Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.839Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.839Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.844Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.847Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.847Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with (//button[@aria-label='Close']/following-sibling::div/div)[1] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.857Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2023-10-30T18:03:41.858Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.858Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action move with params {\"x\":630,\"y\":367.75,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.863Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseMove"}
+{"level":30,"time":"2023-10-30T18:03:41.866Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.867Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.869Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.871Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.871Z","pid":2357,"hostname":"fv-az577-777","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2023-10-30T18:03:41.875Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method mouseButton"}
+{"level":30,"time":"2023-10-30T18:03:41.879Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:41.879Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //canvas in page."}
+{"level":30,"time":"2023-10-30T18:03:41.883Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:41.885Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:41.886Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //div[contains(@class, 'chakra-modal__body')] in page."}
+{"level":30,"time":"2023-10-30T18:03:41.934Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:41.936Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T18:03:41.936Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //button[text()='Save'] in page."}
+{"level":30,"time":"2023-10-30T18:03:42.052Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T18:03:42.056Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:42.056Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //div[contains(@class, 'chakra-modal__body')] in page."}
+{"level":30,"time":"2023-10-30T18:03:47.927Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:47.933Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:47.933Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //p[contains(text(), \"completed\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:47.939Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T18:03:47.951Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:03:47.951Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: //p[contains(text(), \"Available in\")] in page."}
+{"level":30,"time":"2023-10-30T18:03:47.951Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:03:48.253Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:03:48.253Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:04.300Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:04.300Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: //p[contains(text(), \"Available in\")] in page."}
+{"level":30,"time":"2023-10-30T18:04:04.300Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:14.303Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 0 elements."}
+{"level":30,"time":"2023-10-30T18:04:14.303Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:14.315Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:14.315Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":30,"time":"2023-10-30T18:04:14.565Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:14.570Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-30T18:04:14.570Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with //*[contains(text(), \"Door code\")]/following-sibling::* in page."}
+{"level":30,"time":"2023-10-30T18:04:14.619Z","pid":2357,"hostname":"fv-az577-777","msg":"Retrieved text for element //*[contains(text(), \"Door code\")]/following-sibling::* containing 18276"}
+{"level":30,"time":"2023-10-30T18:04:14.619Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-30T18:04:14.625Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:14.625Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: //p[contains(text(), \"Available in\")] in page."}
+{"level":30,"time":"2023-10-30T18:04:14.625Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:24.628Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 0 elements."}
+{"level":30,"time":"2023-10-30T18:04:24.629Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.645Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.645Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=Room no. in page."}
+{"level":30,"time":"2023-10-30T18:04:24.645Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:24.677Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:04:24.677Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.680Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:24.680Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=Room no. >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:24.776Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:24.780Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.781Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=Arrival in page."}
+{"level":30,"time":"2023-10-30T18:04:24.781Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:24.808Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:04:24.808Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.812Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:24.812Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=Arrival >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:24.905Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:24.909Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.909Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=Departure in page."}
+{"level":30,"time":"2023-10-30T18:04:24.909Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:24.937Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:04:24.937Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:24.941Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:24.941Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=Departure >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:25.032Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.036Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.036Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=Checked-in in page."}
+{"level":30,"time":"2023-10-30T18:04:25.036Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:25.064Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:04:25.064Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.068Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.068Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=Checked-in >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:25.159Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.164Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.164Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=Booked by in page."}
+{"level":30,"time":"2023-10-30T18:04:25.164Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:25.193Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:04:25.193Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.197Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.197Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=Booked by >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:25.290Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.294Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.294Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=My bookings in page."}
+{"level":30,"time":"2023-10-30T18:04:25.294Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:25.323Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 5 elements."}
+{"level":30,"time":"2023-10-30T18:04:25.324Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.328Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.328Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=My bookings >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:25.425Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.472Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.472Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is disabled, return Locator: text=Booking number in page."}
+{"level":30,"time":"2023-10-30T18:04:25.473Z","pid":2357,"hostname":"fv-az577-777","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T18:04:25.502Z","pid":2357,"hostname":"fv-az577-777","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T18:04:25.502Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T18:04:25.506Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.506Z","pid":2357,"hostname":"fv-az577-777","msg":"Strict mode is enabled, find Locator with text=Booking number >> nth=0 in page."}
+{"level":30,"time":"2023-10-30T18:04:25.598Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T18:04:25.608Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-10-30T18:04:25.627Z","pid":2357,"hostname":"fv-az577-777","msg":"Removed page=734c378d-5c16-4df0-b573-6263deb20022 from context=a25b3c72-2d50-4779-8817-eb6ca936cb87 page stack"}
+{"level":30,"time":"2023-10-30T18:04:26.326Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9991:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10237:57)
+    at handleUnary (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+=============================================================
+{"level":30,"time":"2023-10-30T18:04:26.334Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T18:04:26.334Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T18:04:26.431Z","pid":2357,"hostname":"fv-az577-777","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-30T18:04:26.431Z","pid":2357,"hostname":"fv-az577-777","msg":"End of node method closeAllBrowsers"}
