@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231030 17:20:08.574" rpa="false" schemaversion="4">
+<suite id="s1" name="Create Booking And Check In" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/create_booking_and_check_in.robot">
+<kw name="Open Browser to Landing Page" library="common" type="SETUP">
+<doc>A general startup keyword for opening a browser to the landing page.</doc>
+<msg timestamp="20231030 17:20:09.558" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Environment: ${environment}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231030 17:20:09.558" level="TRACE">Arguments: [ 'Environment: test4' ]</msg>
+<msg timestamp="20231030 17:20:09.559" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231030 17:20:09.558" endtime="20231030 17:20:09.559"/>
+</kw>
+<if>
+<branch type="IF" condition="'${environment}' == 'test3'">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${url.landing.page}</arg>
+<arg>https://test3.omenahotels.com/en</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.559" endtime="20231030 17:20:09.560"/>
+</kw>
+<status status="NOT RUN" starttime="20231030 17:20:09.559" endtime="20231030 17:20:09.560"/>
+</branch>
+<branch type="ELSE IF" condition="'${environment}' == 'ks_test'">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${url.landing.page}</arg>
+<arg>https://test.kensingtonstay.com/en</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.560" endtime="20231030 17:20:09.560"/>
+</kw>
+<status status="NOT RUN" starttime="20231030 17:20:09.560" endtime="20231030 17:20:09.560"/>
+</branch>
+<branch type="ELSE IF" condition="'${environment}' == 'salo_test'">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${url.landing.page}</arg>
+<arg>https://test.kensingtonstay.com/en</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.561" endtime="20231030 17:20:09.561"/>
+</kw>
+<status status="NOT RUN" starttime="20231030 17:20:09.560" endtime="20231030 17:20:09.561"/>
+</branch>
+<branch type="ELSE IF" condition="'${environment}' == 'test4'">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${url.landing.page}</arg>
+<arg>https://test4.omenahotels.com/en</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20231030 17:20:09.561" level="TRACE">Arguments: [ '${url.landing.page}' | 'https://test4.omenahotels.com/en' ]</msg>
+<msg timestamp="20231030 17:20:09.561" level="INFO">${url.landing.page} = https://test4.omenahotels.com/en</msg>
+<msg timestamp="20231030 17:20:09.562" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231030 17:20:09.561" endtime="20231030 17:20:09.562"/>
+</kw>
+<status status="PASS" starttime="20231030 17:20:09.561" endtime="20231030 17:20:09.562"/>
+</branch>
+<status status="PASS" starttime="20231030 17:20:09.559" endtime="20231030 17:20:09.562"/>
+</if>
+<kw name="Open New Browser To URL" library="common">
+<arg>${url.landing.page}</arg>
+<msg timestamp="20231030 17:20:09.562" level="TRACE">Arguments: [ ${url}='https://test4.omenahotels.com/en' ]</msg>
+<kw name="New Browser" library="Browser">
+<arg>${browser}</arg>
+<arg>${headless}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>downloadsPath=${EXECDIR}/resources/downloads</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231030 17:20:09.563" level="TRACE">Arguments: [ &lt;SupportedBrowsers.firefox: 2&gt; | False | timeout=datetime.timedelta(seconds=30) | downloadsPath='/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads' ]</msg>
+<msg timestamp="20231030 17:20:09.563" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "downloadsPath": "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/traces/4f3857d7-b15e-4929-b160-f3bd1e67eb47"}</msg>
+<msg timestamp="20231030 17:20:09.817" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20231030 17:20:09.817" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231030 17:20:09.817" level="FAIL">Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</msg>
+<msg timestamp="20231030 17:20:09.820" level="DEBUG">Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 158, in grpc_channel
+    yield playwright_pb2_grpc.PlaywrightStub(self._channel)
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/playwright_state.py", line 405, in new_browser
+    response = stub.NewBrowser(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/grpc/_channel.py", line 1161, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/grpc/_channel.py", line 1004, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: &lt;_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-10-30T17:20:09.813451878+00:00", grpc_status:8, grpc_message:"Error: browserType.launch: \n\xe2\x95\x94\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x97\n\xe2\x95\x91 Looks like you launched a headed browser without having a XServer running.                     \xe2\x95\x91\n\xe2\x95\x91 Set either \'headless: true\' or use \'xvfb-run &lt;your-playwright-app&gt;\' before running Playwright. \xe2\x95\x91\n\xe2\x95\x91                                                                                                \xe2\x95\x91\n\xe2\x95\x91 &lt;3 Playwright Team                                                                             \xe2\x95\x91\n\xe2\x95\x9a\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x9d\n=========================== logs ===========================\n&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent\n&lt;launched&gt; pid=3277\n[pid=3277][err] Error: no DISPLAY environment variable specified\n[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;\n[pid=3277] starting temporary directories cleanup\n============================================================"}"
+&gt;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/browser.py", line 1096, in run_keyword
+    raise e
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/browser.py", line 1085, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/robotlibcore.py", line 126, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/playwright_state.py", line 404, in new_browser
+    with self.playwright.grpc_channel() as stub:
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 162, in grpc_channel
+    raise AssertionError(error.details())
+AssertionError: Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</msg>
+<status status="FAIL" starttime="20231030 17:20:09.562" endtime="20231030 17:20:09.820"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.820" endtime="20231030 17:20:09.820"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>acceptDownloads=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.821" endtime="20231030 17:20:09.821"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.821" endtime="20231030 17:20:09.821"/>
+</kw>
+<status status="FAIL" starttime="20231030 17:20:09.562" endtime="20231030 17:20:09.821"/>
+</kw>
+<kw name="Allow Cookies" library="common">
+<doc>Allow Cookies/Toggle Cookie allowance</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.821" endtime="20231030 17:20:09.821"/>
+</kw>
+<kw name="Set Environment" library="common">
+<doc>A keyword that gets the environment from URL and checks it is the same as variable</doc>
+<status status="NOT RUN" starttime="20231030 17:20:09.821" endtime="20231030 17:20:09.821"/>
+</kw>
+<status status="FAIL" starttime="20231030 17:20:09.557" endtime="20231030 17:20:09.821"/>
+</kw>
+<test id="s1-t1" name="Select Hotel, Dates and Guests" line="15">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.822" endtime="20231030 17:20:09.822">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<test id="s1-t2" name="Check Available Rooms and Select a Standard Room" line="20">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.828" endtime="20231030 17:20:09.829">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<test id="s1-t3" name="Continue to Extras and Select Join for Free" line="24">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.832" endtime="20231030 17:20:09.833">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<test id="s1-t4" name="Fill in Booker Contact Information" line="29">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.836" endtime="20231030 17:20:09.837">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<test id="s1-t5" name="Pay using Web Bank and Nordea" line="33">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.839" endtime="20231030 17:20:09.839">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<test id="s1-t6" name="Check In Online" line="37">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.841" endtime="20231030 17:20:09.842">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<test id="s1-t7" name="Wait for Door Code and Verify Page" line="43">
+<tag>smoke, booking, BUI2-556, online-checkin</tag>
+<status status="FAIL" starttime="20231030 17:20:09.844" endtime="20231030 17:20:09.844">Parent suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20231030 17:20:09.846" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231030 17:20:09.848" level="INFO">No browser open, doing nothing</msg>
+<msg timestamp="20231030 17:20:09.848" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231030 17:20:09.846" endtime="20231030 17:20:09.848"/>
+</kw>
+<doc>Argument file for running tests on Omena test4 environment (test4)</doc>
+<status status="FAIL" starttime="20231030 17:20:08.575" endtime="20231030 17:20:09.848">Suite setup failed:
+Error: browserType.launch: 
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+=========================== logs ===========================
+&lt;launching&gt; /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/firefox-1425/firefox/firefox -no-remote -wait-for-browser -foreground -profile /tmp/playwright_firefoxdev_profile-D9CEvz -juggler-pipe -silent
+&lt;launched&gt; pid=3277
+[pid=3277][err] Error: no DISPLAY environment variable specified
+[pid=3277] &lt;process did exit: exitCode=1, signal=null&gt;
+[pid=3277] starting temporary directories cleanup
+============================================================</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="7" skip="0">smoke, booking, BUI2-556, online-checkin</stat>
+</tag>
+<suite>
+<stat pass="0" fail="7" skip="0" id="s1" name="Create Booking And Check In">Create Booking And Check In</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231030 17:20:08.924" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 10, in &lt;module&gt;
+    import pandas as pd
+PYTHONPATH:
+  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries
+  /opt/hostedtoolcache/Python/3.11.6/x64/bin
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python311.zip
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
+<msg timestamp="20231030 17:20:09.038" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 64: Creating keyword 'Save and Sign button is visible' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231030 17:20:09.117" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/mui.reservations.resource' on line 92: Creating keyword 'Select Booking Channel for Search' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231030 17:20:09.120" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/checkin.resource' on line 48: Creating keyword 'Verify Page Elements before Check-in' failed: User keyword cannot be empty.</msg>
+</errors>
+</robot>

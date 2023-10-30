@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231030 17:17:39.711" rpa="false" schemaversion="4">
+<suite id="s1" name="Pretest" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot">
+<kw name="Pre-Test: Verify BUI is Up" type="SETUP">
+<kw name="Pre-Test: Get BUI Status">
+<var>${status}</var>
+<kw name="Get BUI Status" library="common">
+<var>${response}</var>
+<doc>Get the status of the microservice - running on Softico</doc>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>frends</arg>
+<arg>${microservice_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231030 17:17:40.711" level="INFO">Creating Session using : alias=frends, url=https://softico-dev-agent.frendsapp.com/api/qa/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231030 17:17:40.711" endtime="20231030 17:17:40.712"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>frends</arg>
+<arg>/status/${env_name}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20231030 17:17:41.230" level="INFO">GET Request : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
+ path_url=/api/qa/v1/status/test4 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20231030 17:17:41.230" level="INFO">GET Response : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
+ status=200, reason=OK 
+ headers={'Content-Length': '4', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-HTTPAPI/2.0', 'Date': 'Mon, 30 Oct 2023 17:17:41 GMT'} 
+ body=true 
+ </msg>
+<msg timestamp="20231030 17:17:41.231" level="INFO">/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'softico-dev-agent.frendsapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg timestamp="20231030 17:17:41.231" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231030 17:17:40.712" endtime="20231030 17:17:41.231"/>
+</kw>
+<msg timestamp="20231030 17:17:41.232" level="INFO">${response} = True</msg>
+<status status="PASS" starttime="20231030 17:17:40.711" endtime="20231030 17:17:41.232"/>
+</kw>
+<if>
+<branch type="IF" condition="'${response}' == 'False'">
+<kw name="Fail" library="BuiltIn">
+<arg>BUI is not up and running</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20231030 17:17:41.233" endtime="20231030 17:17:41.233"/>
+</kw>
+<status status="NOT RUN" starttime="20231030 17:17:41.232" endtime="20231030 17:17:41.233"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>BUI is up and running</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231030 17:17:41.233" endtime="20231030 17:17:41.233"/>
+</kw>
+<status status="PASS" starttime="20231030 17:17:41.233" endtime="20231030 17:17:41.234"/>
+</branch>
+<status status="PASS" starttime="20231030 17:17:41.232" endtime="20231030 17:17:41.234"/>
+</if>
+<msg timestamp="20231030 17:17:41.234" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20231030 17:17:40.711" endtime="20231030 17:17:41.234"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${status}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20231030 17:17:41.234" endtime="20231030 17:17:41.234"/>
+</kw>
+<status status="PASS" starttime="20231030 17:17:40.710" endtime="20231030 17:17:41.234"/>
+</kw>
+<test id="s1-t1" name="Pre-Test: Get Member Inbox" line="34">
+<kw name="Get Inbox">
+<var>${inbox}</var>
+<arg>${inbox_id}</arg>
+<msg timestamp="20231030 17:17:41.239" level="FAIL">No keyword with name 'Get Inbox' found. Did you mean:
+    common.Get Inbox ID</msg>
+<status status="FAIL" starttime="20231030 17:17:41.239" endtime="20231030 17:17:41.239"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${inbox_object}</arg>
+<arg>${inbox}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20231030 17:17:41.240" endtime="20231030 17:17:41.240"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${inbox.name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231030 17:17:41.240" endtime="20231030 17:17:41.240"/>
+</kw>
+<doc>Verifies the Mailslurp keywords are running</doc>
+<tag>pretest</tag>
+<status status="FAIL" starttime="20231030 17:17:41.235" endtime="20231030 17:17:41.240">No keyword with name 'Get Inbox' found. Did you mean:
+    common.Get Inbox ID</status>
+</test>
+<test id="s1-t2" name="Pre-Test: Get Config" line="42">
+<kw name="Get Config" library="Helpers">
+<var>${config}</var>
+<arg>${url}</arg>
+<msg timestamp="20231030 17:17:41.863" level="INFO">${config} = {'membership': True, 'eciLco': True, 'breakfast': True, 'compensate': False, 'cancellationPolicyHours': 24, 'extraBed': True, 'defaultGuestNationality': 'FIN', 'findBookingShortcut': False, 'excludePr...</msg>
+<status status="PASS" starttime="20231030 17:17:41.247" endtime="20231030 17:17:41.863"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Config for environment:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231030 17:17:41.863" endtime="20231030 17:17:41.864"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${config}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231030 17:17:41.864" endtime="20231030 17:17:41.866"/>
+</kw>
+<doc>Test case that checks the config file</doc>
+<tag>pretest</tag>
+<status status="PASS" starttime="20231030 17:17:41.247" endtime="20231030 17:17:41.866"/>
+</test>
+<test id="s1-t3" name="Pre-Test: Verify API is Up" line="48">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD: API is up and running</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20231030 17:17:41.870" level="INFO">Execution passed with message:
+TBD: API is up and running</msg>
+<status status="PASS" starttime="20231030 17:17:41.870" endtime="20231030 17:17:41.870"/>
+</kw>
+<tag>pretest</tag>
+<status status="PASS" starttime="20231030 17:17:41.870" endtime="20231030 17:17:41.871">TBD: API is up and running</status>
+</test>
+<test id="s1-t4" name="Pre-Test: Verify MUI is Up" line="51">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD: MUI is up and running</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20231030 17:17:41.874" level="INFO">Execution passed with message:
+TBD: MUI is up and running</msg>
+<status status="PASS" starttime="20231030 17:17:41.873" endtime="20231030 17:17:41.874"/>
+</kw>
+<tag>pretest</tag>
+<status status="PASS" starttime="20231030 17:17:41.873" endtime="20231030 17:17:41.874">TBD: MUI is up and running</status>
+</test>
+<test id="s1-t5" name="Verify Rooms are Available" line="54">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>TBD: Check Rooms are available, for example API</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20231030 17:17:41.876" level="INFO">Execution passed with message:
+TBD: Check Rooms are available, for example API</msg>
+<status status="PASS" starttime="20231030 17:17:41.876" endtime="20231030 17:17:41.877"/>
+</kw>
+<tag>pretest</tag>
+<status status="PASS" starttime="20231030 17:17:41.876" endtime="20231030 17:17:41.877">TBD: Check Rooms are available, for example API</status>
+</test>
+<doc>Argument file for running Pre-Test verifications</doc>
+<status status="FAIL" starttime="20231030 17:17:39.712" endtime="20231030 17:17:41.879"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="1" skip="0">pretest</stat>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="Pretest">Pretest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231030 17:17:39.966" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 5: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 10, in &lt;module&gt;
+    import pandas as pd
+PYTHONPATH:
+  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries
+  /opt/hostedtoolcache/Python/3.11.6/x64/bin
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python311.zip
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
+<msg timestamp="20231030 17:17:40.073" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 64: Creating keyword 'Save and Sign button is visible' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231030 17:17:40.086" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 10, in &lt;module&gt;
+    import pandas as pd
+PYTHONPATH:
+  /home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries
+  /opt/hostedtoolcache/Python/3.11.6/x64/bin
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python311.zip
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
+  /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
+</errors>
+</robot>
