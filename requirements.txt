@@ -11,3 +11,4 @@ rpaframework
 simplegmail
 mailslurp_client
 robotframework-pabot
+pandas
