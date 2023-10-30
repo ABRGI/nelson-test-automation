@@ -1,4 +1,4 @@
-name: Robot Framework Tests on Nelson
+name: Regression Tests
 
 on:
   push:
