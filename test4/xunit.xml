@@ -1,24 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="5" skipped="0" time="143.354" timestamp="2023-10-30T17:41:26.364000">
-<testcase classname="Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.375">
+<testsuite name="Testsuites" tests="55" errors="0" failures="43" skipped="0" time="565.293" timestamp="2023-10-30T17:47:02.143000">
+<testsuite name="BUI" tests="13" errors="0" failures="12" skipped="0" time="385.894" timestamp="2023-10-30T17:47:02.167000">
+<testsuite name="Regression" tests="13" errors="0" failures="12" skipped="0" time="385.889" timestamp="2023-10-30T17:47:02.169000">
+<testsuite name="Create Booking" tests="2" errors="0" failures="2" skipped="0" time="42.227" timestamp="2023-10-30T17:47:02.170000">
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Create A New Booking as" time="34.295">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
 </testcase>
-<testcase classname="Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="5.493">
+<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Confirm Email and Open Link" time="0.004">
+<failure message="ApiValueError: Missing the required parameter `inbox_id` when calling `wait_for_matching_emails`" type="AssertionError"/>
 </testcase>
-<testcase classname="Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="30.170">
-<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]')&#10;  locator resolved to &lt;button disabled type=&quot;button&quot; class=&quot;chakra-button css-…&gt;Continue to extras&lt;/button&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;    element is not enabled - waiting...&#10;element was detached from the DOM, retrying&#10;  locator resolved to &lt;button disabled type=&quot;button&quot; class=&quot;chakra-button css-…&gt;Continue to extras&lt;/button&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;    element is not enabled - waiting...&#10;element was detached from the DOM, retrying&#10;  locator resolved to &lt;button disabled type=&quot;button&quot; class=&quot;chakra-button css-…&gt;Continue to extras&lt;/button&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;    element is not enabled - waiting...&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="6" skipped="0" time="197.056" timestamp="2023-10-30T17:47:44.404000">
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.515">
 </testcase>
-<testcase classname="Create Booking And Check In" name="Fill in Booker Contact Information" time="30.498">
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="30.515">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="30.085">
+<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Fill in Booker Contact Information" time="30.587">
 <failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('id=firstName')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
 </testcase>
-<testcase classname="Create Booking And Check In" name="Pay using Web Bank and Nordea" time="30.144">
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Pay using Web Bank and Nordea" time="30.054">
 <failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//div[contains(text(), &quot;Web bank payment&quot;)]')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
 </testcase>
-<testcase classname="Create Booking And Check In" name="Check In Online" time="30.138">
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Check In Online" time="30.080">
 <failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//button[text()=&quot;Check in&quot;])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
 </testcase>
-<testcase classname="Create Booking And Check In" name="Wait for Door Code and Verify Page" time="11.547">
-<failure message="Error: locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:&#10;    1) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;&lt;/section&gt; aka locator('#popover-content-104')&#10;    2) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;&lt;/section&gt; aka locator('#popover-content-107')&#10;    3) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;…&lt;/section&gt; aka locator('#popover-content-205')&#10;    4) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;…&lt;/section&gt; aka locator('#popover-content-209')&#10;    5) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;…&lt;/section&gt; aka locator('#popover-content-213')&#10;    6) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;…&lt;/section&gt; aka locator('#popover-content-217')&#10;&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//section[contains(@class, \'chakra\')]')&#10;============================================================" type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Wait for Door Code and Verify Page" time="40.362">
+<failure message="TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//*[contains(text(), &quot;Door code&quot;)]/following-sibling::*')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
 </testcase>
+<properties>
+<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
+</properties>
+</testsuite>
+<testsuite name="Online Check In" tests="4" errors="0" failures="4" skipped="0" time="146.589" timestamp="2023-10-30T17:51:01.468000">
+<testsuite name="BUI2-557" tests="4" errors="0" failures="4" skipped="0" time="146.581" timestamp="2023-10-30T17:51:01.470000">
+<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Create a new Booking" time="37.017">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Add Someone Else as the Main Guest" time="35.353">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//button[text()=&quot;Check in&quot;])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Validation shows msg for fields marked" time="36.313">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Showing imported passport when the National is not Finland" time="37.859">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+</testsuite>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="Customer Specific" tests="13" errors="0" failures="8" skipped="0" time="105.593" timestamp="2023-10-30T17:53:28.063000">
+<testsuite name="Kensington Stay" tests="13" errors="0" failures="8" skipped="0" time="105.590" timestamp="2023-10-30T17:53:28.065000">
+<testsuite name="Confirm Bdc Booking" tests="3" errors="0" failures="2" skipped="0" time="3.814" timestamp="2023-10-30T17:53:28.067000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Create A New Booking on Booking.com for a later date and verify Emails" time="0.002">
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Open Booking in MUI" time="1.967">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Cancel Booking in MUI" time="0.013">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Create Bdc Booking" tests="4" errors="0" failures="2" skipped="0" time="70.752" timestamp="2023-10-30T17:53:31.889000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Open BDC and Check for Availability" time="7.405">
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Start Reservation Process" time="30.614">
+<failure message="TimeoutError: locator.selectOption: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//select[contains(@id, \'unit\')]')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Fill Contact Information and Payment Details" time="30.364">
+<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('id=firstname')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Verify Confirmation Email" time="1.561">
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Create Bui Booking" tests="5" errors="0" failures="3" skipped="0" time="30.960" timestamp="2023-10-30T17:54:42.647000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Kensington Stay Home Page" time="5.533">
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Menu and Click Book a Room" time="0.445">
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Verify Booking Page Elements" time="8.021">
+<failure message="The element containing text 'Find rooms' should be visible but it is not." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Create New Booking in KS" time="8.065">
+<failure message="TimeoutError: locator.click: Timeout 8000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//div[contains(@class, &quot;display-desktop-up&quot;)]//a[contains(@class, &quot;white&quot;)]')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Start Check in Process" time="8.016">
+<failure message="The element containing text 'Please update' should be visible but it is not." type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying the Kensington Stay Home Page"/>
+</properties>
+</testsuite>
+<testsuite name="Create Mui Booking" tests="1" errors="0" failures="1" skipped="0" time="0.036" timestamp="2023-10-30T17:55:13.613000">
+<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Mui Booking" name="Start Creating a new Booking in MUI" time="0.009">
+<failure message="No keyword with name 'Open Browser to Nelson Portal and Navigate to Test Exhibition' found. Did you try using keyword 'Browser.Open Browser' or 'mui.Open Browser To Nelson Portal' and forgot to use enough whitespace between keyword and arguments?" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="MUI" tests="22" errors="0" failures="22" skipped="0" time="15.326" timestamp="2023-10-30T17:55:13.658000">
+<testsuite name="Regression" tests="22" errors="0" failures="22" skipped="0" time="15.321" timestamp="2023-10-30T17:55:13.660000">
+<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="3.778" timestamp="2023-10-30T17:55:13.661000">
+<testcase classname="Testsuites.MUI.Regression.Mui.Booking" name="Create New Booking" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="3.736" timestamp="2023-10-30T17:55:17.444000">
+<testcase classname="Testsuites.MUI.Regression.Mui.Gbe" name="Create New Group Booking" time="0.003">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying GBE2 in MUI"/>
+</properties>
+</testsuite>
+<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="3.761" timestamp="2023-10-30T17:55:21.186000">
+<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Verify all things" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Mui.Smoke" tests="16" errors="0" failures="16" skipped="0" time="4.023" timestamp="2023-10-30T17:55:24.952000">
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Log in with correct Username and Password" time="1.807">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Open Reports Page and Verify" time="0.015">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.018">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Usage Page" time="0.013">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Maintenance Page" time="0.012">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Customers Page" time="0.010">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Pricing Page" time="0.009">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Allotments Page" time="0.010">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Vouchers Page" time="0.011">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Breakfast Page" time="0.028">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Settings Page" time="0.009">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Locks Page" time="0.017">
+<failure message="Error: No page open." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Log Out" time="0.018">
+<failure message="Error: Could not find active page" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in without Password" time="0.396">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in without Username" time="0.440">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.325">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="This file contains smoke tests for MUI"/>
+</properties>
+</testsuite>
+</testsuite>
+</testsuite>
+<testsuite name="OTA" tests="7" errors="0" failures="1" skipped="0" time="58.447" timestamp="2023-10-30T17:55:28.986000">
+<testsuite name="Bdc" tests="4" errors="0" failures="1" skipped="0" time="58.391" timestamp="2023-10-30T17:55:28.988000">
+<testcase classname="Testsuites.OTA.Bdc" name="Open BDC and Check for Availability" time="7.619">
+</testcase>
+<testcase classname="Testsuites.OTA.Bdc" name="Create Reservation in BDC" time="3.310">
+</testcase>
+<testcase classname="Testsuites.OTA.Bdc" name="Fill Contact Information and Payment Details" time="45.712">
+<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('id=cc_type')&#10;  locator resolved to &lt;select required=&quot;&quot; id=&quot;cc_type&quot; name=&quot;cc_type&quot; data-tab…&gt;…&lt;/select&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div class=&quot;bui-overlay__align&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--active&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #1&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div class=&quot;bui-overlay__align&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--active&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #2&#10;    [ Message content over the limit has been removed. ]&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div class=&quot;bui-overlay__align&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--active&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #13&#10;  waiting 500ms&#10;  waiting for element to be visible, enabled and stable&#10;  element is visible, enabled and stable&#10;  scrolling into view if needed&#10;  done scrolling&#10;  &lt;div class=&quot;bui-overlay__align&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;bui-overlay bui-overlay--active&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events&#10;retrying click action, attempt #14&#10;  waiting 500ms&#10;  waiting for element to be visible, enabled and stable&#10;  &#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Testsuites.OTA.Bdc" name="Verify Confirmation Email Arrives" time="0.873">
+</testcase>
+<properties>
+<property name="Documentation" value="A test suite for verifying BDC booking functionality"/>
+</properties>
+</testsuite>
+<testsuite name="Expedia" tests="3" errors="0" failures="0" skipped="0" time="0.039" timestamp="2023-10-30T17:56:27.388000">
+<testcase classname="Testsuites.OTA.Expedia" name="Check Availability in Expedia" time="0.002">
+</testcase>
+<testcase classname="Testsuites.OTA.Expedia" name="Select Hotel and Create Booking" time="0.001">
+</testcase>
+<testcase classname="Testsuites.OTA.Expedia" name="Fill Booker Details" time="0.004">
+</testcase>
+<properties>
+<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
+</properties>
+</testsuite>
+</testsuite>
 <properties>
 <property name="Documentation" value="Argument file for running tests on Omena test4 environment (test4)"/>
 </properties>
