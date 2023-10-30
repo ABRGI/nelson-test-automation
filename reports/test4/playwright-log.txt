@@ -1,0 +1,262 @@
+{"level":30,"time":"2023-10-30T17:41:27.482Z","pid":3000,"hostname":"fv-az567-785","msg":"Listening on 38565"}
+{"level":30,"time":"2023-10-30T17:41:27.557Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:41:27.558Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:41:27.566Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-10-30T17:41:28.157Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-10-30T17:41:28.163Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-10-30T17:41:28.163Z","pid":3000,"hostname":"fv-az567-785","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-30T17:41:28.164Z","pid":3000,"hostname":"fv-az567-785","msg":"Trace file: "}
+{"level":30,"time":"2023-10-30T17:41:28.202Z","pid":3000,"hostname":"fv-az567-785","msg":"Changed active context"}
+{"level":30,"time":"2023-10-30T17:41:28.202Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method newContext"}
+{"level":30,"time":"2023-10-30T17:41:28.206Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-10-30T17:41:28.206Z","pid":3000,"hostname":"fv-az567-785","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-30T17:41:28.842Z","pid":3000,"hostname":"fv-az567-785","msg":"Video path: undefined"}
+{"level":30,"time":"2023-10-30T17:41:28.843Z","pid":3000,"hostname":"fv-az567-785","msg":"Changed active page"}
+{"level":30,"time":"2023-10-30T17:41:30.888Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method newPage"}
+{"level":30,"time":"2023-10-30T17:41:30.895Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T17:41:30.896Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is disabled, return Locator: id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-10-30T17:41:30.896Z","pid":3000,"hostname":"fv-az567-785","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T17:41:31.022Z","pid":3000,"hostname":"fv-az567-785","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T17:41:31.023Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T17:41:31.034Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.034Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-10-30T17:41:31.126Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.135Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.135Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //div[contains(@data-nelson-btn, \"hotels\")] in page."}
+{"level":30,"time":"2023-10-30T17:41:31.228Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.231Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:31.231Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T17:41:31.263Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:31.266Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.266Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T17:41:31.458Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.461Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:31.461Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T17:41:31.502Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:31.525Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:41:31.525Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //button[contains(@class, 'booking-form-button') and contains(text(), 'Book')] in page."}
+{"level":30,"time":"2023-10-30T17:41:32.897Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:41:32.901Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:32.901Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-10-30T17:41:36.749Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:36.753Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:41:36.753Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //div[contains(text(), 'Select room')] in page."}
+{"level":30,"time":"2023-10-30T17:41:37.003Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:41:37.011Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:41:37.012Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-10-30T17:42:07.016Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to <button disabled type="button" class="chakra-button css-…>Continue to extras</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:42:07.021Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:07.021Z","pid":3000,"hostname":"fv-az567-785","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:42:07.175Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:07.541Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:42:07.541Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with id=firstName in page."}
+{"level":30,"time":"2023-10-30T17:42:37.541Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('id=firstName')
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:42:37.543Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:37.544Z","pid":3000,"hostname":"fv-az567-785","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-2.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:42:37.676Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:37.689Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:42:37.689Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //div[contains(text(), \"Web bank payment\")] in page."}
+{"level":30,"time":"2023-10-30T17:43:07.689Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//div[contains(text(), "Web bank payment")]')
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:07.692Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:43:07.692Z","pid":3000,"hostname":"fv-az567-785","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-3.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:43:07.826Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:43:07.842Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:43:07.842Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with (//button[text()=\"Check in\"])[1] in page."}
+{"level":30,"time":"2023-10-30T17:43:37.842Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//button[text()="Check in"])[1]') to be visible
+============================================================
+    at waitForElementState (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8508:19)
+    at async PlaywrightServer.waitForElementsState (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:37.844Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:43:37.845Z","pid":3000,"hostname":"fv-az567-785","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-4.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:43:37.973Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:43:37.987Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T17:43:37.987Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is disabled, return Locator: //p[contains(text(), \"Available in\")] in page."}
+{"level":30,"time":"2023-10-30T17:43:37.987Z","pid":3000,"hostname":"fv-az567-785","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T17:43:47.989Z","pid":3000,"hostname":"fv-az567-785","msg":"Found 0 elements."}
+{"level":30,"time":"2023-10-30T17:43:47.989Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T17:43:47.999Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:43:47.999Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":50,"time":"2023-10-30T17:43:48.239Z","pid":3000,"hostname":"fv-az567-785","err":{"type":"Error","message":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================","stack":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================\n    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)\n    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"Error"},"msg":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:43:48.239Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  getElementStates"}
+================= Original suppressed error =================
+locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:
+    1) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-104')
+    2) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-107')
+    3) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-205')
+    4) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-209')
+    5) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-213')
+    6) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-217')
+
+=========================== logs ===========================
+waiting for locator('xpath=//section[contains(@class, \'chakra\')]')
+============================================================
+    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)
+    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:48.252Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:43:48.252Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":50,"time":"2023-10-30T17:43:48.472Z","pid":3000,"hostname":"fv-az567-785","err":{"type":"Error","message":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================","stack":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================\n    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)\n    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"Error"},"msg":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:43:48.472Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  getElementStates"}
+================= Original suppressed error =================
+locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:
+    1) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-104')
+    2) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-107')
+    3) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-205')
+    4) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-209')
+    5) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-213')
+    6) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-217')
+
+=========================== logs ===========================
+waiting for locator('xpath=//section[contains(@class, \'chakra\')]')
+============================================================
+    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)
+    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:48.484Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:43:48.484Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":50,"time":"2023-10-30T17:43:48.704Z","pid":3000,"hostname":"fv-az567-785","err":{"type":"Error","message":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================","stack":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================\n    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)\n    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"Error"},"msg":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:43:48.704Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  getElementStates"}
+================= Original suppressed error =================
+locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:
+    1) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-104')
+    2) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-107')
+    3) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-205')
+    4) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-209')
+    5) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-213')
+    6) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-217')
+
+=========================== logs ===========================
+waiting for locator('xpath=//section[contains(@class, \'chakra\')]')
+============================================================
+    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)
+    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:48.716Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:43:48.716Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":50,"time":"2023-10-30T17:43:48.934Z","pid":3000,"hostname":"fv-az567-785","err":{"type":"Error","message":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================","stack":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================\n    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)\n    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"Error"},"msg":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:43:48.934Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  getElementStates"}
+================= Original suppressed error =================
+locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:
+    1) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-104')
+    2) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-107')
+    3) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-205')
+    4) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-209')
+    5) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-213')
+    6) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-217')
+
+=========================== logs ===========================
+waiting for locator('xpath=//section[contains(@class, \'chakra\')]')
+============================================================
+    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)
+    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:48.947Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:43:48.947Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":50,"time":"2023-10-30T17:43:49.164Z","pid":3000,"hostname":"fv-az567-785","err":{"type":"Error","message":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================","stack":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================\n    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)\n    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"Error"},"msg":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:43:49.164Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  getElementStates"}
+================= Original suppressed error =================
+locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:
+    1) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-104')
+    2) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-107')
+    3) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-205')
+    4) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-209')
+    5) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-213')
+    6) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-217')
+
+=========================== logs ===========================
+waiting for locator('xpath=//section[contains(@class, \'chakra\')]')
+============================================================
+    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)
+    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:49.176Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:43:49.176Z","pid":3000,"hostname":"fv-az567-785","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":50,"time":"2023-10-30T17:43:49.391Z","pid":3000,"hostname":"fv-az567-785","err":{"type":"Error","message":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================","stack":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================\n    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)\n    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"Error"},"msg":"locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \\'chakra\\')]') resolved to 6 elements:\n    1) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-104')\n    2) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…></section> aka locator('#popover-content-107')\n    3) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-205')\n    4) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-209')\n    5) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-213')\n    6) <section tabindex=\"-1\" role=\"dialog\" id=\"popover-content-…>…</section> aka locator('#popover-content-217')\n\n=========================== logs ===========================\nwaiting for locator('xpath=//section[contains(@class, \\'chakra\\')]')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:43:49.392Z","pid":3000,"hostname":"fv-az567-785","msg":"Error of node method  getElementStates"}
+================= Original suppressed error =================
+locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 6 elements:
+    1) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-104')
+    2) <section tabindex="-1" role="dialog" id="popover-content-…></section> aka locator('#popover-content-107')
+    3) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-205')
+    4) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-209')
+    5) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-213')
+    6) <section tabindex="-1" role="dialog" id="popover-content-…>…</section> aka locator('#popover-content-217')
+
+=========================== logs ===========================
+waiting for locator('xpath=//section[contains(@class, \'chakra\')]')
+============================================================
+    at getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8884:19)
+    at async PlaywrightServer.getElementStates (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:49.394Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:43:49.394Z","pid":3000,"hostname":"fv-az567-785","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-5.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:43:49.522Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:43:49.531Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-10-30T17:43:49.545Z","pid":3000,"hostname":"fv-az567-785","msg":"Removed page=ce908ec8-7eaa-4b25-ae79-9cdf112df8fa from context=12914709-c823-42a3-8d6a-faab34f07a7d page stack"}
+{"level":30,"time":"2023-10-30T17:43:49.717Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9991:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10237:57)
+    at handleUnary (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+=============================================================
+{"level":30,"time":"2023-10-30T17:43:49.721Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:43:49.721Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:43:49.754Z","pid":3000,"hostname":"fv-az567-785","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-30T17:43:49.754Z","pid":3000,"hostname":"fv-az567-785","msg":"End of node method closeAllBrowsers"}

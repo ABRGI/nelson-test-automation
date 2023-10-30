@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="5" skipped="0" time="140.980" timestamp="2023-10-30T17:39:04.327000">
+<testcase classname="Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.311">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="3.019">
+</testcase>
+<testcase classname="Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="30.185">
+<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//div[contains(@view,&quot;booking&quot;)]//button[contains(text(), &quot;Continue to extras&quot;)])[1]')&#10;  locator resolved to &lt;button disabled type=&quot;button&quot; class=&quot;chakra-button css-…&gt;Continue to extras&lt;/button&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;    element is not enabled - waiting...&#10;element was detached from the DOM, retrying&#10;  locator resolved to &lt;button disabled type=&quot;button&quot; class=&quot;chakra-button css-…&gt;Continue to extras&lt;/button&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;    element is not enabled - waiting...&#10;element was detached from the DOM, retrying&#10;  locator resolved to &lt;button disabled type=&quot;button&quot; class=&quot;chakra-button css-…&gt;Continue to extras&lt;/button&gt;&#10;attempting click action&#10;  waiting for element to be visible, enabled and stable&#10;    element is not enabled - waiting...&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Create Booking And Check In" name="Fill in Booker Contact Information" time="30.535">
+<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('id=firstName')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Create Booking And Check In" name="Pay using Web Bank and Nordea" time="30.143">
+<failure message="TimeoutError: locator.click: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//div[contains(text(), &quot;Web bank payment&quot;)]')&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Create Booking And Check In" name="Check In Online" time="30.139">
+<failure message="TimeoutError: locator.waitFor: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for locator('xpath=(//button[text()=&quot;Check in&quot;])[1]') to be visible&#10;============================================================&#10;Tip: Use &quot;Set Browser Timeout&quot; for increasing the timeout or double check your locator as the targeted element(s) couldn't be found." type="AssertionError"/>
+</testcase>
+<testcase classname="Create Booking And Check In" name="Wait for Door Code and Verify Page" time="11.186">
+<failure message="Error: locator.waitFor: Error: strict mode violation: locator('xpath=//section[contains(@class, \'chakra\')]') resolved to 4 elements:&#10;    1) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;&lt;/section&gt; aka locator('#popover-content-205')&#10;    2) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;&lt;/section&gt; aka locator('#popover-content-209')&#10;    3) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;&lt;/section&gt; aka locator('#popover-content-213')&#10;    4) &lt;section tabindex=&quot;-1&quot; role=&quot;dialog&quot; id=&quot;popover-content-…&gt;&lt;/section&gt; aka locator('#popover-content-217')&#10;&#10;=========================== logs ===========================&#10;waiting for locator('xpath=//section[contains(@class, \'chakra\')]')&#10;============================================================" type="AssertionError"/>
+</testcase>
+<properties>
+<property name="Documentation" value="Argument file for running tests on Omena Staging Environmen (test3)"/>
+</properties>
+</testsuite>
