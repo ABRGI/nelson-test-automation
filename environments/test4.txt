@@ -1,7 +1,7 @@
 --doc Argument file for running tests on Omena test4 environment (test4)
 --variable url:https://test4.omenahotels.com/en
 --variable HEADLESS:True
---variable headless:False
+--variable headless:True
 --variable url.landing.page:https://test4.omenahotels.com/en
 --outputdir reports/test4/
 --variable browser:Firefox

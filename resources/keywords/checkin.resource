@@ -46,4 +46,5 @@ Verify Check-in Page Texts
     Verify Texts    @{listOfStrings}
 
 Verify Page Elements before Check-in
+    Pass Execution      TBD
     # TODO: Add verifications

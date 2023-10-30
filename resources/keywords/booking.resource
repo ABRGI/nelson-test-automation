@@ -63,6 +63,7 @@ Verify Edit Guest Page is Open
 
 Save and Sign button is visible
     [Documentation]    Verifies the save and sign button is visible
+    Wait Until Visible     text=sign
 
 Toggle Someone Else Checkbox
     [Documentation]    Toggles the "Someone else will be the main guest" checkbox

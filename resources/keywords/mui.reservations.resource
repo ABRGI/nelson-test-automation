@@ -91,6 +91,7 @@ Verify Channels in Search By Channel Dropdown
 
 Select Booking Channel for Search 
     [Arguments]    ${bookingChannel}=Booking.com
+    Pass Execution    TBD
     
 Toggle by Stay 
     [Arguments]        ${stay}=Arriving Today

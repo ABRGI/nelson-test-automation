@@ -1,7 +1,7 @@
 --doc Argument file for running tests on EC Production Environment
 --variable url:https://exhibitioncourt.nelson.management/
 --variable HEADLESS:True
---variable headless:False
+--variable headless:True
 --variable environment:
 --outputdir reports/ecprod/
 --variable browser:Firefox
