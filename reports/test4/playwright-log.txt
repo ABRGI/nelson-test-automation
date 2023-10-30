@@ -1,0 +1,164 @@
+{"level":30,"time":"2023-10-30T17:39:36.815Z","pid":3015,"hostname":"fv-az267-511","msg":"Listening on 55689"}
+{"level":30,"time":"2023-10-30T17:39:36.921Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:39:36.922Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:39:36.933Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-10-30T17:39:37.661Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-10-30T17:39:37.669Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-10-30T17:39:37.670Z","pid":3015,"hostname":"fv-az267-511","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-30T17:39:37.670Z","pid":3015,"hostname":"fv-az267-511","msg":"Trace file: "}
+{"level":30,"time":"2023-10-30T17:39:37.706Z","pid":3015,"hostname":"fv-az267-511","msg":"Changed active context"}
+{"level":30,"time":"2023-10-30T17:39:37.706Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method newContext"}
+{"level":30,"time":"2023-10-30T17:39:37.713Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-10-30T17:39:37.714Z","pid":3015,"hostname":"fv-az267-511","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-30T17:39:38.548Z","pid":3015,"hostname":"fv-az267-511","msg":"Video path: undefined"}
+{"level":30,"time":"2023-10-30T17:39:38.553Z","pid":3015,"hostname":"fv-az267-511","msg":"Changed active page"}
+{"level":30,"time":"2023-10-30T17:39:42.966Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method newPage"}
+{"level":30,"time":"2023-10-30T17:39:42.978Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T17:39:42.979Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is disabled, return Locator: id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-10-30T17:39:42.979Z","pid":3015,"hostname":"fv-az267-511","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T17:39:43.069Z","pid":3015,"hostname":"fv-az267-511","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-30T17:39:43.070Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T17:39:43.083Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.083Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-10-30T17:39:43.191Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.202Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.202Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //div[contains(@data-nelson-btn, \"hotels\")] in page."}
+{"level":30,"time":"2023-10-30T17:39:43.303Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.307Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:39:43.308Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T17:39:43.317Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:39:43.320Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.320Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T17:39:43.580Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.584Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:39:43.584Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] in page."}
+{"level":30,"time":"2023-10-30T17:39:43.674Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:39:43.714Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:39:43.714Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //button[contains(@class, 'booking-form-button') and contains(text(), 'Book')] in page."}
+{"level":30,"time":"2023-10-30T17:40:13.721Z","pid":3015,"hostname":"fv-az267-511","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//button[contains(@class, \'booking-form-button\') and contains(text(), \'Book\')]')
+  locator resolved to <button disabled class="booking-form-button btn btn-prim…>Book now</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:40:13.728Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:40:13.729Z","pid":3015,"hostname":"fv-az267-511","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:40:13.952Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:40:13.965Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:40:13.965Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with (//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1] in page."}
+{"level":30,"time":"2023-10-30T17:40:43.966Z","pid":3015,"hostname":"fv-az267-511","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:40:43.970Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:40:43.970Z","pid":3015,"hostname":"fv-az267-511","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-2.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:40:44.155Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:40:44.431Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:40:44.431Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with id=firstName in page."}
+================= Original suppressed error =================
+{"level":30,"time":"2023-10-30T17:41:14.431Z","pid":3015,"hostname":"fv-az267-511","msg":"Error of node method  click"}
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('id=firstName')
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:41:14.437Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:41:14.437Z","pid":3015,"hostname":"fv-az267-511","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-3.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:41:14.631Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:41:14.647Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-30T17:41:14.647Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //div[contains(text(), \"Web bank payment\")] in page."}
+================= Original suppressed error =================
+{"level":30,"time":"2023-10-30T17:41:44.648Z","pid":3015,"hostname":"fv-az267-511","msg":"Error of node method  click"}
+locator.click: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//div[contains(text(), "Web bank payment")]')
+============================================================
+    at internalClick (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9078:19)
+    at async click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9059:18)
+    at async PlaywrightServer.click (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:41:44.651Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:41:44.651Z","pid":3015,"hostname":"fv-az267-511","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-4.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:41:44.863Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:41:44.876Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-30T17:41:44.876Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with (//button[text()=\"Check in\"])[1] in page."}
+================= Original suppressed error =================
+{"level":30,"time":"2023-10-30T17:42:14.877Z","pid":3015,"hostname":"fv-az267-511","msg":"Error of node method  waitForElementState"}
+locator.waitFor: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=(//button[text()="Check in"])[1]') to be visible
+============================================================
+    at waitForElementState (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8508:19)
+    at async PlaywrightServer.waitForElementsState (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:42:14.881Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:14.881Z","pid":3015,"hostname":"fv-az267-511","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-5.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:42:15.078Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:15.095Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-30T17:42:15.095Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is disabled, return Locator: //p[contains(text(), \"Available in\")] in page."}
+{"level":30,"time":"2023-10-30T17:42:15.095Z","pid":3015,"hostname":"fv-az267-511","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-30T17:42:25.100Z","pid":3015,"hostname":"fv-az267-511","msg":"Found 0 elements."}
+{"level":30,"time":"2023-10-30T17:42:25.100Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-30T17:42:25.113Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:42:25.113Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //section[contains(@class, 'chakra')] in page."}
+{"level":30,"time":"2023-10-30T17:42:25.364Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-10-30T17:42:25.369Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-30T17:42:25.369Z","pid":3015,"hostname":"fv-az267-511","msg":"Strict mode is enabled, find Locator with //*[contains(text(), \"Door code\")]/following-sibling::* in page."}
+{"level":50,"time":"2023-10-30T17:42:55.369Z","pid":3015,"hostname":"fv-az267-511","err":{"type":"TimeoutError","message":"locator.elementHandle: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator('xpath=//*[contains(text(), \"Door code\")]/following-sibling::*')\n============================================================","stack":"locator.elementHandle: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator('xpath=//*[contains(text(), \"Door code\")]/following-sibling::*')\n============================================================\n    at getTextContent (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8786:33)\n    at getText (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8800:21)\n    at async PlaywrightServer.getText (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28)","name":"TimeoutError"},"msg":"locator.elementHandle: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator('xpath=//*[contains(text(), \"Door code\")]/following-sibling::*')\n============================================================"}
+{"level":30,"time":"2023-10-30T17:42:55.370Z","pid":3015,"hostname":"fv-az267-511","msg":"Error of node method  getText"}
+================= Original suppressed error =================
+locator.elementHandle: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator('xpath=//*[contains(text(), "Door code")]/following-sibling::*')
+============================================================
+    at getTextContent (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8786:33)
+    at getText (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:8800:21)
+    at async PlaywrightServer.getText (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10006:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-10-30T17:42:55.374Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:55.374Z","pid":3015,"hostname":"fv-az267-511","Take screenshot with options: ":{"path":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-6.png","fileType":"png","fullPage":false,"timeout":30000,"omitBackground":false}}
+{"level":30,"time":"2023-10-30T17:42:55.573Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-30T17:42:55.583Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-10-30T17:42:55.607Z","pid":3015,"hostname":"fv-az267-511","msg":"Removed page=ad4688f4-8b17-4f02-9f24-c4b1f50f8bc9 from context=a666cbcc-a22a-4299-b9f7-14ce0991d1ac page stack"}
+{"level":30,"time":"2023-10-30T17:42:55.834Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:9991:59)
+    at PlaywrightServer.setTimeout (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/index.js:10237:57)
+    at handleUnary (/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+=============================================================
+{"level":30,"time":"2023-10-30T17:42:55.842Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:42:55.842Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-30T17:42:55.890Z","pid":3015,"hostname":"fv-az267-511","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-30T17:42:55.890Z","pid":3015,"hostname":"fv-az267-511","msg":"End of node method closeAllBrowsers"}
