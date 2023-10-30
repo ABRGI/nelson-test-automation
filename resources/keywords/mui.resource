@@ -62,7 +62,7 @@ Create Booking, Check in and get UUID
 Open Reservations Page
     Click Reservations from Navigation Menu
 
-Open A MUI Client
+Open A MUI Client§
     [Arguments]    ${client}
     Click    //b[normalize-space()='${client}']
 
