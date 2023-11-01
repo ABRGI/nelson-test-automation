@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231030 18:19:33.676" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231101 16:46:20.685" rpa="false" schemaversion="4">
 <suite id="s1" name="Create Booking And Check In" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/BUI/regression/create_booking_and_check_in.robot">
 <kw name="Open Browser to Landing Page" library="common" type="SETUP">
 <doc>A general startup keyword for opening a browser to the landing page.</doc>
-<msg timestamp="20231030 18:19:35.423" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:21.931" level="TRACE">Arguments: [  ]</msg>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Environment: ${environment}</arg>
 <doc>Logs the given message to the console.</doc>
-<msg timestamp="20231030 18:19:35.424" level="TRACE">Arguments: [ 'Environment: test4' ]</msg>
-<msg timestamp="20231030 18:19:35.424" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:35.423" endtime="20231030 18:19:35.424"/>
+<msg timestamp="20231101 16:46:21.931" level="TRACE">Arguments: [ 'Environment: test4' ]</msg>
+<msg timestamp="20231101 16:46:21.931" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:21.931" endtime="20231101 16:46:21.931"/>
 </kw>
 <if>
 <branch type="IF" condition="'${environment}' == 'test3'">
@@ -17,45 +17,45 @@
 <arg>${url.landing.page}</arg>
 <arg>https://test3.omenahotels.com/en</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:35.425" endtime="20231030 18:19:35.425"/>
+<status status="NOT RUN" starttime="20231101 16:46:21.932" endtime="20231101 16:46:21.932"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:35.424" endtime="20231030 18:19:35.425"/>
+<status status="NOT RUN" starttime="20231101 16:46:21.931" endtime="20231101 16:46:21.932"/>
 </branch>
 <branch type="ELSE IF" condition="'${environment}' == 'ks_test'">
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${url.landing.page}</arg>
 <arg>https://test.kensingtonstay.com/en</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:35.426" endtime="20231030 18:19:35.426"/>
+<status status="NOT RUN" starttime="20231101 16:46:21.932" endtime="20231101 16:46:21.932"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:35.425" endtime="20231030 18:19:35.426"/>
+<status status="NOT RUN" starttime="20231101 16:46:21.932" endtime="20231101 16:46:21.932"/>
 </branch>
 <branch type="ELSE IF" condition="'${environment}' == 'salo_test'">
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${url.landing.page}</arg>
 <arg>https://test.kensingtonstay.com/en</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:35.426" endtime="20231030 18:19:35.427"/>
+<status status="NOT RUN" starttime="20231101 16:46:21.933" endtime="20231101 16:46:21.933"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:35.426" endtime="20231030 18:19:35.427"/>
+<status status="NOT RUN" starttime="20231101 16:46:21.933" endtime="20231101 16:46:21.933"/>
 </branch>
 <branch type="ELSE IF" condition="'${environment}' == 'test4'">
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${url.landing.page}</arg>
 <arg>https://test4.omenahotels.com/en</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20231030 18:19:35.427" level="TRACE">Arguments: [ '${url.landing.page}' | 'https://test4.omenahotels.com/en' ]</msg>
-<msg timestamp="20231030 18:19:35.428" level="INFO">${url.landing.page} = https://test4.omenahotels.com/en</msg>
-<msg timestamp="20231030 18:19:35.428" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:35.427" endtime="20231030 18:19:35.428"/>
+<msg timestamp="20231101 16:46:21.933" level="TRACE">Arguments: [ '${url.landing.page}' | 'https://test4.omenahotels.com/en' ]</msg>
+<msg timestamp="20231101 16:46:21.934" level="INFO">${url.landing.page} = https://test4.omenahotels.com/en</msg>
+<msg timestamp="20231101 16:46:21.934" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:21.933" endtime="20231101 16:46:21.934"/>
 </kw>
-<status status="PASS" starttime="20231030 18:19:35.427" endtime="20231030 18:19:35.428"/>
+<status status="PASS" starttime="20231101 16:46:21.933" endtime="20231101 16:46:21.934"/>
 </branch>
-<status status="PASS" starttime="20231030 18:19:35.424" endtime="20231030 18:19:35.428"/>
+<status status="PASS" starttime="20231101 16:46:21.931" endtime="20231101 16:46:21.934"/>
 </if>
 <kw name="Open New Browser To URL" library="common">
 <arg>${url.landing.page}</arg>
-<msg timestamp="20231030 18:19:35.428" level="TRACE">Arguments: [ ${url}='https://test4.omenahotels.com/en' ]</msg>
+<msg timestamp="20231101 16:46:21.934" level="TRACE">Arguments: [ ${url}='https://test4.omenahotels.com/en' ]</msg>
 <kw name="New Browser" library="Browser">
 <arg>${browser}</arg>
 <arg>${headless}</arg>
@@ -64,29 +64,29 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20231030 18:19:35.430" level="TRACE">Arguments: [ &lt;SupportedBrowsers.firefox: 2&gt; | True | timeout=datetime.timedelta(seconds=30) | downloadsPath='/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads' ]</msg>
-<msg timestamp="20231030 18:19:35.430" level="INFO">{"browser": "firefox", "headless": true, "chromiumSandbox": false, "devtools": false, "downloadsPath": "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/traces/8231f38d-1fcf-4226-8c16-297d1d6ab0ce"}</msg>
-<msg timestamp="20231030 18:19:36.316" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"chromiumSandbox":false,"devtools":false,"downloadsPath":"/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/traces/8231f38d-1fcf-4226-8c16-297d1d6ab0ce"}</msg>
-<msg timestamp="20231030 18:19:36.316" level="TRACE">Return: 'browser=58e87657-71bd-42eb-a55c-032056e84766'</msg>
-<status status="PASS" starttime="20231030 18:19:35.429" endtime="20231030 18:19:36.316"/>
+<msg timestamp="20231101 16:46:21.935" level="TRACE">Arguments: [ &lt;SupportedBrowsers.firefox: 2&gt; | True | timeout=datetime.timedelta(seconds=30) | downloadsPath='/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads' ]</msg>
+<msg timestamp="20231101 16:46:21.935" level="INFO">{"browser": "firefox", "headless": true, "chromiumSandbox": false, "devtools": false, "downloadsPath": "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/traces/01a5e1fb-a7a2-4c6e-b9fd-069e8fe28323"}</msg>
+<msg timestamp="20231101 16:46:22.772" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"chromiumSandbox":false,"devtools":false,"downloadsPath":"/home/runner/work/nelson-test-automation/nelson-test-automation/resources/downloads","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/traces/01a5e1fb-a7a2-4c6e-b9fd-069e8fe28323"}</msg>
+<msg timestamp="20231101 16:46:22.772" level="TRACE">Return: 'browser=f4d6857e-dca6-4eba-9253-a7f4cb78d73d'</msg>
+<status status="PASS" starttime="20231101 16:46:21.934" endtime="20231101 16:46:22.772"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:19:36.317" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:19:36.322" level="INFO">No context open.</msg>
-<msg timestamp="20231030 18:19:36.322" level="TRACE">Return: '10 seconds'</msg>
-<status status="PASS" starttime="20231030 18:19:36.317" endtime="20231030 18:19:36.322"/>
+<msg timestamp="20231101 16:46:22.773" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:46:22.779" level="INFO">No context open.</msg>
+<msg timestamp="20231101 16:46:22.780" level="TRACE">Return: '10 seconds'</msg>
+<status status="PASS" starttime="20231101 16:46:22.773" endtime="20231101 16:46:22.780"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>acceptDownloads=True</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20231030 18:19:36.323" level="TRACE">Arguments: [ acceptDownloads=True ]</msg>
-<msg timestamp="20231030 18:19:36.323" level="INFO">{
+<msg timestamp="20231101 16:46:22.780" level="TRACE">Arguments: [ acceptDownloads=True ]</msg>
+<msg timestamp="20231101 16:46:22.781" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -101,44 +101,44 @@
     "height": 720
   }
 }</msg>
-<msg timestamp="20231030 18:19:36.410" level="INFO">Successfully created context. </msg>
-<msg timestamp="20231030 18:19:36.410" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<msg timestamp="20231030 18:19:36.410" level="TRACE">Return: 'context=2d5c08f4-9719-4787-94dd-d67948c979d9'</msg>
-<status status="PASS" starttime="20231030 18:19:36.322" endtime="20231030 18:19:36.410"/>
+<msg timestamp="20231101 16:46:22.840" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231101 16:46:22.840" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg timestamp="20231101 16:46:22.840" level="TRACE">Return: 'context=86f7cefc-ef42-43be-b8be-0b619b490150'</msg>
+<status status="PASS" starttime="20231101 16:46:22.780" endtime="20231101 16:46:22.840"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20231030 18:19:36.412" level="TRACE">Arguments: [ 'https://test4.omenahotels.com/en' ]</msg>
-<msg timestamp="20231030 18:19:40.443" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
-<msg timestamp="20231030 18:19:40.443" level="DEBUG">Video is not enabled.</msg>
-<msg timestamp="20231030 18:19:40.444" level="TRACE">Return: {'page_id': 'page=bbe0138f-ebf0-4d48-bb37-0796fd54b1e2', 'video_path': ''}</msg>
-<status status="PASS" starttime="20231030 18:19:36.411" endtime="20231030 18:19:40.444"/>
+<msg timestamp="20231101 16:46:22.841" level="TRACE">Arguments: [ 'https://test4.omenahotels.com/en' ]</msg>
+<msg timestamp="20231101 16:46:26.960" level="INFO">Successfully initialized new page object and opened url: https://test4.omenahotels.com/en</msg>
+<msg timestamp="20231101 16:46:26.961" level="DEBUG">Video is not enabled.</msg>
+<msg timestamp="20231101 16:46:26.961" level="TRACE">Return: {'page_id': 'page=4b6416d9-5920-404d-9c86-fba8f7990e9f', 'video_path': ''}</msg>
+<status status="PASS" starttime="20231101 16:46:22.841" endtime="20231101 16:46:26.961"/>
 </kw>
-<msg timestamp="20231030 18:19:40.444" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:35.428" endtime="20231030 18:19:40.444"/>
+<msg timestamp="20231101 16:46:26.961" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:21.934" endtime="20231101 16:46:26.961"/>
 </kw>
 <kw name="Allow Cookies" library="common">
 <doc>Allow Cookies/Toggle Cookie allowance</doc>
-<msg timestamp="20231030 18:19:40.445" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:26.961" level="TRACE">Arguments: [  ]</msg>
 <kw name="Is Element Found" library="common">
 <var>${cookieModalVisible}</var>
 <arg>id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll</arg>
 <doc>A keyword that has a very complex way of figuring out whether an
 element is found or not because I had trouble with the built-in keywords
 Can be solved differently if you have a better idea</doc>
-<msg timestamp="20231030 18:19:40.445" level="TRACE">Arguments: [ ${selector}='id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]</msg>
+<msg timestamp="20231101 16:46:26.962" level="TRACE">Arguments: [ ${selector}='id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]</msg>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>10s</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:19:40.446" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
-<msg timestamp="20231030 18:19:40.462" level="INFO">Set timeout to: 10000</msg>
-<msg timestamp="20231030 18:19:40.464" level="TRACE">Return: '30 seconds'</msg>
-<status status="PASS" starttime="20231030 18:19:40.445" endtime="20231030 18:19:40.464"/>
+<msg timestamp="20231101 16:46:26.962" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
+<msg timestamp="20231101 16:46:26.965" level="INFO">Set timeout to: 10000</msg>
+<msg timestamp="20231101 16:46:26.965" level="TRACE">Return: '30 seconds'</msg>
+<status status="PASS" starttime="20231101 16:46:26.962" endtime="20231101 16:46:26.965"/>
 </kw>
 <try>
 <branch type="TRY">
@@ -149,22 +149,22 @@ Can be solved differently if you have a better idea</doc>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<msg timestamp="20231030 18:19:40.465" level="TRACE">Arguments: [ 'id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]</msg>
-<msg timestamp="20231030 18:19:40.612" level="INFO">Found locator('id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').first() Locators successfully.</msg>
-<msg timestamp="20231030 18:19:40.612" level="DEBUG">["id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0"]</msg>
-<msg timestamp="20231030 18:19:40.612" level="TRACE">Return: ['id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0']</msg>
-<msg timestamp="20231030 18:19:40.612" level="INFO">${els} = ['id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0']</msg>
-<status status="PASS" starttime="20231030 18:19:40.465" endtime="20231030 18:19:40.613"/>
+<msg timestamp="20231101 16:46:26.967" level="TRACE">Arguments: [ 'id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]</msg>
+<msg timestamp="20231101 16:46:27.041" level="INFO">Found locator('id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').first() Locators successfully.</msg>
+<msg timestamp="20231101 16:46:27.041" level="DEBUG">["id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0"]</msg>
+<msg timestamp="20231101 16:46:27.041" level="TRACE">Return: ['id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0']</msg>
+<msg timestamp="20231101 16:46:27.041" level="INFO">${els} = ['id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0']</msg>
+<status status="PASS" starttime="20231101 16:46:26.966" endtime="20231101 16:46:27.042"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${count}</var>
 <arg>${els}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20231030 18:19:40.613" level="TRACE">Arguments: [ ['id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0'] ]</msg>
-<msg timestamp="20231030 18:19:40.613" level="INFO">Length is 1</msg>
-<msg timestamp="20231030 18:19:40.613" level="TRACE">Return: 1</msg>
-<msg timestamp="20231030 18:19:40.613" level="INFO">${count} = 1</msg>
-<status status="PASS" starttime="20231030 18:19:40.613" endtime="20231030 18:19:40.613"/>
+<msg timestamp="20231101 16:46:27.042" level="TRACE">Arguments: [ ['id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll &gt;&gt; nth=0'] ]</msg>
+<msg timestamp="20231101 16:46:27.042" level="INFO">Length is 1</msg>
+<msg timestamp="20231101 16:46:27.042" level="TRACE">Return: 1</msg>
+<msg timestamp="20231101 16:46:27.042" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20231101 16:46:27.042" endtime="20231101 16:46:27.042"/>
 </kw>
 <if>
 <branch type="IF" condition="${count} &gt; 0">
@@ -172,50 +172,50 @@ for all matched elements by ``selector``.</doc>
 <var>${visible}</var>
 <arg>True</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231030 18:19:40.614" level="TRACE">Arguments: [ 'True' ]</msg>
-<msg timestamp="20231030 18:19:40.614" level="TRACE">Return: 'True'</msg>
-<msg timestamp="20231030 18:19:40.614" level="INFO">${visible} = True</msg>
-<status status="PASS" starttime="20231030 18:19:40.614" endtime="20231030 18:19:40.614"/>
+<msg timestamp="20231101 16:46:27.043" level="TRACE">Arguments: [ 'True' ]</msg>
+<msg timestamp="20231101 16:46:27.043" level="TRACE">Return: 'True'</msg>
+<msg timestamp="20231101 16:46:27.043" level="INFO">${visible} = True</msg>
+<status status="PASS" starttime="20231101 16:46:27.043" endtime="20231101 16:46:27.043"/>
 </kw>
-<status status="PASS" starttime="20231030 18:19:40.614" endtime="20231030 18:19:40.614"/>
+<status status="PASS" starttime="20231101 16:46:27.043" endtime="20231101 16:46:27.043"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Variable" library="BuiltIn">
 <var>${visible}</var>
 <arg>False</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:40.615" endtime="20231030 18:19:40.615"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.043" endtime="20231101 16:46:27.043"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:40.615" endtime="20231030 18:19:40.615"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.043" endtime="20231101 16:46:27.043"/>
 </branch>
-<status status="PASS" starttime="20231030 18:19:40.614" endtime="20231030 18:19:40.615"/>
+<status status="PASS" starttime="20231101 16:46:27.042" endtime="20231101 16:46:27.043"/>
 </if>
-<status status="PASS" starttime="20231030 18:19:40.465" endtime="20231030 18:19:40.615"/>
+<status status="PASS" starttime="20231101 16:46:26.965" endtime="20231101 16:46:27.044"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" library="BuiltIn">
 <var>${visible}</var>
 <arg>False</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:40.616" endtime="20231030 18:19:40.616"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.044" endtime="20231101 16:46:27.044"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:40.616" endtime="20231030 18:19:40.616"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.044" endtime="20231101 16:46:27.044"/>
 </branch>
-<status status="PASS" starttime="20231030 18:19:40.464" endtime="20231030 18:19:40.616"/>
+<status status="PASS" starttime="20231101 16:46:26.965" endtime="20231101 16:46:27.044"/>
 </try>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:19:40.617" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:19:40.620" level="INFO">Set timeout to: 30000</msg>
-<msg timestamp="20231030 18:19:40.620" level="TRACE">Return: '10 seconds'</msg>
-<status status="PASS" starttime="20231030 18:19:40.616" endtime="20231030 18:19:40.620"/>
+<msg timestamp="20231101 16:46:27.044" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:46:27.048" level="INFO">Set timeout to: 30000</msg>
+<msg timestamp="20231101 16:46:27.048" level="TRACE">Return: '10 seconds'</msg>
+<status status="PASS" starttime="20231101 16:46:27.044" endtime="20231101 16:46:27.048"/>
 </kw>
-<msg timestamp="20231030 18:19:40.621" level="TRACE">Return: 'True'</msg>
-<msg timestamp="20231030 18:19:40.621" level="INFO">${cookieModalVisible} = True</msg>
-<status status="PASS" starttime="20231030 18:19:40.445" endtime="20231030 18:19:40.621"/>
+<msg timestamp="20231101 16:46:27.048" level="TRACE">Return: 'True'</msg>
+<msg timestamp="20231101 16:46:27.048" level="INFO">${cookieModalVisible} = True</msg>
+<status status="PASS" starttime="20231101 16:46:26.962" endtime="20231101 16:46:27.048"/>
 </kw>
 <if>
 <branch type="IF" condition="${cookieModalVisible}">
@@ -224,105 +224,105 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:19:40.621" level="TRACE">Arguments: [ 'id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]</msg>
-<msg timestamp="20231030 18:19:40.624" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:19:40.819" level="DEBUG">Clicked element: 'id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
-<msg timestamp="20231030 18:19:40.819" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.621" endtime="20231030 18:19:40.819"/>
+<msg timestamp="20231101 16:46:27.049" level="TRACE">Arguments: [ 'id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]</msg>
+<msg timestamp="20231101 16:46:27.050" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:46:27.221" level="DEBUG">Clicked element: 'id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg timestamp="20231101 16:46:27.221" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.049" endtime="20231101 16:46:27.221"/>
 </kw>
-<status status="PASS" starttime="20231030 18:19:40.621" endtime="20231030 18:19:40.819"/>
+<status status="PASS" starttime="20231101 16:46:27.049" endtime="20231101 16:46:27.221"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" library="BuiltIn">
 <arg>No Cookie Modal Visible</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:40.820" endtime="20231030 18:19:40.820"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.221" endtime="20231101 16:46:27.221"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:40.819" endtime="20231030 18:19:40.820"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.221" endtime="20231101 16:46:27.221"/>
 </branch>
-<status status="PASS" starttime="20231030 18:19:40.621" endtime="20231030 18:19:40.820"/>
+<status status="PASS" starttime="20231101 16:46:27.048" endtime="20231101 16:46:27.222"/>
 </if>
-<msg timestamp="20231030 18:19:40.820" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.444" endtime="20231030 18:19:40.820"/>
+<msg timestamp="20231101 16:46:27.222" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:26.961" endtime="20231101 16:46:27.222"/>
 </kw>
 <kw name="Set Environment" library="common">
 <doc>A keyword that gets the environment from URL and checks it is the same as variable</doc>
-<msg timestamp="20231030 18:19:40.821" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:27.222" level="TRACE">Arguments: [  ]</msg>
 <kw name="Get Url" library="Browser">
 <var>${currentUrl}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<msg timestamp="20231030 18:19:40.821" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20231030 18:19:40.827" level="DEBUG">https://test4.omenahotels.com/en/</msg>
-<msg timestamp="20231030 18:19:40.827" level="TRACE">Return: 'https://test4.omenahotels.com/en/'</msg>
-<msg timestamp="20231030 18:19:40.827" level="INFO">${currentUrl} = https://test4.omenahotels.com/en/</msg>
-<status status="PASS" starttime="20231030 18:19:40.821" endtime="20231030 18:19:40.827"/>
+<msg timestamp="20231101 16:46:27.222" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:27.224" level="DEBUG">https://test4.omenahotels.com/en/</msg>
+<msg timestamp="20231101 16:46:27.224" level="TRACE">Return: 'https://test4.omenahotels.com/en/'</msg>
+<msg timestamp="20231101 16:46:27.225" level="INFO">${currentUrl} = https://test4.omenahotels.com/en/</msg>
+<status status="PASS" starttime="20231101 16:46:27.222" endtime="20231101 16:46:27.225"/>
 </kw>
 <kw name="Get Environment From Url" library="Helpers">
 <var>${env}</var>
 <arg>${currentUrl}</arg>
-<msg timestamp="20231030 18:19:40.827" level="TRACE">Arguments: [ 'https://test4.omenahotels.com/en/' ]</msg>
-<msg timestamp="20231030 18:19:40.828" level="TRACE">Return: 'test4'</msg>
-<msg timestamp="20231030 18:19:40.828" level="INFO">${env} = test4</msg>
-<status status="PASS" starttime="20231030 18:19:40.827" endtime="20231030 18:19:40.828"/>
+<msg timestamp="20231101 16:46:27.225" level="TRACE">Arguments: [ 'https://test4.omenahotels.com/en/' ]</msg>
+<msg timestamp="20231101 16:46:27.225" level="TRACE">Return: 'test4'</msg>
+<msg timestamp="20231101 16:46:27.225" level="INFO">${env} = test4</msg>
+<status status="PASS" starttime="20231101 16:46:27.225" endtime="20231101 16:46:27.225"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${env}</arg>
 <arg>${environment}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20231030 18:19:40.828" level="TRACE">Arguments: [ 'test4' | 'test4' ]</msg>
-<msg timestamp="20231030 18:19:40.828" level="DEBUG">Argument types are:
+<msg timestamp="20231101 16:46:27.225" level="TRACE">Arguments: [ 'test4' | 'test4' ]</msg>
+<msg timestamp="20231101 16:46:27.225" level="DEBUG">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'str'&gt;</msg>
-<msg timestamp="20231030 18:19:40.828" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.828" endtime="20231030 18:19:40.828"/>
+<msg timestamp="20231101 16:46:27.226" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.225" endtime="20231101 16:46:27.226"/>
 </kw>
-<msg timestamp="20231030 18:19:40.828" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.821" endtime="20231030 18:19:40.828"/>
+<msg timestamp="20231101 16:46:27.226" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.222" endtime="20231101 16:46:27.226"/>
 </kw>
-<msg timestamp="20231030 18:19:40.829" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:35.422" endtime="20231030 18:19:40.829"/>
+<msg timestamp="20231101 16:46:27.226" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:21.930" endtime="20231101 16:46:27.226"/>
 </kw>
 <test id="s1-t1" name="Select Hotel, Dates and Guests" line="15">
 <kw name="Select Hotel" library="booking">
 <arg>Helsinki, Lönnrotinkatu</arg>
 <doc>Select Hotel by using a number as an argument, default Lönnrotinkatu</doc>
-<msg timestamp="20231030 18:19:40.830" level="TRACE">Arguments: [ ${hotel}='Helsinki, Lönnrotinkatu' ]</msg>
+<msg timestamp="20231101 16:46:27.227" level="TRACE">Arguments: [ ${hotel}='Helsinki, Lönnrotinkatu' ]</msg>
 <if>
 <branch type="IF" condition="&quot;${environment}&quot; == &quot;ks_test&quot;">
 <kw name="Log" library="BuiltIn">
 <arg>No hotel to be selected</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:40.830" endtime="20231030 18:19:40.830"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.227" endtime="20231101 16:46:27.227"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:40.830" endtime="20231030 18:19:40.831"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.227" endtime="20231101 16:46:27.227"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" library="BuiltIn">
 <arg>Selecting Hotel: ${hotel}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231030 18:19:40.831" level="TRACE">Arguments: [ 'Selecting Hotel: Helsinki, Lönnrotinkatu' ]</msg>
-<msg timestamp="20231030 18:19:40.831" level="INFO">Selecting Hotel: Helsinki, Lönnrotinkatu</msg>
-<msg timestamp="20231030 18:19:40.831" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.831" endtime="20231030 18:19:40.831"/>
+<msg timestamp="20231101 16:46:27.228" level="TRACE">Arguments: [ 'Selecting Hotel: Helsinki, Lönnrotinkatu' ]</msg>
+<msg timestamp="20231101 16:46:27.228" level="INFO">Selecting Hotel: Helsinki, Lönnrotinkatu</msg>
+<msg timestamp="20231101 16:46:27.228" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.227" endtime="20231101 16:46:27.228"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//div[contains(@data-nelson-btn, "hotels")]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:19:40.832" level="TRACE">Arguments: [ '//div[contains(@data-nelson-btn, "hotels")]' ]</msg>
-<msg timestamp="20231030 18:19:40.832" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:19:40.962" level="DEBUG">Clicked element: '//div[contains(@data-nelson-btn, "hotels")]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
-<msg timestamp="20231030 18:19:40.962" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.831" endtime="20231030 18:19:40.962"/>
+<msg timestamp="20231101 16:46:27.228" level="TRACE">Arguments: [ '//div[contains(@data-nelson-btn, "hotels")]' ]</msg>
+<msg timestamp="20231101 16:46:27.228" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:46:27.337" level="DEBUG">Clicked element: '//div[contains(@data-nelson-btn, "hotels")]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg timestamp="20231101 16:46:27.337" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.228" endtime="20231101 16:46:27.337"/>
 </kw>
 <kw name="Wait Until Visible" library="common">
 <arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
 <doc>An easier keyword for waiting until an element is visible</doc>
-<msg timestamp="20231030 18:19:40.963" level="TRACE">Arguments: [ ${element}="//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" ]</msg>
+<msg timestamp="20231101 16:46:27.337" level="TRACE">Arguments: [ ${element}="//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" ]</msg>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element}</arg>
 <arg>visible</arg>
@@ -330,24 +330,24 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231030 18:19:40.964" level="TRACE">Arguments: [ "//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" | &lt;ElementState.visible: 4&gt; | timeout=datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:19:40.981" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state visible</msg>
-<msg timestamp="20231030 18:19:40.981" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.963" endtime="20231030 18:19:40.981"/>
+<msg timestamp="20231101 16:46:27.338" level="TRACE">Arguments: [ "//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" | &lt;ElementState.visible: 4&gt; | timeout=datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:46:27.348" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state visible</msg>
+<msg timestamp="20231101 16:46:27.348" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.338" endtime="20231101 16:46:27.348"/>
 </kw>
-<msg timestamp="20231030 18:19:40.982" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.963" endtime="20231030 18:19:40.982"/>
+<msg timestamp="20231101 16:46:27.348" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.337" endtime="20231101 16:46:27.348"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:19:40.982" level="TRACE">Arguments: [ "//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" ]</msg>
-<msg timestamp="20231030 18:19:40.983" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:19:41.377" level="DEBUG">Clicked element: '//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
-<msg timestamp="20231030 18:19:41.377" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.982" endtime="20231030 18:19:41.377"/>
+<msg timestamp="20231101 16:46:27.348" level="TRACE">Arguments: [ "//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" ]</msg>
+<msg timestamp="20231101 16:46:27.349" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:46:27.514" level="DEBUG">Clicked element: '//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg timestamp="20231101 16:46:27.514" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.348" endtime="20231101 16:46:27.514"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>//a[contains(@class, 'dropdown-item') and contains(text(), '${hotel}')]</arg>
@@ -356,79 +356,79 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231030 18:19:41.378" level="TRACE">Arguments: [ "//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" | &lt;ElementState.hidden: 8&gt; | timeout=datetime.timedelta(seconds=3) ]</msg>
-<msg timestamp="20231030 18:19:41.441" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state hidden</msg>
-<msg timestamp="20231030 18:19:41.442" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.378" endtime="20231030 18:19:41.442"/>
+<msg timestamp="20231101 16:46:27.515" level="TRACE">Arguments: [ "//a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')]" | &lt;ElementState.hidden: 8&gt; | timeout=datetime.timedelta(seconds=3) ]</msg>
+<msg timestamp="20231101 16:46:27.532" level="INFO">Waited for Element with selector //a[contains(@class, 'dropdown-item') and contains(text(), 'Helsinki, Lönnrotinkatu')] at state hidden</msg>
+<msg timestamp="20231101 16:46:27.532" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.514" endtime="20231101 16:46:27.532"/>
 </kw>
-<status status="PASS" starttime="20231030 18:19:40.831" endtime="20231030 18:19:41.442"/>
+<status status="PASS" starttime="20231101 16:46:27.227" endtime="20231101 16:46:27.532"/>
 </branch>
-<status status="PASS" starttime="20231030 18:19:40.830" endtime="20231030 18:19:41.442"/>
+<status status="PASS" starttime="20231101 16:46:27.227" endtime="20231101 16:46:27.532"/>
 </if>
-<msg timestamp="20231030 18:19:41.442" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:40.829" endtime="20231030 18:19:41.442"/>
+<msg timestamp="20231101 16:46:27.532" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.226" endtime="20231101 16:46:27.532"/>
 </kw>
 <kw name="Select Dates" library="booking">
-<msg timestamp="20231030 18:19:41.443" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:27.533" level="TRACE">Arguments: [  ]</msg>
 <kw name="Log" library="BuiltIn">
 <arg>${EMPTY}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231030 18:19:41.445" level="TRACE">Arguments: [ '' ]</msg>
-<msg timestamp="20231030 18:19:41.445" level="INFO"/>
-<msg timestamp="20231030 18:19:41.445" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.443" endtime="20231030 18:19:41.445"/>
+<msg timestamp="20231101 16:46:27.534" level="TRACE">Arguments: [ '' ]</msg>
+<msg timestamp="20231101 16:46:27.534" level="INFO"/>
+<msg timestamp="20231101 16:46:27.534" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.533" endtime="20231101 16:46:27.534"/>
 </kw>
-<msg timestamp="20231030 18:19:41.445" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.443" endtime="20231030 18:19:41.445"/>
+<msg timestamp="20231101 16:46:27.534" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.533" endtime="20231101 16:46:27.534"/>
 </kw>
 <kw name="Select Guests" library="booking">
 <doc>Selects the number of guests for the booking, current implementation will only check the dropdown</doc>
-<msg timestamp="20231030 18:19:41.447" level="TRACE">Arguments: [ ${rooms}='1' | ${persons}='1' | ${children}='0' ]</msg>
+<msg timestamp="20231101 16:46:27.535" level="TRACE">Arguments: [ ${rooms}='1' | ${persons}='1' | ${children}='0' ]</msg>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${EMPTY}</arg>
 <doc>Logs the given message to the console.</doc>
-<msg timestamp="20231030 18:19:41.448" level="TRACE">Arguments: [ '' ]</msg>
-<msg timestamp="20231030 18:19:41.448" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.447" endtime="20231030 18:19:41.450"/>
+<msg timestamp="20231101 16:46:27.536" level="TRACE">Arguments: [ '' ]</msg>
+<msg timestamp="20231101 16:46:27.536" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.535" endtime="20231101 16:46:27.536"/>
 </kw>
-<msg timestamp="20231030 18:19:41.450" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.445" endtime="20231030 18:19:41.450"/>
+<msg timestamp="20231101 16:46:27.536" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.534" endtime="20231101 16:46:27.536"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="PASS" starttime="20231030 18:19:40.829" endtime="20231030 18:19:41.451"/>
+<status status="PASS" starttime="20231101 16:46:27.226" endtime="20231101 16:46:27.536"/>
 </test>
 <test id="s1-t2" name="Check Available Rooms and Select a Standard Room" line="20">
 <kw name="Click Book or Find Rooms Button" library="booking">
-<msg timestamp="20231030 18:19:41.469" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:27.543" level="TRACE">Arguments: [  ]</msg>
 <kw name="Get Url" library="Browser">
 <var>${url}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<msg timestamp="20231030 18:19:41.469" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20231030 18:19:41.481" level="DEBUG">https://test4.omenahotels.com/en/#</msg>
-<msg timestamp="20231030 18:19:41.481" level="TRACE">Return: 'https://test4.omenahotels.com/en/#'</msg>
-<msg timestamp="20231030 18:19:41.481" level="INFO">${url} = https://test4.omenahotels.com/en/#</msg>
-<status status="PASS" starttime="20231030 18:19:41.469" endtime="20231030 18:19:41.481"/>
+<msg timestamp="20231101 16:46:27.544" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:27.546" level="DEBUG">https://test4.omenahotels.com/en/#</msg>
+<msg timestamp="20231101 16:46:27.546" level="TRACE">Return: 'https://test4.omenahotels.com/en/#'</msg>
+<msg timestamp="20231101 16:46:27.546" level="INFO">${url} = https://test4.omenahotels.com/en/#</msg>
+<status status="PASS" starttime="20231101 16:46:27.543" endtime="20231101 16:46:27.546"/>
 </kw>
 <kw name="Check If String Contains" library="common">
 <var>${booking}</var>
 <arg>${url}</arg>
 <arg>/booking/</arg>
-<msg timestamp="20231030 18:19:41.482" level="TRACE">Arguments: [ ${string}='https://test4.omenahotels.com/en/#' | ${substring}='/booking/' ]</msg>
+<msg timestamp="20231101 16:46:27.546" level="TRACE">Arguments: [ ${string}='https://test4.omenahotels.com/en/#' | ${substring}='/booking/' ]</msg>
 <kw name="Check If String Contains Substring" library="Helpers">
 <var>${contains}</var>
 <arg>${string}</arg>
 <arg>${substring}</arg>
-<msg timestamp="20231030 18:19:41.482" level="TRACE">Arguments: [ 'https://test4.omenahotels.com/en/#' | '/booking/' ]</msg>
-<msg timestamp="20231030 18:19:41.483" level="TRACE">Return: False</msg>
-<msg timestamp="20231030 18:19:41.483" level="INFO">${contains} = False</msg>
-<status status="PASS" starttime="20231030 18:19:41.482" endtime="20231030 18:19:41.483"/>
+<msg timestamp="20231101 16:46:27.546" level="TRACE">Arguments: [ 'https://test4.omenahotels.com/en/#' | '/booking/' ]</msg>
+<msg timestamp="20231101 16:46:27.547" level="TRACE">Return: False</msg>
+<msg timestamp="20231101 16:46:27.547" level="INFO">${contains} = False</msg>
+<status status="PASS" starttime="20231101 16:46:27.546" endtime="20231101 16:46:27.547"/>
 </kw>
-<msg timestamp="20231030 18:19:41.483" level="TRACE">Return: False</msg>
-<msg timestamp="20231030 18:19:41.483" level="INFO">${booking} = False</msg>
-<status status="PASS" starttime="20231030 18:19:41.482" endtime="20231030 18:19:41.483"/>
+<msg timestamp="20231101 16:46:27.547" level="TRACE">Return: False</msg>
+<msg timestamp="20231101 16:46:27.547" level="INFO">${booking} = False</msg>
+<status status="PASS" starttime="20231101 16:46:27.546" endtime="20231101 16:46:27.547"/>
 </kw>
 <if>
 <branch type="IF" condition="${booking} == True">
@@ -437,9 +437,9 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:19:41.484" endtime="20231030 18:19:41.484"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.547" endtime="20231101 16:46:27.547"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:19:41.483" endtime="20231030 18:19:41.484"/>
+<status status="NOT RUN" starttime="20231101 16:46:27.547" endtime="20231101 16:46:27.547"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click" library="Browser">
@@ -447,25 +447,25 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:19:41.484" level="TRACE">Arguments: [ "//button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]" ]</msg>
-<msg timestamp="20231030 18:19:41.485" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:19:41.943" level="DEBUG">Clicked element: '//button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
-<msg timestamp="20231030 18:19:41.943" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.484" endtime="20231030 18:19:41.943"/>
+<msg timestamp="20231101 16:46:27.548" level="TRACE">Arguments: [ "//button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]" ]</msg>
+<msg timestamp="20231101 16:46:27.548" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:46:27.832" level="DEBUG">Clicked element: '//button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg timestamp="20231101 16:46:27.832" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.547" endtime="20231101 16:46:27.832"/>
 </kw>
-<status status="PASS" starttime="20231030 18:19:41.484" endtime="20231030 18:19:41.943"/>
+<status status="PASS" starttime="20231101 16:46:27.547" endtime="20231101 16:46:27.832"/>
 </branch>
-<status status="PASS" starttime="20231030 18:19:41.483" endtime="20231030 18:19:41.943"/>
+<status status="PASS" starttime="20231101 16:46:27.547" endtime="20231101 16:46:27.832"/>
 </if>
-<msg timestamp="20231030 18:19:41.943" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.467" endtime="20231030 18:19:41.943"/>
+<msg timestamp="20231101 16:46:27.833" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.543" endtime="20231101 16:46:27.833"/>
 </kw>
 <kw name="Select a Standard Room" library="booking">
-<msg timestamp="20231030 18:19:41.944" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:27.833" level="TRACE">Arguments: [  ]</msg>
 <kw name="Wait Until Visible" library="common">
 <arg>${btnExtras}</arg>
 <doc>An easier keyword for waiting until an element is visible</doc>
-<msg timestamp="20231030 18:19:41.944" level="TRACE">Arguments: [ ${element}='(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]' ]</msg>
+<msg timestamp="20231101 16:46:27.833" level="TRACE">Arguments: [ ${element}='(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]' ]</msg>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element}</arg>
 <arg>visible</arg>
@@ -473,13 +473,13 @@ for all matched elements by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231030 18:19:41.945" level="TRACE">Arguments: [ '(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]' | &lt;ElementState.visible: 4&gt; | timeout=datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:19:45.813" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
-<msg timestamp="20231030 18:19:45.814" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.945" endtime="20231030 18:19:45.814"/>
+<msg timestamp="20231101 16:46:27.834" level="TRACE">Arguments: [ '(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]' | &lt;ElementState.visible: 4&gt; | timeout=datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:46:31.030" level="INFO">Waited for Element with selector (//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1] at state visible</msg>
+<msg timestamp="20231101 16:46:31.030" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.834" endtime="20231101 16:46:31.030"/>
 </kw>
-<msg timestamp="20231030 18:19:45.814" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.944" endtime="20231030 18:19:45.814"/>
+<msg timestamp="20231101 16:46:31.030" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.833" endtime="20231101 16:46:31.030"/>
 </kw>
 <kw name="Get Element States" library="Browser">
 <var>${visible}</var>
@@ -490,54 +490,61 @@ for all matched elements by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:19:45.817" level="TRACE">Arguments: [ "//div[contains(text(), 'Select room')]" | &lt;AssertionOperator.then: 'then'&gt; | 'bool(value &amp; visible)' ]</msg>
-<msg timestamp="20231030 18:19:46.074" level="DEBUG">States: 2</msg>
-<msg timestamp="20231030 18:19:46.074" level="DEBUG">Assertion polling statistics:
-First element asserted in: 0.25670909881591797 seconds
+<msg timestamp="20231101 16:46:31.031" level="TRACE">Arguments: [ "//div[contains(text(), 'Select room')]" | &lt;AssertionOperator.then: 'then'&gt; | 'bool(value &amp; visible)' ]</msg>
+<msg timestamp="20231101 16:46:31.284" level="DEBUG">States: 2</msg>
+<msg timestamp="20231101 16:46:31.284" level="DEBUG">Assertion polling statistics:
+First element asserted in: 0.2526369094848633 seconds
 Total tries: 1
 Elapsed time in retries 0.0 seconds</msg>
-<msg timestamp="20231030 18:19:46.074" level="TRACE">Return: False</msg>
-<msg timestamp="20231030 18:19:46.074" level="INFO">${visible} = False</msg>
-<status status="PASS" starttime="20231030 18:19:45.815" endtime="20231030 18:19:46.074"/>
+<msg timestamp="20231101 16:46:31.284" level="TRACE">Return: False</msg>
+<msg timestamp="20231101 16:46:31.284" level="INFO">${visible} = False</msg>
+<status status="PASS" starttime="20231101 16:46:31.030" endtime="20231101 16:46:31.284"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${visible}</arg>
 <arg>Select Standard and Remove Other Room Selection</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<msg timestamp="20231030 18:19:46.075" level="TRACE">Arguments: [ False | 'Select Standard and Remove Other Room Selection' ]</msg>
-<msg timestamp="20231030 18:19:46.075" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:46.074" endtime="20231030 18:19:46.075"/>
+<msg timestamp="20231101 16:46:31.284" level="TRACE">Arguments: [ False | 'Select Standard and Remove Other Room Selection' ]</msg>
+<msg timestamp="20231101 16:46:31.285" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:31.284" endtime="20231101 16:46:31.285"/>
 </kw>
-<msg timestamp="20231030 18:19:46.075" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:19:41.944" endtime="20231030 18:19:46.075"/>
+<msg timestamp="20231101 16:46:31.285" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:46:27.833" endtime="20231101 16:46:31.285"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="PASS" starttime="20231030 18:19:41.460" endtime="20231030 18:19:46.075"/>
+<status status="PASS" starttime="20231101 16:46:27.542" endtime="20231101 16:46:31.285"/>
 </test>
 <test id="s1-t3" name="Continue to Extras and Select Join for Free" line="24">
 <kw name="Click Continue to Extras Button" library="booking">
 <doc>Clicks the continue to extras button</doc>
-<msg timestamp="20231030 18:19:46.080" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:46:31.289" level="TRACE">Arguments: [  ]</msg>
 <kw name="Click" library="Browser">
 <arg>${btnExtras}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:19:46.081" level="TRACE">Arguments: [ '(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]' ]</msg>
-<msg timestamp="20231030 18:19:46.081" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:20:16.300" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-1.png</msg>
-<msg timestamp="20231030 18:20:16.301" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231030 18:20:16.301" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231030 18:20:16.301" level="FAIL">TimeoutError: locator.click: Timeout 30000ms exceeded.
+<msg timestamp="20231101 16:46:31.289" level="TRACE">Arguments: [ '(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]' ]</msg>
+<msg timestamp="20231101 16:46:31.290" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:47:01.459" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-1.png</msg>
+<msg timestamp="20231101 16:47:01.459" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231101 16:47:01.459" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231101 16:47:01.459" level="FAIL">TimeoutError: locator.click: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
@@ -545,7 +552,7 @@ attempting click action
     element is not enabled - waiting...
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<msg timestamp="20231030 18:20:16.345" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20231101 16:47:01.509" level="DEBUG">Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 158, in grpc_channel
     yield playwright_pb2_grpc.PlaywrightStub(self._channel)
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/interaction.py", line 450, in click_with_options
@@ -565,17 +572,24 @@ waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(te
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
     element is not enabled - waiting...
 ============================================================"
-	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-10-30T18:20:16.091581834+00:00", grpc_status:4, grpc_message:"TimeoutError: locator.click: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=(//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1]\')\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\nelement was detached from the DOM, retrying\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\nelement was detached from the DOM, retrying\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\n    element is not enabled - waiting...\n============================================================"}"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.click: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=(//div[contains(@view,\"booking\")]//button[contains(text(), \"Continue to extras\")])[1]\')\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\n    element is not enabled - waiting...\nelement was detached from the DOM, retrying\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\n    element is not enabled - waiting...\nelement was detached from the DOM, retrying\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\n    element is not enabled - waiting...\nelement was detached from the DOM, retrying\n  locator resolved to &lt;button disabled type=\"button\" class=\"chakra-button css-\xe2\x80\xa6&gt;Continue to extras&lt;/button&gt;\nattempting click action\n  waiting for element to be visible, enabled and stable\n    element is not enabled - waiting...\n============================================================", grpc_status:4, created_time:"2023-11-01T16:47:01.29815868+00:00"}"
 &gt;
 
 During handling of the above exception, another exception occurred:
@@ -603,10 +617,17 @@ waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(te
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
@@ -614,32 +635,39 @@ attempting click action
     element is not enabled - waiting...
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231030 18:19:46.080" endtime="20231030 18:20:16.346"/>
+<status status="FAIL" starttime="20231101 16:46:31.289" endtime="20231101 16:47:01.509"/>
 </kw>
 <kw name="Wait Until Visible" library="common">
 <arg>${btnPayment}</arg>
 <doc>An easier keyword for waiting until an element is visible</doc>
-<status status="NOT RUN" starttime="20231030 18:20:16.346" endtime="20231030 18:20:16.346"/>
+<status status="NOT RUN" starttime="20231101 16:47:01.509" endtime="20231101 16:47:01.509"/>
 </kw>
-<status status="FAIL" starttime="20231030 18:19:46.080" endtime="20231030 18:20:16.347"/>
+<status status="FAIL" starttime="20231101 16:46:31.288" endtime="20231101 16:47:01.509"/>
 </kw>
 <kw name="Continue to Payment" library="booking">
-<status status="NOT RUN" starttime="20231030 18:20:16.347" endtime="20231030 18:20:16.347"/>
+<status status="NOT RUN" starttime="20231101 16:47:01.510" endtime="20231101 16:47:01.510"/>
 </kw>
 <kw name="Select Join for Free" library="booking">
-<status status="NOT RUN" starttime="20231030 18:20:16.347" endtime="20231030 18:20:16.347"/>
+<status status="NOT RUN" starttime="20231101 16:47:01.510" endtime="20231101 16:47:01.510"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="FAIL" starttime="20231030 18:19:46.079" endtime="20231030 18:20:16.348">TimeoutError: locator.click: Timeout 30000ms exceeded.
+<status status="FAIL" starttime="20231101 16:46:31.288" endtime="20231101 16:47:01.510">TimeoutError: locator.click: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=(//div[contains(@view,"booking")]//button[contains(text(), "Continue to extras")])[1]')
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
   waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
+element was detached from the DOM, retrying
+  locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not enabled - waiting...
 element was detached from the DOM, retrying
   locator resolved to &lt;button disabled type="button" class="chakra-button css-…&gt;Continue to extras&lt;/button&gt;
 attempting click action
@@ -652,98 +680,98 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <kw name="Fill in Contact Information" library="booking">
 <doc>Fills in Contact information that can be given as arguments or use default values
 Uses a password if the environment is bui and</doc>
-<msg timestamp="20231030 18:20:16.353" level="TRACE">Arguments: [ ${firstName}='Mos' | ${lastName}='Def' | ${phone}='401705972' | ${ssn}='170479-371J' | ${env}='bui' ]</msg>
+<msg timestamp="20231101 16:47:01.517" level="TRACE">Arguments: [ ${firstName}='Mos' | ${lastName}='Def' | ${phone}='401705972' | ${ssn}='170479-371J' | ${env}='bui' ]</msg>
 <kw name="Create Email and Return Inbox" library="common">
 <var>${inbox}</var>
 <doc>Creates a new email address and returns the inbox object</doc>
-<msg timestamp="20231030 18:20:16.354" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:47:01.517" level="TRACE">Arguments: [  ]</msg>
 <kw name="Create new Inbox" library="MailSlurp">
 <var>${inbox}</var>
-<msg timestamp="20231030 18:20:16.354" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20231030 18:20:17.148" level="INFO">Debug Config
-&lt;mailslurp_client.configuration.Configuration object at 0x7fa279301590&gt;
-{'created_at': datetime.datetime(2023, 10, 30, 18, 20, 17, 97000, tzinfo=tzlocal()),
+<msg timestamp="20231101 16:47:01.517" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:47:02.040" level="INFO">Debug Config
+&lt;mailslurp_client.configuration.Configuration object at 0x7f6c472d7c50&gt;
+{'created_at': datetime.datetime(2023, 11, 1, 16, 47, 1, 994000, tzinfo=tzlocal()),
  'description': None,
  'domain_id': None,
- 'email_address': '601f20cc-f39c-4186-8761-2da57639d1f4@mailslurp.com',
+ 'email_address': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811@mailslurp.com',
  'expires_at': None,
  'favourite': False,
- 'id': '601f20cc-f39c-4186-8761-2da57639d1f4',
+ 'id': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811',
  'inbox_type': 'HTTP_INBOX',
  'name': None,
  'read_only': False,
  'tags': None,
  'user_id': 'a2f48756-8279-471d-bb55-980a32334d37',
  'virtual_inbox': False}
-&lt;MailSlurp.MailSlurp object at 0x7fa27fffa110&gt;</msg>
-<msg timestamp="20231030 18:20:17.148" level="TRACE">Return: {'created_at': datetime.datetime(2023, 10, 30, 18, 20, 17, 97000, tzinfo=tzlocal()),
+&lt;MailSlurp.MailSlurp object at 0x7f6c4573bfd0&gt;</msg>
+<msg timestamp="20231101 16:47:02.040" level="TRACE">Return: {'created_at': datetime.datetime(2023, 11, 1, 16, 47, 1, 994000, tzinfo=tzlocal()),
  'description': None,
  'domain_id': None,
- 'email_address': '601f20cc-f39c-4186-8761-2da57639d1f4@mailslurp.com',
+ 'email_address': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811@mailslurp.com',
  'expires_at': None,
  'favourite': False,
- 'id': '601f20cc-f39c-4186-8761-2da57639d1f4',
+ 'id': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811',
  'inbox_type': 'HTTP_INBOX',
  'name': None,
  'read_only': False,
  'tags': None,
  'user_id': 'a2f48756-8279-471d-bb55-980a32334d37',
  'virtual_inbox': False}</msg>
-<msg timestamp="20231030 18:20:17.148" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 10, 30, 18, 20, 17, 97000, tzinfo=tzlocal()),
+<msg timestamp="20231101 16:47:02.040" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 11, 1, 16, 47, 1, 994000, tzinfo=tzlocal()),
  'description': None,
  'domain_id': None,
- 'email_address': '601f20cc-f39c-4186-8761-2da57639d1f4@mailslurp.com',
- ...</msg>
-<status status="PASS" starttime="20231030 18:20:16.354" endtime="20231030 18:20:17.148"/>
+ 'email_address': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811@mailslurp.com',
+ '...</msg>
+<status status="PASS" starttime="20231101 16:47:01.517" endtime="20231101 16:47:02.040"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${inbox.id}</arg>
 <doc>Logs the given message to the console.</doc>
-<msg timestamp="20231030 18:20:17.150" level="TRACE">Arguments: [ '601f20cc-f39c-4186-8761-2da57639d1f4' ]</msg>
-<msg timestamp="20231030 18:20:17.150" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:20:17.149" endtime="20231030 18:20:17.150"/>
+<msg timestamp="20231101 16:47:02.042" level="TRACE">Arguments: [ 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811' ]</msg>
+<msg timestamp="20231101 16:47:02.042" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:47:02.040" endtime="20231101 16:47:02.042"/>
 </kw>
-<msg timestamp="20231030 18:20:17.150" level="TRACE">Return: {'created_at': datetime.datetime(2023, 10, 30, 18, 20, 17, 97000, tzinfo=tzlocal()),
+<msg timestamp="20231101 16:47:02.042" level="TRACE">Return: {'created_at': datetime.datetime(2023, 11, 1, 16, 47, 1, 994000, tzinfo=tzlocal()),
  'description': None,
  'domain_id': None,
- 'email_address': '601f20cc-f39c-4186-8761-2da57639d1f4@mailslurp.com',
+ 'email_address': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811@mailslurp.com',
  'expires_at': None,
  'favourite': False,
- 'id': '601f20cc-f39c-4186-8761-2da57639d1f4',
+ 'id': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811',
  'inbox_type': 'HTTP_INBOX',
  'name': None,
  'read_only': False,
  'tags': None,
  'user_id': 'a2f48756-8279-471d-bb55-980a32334d37',
  'virtual_inbox': False}</msg>
-<msg timestamp="20231030 18:20:17.151" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 10, 30, 18, 20, 17, 97000, tzinfo=tzlocal()),
+<msg timestamp="20231101 16:47:02.042" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 11, 1, 16, 47, 1, 994000, tzinfo=tzlocal()),
  'description': None,
  'domain_id': None,
- 'email_address': '601f20cc-f39c-4186-8761-2da57639d1f4@mailslurp.com',
- ...</msg>
-<status status="PASS" starttime="20231030 18:20:16.354" endtime="20231030 18:20:17.151"/>
+ 'email_address': 'fc724e88-3e76-42c5-a7e0-fdcf28f5a811@mailslurp.com',
+ '...</msg>
+<status status="PASS" starttime="20231101 16:47:01.517" endtime="20231101 16:47:02.042"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=firstName</arg>
 <arg>${firstName}</arg>
 <doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<msg timestamp="20231030 18:20:17.152" level="TRACE">Arguments: [ ${selector}='id=firstName' | ${text}='Mos' ]</msg>
+<msg timestamp="20231101 16:47:02.043" level="TRACE">Arguments: [ ${selector}='id=firstName' | ${text}='Mos' ]</msg>
 <kw name="Click" library="Browser">
 <arg>${selector}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:20:17.152" level="TRACE">Arguments: [ 'id=firstName' ]</msg>
-<msg timestamp="20231030 18:20:17.153" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:20:47.335" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-2.png</msg>
-<msg timestamp="20231030 18:20:47.336" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231030 18:20:47.336" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231030 18:20:47.336" level="FAIL">TimeoutError: locator.click: Timeout 30000ms exceeded.
+<msg timestamp="20231101 16:47:02.043" level="TRACE">Arguments: [ 'id=firstName' ]</msg>
+<msg timestamp="20231101 16:47:02.044" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:47:32.190" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-2.png</msg>
+<msg timestamp="20231101 16:47:32.191" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231101 16:47:32.191" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231101 16:47:32.191" level="FAIL">TimeoutError: locator.click: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('id=firstName')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<msg timestamp="20231030 18:20:47.337" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20231101 16:47:32.192" level="DEBUG">Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 158, in grpc_channel
     yield playwright_pb2_grpc.PlaywrightStub(self._channel)
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/interaction.py", line 450, in click_with_options
@@ -761,7 +789,7 @@ grpc._channel._InactiveRpcError: &lt;_InactiveRpcError of RPC that terminated wi
 =========================== logs ===========================
 waiting for locator('id=firstName')
 ============================================================"
-	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-10-30T18:20:47.156585011+00:00", grpc_status:4, grpc_message:"TimeoutError: locator.click: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'id=firstName\')\n============================================================"}"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.click: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'id=firstName\')\n============================================================", grpc_status:4, created_time:"2023-11-01T16:47:32.047154337+00:00"}"
 &gt;
 
 During handling of the above exception, another exception occurred:
@@ -788,7 +816,7 @@ AssertionError: TimeoutError: locator.click: Timeout 30000ms exceeded.
 waiting for locator('id=firstName')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231030 18:20:17.152" endtime="20231030 18:20:47.337"/>
+<status status="FAIL" starttime="20231101 16:47:02.043" endtime="20231101 16:47:32.192"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>${selector}</arg>
@@ -796,21 +824,21 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.337" endtime="20231030 18:20:47.338"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.192" endtime="20231101 16:47:32.192"/>
 </kw>
-<status status="FAIL" starttime="20231030 18:20:17.151" endtime="20231030 18:20:47.338"/>
+<status status="FAIL" starttime="20231101 16:47:02.042" endtime="20231101 16:47:32.193"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=lastName</arg>
 <arg>${lastName}</arg>
 <doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.338" endtime="20231030 18:20:47.338"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.193" endtime="20231101 16:47:32.193"/>
 </kw>
 <kw name="Click and Fill" library="common">
 <arg>id=email</arg>
 <arg>${inbox.email_address}</arg>
 <doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.338" endtime="20231030 18:20:47.338"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.193" endtime="20231101 16:47:32.193"/>
 </kw>
 <kw name="Get Url" library="Browser">
 <var>${u}</var>
@@ -818,12 +846,12 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.339" endtime="20231030 18:20:47.339"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.193" endtime="20231101 16:47:32.193"/>
 </kw>
 <kw name="Get Environment From Url" library="Helpers">
 <var>${e}</var>
 <arg>${u}</arg>
-<status status="NOT RUN" starttime="20231030 18:20:47.339" endtime="20231030 18:20:47.339"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.193" endtime="20231101 16:47:32.193"/>
 </kw>
 <if>
 <branch type="IF" condition="'${e}' == 'test-kensington'">
@@ -831,31 +859,31 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <arg>id=phoneNumber</arg>
 <arg>${phone.uk}</arg>
 <doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.339" endtime="20231030 18:20:47.339"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.194" endtime="20231101 16:47:32.194"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:20:47.339" endtime="20231030 18:20:47.340"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.194" endtime="20231101 16:47:32.194"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click and Fill" library="common">
 <arg>id=phoneNumber</arg>
 <arg>${phone}</arg>
 <doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.340" endtime="20231030 18:20:47.340"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.194" endtime="20231101 16:47:32.194"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:20:47.340" endtime="20231030 18:20:47.340"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.194" endtime="20231101 16:47:32.194"/>
 </branch>
-<status status="NOT RUN" starttime="20231030 18:20:47.339" endtime="20231030 18:20:47.340"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.193" endtime="20231101 16:47:32.194"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${inbox.id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.340" endtime="20231030 18:20:47.340"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.194" endtime="20231101 16:47:32.194"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>$ID</arg>
 <arg>${inbox.id}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.340" endtime="20231030 18:20:47.341"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.195"/>
 </kw>
 <kw name="Get Element Count" library="Browser">
 <var>${passwordVisible}</var>
@@ -864,7 +892,7 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.341" endtime="20231030 18:20:47.341"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.195"/>
 </kw>
 <if>
 <branch type="IF" condition="'${env}'=='bui' and '${passwordVisible}'&gt;'0'">
@@ -872,27 +900,27 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>A keyword combination of Click and Fill Text since most of the form fields need a click</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.341" endtime="20231030 18:20:47.341"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.195"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:20:47.341" endtime="20231030 18:20:47.341"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.195"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" library="BuiltIn">
 <arg>No password filled</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231030 18:20:47.342" endtime="20231030 18:20:47.342"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.195"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:20:47.341" endtime="20231030 18:20:47.342"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.195"/>
 </branch>
-<status status="NOT RUN" starttime="20231030 18:20:47.341" endtime="20231030 18:20:47.342"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.195" endtime="20231101 16:47:32.196"/>
 </if>
-<status status="FAIL" starttime="20231030 18:20:16.353" endtime="20231030 18:20:47.342"/>
+<status status="FAIL" starttime="20231101 16:47:01.516" endtime="20231101 16:47:32.196"/>
 </kw>
 <kw name="Accept offers and Terms" library="booking">
-<status status="NOT RUN" starttime="20231030 18:20:47.342" endtime="20231030 18:20:47.342"/>
+<status status="NOT RUN" starttime="20231101 16:47:32.196" endtime="20231101 16:47:32.196"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="FAIL" starttime="20231030 18:20:16.352" endtime="20231030 18:20:47.343">TimeoutError: locator.click: Timeout 30000ms exceeded.
+<status status="FAIL" starttime="20231101 16:47:01.513" endtime="20231101 16:47:32.196">TimeoutError: locator.click: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('id=firstName')
 ============================================================
@@ -900,23 +928,23 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 </test>
 <test id="s1-t5" name="Pay using Web Bank and Nordea" line="33">
 <kw name="Select Web Bank and Nordea as Payment Method" library="booking">
-<msg timestamp="20231030 18:20:47.347" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:47:32.200" level="TRACE">Arguments: [  ]</msg>
 <kw name="Click" library="Browser">
 <arg>//div[contains(text(), "Web bank payment")]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:20:47.348" level="TRACE">Arguments: [ '//div[contains(text(), "Web bank payment")]' ]</msg>
-<msg timestamp="20231030 18:20:47.348" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
-<msg timestamp="20231030 18:21:17.533" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-3.png</msg>
-<msg timestamp="20231030 18:21:17.534" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231030 18:21:17.534" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231030 18:21:17.534" level="FAIL">TimeoutError: locator.click: Timeout 30000ms exceeded.
+<msg timestamp="20231101 16:47:32.200" level="TRACE">Arguments: [ '//div[contains(text(), "Web bank payment")]' ]</msg>
+<msg timestamp="20231101 16:47:32.200" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20231101 16:48:02.337" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-3.png</msg>
+<msg timestamp="20231101 16:48:02.338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231101 16:48:02.338" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231101 16:48:02.338" level="FAIL">TimeoutError: locator.click: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=//div[contains(text(), "Web bank payment")]')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<msg timestamp="20231030 18:21:17.535" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20231101 16:48:02.339" level="DEBUG">Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 158, in grpc_channel
     yield playwright_pb2_grpc.PlaywrightStub(self._channel)
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/interaction.py", line 450, in click_with_options
@@ -934,7 +962,7 @@ grpc._channel._InactiveRpcError: &lt;_InactiveRpcError of RPC that terminated wi
 =========================== logs ===========================
 waiting for locator('xpath=//div[contains(text(), "Web bank payment")]')
 ============================================================"
-	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.click: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=//div[contains(text(), \"Web bank payment\")]\')\n============================================================", grpc_status:4, created_time:"2023-10-30T18:21:17.351151901+00:00"}"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.click: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=//div[contains(text(), \"Web bank payment\")]\')\n============================================================", grpc_status:4, created_time:"2023-11-01T16:48:02.201965781+00:00"}"
 &gt;
 
 During handling of the above exception, another exception occurred:
@@ -961,29 +989,29 @@ AssertionError: TimeoutError: locator.click: Timeout 30000ms exceeded.
 waiting for locator('xpath=//div[contains(text(), "Web bank payment")]')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231030 18:20:47.347" endtime="20231030 18:21:17.535"/>
+<status status="FAIL" starttime="20231101 16:47:32.200" endtime="20231101 16:48:02.339"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>//p[contains(text(), 'Nordea')]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:17.535" endtime="20231030 18:21:17.536"/>
+<status status="NOT RUN" starttime="20231101 16:48:02.339" endtime="20231101 16:48:02.339"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>(//div[contains(@view,"payment")]//button[contains(text(), "Pay")])[1]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:17.536" endtime="20231030 18:21:17.536"/>
+<status status="NOT RUN" starttime="20231101 16:48:02.339" endtime="20231101 16:48:02.339"/>
 </kw>
-<status status="FAIL" starttime="20231030 18:20:47.347" endtime="20231030 18:21:17.536"/>
+<status status="FAIL" starttime="20231101 16:47:32.199" endtime="20231101 16:48:02.340"/>
 </kw>
 <kw name="Complete Payment Successfully" library="booking">
-<status status="NOT RUN" starttime="20231030 18:21:17.536" endtime="20231030 18:21:17.536"/>
+<status status="NOT RUN" starttime="20231101 16:48:02.340" endtime="20231101 16:48:02.340"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="FAIL" starttime="20231030 18:20:47.347" endtime="20231030 18:21:17.537">TimeoutError: locator.click: Timeout 30000ms exceeded.
+<status status="FAIL" starttime="20231101 16:47:32.199" endtime="20231101 16:48:02.340">TimeoutError: locator.click: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=//div[contains(text(), "Web bank payment")]')
 ============================================================
@@ -991,11 +1019,11 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 </test>
 <test id="s1-t6" name="Check In Online" line="37">
 <kw name="Click Check In Button" library="booking">
-<msg timestamp="20231030 18:21:17.542" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:48:02.345" level="TRACE">Arguments: [  ]</msg>
 <kw name="Wait Until Visible" library="common">
 <arg>(//button[text()="Check in"])[1]</arg>
 <doc>An easier keyword for waiting until an element is visible</doc>
-<msg timestamp="20231030 18:21:17.543" level="TRACE">Arguments: [ ${element}='(//button[text()="Check in"])[1]' ]</msg>
+<msg timestamp="20231101 16:48:02.345" level="TRACE">Arguments: [ ${element}='(//button[text()="Check in"])[1]' ]</msg>
 <kw name="Wait For Elements State" library="Browser">
 <arg>${element}</arg>
 <arg>visible</arg>
@@ -1003,16 +1031,16 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20231030 18:21:17.543" level="TRACE">Arguments: [ '(//button[text()="Check in"])[1]' | &lt;ElementState.visible: 4&gt; | timeout=datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:21:47.729" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-4.png</msg>
-<msg timestamp="20231030 18:21:47.729" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231030 18:21:47.730" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231030 18:21:47.730" level="FAIL">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+<msg timestamp="20231101 16:48:02.346" level="TRACE">Arguments: [ '(//button[text()="Check in"])[1]' | &lt;ElementState.visible: 4&gt; | timeout=datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:48:32.482" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-4.png</msg>
+<msg timestamp="20231101 16:48:32.483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231101 16:48:32.483" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231101 16:48:32.483" level="FAIL">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=(//button[text()="Check in"])[1]') to be visible
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<msg timestamp="20231030 18:21:47.731" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20231101 16:48:32.484" level="DEBUG">Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 158, in grpc_channel
     yield playwright_pb2_grpc.PlaywrightStub(self._channel)
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/waiter.py", line 140, in _wait_for_elements_state
@@ -1030,7 +1058,7 @@ grpc._channel._InactiveRpcError: &lt;_InactiveRpcError of RPC that terminated wi
 =========================== logs ===========================
 waiting for locator('xpath=(//button[text()="Check in"])[1]') to be visible
 ============================================================"
-	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-10-30T18:21:47.546955589+00:00", grpc_status:4, grpc_message:"TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=(//button[text()=\"Check in\"])[1]\') to be visible\n============================================================"}"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=(//button[text()=\"Check in\"])[1]\') to be visible\n============================================================", grpc_status:4, created_time:"2023-11-01T16:48:32.349040374+00:00"}"
 &gt;
 
 During handling of the above exception, another exception occurred:
@@ -1058,30 +1086,30 @@ AssertionError: TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
 waiting for locator('xpath=(//button[text()="Check in"])[1]') to be visible
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231030 18:21:17.543" endtime="20231030 18:21:47.731"/>
+<status status="FAIL" starttime="20231101 16:48:02.345" endtime="20231101 16:48:32.484"/>
 </kw>
-<status status="FAIL" starttime="20231030 18:21:17.542" endtime="20231030 18:21:47.731"/>
+<status status="FAIL" starttime="20231101 16:48:02.345" endtime="20231101 16:48:32.484"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>(//button[text()="Check in"])[1]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:47.731" endtime="20231030 18:21:47.732"/>
+<status status="NOT RUN" starttime="20231101 16:48:32.485" endtime="20231101 16:48:32.485"/>
 </kw>
-<status status="FAIL" starttime="20231030 18:21:17.542" endtime="20231030 18:21:47.732"/>
+<status status="FAIL" starttime="20231101 16:48:02.345" endtime="20231101 16:48:32.485"/>
 </kw>
 <kw name="Fill Check in Slide" library="booking">
-<status status="NOT RUN" starttime="20231030 18:21:47.732" endtime="20231030 18:21:47.732"/>
+<status status="NOT RUN" starttime="20231101 16:48:32.485" endtime="20231101 16:48:32.485"/>
 </kw>
 <kw name="Click Save and Sign Button and Sign if Required" library="booking">
-<status status="NOT RUN" starttime="20231030 18:21:47.732" endtime="20231030 18:21:47.732"/>
+<status status="NOT RUN" starttime="20231101 16:48:32.485" endtime="20231101 16:48:32.485"/>
 </kw>
 <kw name="Complete Check in" library="booking">
-<status status="NOT RUN" starttime="20231030 18:21:47.733" endtime="20231030 18:21:47.733"/>
+<status status="NOT RUN" starttime="20231101 16:48:32.485" endtime="20231101 16:48:32.485"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="FAIL" starttime="20231030 18:21:17.541" endtime="20231030 18:21:47.733">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+<status status="FAIL" starttime="20231101 16:48:02.344" endtime="20231101 16:48:32.486">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=(//button[text()="Check in"])[1]') to be visible
 ============================================================
@@ -1089,16 +1117,16 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 </test>
 <test id="s1-t7" name="Wait for Door Code and Verify Page" line="43">
 <kw name="Wait Until Door Code is Available" library="checkin">
-<msg timestamp="20231030 18:21:47.739" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:48:32.490" level="TRACE">Arguments: [  ]</msg>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>5 minutes</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:21:47.740" level="TRACE">Arguments: [ datetime.timedelta(seconds=300) ]</msg>
-<msg timestamp="20231030 18:21:47.742" level="INFO">Set timeout to: 300000</msg>
-<msg timestamp="20231030 18:21:47.742" level="TRACE">Return: '30 seconds'</msg>
-<status status="PASS" starttime="20231030 18:21:47.739" endtime="20231030 18:21:47.742"/>
+<msg timestamp="20231101 16:48:32.491" level="TRACE">Arguments: [ datetime.timedelta(seconds=300) ]</msg>
+<msg timestamp="20231101 16:48:32.493" level="INFO">Set timeout to: 300000</msg>
+<msg timestamp="20231101 16:48:32.493" level="TRACE">Return: '30 seconds'</msg>
+<status status="PASS" starttime="20231101 16:48:32.491" endtime="20231101 16:48:32.493"/>
 </kw>
 <kw name="Is Element Found" library="common">
 <var>${availableInFound}</var>
@@ -1106,16 +1134,16 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <doc>A keyword that has a very complex way of figuring out whether an
 element is found or not because I had trouble with the built-in keywords
 Can be solved differently if you have a better idea</doc>
-<msg timestamp="20231030 18:21:47.743" level="TRACE">Arguments: [ ${selector}='//p[contains(text(), "Available in")]' ]</msg>
+<msg timestamp="20231101 16:48:32.493" level="TRACE">Arguments: [ ${selector}='//p[contains(text(), "Available in")]' ]</msg>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>10s</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:21:47.743" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
-<msg timestamp="20231030 18:21:47.745" level="INFO">Set timeout to: 10000</msg>
-<msg timestamp="20231030 18:21:47.745" level="TRACE">Return: '5 minutes'</msg>
-<status status="PASS" starttime="20231030 18:21:47.743" endtime="20231030 18:21:47.745"/>
+<msg timestamp="20231101 16:48:32.494" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
+<msg timestamp="20231101 16:48:32.495" level="INFO">Set timeout to: 10000</msg>
+<msg timestamp="20231101 16:48:32.495" level="TRACE">Return: '5 minutes'</msg>
+<status status="PASS" starttime="20231101 16:48:32.493" endtime="20231101 16:48:32.495"/>
 </kw>
 <try>
 <branch type="TRY">
@@ -1126,22 +1154,22 @@ Can be solved differently if you have a better idea</doc>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<msg timestamp="20231030 18:21:47.746" level="TRACE">Arguments: [ '//p[contains(text(), "Available in")]' ]</msg>
-<msg timestamp="20231030 18:21:57.753" level="INFO">Found  Locators successfully.</msg>
-<msg timestamp="20231030 18:21:57.753" level="DEBUG">[]</msg>
-<msg timestamp="20231030 18:21:57.753" level="TRACE">Return: []</msg>
-<msg timestamp="20231030 18:21:57.753" level="INFO">${els} = []</msg>
-<status status="PASS" starttime="20231030 18:21:47.746" endtime="20231030 18:21:57.753"/>
+<msg timestamp="20231101 16:48:32.496" level="TRACE">Arguments: [ '//p[contains(text(), "Available in")]' ]</msg>
+<msg timestamp="20231101 16:48:42.500" level="INFO">Found  Locators successfully.</msg>
+<msg timestamp="20231101 16:48:42.500" level="DEBUG">[]</msg>
+<msg timestamp="20231101 16:48:42.500" level="TRACE">Return: []</msg>
+<msg timestamp="20231101 16:48:42.501" level="INFO">${els} = []</msg>
+<status status="PASS" starttime="20231101 16:48:32.496" endtime="20231101 16:48:42.501"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${count}</var>
 <arg>${els}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20231030 18:21:57.754" level="TRACE">Arguments: [ [] ]</msg>
-<msg timestamp="20231030 18:21:57.754" level="INFO">Length is 0</msg>
-<msg timestamp="20231030 18:21:57.754" level="TRACE">Return: 0</msg>
-<msg timestamp="20231030 18:21:57.754" level="INFO">${count} = 0</msg>
-<status status="PASS" starttime="20231030 18:21:57.754" endtime="20231030 18:21:57.754"/>
+<msg timestamp="20231101 16:48:42.501" level="TRACE">Arguments: [ [] ]</msg>
+<msg timestamp="20231101 16:48:42.501" level="INFO">Length is 0</msg>
+<msg timestamp="20231101 16:48:42.501" level="TRACE">Return: 0</msg>
+<msg timestamp="20231101 16:48:42.501" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20231101 16:48:42.501" endtime="20231101 16:48:42.501"/>
 </kw>
 <if>
 <branch type="IF" condition="${count} &gt; 0">
@@ -1149,63 +1177,63 @@ for all matched elements by ``selector``.</doc>
 <var>${visible}</var>
 <arg>True</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:57.755" endtime="20231030 18:21:57.755"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.502" endtime="20231101 16:48:42.502"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:21:57.755" endtime="20231030 18:21:57.755"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.502" endtime="20231101 16:48:42.502"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Variable" library="BuiltIn">
 <var>${visible}</var>
 <arg>False</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231030 18:21:57.756" level="TRACE">Arguments: [ 'False' ]</msg>
-<msg timestamp="20231030 18:21:57.756" level="TRACE">Return: 'False'</msg>
-<msg timestamp="20231030 18:21:57.756" level="INFO">${visible} = False</msg>
-<status status="PASS" starttime="20231030 18:21:57.756" endtime="20231030 18:21:57.756"/>
+<msg timestamp="20231101 16:48:42.502" level="TRACE">Arguments: [ 'False' ]</msg>
+<msg timestamp="20231101 16:48:42.502" level="TRACE">Return: 'False'</msg>
+<msg timestamp="20231101 16:48:42.503" level="INFO">${visible} = False</msg>
+<status status="PASS" starttime="20231101 16:48:42.502" endtime="20231101 16:48:42.503"/>
 </kw>
-<status status="PASS" starttime="20231030 18:21:57.756" endtime="20231030 18:21:57.756"/>
+<status status="PASS" starttime="20231101 16:48:42.502" endtime="20231101 16:48:42.503"/>
 </branch>
-<status status="PASS" starttime="20231030 18:21:57.754" endtime="20231030 18:21:57.756"/>
+<status status="PASS" starttime="20231101 16:48:42.501" endtime="20231101 16:48:42.503"/>
 </if>
-<status status="PASS" starttime="20231030 18:21:47.746" endtime="20231030 18:21:57.756"/>
+<status status="PASS" starttime="20231101 16:48:32.496" endtime="20231101 16:48:42.503"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" library="BuiltIn">
 <var>${visible}</var>
 <arg>False</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:57.757" endtime="20231030 18:21:57.757"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.503" endtime="20231101 16:48:42.503"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:21:57.756" endtime="20231030 18:21:57.757"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.503" endtime="20231101 16:48:42.503"/>
 </branch>
-<status status="PASS" starttime="20231030 18:21:47.745" endtime="20231030 18:21:57.757"/>
+<status status="PASS" starttime="20231101 16:48:32.495" endtime="20231101 16:48:42.503"/>
 </try>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:21:57.758" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:21:57.761" level="INFO">Set timeout to: 30000</msg>
-<msg timestamp="20231030 18:21:57.761" level="TRACE">Return: '10 seconds'</msg>
-<status status="PASS" starttime="20231030 18:21:57.757" endtime="20231030 18:21:57.761"/>
+<msg timestamp="20231101 16:48:42.504" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:48:42.506" level="INFO">Set timeout to: 30000</msg>
+<msg timestamp="20231101 16:48:42.506" level="TRACE">Return: '10 seconds'</msg>
+<status status="PASS" starttime="20231101 16:48:42.504" endtime="20231101 16:48:42.506"/>
 </kw>
-<msg timestamp="20231030 18:21:57.761" level="TRACE">Return: 'False'</msg>
-<msg timestamp="20231030 18:21:57.761" level="INFO">${availableInFound} = False</msg>
-<status status="PASS" starttime="20231030 18:21:47.743" endtime="20231030 18:21:57.762"/>
+<msg timestamp="20231101 16:48:42.506" level="TRACE">Return: 'False'</msg>
+<msg timestamp="20231101 16:48:42.506" level="INFO">${availableInFound} = False</msg>
+<status status="PASS" starttime="20231101 16:48:32.493" endtime="20231101 16:48:42.506"/>
 </kw>
 <while condition="${availableInFound}">
 <iter>
 <kw name="Sleep" library="BuiltIn">
 <arg>15s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:57.762" endtime="20231030 18:21:57.762"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.507" endtime="20231101 16:48:42.507"/>
 </kw>
 <kw name="Reload" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Reloads current active page.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:57.763" endtime="20231030 18:21:57.763"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.507" endtime="20231101 16:48:42.507"/>
 </kw>
 <kw name="Is Element Found" library="common">
 <var>${availableInFound}</var>
@@ -1213,28 +1241,28 @@ for all matched elements by ``selector``.</doc>
 <doc>A keyword that has a very complex way of figuring out whether an
 element is found or not because I had trouble with the built-in keywords
 Can be solved differently if you have a better idea</doc>
-<status status="NOT RUN" starttime="20231030 18:21:57.763" endtime="20231030 18:21:57.763"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.507" endtime="20231101 16:48:42.507"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:21:57.762" endtime="20231030 18:21:57.763"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.507" endtime="20231101 16:48:42.508"/>
 </iter>
-<status status="NOT RUN" starttime="20231030 18:21:57.762" endtime="20231030 18:21:57.763"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.507" endtime="20231101 16:48:42.508"/>
 </while>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20231030 18:21:57.764" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
-<msg timestamp="20231030 18:21:57.764" level="TRACE">Return: '30 seconds'</msg>
-<status status="PASS" starttime="20231030 18:21:57.763" endtime="20231030 18:21:57.764"/>
+<msg timestamp="20231101 16:48:42.508" level="TRACE">Arguments: [ datetime.timedelta(seconds=30) ]</msg>
+<msg timestamp="20231101 16:48:42.508" level="TRACE">Return: '30 seconds'</msg>
+<status status="PASS" starttime="20231101 16:48:42.508" endtime="20231101 16:48:42.508"/>
 </kw>
 <kw name="Check for Payment Ok Modal" library="checkin">
 <doc>Workaround to closing modal until it is fixed</doc>
-<msg timestamp="20231030 18:21:57.764" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:48:42.508" level="TRACE">Arguments: [  ]</msg>
 <kw name="Is Element Visible" library="common">
 <var>${modalIsVisible}</var>
 <arg>//section[contains(@class, 'chakra')]</arg>
-<msg timestamp="20231030 18:21:57.764" level="TRACE">Arguments: [ ${selector}="//section[contains(@class, 'chakra')]" ]</msg>
+<msg timestamp="20231101 16:48:42.509" level="TRACE">Arguments: [ ${selector}="//section[contains(@class, 'chakra')]" ]</msg>
 <kw name="Get Element States" library="Browser">
 <var>${isVisible}</var>
 <arg>${selector}</arg>
@@ -1244,19 +1272,19 @@ Can be solved differently if you have a better idea</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:21:57.765" level="TRACE">Arguments: [ "//section[contains(@class, 'chakra')]" | &lt;AssertionOperator.then: 'then'&gt; | 'bool(value &amp; visible)' ]</msg>
-<msg timestamp="20231030 18:21:58.020" level="DEBUG">States: 2</msg>
-<msg timestamp="20231030 18:21:58.020" level="DEBUG">Assertion polling statistics:
-First element asserted in: 0.2547588348388672 seconds
+<msg timestamp="20231101 16:48:42.509" level="TRACE">Arguments: [ "//section[contains(@class, 'chakra')]" | &lt;AssertionOperator.then: 'then'&gt; | 'bool(value &amp; visible)' ]</msg>
+<msg timestamp="20231101 16:48:42.762" level="DEBUG">States: 2</msg>
+<msg timestamp="20231101 16:48:42.762" level="DEBUG">Assertion polling statistics:
+First element asserted in: 0.25266599655151367 seconds
 Total tries: 1
 Elapsed time in retries 0.0 seconds</msg>
-<msg timestamp="20231030 18:21:58.020" level="TRACE">Return: False</msg>
-<msg timestamp="20231030 18:21:58.020" level="INFO">${isVisible} = False</msg>
-<status status="PASS" starttime="20231030 18:21:57.765" endtime="20231030 18:21:58.020"/>
+<msg timestamp="20231101 16:48:42.762" level="TRACE">Return: False</msg>
+<msg timestamp="20231101 16:48:42.762" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20231101 16:48:42.509" endtime="20231101 16:48:42.762"/>
 </kw>
-<msg timestamp="20231030 18:21:58.021" level="TRACE">Return: False</msg>
-<msg timestamp="20231030 18:21:58.021" level="INFO">${modalIsVisible} = False</msg>
-<status status="PASS" starttime="20231030 18:21:57.764" endtime="20231030 18:21:58.021"/>
+<msg timestamp="20231101 16:48:42.763" level="TRACE">Return: False</msg>
+<msg timestamp="20231101 16:48:42.763" level="INFO">${modalIsVisible} = False</msg>
+<status status="PASS" starttime="20231101 16:48:42.509" endtime="20231101 16:48:42.763"/>
 </kw>
 <if>
 <branch type="IF" condition="${modalIsVisible}">
@@ -1265,20 +1293,20 @@ Elapsed time in retries 0.0 seconds</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231030 18:21:58.023" endtime="20231030 18:21:58.024"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.763" endtime="20231101 16:48:42.763"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:21:58.022" endtime="20231030 18:21:58.024"/>
+<status status="NOT RUN" starttime="20231101 16:48:42.763" endtime="20231101 16:48:42.763"/>
 </branch>
-<status status="PASS" starttime="20231030 18:21:58.021" endtime="20231030 18:21:58.025"/>
+<status status="PASS" starttime="20231101 16:48:42.763" endtime="20231101 16:48:42.763"/>
 </if>
-<msg timestamp="20231030 18:21:58.025" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:21:57.764" endtime="20231030 18:21:58.025"/>
+<msg timestamp="20231101 16:48:42.764" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:48:42.508" endtime="20231101 16:48:42.764"/>
 </kw>
-<msg timestamp="20231030 18:21:58.025" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:21:47.739" endtime="20231030 18:21:58.025"/>
+<msg timestamp="20231101 16:48:42.764" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:48:32.490" endtime="20231101 16:48:42.764"/>
 </kw>
 <kw name="Check Door Code and verify it is not empty" library="checkin">
-<msg timestamp="20231030 18:21:58.026" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:48:42.764" level="TRACE">Arguments: [  ]</msg>
 <kw name="Get Text" library="Browser">
 <var>${doorCode}</var>
 <arg>//*[contains(text(), "Door code")]/following-sibling::*</arg>
@@ -1286,16 +1314,16 @@ Elapsed time in retries 0.0 seconds</msg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20231030 18:21:58.026" level="TRACE">Arguments: [ '//*[contains(text(), "Door code")]/following-sibling::*' ]</msg>
-<msg timestamp="20231030 18:22:28.227" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-5.png</msg>
-<msg timestamp="20231030 18:22:28.228" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231030 18:22:28.228" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231030 18:22:28.228" level="FAIL">TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.
+<msg timestamp="20231101 16:48:42.764" level="TRACE">Arguments: [ '//*[contains(text(), "Door code")]/following-sibling::*' ]</msg>
+<msg timestamp="20231101 16:49:12.902" level="DEBUG">Screenshot successfully captured to: /home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/browser/screenshot/fail-screenshot-5.png</msg>
+<msg timestamp="20231101 16:49:12.903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231101 16:49:12.903" level="INFO">See also file:///home/runner/work/nelson-test-automation/nelson-test-automation/reports/test4/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231101 16:49:12.903" level="FAIL">TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=//*[contains(text(), "Door code")]/following-sibling::*')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<msg timestamp="20231030 18:22:28.230" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20231101 16:49:12.904" level="DEBUG">Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/playwright.py", line 158, in grpc_channel
     yield playwright_pb2_grpc.PlaywrightStub(self._channel)
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/Browser/keywords/getters.py", line 193, in _get_text
@@ -1313,7 +1341,7 @@ grpc._channel._InactiveRpcError: &lt;_InactiveRpcError of RPC that terminated wi
 =========================== logs ===========================
 waiting for locator('xpath=//*[contains(text(), "Door code")]/following-sibling::*')
 ============================================================"
-	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-10-30T18:22:28.032668216+00:00", grpc_status:4, grpc_message:"TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=//*[contains(text(), \"Door code\")]/following-sibling::*\')\n============================================================"}"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for locator(\'xpath=//*[contains(text(), \"Door code\")]/following-sibling::*\')\n============================================================", grpc_status:4, created_time:"2023-11-01T16:49:12.766889481+00:00"}"
 &gt;
 
 During handling of the above exception, another exception occurred:
@@ -1346,7 +1374,7 @@ AssertionError: TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.
 waiting for locator('xpath=//*[contains(text(), "Door code")]/following-sibling::*')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231030 18:21:58.026" endtime="20231030 18:22:28.230"/>
+<status status="FAIL" starttime="20231101 16:48:42.764" endtime="20231101 16:49:12.904"/>
 </kw>
 <kw name="Is Element Found" library="common">
 <var>${availableInFound}</var>
@@ -1354,34 +1382,34 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <doc>A keyword that has a very complex way of figuring out whether an
 element is found or not because I had trouble with the built-in keywords
 Can be solved differently if you have a better idea</doc>
-<status status="NOT RUN" starttime="20231030 18:22:28.231" endtime="20231030 18:22:28.231"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.905" endtime="20231101 16:49:12.905"/>
 </kw>
 <if>
 <branch type="IF" condition="${availableInFound} != 'True'">
 <kw name="Should Be String" library="String">
 <arg>${doorCode}</arg>
 <doc>Fails if the given ``item`` is not a string.</doc>
-<status status="NOT RUN" starttime="20231030 18:22:28.231" endtime="20231030 18:22:28.231"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.905" endtime="20231101 16:49:12.905"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:22:28.231" endtime="20231030 18:22:28.232"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.905" endtime="20231101 16:49:12.905"/>
 </branch>
 <branch type="ELSE">
 <kw name="Fail" library="BuiltIn">
 <arg>Door code is not visible</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20231030 18:22:28.232" endtime="20231030 18:22:28.232"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.906" endtime="20231101 16:49:12.906"/>
 </kw>
-<status status="NOT RUN" starttime="20231030 18:22:28.232" endtime="20231030 18:22:28.232"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.905" endtime="20231101 16:49:12.906"/>
 </branch>
-<status status="NOT RUN" starttime="20231030 18:22:28.231" endtime="20231030 18:22:28.232"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.905" endtime="20231101 16:49:12.906"/>
 </if>
-<status status="FAIL" starttime="20231030 18:21:58.025" endtime="20231030 18:22:28.232"/>
+<status status="FAIL" starttime="20231101 16:48:42.764" endtime="20231101 16:49:12.906"/>
 </kw>
 <kw name="Verify Page Elements after Check-in" library="checkin">
-<status status="NOT RUN" starttime="20231030 18:22:28.233" endtime="20231030 18:22:28.233"/>
+<status status="NOT RUN" starttime="20231101 16:49:12.906" endtime="20231101 16:49:12.906"/>
 </kw>
 <tag>smoke, booking, BUI2-556, online-checkin</tag>
-<status status="FAIL" starttime="20231030 18:21:47.737" endtime="20231030 18:22:28.233">TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.
+<status status="FAIL" starttime="20231101 16:48:32.490" endtime="20231101 16:49:12.906">TimeoutError: locator.elementHandle: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for locator('xpath=//*[contains(text(), "Door code")]/following-sibling::*')
 ============================================================
@@ -1391,13 +1419,13 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20231030 18:22:28.240" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20231030 18:22:28.568" level="INFO">Closed browser</msg>
-<msg timestamp="20231030 18:22:28.569" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231030 18:22:28.240" endtime="20231030 18:22:28.569"/>
+<msg timestamp="20231101 16:49:12.911" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231101 16:49:13.106" level="INFO">Closed browser</msg>
+<msg timestamp="20231101 16:49:13.106" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231101 16:49:12.910" endtime="20231101 16:49:13.106"/>
 </kw>
 <doc>Argument file for running tests on Omena test4 environment (test4)</doc>
-<status status="FAIL" starttime="20231030 18:19:33.677" endtime="20231030 18:22:28.569"/>
+<status status="FAIL" starttime="20231101 16:46:20.686" endtime="20231101 16:49:13.107"/>
 </suite>
 <statistics>
 <total>
