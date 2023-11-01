@@ -4,6 +4,10 @@
     --link-on-dark: #fff;
 }
 
+#kctest {
+    display: none;
+}
+
 .bg-dark {
     background-color: var(--nelson-green) !important;
 }

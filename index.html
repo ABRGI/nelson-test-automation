@@ -66,61 +66,10 @@
                             </div>
                         </div>
                     </div>
-            <div class="row">
-                <div class="col-sm-3 mb-3 mb-sm-0">
-                    <div id="test3" class="card">
-                        <h4 class="card-header">Omena Staging (test3)</h4>
-                        <div class="card-body">
-                            <h6 iclass="card-subtitle mb-2 text-body-secondary">Status: <span id="test3-status"></span></h6>
-                            <p class="card-text config" id="test3-config"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mb-3 mb-sm-0">
-                    <div id="test4" class="card">
-                        <h4 class="card-header">Omena Testing (test4)</h4>
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Status: <span id="test4-status"></span></h6>
-                            <p class="card-text config" id="test4-config"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mb-3 mb-sm-0">
-                    <div id="test4" class="card">
-                        <h4 class="card-header">Other Env</h4>
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Status: <span id="test3-status"></span></h6>
-                            <p class="card-text config" id="test4-config"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="container" id="result-container">
-        <h2 id="test-results">Latest Test Results</h2>
         <div id="accordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="pretest-heading">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#pretest-collapse" aria-expanded="false" aria-controls="pretest-collapse">
-                        pretest
-                    </button>
-                </h2>
-                <div id="pretest-collapse" class="accordion-collapse collapse show" aria-labelledby="pretest-heading"
-                    data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        <div class="iframe-container">
-                            <iframe src="pretest/report.html" title="Report" frameborder="0"></iframe>
-                        </div>
-                        <br>
-                        <h3>Full logs</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="pretest/log.html">log.html</a></li>
-                            <li><a href="pretest/report.html">report.html</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
             <div class="accordion-item" id="kctest">
                 <h2 class="accordion-header" id="ectest-heading">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -249,7 +198,7 @@
                             i.classList.add('fa-regular','fa-eye');
                             i.style.color = '#21a121';
                         } else if (data[key] === false) {
-                            i.classList.add('fa-regular','fa-eye-slash','fa-beat');
+                            i.classList.add('fa-regular','fa-eye-slash');
                             i.style.color = '#a12121';
                             //onOff = "OFF";
                         }
