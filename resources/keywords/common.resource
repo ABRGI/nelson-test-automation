@@ -130,20 +130,20 @@ Open New Browser To URL
 
 Open Browser to Landing Page 
     [Documentation]     A general startup keyword for opening a browser to the landing page.
-    Log To Console     Environment: ${environment}
-    IF     '${environment}' == 'test3'
+
+    Log To Console     Environment: %{ENV}
+    IF     '%{ENV}' == 'test3'
                 Set Suite Variable   ${url.landing.page}     https://test3.omenahotels.com/en
-    ELSE IF     '${environment}' == 'ks_test'
+    ELSE IF     '%{ENV}' == 'ks_test'
                 Set Suite Variable   ${url.landing.page}     https://test.kensingtonstay.com/en
-    ELSE IF     '${environment}' == 'salo_test'
+    ELSE IF     '%{ENV}' == 'salo_test'
                 Set Suite Variable   ${url.landing.page}      https://test.kensingtonstay.com/en
-    ELSE IF    '${environment}' == 'test4'
+    ELSE IF    '%{ENV}' == 'test4'
                 Set Suite Variable   ${url.landing.page}     https://test4.omenahotels.com/en
     END
     Open New Browser To URL    ${url.landing.page}
     #Set Viewport Size    1920    1080
     Allow Cookies 
-    Set Environment 
 
 Open Browser Directly to Extras
     [Documentation]    This keyword is used only for debugging purposes if you want to use a quicker 

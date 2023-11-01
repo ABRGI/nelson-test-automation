@@ -106,6 +106,8 @@ class Helpers(object):
     
 if __name__ == '__main__':
     h = Helpers()
+    h.get_selectors_for_for_date()
+    
     isBreakfast = h.get_config_item('https://test4.omenahotels.com', 'breakfast')
     print(isBreakfast)
     c = h.get_config('https://test4.omenahotels.com')

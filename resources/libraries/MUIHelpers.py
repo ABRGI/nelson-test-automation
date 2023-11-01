@@ -29,7 +29,10 @@ class MUIHelpers(object):
                 self.ENV_URL = "https://test3.omenahotels.com"
             elif os.environ.get("ENV") == 'ectest':
                 self.ENV_URL = "https://ectest.omenahotels.com"
-                
+        else:
+            self.ENV_URL = "https://test3.omenahotels.com"
+        
+        return self.ENV_URL
     def get_token(self):
         if self.MUI_USER is None or self.MUI_PASSWORD is None:
             raise Exception("MUI_USER or MUI_PASSWORD is not set in the environment variables")
@@ -50,10 +53,9 @@ class MUIHelpers(object):
         else:
             raise Exception("Login failed with status code: {}".format(response.status_code))
 
-    def get_usage(self, start_date="2023-08-06", end_date="2023-08-31"):
-        
+    def get_usage(self, start_date="2023-10-30", end_date="2023-10-31"):
         url = f"{self.ENV_URL}/api/management/secure/hotels/{self.HOTEL_ID}/usage?startDate={start_date}&endDate={end_date}"
-
+        print(url)
         headers = {
         'Authorization': f'Bearer {self.token}'
         }

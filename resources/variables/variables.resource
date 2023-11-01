@@ -74,6 +74,5 @@ ${BDCUrl}       https://secure.booking.com/book.html?hotel_id=
 ${MUI_URL}      https://admin.nelson.management/#/login
 
 # INITS & OTHER TO BE CHECKED
-${environment}      test4
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'

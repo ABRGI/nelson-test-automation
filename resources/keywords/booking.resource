@@ -148,7 +148,7 @@ Select Dates
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
-    IF         "${environment}" == "ks_test"
+    IF         "%{ENV}" == "ks_test"
         Log   No hotel to be selected    
     ELSE
         Log    Selecting Hotel: ${hotel}

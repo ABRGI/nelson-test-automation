@@ -75,7 +75,7 @@ jobs:
         continue-on-error: True 
     
       - name: Make the script executable
-        run: chmod +x scripts/run_tests.sh
+        run: chmod +x scripts/run_regression.sh
 
       - name: Run Tests on listed Environments
         run: ./scripts/run_regression.sh 

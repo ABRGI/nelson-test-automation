@@ -13,8 +13,8 @@ Open Booking.com to KS Test
 
 Check Availability for Today
     ${day}    ${month}    Get Selectors for For Date
-    Select Options By    id=check-availability__checkin-monthday    value     ${day} 
     Select Options By    id=check-availability__checkin-yearmonth   value     2023-${month}        #TBD: Add year to be dynamic
+    Select Options By    id=check-availability__checkin-monthday    value     ${day} 
     Click                 //span[contains(text(), 'Check availability')]
 
 Verify Book Button is Visible
