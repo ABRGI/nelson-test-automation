@@ -3,7 +3,7 @@ Documentation      A common resource file for all keyword and test case files
 Library            ${EXECDIR}/resources/libraries/Helpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Resource           ${EXECDIR}/resources/variables/variables.resource
-Library            Browser    auto_closing_level=SUITE
+Library            Browser
 Library            OperatingSystem
 Library            String
 Library            Process
