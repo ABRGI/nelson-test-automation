@@ -11,7 +11,7 @@ Resource          ${EXECDIR}/resources/variables/locators.resource
 
 Select From Menu
     [Arguments]    ${item}
-    Wait Until Network Is Idle
+    #Wait Until Network Is Idle
     TRY
         Click     //a[@href='#/${item}' and contains(@class, 'capitalize') and (not(contains(@class,'capitalize-mobile')))]
     EXCEPT

@@ -13,7 +13,7 @@ class MUIHelpers(object):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     
     def __init__(self) -> None:
-        self.MUI_USER = os.environ.get('MUI_USER')
+        self.MUI_USER = os.environ.get('MUI_USERNAME')
         self.MUI_PASSWORD = os.environ.get('MUI_PASSWORD')
         self.ENV_URL = self.set_url()
         self.HOTEL_ID = "3"

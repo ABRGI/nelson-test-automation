@@ -2,6 +2,7 @@
 Documentation      A test suite that will verify external libraries and variables
 ...                Must pass in order for everything else to work as expected
 Library            ${EXECDIR}/resources/libraries/Helpers.py
+Library            ${EXECDIR}/resources/libraries/MUIHelpers.py
 Library            ${EXECDIR}/resources/libraries/MailSlurp.py
 Library            RequestsLibrary
 Resource           ${EXECDIR}/resources/variables/variables.resource
@@ -31,6 +32,9 @@ Pre-Test: Verify BUI is Up
 
 *** Test Cases ***
 
+Pre-Test: Clean Rooms
+    Clean Rooms
+    
 Pre-Test: Get Member Inbox
     [Documentation]        Verifies the Mailslurp keywords are running
     ${inbox}=    Get Inbox     ${inbox_id}
