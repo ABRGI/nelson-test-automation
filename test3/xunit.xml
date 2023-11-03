@@ -1,245 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Testsuites" tests="55" errors="0" failures="55" skipped="0" time="22.887" timestamp="2023-10-30T19:04:12.091000">
-<testsuite name="BUI" tests="13" errors="0" failures="13" skipped="0" time="22.852" timestamp="2023-10-30T19:04:12.099000">
-<testsuite name="Regression" tests="13" errors="0" failures="13" skipped="0" time="22.850" timestamp="2023-10-30T19:04:12.100000">
-<testsuite name="Create Booking" tests="2" errors="0" failures="2" skipped="0" time="22.839" timestamp="2023-10-30T19:04:12.100000">
-<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Create A New Booking as" time="11.979">
-<failure message="Execution terminated by signal&#10;&#10;Also parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+<testsuite name="Testsuites" tests="29" errors="0" failures="22" skipped="0" time="75.985" timestamp="2023-11-03T18:05:41.083000">
+<testsuite name="BUI" tests="7" errors="0" failures="7" skipped="0" time="1.297" timestamp="2023-11-03T18:05:41.099000">
+<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="7" skipped="0" time="1.291" timestamp="2023-11-03T18:05:41.100000">
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.000">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking" name="Confirm Email and Open Link" time="0.001">
-<failure message="Execution terminated by signal&#10;&#10;Also parent suite teardown failed:&#10;Error: browserContext.close: Target page, context or browser has been closed" type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="0.000">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Create Booking And Check In" tests="7" errors="0" failures="7" skipped="0" time="0.004" timestamp="2023-10-30T19:04:34.942000">
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Select Hotel, Dates and Guests" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="0.000">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Check Available Rooms and Select a Standard Room" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Fill in Booker Contact Information" time="0.001">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Continue to Extras and Select Join for Free" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Pay using Web Bank and Nordea" time="0.000">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Fill in Booker Contact Information" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Check In Online" time="0.000">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Pay using Web Bank and Nordea" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Check In Online" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Create Booking And Check In" name="Wait for Door Code and Verify Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.BUI.Create Booking And Check In" name="Wait for Door Code and Verify Page" time="0.001">
+<failure message="Parent suite setup failed:&#10;Environment variable '%{ENV}' not found. Did you mean:&#10;    %{TEST_ENV}" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
 </properties>
 </testsuite>
-<testsuite name="Online Check In" tests="4" errors="0" failures="4" skipped="0" time="0.003" timestamp="2023-10-30T19:04:34.947000">
-<testsuite name="BUI2-557" tests="4" errors="0" failures="4" skipped="0" time="0.002" timestamp="2023-10-30T19:04:34.947000">
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Create a new Booking" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Add Someone Else as the Main Guest" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Validation shows msg for fields marked" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.BUI.Regression.Online Check In.BUI2-557" name="Showing imported passport when the National is not Finland" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
 </testsuite>
-</testsuite>
-</testsuite>
-</testsuite>
-<testsuite name="Customer Specific" tests="13" errors="0" failures="13" skipped="0" time="0.010" timestamp="2023-10-30T19:04:34.951000">
-<testsuite name="Kensington Stay" tests="13" errors="0" failures="13" skipped="0" time="0.008" timestamp="2023-10-30T19:04:34.952000">
-<testsuite name="Confirm Bdc Booking" tests="3" errors="0" failures="3" skipped="0" time="0.002" timestamp="2023-10-30T19:04:34.952000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Create A New Booking on Booking.com for a later date and verify Emails" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Open Booking in MUI" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Confirm Bdc Booking" name="Cancel Booking in MUI" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testsuite name="MUI" tests="22" errors="0" failures="15" skipped="0" time="74.669" timestamp="2023-11-03T18:05:42.397000">
+<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="3.636" timestamp="2023-11-03T18:05:42.398000">
+<testcase classname="Testsuites.MUI.Mui.Booking" name="Create New Booking" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying modify booking functionality"/>
 </properties>
 </testsuite>
-<testsuite name="Create Bdc Booking" tests="4" errors="0" failures="4" skipped="0" time="0.002" timestamp="2023-10-30T19:04:34.954000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Open BDC and Check for Availability" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Start Reservation Process" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Fill Contact Information and Payment Details" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bdc Booking" name="Verify Confirmation Email" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Create Bui Booking" tests="5" errors="0" failures="5" skipped="0" time="0.003" timestamp="2023-10-30T19:04:34.956000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Kensington Stay Home Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Open Menu and Click Book a Room" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Verify Booking Page Elements" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Create New Booking in KS" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Bui Booking" name="Start Check in Process" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying the Kensington Stay Home Page"/>
-</properties>
-</testsuite>
-<testsuite name="Create Mui Booking" tests="1" errors="0" failures="1" skipped="0" time="0.001" timestamp="2023-10-30T19:04:34.959000">
-<testcase classname="Testsuites.Customer Specific.Kensington Stay.Create Mui Booking" name="Start Creating a new Booking in MUI" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-</testsuite>
-</testsuite>
-<testsuite name="MUI" tests="22" errors="0" failures="22" skipped="0" time="0.012" timestamp="2023-10-30T19:04:34.961000">
-<testsuite name="Regression" tests="22" errors="0" failures="22" skipped="0" time="0.012" timestamp="2023-10-30T19:04:34.961000">
-<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="0.000" timestamp="2023-10-30T19:04:34.962000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Booking" name="Create New Booking" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying modify booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="0.000" timestamp="2023-10-30T19:04:34.963000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Gbe" name="Create New Group Booking" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="3.548" timestamp="2023-11-03T18:05:46.039000">
+<testcase classname="Testsuites.MUI.Mui.Gbe" name="Create New Group Booking" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying GBE2 in MUI"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="0.002" timestamp="2023-10-30T19:04:34.964000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="3.565" timestamp="2023-11-03T18:05:49.595000">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.001">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Reservations" name="Verify all things" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Verify all things" time="0.000">
+<failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying modify booking functionality"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Smoke" tests="16" errors="0" failures="16" skipped="0" time="0.006" timestamp="2023-10-30T19:04:34.966000">
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Log in with correct Username and Password" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testsuite name="Mui.Smoke" tests="16" errors="0" failures="9" skipped="0" time="63.896" timestamp="2023-11-03T18:05:53.165000">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log in with correct Username and Password" time="1.335">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Open Reports Page and Verify" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Open Reports Page and Verify" time="1.041">
+<failure message="Error: No page open." type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.009">
+<failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Usage Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Usage Page" time="30.014">
+<failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Maintenance Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Maintenance Page" time="30.014">
+<failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Customers Page" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Customers Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Pricing Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Pricing Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Allotments Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Allotments Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Vouchers Page" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Vouchers Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Breakfast Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Breakfast Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Settings Page" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Settings Page" time="0.006">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Verify Locks Page" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Locks Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Log Out" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log Out" time="0.004">
+<failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in without Password" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Password" time="0.289">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in without Username" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Username" time="0.276">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Regression.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.219">
+<failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="This file contains smoke tests for MUI"/>
-</properties>
-</testsuite>
-</testsuite>
-</testsuite>
-<testsuite name="OTA" tests="7" errors="0" failures="7" skipped="0" time="0.003" timestamp="2023-10-30T19:04:34.974000">
-<testsuite name="Bdc" tests="4" errors="0" failures="4" skipped="0" time="0.001" timestamp="2023-10-30T19:04:34.974000">
-<testcase classname="Testsuites.OTA.Bdc" name="Open BDC and Check for Availability" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Bdc" name="Create Reservation in BDC" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Bdc" name="Fill Contact Information and Payment Details" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Bdc" name="Verify Confirmation Email Arrives" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="A test suite for verifying BDC booking functionality"/>
-</properties>
-</testsuite>
-<testsuite name="Expedia" tests="3" errors="0" failures="3" skipped="0" time="0.001" timestamp="2023-10-30T19:04:34.976000">
-<testcase classname="Testsuites.OTA.Expedia" name="Check Availability in Expedia" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Expedia" name="Select Hotel and Create Booking" time="0.001">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<testcase classname="Testsuites.OTA.Expedia" name="Fill Booker Details" time="0.000">
-<failure message="Test execution stopped due to a fatal error." type="AssertionError"/>
-</testcase>
-<properties>
-<property name="Documentation" value="This is a test suite for booking a room and checking in online"/>
 </properties>
 </testsuite>
 </testsuite>
