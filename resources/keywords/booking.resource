@@ -449,6 +449,7 @@ Select a Standard Room
     Wait Until Visible     ${btnExtras}   
     ${visible}=            Get Element States     //div[contains(text(), 'Select room')]    then    bool(value & visible) 
     Run Keyword If    ${visible}    Select Standard and Remove Other Room Selection
+    Allow Cookies
 
 Select Join for Free
     Wait Until Visible  //input[@value='memberRate' and @checked='']  
