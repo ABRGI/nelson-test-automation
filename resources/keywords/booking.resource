@@ -73,7 +73,9 @@ Click Book or Find Rooms Button
     ${url}=         Get Url
     ${booking}=     Check If String Contains     ${url}    /booking/
     IF     ${booking} == True
-        Click    //button[contains(@class, 'booking-form-button') and contains(text(), 'Find rooms')]
+        IF     '%{ENV}' == 'salo_stg'
+            Click    //button[contains(text(), "Find rooms")]
+        END
     ELSE
         Click    //button[contains(@class, 'booking-form-button') and contains(text(), 'Book')]
     END
@@ -148,8 +150,10 @@ Select Dates
 Select Hotel
     [Arguments]    ${hotel}=Lönnrotin
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
-    IF         "%{ENV}" == "ks_test"
+    IF           "%{ENV}" == "ks_test"
         Log   No hotel to be selected    
+    ELSE IF      "%{ENV}" == "salo_stg"
+        Log   No hotel to be selected
     ELSE
         Log    Selecting Hotel: ${hotel}
         Click    //div[contains(@data-nelson-btn, "hotels")]
@@ -446,14 +450,31 @@ Select Standard and Remove Other Room Selection
     Click     //button[contains(text(), 'Remove')]")[1]
 
 Select a Standard Room
+    ${btnExtrasDisabled}=    Check if Element is Disabled    ${btnExtras}
+    IF      ${btnExtrasDisabled}
+        Click     (//div[contains(@class, "chakra-container")]/button[contains(@id, "popover")])[1]
+        #TODO: This is a workaround for the bug where the first room is not selected
+        Click     (//div[contains(@class, "chakra-stack")]/div[contains(text(), "1")])[5]
+    END
     Wait Until Visible     ${btnExtras}   
     ${visible}=            Get Element States     //div[contains(text(), 'Select room')]    then    bool(value & visible) 
     Run Keyword If    ${visible}    Select Standard and Remove Other Room Selection
     Allow Cookies
 
+Check if Element is Disabled
+    [Arguments]    ${element}
+    ${disabled}=    Get Element States    ${element}    then    bool(value & disabled)
+    [Return]    ${disabled}
+
 Select Join for Free
-    Wait Until Visible  //input[@value='memberRate' and @checked='']  
-    Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
+    ${membershipVisible} =     Is Element Found        //input[@value='memberRate' and @checked=''] 
+    IF     ${membershipVisible}
+        Click    //input[@value='memberRate' and @checked=''] 
+        Wait Until Visible   //div//*[normalize-space()='Join for free and get the member rate']/following-sibling::div[@data-checked]
+
+    ELSE
+        Log     No Membership Modal Visible
+    END
 
 Accept offers and Terms 
     Click   (//div[contains(text(), 'like to receive')])[1]

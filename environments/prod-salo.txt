@@ -1,0 +1,7 @@
+--doc Argument file for running tests on Staging Salo
+--variable url:https://salo.bookn.io/
+--variable HEADLESS:True
+--variable headless:True
+--outputdir reports/stg-salo/
+--variable browser:Firefox
+--include prod

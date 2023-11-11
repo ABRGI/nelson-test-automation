@@ -120,7 +120,7 @@ Verify Texts
         Should Be True  ${element_visible}  The element containing text '${text}' should be visible but it is not.
     END
     Set Browser Timeout     ${timeout}
-
+py
 Open New Browser To URL
     [Arguments]    ${url}
     New Browser    ${browser}    ${headless}    timeout=${timeout}     downloadsPath=${EXECDIR}/resources/downloads
@@ -140,6 +140,8 @@ Open Browser to Landing Page
                 Set Suite Variable   ${url.landing.page}      https://test.kensingtonstay.com/en
     ELSE IF    '%{ENV}' == 'test4'
                 Set Suite Variable   ${url.landing.page}     https://test4.omenahotels.com/en
+    ELSE IF    '%{ENV}' == 'salo_stg'
+                Set Suite Variable   ${url.landing.page}     https://stg-salo.bookn.io/en/booking
     END
     Open New Browser To URL    ${url.landing.page}
     #Set Viewport Size    1920    1080
