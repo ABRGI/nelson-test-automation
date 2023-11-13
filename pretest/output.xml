@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231113 21:25:19.131" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231113 21:29:01.267" rpa="false" schemaversion="4">
 <suite id="s1" name="Pretest" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot">
 <kw name="Pre-Test: Verify BUI is Up" type="SETUP">
 <kw name="Pre-Test: Get BUI Status">
@@ -7,78 +7,78 @@
 <kw name="Get BUI Status" library="common">
 <var>${response}</var>
 <doc>Get the status of the microservice - running on Softico</doc>
-<msg timestamp="20231113 21:25:23.550" level="FAIL">Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
+<msg timestamp="20231113 21:29:04.017" level="FAIL">Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</msg>
-<status status="FAIL" starttime="20231113 21:25:23.549" endtime="20231113 21:25:23.550"/>
+<status status="FAIL" starttime="20231113 21:29:04.016" endtime="20231113 21:29:04.017"/>
 </kw>
 <if>
 <branch type="IF" condition="'${response}' == 'False'">
 <kw name="Fail" library="BuiltIn">
 <arg>BUI for %{ENV} might not be running</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20231113 21:25:23.551" endtime="20231113 21:25:23.551"/>
+<status status="NOT RUN" starttime="20231113 21:29:04.017" endtime="20231113 21:29:04.017"/>
 </kw>
-<status status="NOT RUN" starttime="20231113 21:25:23.551" endtime="20231113 21:25:23.551"/>
+<status status="NOT RUN" starttime="20231113 21:29:04.017" endtime="20231113 21:29:04.017"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" library="BuiltIn">
 <arg>BUI for %{ENV} is running</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231113 21:25:23.552" endtime="20231113 21:25:23.552"/>
+<status status="NOT RUN" starttime="20231113 21:29:04.018" endtime="20231113 21:29:04.018"/>
 </kw>
-<status status="NOT RUN" starttime="20231113 21:25:23.551" endtime="20231113 21:25:23.552"/>
+<status status="NOT RUN" starttime="20231113 21:29:04.017" endtime="20231113 21:29:04.018"/>
 </branch>
-<status status="NOT RUN" starttime="20231113 21:25:23.551" endtime="20231113 21:25:23.552"/>
+<status status="NOT RUN" starttime="20231113 21:29:04.017" endtime="20231113 21:29:04.018"/>
 </if>
-<status status="FAIL" starttime="20231113 21:25:23.548" endtime="20231113 21:25:23.552"/>
+<status status="FAIL" starttime="20231113 21:29:04.015" endtime="20231113 21:29:04.018"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${status}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" starttime="20231113 21:25:23.552" endtime="20231113 21:25:23.552"/>
+<status status="NOT RUN" starttime="20231113 21:29:04.018" endtime="20231113 21:29:04.018"/>
 </kw>
-<status status="FAIL" starttime="20231113 21:25:23.547" endtime="20231113 21:25:23.553"/>
+<status status="FAIL" starttime="20231113 21:29:04.015" endtime="20231113 21:29:04.018"/>
 </kw>
 <test id="s1-t1" name="Pre-Test: Clean Rooms" line="35">
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231113 21:25:23.553" endtime="20231113 21:25:23.553">Parent suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:04.019" endtime="20231113 21:29:04.019">Parent suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </test>
 <test id="s1-t2" name="Pre-Test: Get Member Inbox" line="38">
 <doc>Verifies the Mailslurp keywords are running</doc>
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231113 21:25:23.563" endtime="20231113 21:25:23.563">Parent suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:04.026" endtime="20231113 21:29:04.027">Parent suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </test>
 <test id="s1-t3" name="Pre-Test: Get Config" line="44">
 <doc>Test case that checks the config file</doc>
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231113 21:25:23.567" endtime="20231113 21:25:23.568">Parent suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:04.029" endtime="20231113 21:29:04.029">Parent suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </test>
 <test id="s1-t4" name="Pre-Test: Verify API is Up" line="50">
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231113 21:25:23.571" endtime="20231113 21:25:23.572">Parent suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:04.032" endtime="20231113 21:29:04.032">Parent suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </test>
 <test id="s1-t5" name="Pre-Test: Verify MUI is Up" line="53">
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231113 21:25:23.575" endtime="20231113 21:25:23.576">Parent suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:04.034" endtime="20231113 21:29:04.034">Parent suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </test>
 <test id="s1-t6" name="Verify Rooms are Available" line="56">
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231113 21:25:23.579" endtime="20231113 21:25:23.580">Parent suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:04.037" endtime="20231113 21:29:04.037">Parent suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </test>
 <doc>Argument file for running Pre-Test verifications</doc>
-<status status="FAIL" starttime="20231113 21:25:19.133" endtime="20231113 21:25:23.583">Suite setup failed:
+<status status="FAIL" starttime="20231113 21:29:01.268" endtime="20231113 21:29:04.039">Suite setup failed:
 Resolving argument default values failed: Environment variable '%{ENV}' not found. Did you mean:
     %{TEST_ENV}</status>
 </suite>
@@ -94,7 +94,7 @@ Resolving argument default values failed: Environment variable '%{ENV}' not foun
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231113 21:25:20.089" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 5: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231113 21:29:01.429" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 5: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
     import mailslurp_client
@@ -105,7 +105,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231113 21:25:22.516" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 7: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231113 21:29:03.311" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 7: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
     import mailslurp_client
@@ -116,7 +116,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231113 21:25:22.592" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231113 21:29:03.373" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
     import mailslurp_client
@@ -127,7 +127,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231113 21:25:22.606" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231113 21:29:03.383" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
     import mailslurp_client
@@ -138,7 +138,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231113 21:25:22.607" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231113 21:29:03.384" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
     import mailslurp_client

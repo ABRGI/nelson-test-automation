@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Testsuites" tests="22" errors="0" failures="15" skipped="0" time="77.482" timestamp="2023-11-13T21:26:44.832000">
-<testsuite name="MUI" tests="22" errors="0" failures="15" skipped="0" time="77.458" timestamp="2023-11-13T21:26:44.855000">
-<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="4.928" timestamp="2023-11-13T21:26:44.856000">
-<testcase classname="Testsuites.MUI.Mui.Booking" name="Create New Booking" time="0.003">
+<testsuite name="Testsuites" tests="22" errors="0" failures="15" skipped="0" time="75.615" timestamp="2023-11-13T21:30:22.764000">
+<testsuite name="MUI" tests="22" errors="0" failures="15" skipped="0" time="75.597" timestamp="2023-11-13T21:30:22.781000">
+<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="4.429" timestamp="2023-11-13T21:30:22.782000">
+<testcase classname="Testsuites.MUI.Mui.Booking" name="Create New Booking" time="0.001">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying modify booking functionality"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="3.759" timestamp="2023-11-13T21:26:49.794000">
-<testcase classname="Testsuites.MUI.Mui.Gbe" name="Create New Group Booking" time="0.001">
+<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="3.601" timestamp="2023-11-13T21:30:27.218000">
+<testcase classname="Testsuites.MUI.Mui.Gbe" name="Create New Group Booking" time="0.000">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying GBE2 in MUI"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="3.892" timestamp="2023-11-13T21:26:53.560000">
+<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="3.588" timestamp="2023-11-13T21:30:30.824000">
 <testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.001">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.000">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.001">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.000">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.002">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Reservations" name="Verify all things" time="0.001">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Verify all things" time="0.000">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying modify booking functionality"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Smoke" tests="16" errors="0" failures="9" skipped="0" time="64.850" timestamp="2023-11-13T21:26:57.457000">
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log in with correct Username and Password" time="1.822">
+<testsuite name="Mui.Smoke" tests="16" errors="0" failures="9" skipped="0" time="63.956" timestamp="2023-11-13T21:30:34.417000">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log in with correct Username and Password" time="1.404">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Open Reports Page and Verify" time="1.044">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Open Reports Page and Verify" time="1.039">
 <failure message="Error: No page open." type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.019">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.008">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Usage Page" time="30.023">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Usage Page" time="30.014">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Maintenance Page" time="30.020">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Maintenance Page" time="30.012">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Customers Page" time="0.015">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Customers Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Pricing Page" time="0.011">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Pricing Page" time="0.006">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Allotments Page" time="0.007">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Allotments Page" time="0.006">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Vouchers Page" time="0.009">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Vouchers Page" time="0.007">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Breakfast Page" time="0.008">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Breakfast Page" time="0.006">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Settings Page" time="0.007">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Settings Page" time="0.006">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Locks Page" time="0.009">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Locks Page" time="0.006">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log Out" time="0.006">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log Out" time="0.004">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Password" time="0.334">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Password" time="0.302">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Username" time="0.342">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Username" time="0.227">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.311">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.239">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot; Page.navigate@chrome://juggler/content/protocol/PageHandler.js:385:13&#10;dispatch@chrome://juggler/content/protocol/Dispatcher.js:132:39&#10;_dispatch@chrome://juggler/content/protocol/Dispatcher.js:69:36&#10;receiveMessage@chrome://juggler/content/components/Juggler.js:117:20&#10;&#10;=========================== logs ===========================&#10;navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;============================================================" type="AssertionError"/>
 </testcase>
 <properties>
