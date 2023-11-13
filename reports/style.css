@@ -1,0 +1,82 @@
+:root {
+    --nelson-green: #285557;
+    --link-on-dark-active: #ecf598;
+    --link-on-dark: #fff;
+}
+
+#kctest {
+    display: none;
+}
+
+.bg-dark {
+    background-color: var(--nelson-green) !important;
+}
+
+.nav-link:focus {
+    color: var(--link-on-dark);
+}
+
+h1 {
+    padding-top: 50px;
+}
+
+body {
+    padding: 20px;
+    font-family: var(--bs-font-sans-serif);
+}
+
+.bg-dark a.active,
+.bg-dark a:hover {
+    color: var(--link-on-dark-active);
+}
+
+.bg-dark a {
+    color: var(--link-on-dark);
+}
+
+.bg-dark .dropdown-item,
+a.dropdown-item,
+a.dropdown-item:hover  {
+    color: var(--nelson-green)
+}
+
+.config {
+    font-size: 11px;
+}
+
+.config p {
+    margin-bottom: 0;
+}
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.accordion-button {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-run {
+    margin-bottom: 1rem;
+}
+
+.accordion-button {
+    font-size: 28px;
+}
+
+#status {
+    font-weight: bold;
+}
+
+
+
