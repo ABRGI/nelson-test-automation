@@ -21,7 +21,7 @@ Log in with correct Username and Password
     Open Browser to Nelson Portal
     Log in to Nelson Portal
     Verify Dashboard Elements
-    Select Environment   ${ENVIRONMENT}
+    Select Environment   ${ENV}
     Verify Reservations Page Grid Elements
     Verify Hotels in Search By Hotel Dropdown 
     Click Datepicker Start

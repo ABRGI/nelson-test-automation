@@ -152,7 +152,7 @@ Select Hotel
     [Documentation]    Select Hotel by using a number as an argument, default Lönnrotinkatu
     IF           "%{ENV}" == "ks_test"
         Log   No hotel to be selected    
-    ELSE IF      "%{ENV}" == "salo_stg"
+    ELSE IF      "%{ENV}" == "stg-salo"
         Log   No hotel to be selected
     ELSE
         Log    Selecting Hotel: ${hotel}

@@ -48,7 +48,7 @@ class MailSlurp(object):
             inbox = api_instance.get_all_inboxes()
             return inbox
             
-    # function for creating an email address returns an inbox with an id and email_address
+    # function for creating an email adderess returns an inbox with an id and email_address
     @keyword("Create new Inbox")
     def create_new_inbox(self):
         print('Debug Config')
@@ -212,6 +212,7 @@ class MailSlurp(object):
 if __name__ == '__main__':
     unread_only = True # True for prod
     m = MailSlurp()
+    i = m.create_new_inbox()
     m.read_forward_inbox()
 
     #m.mark_all_emails_as_read()

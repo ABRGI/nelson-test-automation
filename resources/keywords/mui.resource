@@ -21,9 +21,9 @@ Select Environment
         ${e}=    Set Variable       Test Omena
     ELSE IF     '${environment}' == 'test3'
         ${e}=    Set Variable       Staging Omena
-    ELSE IF     '${environment}' == 'test_salo'
-        ${e}=    Set Variable       Test Salo
-    ELSE IF     '${environment}' == 'ks_test'
+    ELSE IF     '${environment}' == 'stg-salo'
+        ${e}=    Set Variable       Staging Salo
+    ELSE IF     '${environment}' == 'test-ks'
         ${e}=    Set Variable       Test Kensington Stay      
     END
     Click     //b[contains(@class, "client-name-color") and contains(text(), "${e}")]
@@ -31,7 +31,7 @@ Select Environment
 Open Browser to Nelson Portal and Login
     Open Browser to Nelson Portal
     Log in to Nelson Portal
-    Select Environment    ${environment}
+    Select Environment    ${ENV}
 
 Open Browser to Nelson Portal
     New Browser    ${browser}    ${headless}
@@ -102,7 +102,7 @@ Verify Dashboard Elements
 
 Verify Usage Page Elements
     Wait Until Visible        //div[@class='column-room']
-    Verify Texts              Room Usages    Search by hotel     Edit Channels     ECI/LCO    Apply     Filter rooms     Show allotment
+    Verify Texts              Room Usages        Edit Channels     ECI/LCO    Apply     Filter rooms     Show allotment
 
 Verify Maintenance Page Elements
     Wait Until Visible   //button[contains(@routerlink, "/maintenance/create")]

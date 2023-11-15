@@ -140,7 +140,7 @@ Open Browser to Landing Page
                 Set Suite Variable   ${url.landing.page}      https://test.kensingtonstay.com/en
     ELSE IF    '%{ENV}' == 'test4'
                 Set Suite Variable   ${url.landing.page}     https://test4.omenahotels.com/en
-    ELSE IF    '%{ENV}' == 'salo_stg'
+    ELSE IF    '%{ENV}' == 'stg-salo'
                 Set Suite Variable   ${url.landing.page}     https://stg-salo.bookn.io/en/booking
     END
     Open New Browser To URL    ${url.landing.page}

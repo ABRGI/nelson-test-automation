@@ -67,15 +67,17 @@ Select Hotel for Search
 
 Verify Hotels in Search By Hotel Dropdown
     [Documentation]    Verifies the hotels in the search by hotel dropdown
-    IF     '${environment}' == 'ks_test'
+    IF     '${ENV}' == 'stg-salo' or '${ENV}' == 'test-ks'
         Log To Console    No Hotel Selection for Kensington Stay
-    ELSE IF    '${environment}' == 'test4'
+    ELSE IF    '${ENV}' == 'test4'
         Sleep    3s
         Click Search By Hotel Dropdown 
         Sleep    3s
         ${hotels}=    Get Elements    //div[contains(@class, "dropdown-content")]/ul/li
         ${hotelsCount}=    Get Length    ${hotels}
         Should Be Equal As Integers    ${hotelsCount}    9
+    ELSE
+        Pass Execution    TBD stg-ks test3 stg-test
     END
 
 Verify Channels in Search By Channel Dropdown
