@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231117 18:41:12.980" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231117 18:49:01.874" rpa="false" schemaversion="4">
 <suite id="s1" name="Pretest" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot">
 <kw name="Pre-Test: Verify BUI is Up" type="SETUP">
 <kw name="Pre-Test: Get BUI Status">
@@ -11,64 +11,64 @@
 <arg>frends</arg>
 <arg>${microservice_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231117 18:41:16.571" level="INFO">Creating Session using : alias=frends, url=https://softico-dev-agent.frendsapp.com/api/qa/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20231117 18:41:16.571" endtime="20231117 18:41:16.571"/>
+<msg timestamp="20231117 18:49:06.757" level="INFO">Creating Session using : alias=frends, url=https://softico-dev-agent.frendsapp.com/api/qa/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231117 18:49:06.757" endtime="20231117 18:49:06.757"/>
 </kw>
 <kw name="GET On Session" library="RequestsLibrary">
 <var>${response}</var>
 <arg>frends</arg>
 <arg>/status/${env_name}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20231117 18:41:17.194" level="INFO">GET Request : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
+<msg timestamp="20231117 18:49:07.291" level="INFO">GET Request : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
  path_url=/api/qa/v1/status/test4 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20231117 18:41:17.194" level="INFO">GET Response : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
+<msg timestamp="20231117 18:49:07.291" level="INFO">GET Response : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
  status=200, reason=OK 
- headers={'Content-Length': '4', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-HTTPAPI/2.0', 'Date': 'Fri, 17 Nov 2023 18:41:17 GMT'} 
+ headers={'Content-Length': '4', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-HTTPAPI/2.0', 'Date': 'Fri, 17 Nov 2023 18:49:06 GMT'} 
  body=true 
  </msg>
-<msg timestamp="20231117 18:41:17.195" level="INFO">/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'softico-dev-agent.frendsapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg timestamp="20231117 18:49:07.292" level="INFO">/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'softico-dev-agent.frendsapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg timestamp="20231117 18:41:17.196" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231117 18:41:16.571" endtime="20231117 18:41:17.196"/>
+<msg timestamp="20231117 18:49:07.292" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231117 18:49:06.758" endtime="20231117 18:49:07.292"/>
 </kw>
-<msg timestamp="20231117 18:41:17.197" level="INFO">${response} = True</msg>
-<status status="PASS" starttime="20231117 18:41:16.571" endtime="20231117 18:41:17.197"/>
+<msg timestamp="20231117 18:49:07.293" level="INFO">${response} = True</msg>
+<status status="PASS" starttime="20231117 18:49:06.757" endtime="20231117 18:49:07.293"/>
 </kw>
 <if>
 <branch type="IF" condition="'${response}' == 'False'">
 <kw name="Fail" library="BuiltIn">
 <arg>BUI is not up and running</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20231117 18:41:17.197" endtime="20231117 18:41:17.197"/>
+<status status="NOT RUN" starttime="20231117 18:49:07.294" endtime="20231117 18:49:07.294"/>
 </kw>
-<status status="NOT RUN" starttime="20231117 18:41:17.197" endtime="20231117 18:41:17.197"/>
+<status status="NOT RUN" starttime="20231117 18:49:07.293" endtime="20231117 18:49:07.294"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" library="BuiltIn">
 <arg>BUI is up and running</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231117 18:41:17.197" endtime="20231117 18:41:17.198"/>
+<status status="PASS" starttime="20231117 18:49:07.294" endtime="20231117 18:49:07.294"/>
 </kw>
-<status status="PASS" starttime="20231117 18:41:17.197" endtime="20231117 18:41:17.198"/>
+<status status="PASS" starttime="20231117 18:49:07.294" endtime="20231117 18:49:07.294"/>
 </branch>
-<status status="PASS" starttime="20231117 18:41:17.197" endtime="20231117 18:41:17.198"/>
+<status status="PASS" starttime="20231117 18:49:07.293" endtime="20231117 18:49:07.294"/>
 </if>
-<msg timestamp="20231117 18:41:17.198" level="INFO">${status} = True</msg>
-<status status="PASS" starttime="20231117 18:41:16.570" endtime="20231117 18:41:17.198"/>
+<msg timestamp="20231117 18:49:07.294" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20231117 18:49:06.757" endtime="20231117 18:49:07.294"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${status}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20231117 18:41:17.198" endtime="20231117 18:41:17.198"/>
+<status status="PASS" starttime="20231117 18:49:07.295" endtime="20231117 18:49:07.295"/>
 </kw>
-<status status="PASS" starttime="20231117 18:41:16.570" endtime="20231117 18:41:17.198"/>
+<status status="PASS" starttime="20231117 18:49:06.756" endtime="20231117 18:49:07.295"/>
 </kw>
 <test id="s1-t1" name="Pre-Test: Clean Rooms" line="35">
 <kw name="Clean Rooms" library="MUIHelpers">
-<msg timestamp="20231117 18:41:50.810" level="INFO">https://test3.omenahotels.com/api/management/secure/hotels/3/usage?startDate=2023-10-30&amp;endDate=2023-10-31
+<msg timestamp="20231117 18:49:39.252" level="INFO">https://test3.omenahotels.com/api/management/secure/hotels/3/usage?startDate=2023-10-30&amp;endDate=2023-10-31
 Room cleaned with id: 161
 Room cleaned with id: 165
 Room cleaned with id: 166
@@ -192,91 +192,91 @@ Room cleaned with id: 297
 Room cleaned with id: 298
 Room cleaned with id: 299
 Room cleaned with id: 1673</msg>
-<status status="PASS" starttime="20231117 18:41:17.199" endtime="20231117 18:41:50.810"/>
+<status status="PASS" starttime="20231117 18:49:07.295" endtime="20231117 18:49:39.252"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231117 18:41:17.198" endtime="20231117 18:41:50.811"/>
+<status status="PASS" starttime="20231117 18:49:07.295" endtime="20231117 18:49:39.253"/>
 </test>
 <test id="s1-t2" name="Pre-Test: Get Member Inbox" line="38">
 <kw name="Get Inbox">
 <var>${inbox}</var>
 <arg>${inbox_id}</arg>
-<msg timestamp="20231117 18:41:50.819" level="FAIL">No keyword with name 'Get Inbox' found. Did you mean:
+<msg timestamp="20231117 18:49:39.261" level="FAIL">No keyword with name 'Get Inbox' found. Did you mean:
     common.Get Inbox ID</msg>
-<status status="FAIL" starttime="20231117 18:41:50.819" endtime="20231117 18:41:50.819"/>
+<status status="FAIL" starttime="20231117 18:49:39.261" endtime="20231117 18:49:39.261"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${inbox_object}</arg>
 <arg>${inbox}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="NOT RUN" starttime="20231117 18:41:50.820" endtime="20231117 18:41:50.820"/>
+<status status="NOT RUN" starttime="20231117 18:49:39.261" endtime="20231117 18:49:39.262"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${inbox.name}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231117 18:41:50.820" endtime="20231117 18:41:50.820"/>
+<status status="NOT RUN" starttime="20231117 18:49:39.262" endtime="20231117 18:49:39.262"/>
 </kw>
 <doc>Verifies the Mailslurp keywords are running</doc>
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231117 18:41:50.816" endtime="20231117 18:41:50.820">No keyword with name 'Get Inbox' found. Did you mean:
+<status status="FAIL" starttime="20231117 18:49:39.258" endtime="20231117 18:49:39.262">No keyword with name 'Get Inbox' found. Did you mean:
     common.Get Inbox ID</status>
 </test>
 <test id="s1-t3" name="Pre-Test: Get Config" line="46">
 <kw name="Get Config">
 <var>${config}</var>
 <arg>${url}</arg>
-<msg timestamp="20231117 18:41:50.826" level="FAIL">No keyword with name 'Get Config' found. Did you try using keyword 'RequestsLibrary.GET' and forgot to use enough whitespace between keyword and arguments?</msg>
-<status status="FAIL" starttime="20231117 18:41:50.826" endtime="20231117 18:41:50.826"/>
+<msg timestamp="20231117 18:49:39.269" level="FAIL">No keyword with name 'Get Config' found. Did you try using keyword 'RequestsLibrary.GET' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20231117 18:49:39.269" endtime="20231117 18:49:39.269"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Config for environment:</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231117 18:41:50.826" endtime="20231117 18:41:50.826"/>
+<status status="NOT RUN" starttime="20231117 18:49:39.270" endtime="20231117 18:49:39.270"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${config}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231117 18:41:50.827" endtime="20231117 18:41:50.827"/>
+<status status="NOT RUN" starttime="20231117 18:49:39.270" endtime="20231117 18:49:39.270"/>
 </kw>
 <doc>Test case that checks the config file</doc>
 <tag>pretest</tag>
-<status status="FAIL" starttime="20231117 18:41:50.822" endtime="20231117 18:41:50.827">No keyword with name 'Get Config' found. Did you try using keyword 'RequestsLibrary.GET' and forgot to use enough whitespace between keyword and arguments?</status>
+<status status="FAIL" starttime="20231117 18:49:39.264" endtime="20231117 18:49:39.270">No keyword with name 'Get Config' found. Did you try using keyword 'RequestsLibrary.GET' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
 <test id="s1-t4" name="Pre-Test: Verify API is Up" line="52">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: API is up and running</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20231117 18:41:50.829" level="INFO">Execution passed with message:
+<msg timestamp="20231117 18:49:39.272" level="INFO">Execution passed with message:
 TBD: API is up and running</msg>
-<status status="PASS" starttime="20231117 18:41:50.829" endtime="20231117 18:41:50.829"/>
+<status status="PASS" starttime="20231117 18:49:39.272" endtime="20231117 18:49:39.272"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231117 18:41:50.829" endtime="20231117 18:41:50.829">TBD: API is up and running</status>
+<status status="PASS" starttime="20231117 18:49:39.272" endtime="20231117 18:49:39.272">TBD: API is up and running</status>
 </test>
 <test id="s1-t5" name="Pre-Test: Verify MUI is Up" line="55">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: MUI is up and running</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20231117 18:41:50.831" level="INFO">Execution passed with message:
+<msg timestamp="20231117 18:49:39.274" level="INFO">Execution passed with message:
 TBD: MUI is up and running</msg>
-<status status="PASS" starttime="20231117 18:41:50.831" endtime="20231117 18:41:50.831"/>
+<status status="PASS" starttime="20231117 18:49:39.274" endtime="20231117 18:49:39.274"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231117 18:41:50.831" endtime="20231117 18:41:50.831">TBD: MUI is up and running</status>
+<status status="PASS" starttime="20231117 18:49:39.274" endtime="20231117 18:49:39.275">TBD: MUI is up and running</status>
 </test>
 <test id="s1-t6" name="Verify Rooms are Available" line="58">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: Check Rooms are available, for example API</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20231117 18:41:50.834" level="INFO">Execution passed with message:
+<msg timestamp="20231117 18:49:39.277" level="INFO">Execution passed with message:
 TBD: Check Rooms are available, for example API</msg>
-<status status="PASS" starttime="20231117 18:41:50.834" endtime="20231117 18:41:50.834"/>
+<status status="PASS" starttime="20231117 18:49:39.277" endtime="20231117 18:49:39.277"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231117 18:41:50.833" endtime="20231117 18:41:50.834">TBD: Check Rooms are available, for example API</status>
+<status status="PASS" starttime="20231117 18:49:39.276" endtime="20231117 18:49:39.277">TBD: Check Rooms are available, for example API</status>
 </test>
 <doc>Argument file for running Pre-Test verifications</doc>
-<status status="FAIL" starttime="20231117 18:41:12.981" endtime="20231117 18:41:50.836"/>
+<status status="FAIL" starttime="20231117 18:49:01.874" endtime="20231117 18:49:39.279"/>
 </suite>
 <statistics>
 <total>
@@ -290,7 +290,7 @@ TBD: Check Rooms are available, for example API</msg>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231117 18:41:12.997" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231117 18:49:01.890" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
     import mailslurp_client
@@ -301,7 +301,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231117 18:41:15.671" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 6: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231117 18:49:06.161" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot' on line 6: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
     import mailslurp_client
@@ -312,7 +312,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231117 18:41:15.771" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231117 18:49:06.262" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/booking.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
     import mailslurp_client
@@ -323,7 +323,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231117 18:41:15.781" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231117 18:49:06.270" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 3: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/Helpers.py", line 4, in &lt;module&gt;
     import mailslurp_client
@@ -334,7 +334,7 @@ PYTHONPATH:
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/lib-dynload
   /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages</msg>
-<msg timestamp="20231117 18:41:15.782" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
+<msg timestamp="20231117 18:49:06.272" level="ERROR">Error in file '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/keywords/common.resource' on line 4: Importing library '/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py' failed: ModuleNotFoundError: No module named 'mailslurp_client'
 Traceback (most recent call last):
   File "/home/runner/work/nelson-test-automation/nelson-test-automation/resources/libraries/MailSlurp.py", line 1, in &lt;module&gt;
     import mailslurp_client
