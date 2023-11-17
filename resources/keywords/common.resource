@@ -120,7 +120,7 @@ Verify Texts
         Should Be True  ${element_visible}  The element containing text '${text}' should be visible but it is not.
     END
     Set Browser Timeout     ${timeout}
-py
+    
 Open New Browser To URL
     [Arguments]    ${url}
     New Browser    ${browser}    ${headless}    timeout=${timeout}     downloadsPath=${EXECDIR}/resources/downloads
