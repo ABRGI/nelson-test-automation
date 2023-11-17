@@ -3,7 +3,6 @@
 # GENERAL SETUP VARIABLES
 ${browser}        chromium
 ${timeout}        30s
-${headless}       False
 ${longer}         90s
 ${e}
 
