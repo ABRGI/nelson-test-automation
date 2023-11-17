@@ -1,6 +1,6 @@
 *** Settings ***
 
-Suite Setup         Open Browser to Nelson Portal and Login
+#Suite Setup         Open Browser to Nelson Portal and Login
 Suite Teardown    Close Browser
 Resource           ${EXECDIR}/resources/keywords/common.resource
 Resource           ${EXECDIR}/resources/keywords/booking.resource
@@ -10,5 +10,7 @@ Force Tags         smoke    regression
 
 *** Test Cases ***    
 
-Create New Booking
-    Pass Execution   TBD
+Open Browser to Nelson Portal and Login
+    Open Browser to Nelson Portal
+    Log in to Nelson Portal
+    Select Environment    ${ENV}
