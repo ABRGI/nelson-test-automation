@@ -212,7 +212,8 @@ class MailSlurp(object):
 if __name__ == '__main__':
     unread_only = True # True for prod
     m = MailSlurp()
-    i = m.create_new_inbox()
+    e = m.wait_for_latest_booking_confirmation(inbox_id=
+"c7107921-3a9a-40c9-8005-19f5f2e3694c")
     m.read_forward_inbox()
 
     #m.mark_all_emails_as_read()

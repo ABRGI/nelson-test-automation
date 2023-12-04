@@ -75,3 +75,5 @@ ${MUI_URL}      https://admin.nelson.management/#/login
 # INITS & OTHER TO BE CHECKED
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
+
+${INBOX_ID}
