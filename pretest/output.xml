@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231204 17:02:23.518" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.6 on linux)" generated="20231204 17:15:17.997" rpa="false" schemaversion="4">
 <suite id="s1" name="Pretest" source="/home/runner/work/nelson-test-automation/nelson-test-automation/testsuites/pretest.robot">
 <kw name="Pre-Test: Verify BUI is Up" type="SETUP">
 <kw name="Pre-Test: Get BUI Status">
@@ -11,64 +11,64 @@
 <arg>frends</arg>
 <arg>${microservice_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231204 17:02:25.556" level="INFO">Creating Session using : alias=frends, url=https://softico-dev-agent.frendsapp.com/api/qa/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20231204 17:02:25.556" endtime="20231204 17:02:25.556"/>
+<msg timestamp="20231204 17:15:20.000" level="INFO">Creating Session using : alias=frends, url=https://softico-dev-agent.frendsapp.com/api/qa/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231204 17:15:20.000" endtime="20231204 17:15:20.000"/>
 </kw>
 <kw name="GET On Session" library="RequestsLibrary">
 <var>${response}</var>
 <arg>frends</arg>
 <arg>/status/${env_name}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20231204 17:02:26.033" level="INFO">GET Request : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
+<msg timestamp="20231204 17:15:20.488" level="INFO">GET Request : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
  path_url=/api/qa/v1/status/test4 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20231204 17:02:26.033" level="INFO">GET Response : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
+<msg timestamp="20231204 17:15:20.489" level="INFO">GET Response : url=https://softico-dev-agent.frendsapp.com/api/qa/v1/status/test4 
  status=200, reason=OK 
- headers={'Content-Length': '4', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-HTTPAPI/2.0', 'Date': 'Mon, 04 Dec 2023 17:02:25 GMT'} 
+ headers={'Content-Length': '4', 'Content-Type': 'application/json; charset=utf-8', 'Server': 'Microsoft-HTTPAPI/2.0', 'Date': 'Mon, 04 Dec 2023 17:15:19 GMT'} 
  body=true 
  </msg>
-<msg timestamp="20231204 17:02:26.033" level="INFO">/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'softico-dev-agent.frendsapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg timestamp="20231204 17:15:20.489" level="INFO">/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'softico-dev-agent.frendsapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg timestamp="20231204 17:02:26.033" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231204 17:02:25.557" endtime="20231204 17:02:26.033"/>
+<msg timestamp="20231204 17:15:20.489" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231204 17:15:20.000" endtime="20231204 17:15:20.489"/>
 </kw>
-<msg timestamp="20231204 17:02:26.034" level="INFO">${response} = True</msg>
-<status status="PASS" starttime="20231204 17:02:25.556" endtime="20231204 17:02:26.034"/>
+<msg timestamp="20231204 17:15:20.490" level="INFO">${response} = True</msg>
+<status status="PASS" starttime="20231204 17:15:19.999" endtime="20231204 17:15:20.490"/>
 </kw>
 <if>
 <branch type="IF" condition="'${response}' == 'False'">
 <kw name="Fail" library="BuiltIn">
 <arg>BUI is not up and running</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20231204 17:02:26.035" endtime="20231204 17:02:26.035"/>
+<status status="NOT RUN" starttime="20231204 17:15:20.490" endtime="20231204 17:15:20.491"/>
 </kw>
-<status status="NOT RUN" starttime="20231204 17:02:26.034" endtime="20231204 17:02:26.035"/>
+<status status="NOT RUN" starttime="20231204 17:15:20.490" endtime="20231204 17:15:20.491"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" library="BuiltIn">
 <arg>BUI is up and running</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231204 17:02:26.035" endtime="20231204 17:02:26.035"/>
+<status status="PASS" starttime="20231204 17:15:20.491" endtime="20231204 17:15:20.491"/>
 </kw>
-<status status="PASS" starttime="20231204 17:02:26.035" endtime="20231204 17:02:26.035"/>
+<status status="PASS" starttime="20231204 17:15:20.491" endtime="20231204 17:15:20.491"/>
 </branch>
-<status status="PASS" starttime="20231204 17:02:26.034" endtime="20231204 17:02:26.035"/>
+<status status="PASS" starttime="20231204 17:15:20.490" endtime="20231204 17:15:20.491"/>
 </if>
-<msg timestamp="20231204 17:02:26.036" level="INFO">${status} = True</msg>
-<status status="PASS" starttime="20231204 17:02:25.555" endtime="20231204 17:02:26.036"/>
+<msg timestamp="20231204 17:15:20.491" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20231204 17:15:19.999" endtime="20231204 17:15:20.491"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${status}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20231204 17:02:26.036" endtime="20231204 17:02:26.036"/>
+<status status="PASS" starttime="20231204 17:15:20.492" endtime="20231204 17:15:20.492"/>
 </kw>
-<status status="PASS" starttime="20231204 17:02:25.555" endtime="20231204 17:02:26.036"/>
+<status status="PASS" starttime="20231204 17:15:19.999" endtime="20231204 17:15:20.492"/>
 </kw>
 <test id="s1-t1" name="Pre-Test: Clean Rooms" line="35">
 <kw name="Clean Rooms" library="MUIHelpers">
-<msg timestamp="20231204 17:02:57.945" level="INFO">https://test3.omenahotels.com/api/management/secure/hotels/3/usage?startDate=2023-10-30&amp;endDate=2023-10-31
+<msg timestamp="20231204 17:15:53.180" level="INFO">https://test3.omenahotels.com/api/management/secure/hotels/3/usage?startDate=2023-10-30&amp;endDate=2023-10-31
 Room cleaned with id: 161
 Room cleaned with id: 165
 Room cleaned with id: 166
@@ -192,99 +192,99 @@ Room cleaned with id: 297
 Room cleaned with id: 298
 Room cleaned with id: 299
 Room cleaned with id: 1673</msg>
-<status status="PASS" starttime="20231204 17:02:26.037" endtime="20231204 17:02:57.945"/>
+<status status="PASS" starttime="20231204 17:15:20.492" endtime="20231204 17:15:53.180"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231204 17:02:26.036" endtime="20231204 17:02:57.945"/>
+<status status="PASS" starttime="20231204 17:15:20.492" endtime="20231204 17:15:53.180"/>
 </test>
 <test id="s1-t2" name="Pre-Test: Get Member Inbox" line="38">
 <kw name="Get Inbox" library="MailSlurp">
 <var>${inbox}</var>
 <arg>${inbox_id}</arg>
-<msg timestamp="20231204 17:02:58.367" level="INFO">Nelson-FW</msg>
-<msg timestamp="20231204 17:02:58.368" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 8, 29, 16, 41, 10, 600000, tzinfo=tzlocal()),
+<msg timestamp="20231204 17:15:53.581" level="INFO">Nelson-FW</msg>
+<msg timestamp="20231204 17:15:53.582" level="INFO">${inbox} = {'created_at': datetime.datetime(2023, 8, 29, 16, 41, 10, 600000, tzinfo=tzlocal()),
  'description': '',
  'domain_id': None,
  'email_address': '35ac21dc-e785-4cad-8949-6f32023a286d@mailslurp.com',
  'e...</msg>
-<status status="PASS" starttime="20231204 17:02:57.951" endtime="20231204 17:02:58.368"/>
+<status status="PASS" starttime="20231204 17:15:53.186" endtime="20231204 17:15:53.582"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${inbox_object}</arg>
 <arg>${inbox}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20231204 17:02:58.368" level="INFO">${inbox_object} = {'created_at': datetime.datetime(2023, 8, 29, 16, 41, 10, 600000, tzinfo=tzlocal()),
+<msg timestamp="20231204 17:15:53.582" level="INFO">${inbox_object} = {'created_at': datetime.datetime(2023, 8, 29, 16, 41, 10, 600000, tzinfo=tzlocal()),
  'description': '',
  'domain_id': None,
  'email_address': '35ac21dc-e785-4cad-8949-6f32023a286d@mailslurp.com',
  'e...</msg>
-<status status="PASS" starttime="20231204 17:02:58.368" endtime="20231204 17:02:58.368"/>
+<status status="PASS" starttime="20231204 17:15:53.582" endtime="20231204 17:15:53.582"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${inbox.name}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231204 17:02:58.368" endtime="20231204 17:02:58.369"/>
+<status status="PASS" starttime="20231204 17:15:53.583" endtime="20231204 17:15:53.583"/>
 </kw>
 <doc>Verifies the Mailslurp keywords are running</doc>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231204 17:02:57.951" endtime="20231204 17:02:58.369"/>
+<status status="PASS" starttime="20231204 17:15:53.186" endtime="20231204 17:15:53.584"/>
 </test>
 <test id="s1-t3" name="Pre-Test: Get Config" line="46">
 <kw name="Get Config" library="Helpers">
 <var>${config}</var>
 <arg>${url}</arg>
-<msg timestamp="20231204 17:02:58.876" level="INFO">${config} = {'membership': True, 'eciLco': True, 'breakfast': True, 'compensate': False, 'cancellationPolicyHours': 24, 'extraBed': True, 'defaultGuestNationality': 'FIN', 'findBookingShortcut': False, 'excludePr...</msg>
-<status status="PASS" starttime="20231204 17:02:58.372" endtime="20231204 17:02:58.876"/>
+<msg timestamp="20231204 17:15:53.717" level="INFO">${config} = {'membership': True, 'eciLco': True, 'breakfast': True, 'compensate': False, 'cancellationPolicyHours': 24, 'extraBed': True, 'defaultGuestNationality': 'FIN', 'findBookingShortcut': False, 'excludePr...</msg>
+<status status="PASS" starttime="20231204 17:15:53.586" endtime="20231204 17:15:53.717"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Config for environment:</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231204 17:02:58.877" endtime="20231204 17:02:58.877"/>
+<status status="PASS" starttime="20231204 17:15:53.717" endtime="20231204 17:15:53.718"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${config}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231204 17:02:58.877" endtime="20231204 17:02:58.877"/>
+<status status="PASS" starttime="20231204 17:15:53.718" endtime="20231204 17:15:53.718"/>
 </kw>
 <doc>Test case that checks the config file</doc>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231204 17:02:58.372" endtime="20231204 17:02:58.878"/>
+<status status="PASS" starttime="20231204 17:15:53.586" endtime="20231204 17:15:53.718"/>
 </test>
 <test id="s1-t4" name="Pre-Test: Verify API is Up" line="52">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: API is up and running</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20231204 17:02:58.880" level="INFO">Execution passed with message:
+<msg timestamp="20231204 17:15:53.721" level="INFO">Execution passed with message:
 TBD: API is up and running</msg>
-<status status="PASS" starttime="20231204 17:02:58.880" endtime="20231204 17:02:58.881"/>
+<status status="PASS" starttime="20231204 17:15:53.721" endtime="20231204 17:15:53.721"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231204 17:02:58.880" endtime="20231204 17:02:58.881">TBD: API is up and running</status>
+<status status="PASS" starttime="20231204 17:15:53.721" endtime="20231204 17:15:53.721">TBD: API is up and running</status>
 </test>
 <test id="s1-t5" name="Pre-Test: Verify MUI is Up" line="55">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: MUI is up and running</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20231204 17:02:58.883" level="INFO">Execution passed with message:
+<msg timestamp="20231204 17:15:53.724" level="INFO">Execution passed with message:
 TBD: MUI is up and running</msg>
-<status status="PASS" starttime="20231204 17:02:58.883" endtime="20231204 17:02:58.883"/>
+<status status="PASS" starttime="20231204 17:15:53.723" endtime="20231204 17:15:53.724"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231204 17:02:58.882" endtime="20231204 17:02:58.883">TBD: MUI is up and running</status>
+<status status="PASS" starttime="20231204 17:15:53.723" endtime="20231204 17:15:53.724">TBD: MUI is up and running</status>
 </test>
 <test id="s1-t6" name="Verify Rooms are Available" line="58">
 <kw name="Pass Execution" library="BuiltIn">
 <arg>TBD: Check Rooms are available, for example API</arg>
 <doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20231204 17:02:58.885" level="INFO">Execution passed with message:
+<msg timestamp="20231204 17:15:53.726" level="INFO">Execution passed with message:
 TBD: Check Rooms are available, for example API</msg>
-<status status="PASS" starttime="20231204 17:02:58.885" endtime="20231204 17:02:58.885"/>
+<status status="PASS" starttime="20231204 17:15:53.726" endtime="20231204 17:15:53.726"/>
 </kw>
 <tag>pretest</tag>
-<status status="PASS" starttime="20231204 17:02:58.885" endtime="20231204 17:02:58.885">TBD: Check Rooms are available, for example API</status>
+<status status="PASS" starttime="20231204 17:15:53.725" endtime="20231204 17:15:53.726">TBD: Check Rooms are available, for example API</status>
 </test>
 <doc>Argument file for running Pre-Test verifications</doc>
-<status status="PASS" starttime="20231204 17:02:23.518" endtime="20231204 17:02:58.887"/>
+<status status="PASS" starttime="20231204 17:15:17.998" endtime="20231204 17:15:53.728"/>
 </suite>
 <statistics>
 <total>
