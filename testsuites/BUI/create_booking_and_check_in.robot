@@ -7,7 +7,7 @@ Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Resource          ${EXECDIR}/resources/keywords/mui.resource
 Resource          ${EXECDIR}/resources/keywords/checkin.resource
-Test Tags        smoke, booking, BUI2-556, online-checkin    regression
+Test Tags        smoke, booking, BUI2-556, online-checkin, regression
 
 *** Test Cases ***
 

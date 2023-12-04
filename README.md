@@ -25,11 +25,8 @@ Environment variables, mostly secrets at this point, will be saved in .env file 
 
 Create a file .env in the root directory and use setenv.sh script or source .env in CLI. Verify variables are accessible.
 
-``` bash
-./setenv.sh
-```
-
 If you are using RobotCode Debugger features in VS Code, environment variables need to be set from the extension settings.
+
 ## Python Versions
 
 Let's use Python 3.10 for this project. You can check your version using the following cmd. Python 3.11 seems to be working as well.

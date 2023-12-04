@@ -5,7 +5,7 @@ ${browser}        chromium
 ${timeout}        30s
 ${longer}         90s
 ${e}
-
+${headless}       True
 # FORM DATA
 ${firstName}      Mos
 ${lastName}       Def
