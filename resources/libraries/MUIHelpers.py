@@ -4,6 +4,8 @@ import requests
 import json 
 import os 
 import json
+from dotenv import load_dotenv
+
 
 __version__ = '1.0.0'
 
@@ -13,11 +15,13 @@ class MUIHelpers(object):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     
     def __init__(self) -> None:
+        load_dotenv()
         self.MUI_USER = os.environ.get('MUI_USERNAME')
         self.MUI_PASSWORD = os.environ.get('MUI_PASSWORD')
-        self.ENV_URL = self.set_url()
         self.HOTEL_ID = "3"
+        self.ENV_URL = self.set_url()
         self.token = self.get_token()
+        
     
     def set_url(self):
         if os.environ.get('ENV_URL') is not None:
