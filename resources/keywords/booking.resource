@@ -222,7 +222,7 @@ Fill in Contact Information
         Click and Fill    id=phoneNumber    ${phone}
     END
     Log To Console    ${inbox.id}
-    Set Suite Variable      ${INBOX_ID}     ${inbox.id}
+    Set Global Variable      ${new_inbox_id}     ${inbox.id}
     ${passwordVisible}=        Get Element Count    id=password      
     IF   '${env}'=='bui' and '${passwordVisible}'>'0'
         Click and Fill    id=password    ${password}

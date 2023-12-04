@@ -5,7 +5,6 @@ ${browser}        chromium
 ${timeout}        30s
 ${longer}         90s
 ${e}
-${headless}       True
 # FORM DATA
 ${firstName}      Mos
 ${lastName}       Def
@@ -76,4 +75,4 @@ ${MUI_URL}      https://admin.nelson.management/#/login
 ${doorcodeRegex}    ^\d{5}$
 ${element_text}   'This field is required!'
 
-${INBOX_ID}
+${new_inbox_id}

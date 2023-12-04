@@ -81,7 +81,7 @@ class MailSlurp(object):
         with mailslurp_client.ApiClient(self.configuration) as api_client:
             api_instance = mailslurp_client.WaitForControllerApi(api_client)
             match_options = {'matches': [{'field': 'SUBJECT','should':'CONTAIN','value':f'{search_text}'}]}
-            emails = api_instance.wait_for_matching_emails(inbox_id=inbox_id, match_options=match_options, timeout=200000, unread_only=True, count=1)
+            emails = api_instance.wait_for_matching_emails(inbox_id=inbox_id, match_options=match_options, timeout=300000, unread_only=True, count=1)
             for e in emails:
                 email = self.email_client.get_email_html(email_id=e.id)
                 return email

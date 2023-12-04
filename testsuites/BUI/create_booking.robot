@@ -25,7 +25,8 @@ Create A New Booking as
 
 Confirm Email and Open Link
     [Documentation]     A new booker receives an email with a link to modify the booking 
-    ${id} =    Get Variable Value    $ID         # Variable ID is set in booking.Fill in Contact Information
-    ${modify_link}=     Wait For Latest Booking Confirmation and Extract Link     ${id}
+    ${i}=     Get Variable Value    ${new_inbox_id}    # Variable ID is set in booking.Fill in Contact Information
+    Log To Console    Inbox ID: ${i}     # Variable ID is set in booking.Fill in Contact Information
+    ${modify_link}=     Wait For Latest Booking Confirmation and Extract Link     ${i}
     Open New Browser To URL    ${modify_link}
 
