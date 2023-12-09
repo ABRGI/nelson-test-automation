@@ -94,7 +94,7 @@ Currently we exclude tests that are tagged with skip. Include tags that make sen
 
 ## Debugging
 
-I suggest using [RoboCode VS Code Extension](https://github.com/d-biehl/robotcode) for debugging. Set up variables in extension settings.
+I suggest using [RoboCode VS Code Extension](https://github.com/d-biehl/robotcode) for debugging and if there is a need to run tests locally. Set up variables in extension settings.
 
 ## Version Control
 
@@ -121,7 +121,7 @@ robot -A environments/env_name.txt --outputdir reports/pretest testsuites/
 GitHub pages are deployed from [gh-pages branch](https://github.com/ABRGI/nelson-test-automation/tree/gh-pages) and are visible at: 
 [https://abrgi.github.io/nelson-test-automation/report.html](https://abrgi.github.io/nelson-test-automation).
 
-## Reporting
+## Reporting and Jenkins CI
 
 ### GitHub Pages
 GitHub pages are deployed from [gh-pages branch](https://github.com/ABRGI/nelson-test-automation/tree/gh-pages) and are visible at: 
@@ -131,11 +131,11 @@ This is done in the latter part of the yml file, where the runner will commit al
 
 See GitHub Pages and GitHub Actions documentation for more.
 
-### Testmo
+### Jenkins CI and Reports
 
-We are currently testing out Testmo - a tool for reporting test results and managing manual test cases. The script [/scripts/run_upload.sh] will on run upload test results 
+Also see the sandbox Jenkins: [http://nelsonqa.northeurope.cloudapp.azure.com:8080/](http://nelsonqa.northeurope.cloudapp.azure.com:8080/) Credentials given in chat. 
 
 
 ## API Tests
 
-API Tests will be integrated into this repository after we have established the authentication required.
+API Tests will be integrated into this repository when there is time allocated for the task.
