@@ -53,6 +53,9 @@ python --version
 
 [resources](/resources/) is the main folder for libraries, variables, python files, other files, anything that is used in the test cases. For now, resources are divided into [keywords](/resources/keywords/), [libraries](/resources/libraries/) and [variables](/resources/variables/).
 
+[environments](/environments/) contains startup arguments for each environment. 
+
+
 Test Suites are divided into [MUI](/testsuites/MUI/), [BUI](/testsuites/BUI/) and [API](/testsuites/API/) and new test cases should be added accordingly. Each folder also contains subfolders for features and regression tests.
 
 All of the above are divided into features and regression tests. Feature tests can be named for example with the Jira Ticket number and ordered to subfolders like [OnlineCheckIn](/testsuites/MUI/feature/online_check_in/). This will be up to you in later phases to see what works best.

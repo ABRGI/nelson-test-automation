@@ -5,7 +5,7 @@ Resource          ${EXECDIR}/resources/keywords/common.resource
 Resource          ${EXECDIR}/resources/keywords/booking.resource
 Resource          ${EXECDIR}/resources/keywords/mui.resource
 Resource          ${EXECDIR}/resources/keywords/checkin.resource
-Force Tags        smoke, booking, BUI2-556, online-checkin
+Force Tags        skip
 
 *** Variables ***
 
@@ -28,7 +28,7 @@ Select Dates for Expedia Stay
 *** Test Cases ***
 
 Check Availability in Expedia
-    Pass Execution    TBD
+    #Pass Execution    TBD
     Open Browser to Expedia Omena Test Hotel
     Select Dates for Expedia Stay
     Click     id=search_button

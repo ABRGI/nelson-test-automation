@@ -1,8 +1,7 @@
---doc Argument file for running tests on EC Production Environment
---variable url:https://exhibitioncourt.nelson.management/
+--doc Argument file for running tests on KS Production Environment
+--variable url:https://kensingtonstay.com
 --variable HEADLESS:True
 --variable headless:True
---variable environment:
---outputdir reports/ecprod/
+--outputdir reports/ksprod/
 --variable browser:Firefox
 --include ec_prod

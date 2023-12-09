@@ -47,9 +47,9 @@ ${cc.tyl.visa}        4147463011110083
 ${cc.tyl.master}      5239290700000028
 ${cc.tyl.code}        777
 ${cc.expedia}    4925000000000004
-${cc.expedia.exp}    11/23
+${cc.expedia.exp}    12/23
 ${cc.bdc.visa}    4153013999700321
-${cc.bdc.exp.month}    11
+${cc.bdc.exp.month}    12
 ${cc.bdc.exp.year}     2023
 ${cc.bdc.cvc}          321
 ${cc.omena.visa}     4153013999700024
