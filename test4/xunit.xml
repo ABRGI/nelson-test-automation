@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Testsuites" tests="22" errors="0" failures="15" skipped="0" time="74.637" timestamp="2023-12-04T18:01:47.987000">
-<testsuite name="MUI" tests="22" errors="0" failures="15" skipped="0" time="74.622" timestamp="2023-12-04T18:01:48.001000">
-<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="4.436" timestamp="2023-12-04T18:01:48.002000">
-<testcase classname="Testsuites.MUI.Mui.Booking" name="Open Browser to Nelson Portal and Login" time="1.160">
+<testsuite name="Testsuites" tests="22" errors="0" failures="15" skipped="0" time="74.399" timestamp="2023-12-09T11:41:22.423000">
+<testsuite name="MUI" tests="22" errors="0" failures="15" skipped="0" time="74.385" timestamp="2023-12-09T11:41:22.436000">
+<testsuite name="Mui.Booking" tests="1" errors="0" failures="1" skipped="0" time="4.405" timestamp="2023-12-09T11:41:22.437000">
+<testcase classname="Testsuites.MUI.Mui.Booking" name="Open Browser to Nelson Portal and Login" time="1.150">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
 <properties>
 <property name="Documentation" value="A test suite for verifying modify booking functionality"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="3.468" timestamp="2023-12-04T18:01:52.442000">
+<testsuite name="Mui.Gbe" tests="1" errors="0" failures="1" skipped="0" time="3.403" timestamp="2023-12-09T11:41:26.846000">
 <testcase classname="Testsuites.MUI.Mui.Gbe" name="Create New Group Booking" time="0.000">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
@@ -17,14 +17,14 @@
 <property name="Documentation" value="A test suite for verifying GBE2 in MUI"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="3.462" timestamp="2023-12-04T18:01:55.914000">
-<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.000">
+<testsuite name="Mui.Reservations" tests="4" errors="0" failures="4" skipped="0" time="3.401" timestamp="2023-12-09T11:41:30.252000">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter all reservations with Check-in incomplete" time="0.001">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.000">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Remove filter and find a reservation with Check-in complete" time="0.001">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.000">
+<testcase classname="Testsuites.MUI.Mui.Reservations" name="Reservations: Filter Reservations by Stay Dates" time="0.001">
 <failure message="Parent suite setup failed:&#10;Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
 <testcase classname="Testsuites.MUI.Mui.Reservations" name="Verify all things" time="0.001">
@@ -34,17 +34,17 @@
 <property name="Documentation" value="A test suite for verifying modify booking functionality"/>
 </properties>
 </testsuite>
-<testsuite name="Mui.Smoke" tests="16" errors="0" failures="9" skipped="0" time="63.240" timestamp="2023-12-04T18:01:59.379000">
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log in with correct Username and Password" time="1.138">
+<testsuite name="Mui.Smoke" tests="16" errors="0" failures="9" skipped="0" time="63.160" timestamp="2023-12-09T11:41:33.657000">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Log in with correct Username and Password" time="1.064">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Open Reports Page and Verify" time="1.022">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Open Reports Page and Verify" time="1.027">
 <failure message="Error: No page open." type="AssertionError"/>
 </testcase>
 <testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Each Report Can be Downloaded" time="0.006">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Usage Page" time="30.009">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Usage Page" time="30.010">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
 <testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Maintenance Page" time="30.010">
@@ -62,18 +62,18 @@
 </testcase>
 <testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Settings Page" time="0.005">
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Locks Page" time="0.005">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Verify Locks Page" time="0.004">
 </testcase>
 <testcase classname="Testsuites.MUI.Mui.Smoke" name="Log Out" time="0.004">
 <failure message="Error: Could not find active page" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Password" time="0.205">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Password" time="0.192">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Username" time="0.186">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in without Username" time="0.189">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
-<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.176">
+<testcase classname="Testsuites.MUI.Mui.Smoke" name="Try Logging in with incorrect Password/Username combination" time="0.183">
 <failure message="Error: page.goto: Protocol error (Page.navigate): Invalid url: &quot;$MUI_URL&quot;&#10;Call log:&#10;  - navigating to &quot;$MUI_URL&quot;, waiting until &quot;load&quot;&#10;" type="AssertionError"/>
 </testcase>
 <properties>
